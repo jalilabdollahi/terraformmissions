@@ -1,0 +1,15 @@
+concepts:
+- nested dynamic blocks
+- iterator naming
+- dynamic block
+description: A double-nested `dynamic` block uses the default iterator name for both
+  the outer and inner loops. The inner iterator shadows the outer, making the outer
+  iterator inaccessible inside the inner block.
+difficulty: advanced
+expected_time: 22m
+level: level-13-dynamic-nested-block
+module: module-12-advanced-patterns
+name: Iterator Identity Crisis
+objective: Give the inner `dynamic` block a unique `iterator` name so both levels
+  are accessible.
+xp: 300

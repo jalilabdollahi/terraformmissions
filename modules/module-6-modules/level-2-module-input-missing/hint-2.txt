@@ -1,0 +1,1 @@
+Open `modules/app/main.tf`. It declares `variable "app_name" {}` without a default, making it required.

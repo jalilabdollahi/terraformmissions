@@ -1,0 +1,13 @@
+concepts:
+- contains()
+- index()
+description: '`index(["a","b","c"], "d")` tries to find `"d"` in the list, but `"d"`
+  is not present. `index()` throws an error when the value is not found.'
+difficulty: intermediate
+expected_time: 10m
+level: level-7-contains-index
+module: module-5-expressions
+name: Contains vs Index
+objective: Replace the `index()` call with `contains()` which safely returns `false`
+  when the value is absent. Update the local and output names accordingly.
+xp: 175

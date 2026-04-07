@@ -1,0 +1,15 @@
+concepts:
+- check block
+- TF 1.5+
+- assertions
+- resource attributes
+description: A `check` block asserts that `local_file.config.id != ""`, but the `id`
+  attribute for `local_file` may not be the meaningful non-empty indicator. The correct
+  attribute to check is `.filename`.
+difficulty: advanced
+expected_time: 22m
+level: level-14-check-block
+module: module-12-advanced-patterns
+name: Always Failing Assertion
+objective: Fix the `check` block assertion to use `local_file.config.filename != ""`.
+xp: 300

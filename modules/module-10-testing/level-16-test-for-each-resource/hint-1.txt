@@ -1,0 +1,1 @@
+Run `terraform test`. The error will say the key `"wrong_key"` does not exist in the map.

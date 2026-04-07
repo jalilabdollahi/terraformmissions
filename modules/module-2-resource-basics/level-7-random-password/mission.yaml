@@ -1,0 +1,13 @@
+concepts:
+- random_password
+- length constraints
+description: A `random_password` resource has `length = 5` but `min_upper = 2`, `min_lower
+  = 2`, `min_numeric = 2`. The sum of minimums (6) exceeds the total length (5), which
+  is impossible to satisfy.
+difficulty: beginner
+expected_time: 8m
+level: level-7-random-password
+module: module-2-resource-basics
+name: More Than the Sum of Its Parts
+objective: Increase `length` so `terraform apply` succeeds.
+xp: 125

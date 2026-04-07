@@ -1,0 +1,13 @@
+concepts:
+- .tftest.hcl structure
+- run block
+- terraform test
+description: A test file uses `tests {}` as the top-level block, but that is not a
+  valid block in `.tftest.hcl` files. Terraform test files use `run {}` blocks.
+difficulty: advanced
+expected_time: 15m
+level: level-1-test-file-structure
+module: module-10-testing
+name: Wrong Block in the Test File
+objective: Fix the block type from `tests` to `run` so that `terraform test` passes.
+xp: 225

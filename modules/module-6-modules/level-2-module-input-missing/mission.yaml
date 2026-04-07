@@ -1,0 +1,14 @@
+concepts:
+- required module inputs
+- module variables
+- module arguments
+description: The child module declares a required variable `app_name` with no default
+  value, but the root module call forgets to pass it.
+difficulty: intermediate
+expected_time: 10m
+level: level-2-module-input-missing
+module: module-6-modules
+name: Missing Module Input
+objective: Add the missing `app_name` argument to the module call so `terraform validate`
+  passes.
+xp: 175

@@ -1,0 +1,14 @@
+concepts:
+- .terraform.lock.hcl
+- provider locking
+- terraform init -upgrade
+description: The `.terraform.lock.hcl` file contains deliberately wrong provider hashes.
+  Terraform detects the mismatch and refuses to use the cached provider.
+difficulty: intermediate
+expected_time: 12m
+level: level-9-lock-file
+module: module-4-state-management
+name: Lock File Chaos
+objective: Delete the broken `.terraform.lock.hcl` file so `terraform init -upgrade`
+  can regenerate it with the correct hashes.
+xp: 200

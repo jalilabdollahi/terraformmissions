@@ -1,0 +1,1 @@
+Add 3 `moved` blocks to main.tf: `old_alpha → module.tokens.random_string.token_alpha`, `old_beta → module.tokens.random_string.token_beta`, `old_gamma → module.tokens.random_string.token_gamma`. Re-run plan — no destroys should appear.

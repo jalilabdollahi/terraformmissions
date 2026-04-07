@@ -1,0 +1,16 @@
+concepts:
+- plan file security
+- sensitive outputs
+- secret hygiene
+description: 'A config has a `random_password` resource whose generated value is exposed
+  in an output without being marked as sensitive. This means the password appears
+  in plain text in plan output, CI/CD logs, and terminal history. Fix: mark the output
+  as sensitive.'
+difficulty: expert
+expected_time: 28m
+level: level-9-plan-security
+module: module-14-performance
+name: Plan File Security
+objective: Mark the password output as sensitive so that the plan output does NOT
+  expose the raw value.
+xp: 350

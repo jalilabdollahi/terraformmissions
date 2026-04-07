@@ -1,0 +1,1 @@
+Read the comments at the top of main.tf — they document the rename mapping: `svc_one → service_alpha`, `svc_two → service_beta`, etc. Without moved blocks, Terraform would destroy the old names and create new ones.

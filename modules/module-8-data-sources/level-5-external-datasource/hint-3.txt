@@ -1,0 +1,1 @@
+Replace the `print("version=1.0")` line in `get_info.py` with `import json` and `print(json.dumps({"version": "1.0"}))`.

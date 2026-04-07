@@ -1,0 +1,15 @@
+concepts:
+- module for_each
+- each.key
+- module instance addressing
+description: A module is called with `for_each = toset(["a", "b"])`. The root output
+  references `module.mods.file_path` instead of `module.mods["a"].file_path` — module
+  instances must be addressed by key.
+difficulty: intermediate
+expected_time: 15m
+level: level-7-module-for-each
+module: module-6-modules
+name: for_each Module Reference
+objective: Fix the output so it correctly references a specific `for_each` module
+  instance.
+xp: 225

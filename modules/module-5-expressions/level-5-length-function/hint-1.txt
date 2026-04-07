@@ -1,0 +1,1 @@
+Run `terraform validate` — it reports that `var.items` has no attribute `nonexistent`.

@@ -1,0 +1,14 @@
+concepts:
+- ignore_changes = all vs specific
+- lifecycle
+- security
+description: A resource uses `ignore_changes = all`, which causes Terraform to ignore
+  ALL attribute changes — including security-critical ones like `file_permission`.
+  Fix this by using a specific attribute list.
+difficulty: advanced
+expected_time: 22m
+level: level-16-lifecycle-ignore-all
+module: module-12-advanced-patterns
+name: Ignoring Everything (Including Security)
+objective: Replace `ignore_changes = all` with a specific list that only ignores `content`.
+xp: 300

@@ -1,0 +1,14 @@
+concepts:
+- import block address format
+- TF 1.5+
+- importing resources
+description: An `import` block uses `to = module.storage.local_file.config`, but the
+  `module.storage` module does not exist in this configuration. The resource should
+  be imported directly.
+difficulty: advanced
+expected_time: 22m
+level: level-9-import-block-address
+module: module-12-advanced-patterns
+name: Wrong Import Destination
+objective: Fix the `import` block's `to` address to point to `local_file.config` directly.
+xp: 300

@@ -1,0 +1,12 @@
+concepts:
+- validation
+- error_message requirement
+description: A variable has a `validation` block with `error_message = ""` — an empty
+  string. Terraform requires `error_message` to be a non-empty string.
+difficulty: intermediate
+expected_time: 10m
+level: level-10-validation-message
+module: module-3-variables-outputs
+name: An Error Message Must Have Words
+objective: Add a meaningful `error_message` so `terraform validate` passes.
+xp: 150

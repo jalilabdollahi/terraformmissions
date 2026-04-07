@@ -1,0 +1,15 @@
+concepts:
+- empty for_each
+- default map values
+- resource access
+description: '`for_each = var.items` where `var.items = {}` creates zero resources.
+  The output tries to access `local_file.items["main"].filename` which doesn''t exist
+  when the map is empty.'
+difficulty: intermediate
+expected_time: 8m
+level: level-10-for-each-empty
+module: module-7-loops
+name: Empty for_each Map
+objective: Add a default entry `main = "default"` to `var.items` so the resource is
+  created and the output works.
+xp: 150

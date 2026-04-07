@@ -1,0 +1,12 @@
+concepts:
+- flatten()
+description: '`flatten([["a","b"], "c"])` mixes a list and a bare string at the top
+  level. `flatten()` expects all top-level elements to be lists.'
+difficulty: intermediate
+expected_time: 12m
+level: level-8-flatten
+module: module-5-expressions
+name: Flatten
+objective: 'Wrap `"c"` in a list: `flatten([["a","b"], ["c"]])` so the output is `["a",
+  "b", "c"]`.'
+xp: 200

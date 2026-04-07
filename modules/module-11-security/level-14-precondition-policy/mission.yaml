@@ -1,0 +1,15 @@
+concepts:
+- precondition security policy
+- environment allow-list
+- lifecycle precondition
+description: 'A resource precondition uses `condition = var.env != "production"`,
+  which blocks the resource from being created in production. The intention is to
+  allow dev, staging, and production. Fix: use `contains(["dev","staging","production"],
+  var.env)`.'
+difficulty: advanced
+expected_time: 22m
+level: level-14-precondition-policy
+module: module-11-security
+name: Precondition Blocks Production Deployment
+objective: Fix the precondition so it allows valid environments including production.
+xp: 300

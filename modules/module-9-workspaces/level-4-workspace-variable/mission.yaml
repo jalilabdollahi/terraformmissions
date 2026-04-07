@@ -1,0 +1,13 @@
+concepts:
+- workspace variable lookup
+- map access
+- locals
+description: A `locals` block builds a config map and tries to look up the current
+  workspace's value. The lookup syntax is wrong.
+difficulty: intermediate
+expected_time: 12m
+level: level-4-workspace-variable
+module: module-9-workspaces
+name: Map Lookup Gone Wrong
+objective: Fix the map access syntax so `terraform validate` passes.
+xp: 200

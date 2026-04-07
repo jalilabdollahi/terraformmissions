@@ -1,0 +1,15 @@
+concepts:
+- backend credential security
+- hardcoded secrets
+- partial backend config
+description: The `terraform.tf` file contains a comment with a hardcoded access key
+  `AKIAIOSFODNN7EXAMPLE`. Even in a comment, credentials in source control are a security
+  violation. Remove the hardcoded credential from the config.
+difficulty: advanced
+expected_time: 22m
+level: level-17-state-backend-security
+module: module-11-security
+name: Hardcoded Secret in Backend Config Comment
+objective: Remove the hardcoded credential from the config file so no secret appears
+  in source.
+xp: 300

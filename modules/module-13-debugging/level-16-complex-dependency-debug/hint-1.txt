@@ -1,0 +1,1 @@
+Run `terraform validate`. Multiple errors report references to `local_file.base` which is undeclared.

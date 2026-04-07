@@ -1,0 +1,1 @@
+Run `terraform apply` to create the resources, then try `terraform plan -destroy`. You will get an error saying `prevent_destroy` is blocking the destroy. Which resource has this lifecycle block?

@@ -1,0 +1,1 @@
+Run `terraform init && terraform plan` inside config-b/. The error references an output key that does not exist in config-a's state. Look at config-a/main.tf — what is the actual output name?

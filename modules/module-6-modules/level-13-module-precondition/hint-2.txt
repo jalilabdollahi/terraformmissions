@@ -1,0 +1,1 @@
+The variable `item_count` defaults to `1`. A precondition of `> 10` can never pass with the default.

@@ -1,0 +1,1 @@
+Variables without defaults require input at runtime. For workspace-aware tooling, provide a sensible default so plans run non-interactively.

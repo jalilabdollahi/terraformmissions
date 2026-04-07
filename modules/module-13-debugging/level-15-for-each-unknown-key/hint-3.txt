@@ -1,0 +1,1 @@
+Use a static set of keys instead: `for_each = toset(["item-0", "item-1", "item-2"])`. The random values can still be used in resource content if needed.

@@ -1,0 +1,1 @@
+Run `terraform plan`. Observe where the output file would be written — it uses `path.root`, which is the *root* module's directory.

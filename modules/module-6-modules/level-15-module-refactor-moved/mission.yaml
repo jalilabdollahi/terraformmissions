@@ -1,0 +1,15 @@
+concepts:
+- moved block
+- module refactoring
+- state migration
+description: A module was renamed from `module.old` to `module.new` in the config,
+  but no `moved` block was added. Terraform will plan to destroy the old instance
+  and create a new one instead of renaming in state.
+difficulty: advanced
+expected_time: 20m
+level: level-15-module-refactor-moved
+module: module-6-modules
+name: Renamed Module Without moved Block
+objective: Add a `moved` block to tell Terraform the module was renamed, preventing
+  destroy/create.
+xp: 275

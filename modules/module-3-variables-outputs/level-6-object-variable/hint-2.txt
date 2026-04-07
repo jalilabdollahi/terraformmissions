@@ -1,0 +1,1 @@
+An `object` type specifies the exact keys and their types. Every key declared in the type must appear in the default value.

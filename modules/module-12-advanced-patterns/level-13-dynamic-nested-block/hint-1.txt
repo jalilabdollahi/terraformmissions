@@ -1,0 +1,1 @@
+When nesting `dynamic` blocks or `for` expressions, using the same variable name for inner and outer loops causes the inner to shadow the outer.

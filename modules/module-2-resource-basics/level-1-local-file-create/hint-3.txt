@@ -1,0 +1,1 @@
+Replace `/tmp/nonexistent/dir/config.txt` with `"${path.module}/config.txt"`. `path.module` resolves to the directory containing your `.tf` files, which always exists.

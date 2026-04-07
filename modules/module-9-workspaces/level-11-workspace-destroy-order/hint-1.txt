@@ -1,0 +1,1 @@
+Run `terraform plan`. Resource B's content hardcodes `default-data.txt` instead of using `terraform.workspace`. In any workspace other than `default`, this path is wrong.

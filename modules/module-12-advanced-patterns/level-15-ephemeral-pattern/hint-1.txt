@@ -1,0 +1,1 @@
+The `local_file` resource writes content with default permissions (world-readable). For sensitive data, use `local_sensitive_file` which sets mode 0600.

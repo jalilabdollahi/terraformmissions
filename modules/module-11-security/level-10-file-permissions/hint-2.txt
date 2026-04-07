@@ -1,0 +1,1 @@
+For secret files, `"0600"` (owner read/write, no access for group or others) is the correct permission. Some tools require `"0400"` (read-only) for key files.

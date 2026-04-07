@@ -1,0 +1,1 @@
+Convert the resource collection to a map using a `for` expression: `{ for k, v in local_file.configs : k => v.filename }`.

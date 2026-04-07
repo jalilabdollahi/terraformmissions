@@ -1,0 +1,1 @@
+Run `terraform validate` — the error reports a mismatch between the number of format placeholders and list arguments.

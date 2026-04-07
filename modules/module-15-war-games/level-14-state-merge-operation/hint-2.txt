@@ -1,0 +1,1 @@
+For a state merge, `moved` blocks in the destination config declare that a resource's state is being absorbed from another config. The `from` address is the resource as it appeared in the source config.

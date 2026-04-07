@@ -1,0 +1,14 @@
+concepts:
+- assert block
+- condition expression
+- output values in tests
+description: The test asserts that `output.result == "wrong_value"`, but the actual
+  output is `"correct_value"`. The assertion always fails.
+difficulty: advanced
+expected_time: 18m
+level: level-3-test-assert-basic
+module: module-10-testing
+name: Wrong Expected Value in Assert
+objective: Fix the `assert` condition so it matches the actual output and `terraform
+  test` passes.
+xp: 250

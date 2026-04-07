@@ -1,0 +1,1 @@
+Run `terraform validate`. The error lists the valid values for `algorithm`.

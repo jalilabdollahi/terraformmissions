@@ -1,0 +1,1 @@
+Run `terraform validate` — it reports that `lookup` requires 3 arguments.

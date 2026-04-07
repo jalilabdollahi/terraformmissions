@@ -1,0 +1,1 @@
+The `.terraform.lock.hcl` file was manually edited or corrupted — the hashes no longer match the real provider binary.

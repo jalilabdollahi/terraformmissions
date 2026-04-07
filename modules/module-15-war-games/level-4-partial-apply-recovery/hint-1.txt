@@ -1,0 +1,1 @@
+Run `terraform plan`. You will see that `resource_a` already exists in state (from the partial apply), but `resource_b` and `resource_c` are planned for creation. The config is already correct.

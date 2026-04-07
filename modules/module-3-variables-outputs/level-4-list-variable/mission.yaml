@@ -1,0 +1,13 @@
+concepts:
+- list(string)
+- type mismatch
+description: 'A variable is declared as `type = list(string)` but its default contains
+  a number: `["a", "b", 3]`. The number `3` must be the string `"3"`.'
+difficulty: beginner
+expected_time: 8m
+level: level-4-list-variable
+module: module-3-variables-outputs
+name: One Number Ruins the List
+objective: Fix the default value so all elements are strings and `terraform validate`
+  passes.
+xp: 125

@@ -1,0 +1,1 @@
+Run `terraform plan` twice and observe whether the output value changes — `timestamp()` returns the current time, making the plan non-idempotent.

@@ -1,0 +1,1 @@
+The string `"prodution"` is missing the letter `c`. The intended workspace name is `"production"`.

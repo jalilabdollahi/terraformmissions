@@ -1,0 +1,15 @@
+concepts:
+- try()
+- null guards
+- data source errors
+- graceful fallback
+description: A data source may not find the target file, and the output has no null/error
+  guard. Fix it to handle the missing case gracefully.
+difficulty: advanced
+expected_time: 18m
+level: level-15-datasource-null-check
+module: module-8-data-sources
+name: Missing File, Missing Guard
+objective: Wrap the data source access in `try()` to provide a default value when
+  the file is missing, so `terraform plan` succeeds.
+xp: 250

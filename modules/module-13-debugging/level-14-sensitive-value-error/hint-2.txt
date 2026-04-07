@@ -1,0 +1,1 @@
+Terraform prevents sensitive values from being used as `for_each` keys because the keys appear in plan output and state addresses.

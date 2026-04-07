@@ -1,0 +1,13 @@
+concepts:
+- path.module
+- path.root
+- module filesystem paths
+description: A child module uses `path.root` where it should use `path.module`. `path.root`
+  is the root module's directory — not where the child module lives.
+difficulty: advanced
+expected_time: 18m
+level: level-10-nested-module
+module: module-6-modules
+name: path.root vs path.module
+objective: Replace `path.root` with `path.module` inside the child module.
+xp: 250

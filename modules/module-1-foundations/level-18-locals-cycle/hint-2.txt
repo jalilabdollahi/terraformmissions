@@ -1,0 +1,1 @@
+`local.full_name` depends on `local.prefix`, which depends on `local.full_name` — infinite loop.

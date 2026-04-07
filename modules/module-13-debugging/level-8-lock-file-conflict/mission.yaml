@@ -1,0 +1,14 @@
+concepts:
+- lock file conflicts
+- provider hashes
+- terraform init
+description: The `.terraform.lock.hcl` contains an incorrect hash for the `local`
+  provider, causing `terraform init` to fail with a hash verification error.
+difficulty: advanced
+expected_time: 18m
+level: level-8-lock-file-conflict
+module: module-13-debugging
+name: Lock File Hash Conflict
+objective: Delete the lock file so `terraform init` can regenerate it with the correct
+  hashes.
+xp: 250

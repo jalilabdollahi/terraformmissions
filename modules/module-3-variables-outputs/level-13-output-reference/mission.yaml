@@ -1,0 +1,12 @@
+concepts:
+- output values
+- resource attributes
+description: An output references `local_file.config.content`, but `local_file` does
+  not expose `content` as a readable exported attribute. Use `.filename` instead.
+difficulty: beginner
+expected_time: 8m
+level: level-13-output-reference
+module: module-3-variables-outputs
+name: Local File Has No Content Output
+objective: Fix the output reference so `terraform validate` passes.
+xp: 125

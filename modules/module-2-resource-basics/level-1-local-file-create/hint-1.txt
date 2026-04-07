@@ -1,0 +1,1 @@
+Run `terraform apply` and read the error carefully. Terraform reports it cannot write to the path because the parent directory does not exist.

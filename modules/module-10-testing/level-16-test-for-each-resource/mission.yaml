@@ -1,0 +1,13 @@
+concepts:
+- for_each in tests
+- map output assertions
+- collection access
+description: The test asserts `output.files["wrong_key"].content` but the `for_each`
+  map uses keys `"alpha"` and `"beta"`. Fix the key in the assertion.
+difficulty: advanced
+expected_time: 22m
+level: level-16-test-for-each-resource
+module: module-10-testing
+name: Wrong Key in for_each Output Assertion
+objective: Use the correct map key in the assertion so `terraform test` passes.
+xp: 300

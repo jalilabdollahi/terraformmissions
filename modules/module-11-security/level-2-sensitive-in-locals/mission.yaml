@@ -1,0 +1,15 @@
+concepts:
+- sensitive propagation in locals
+- nonsensitive() misuse
+- output sensitivity
+description: A `locals` block assigns a sensitive variable to a local. Terraform automatically
+  propagates sensitivity through locals. However, the output wraps it in `nonsensitive()`,
+  stripping the protection. Fix it by removing `nonsensitive()`.
+difficulty: advanced
+expected_time: 18m
+level: level-2-sensitive-in-locals
+module: module-11-security
+name: nonsensitive() Stripping Sensitivity
+objective: Remove `nonsensitive()` from the output so sensitivity is properly preserved
+  and `terraform validate` passes.
+xp: 250

@@ -1,0 +1,1 @@
+For a credentials file, detecting and correcting content drift is a security requirement. An attacker who modifies the file would go undetected indefinitely.

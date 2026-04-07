@@ -1,0 +1,1 @@
+In team-b/main.tf, update the keepers map: change `cluster_id` → `cluster_identifier` and `vpc_id` → `network_id` in the remote state output references.

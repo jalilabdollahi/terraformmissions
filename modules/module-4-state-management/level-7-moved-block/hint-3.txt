@@ -1,0 +1,1 @@
+Add `moved { from = local_file.old_name  to = local_file.new_name }` before the resource block.

@@ -1,0 +1,13 @@
+concepts:
+- variable precedence
+- -var flag
+description: A variable `environment` is declared as `type = number` but the intended
+  values are strings like `"dev"` and `"staging"`. Running `terraform plan -var="environment=staging"`
+  fails with a type error.
+difficulty: intermediate
+expected_time: 12m
+level: level-16-variable-precedence
+module: module-3-variables-outputs
+name: The Wrong Type Blocks the Flag
+objective: Fix the variable type so `terraform plan -var="environment=staging"` succeeds.
+xp: 175

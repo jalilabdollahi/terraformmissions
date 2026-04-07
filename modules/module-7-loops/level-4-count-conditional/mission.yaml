@@ -1,0 +1,15 @@
+concepts:
+- ternary with count
+- bool type
+- type system
+description: '`count = var.enabled ? 1 : 0` requires `var.enabled` to be a `bool`.
+  The variable is declared as `type = string` with `default = "true"`. Terraform cannot
+  use a string in the ternary condition.'
+difficulty: intermediate
+expected_time: 12m
+level: level-4-count-conditional
+module: module-7-loops
+name: String Bool in Conditional Count
+objective: Change `var.enabled` to `type = bool` with `default = true` so the conditional
+  works correctly.
+xp: 200

@@ -1,0 +1,1 @@
+`var.items` is `list(string)` — each `item` is a plain string like `"apple"`. You can call string functions on it directly.

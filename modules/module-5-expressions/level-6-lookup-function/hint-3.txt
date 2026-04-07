@@ -1,0 +1,1 @@
+Add `8080` (or any sensible default) as the third argument: `lookup(var.config, "port", 8080)`.

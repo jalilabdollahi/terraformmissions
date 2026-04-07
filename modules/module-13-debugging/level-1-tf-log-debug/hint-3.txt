@@ -1,0 +1,1 @@
+Change `source = "fakecorp.example.com/fakens/local"` to `source = "hashicorp/local"` in the `required_providers` block.

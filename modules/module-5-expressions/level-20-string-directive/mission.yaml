@@ -1,0 +1,15 @@
+concepts:
+- string directives
+- '%{if}'
+- '%{for}'
+- bool type
+description: '`%{if var.debug}` requires a boolean condition, but `var.debug` is declared
+  as `type = string` with default `"true"`. String `"true"` is not a bool.'
+difficulty: intermediate
+expected_time: 15m
+level: level-20-string-directive
+module: module-5-expressions
+name: String Directives
+objective: Change the variable type from `string` to `bool` and the default from `"true"`
+  to `true` so `terraform plan` succeeds.
+xp: 225

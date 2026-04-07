@@ -1,0 +1,1 @@
+Break the cycle: make `file_a` independent (use a static string for its content) and have `file_b` reference `file_a` — not the other way around.

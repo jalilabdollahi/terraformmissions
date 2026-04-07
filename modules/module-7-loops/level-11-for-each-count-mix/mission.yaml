@@ -1,0 +1,13 @@
+concepts:
+- count vs for_each addressing
+- module count index
+- for_each key
+description: A module uses `count = 2`. The caller references `module.mymod["key"]`
+  — but `count`-based modules use numeric indices like `[0]`, not string keys.
+difficulty: advanced
+expected_time: 18m
+level: level-11-for-each-count-mix
+module: module-7-loops
+name: count vs for_each Addressing
+objective: Fix the output to reference `module.mymod[0].file_path` instead of `module.mymod["key"].file_path`.
+xp: 250

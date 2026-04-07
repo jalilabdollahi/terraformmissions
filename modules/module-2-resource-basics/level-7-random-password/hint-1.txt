@@ -1,0 +1,1 @@
+Run `terraform apply`. The error message mentions that the sum of minimum character counts exceeds the total length.

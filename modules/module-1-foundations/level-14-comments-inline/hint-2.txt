@@ -1,0 +1,1 @@
+HCL supports three comment styles: `#`, `//`, and `/* ... */`. Use `#` or `//` for single-line comments.

@@ -1,0 +1,14 @@
+concepts:
+- mock_provider
+- mock_resource
+- provider mocking in tests
+description: A test uses `mock_provider "local" {}` but does not define a `mock_resource`
+  for `local_file`. Terraform cannot mock the resource schema and the test fails.
+difficulty: advanced
+expected_time: 20m
+level: level-9-test-mock-provider
+module: module-10-testing
+name: Incomplete Mock Provider
+objective: Add a `mock_resource "local_file"` with default values so `terraform test`
+  passes.
+xp: 275

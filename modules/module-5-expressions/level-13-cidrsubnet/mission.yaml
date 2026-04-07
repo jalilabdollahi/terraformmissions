@@ -1,0 +1,13 @@
+concepts:
+- cidrsubnet()
+- CIDR math
+description: '`cidrsubnet("10.0.0.0/24", 8, 1)` tries to add 8 bits to a /24 network,
+  creating a /32. A /32 is a single host address — subnet index 1 overflows.'
+difficulty: intermediate
+expected_time: 12m
+level: level-13-cidrsubnet
+module: module-5-expressions
+name: CIDR Subnet
+objective: Change the base to `"10.0.0.0/16"` so there is room to add 8 bits (creating
+  /24 subnets) and index 1 is valid.
+xp: 200

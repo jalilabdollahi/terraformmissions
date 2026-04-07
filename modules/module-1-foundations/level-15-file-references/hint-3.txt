@@ -1,0 +1,1 @@
+Simplest fix: change the path to `"${path.module}/nginx.conf.tpl"` and create `nginx.conf.tpl` directly in the workspace (it's already in the solution/).

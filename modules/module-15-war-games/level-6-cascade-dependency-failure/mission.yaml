@@ -1,0 +1,16 @@
+concepts:
+- cascade dependency failure
+- module dependency chain
+- root cause isolation
+description: Module A outputs a value, Module B consumes Module A's output, and Module
+  C consumes Module B's output. Module A has a wrong output reference — it uses `.id`
+  instead of `.result` on a random_string. This blocks the entire chain. Fix Module
+  A's output to unblock the cascade.
+difficulty: expert
+expected_time: 40m
+level: level-6-cascade-dependency-failure
+module: module-15-war-games
+name: Cascade Dependency Failure
+objective: Fix Module A's wrong output reference so the full A → B → C dependency
+  chain resolves and `terraform plan` succeeds.
+xp: 425

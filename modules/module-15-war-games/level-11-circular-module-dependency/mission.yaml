@@ -1,0 +1,15 @@
+concepts:
+- circular module dependencies
+- dependency graph cycles
+- architectural refactor
+description: 'Module A passes its output to Module B, and Module B passes its output
+  back to Module A — creating a circular dependency that Terraform cannot resolve.
+  Fix: break the cycle by extracting the shared value to a root-level resource that
+  both modules can reference without creating a cycle.'
+difficulty: expert
+expected_time: 45m
+level: level-11-circular-module-dependency
+module: module-15-war-games
+name: Circular Module Dependency
+objective: Break the circular module dependency so `terraform validate` succeeds.
+xp: 450

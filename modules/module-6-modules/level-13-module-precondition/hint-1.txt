@@ -1,0 +1,1 @@
+Run `terraform plan`. It fails with a precondition error: `item_count must be greater than 10`.

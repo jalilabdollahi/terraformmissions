@@ -1,0 +1,1 @@
+Run `terraform validate`. Terraform reports that `locals` is not a valid reference. In HCL, `locals` is the block keyword but `local` is the reference prefix.

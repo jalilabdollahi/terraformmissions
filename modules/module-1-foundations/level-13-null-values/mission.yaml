@@ -1,0 +1,14 @@
+concepts:
+- nullable
+- 'null'
+- variable defaults
+- type constraints
+description: A variable marked `nullable = false` has a `default = null`. This combination
+  is invalid — a non-nullable variable cannot default to null.
+difficulty: beginner
+expected_time: 8m
+level: level-13-null-values
+module: module-1-foundations
+name: Null and Void
+objective: Fix the variable declaration so `terraform validate` passes.
+xp: 125

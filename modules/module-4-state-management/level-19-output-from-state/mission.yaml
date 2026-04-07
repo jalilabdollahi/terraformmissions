@@ -1,0 +1,15 @@
+concepts:
+- terraform_remote_state
+- cross-state references
+- state outputs
+description: A `terraform_remote_state` data source points to `/nonexistent/path/terraform.tfstate`.
+  The validator creates `other.tfstate` in the working directory — fix the path to
+  point there.
+difficulty: intermediate
+expected_time: 15m
+level: level-19-output-from-state
+module: module-4-state-management
+name: Output from Remote State
+objective: Change the `path` in the `terraform_remote_state` config to `"${path.module}/other.tfstate"`
+  so Terraform can read outputs from the sibling state file.
+xp: 225

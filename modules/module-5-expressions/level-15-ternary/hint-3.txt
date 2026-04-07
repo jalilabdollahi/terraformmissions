@@ -1,0 +1,1 @@
+Change `0` to `"no"` so both branches are strings.

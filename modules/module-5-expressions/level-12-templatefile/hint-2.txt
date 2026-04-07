@@ -1,0 +1,1 @@
+Open `app.tpl` and check the placeholder name. It uses `${app_name}`, not `${name}`.

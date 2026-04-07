@@ -1,0 +1,16 @@
+concepts:
+- terraform.workspace
+- workspace naming at scale
+- multi-environment patterns
+description: A config uses `terraform.workspace` for resource naming but the convention
+  is wrong. It concatenates components in the wrong order and uses an underscore separator
+  instead of a dash. The required convention is `{workspace}-token-{N}` (dash-separated,
+  workspace first). Fix the workspace-based naming throughout the config.
+difficulty: expert
+expected_time: 28m
+level: level-14-workspace-scaling
+module: module-14-performance
+name: Workspace Scaling
+objective: Fix the workspace-based resource naming to follow `{workspace}-token-{N}`
+  convention, then verify apply outputs the correct names.
+xp: 350

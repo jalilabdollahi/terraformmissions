@@ -1,0 +1,16 @@
+concepts:
+- modular monorepo structure
+- module outputs
+- cascade failure debugging
+description: 'A root module calls 3 child modules in sequence: generator → processor
+  → reporter. The generator module has a wrong output reference — it uses `.id` instead
+  of `.result` on a random_string resource. This causes a cascade failure through
+  the entire chain. Fix the wrong output reference in the generator module.'
+difficulty: expert
+expected_time: 30m
+level: level-12-modular-monorepo
+module: module-14-performance
+name: Modular Monorepo
+objective: Fix the wrong output reference in modules/generator/main.tf so `terraform
+  plan` succeeds from the root.
+xp: 375

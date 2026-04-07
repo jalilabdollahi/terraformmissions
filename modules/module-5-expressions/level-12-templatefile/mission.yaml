@@ -1,0 +1,15 @@
+concepts:
+- templatefile()
+- variable names
+- template rendering
+description: '`templatefile()` is called with `{ name = var.app }` but the template
+  `app.tpl` uses `${app_name}`. The variable name in the map doesn''t match the placeholder
+  in the template.'
+difficulty: intermediate
+expected_time: 12m
+level: level-12-templatefile
+module: module-5-expressions
+name: Template File
+objective: Change the vars map key from `name` to `app_name` so the template renders
+  correctly and the output file contains `"myapp"`.
+xp: 200

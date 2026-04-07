@@ -1,0 +1,1 @@
+Run `terraform plan` in the default workspace. Terraform reports a key-not-found error because `local.workspace_config["default"]` does not exist.

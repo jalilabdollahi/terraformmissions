@@ -1,0 +1,1 @@
+The `lifecycle` block can contain `ignore_changes = [keepers]` to tell Terraform: the keepers map may change, but do not recreate the resource because of keeper changes alone.

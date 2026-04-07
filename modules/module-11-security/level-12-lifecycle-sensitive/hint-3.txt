@@ -1,0 +1,1 @@
+Remove the entire `lifecycle { ignore_changes = [content] }` block.

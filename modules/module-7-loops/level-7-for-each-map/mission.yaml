@@ -1,0 +1,13 @@
+concepts:
+- for_each map
+- each.key
+- each.value
+description: '`for_each = var.services` iterates over a map. Inside the resource,
+  `each.name` is used — but `each.name` doesn''t exist. The correct attribute is `each.key`.'
+difficulty: intermediate
+expected_time: 12m
+level: level-7-for-each-map
+module: module-7-loops
+name: each.name vs each.key
+objective: Replace `each.name` with `each.key` so `terraform validate` passes.
+xp: 200

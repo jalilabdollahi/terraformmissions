@@ -1,0 +1,1 @@
+Inside a `mock_provider` block, you define `mock_resource` blocks for each resource type you want to mock. Each `mock_resource` has a `defaults` map for computed attribute values.

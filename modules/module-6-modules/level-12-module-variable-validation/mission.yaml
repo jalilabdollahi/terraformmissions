@@ -1,0 +1,14 @@
+concepts:
+- module variable validation
+- contains()
+- validation condition
+description: The child module has a `validation` block that only allows `env == "valid"`.
+  The root passes `env = "prod"` which is a real environment, but the validation rejects
+  it.
+difficulty: intermediate
+expected_time: 15m
+level: level-12-module-variable-validation
+module: module-6-modules
+name: Overly Strict Validation
+objective: Fix the validation condition to allow `dev`, `staging`, and `prod`.
+xp: 225

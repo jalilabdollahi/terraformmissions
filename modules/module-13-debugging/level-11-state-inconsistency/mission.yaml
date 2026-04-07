@@ -1,0 +1,15 @@
+concepts:
+- state inconsistency
+- stale state
+- terraform state management
+description: 'A stale `terraform.tfstate` file is present that records `local_file.config`
+  as existing, but the config tries to create it fresh. The state inconsistency causes
+  an error. Fix: delete the stale state and apply cleanly.'
+difficulty: advanced
+expected_time: 22m
+level: level-11-state-inconsistency
+module: module-13-debugging
+name: Ghost in the State
+objective: Remove the stale state file so `terraform apply` creates the resource from
+  scratch.
+xp: 300

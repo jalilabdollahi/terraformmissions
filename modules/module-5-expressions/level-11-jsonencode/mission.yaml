@@ -1,0 +1,15 @@
+concepts:
+- jsonencode()
+- serialization
+- plan stability
+description: The `local.config` map uses `timestamp()` which produces a dynamic, non-deterministic
+  value. This causes plan instability — the JSON output changes on every run. Replace
+  it with a static map.
+difficulty: intermediate
+expected_time: 12m
+level: level-11-jsonencode
+module: module-5-expressions
+name: JSON Encode
+objective: Remove `timestamp()` and replace it with a static string value so `jsonencode(local.config)`
+  produces stable, valid JSON.
+xp: 200

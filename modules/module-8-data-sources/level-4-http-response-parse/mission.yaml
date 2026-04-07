@@ -1,0 +1,14 @@
+concepts:
+- jsondecode
+- data source parsing
+- local_file
+description: A data source reads a JSON file and `jsondecode` is used to extract a
+  value, but the wrong key is referenced.
+difficulty: intermediate
+expected_time: 12m
+level: level-4-http-response-parse
+module: module-8-data-sources
+name: Wrong JSON Key
+objective: Fix the key used in `jsondecode` so the output resolves correctly and `terraform
+  plan` passes.
+xp: 200

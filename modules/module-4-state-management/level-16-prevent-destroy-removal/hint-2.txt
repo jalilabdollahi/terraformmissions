@@ -1,0 +1,1 @@
+`prevent_destroy = true` in a `lifecycle` block causes Terraform to error if the resource would be destroyed, even in a plan.

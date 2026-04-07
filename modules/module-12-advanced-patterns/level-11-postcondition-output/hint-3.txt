@@ -1,0 +1,1 @@
+Change `self.wrong_attr` to `self.value`.

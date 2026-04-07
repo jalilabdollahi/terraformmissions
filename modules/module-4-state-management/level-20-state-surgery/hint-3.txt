@@ -1,0 +1,1 @@
+Change `resource "local_files" "config_b"` to `resource "local_file" "config_b"` and update the output to use `local_file.config_b.filename`.

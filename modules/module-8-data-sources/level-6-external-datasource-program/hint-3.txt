@@ -1,0 +1,1 @@
+Replace `program = ["nonexistent_binary"]` with `program = ["python3", "-c", "import json; print(json.dumps({'key': 'value'}))"]`.

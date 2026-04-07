@@ -1,0 +1,1 @@
+In Terraform test files, outputs are shared across `run` blocks via the module's state. You access the current state's outputs simply as `output.<name>`, not via a run-block prefix.

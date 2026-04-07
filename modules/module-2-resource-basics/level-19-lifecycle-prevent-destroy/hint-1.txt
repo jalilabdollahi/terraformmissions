@@ -1,0 +1,1 @@
+Run `terraform apply` then `terraform plan -destroy`. The destroy plan fails because the resource has `prevent_destroy = true`.

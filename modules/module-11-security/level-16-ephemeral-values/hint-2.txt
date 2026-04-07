@@ -1,0 +1,1 @@
+Replace `resource "local_file"` with `resource "local_sensitive_file"`. Update the `output "token_location"` reference accordingly.

@@ -1,0 +1,1 @@
+Look at the `provider` blocks in `terraform.tf` — only `alias = "primary"` is defined.

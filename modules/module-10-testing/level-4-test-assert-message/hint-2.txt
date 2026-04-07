@@ -1,0 +1,1 @@
+The `error_message` in an `assert` block must contain a non-empty string that explains what went wrong when the condition is false.

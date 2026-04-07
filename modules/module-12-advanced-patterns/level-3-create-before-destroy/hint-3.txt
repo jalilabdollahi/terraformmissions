@@ -1,0 +1,1 @@
+Give each resource a unique filename: `config-a.txt` and `config-b.txt`.

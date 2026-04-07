@@ -1,0 +1,1 @@
+Team A's outputs are named `cluster_identifier` and `network_id`. Team B references `cluster_id` and `vpc_id` — both names are wrong. The names must match exactly.

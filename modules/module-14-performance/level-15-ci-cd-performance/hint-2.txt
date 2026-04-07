@@ -1,0 +1,1 @@
+After fixing the source to `hashicorp/random`, run `terraform init` — it will succeed and generate a `.terraform.lock.hcl` file automatically. This file records the exact provider version selected.

@@ -1,0 +1,1 @@
+After apply, the check block assertion fails. Look at what attribute is being checked: `local_file.config.id`.

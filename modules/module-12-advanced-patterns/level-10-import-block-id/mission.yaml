@@ -1,0 +1,13 @@
+concepts:
+- import id type
+- import block
+- provider ID format
+description: An `import` block provides `id = 12345` as a number literal. The `id`
+  argument must always be a string.
+difficulty: advanced
+expected_time: 22m
+level: level-10-import-block-id
+module: module-12-advanced-patterns
+name: ID Type Mismatch
+objective: Fix the `id` in the `import` block to be a valid string path.
+xp: 300

@@ -1,0 +1,16 @@
+concepts:
+- -parallelism flag
+- resource count
+- apply performance
+description: A config was written to create 10 random_string resources for load testing,
+  but someone accidentally set count = 0, creating nothing. The inline comment also
+  gives wrong advice about -parallelism. Fix the count and understand why parallelism
+  matters for large configs.
+difficulty: expert
+expected_time: 22m
+level: level-1-parallelism-tuning
+module: module-14-performance
+name: Parallelism Tuning
+objective: Fix the resource count so all 10 random_string resources are created. terraform
+  apply must succeed.
+xp: 300

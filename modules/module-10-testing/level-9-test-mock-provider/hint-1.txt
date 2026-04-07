@@ -1,0 +1,1 @@
+Run `terraform test`. The error will mention that the mock provider cannot handle the `local_file` resource because no schema defaults are defined.

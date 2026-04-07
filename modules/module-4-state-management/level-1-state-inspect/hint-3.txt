@@ -1,0 +1,1 @@
+Change `random_string.delta.result` in the output to `random_string.gamma.result`.

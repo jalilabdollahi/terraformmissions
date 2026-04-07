@@ -1,0 +1,13 @@
+concepts:
+- locals
+- local values
+- duplicate keys
+description: The `locals` block declares the same key `app_name` twice, which is not
+  allowed.
+difficulty: beginner
+expected_time: 8m
+level: level-17-locals-block
+module: module-1-foundations
+name: Double Vision
+objective: Fix the duplicate local value so `terraform validate` passes.
+xp: 125

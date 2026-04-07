@@ -1,0 +1,1 @@
+Open `modules/writer/main.tf`. The `local_file` resource uses `file_content` — check the correct argument name.

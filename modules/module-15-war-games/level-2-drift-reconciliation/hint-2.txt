@@ -1,0 +1,1 @@
+Resource 1: change `length = 8` to `length = 16`. Resource 2: change `special = false` to `special = true`. Resource 3: change `upper = false` to `upper = true`.

@@ -1,0 +1,1 @@
+Run `terraform plan`. Without a `moved` block Terraform simply plans to create `module.new` (since `module.old` no longer exists in config).

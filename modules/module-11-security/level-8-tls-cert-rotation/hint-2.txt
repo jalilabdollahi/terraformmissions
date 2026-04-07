@@ -1,0 +1,1 @@
+`validity_period_hours` controls how long the certificate is valid. `early_renewal_hours` tells Terraform to replace the cert when it has fewer than N hours remaining.

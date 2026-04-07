@@ -1,0 +1,12 @@
+concepts:
+- random_pet
+- attribute types
+description: A `random_pet` resource has `separator = 123` — a number instead of a
+  string. HCL type checking catches this mismatch.
+difficulty: beginner
+expected_time: 5m
+level: level-9-random-pet
+module: module-2-resource-basics
+name: A Number is Not a Separator
+objective: Fix the `separator` attribute type so `terraform validate` passes.
+xp: 100

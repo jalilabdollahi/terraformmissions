@@ -1,0 +1,1 @@
+Run `terraform apply` and inspect the `readme_text` output. If it looks like a long string of letters and numbers (e.g. `V2VsY29tZ...`), you are reading the Base64 version.

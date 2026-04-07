@@ -1,0 +1,16 @@
+concepts:
+- variable propagation
+- rename chain
+- module interface contracts
+description: 'A variable was renamed across 3 levels: root → module_a → module_b.
+  The original name was `token_size`, renamed to `token_length` everywhere EXCEPT
+  the root''s call to module_a still passes the old name as the argument. Fix all
+  references across the chain so the variable propagates correctly.'
+difficulty: expert
+expected_time: 40m
+level: level-9-variable-propagation-chain
+module: module-15-war-games
+name: Variable Propagation Chain
+objective: Fix all mismatched variable names across root, module_a, and module_b so
+  `terraform plan` succeeds.
+xp: 425

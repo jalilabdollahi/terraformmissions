@@ -1,0 +1,1 @@
+Change `id = 12345` to `id = "${path.module}/config.txt"` to use the file path as the import ID.

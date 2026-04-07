@@ -1,0 +1,14 @@
+concepts:
+- terraform import
+- resource adoption
+description: A `local_file` resource is declared but its `filename` points to the
+  wrong path. The validator will create `/tmp/tm_existing.txt` and attempt to import
+  it — the config filename must match.
+difficulty: intermediate
+expected_time: 12m
+level: level-5-import-resource
+module: module-4-state-management
+name: Resource Importer
+objective: Change the `filename` to `/tmp/tm_existing.txt` so the import command succeeds
+  and the resource appears in state.
+xp: 200

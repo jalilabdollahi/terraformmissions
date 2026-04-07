@@ -1,0 +1,14 @@
+concepts:
+- multiline strings
+- heredoc
+- HCL string syntax
+description: A multi-line string value was written without a heredoc — it spans two
+  lines inside regular quotes, which is invalid HCL.
+difficulty: beginner
+expected_time: 8m
+level: level-10-multiline-strings
+module: module-1-foundations
+name: String Escape
+objective: Convert the broken multi-line string to a valid heredoc so `terraform validate`
+  passes.
+xp: 125

@@ -1,0 +1,14 @@
+concepts:
+- module count
+- count.index
+- unique resource names
+description: A module is called with `count = 2` but no `name` argument is passed.
+  The child module requires `name`, so validation fails.
+difficulty: intermediate
+expected_time: 15m
+level: level-6-module-count
+module: module-6-modules
+name: Count Without count.index
+objective: Pass `name = "app-${count.index}"` to the module so each instance gets
+  a unique name.
+xp: 225

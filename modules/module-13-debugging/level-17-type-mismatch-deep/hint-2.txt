@@ -1,0 +1,1 @@
+`tomap()` requires a map or object as input — not a list. A list of strings `["a","b","c"]` cannot be converted to a map because there are no keys.

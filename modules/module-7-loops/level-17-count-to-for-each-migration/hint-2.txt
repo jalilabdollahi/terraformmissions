@@ -1,0 +1,1 @@
+Add `moved` blocks to map each old address to the new one.

@@ -1,0 +1,1 @@
+Run `terraform plan`. Read ALL errors carefully — there are three separate issues. Tackle them in order: (1) stale state type, (2) missing moved block, (3) wrong attribute value. Use `terraform state list` to see what's in state.

@@ -1,0 +1,1 @@
+`terraform plan -detailed-exitcode` exits with code 0 (no changes), 1 (error), or 2 (changes needed). Code 2 after external modification means drift was detected.

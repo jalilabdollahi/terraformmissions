@@ -1,0 +1,13 @@
+concepts:
+- multiple run blocks
+- output references
+- state sharing in tests
+description: The second `run` block references `run.first.output.file_path`, which
+  is not valid syntax. Outputs from previous runs are accessible directly as `output.<name>`.
+difficulty: advanced
+expected_time: 20m
+level: level-7-test-multiple-runs
+module: module-10-testing
+name: Wrong Output Reference Across Run Blocks
+objective: Fix the output reference so `terraform test` passes.
+xp: 275

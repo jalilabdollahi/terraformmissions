@@ -1,0 +1,1 @@
+HCL identifiers must start with a letter (a-z, A-Z) or underscore `_`. Digits are allowed after the first character.

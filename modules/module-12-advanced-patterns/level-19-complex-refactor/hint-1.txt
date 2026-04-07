@@ -1,0 +1,1 @@
+Run `terraform validate`. All three `moved` blocks have errors on the `to` lines. Each unquoted identifier like `[web]` is invalid HCL.

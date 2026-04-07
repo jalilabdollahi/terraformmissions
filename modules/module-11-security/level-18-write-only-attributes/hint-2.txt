@@ -1,0 +1,1 @@
+Remove `nonsensitive()` from the `content` attribute of the file resource. Then change `local_file` to `local_sensitive_file`.

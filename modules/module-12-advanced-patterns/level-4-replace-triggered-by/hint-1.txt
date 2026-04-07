@@ -1,0 +1,1 @@
+Run `terraform validate`. The error reports a reference to an undeclared resource.

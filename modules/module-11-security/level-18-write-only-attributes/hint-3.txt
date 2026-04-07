@@ -1,0 +1,1 @@
+Note: the `output "password_check"` correctly uses `nonsensitive(length(...))` — the *length* of a password is not sensitive. Only the raw password value is. Leave that output as is.

@@ -1,0 +1,7 @@
+Add to `main.tf`:
+```hcl
+moved {
+  from = module.old
+  to   = module.new
+}
+```

@@ -1,0 +1,27 @@
+#compdef terraformissions
+# zsh completion for TerraformMissions
+
+_terraformissions() {
+  local -a commands
+  commands=(
+    'check:Validate your solution and award XP if correct'
+    'check-dry:Dry-run validator without awarding XP'
+    'watch:Auto-validate every 5 seconds until pass'
+    'hint:Reveal the next progressive hint'
+    'solution:Show the reference solution files'
+    'guide:Show step-by-step walkthrough'
+    'debrief:Show post-mission learning debrief'
+    'plan:Run terraform plan (informational)'
+    'validate:Run terraform validate'
+    'init:Re-run terraform init'
+    'reset:Reset level to broken state'
+    'status:Show progress across all modules'
+    'skip:Skip level (no XP awarded)'
+    'quit:Save and exit'
+    'reset-progress:Wipe all progress and start over'
+    'help:Show all commands'
+  )
+  _describe 'command' commands
+}
+
+_terraformissions

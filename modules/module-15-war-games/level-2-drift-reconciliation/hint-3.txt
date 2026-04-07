@@ -1,0 +1,1 @@
+After fixing all 3, run `terraform apply`. The validate script will check all 3 outputs: `api_key_length` must be 16, `session_has_special` must be true, and `admin_has_upper` must be true.

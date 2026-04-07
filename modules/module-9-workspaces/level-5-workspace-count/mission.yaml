@@ -1,0 +1,13 @@
+concepts:
+- terraform.workspace
+- workspace-based count
+- variable references
+description: A `count` expression references `workspace` without the required `terraform.`
+  prefix.
+difficulty: intermediate
+expected_time: 12m
+level: level-5-workspace-count
+module: module-9-workspaces
+name: Missing terraform. Prefix
+objective: Add the `terraform.` prefix so `terraform validate` passes.
+xp: 200

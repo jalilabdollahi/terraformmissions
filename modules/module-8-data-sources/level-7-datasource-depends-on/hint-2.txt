@@ -1,0 +1,1 @@
+Data sources have a `depends_on` meta-argument, just like resources. It forces Terraform to resolve the dependency before reading the data source.

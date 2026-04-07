@@ -1,0 +1,14 @@
+concepts:
+- external data source
+- JSON output
+- external program
+description: An external data source calls a Python script, but the script prints
+  plain text instead of valid JSON.
+difficulty: intermediate
+expected_time: 12m
+level: level-5-external-datasource
+module: module-8-data-sources
+name: Script Doesn't Speak JSON
+objective: Fix `get_info.py` so it outputs valid JSON, allowing `terraform plan` to
+  succeed.
+xp: 200

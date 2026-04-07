@@ -1,0 +1,15 @@
+concepts:
+- required_providers
+- terraform block
+- provider versions
+- terraform init
+description: '`terraform init` fails because the required provider version does not
+  exist.'
+difficulty: beginner
+expected_time: 5m
+level: level-3-missing-provider
+module: module-1-foundations
+name: The Missing Provider
+objective: Fix the `required_providers` version constraint so that `terraform init`
+  can download the provider.
+xp: 125

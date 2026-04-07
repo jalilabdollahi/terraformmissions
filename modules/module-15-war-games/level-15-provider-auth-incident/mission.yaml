@@ -1,0 +1,16 @@
+concepts:
+- provider authentication
+- credential variable references
+- auth debugging
+description: A provider configuration references the wrong variable name for credentials.
+  The variable is declared as `api_secret` but the provider block references `api_key`
+  — a name that doesn't exist. This simulates a provider auth failure caused by a
+  misconfigured credential reference. Fix the variable name.
+difficulty: expert
+expected_time: 40m
+level: level-15-provider-auth-incident
+module: module-15-war-games
+name: Provider Auth Incident
+objective: Fix the wrong variable reference in the provider block so `terraform validate`
+  succeeds.
+xp: 425

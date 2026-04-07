@@ -1,0 +1,1 @@
+Terraform requires `count` to be a whole number that is zero or greater. A count of `-1` has no meaning — you can't create negative resources.

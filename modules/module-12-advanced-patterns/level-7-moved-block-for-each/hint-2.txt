@@ -1,0 +1,1 @@
+When a resource uses `for_each` with string keys, the instance address uses quoted strings: `resource_type.label["key"]`.

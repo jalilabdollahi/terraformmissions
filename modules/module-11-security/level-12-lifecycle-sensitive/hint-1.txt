@@ -1,0 +1,1 @@
+Look at the `lifecycle` block. `ignore_changes = [content]` tells Terraform to never update the file content, even if it drifts from the expected value.

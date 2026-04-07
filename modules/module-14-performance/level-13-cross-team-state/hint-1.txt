@@ -1,0 +1,1 @@
+Apply team-a first (`cd team-a && terraform init && terraform apply`), then plan team-b. The error will show which output keys don't exist in team-a's state. Compare with team-a/main.tf output block names.

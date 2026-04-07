@@ -1,0 +1,1 @@
+Change `.result` to `.id`. The generated UUID is exposed as `random_uuid.<name>.id`.

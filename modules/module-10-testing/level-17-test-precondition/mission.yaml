@@ -1,0 +1,14 @@
+concepts:
+- precondition expect_failures
+- variable vs resource checks
+- negative testing
+description: '`expect_failures = [local_file.config]` targets the resource but the
+  validation check is on `var.filename`. Fix the target to `var.filename`.'
+difficulty: advanced
+expected_time: 22m
+level: level-17-test-precondition
+module: module-10-testing
+name: Wrong expect_failures Target for Precondition
+objective: Correct the `expect_failures` target so it points to the variable with
+  the validation and `terraform test` passes.
+xp: 300

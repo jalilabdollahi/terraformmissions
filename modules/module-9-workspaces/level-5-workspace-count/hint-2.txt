@@ -1,0 +1,1 @@
+`terraform` is a special object in Terraform that exposes metadata about the current run. Its attributes include `terraform.workspace` and `terraform.env` (deprecated alias).

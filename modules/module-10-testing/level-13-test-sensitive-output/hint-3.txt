@@ -1,0 +1,1 @@
+Change the condition to `output.password != ""` or `length(output.password) >= 8`.

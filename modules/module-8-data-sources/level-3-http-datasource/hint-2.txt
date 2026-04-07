@@ -1,0 +1,1 @@
+A valid URL must include a scheme (`http://` or `https://`), a hostname, and optionally a path. `not-a-url` has none of those.

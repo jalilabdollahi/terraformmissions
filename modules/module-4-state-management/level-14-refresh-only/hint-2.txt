@@ -1,0 +1,1 @@
+Valid exported attributes for `local_file` include `filename`, `content`, `id`, and `content_base64`.

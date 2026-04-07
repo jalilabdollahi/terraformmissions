@@ -1,0 +1,1 @@
+Run `terraform validate`. The error reports a type mismatch on the `separator` attribute.

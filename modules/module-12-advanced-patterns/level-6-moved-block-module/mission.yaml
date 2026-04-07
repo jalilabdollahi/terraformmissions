@@ -1,0 +1,13 @@
+concepts:
+- moved to module
+- module addresses
+- state refactoring
+description: A `moved` block migrates a resource into a child module, but the module
+  name in the `to` address is wrong — it says `module.wrong_module` instead of `module.storage`.
+difficulty: advanced
+expected_time: 22m
+level: level-6-moved-block-module
+module: module-12-advanced-patterns
+name: Module Migration Mismatch
+objective: Fix the `moved` block's `to` address to use the correct module name.
+xp: 300

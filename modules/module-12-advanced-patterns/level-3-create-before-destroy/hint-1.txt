@@ -1,0 +1,1 @@
+The issue is that both resources try to use the same `filename`. With `create_before_destroy`, the new instance is created before the old one is destroyed.

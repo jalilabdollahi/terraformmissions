@@ -1,0 +1,1 @@
+Run `terraform test`. The error says the data source `data.local_file.wrong` does not exist in the configuration.

@@ -1,0 +1,1 @@
+For `random_string`, the import ID is the result string itself (the generated string value). The correct IDs follow the pattern: `tokena001`, `tokenb001`, `tokenc001`, `tokend001`, `tokene001`.

@@ -1,0 +1,1 @@
+Replace `ignore_changes = all` with `ignore_changes = [content]` to only ignore content drift while monitoring other attributes.

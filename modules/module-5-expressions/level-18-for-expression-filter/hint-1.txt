@@ -1,0 +1,1 @@
+Run `terraform validate` — it reports a type error comparing a string to a number.

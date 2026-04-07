@@ -1,0 +1,1 @@
+Run `terraform plan`. When `for_each` is used, Terraform creates a map of instances keyed by the set values. You cannot access the entire map as a single instance.

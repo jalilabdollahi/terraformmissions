@@ -1,0 +1,15 @@
+concepts:
+- sensitive value constraints
+- for_each keys
+- nonsensitive()
+description: A `for_each` uses a sensitive variable value as the map key. Terraform
+  prohibits sensitive values as `for_each` keys because they would be exposed in the
+  plan output. Fix by using `nonsensitive()` on the key.
+difficulty: advanced
+expected_time: 20m
+level: level-14-sensitive-value-error
+module: module-13-debugging
+name: Sensitive Keys Forbidden
+objective: Wrap the sensitive key with `nonsensitive()` so it can be used as a `for_each`
+  key.
+xp: 275

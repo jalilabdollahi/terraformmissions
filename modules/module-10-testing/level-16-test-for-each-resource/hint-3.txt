@@ -1,0 +1,1 @@
+Change `output.files["wrong_key"]` to `output.files["alpha"]`.

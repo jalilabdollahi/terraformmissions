@@ -1,0 +1,1 @@
+Run `terraform apply`. The error shows the provisioner exited with a non-zero status. Look at the exact command being run.

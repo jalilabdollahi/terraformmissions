@@ -1,0 +1,1 @@
+Change the variable type from `map(string)` to `map(number)` AND remove the quotes from all 20 values (e.g. `token_01 = 8` not `token_01 = "8"`). Re-run plan.

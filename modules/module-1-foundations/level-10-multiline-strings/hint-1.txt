@@ -1,0 +1,1 @@
+Regular quoted strings in HCL cannot span multiple lines. Run `terraform validate` to see the parse error.

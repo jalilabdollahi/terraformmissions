@@ -1,0 +1,1 @@
+Run `terraform validate`. The config validates but the output leaks sensitive data. Look for `nonsensitive()` in the output value.

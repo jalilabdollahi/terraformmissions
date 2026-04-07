@@ -1,0 +1,1 @@
+Terraform test files support three top-level block types: `run`, `variables`, and `provider`. There is no `tests` block.

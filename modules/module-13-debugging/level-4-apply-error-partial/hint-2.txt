@@ -1,0 +1,1 @@
+The value `"999"` is not a valid Unix octal permission string. Valid values use octal digits (0-7) and are typically 4 characters starting with `0`.

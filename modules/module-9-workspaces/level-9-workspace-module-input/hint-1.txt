@@ -1,0 +1,1 @@
+Run `terraform plan`. Terraform reports a key error because `local.env_map["default"]` does not exist. The current workspace is `default`.

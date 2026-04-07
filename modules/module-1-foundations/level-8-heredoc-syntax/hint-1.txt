@@ -1,0 +1,1 @@
+With `<<EOF`, the closing `EOF` marker must be at column 0 (no indentation). If it's indented, Terraform doesn't recognise it as the closing marker.

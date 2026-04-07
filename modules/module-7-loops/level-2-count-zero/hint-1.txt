@@ -1,0 +1,1 @@
+Run `terraform plan`. With `enabled = false`, `count = 0` — there is no `local_file.config[0]`.

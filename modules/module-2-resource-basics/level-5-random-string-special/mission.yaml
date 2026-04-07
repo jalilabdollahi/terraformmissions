@@ -1,0 +1,13 @@
+concepts:
+- random_string
+- override_special
+description: A `random_string` resource sets `special = true` and `override_special
+  = ""` (an empty string). This forces special characters to come from an empty set,
+  causing an apply-time error.
+difficulty: beginner
+expected_time: 8m
+level: level-5-random-string-special
+module: module-2-resource-basics
+name: Special Characters Gone Wrong
+objective: Fix `override_special` so that `terraform apply` succeeds.
+xp: 125

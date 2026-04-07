@@ -1,0 +1,15 @@
+concepts:
+- workspace isolation
+- resource naming
+- terraform.workspace
+description: Two resources share the same output filename regardless of workspace.
+  Adding the workspace name to the filename prevents collisions when both workspaces
+  run in the same directory.
+difficulty: intermediate
+expected_time: 15m
+level: level-7-workspace-isolation
+module: module-9-workspaces
+name: Name Collision Across Workspaces
+objective: Add `terraform.workspace` as a suffix to the resource filename so `terraform
+  plan` passes and names are unique per workspace.
+xp: 225

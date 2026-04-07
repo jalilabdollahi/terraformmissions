@@ -1,0 +1,11 @@
+concepts:
+- output depends_on
+description: An `output` block has `depends_on = [local_file.nonexistent]`, referencing
+  a resource that does not exist in the configuration.
+difficulty: intermediate
+expected_time: 10m
+level: level-14-output-depends-on
+module: module-3-variables-outputs
+name: Output Depends on a Ghost
+objective: Fix or remove the bogus `depends_on` so `terraform validate` passes.
+xp: 150

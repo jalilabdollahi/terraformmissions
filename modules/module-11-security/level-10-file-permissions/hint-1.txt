@@ -1,0 +1,1 @@
+`file_permission` is a string representing Unix permissions. `"777"` is world-readable/writable/executable — the most permissive possible setting.

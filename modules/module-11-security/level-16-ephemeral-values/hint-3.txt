@@ -1,0 +1,1 @@
+Add `sensitive = true` to `output "token_preview"` to prevent the token from being displayed.

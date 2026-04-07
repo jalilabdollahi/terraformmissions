@@ -1,0 +1,15 @@
+concepts:
+- security validation
+- variable validation
+- password policy
+description: 'The variable validation uses `condition = length(var.password) <= 8`,
+  which accepts short passwords and rejects long ones — the opposite of a security
+  requirement. Fix: change `<=` to `>=`.'
+difficulty: advanced
+expected_time: 20m
+level: level-13-validation-security
+module: module-11-security
+name: Wrong Operator in Password Length Validation
+objective: Correct the validation operator so passwords shorter than 8 characters
+  are rejected.
+xp: 275

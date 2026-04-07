@@ -1,0 +1,1 @@
+The `moved` block can handle BOTH rename and module relocation simultaneously. The syntax is: `moved { from = random_string.old_alpha  to = module.tokens.random_string.token_alpha }`. Note: `from` is the OLD name (before rename), `to` is the NEW module path + NEW name.

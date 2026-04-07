@@ -1,0 +1,15 @@
+concepts:
+- file permissions
+- octal strings
+- local_sensitive_file
+description: '`local_sensitive_file` is created with `file_permission = "777"`, which
+  grants everyone on the system read, write, and execute access. Fix: set `file_permission
+  = "0600"`.'
+difficulty: advanced
+expected_time: 18m
+level: level-10-file-permissions
+module: module-11-security
+name: Overly Permissive File Permissions
+objective: Change `file_permission` to `"0600"` so only the owner can read and write
+  the file.
+xp: 250

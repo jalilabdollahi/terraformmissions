@@ -1,0 +1,1 @@
+Check the `local_file` provider docs: available exported attributes are `filename`, `content`, `id`, and `content_base64`.

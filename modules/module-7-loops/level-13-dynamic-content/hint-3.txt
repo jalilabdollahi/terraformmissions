@@ -1,0 +1,1 @@
+Simplify by using the `local.tags_content` expression instead of inline for with wrong references.

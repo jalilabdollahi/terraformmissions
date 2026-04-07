@@ -1,0 +1,1 @@
+Run `terraform plan` on the broken config. Notice: (1) `critical_token_value` output shows the raw value — add `sensitive = true`. (2) The critical resource has no `lifecycle { prevent_destroy = true }`. (3) The variable has no `validation` block. (4) The `token_length_check` output has no `precondition`.

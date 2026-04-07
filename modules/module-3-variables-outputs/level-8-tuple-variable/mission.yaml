@@ -1,0 +1,11 @@
+concepts:
+- tuple type
+description: A variable has `type = tuple([string, number])` but `default = ["hello",
+  "world"]`. The second element should be a number, not a string.
+difficulty: intermediate
+expected_time: 10m
+level: level-8-tuple-variable
+module: module-3-variables-outputs
+name: Tuples Need Exact Types
+objective: Fix the second element so `terraform validate` passes.
+xp: 150

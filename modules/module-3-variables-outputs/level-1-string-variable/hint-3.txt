@@ -1,0 +1,1 @@
+Change `type = number` to `type = string` to match the default value.

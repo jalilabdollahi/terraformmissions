@@ -1,0 +1,1 @@
+Run `terraform validate`. It says index `[3]` is out of range — there are only instances 0, 1, 2.

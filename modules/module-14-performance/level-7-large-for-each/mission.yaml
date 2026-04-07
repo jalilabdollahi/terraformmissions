@@ -1,0 +1,16 @@
+concepts:
+- large for_each
+- type constraints
+- variable validation
+description: A config uses for_each over a map of 20 entries to create random_string
+  resources. The map values have the wrong type — they should be numbers (the desired
+  string length) but are provided as strings. Fix the map value types so the for_each
+  plan succeeds.
+difficulty: expert
+expected_time: 28m
+level: level-7-large-for-each
+module: module-14-performance
+name: Large for_each Optimization
+objective: Fix the map value types in the variable so that `terraform plan` succeeds
+  for all 20 resources.
+xp: 350

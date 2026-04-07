@@ -1,0 +1,1 @@
+Replace `char_count` with `length` in both `random_string` resources. The values stay the same (20 and 16). Run `terraform validate` to confirm, then `terraform apply`.

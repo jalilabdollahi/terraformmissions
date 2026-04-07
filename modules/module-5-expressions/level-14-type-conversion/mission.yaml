@@ -1,0 +1,15 @@
+concepts:
+- tolist()
+- type conversion
+- values()
+description: '`tolist(var.my_map)` tries to convert a `map(string)` to a list, but
+  `tolist()` only works on collections that are already list-like (tuples). Maps must
+  use `values()` to extract their values as a list.'
+difficulty: intermediate
+expected_time: 10m
+level: level-14-type-conversion
+module: module-5-expressions
+name: Type Conversion
+objective: Replace `tolist(var.my_map)` with `values(var.my_map)` so `terraform validate`
+  passes.
+xp: 175

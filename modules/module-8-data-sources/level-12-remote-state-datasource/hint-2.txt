@@ -1,0 +1,1 @@
+`data "terraform_remote_state"` with `backend = "local"` reads a `.tfstate` file on disk. The `config.path` must point to that exact file.

@@ -1,0 +1,1 @@
+Run `terraform validate` — `merge()` does not accept lists.

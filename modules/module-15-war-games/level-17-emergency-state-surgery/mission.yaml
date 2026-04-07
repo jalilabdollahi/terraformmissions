@@ -1,0 +1,16 @@
+concepts:
+- state surgery
+- resource type mismatch
+- state reconciliation
+description: 'The state file records a resource as type `random_id` (old type) but
+  the config now uses `random_string` (new type). Terraform sees a type mismatch.
+  Fix: add a `moved` block to reconcile the type change, or simply delete the stale
+  state entry and let apply recreate it cleanly.'
+difficulty: expert
+expected_time: 50m
+level: level-17-emergency-state-surgery
+module: module-15-war-games
+name: Emergency State Surgery
+objective: Resolve the resource type mismatch between state and config so `terraform
+  apply` succeeds.
+xp: 500

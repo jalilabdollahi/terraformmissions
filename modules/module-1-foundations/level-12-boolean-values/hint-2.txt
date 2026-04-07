@@ -1,0 +1,1 @@
+Booleans in HCL are bare keywords: `true` and `false` — not quoted strings.

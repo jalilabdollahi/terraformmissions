@@ -1,0 +1,1 @@
+Run `terraform validate`. The error says `nonexistent_attr` is not a valid attribute of this resource.

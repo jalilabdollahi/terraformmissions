@@ -1,0 +1,14 @@
+concepts:
+- data source for_each
+- for_each keys
+- map access
+description: A data source uses `for_each` over a set of filenames, but the output
+  references the data source without a key.
+difficulty: intermediate
+expected_time: 12m
+level: level-9-datasource-for-each
+module: module-8-data-sources
+name: Missing Map Key
+objective: Fix the output to use the correct `for_each` key syntax so `terraform plan`
+  succeeds.
+xp: 200

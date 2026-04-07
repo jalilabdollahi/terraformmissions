@@ -1,0 +1,15 @@
+concepts:
+- partial backend config
+- backend constraints
+- terraform init
+description: The `backend "local"` block references `var.state_path` — but variables
+  cannot be used in backend configuration blocks. Terraform reports an error during
+  init.
+difficulty: intermediate
+expected_time: 15m
+level: level-13-partial-config
+module: module-4-state-management
+name: Partial Backend Config
+objective: Replace `var.state_path` with the literal string `"terraform.tfstate"`
+  in the backend block so `terraform init` succeeds.
+xp: 225

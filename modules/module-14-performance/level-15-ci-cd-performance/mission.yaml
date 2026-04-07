@@ -1,0 +1,17 @@
+concepts:
+- CI/CD optimization
+- .terraform.lock.hcl
+- terraform init performance
+- provider source
+description: 'A CI/CD config has two problems: the provider source namespace is wrong
+  (causing terraform init to fail), and the .terraform.lock.hcl file is missing from
+  source control (causing every CI run to re-resolve provider versions from the registry).
+  Fix the provider source AND add a valid lock file to the solution directory.'
+difficulty: expert
+expected_time: 35m
+level: level-15-ci-cd-performance
+module: module-14-performance
+name: CI/CD Pipeline Performance
+objective: Fix the provider source error and ensure a .terraform.lock.hcl exists so
+  CI/CD can run faster inits.
+xp: 400

@@ -1,0 +1,1 @@
+In programming and Terraform, count-based resources are zero-indexed. `count = 3` gives you indices 0, 1, and 2.

@@ -1,0 +1,1 @@
+Run `terraform plan` twice in a row. You will see the `random_password` resource is planned for replacement every time because `timestamp()` changes.

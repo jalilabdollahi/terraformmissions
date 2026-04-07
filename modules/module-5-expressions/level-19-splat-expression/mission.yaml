@@ -1,0 +1,15 @@
+concepts:
+- splat expression
+- count
+- resource lists
+description: '`local_file.config[*].filename` uses a splat expression on a single
+  resource that has no `count` or `for_each`. Splat expressions require the resource
+  to produce a list (i.e., use `count`).'
+difficulty: intermediate
+expected_time: 15m
+level: level-19-splat-expression
+module: module-5-expressions
+name: Splat Expression
+objective: Add `count = 2` to the `local_file.config` resource (and update `content`
+  and `filename` to use `count.index`) so the splat expression is valid.
+xp: 225

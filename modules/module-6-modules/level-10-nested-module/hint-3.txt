@@ -1,0 +1,1 @@
+In `modules/child/main.tf`, change `${path.root}` to `${path.module}`.

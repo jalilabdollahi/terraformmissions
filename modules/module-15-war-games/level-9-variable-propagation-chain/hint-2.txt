@@ -1,0 +1,1 @@
+Bug 1 is in `main.tf` (root): change `token_size = 16` to `token_length = 16`. Bug 2 is in `modules/module_a/main.tf`: change `string_length = var.token_length` to `token_length = var.token_length`.

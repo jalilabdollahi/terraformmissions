@@ -1,0 +1,14 @@
+concepts:
+- variable types
+- bool
+- type mismatch
+description: A variable has `type = bool` and `default = "false"` — the boolean is
+  wrapped in quotes, making it a string. Fix the default value.
+difficulty: beginner
+expected_time: 5m
+level: level-3-bool-variable
+module: module-3-variables-outputs
+name: False is Not a String
+objective: Fix the default value so it is an unquoted boolean and `terraform validate`
+  passes.
+xp: 100

@@ -1,0 +1,1 @@
+Add two `removed {}` blocks in main.tf — one for `random_string.resource_ghost_a` and one for `random_string.resource_ghost_b`, each with `lifecycle { destroy = false }`. Then run `terraform apply`.

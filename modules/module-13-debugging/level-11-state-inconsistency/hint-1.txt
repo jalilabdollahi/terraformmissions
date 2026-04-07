@@ -1,0 +1,1 @@
+Run `terraform plan`. It detects the state file and tries to reconcile it with the actual file at `/tmp/stale_config.txt` — which doesn't exist. This causes an inconsistency.

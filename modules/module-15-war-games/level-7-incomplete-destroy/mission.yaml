@@ -1,0 +1,17 @@
+concepts:
+- orphaned state entries
+- removed blocks
+- state cleanup
+description: 'The state file records two resources that no longer exist in the config
+  — ghost resources left behind from a previous partial destroy. Terraform will error
+  when trying to apply because the state references resources not in config. Fix:
+  add `removed {}` blocks for the ghost resources to cleanly remove them from state
+  without destroying infrastructure.'
+difficulty: expert
+expected_time: 35m
+level: level-7-incomplete-destroy
+module: module-15-war-games
+name: Incomplete Destroy — Ghost Resources
+objective: Add removed blocks for both ghost resources so `terraform apply` succeeds
+  without errors.
+xp: 400

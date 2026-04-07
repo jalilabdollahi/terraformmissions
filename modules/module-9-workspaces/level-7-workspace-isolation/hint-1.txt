@@ -1,0 +1,1 @@
+Run `terraform plan`. The plan itself may succeed, but the design flaw is that multiple workspaces would overwrite the same file. The fix is to include the workspace name in the filename.

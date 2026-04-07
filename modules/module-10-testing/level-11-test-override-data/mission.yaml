@@ -1,0 +1,13 @@
+concepts:
+- override_data
+- data source addressing
+- test data overrides
+description: '`override_data { target = data.local_file.wrong }` uses an incorrect
+  data source address. Fix it to match the actual data source.'
+difficulty: advanced
+expected_time: 20m
+level: level-11-test-override-data
+module: module-10-testing
+name: Wrong Data Source Address in override_data
+objective: Correct the `target` address in `override_data` so `terraform test` passes.
+xp: 275

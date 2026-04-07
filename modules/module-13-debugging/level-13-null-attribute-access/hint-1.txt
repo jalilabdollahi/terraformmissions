@@ -1,0 +1,1 @@
+Run `terraform plan`. The data source fails because `maybe_exists.txt` does not exist, and the error propagates to `local.file_content`.

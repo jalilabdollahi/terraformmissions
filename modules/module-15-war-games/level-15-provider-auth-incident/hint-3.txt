@@ -1,0 +1,1 @@
+In `terraform.tf`, the provider block comments reference `var.api_key`. Either remove the erroneous reference or update it to `var.api_secret`. Since the local provider doesn't need auth, simply clean up the provider block comment to remove the broken reference.

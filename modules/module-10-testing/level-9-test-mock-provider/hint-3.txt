@@ -1,0 +1,1 @@
+Add `mock_resource "local_file" { defaults = { filename = "/tmp/test.txt" } }` inside the `mock_provider "local" {}` block.

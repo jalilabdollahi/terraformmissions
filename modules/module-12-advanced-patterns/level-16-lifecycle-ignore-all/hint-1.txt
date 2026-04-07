@@ -1,0 +1,1 @@
+Run `terraform validate`. The config is syntactically valid, but `ignore_changes = all` means Terraform will never detect drift on ANY attribute, including `file_permission`.

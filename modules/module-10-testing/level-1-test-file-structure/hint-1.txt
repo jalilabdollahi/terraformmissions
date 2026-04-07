@@ -1,0 +1,1 @@
+Run `terraform test -no-color` and look at the parse error. The block type name is the first keyword on a line in a .tftest.hcl file.

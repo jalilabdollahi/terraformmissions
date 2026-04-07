@@ -1,0 +1,1 @@
+Run `terraform plan`. Terraform sees two resources in state (`resource_ghost_a` and `resource_ghost_b`) that are not in the config. It will plan to destroy them. If the underlying infrastructure is already gone, this destroy would fail.

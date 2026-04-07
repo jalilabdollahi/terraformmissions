@@ -1,0 +1,1 @@
+Run `terraform plan`. You will see 5 destroy + 5 create pairs — one for each resource being relocated into the module. Terraform doesn't know they're the same resources without `moved` blocks.

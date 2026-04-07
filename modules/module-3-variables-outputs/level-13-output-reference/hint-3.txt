@@ -1,0 +1,1 @@
+Change the reference from `.content` to `.filename` to get the path of the created file.

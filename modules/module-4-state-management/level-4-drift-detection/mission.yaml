@@ -1,0 +1,16 @@
+concepts:
+- drift
+- terraform plan
+- -detailed-exitcode
+description: A `local_file` resource uses `var.file_contents` (with a trailing 's')
+  but the variable is declared as `var.file_content`. Fix the reference so apply works,
+  then the validator will simulate drift and verify it is detected.
+difficulty: intermediate
+expected_time: 15m
+level: level-4-drift-detection
+module: module-4-state-management
+name: Drift Detector
+objective: Fix the variable reference from `var.file_contents` to `var.file_content`.
+  After apply, the validator modifies the file externally and checks that `terraform
+  plan -detailed-exitcode` returns exit code 2 (drift detected).
+xp: 225

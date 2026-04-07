@@ -1,0 +1,15 @@
+concepts:
+- dependency chain debugging
+- resource declarations
+- implicit dependencies
+description: A chain of four resources (A→B→C→D) exists, where D references A's output.
+  But resource A (`local_file.base`) is not declared in the config — only B, C, and
+  D are. Fix by adding the missing A resource declaration.
+difficulty: advanced
+expected_time: 25m
+level: level-16-complex-dependency-debug
+module: module-13-debugging
+name: Missing Link in the Chain
+objective: Add the missing `local_file.base` resource declaration so the dependency
+  chain is complete.
+xp: 325

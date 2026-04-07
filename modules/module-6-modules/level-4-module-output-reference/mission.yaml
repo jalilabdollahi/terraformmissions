@@ -1,0 +1,13 @@
+concepts:
+- module outputs
+- output references
+- module address
+description: The root module references `module.mymod.wrong_output` — an output that
+  doesn't exist in the child module.
+difficulty: intermediate
+expected_time: 10m
+level: level-4-module-output-reference
+module: module-6-modules
+name: Wrong Output Name
+objective: Fix the output reference to use the correct output name `file_path`.
+xp: 175

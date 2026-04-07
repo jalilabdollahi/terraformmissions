@@ -1,0 +1,13 @@
+concepts:
+- resource block
+- HCL syntax
+- terraform validate
+description: A Terraform config was written to create a local file, but it has a syntax
+  error and won't even parse.
+difficulty: beginner
+expected_time: 5m
+level: level-1-first-resource
+module: module-1-foundations
+name: Your First Resource
+objective: Fix the HCL syntax error so that `terraform validate` passes.
+xp: 100

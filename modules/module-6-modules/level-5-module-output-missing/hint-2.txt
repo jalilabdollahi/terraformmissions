@@ -1,0 +1,1 @@
+The child module at `modules/greeter/main.tf` creates `local_file.greeting` — it just doesn't expose the filename.

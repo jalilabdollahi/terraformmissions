@@ -1,0 +1,1 @@
+Change `length(var.items.nonexistent)` to `length(var.items)`.

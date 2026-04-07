@@ -1,0 +1,1 @@
+Run `terraform plan`. With `count = 3`, Terraform creates instances at indices 0, 1, and 2. Index 3 is out of bounds.

@@ -1,0 +1,1 @@
+Run `terraform validate`. The error says the value for `version` is a number but a string is required.

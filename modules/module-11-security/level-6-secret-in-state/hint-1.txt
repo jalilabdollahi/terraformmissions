@@ -1,0 +1,1 @@
+The `local_file` resource creates files with default permissions (usually `0644`) — readable by everyone on the system.

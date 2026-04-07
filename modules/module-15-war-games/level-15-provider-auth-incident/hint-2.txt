@@ -1,0 +1,1 @@
+The variable in `variables.tf` is named `api_secret`. The `terraform.tf` references `var.api_key` — a completely different (nonexistent) variable name. This mismatch is the auth failure root cause.

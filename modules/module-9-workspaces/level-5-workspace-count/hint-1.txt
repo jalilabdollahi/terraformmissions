@@ -1,0 +1,1 @@
+Run `terraform validate`. Terraform reports that `workspace` is not a known reference. The workspace value lives under the `terraform` object.

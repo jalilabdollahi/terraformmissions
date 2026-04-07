@@ -1,0 +1,1 @@
+Run `terraform test`. The error will say the address in `expect_failures` is not valid or is a string rather than a reference.

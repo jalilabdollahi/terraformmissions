@@ -1,0 +1,1 @@
+Terraform uses Go duration strings for timeouts. A number alone is not valid — you must include a unit suffix.

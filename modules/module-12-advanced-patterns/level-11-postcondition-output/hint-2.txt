@@ -1,0 +1,1 @@
+Inside an output's `postcondition`, `self` refers to the output itself. The output has one attribute accessible via `self`: `self.value`.

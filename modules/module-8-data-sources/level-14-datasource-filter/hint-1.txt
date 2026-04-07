@@ -1,0 +1,1 @@
+Run `terraform plan`. Terraform complains that it cannot iterate over a string with a `for` expression. `data.local_file.services.content` is a raw string.

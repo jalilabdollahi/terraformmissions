@@ -1,0 +1,16 @@
+concepts:
+- count=0
+- conditional resources
+- try()
+- safe output access
+description: '`count = var.enabled ? 1 : 0` conditionally creates a resource. With
+  `enabled = false`, `count = 0` and no instance exists. The output references `local_file.config[0].filename`
+  — which errors when count is 0.'
+difficulty: intermediate
+expected_time: 8m
+level: level-2-count-zero
+module: module-7-loops
+name: Referencing a Zero-Count Resource
+objective: Fix the output to use `try(local_file.config[0].filename, "")` so it safely
+  handles the count=0 case.
+xp: 150

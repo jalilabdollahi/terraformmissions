@@ -1,0 +1,1 @@
+Try running `terraform plan -var="env=production"`. The precondition fires and blocks the apply. Read the condition — it says `var.env != "production"`, which fails in production.

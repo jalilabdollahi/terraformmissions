@@ -1,0 +1,13 @@
+concepts:
+- terraform error patterns
+- count constraints
+- invalid values
+description: A resource uses `count = -1`, which is an invalid value. Terraform rejects
+  negative counts with a clear error. Fix by setting `count = 1`.
+difficulty: advanced
+expected_time: 30m
+level: level-18-crash-log-analysis
+module: module-13-debugging
+name: Negative Count Crash
+objective: Change `count = -1` to `count = 1` to produce a valid configuration.
+xp: 350

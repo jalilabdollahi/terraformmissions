@@ -1,0 +1,1 @@
+`map(string)` means every value in the map must be a string, regardless of what the value looks like.

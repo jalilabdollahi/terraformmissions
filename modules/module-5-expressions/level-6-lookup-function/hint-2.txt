@@ -1,0 +1,1 @@
+`lookup(map, key, default)` returns the value for `key` if it exists, otherwise returns `default`.

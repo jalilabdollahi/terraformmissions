@@ -1,0 +1,14 @@
+concepts:
+- for expression filter
+- tonumber()
+- type conversion
+description: '`[for x in var.items : x if x > 10]` compares string elements to a number.
+  `var.items` is `list(string)` — strings cannot be compared to numbers with `>`.'
+difficulty: intermediate
+expected_time: 12m
+level: level-18-for-expression-filter
+module: module-5-expressions
+name: For Expression Filter
+objective: 'Fix the filter by converting each element with `tonumber()`: `[for x in
+  var.items : x if tonumber(x) > 10]` so `terraform plan` succeeds.'
+xp: 200

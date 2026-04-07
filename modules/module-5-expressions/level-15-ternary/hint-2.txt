@@ -1,0 +1,1 @@
+Both branches of a ternary expression must evaluate to the same type. `"yes"` is a string; `0` is a number.

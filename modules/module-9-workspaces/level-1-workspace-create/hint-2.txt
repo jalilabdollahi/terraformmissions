@@ -1,0 +1,1 @@
+`terraform.workspace` is a built-in value that returns the name of the current workspace. It has a specific spelling: w-o-r-k-s-p-a-c-e.

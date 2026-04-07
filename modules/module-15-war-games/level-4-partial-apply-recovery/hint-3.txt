@@ -1,0 +1,1 @@
+Run `terraform apply -auto-approve`. Terraform will create `resource_b` (which depends on `resource_a`) and then `resource_c` (which depends on `resource_b`). Use `terraform state list` afterwards to verify all 3 are in state.

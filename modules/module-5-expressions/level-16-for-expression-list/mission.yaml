@@ -1,0 +1,13 @@
+concepts:
+- for expression
+- list transformation
+description: '`[for item in var.items : item.value]` tries to access `.value` on each
+  string element, but `var.items` is `list(string)` — strings have no `.value` attribute.'
+difficulty: intermediate
+expected_time: 10m
+level: level-16-for-expression-list
+module: module-5-expressions
+name: For Expression List
+objective: 'Fix the for expression to transform strings directly: `[for item in var.items
+  : upper(item)]` so `terraform plan` succeeds.'
+xp: 175

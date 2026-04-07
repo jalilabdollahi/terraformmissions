@@ -1,0 +1,1 @@
+Replace `tests "verify_greeting"` with `run "verify_greeting"` in the test file.

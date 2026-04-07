@@ -1,0 +1,16 @@
+concepts:
+- state merge
+- moved blocks
+- configuration consolidation
+description: Two configs (config-alpha and config-beta) are being merged into one
+  (config-merged). Config-beta's resources need `moved` blocks in config-merged to
+  avoid being destroyed and recreated. The moved blocks mapping config-beta's resources
+  into config-merged are missing. Add them.
+difficulty: expert
+expected_time: 45m
+level: level-14-state-merge-operation
+module: module-15-war-games
+name: State Merge Operation
+objective: Add moved blocks in config-merged for config-beta's resources so plan shows
+  no destroy.
+xp: 475

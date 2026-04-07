@@ -1,0 +1,13 @@
+concepts:
+- resource naming
+- HCL identifiers
+- naming conventions
+description: The resource has an invalid name that starts with a digit, which is not
+  allowed in HCL identifiers.
+difficulty: beginner
+expected_time: 5m
+level: level-19-resource-naming
+module: module-1-foundations
+name: The Name Game
+objective: Rename the resource with a valid identifier so `terraform validate` passes.
+xp: 100

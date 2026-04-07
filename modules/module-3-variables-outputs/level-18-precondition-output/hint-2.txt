@@ -1,0 +1,1 @@
+The precondition `var.port >= 1024` is correct — ports below 1024 are privileged and should not be used by application services. The default value is what's wrong.

@@ -1,0 +1,13 @@
+concepts:
+- module depends_on
+- explicit dependencies
+- reference validation
+description: '`depends_on = [module.nonexistent]` references a module that doesn''t
+  exist, causing a validation error.'
+difficulty: intermediate
+expected_time: 12m
+level: level-8-module-depends-on
+module: module-6-modules
+name: Broken depends_on Reference
+objective: Remove or fix the `depends_on` so it references a real module or resource.
+xp: 200

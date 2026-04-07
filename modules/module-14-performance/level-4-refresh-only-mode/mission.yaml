@@ -1,0 +1,16 @@
+concepts:
+- -refresh-only mode
+- lifecycle ignore_changes
+- drift detection
+description: A resource is configured without a lifecycle block to prevent unintended
+  recreation. The validate script applies the config and then uses -refresh-only to
+  update state. The broken config is missing the lifecycle block that prevents resource
+  recreation when keepers change. Without it, any keeper change causes a destroy-and-recreate.
+difficulty: expert
+expected_time: 25m
+level: level-4-refresh-only-mode
+module: module-14-performance
+name: Refresh-Only Mode
+objective: Add a lifecycle block with ignore_changes = [keepers] to prevent recreation
+  on keeper drift, then verify refresh-only works.
+xp: 325

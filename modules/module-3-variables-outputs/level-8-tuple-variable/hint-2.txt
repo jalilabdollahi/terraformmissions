@@ -1,0 +1,1 @@
+`tuple([string, number])` declares the type of each element by position: index 0 must be a string and index 1 must be a number.

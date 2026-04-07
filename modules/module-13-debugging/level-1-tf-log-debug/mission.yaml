@@ -1,0 +1,15 @@
+concepts:
+- TF_LOG
+- debugging
+- terraform init
+- provider source
+description: A configuration has a broken provider source that causes `terraform init`
+  to fail. The validate.sh uses `TF_LOG=DEBUG` to surface more detail. Fix the provider
+  source so `terraform init` succeeds.
+difficulty: advanced
+expected_time: 15m
+level: level-1-tf-log-debug
+module: module-13-debugging
+name: Reading the Debug Logs
+objective: Correct the provider source from a fake registry to `hashicorp/local`.
+xp: 225

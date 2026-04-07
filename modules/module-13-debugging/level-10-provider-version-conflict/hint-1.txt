@@ -1,0 +1,1 @@
+Run `terraform init`. The error says no single version of `hashicorp/local` satisfies both `~> 2.4` and `>= 3.0`.

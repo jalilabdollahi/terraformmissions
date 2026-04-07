@@ -1,0 +1,1 @@
+Read the condition carefully: `var.min_size > var.max_size` is TRUE when min is GREATER than max — which is the invalid case. The condition should be TRUE for valid input.

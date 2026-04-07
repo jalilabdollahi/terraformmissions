@@ -1,0 +1,1 @@
+The fix is state surgery: remove the stale entry with `terraform state rm random_id.legacy_id`. This tells Terraform to forget the old resource. Then `terraform apply` will create `random_string.service_token` fresh.

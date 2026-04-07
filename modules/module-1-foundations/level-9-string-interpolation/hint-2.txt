@@ -1,0 +1,1 @@
+Also check how the variable is referenced: it should be `var.environment`, not just `environment`.

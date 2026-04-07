@@ -1,0 +1,13 @@
+concepts:
+- provider aliases
+- module providers argument
+- provider configuration
+description: The root passes `providers = { local = local.wrong_alias }` to the child
+  module, but the alias `local.wrong_alias` is not declared in the root provider config.
+difficulty: advanced
+expected_time: 18m
+level: level-9-module-providers
+module: module-6-modules
+name: Wrong Provider Alias in Module
+objective: Fix the `providers` map to reference the declared provider alias `local.primary`.
+xp: 250

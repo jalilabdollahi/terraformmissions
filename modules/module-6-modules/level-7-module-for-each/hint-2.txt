@@ -1,0 +1,1 @@
+With `for_each`, each module instance is addressed as `module.mods["key"]`. The keys here are `"a"` and `"b"`.

@@ -1,0 +1,12 @@
+concepts:
+- provider aliases
+- provider meta-argument
+description: Two `provider "local"` blocks exist — one aliased `primary` and one aliased
+  `secondary`. A resource references `provider = local.wrong`, which doesn't exist.
+difficulty: advanced
+expected_time: 18m
+level: level-1-provider-alias-multi
+module: module-12-advanced-patterns
+name: Alias Confusion
+objective: Fix the provider reference so the resource uses `provider = local.primary`.
+xp: 250

@@ -1,0 +1,1 @@
+Change `workspace == "default"` to `terraform.workspace == "default"`.

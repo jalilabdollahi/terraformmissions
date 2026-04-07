@@ -1,0 +1,15 @@
+concepts:
+- terraform state pull
+- state format
+- random_password
+description: A `random_password` resource has `length = 0`, which is invalid. Fix
+  the length so apply succeeds. The validator will then use `terraform state pull`
+  to inspect the state JSON.
+difficulty: intermediate
+expected_time: 12m
+level: level-15-state-pull
+module: module-4-state-management
+name: State Pull Inspector
+objective: Change `length = 0` to a valid value (e.g., `16`) so `terraform apply`
+  succeeds and `terraform state pull` can read the state.
+xp: 200

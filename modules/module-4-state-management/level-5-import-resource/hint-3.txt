@@ -1,0 +1,1 @@
+Change `/tmp/tm_wrong_path.txt` to `/tmp/tm_existing.txt` in the resource block.

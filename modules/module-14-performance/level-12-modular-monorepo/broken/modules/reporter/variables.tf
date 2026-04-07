@@ -1,0 +1,3 @@
+variable "processed" {
+  type = string
+}

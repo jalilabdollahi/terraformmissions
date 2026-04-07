@@ -1,0 +1,1 @@
+Run `terraform plan`. The error points to `self.wrong_attr` inside the postcondition.

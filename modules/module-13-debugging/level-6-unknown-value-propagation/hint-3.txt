@@ -1,0 +1,1 @@
+Replace `count = length(random_string.suffix.result)` with the static value `count = 4` (matching the `length = 4` in the random_string resource).

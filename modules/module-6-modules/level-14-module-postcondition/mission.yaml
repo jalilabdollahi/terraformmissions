@@ -1,0 +1,14 @@
+concepts:
+- output postcondition
+- self reference
+- lifecycle assertions
+description: An output has a `postcondition` whose condition is `self.value == ""`
+  — it passes only when the value IS empty, which is backwards. The intent is to ensure
+  the value is NOT empty.
+difficulty: advanced
+expected_time: 18m
+level: level-14-module-postcondition
+module: module-6-modules
+name: Inverted Postcondition
+objective: Fix the postcondition to `self.value != ""`.
+xp: 250

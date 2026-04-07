@@ -1,0 +1,1 @@
+The `moved` block syntax: `moved { from = random_string.svc_one  to = random_string.service_alpha }`. You need one for each of the 5 renames documented in the comments.

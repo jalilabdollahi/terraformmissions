@@ -1,0 +1,15 @@
+concepts:
+- import blocks
+- bulk import
+- import ID format
+description: 5 import blocks are configured to import existing random_string resources
+  into Terraform state. 2 of the 5 have wrong `id` values — they import non-existent
+  resource IDs. Fix both wrong IDs to match the resources defined in the config.
+difficulty: expert
+expected_time: 45m
+level: level-12-import-at-scale
+module: module-15-war-games
+name: Import at Scale
+objective: Fix the 2 wrong import block IDs so all 5 imports succeed and `terraform
+  plan` shows no changes.
+xp: 450

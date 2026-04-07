@@ -1,0 +1,1 @@
+Remove the quotes: change `provider = "local.primary"` to `provider = local.primary`.

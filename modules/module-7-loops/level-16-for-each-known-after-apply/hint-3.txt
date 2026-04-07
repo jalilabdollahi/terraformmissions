@@ -1,0 +1,1 @@
+Replace `toset([random_string.id.result])` with a static set like `toset(["main"])`. You can still use the random value in the resource body.

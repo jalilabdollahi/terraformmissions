@@ -1,0 +1,1 @@
+Run `terraform validate` — `%{if}` requires a boolean condition; a string `"true"` is not a bool.

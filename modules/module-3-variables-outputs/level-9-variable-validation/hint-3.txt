@@ -1,0 +1,1 @@
+Replace the condition with `contains(["dev", "staging", "prod"], var.env)` to accept all three valid environment names.

@@ -1,0 +1,14 @@
+concepts:
+- terraform state rm
+- circular dependency
+- dependency graph
+description: Two `local_file` resources form a circular dependency — each references
+  the other's filename in its content. This makes `terraform apply` impossible.
+difficulty: intermediate
+expected_time: 12m
+level: level-3-state-remove
+module: module-4-state-management
+name: State Eraser
+objective: Break the circular dependency so `terraform apply` succeeds. The validator
+  will then run `terraform state rm local_file.file_b` and verify the result.
+xp: 200

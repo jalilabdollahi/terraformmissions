@@ -1,0 +1,1 @@
+In config-b/main.tf, change `data.terraform_remote_state.infra.outputs.infra_id` to `data.terraform_remote_state.infra.outputs.infrastructure_id`.

@@ -1,0 +1,1 @@
+Run `terraform plan`. The `external` data source requires the program to write a **single JSON object** to stdout. The current script prints `version=1.0` which is not JSON.

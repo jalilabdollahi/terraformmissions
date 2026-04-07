@@ -1,0 +1,1 @@
+The module is declared as `module "storage"` but the `moved` block references `module.wrong_module`. These must match.

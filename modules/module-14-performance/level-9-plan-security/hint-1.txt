@@ -1,0 +1,1 @@
+Run `terraform plan`. Look at the output section — does the `database_password` output show the actual password value in plain text? In CI/CD this would be visible in build logs.

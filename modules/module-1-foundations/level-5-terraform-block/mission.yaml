@@ -1,0 +1,14 @@
+concepts:
+- terraform block
+- required_providers
+- provider source
+description: Someone deleted the entire `terraform {}` settings block. Terraform can
+  still run but the provider source is unspecified, causing init to fail.
+difficulty: beginner
+expected_time: 5m
+level: level-5-terraform-block
+module: module-1-foundations
+name: Block Disappeared
+objective: Add back the `terraform {}` block with the correct `required_providers`
+  entry for `hashicorp/local`.
+xp: 100

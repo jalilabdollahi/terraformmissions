@@ -1,0 +1,1 @@
+Run `terraform plan`. The error says Terraform cannot open the template file. Look at the full path passed to `templatefile()` and compare it to where the template actually lives in the project directory tree.

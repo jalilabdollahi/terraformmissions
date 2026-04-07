@@ -1,0 +1,1 @@
+Apply team1 first (`cd team1 && terraform init && terraform apply`), then run `terraform plan` in team2/. The error says `network_token` doesn't exist in team1's outputs. Check team1/main.tf for the actual output name.

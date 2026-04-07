@@ -1,0 +1,1 @@
+Change `length = 12` to `length = 16` and set `min_lower = min_upper = min_numeric = min_special = 3` (sum = 12 <= 16). Then the plan will succeed and can be saved to a file.

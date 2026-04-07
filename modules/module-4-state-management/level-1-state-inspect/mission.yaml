@@ -1,0 +1,14 @@
+concepts:
+- state list
+- state show
+- resource references
+description: A config creates three `random_string` resources (alpha, beta, gamma)
+  but the output references a nonexistent resource named `delta`.
+difficulty: intermediate
+expected_time: 10m
+level: level-1-state-inspect
+module: module-4-state-management
+name: State Inspector
+objective: Fix the output so it references `random_string.gamma.result`. Then `terraform
+  apply` must succeed and the output must be populated.
+xp: 175

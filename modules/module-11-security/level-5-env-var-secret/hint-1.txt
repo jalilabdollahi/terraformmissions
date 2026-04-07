@@ -1,0 +1,1 @@
+Terraform maps `TF_VAR_<name>` environment variables to variables by their lowercase name. `TF_VAR_db_password` maps to `var.db_password`, not `var.DB_PASSWORD`.

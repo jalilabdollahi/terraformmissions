@@ -1,0 +1,14 @@
+concepts:
+- module sources
+- local vs remote modules
+- terraform init
+description: The root tries to source a module from a Git URL that doesn't exist.
+  `terraform init` fails because the remote source is unreachable.
+difficulty: intermediate
+expected_time: 15m
+level: level-17-module-version-constraint
+module: module-6-modules
+name: Unreachable Module Source
+objective: Change the module `source` to the local path `./modules/local` so `terraform
+  init` succeeds.
+xp: 225

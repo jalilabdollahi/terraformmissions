@@ -1,0 +1,13 @@
+concepts:
+- module source
+- local module paths
+- module testing
+description: The main config calls a local module with `source = "../wrong/path"`.
+  The module does not exist at that path, so `terraform test` fails.
+difficulty: advanced
+expected_time: 18m
+level: level-12-test-module-call
+module: module-10-testing
+name: Wrong Module Source Path in Test
+objective: Fix the module source path so `terraform test` can find the child module.
+xp: 250

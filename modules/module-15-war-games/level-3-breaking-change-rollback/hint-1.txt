@@ -1,0 +1,1 @@
+Run `terraform validate`. The error says `char_count` is not an expected argument for `random_string`. Look at the Terraform Registry documentation for `hashicorp/random` `random_string` — what is the correct attribute for controlling the length of the string?

@@ -1,0 +1,1 @@
+In Python, use the `json` module: `import json; print(json.dumps({"version": "1.0"}))`. This produces `{"version": "1.0"}` on stdout.

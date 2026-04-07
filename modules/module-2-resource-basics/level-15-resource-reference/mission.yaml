@@ -1,0 +1,13 @@
+concepts:
+- resource references
+- attribute access
+description: A `local_file` resource uses `"${random_string.token}"` in its content
+  — missing the `.result` attribute. This references the whole resource object, not
+  the string value.
+difficulty: beginner
+expected_time: 8m
+level: level-15-resource-reference
+module: module-2-resource-basics
+name: Missing the Attribute Dot
+objective: Fix the reference so `terraform validate` passes.
+xp: 125

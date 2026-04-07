@@ -1,0 +1,1 @@
+Add `depends_on = [local_file.writer]` inside the `data "local_file" "output"` block.

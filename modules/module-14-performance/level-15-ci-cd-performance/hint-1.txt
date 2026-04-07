@@ -1,0 +1,1 @@
+Run `terraform init`. The error says the provider `hashicorp-legacy/random` does not exist on the Terraform Registry. The correct source namespace for all official HashiCorp providers is `hashicorp/`, not `hashicorp-legacy/`.

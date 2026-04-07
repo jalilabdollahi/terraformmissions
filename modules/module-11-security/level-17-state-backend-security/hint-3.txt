@@ -1,0 +1,1 @@
+Remove the commented credential lines from `terraform.tf` and replace them with a comment explaining the correct approach.

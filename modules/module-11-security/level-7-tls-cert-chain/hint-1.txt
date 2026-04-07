@@ -1,0 +1,1 @@
+Run `terraform apply`. The `tls_locally_signed_cert` resource may fail or produce a mismatched cert chain if the algorithm is hardcoded and doesn't match the CA key.

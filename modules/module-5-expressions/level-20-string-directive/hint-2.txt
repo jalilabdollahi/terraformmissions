@@ -1,0 +1,1 @@
+Change the variable `type` from `string` to `bool` and the `default` from `"true"` (quoted) to `true` (unquoted).

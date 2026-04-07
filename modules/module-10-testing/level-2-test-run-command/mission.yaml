@@ -1,0 +1,13 @@
+concepts:
+- run block command values
+- terraform test
+- apply vs plan
+description: A `run` block sets `command = "apply_all"`, which is not a valid command
+  value. Only `apply` and `plan` are allowed.
+difficulty: advanced
+expected_time: 15m
+level: level-2-test-run-command
+module: module-10-testing
+name: Invalid Run Command
+objective: Fix the command value so that `terraform test` passes.
+xp: 225

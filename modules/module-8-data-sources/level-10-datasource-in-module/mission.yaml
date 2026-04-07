@@ -1,0 +1,14 @@
+concepts:
+- data sources in modules
+- module outputs
+- output reference
+description: A child module reads a data source and exposes the result as an output.
+  The root module references the wrong output name.
+difficulty: intermediate
+expected_time: 12m
+level: level-10-datasource-in-module
+module: module-8-data-sources
+name: Module Output Name Mismatch
+objective: Fix the root module's output reference to use the correct output name and
+  `terraform plan` passes.
+xp: 200

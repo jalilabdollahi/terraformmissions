@@ -1,0 +1,1 @@
+Change the condition to `contains(["dev", "staging", "production"], var.env)`.

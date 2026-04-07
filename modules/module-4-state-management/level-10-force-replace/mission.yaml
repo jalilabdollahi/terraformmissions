@@ -1,0 +1,16 @@
+concepts:
+- terraform apply -replace
+- triggers
+- force replacement
+- null_resource
+description: A `null_resource` has a trigger version that wasn't updated when the
+  application version bumped from v1 to v2. Terraform doesn't detect the change and
+  won't replace the resource.
+difficulty: intermediate
+expected_time: 15m
+level: level-10-force-replace
+module: module-4-state-management
+name: Force Replace
+objective: Update the trigger value from `"v1"` to `"v2"` so that `terraform plan`
+  shows the resource will be replaced.
+xp: 225

@@ -1,0 +1,14 @@
+concepts:
+- workspace module inputs
+- map lookup
+- module variables
+description: A module receives its environment name from a workspace-keyed map, but
+  the current workspace is not in the map.
+difficulty: intermediate
+expected_time: 15m
+level: level-9-workspace-module-input
+module: module-9-workspaces
+name: Module Missing Workspace Key
+objective: Add the missing workspace key to the map so the module input resolves and
+  `terraform plan` passes.
+xp: 225

@@ -1,0 +1,13 @@
+concepts:
+- setunion()
+- toset()
+description: '`setunion(["a","b"], ["c"])` passes lists to `setunion()`, but it expects
+  sets. Convert the lists with `toset()` first.'
+difficulty: intermediate
+expected_time: 12m
+level: level-10-setunion
+module: module-5-expressions
+name: Set Union
+objective: 'Wrap both arguments with `toset()`: `setunion(toset(["a","b"]), toset(["c"]))`
+  so `terraform plan` succeeds.'
+xp: 200

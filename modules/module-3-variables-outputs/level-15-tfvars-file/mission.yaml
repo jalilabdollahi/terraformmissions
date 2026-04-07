@@ -1,0 +1,12 @@
+concepts:
+- tfvars syntax
+description: A `terraform.tfvars` file contains `environment "production"` — missing
+  the `=` assignment operator. This is a syntax error that causes `terraform plan`
+  to fail.
+difficulty: intermediate
+expected_time: 10m
+level: level-15-tfvars-file
+module: module-3-variables-outputs
+name: The tfvars Assignment Operator
+objective: Fix the syntax in `terraform.tfvars` so `terraform plan` succeeds.
+xp: 150

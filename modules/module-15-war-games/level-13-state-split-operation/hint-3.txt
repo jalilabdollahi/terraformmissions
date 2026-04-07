@@ -1,0 +1,1 @@
+Add two `moved` blocks in `config-first/main.tf` for `res_4` and `res_5` (from = to = same address). Then apply config-first (no destroy), then apply config-second separately to create res_4 and res_5 fresh.

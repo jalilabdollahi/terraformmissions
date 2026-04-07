@@ -1,0 +1,15 @@
+concepts:
+- compound assertions
+- logical operators in conditions
+- assertion correctness
+description: The assert uses `condition = output.a == "x" && output.b == "wrong"`.
+  The second part is always false because `output.b` is `"y"`, not `"wrong"`. Fix
+  both parts of the compound condition.
+difficulty: advanced
+expected_time: 22m
+level: level-15-test-complex-assertion
+module: module-10-testing
+name: Compound Assertion Always False
+objective: Correct the compound assertion so it accurately tests both outputs and
+  `terraform test` passes.
+xp: 300

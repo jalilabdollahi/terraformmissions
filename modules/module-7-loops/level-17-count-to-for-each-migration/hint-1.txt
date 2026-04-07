@@ -1,0 +1,1 @@
+Run `terraform plan`. Without `moved` blocks, Terraform plans to destroy the old count instances and create new for_each instances.

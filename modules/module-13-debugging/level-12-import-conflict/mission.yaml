@@ -1,0 +1,15 @@
+concepts:
+- import conflicts
+- import block
+- resource addresses
+description: An `import` block tries to import `local_file.config` using the wrong
+  address — it references `local_file.wrong_resource`. Fix the `to` address to match
+  the declared resource.
+difficulty: advanced
+expected_time: 20m
+level: level-12-import-conflict
+module: module-13-debugging
+name: Already in State
+objective: Correct the `import` block's `to` address from `local_file.wrong_resource`
+  to `local_file.config`.
+xp: 275

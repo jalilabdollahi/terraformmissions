@@ -1,0 +1,1 @@
+The lock file records cryptographic hashes of providers to prevent tampering. A wrong hash means the file is corrupted or manually edited.

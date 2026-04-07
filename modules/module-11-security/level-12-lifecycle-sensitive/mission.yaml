@@ -1,0 +1,15 @@
+concepts:
+- ignore_changes security implications
+- drift detection
+- lifecycle meta-argument
+description: '`ignore_changes = [content]` is configured on a credentials file. If
+  someone manually edits or corrupts the file content, Terraform will never detect
+  or correct it. Remove `ignore_changes` for the security-critical `content` attribute.'
+difficulty: advanced
+expected_time: 22m
+level: level-12-lifecycle-sensitive
+module: module-11-security
+name: ignore_changes Hiding Security Drift
+objective: Remove `ignore_changes = [content]` so Terraform will detect and correct
+  drift in the credentials file.
+xp: 300

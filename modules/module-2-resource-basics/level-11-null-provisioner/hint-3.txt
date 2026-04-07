@@ -1,0 +1,1 @@
+Change `command = "echoo hello"` to `command = "echo hello"`.

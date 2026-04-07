@@ -1,0 +1,1 @@
+Open `config.json` to see which keys are present: `app_name`, `version`, and `env`.

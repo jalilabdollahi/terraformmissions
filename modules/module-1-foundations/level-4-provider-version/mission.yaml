@@ -1,0 +1,13 @@
+concepts:
+- version constraints
+- ~> operator
+- required_providers
+description: The provider version constraint uses an invalid operator that Terraform
+  doesn't recognise.
+difficulty: beginner
+expected_time: 8m
+level: level-4-provider-version
+module: module-1-foundations
+name: Syntax Smash
+objective: Fix the version constraint operator so `terraform init` succeeds.
+xp: 125

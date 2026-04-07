@@ -1,0 +1,1 @@
+Run `terraform apply` and then inspect the `file_text` output. If it's a Base64 blob, you are using the wrong attribute.

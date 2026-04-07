@@ -1,0 +1,14 @@
+concepts:
+- provider version conflicts
+- version constraints
+- module provider requirements
+description: 'Two local modules in the same configuration require incompatible version
+  constraints for the `local` provider: one requires `~> 2.4` and the other requires
+  `>= 3.0`. These constraints cannot be satisfied simultaneously.'
+difficulty: advanced
+expected_time: 20m
+level: level-10-provider-version-conflict
+module: module-13-debugging
+name: Version Constraint Clash
+objective: Align the provider version constraints in both modules so they are compatible.
+xp: 275

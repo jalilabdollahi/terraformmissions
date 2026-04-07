@@ -1,0 +1,1 @@
+Add all 5 `moved` blocks to main.tf using the rename map in the comments. After adding them, run `terraform plan` — it should show no destroy operations.

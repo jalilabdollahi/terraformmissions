@@ -1,0 +1,1 @@
+Change `prevent_destroy = true` to `prevent_destroy = false`, or remove the `lifecycle` block entirely.

@@ -1,0 +1,1 @@
+Change `file_permission = 644` to `file_permission = "0644"`. The leading `0` denotes the octal representation.

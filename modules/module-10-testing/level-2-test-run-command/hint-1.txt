@@ -1,0 +1,1 @@
+The error from `terraform test` will say the value for `command` is invalid. Check what values are actually permitted.

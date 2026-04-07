@@ -1,0 +1,1 @@
+Change `provider = local.wrong` to `provider = local.primary` to reference the correct aliased provider.

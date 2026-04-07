@@ -1,0 +1,1 @@
+The `local` provider includes a `local_sensitive_file` resource specifically for writing secrets. It creates files with `0600` permissions (owner read/write only).

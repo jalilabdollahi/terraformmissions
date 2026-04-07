@@ -1,0 +1,16 @@
+concepts:
+- plan files
+- -out flag
+- deterministic apply
+description: The config has a random_string resource where the minimum character requirements
+  exceed the total string length, preventing the plan from succeeding. The validate
+  workflow uses `terraform plan -out=tfplan` followed by `terraform apply tfplan`.
+  Fix the resource attributes so the plan file workflow succeeds.
+difficulty: expert
+expected_time: 22m
+level: level-8-plan-out-file
+module: module-14-performance
+name: Plan File Workflow
+objective: Fix the broken attribute values so `terraform plan -out=tfplan` succeeds,
+  then `terraform apply tfplan` completes.
+xp: 300

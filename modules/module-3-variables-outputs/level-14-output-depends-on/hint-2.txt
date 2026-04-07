@@ -1,0 +1,1 @@
+`depends_on` on an output block works the same way as on resource blocks — every reference must point to a real resource.

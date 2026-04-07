@@ -1,0 +1,15 @@
+concepts:
+- cross-team state sharing
+- terraform_remote_state
+- output name contracts
+description: Team A manages infrastructure and exports outputs via a local state backend.
+  Team B's config reads Team A's remote state but references two wrong output keys.
+  Fix both wrong output key references in Team B's config.
+difficulty: expert
+expected_time: 30m
+level: level-13-cross-team-state
+module: module-14-performance
+name: Cross-Team State Sharing
+objective: Fix both wrong remote state output keys in team-b/main.tf so `terraform
+  plan` succeeds after team-a is applied.
+xp: 375

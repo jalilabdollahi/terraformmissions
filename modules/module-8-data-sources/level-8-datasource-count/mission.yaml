@@ -1,0 +1,13 @@
+concepts:
+- data source count
+- indexing
+- count.index
+description: A data source uses `count = 3` to read three config files, but the output
+  references index `[3]` which is out of range.
+difficulty: intermediate
+expected_time: 12m
+level: level-8-datasource-count
+module: module-8-data-sources
+name: Index Out of Range
+objective: Fix the out-of-range index so `terraform plan` succeeds.
+xp: 200

@@ -1,0 +1,14 @@
+concepts:
+- write-only patterns
+- sensitive handling
+- nonsensitive() misuse
+description: '`random_password.result` is wrapped in `nonsensitive()` and written
+  to a `local_file`. Both issues must be fixed: remove `nonsensitive()` and use `local_sensitive_file`.'
+difficulty: advanced
+expected_time: 25m
+level: level-18-write-only-attributes
+module: module-11-security
+name: Password Exposed via nonsensitive() to Plain File
+objective: Fix both the `nonsensitive()` misuse and the insecure file resource so
+  the password is fully protected.
+xp: 325

@@ -1,0 +1,1 @@
+Run `terraform plan`. With `var.items = {}`, there are no resources — the `["main"]` reference fails.

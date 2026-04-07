@@ -1,0 +1,1 @@
+When iterating a map with `for_each`, use `each.key` for the map key and `each.value` for the map value.

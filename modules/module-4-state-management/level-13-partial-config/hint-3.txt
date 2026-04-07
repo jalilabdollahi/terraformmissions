@@ -1,0 +1,1 @@
+For dynamic backend config, use `-backend-config` flag or a separate `.tfbackend` file. For now, replace `var.state_path` with `"terraform.tfstate"`.

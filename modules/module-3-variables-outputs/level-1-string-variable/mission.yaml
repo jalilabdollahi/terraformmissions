@@ -1,0 +1,12 @@
+concepts:
+- variable types
+- type mismatch
+description: A variable is declared as `type = number` but its default is `"hello"`
+  — a string. Terraform's type checker rejects this mismatch.
+difficulty: beginner
+expected_time: 5m
+level: level-1-string-variable
+module: module-3-variables-outputs
+name: 'Type Mismatch: String Masquerading as Number'
+objective: Fix the type declaration so `terraform validate` passes.
+xp: 100

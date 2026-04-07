@@ -1,0 +1,14 @@
+concepts:
+- module source
+- relative paths
+- module block
+description: A root module calls a child module, but the `source` path is wrong —
+  it points to `../hello` instead of the correct relative path.
+difficulty: intermediate
+expected_time: 10m
+level: level-1-module-call-basic
+module: module-6-modules
+name: Wrong Module Path
+objective: Fix the `source` argument in the module block so `terraform init && terraform
+  plan` succeeds.
+xp: 175

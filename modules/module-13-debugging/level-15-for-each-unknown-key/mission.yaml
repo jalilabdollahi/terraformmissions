@@ -1,0 +1,14 @@
+concepts:
+- for_each key must be known
+- known after apply
+- for_each constraints
+description: A `for_each` uses a map derived from `random_string` results as keys.
+  Since `random_string.result` is unknown until apply, the `for_each` keys are unknown
+  at plan time — which Terraform does not allow.
+difficulty: advanced
+expected_time: 25m
+level: level-15-for-each-unknown-key
+module: module-13-debugging
+name: Unknown for_each Keys
+objective: Replace the unknown `for_each` key with a predetermined, static key.
+xp: 325

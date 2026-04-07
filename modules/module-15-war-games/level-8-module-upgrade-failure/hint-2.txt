@@ -1,0 +1,1 @@
+Open `modules/file_writer/main.tf` and find the `output` block. It declares an output named `filename` — not `file_path`. The module was upgraded and the output was renamed.

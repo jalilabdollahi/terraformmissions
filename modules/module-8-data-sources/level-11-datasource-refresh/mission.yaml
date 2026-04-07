@@ -1,0 +1,14 @@
+concepts:
+- -refresh-only
+- data source refresh
+- content attribute
+description: A `local_file` resource and a data source both reference the same file.
+  The data source uses the wrong attribute after the file content changes.
+difficulty: intermediate
+expected_time: 15m
+level: level-11-datasource-refresh
+module: module-8-data-sources
+name: Stale Data Source
+objective: Fix the data source attribute reference and run `terraform plan -refresh-only`
+  to verify the data source reflects current state.
+xp: 225

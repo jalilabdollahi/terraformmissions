@@ -1,0 +1,13 @@
+concepts:
+- null_resource
+- triggers
+- map(string)
+description: A `null_resource` uses `triggers = { version = 1 }` with a number value.
+  `triggers` is typed as `map(string)`, so all values must be strings.
+difficulty: beginner
+expected_time: 8m
+level: level-10-null-resource-trigger
+module: module-2-resource-basics
+name: Triggers Expect Strings
+objective: Fix the `triggers` map so `terraform validate` passes.
+xp: 125

@@ -1,0 +1,11 @@
+Add:
+```hcl
+moved {
+  from = local_file.items[0]
+  to   = local_file.items["alpha"]
+}
+moved {
+  from = local_file.items[1]
+  to   = local_file.items["beta"]
+}
+```

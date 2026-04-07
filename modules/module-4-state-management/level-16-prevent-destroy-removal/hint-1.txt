@@ -1,0 +1,1 @@
+Run `terraform plan -destroy` — it will fail with a message about `prevent_destroy`.

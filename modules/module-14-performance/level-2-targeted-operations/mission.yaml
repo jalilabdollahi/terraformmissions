@@ -1,0 +1,16 @@
+concepts:
+- -target flag
+- dependency awareness
+- resource attributes
+description: Three resources A, B, and C exist in the config. C depends on A. The
+  config is broken because resource C references the wrong attribute of A. Fix the
+  attribute reference so the dependency chain is correct and both a targeted apply
+  of A and a full apply succeed.
+difficulty: expert
+expected_time: 22m
+level: level-2-targeted-operations
+module: module-14-performance
+name: Targeted Operations
+objective: Fix the attribute reference in resource C so that `terraform apply -target`
+  and then `terraform apply` both succeed.
+xp: 300

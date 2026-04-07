@@ -1,0 +1,1 @@
+The `random_string` resource exposes a `result` attribute (the generated string). The `id` attribute is not a valid attribute on this resource. The error message confirms this.

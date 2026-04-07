@@ -1,0 +1,1 @@
+Run `terraform validate`. The variable has `nullable = false` but `default = null` — these are contradictory.

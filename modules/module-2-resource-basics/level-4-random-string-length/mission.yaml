@@ -1,0 +1,12 @@
+concepts:
+- random_string
+- length constraint
+description: A `random_string` resource has `length = 0`, which is invalid. The minimum
+  allowed length is 1.
+difficulty: beginner
+expected_time: 5m
+level: level-4-random-string-length
+module: module-2-resource-basics
+name: Zero is Nothing
+objective: Fix the `length` attribute so `terraform validate` passes.
+xp: 100

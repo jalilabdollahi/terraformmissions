@@ -1,0 +1,1 @@
+Run `terraform plan` after the validate script creates the state file. The error will indicate `wrong_output` does not exist in the remote state outputs.

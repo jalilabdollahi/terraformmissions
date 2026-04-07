@@ -1,0 +1,1 @@
+Run `terraform validate`. Terraform will report that `terraform.workpsace` is not a valid reference. Look carefully at the spelling.

@@ -1,0 +1,1 @@
+The `error_message` is shown to users when their input fails the validation condition. An empty message provides no guidance.

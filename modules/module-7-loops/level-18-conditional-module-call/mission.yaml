@@ -1,0 +1,14 @@
+concepts:
+- conditional module with count
+- module count index
+- try()
+description: 'A module is called with `count = var.enabled ? 1 : 0`. The output references
+  `module.mymod.file_path` — but with `count`, module instances are addressed as `module.mymod[0].file_path`.'
+difficulty: advanced
+expected_time: 20m
+level: level-18-conditional-module-call
+module: module-7-loops
+name: Conditional Module Output Reference
+objective: Fix the output to use `module.mymod[0].file_path` (or `try(module.mymod[0].file_path,
+  "")`  for safety).
+xp: 275

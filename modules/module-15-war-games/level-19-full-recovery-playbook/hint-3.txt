@@ -1,0 +1,1 @@
+After all three fixes: (1) state rm for old_resource, (2) moved block for rename, (3) length = 8. Run `terraform apply`. The validate script will verify all resources are healthy in state.

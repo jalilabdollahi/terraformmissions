@@ -1,0 +1,1 @@
+Change `id = "/wrong/path/config.txt"` to `id = "${path.module}/config.txt"`.

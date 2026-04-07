@@ -1,0 +1,1 @@
+For `null_resource`, there are no `setting` or `settings` nested blocks — use `triggers` instead for the demo.

@@ -1,0 +1,1 @@
+Run `terraform apply`. The error says `local_file.first` has no attribute called `path`.

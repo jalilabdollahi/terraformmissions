@@ -1,0 +1,1 @@
+There are two things to fix: the resource type declaration AND the output reference. Search for all occurrences of `local_files` in `main.tf`.

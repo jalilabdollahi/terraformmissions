@@ -1,0 +1,1 @@
+Run `TF_LOG=DEBUG terraform init` and look at the output. The error will show that the provider registry `fakecorp.example.com` cannot be reached.

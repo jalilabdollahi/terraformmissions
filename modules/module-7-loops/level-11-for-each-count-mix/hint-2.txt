@@ -1,0 +1,1 @@
+`count = 2` creates instances at `[0]` and `[1]`. Use `module.mymod[0].file_path`.

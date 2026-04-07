@@ -1,0 +1,1 @@
+Set `validity_period_hours = 8760` (1 year = 365 * 24) and `early_renewal_hours = 168` (1 week = 7 * 24).

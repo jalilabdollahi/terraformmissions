@@ -1,0 +1,1 @@
+In HCL, `true` (unquoted) is a boolean. `"true"` (quoted) is a string. They are not interchangeable in conditionals.

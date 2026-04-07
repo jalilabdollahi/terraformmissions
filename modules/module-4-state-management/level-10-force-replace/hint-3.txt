@@ -1,0 +1,1 @@
+Alternatively, you can force replacement any time with `terraform apply -replace=null_resource.task` without touching the config.

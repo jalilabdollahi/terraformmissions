@@ -1,0 +1,1 @@
+Run `terraform validate` and read the error message carefully. It tells you the exact line and what is missing.

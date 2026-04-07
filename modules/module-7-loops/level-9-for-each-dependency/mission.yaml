@@ -1,0 +1,16 @@
+concepts:
+- for_each with resource outputs
+- for expression
+- map conversion
+description: Resource B tries `for_each = local_file.configs` — passing a resource
+  collection directly. Terraform requires `for_each` to be a map or set, not a resource
+  collection object. Fix it by converting the resource to a proper map with a `for`
+  expression.
+difficulty: intermediate
+expected_time: 15m
+level: level-9-for-each-dependency
+module: module-7-loops
+name: Resource as for_each Value
+objective: 'Change `for_each` to `{ for k, v in local_file.configs : k => v.filename
+  }` to produce a valid map.'
+xp: 225

@@ -1,0 +1,1 @@
+Run `terraform validate`. The error says the default value is a string where a bool is expected.

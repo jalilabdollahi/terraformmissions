@@ -1,0 +1,1 @@
+Run `terraform validate`. Module B doesn't have a variable called `config_file`.

@@ -1,0 +1,12 @@
+concepts:
+- tls_private_key
+- algorithm
+description: A `tls_private_key` resource uses `algorithm = "DSA"`, which is not supported.
+  Only RSA, ECDSA, and ED25519 are valid algorithms.
+difficulty: beginner
+expected_time: 8m
+level: level-12-tls-private-key
+module: module-2-resource-basics
+name: DSA is Not Supported
+objective: Fix the `algorithm` attribute so `terraform validate` passes.
+xp: 125

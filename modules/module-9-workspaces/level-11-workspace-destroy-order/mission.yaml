@@ -1,0 +1,15 @@
+concepts:
+- workspace resource ordering
+- terraform.workspace in paths
+- depends_on
+description: Resource B reads a file created by resource A, but the path uses a hardcoded
+  workspace name instead of `terraform.workspace`, breaking the reference in all workspaces
+  except `default`.
+difficulty: intermediate
+expected_time: 15m
+level: level-11-workspace-destroy-order
+module: module-9-workspaces
+name: Wrong Dependency Path
+objective: Fix the path in resource B to use `terraform.workspace` so the reference
+  resolves correctly in any workspace and `terraform plan` passes.
+xp: 225

@@ -1,0 +1,1 @@
+Change `module.reader.content` to `module.reader.file_content` in the root `main.tf`.

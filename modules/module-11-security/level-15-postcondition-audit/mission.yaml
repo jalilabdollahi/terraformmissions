@@ -1,0 +1,15 @@
+concepts:
+- postcondition audit
+- self reference
+- file permissions
+description: 'A postcondition asserts `self.file_permission == "0644"` but the resource
+  creates the file with `file_permission = "0600"`. The postcondition will always
+  fail. Fix: align the postcondition with the actual permission.'
+difficulty: advanced
+expected_time: 22m
+level: level-15-postcondition-audit
+module: module-11-security
+name: Postcondition File Permission Mismatch
+objective: Change the postcondition to check `"0600"` so it matches the resource and
+  `terraform apply` succeeds.
+xp: 300

@@ -1,0 +1,15 @@
+concepts:
+- expect_failures
+- variable validation
+- test negative path
+description: A test uses `expect_failures = ["var.port"]` (a string) to confirm a
+  validation error fires, but `expect_failures` requires unquoted references, not
+  strings.
+difficulty: advanced
+expected_time: 18m
+level: level-5-test-expect-failures
+module: module-10-testing
+name: Wrong expect_failures Address
+objective: Correct the `expect_failures` entry to an unquoted reference so `terraform
+  test` confirms the validation failure.
+xp: 250

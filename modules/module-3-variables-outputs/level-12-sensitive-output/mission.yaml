@@ -1,0 +1,12 @@
+concepts:
+- sensitive output
+- bool vs string
+description: An output block has `sensitive = "true"` — a string instead of the boolean
+  `true`. Terraform's type checker rejects the string.
+difficulty: intermediate
+expected_time: 10m
+level: level-12-sensitive-output
+module: module-3-variables-outputs
+name: Sensitive is a Bool, Not a String
+objective: Fix `sensitive` to be a boolean so `terraform validate` passes.
+xp: 175

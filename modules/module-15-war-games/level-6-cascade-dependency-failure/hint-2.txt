@@ -1,0 +1,1 @@
+The `random_string` resource does not have an `id` attribute. The generated string is available via the `result` attribute. The error in module_a blocks module_b and module_c from resolving.

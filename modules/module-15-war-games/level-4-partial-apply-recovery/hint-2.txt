@@ -1,0 +1,1 @@
+This is a partial apply scenario — the previous apply was interrupted after creating `resource_a`. The fix is simply to run `terraform apply` to create the remaining two resources.

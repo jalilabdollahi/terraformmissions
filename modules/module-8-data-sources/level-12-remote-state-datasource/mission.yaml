@@ -1,0 +1,14 @@
+concepts:
+- terraform_remote_state
+- backend local
+- state file path
+description: A `terraform_remote_state` data source points to a local state file,
+  but the path is incorrect.
+difficulty: advanced
+expected_time: 18m
+level: level-12-remote-state-datasource
+module: module-8-data-sources
+name: Remote State Path Wrong
+objective: Fix the `config.path` so it points to the state file created by the validate
+  script and `terraform plan` succeeds.
+xp: 250

@@ -1,0 +1,15 @@
+concepts:
+- TF_VAR_ naming convention
+- environment variable injection
+- variable naming
+description: 'The variable is named `DB_PASSWORD` (uppercase), but Terraform environment
+  variable injection requires `TF_VAR_db_password` (lowercase). The name mismatch
+  means the env var is never read. Fix: rename the variable to `db_password`.'
+difficulty: advanced
+expected_time: 15m
+level: level-5-env-var-secret
+module: module-11-security
+name: Wrong Variable Name for TF_VAR_ Injection
+objective: Rename the variable to `db_password` so it maps to the `TF_VAR_db_password`
+  environment variable.
+xp: 225

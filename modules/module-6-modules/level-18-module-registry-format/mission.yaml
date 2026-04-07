@@ -1,0 +1,13 @@
+concepts:
+- module structure
+- resource argument names
+- terraform validate
+description: The child module uses `file_content` instead of `content` for the `local_file`
+  resource — an invalid argument name that causes validation to fail.
+difficulty: intermediate
+expected_time: 15m
+level: level-18-module-registry-format
+module: module-6-modules
+name: Broken Child Module Syntax
+objective: Fix the `local_file` argument name from `file_content` to `content`.
+xp: 225

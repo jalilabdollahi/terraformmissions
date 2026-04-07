@@ -1,0 +1,1 @@
+Run `terraform plan`. The error says the `for_each` map includes values derived from resource attributes that won't be known until apply.

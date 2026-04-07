@@ -1,0 +1,1 @@
+The `moved` block syntax is: `moved { from = random_string.token_a  to = module.strings.random_string.token_a }`. You need one for each of the 5 resources (token_a through token_e).

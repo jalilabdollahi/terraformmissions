@@ -1,0 +1,14 @@
+concepts:
+- splat expression
+- count
+- output values
+description: '`local_file.config` is a `count`-based resource. The output references
+  `local_file.config.filename` as if it were a single resource — but you need `[*]`
+  to get all filenames.'
+difficulty: intermediate
+expected_time: 12m
+level: level-5-count-output-splat
+module: module-7-loops
+name: Missing Splat on Count Resource
+objective: Fix the output to `value = local_file.config[*].filename`.
+xp: 200

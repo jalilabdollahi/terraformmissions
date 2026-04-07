@@ -1,0 +1,1 @@
+`nullable = false` means Terraform replaces null with the default, making a null check pointless.

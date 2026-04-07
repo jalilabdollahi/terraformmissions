@@ -1,0 +1,1 @@
+Run `terraform validate`. A `count`-based module cannot be referenced without an index.

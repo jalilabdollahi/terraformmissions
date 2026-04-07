@@ -1,0 +1,1 @@
+Switch to the indented form `<<-EOF` — this strips leading whitespace and allows the closing marker to be indented.

@@ -1,0 +1,13 @@
+concepts:
+- split()
+- join()
+description: The string `"a;b;c"` uses semicolons as separators, but `split(",", ...)`
+  uses a comma. The split returns the whole string as one element instead of three.
+difficulty: intermediate
+expected_time: 10m
+level: level-4-split-join
+module: module-5-expressions
+name: Split and Join
+objective: Fix the separator in `split()` from `","` to `";"` so the output `result`
+  equals `"a-b-c"`.
+xp: 175

@@ -1,0 +1,1 @@
+A `/* comment */` block must be closed with `*/`. An unclosed `/*` swallows everything after it.

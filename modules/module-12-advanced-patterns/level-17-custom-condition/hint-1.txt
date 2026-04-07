@@ -1,0 +1,1 @@
+Run `terraform plan` with the defaults (`min_size=1`, `max_size=10`). The precondition fails even though 1 < 10 is valid.

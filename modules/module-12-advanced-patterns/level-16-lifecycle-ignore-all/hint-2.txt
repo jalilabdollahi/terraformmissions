@@ -1,0 +1,1 @@
+`ignore_changes = all` is only appropriate for fully externally-managed resources. Here, we still want to detect permission changes.

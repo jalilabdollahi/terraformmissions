@@ -1,0 +1,1 @@
+Run `terraform init`. The error mentions a hash mismatch for the `local` provider. The lock file contains invalid hashes.

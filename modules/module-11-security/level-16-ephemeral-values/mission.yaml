@@ -1,0 +1,15 @@
+concepts:
+- sensitive values handling
+- local_sensitive_file
+- sensitive output
+description: A sensitive variable is passed into a `local_file` content (not `local_sensitive_file`),
+  and the output does not mark it sensitive. The sensitive value leaks through the
+  output. Fix both issues.
+difficulty: advanced
+expected_time: 22m
+level: level-16-ephemeral-values
+module: module-11-security
+name: Sensitive Variable Passed Without Protection
+objective: Use `local_sensitive_file` and mark the output `sensitive = true` so the
+  secret is fully protected.
+xp: 300

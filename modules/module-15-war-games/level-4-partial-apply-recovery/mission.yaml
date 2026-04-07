@@ -1,0 +1,16 @@
+concepts:
+- partial apply recovery
+- incomplete state
+- apply resumption
+description: A previous apply was interrupted after creating only the first of three
+  resources. The state file in broken/ records only `resource_a`. Resources B and
+  C are in the config but missing from state. The config is correct — just apply to
+  create the remaining resources and verify all 3 are in state.
+difficulty: expert
+expected_time: 35m
+level: level-4-partial-apply-recovery
+module: module-15-war-games
+name: Partial Apply Recovery
+objective: Run apply to complete the partial deployment. Verify all 3 resources exist
+  in state.
+xp: 400

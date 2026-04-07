@@ -1,0 +1,1 @@
+Add `sensitive = true` to both the `variable "db_password"` block and the `output "db_password"` block.

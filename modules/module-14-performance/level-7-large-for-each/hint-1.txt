@@ -1,0 +1,1 @@
+Run `terraform plan`. The error is a type mismatch — `random_string.length` expects a number but is receiving a string. Look at the variable definition for `token_lengths` and the type declaration.

@@ -1,0 +1,14 @@
+concepts:
+- terraform test
+- tftest.hcl
+- run block
+- test commands
+description: A `.tftest.hcl` file uses `command = apply_all` which is not a valid
+  `terraform test` command. Valid values are `apply` and `plan`.
+difficulty: advanced
+expected_time: 20m
+level: level-19-module-test-basic
+module: module-6-modules
+name: Invalid Test Command
+objective: Fix the test command to `apply` so `terraform test` passes.
+xp: 275

@@ -1,0 +1,13 @@
+concepts:
+- for expression
+- resource attributes
+- output values
+description: A `for` expression iterates over `local_file.configs` and accesses `.path`
+  — but the `local_file` resource attribute is `.filename`, not `.path`.
+difficulty: intermediate
+expected_time: 12m
+level: level-8-for-each-output
+module: module-7-loops
+name: Wrong Attribute in for Expression
+objective: Fix the for expression to use `.filename` instead of `.path`.
+xp: 200

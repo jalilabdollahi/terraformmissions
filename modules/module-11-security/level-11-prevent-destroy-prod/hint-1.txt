@@ -1,0 +1,1 @@
+Run `terraform validate`. The config is valid but `prevent_destroy = true` blocks destruction everywhere, which makes development workflows painful.

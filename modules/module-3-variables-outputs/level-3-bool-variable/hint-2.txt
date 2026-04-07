@@ -1,0 +1,1 @@
+In HCL, `"false"` is a string. The boolean literals are `true` and `false` — without quotes.

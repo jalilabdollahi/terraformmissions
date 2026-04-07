@@ -1,0 +1,14 @@
+concepts:
+- ephemeral-like patterns
+- sensitive values
+- secret management
+description: A `random_password` is generated and its result is written directly to
+  a `local_file`. The password is exposed in plain text. Fix this by using `local_sensitive_file`
+  and marking the output as sensitive.
+difficulty: advanced
+expected_time: 22m
+level: level-15-ephemeral-pattern
+module: module-12-advanced-patterns
+name: Secrets Leaking into State
+objective: Switch to `local_sensitive_file` and add `sensitive = true` to the output.
+xp: 300

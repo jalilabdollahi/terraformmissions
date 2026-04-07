@@ -1,0 +1,15 @@
+concepts:
+- sensitive outputs in tests
+- sensitive values
+- assertion design
+description: 'The test tries to compare a sensitive output directly: `condition =
+  output.password == "secret123"`. Terraform refuses to evaluate sensitive values
+  in equality conditions. Fix the assertion to check only that the output is non-empty.'
+difficulty: advanced
+expected_time: 20m
+level: level-13-test-sensitive-output
+module: module-10-testing
+name: Asserting a Sensitive Output Value
+objective: Rewrite the assert condition to avoid direct comparison of the sensitive
+  value.
+xp: 275

@@ -1,0 +1,13 @@
+concepts:
+- content
+- content_base64
+- local_file attributes
+description: A `local_file` resource uses `content_base64` with a plain text string
+  instead of a properly base64-encoded value. This causes an apply-time error.
+difficulty: beginner
+expected_time: 8m
+level: level-2-local-file-content
+module: module-2-resource-basics
+name: Base64 or Bust
+objective: Fix the resource so it uses the correct attribute for plain text content.
+xp: 125

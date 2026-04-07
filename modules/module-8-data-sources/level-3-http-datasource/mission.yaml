@@ -1,0 +1,13 @@
+concepts:
+- data http
+- URL format
+- provider configuration
+description: An HTTP data source has a malformed URL — it is missing the `https://`
+  scheme.
+difficulty: intermediate
+expected_time: 10m
+level: level-3-http-datasource
+module: module-8-data-sources
+name: Invalid URL Scheme
+objective: Fix the URL so `terraform validate` passes.
+xp: 175

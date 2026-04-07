@@ -1,0 +1,14 @@
+concepts:
+- terraform taint
+- -replace
+- force replacement
+description: A `null_resource` is named `job` but the validator tries to taint `null_resource.task`.
+  Rename the resource to `task` so the taint command succeeds.
+difficulty: intermediate
+expected_time: 12m
+level: level-17-tainted-resource
+module: module-4-state-management
+name: Tainted Resource
+objective: Rename the `null_resource` from `job` to `task` so `terraform taint null_resource.task`
+  succeeds and the plan shows replacement.
+xp: 200

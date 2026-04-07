@@ -1,0 +1,1 @@
+Change `validity_period_hours = -1` to a positive value. `8760` equals 365 days (one year).

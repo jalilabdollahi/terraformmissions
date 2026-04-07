@@ -1,0 +1,14 @@
+concepts:
+- override_resource
+- resource addressing
+- test overrides
+description: '`override_resource { target = local_file.wrong_name }` references a
+  resource that does not exist. Fix the address to match the actual resource.'
+difficulty: advanced
+expected_time: 20m
+level: level-10-test-override-resource
+module: module-10-testing
+name: Wrong Resource Address in override_resource
+objective: Correct the `target` address in `override_resource` so `terraform test`
+  passes.
+xp: 275

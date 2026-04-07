@@ -1,0 +1,1 @@
+The constraint `= 3.99.0` requires an exact version that does not exist. A pessimistic constraint like `~> 3.6` means `>= 3.6, < 4.0` and will match available 3.6.x releases.

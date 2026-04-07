@@ -1,0 +1,1 @@
+Run `terraform apply` and check the `result` output — it will be `"a;b;c"` (the whole string) instead of `"a-b-c"`.

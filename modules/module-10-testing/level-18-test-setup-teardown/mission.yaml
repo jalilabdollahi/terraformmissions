@@ -1,0 +1,15 @@
+concepts:
+- test setup
+- multi-run
+- state persistence across runs
+description: 'A two-run test: `run "setup"` applies first, then `run "check"` asserts
+  `output.manifest_path`. But `manifest_path` references `local_file.manifest`, which
+  does not exist in `main.tf`. Add the missing resource.'
+difficulty: advanced
+expected_time: 25m
+level: level-18-test-setup-teardown
+module: module-10-testing
+name: Missing Resource Referenced in Assertion
+objective: Add the `local_file.manifest` resource and its output to `main.tf` so the
+  multi-run test passes.
+xp: 325

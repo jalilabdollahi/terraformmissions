@@ -1,0 +1,15 @@
+concepts:
+- sensitive output
+- random_password
+- secret management
+description: An output exposes `random_password.db.result` without marking it `sensitive
+  = true`. The raw password will be printed to the terminal and stored in state in
+  plaintext output.
+difficulty: advanced
+expected_time: 15m
+level: level-1-sensitive-output-leak
+module: module-11-security
+name: Sensitive Output Leak
+objective: Add `sensitive = true` to the output so the password is redacted and `terraform
+  validate` passes.
+xp: 225

@@ -1,0 +1,1 @@
+`random_string.suffix.result` is only computed during apply, so `length(random_string.suffix.result)` is unknown at plan time. Terraform cannot create a plan without knowing the count.

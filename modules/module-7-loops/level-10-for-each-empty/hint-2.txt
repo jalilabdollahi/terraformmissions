@@ -1,0 +1,1 @@
+Add a default entry to the map: `default = { main = "default" }`.

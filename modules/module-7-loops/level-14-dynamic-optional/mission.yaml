@@ -1,0 +1,15 @@
+concepts:
+- optional dynamic blocks
+- nullable variables
+- null check pattern
+description: 'A pattern `for_each = var.env != null ? [var.env] : []` is used to optionally
+  include a block. But `var.env` is declared `nullable = false`, so it can never be
+  null — the optional logic is broken. Fix: set `nullable = true`.'
+difficulty: intermediate
+expected_time: 15m
+level: level-14-dynamic-optional
+module: module-7-loops
+name: Non-nullable Variable in Optional Block
+objective: Change `nullable = false` to `nullable = true` on `var.env` so the null
+  check works.
+xp: 225

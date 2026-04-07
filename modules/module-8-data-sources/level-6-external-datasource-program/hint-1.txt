@@ -1,0 +1,1 @@
+Run `terraform plan`. Terraform reports it cannot find or execute `nonexistent_binary`. The binary must exist and be in your PATH.

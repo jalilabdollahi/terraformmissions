@@ -1,0 +1,13 @@
+concepts:
+- string interpolation
+- ${}
+- expressions
+description: A string interpolation expression uses `$()` instead of `${}`, which
+  is shell syntax, not HCL.
+difficulty: beginner
+expected_time: 5m
+level: level-9-string-interpolation
+module: module-1-foundations
+name: Interpolation Implosion
+objective: Fix the interpolation syntax so `terraform validate` passes.
+xp: 100

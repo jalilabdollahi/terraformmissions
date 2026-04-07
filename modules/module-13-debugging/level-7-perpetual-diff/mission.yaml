@@ -1,0 +1,16 @@
+concepts:
+- perpetual diffs
+- timestamp()
+- lifecycle ignore_changes
+- idempotency
+description: A `local_file` resource uses `content = timestamp()`. Since `timestamp()`
+  returns a different value on every plan, Terraform always sees a diff and will never
+  converge.
+difficulty: advanced
+expected_time: 22m
+level: level-7-perpetual-diff
+module: module-13-debugging
+name: The Never-Ending Plan
+objective: Fix the perpetual diff by using `lifecycle { ignore_changes = [content]
+  }` or a static content value.
+xp: 300

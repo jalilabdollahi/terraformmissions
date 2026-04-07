@@ -1,0 +1,1 @@
+Run `terraform validate`. The config is syntactically valid but the output leaks a secret. Check the `output` block for the `sensitive` argument.

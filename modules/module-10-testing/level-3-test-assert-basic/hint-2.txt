@@ -1,0 +1,1 @@
+Look at `main.tf` — the output block hard-codes the value. Compare that to what the assert expects.

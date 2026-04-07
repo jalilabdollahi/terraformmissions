@@ -1,0 +1,17 @@
+concepts:
+- state split
+- cross-config moved blocks
+- zero-downtime state migration
+description: 'A large config is being split into two smaller configs: config-first
+  (resources 1-3) and config-second (resources 4-5). The moved blocks required to
+  tell Terraform that resources 4 and 5 are relocating to config-second are missing.
+  Without them, Terraform would plan to destroy resources 4 and 5 in config-first
+  and recreate them from scratch in config-second. Add the moved blocks.'
+difficulty: expert
+expected_time: 45m
+level: level-13-state-split-operation
+module: module-15-war-games
+name: State Split Operation
+objective: Add moved blocks in config-first so resources 4-5 are moved to config-second
+  without destroy.
+xp: 475

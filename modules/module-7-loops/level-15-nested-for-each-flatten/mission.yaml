@@ -1,0 +1,15 @@
+concepts:
+- nested for_each
+- flatten()
+- list of lists
+description: A `for_each` is fed by a nested `for` expression over services and ports.
+  The nested for produces a list of lists, not a flat list. Wrapping with `flatten()`
+  fixes it.
+difficulty: advanced
+expected_time: 18m
+level: level-15-nested-for-each-flatten
+module: module-7-loops
+name: Nested for Expression Needs flatten()
+objective: Wrap the nested `for` expression in `flatten()` so `toset()` receives a
+  flat list.
+xp: 250

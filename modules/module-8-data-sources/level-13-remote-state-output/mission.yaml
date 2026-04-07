@@ -1,0 +1,13 @@
+concepts:
+- remote state output access
+- terraform_remote_state
+- outputs map
+description: A `terraform_remote_state` data source is configured correctly, but the
+  output references a key that does not exist in the remote state.
+difficulty: intermediate
+expected_time: 15m
+level: level-13-remote-state-output
+module: module-8-data-sources
+name: Wrong Output Key
+objective: Fix the output key to `vpc_id` so `terraform plan` succeeds.
+xp: 225

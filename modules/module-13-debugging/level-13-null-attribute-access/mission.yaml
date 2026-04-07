@@ -1,0 +1,15 @@
+concepts:
+- null attribute access
+- try()
+- data source error handling
+description: A `local` value accesses `data.local_file.maybe.content`, but the data
+  source may fail if the file doesn't exist, propagating an error. Fix this by using
+  `try()` to provide a default value.
+difficulty: advanced
+expected_time: 20m
+level: level-13-null-attribute-access
+module: module-13-debugging
+name: Handling the Absent Value
+objective: Wrap the data source attribute access in `try()` to return a default string
+  when the file is absent.
+xp: 275

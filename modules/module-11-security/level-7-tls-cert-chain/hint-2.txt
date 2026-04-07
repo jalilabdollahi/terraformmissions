@@ -1,0 +1,1 @@
+`tls_private_key` exports its `algorithm` attribute. Reference it dynamically to avoid drift if the algorithm ever changes.

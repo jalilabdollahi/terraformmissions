@@ -1,0 +1,1 @@
+Change `algorithm = "DSA"` to `algorithm = "RSA"` and optionally add `rsa_bits = 2048`.

@@ -1,0 +1,1 @@
+Run `terraform validate` — the config is syntactically valid, but `ignore_changes = all` is a code smell. This tells Terraform to NEVER update this resource, regardless of what configuration drift occurs. It masks real problems.

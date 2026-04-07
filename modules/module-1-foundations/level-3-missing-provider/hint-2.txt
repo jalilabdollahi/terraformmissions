@@ -1,0 +1,1 @@
+The `hashicorp/local` provider exists at versions like `2.4.x` and `2.5.x` — not `99.x`. Change `>= 99.0` to a realistic constraint.

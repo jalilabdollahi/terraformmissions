@@ -1,0 +1,12 @@
+concepts:
+- set type
+- uniqueness
+description: A variable has `type = set(string)` with `default = ["a", "b", "a"]`.
+  Sets do not allow duplicate elements — the duplicate `"a"` is invalid.
+difficulty: beginner
+expected_time: 8m
+level: level-7-set-variable
+module: module-3-variables-outputs
+name: Sets Don't Allow Duplicates
+objective: Remove the duplicate element so `terraform validate` passes.
+xp: 125

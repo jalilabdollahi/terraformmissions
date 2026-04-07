@@ -1,0 +1,1 @@
+Increase `length` to at least 6 — but use a realistic password length like 10 or 16 in production.

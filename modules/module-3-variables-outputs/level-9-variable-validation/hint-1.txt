@@ -1,0 +1,1 @@
+Run `terraform plan`. The error shows the validation condition failed for the default value `"dev"`.

@@ -1,0 +1,1 @@
+Run `terraform validate`. The error indicates that the `id` argument is the wrong type — it expects a string.

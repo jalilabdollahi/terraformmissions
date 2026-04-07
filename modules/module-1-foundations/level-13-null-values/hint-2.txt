@@ -1,0 +1,1 @@
+`nullable = false` means the variable must always have a non-null value. You can't default it to `null`.

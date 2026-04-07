@@ -1,0 +1,15 @@
+concepts:
+- file organisation
+- variables.tf
+- variable declaration
+- multi-file configs
+description: '`main.tf` references a variable defined in `variables.tf`, but `variables.tf`
+  is missing from the config.'
+difficulty: beginner
+expected_time: 10m
+level: level-16-multiple-files
+module: module-1-foundations
+name: Split Personality
+objective: Create `variables.tf` with the correct variable declaration so `terraform
+  validate` passes.
+xp: 150

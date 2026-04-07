@@ -1,0 +1,18 @@
+concepts:
+- production hardening
+- sensitive outputs
+- prevent_destroy
+- variable validation
+- preconditions
+description: 'A config is missing critical production hardening patterns: (1) sensitive
+  outputs not marked as sensitive, (2) no lifecycle prevent_destroy on critical resource,
+  (3) no variable validation block, (4) no precondition on the critical output. Add
+  all four production hardening patterns.'
+difficulty: expert
+expected_time: 60m
+level: level-20-production-hardening
+module: module-15-war-games
+name: Production Hardening
+objective: 'Add all 4 hardening patterns: sensitive output, prevent_destroy, variable
+  validation, and precondition.'
+xp: 600

@@ -1,0 +1,1 @@
+Mark the variable `sensitive = true` so Terraform knows to handle it carefully. Then mark the output `sensitive = true` as well.

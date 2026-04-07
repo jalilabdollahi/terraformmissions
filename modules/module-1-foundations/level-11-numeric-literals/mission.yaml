@@ -1,0 +1,13 @@
+concepts:
+- number type
+- string type
+- attribute types
+description: A `random_string` resource has its `length` attribute set to a string
+  `"16"` instead of a number `16`.
+difficulty: beginner
+expected_time: 5m
+level: level-11-numeric-literals
+module: module-1-foundations
+name: Type Confusion
+objective: Fix the type so `length` receives a number and `terraform validate` passes.
+xp: 100

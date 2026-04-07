@@ -1,0 +1,12 @@
+concepts:
+- length()
+description: '`length(var.items.nonexistent)` tries to access a key `nonexistent`
+  on the map before calling `length()`. This fails because the key doesn''t exist.'
+difficulty: intermediate
+expected_time: 8m
+level: level-5-length-function
+module: module-5-expressions
+name: Length Function
+objective: Fix the count expression to use `length(var.items)` — the length of the
+  whole map — so `terraform plan` succeeds.
+xp: 150

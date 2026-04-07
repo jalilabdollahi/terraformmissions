@@ -1,0 +1,1 @@
+Inside a `variables {}` block in a test file, values are HCL expressions — use `3` (a number literal) not `"three"` (a string literal).

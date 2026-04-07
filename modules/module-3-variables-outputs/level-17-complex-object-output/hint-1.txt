@@ -1,0 +1,1 @@
+Run `terraform plan`. The error says `var.config` has no attribute named `nonexistent_key`.

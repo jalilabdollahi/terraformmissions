@@ -1,0 +1,1 @@
+Change `null_resource.wrong_ref` to `null_resource.trigger`, which is the resource declared at the top of the file.

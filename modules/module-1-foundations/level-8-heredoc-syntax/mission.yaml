@@ -1,0 +1,15 @@
+concepts:
+- heredoc
+- <<-EOF
+- indented heredoc
+- multiline strings
+description: A heredoc string is using `<<EOF` (non-indented) but the closing marker
+  is indented, causing a parse error.
+difficulty: beginner
+expected_time: 8m
+level: level-8-heredoc-syntax
+module: module-1-foundations
+name: Heredoc Headache
+objective: Fix the heredoc so it uses `<<-EOF` (indented form) and `terraform validate`
+  passes.
+xp: 125

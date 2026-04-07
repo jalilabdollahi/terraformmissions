@@ -1,0 +1,15 @@
+concepts:
+- cert rotation
+- validity periods
+- early_renewal_hours
+description: '`tls_self_signed_cert` with `validity_period_hours = 1` expires in one
+  hour and `early_renewal_hours = 0` means no automatic renewal buffer. Fix: set `validity_period_hours
+  = 8760` (1 year) and `early_renewal_hours = 168` (1 week).'
+difficulty: advanced
+expected_time: 20m
+level: level-8-tls-cert-rotation
+module: module-11-security
+name: TLS Certificate Expiring Too Fast
+objective: Set appropriate validity and early renewal hours so the cert is long-lived
+  and will renew with enough lead time.
+xp: 275

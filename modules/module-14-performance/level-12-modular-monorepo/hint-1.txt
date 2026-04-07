@@ -1,0 +1,1 @@
+Run `terraform plan`. The error originates in `module.generator` — it references `random_string.token.id`. Which module is 'generator'? Look at modules/generator/main.tf.

@@ -1,0 +1,1 @@
+Change `url = "not-a-url"` to `url = "https://httpbin.org/get"`. The `https://` scheme is required.

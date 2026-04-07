@@ -1,0 +1,1 @@
+Run `terraform validate` — it reports that a splat expression cannot be applied to a single resource instance.

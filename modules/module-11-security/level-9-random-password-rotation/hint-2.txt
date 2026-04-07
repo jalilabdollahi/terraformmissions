@@ -1,0 +1,1 @@
+`keepers` is a map whose values are checked for changes to decide whether to regenerate the password. Using `timestamp()` means the keeper always changes.

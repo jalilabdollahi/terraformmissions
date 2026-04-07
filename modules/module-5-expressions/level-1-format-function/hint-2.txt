@@ -1,0 +1,1 @@
+`%s` expects a string argument and `%d` expects an integer argument. Count the placeholders in the format string.

@@ -1,0 +1,16 @@
+concepts:
+- state corruption recovery
+- state file format
+- emergency recovery
+description: The terraform.tfstate file in the broken/ directory contains invalid
+  JSON — it was corrupted by a failed write during a previous apply. Terraform cannot
+  read it and refuses to operate. Recover by removing the corrupt state file, then
+  apply cleanly to recreate the resources.
+difficulty: expert
+expected_time: 30m
+level: level-1-state-corruption-recovery
+module: module-15-war-games
+name: State Corruption Recovery
+objective: Remove the corrupt state file and run a clean apply. Validate that all
+  resources are created and state is healthy.
+xp: 350

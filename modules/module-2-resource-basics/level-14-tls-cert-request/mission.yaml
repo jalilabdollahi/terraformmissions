@@ -1,0 +1,12 @@
+concepts:
+- tls_cert_request
+- subject block
+description: A `tls_cert_request` resource is missing the required `subject {}` block.
+  Without a subject, the Certificate Signing Request (CSR) cannot be generated.
+difficulty: intermediate
+expected_time: 10m
+level: level-14-tls-cert-request
+module: module-2-resource-basics
+name: The Missing Subject
+objective: Add the `subject {}` block so `terraform apply` succeeds.
+xp: 150

@@ -1,0 +1,1 @@
+Different `random_*` resources expose their generated value through different attribute names. `random_string` uses `.result`, but `random_uuid` does not.

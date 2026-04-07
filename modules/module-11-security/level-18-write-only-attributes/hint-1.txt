@@ -1,0 +1,1 @@
+There are two problems: (1) `nonsensitive()` wraps the password to write it to a `local_file`, stripping all protection; (2) `local_file` creates a world-readable file.

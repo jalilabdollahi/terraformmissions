@@ -1,0 +1,1 @@
+The template file exists at `templates/service.tpl`. The broken config constructs the path as `templates/configs/service.tpl` — there is an extra `configs/` directory in the path that does not exist.

@@ -1,0 +1,1 @@
+Run `terraform plan` inside config-merged/. Terraform will plan to CREATE `beta_token` from scratch — it doesn't know about the existing resource in config-beta's state. You need a `moved` block to bring it in.

@@ -1,0 +1,14 @@
+concepts:
+- resource precondition
+- lifecycle conditions
+- variable validation
+description: A resource has a `precondition` that requires `var.env == "production"`,
+  but the default value for `var.env` is `"dev"`, causing the plan to always fail.
+difficulty: advanced
+expected_time: 20m
+level: level-12-precondition-resource
+module: module-12-advanced-patterns
+name: Too Strict a Gate
+objective: 'Fix the precondition so it accepts any valid environment value: dev, staging,
+  or production.'
+xp: 275

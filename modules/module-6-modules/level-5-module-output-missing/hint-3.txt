@@ -1,0 +1,6 @@
+Add to the child module:
+```hcl
+output "filename" {
+  value = local_file.greeting.filename
+}
+```

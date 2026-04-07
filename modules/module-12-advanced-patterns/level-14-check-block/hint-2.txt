@@ -1,0 +1,1 @@
+For `local_file`, the meaningful identifier is `filename` — this is what you should verify is non-empty.

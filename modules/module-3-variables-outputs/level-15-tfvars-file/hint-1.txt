@@ -1,0 +1,1 @@
+Run `terraform plan`. The error says there is a syntax error in `terraform.tfvars`.

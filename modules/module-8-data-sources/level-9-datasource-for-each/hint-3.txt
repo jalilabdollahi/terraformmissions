@@ -1,0 +1,1 @@
+Change `data.local_file.files.content` to `data.local_file.files["a.txt"].content`.

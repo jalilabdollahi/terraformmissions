@@ -1,0 +1,15 @@
+concepts:
+- dynamic block content
+- iterator naming
+- dynamic block
+description: A `dynamic` block iterates over `var.tags` but the `content` block uses
+  `each.value.name` instead of the correct iterator `tag.value` (the dynamic block's
+  iterator is named after the block label, not `each`).
+difficulty: intermediate
+expected_time: 15m
+level: level-13-dynamic-content
+module: module-7-loops
+name: Wrong Iterator in Dynamic Block
+objective: Replace `each.value.name` with `tag.key` and `each.value.value` with `tag.value`
+  inside the dynamic block content.
+xp: 225

@@ -1,0 +1,1 @@
+Commit the `.terraform.lock.hcl` file to your repository. In CI, use `terraform init -lockfile=readonly` (or `-upgrade=false`) to skip version resolution and use the committed lock file, dramatically speeding up CI runs.

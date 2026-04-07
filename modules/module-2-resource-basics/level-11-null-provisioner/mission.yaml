@@ -1,0 +1,13 @@
+concepts:
+- local-exec
+- provisioner
+- null_resource
+description: A `null_resource` provisioner runs `echoo hello` — a typo in the shell
+  command. The provisioner fails at apply time because `echoo` is not a valid command.
+difficulty: intermediate
+expected_time: 10m
+level: level-11-null-provisioner
+module: module-2-resource-basics
+name: Echoo is Not a Command
+objective: Fix the typo in the provisioner command so `terraform apply` succeeds.
+xp: 150

@@ -1,0 +1,1 @@
+Run `terraform plan` — if you see a destroy of `local_file.old_name` and a create of `local_file.new_name`, that means Terraform doesn't know they're the same resource.

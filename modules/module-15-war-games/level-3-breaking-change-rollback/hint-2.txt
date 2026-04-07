@@ -1,0 +1,1 @@
+The `random_string` resource uses `length` (not `char_count`) to specify how many characters to generate. This is a simulation of a provider upgrade where an attribute was renamed.

@@ -1,0 +1,1 @@
+`nonsensitive()` is designed to explicitly opt-out of sensitivity when you're certain a value is safe to show. Using it on a password undoes all sensitivity protection.

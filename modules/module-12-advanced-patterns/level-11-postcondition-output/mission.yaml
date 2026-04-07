@@ -1,0 +1,13 @@
+concepts:
+- output postcondition
+- self reference
+- lifecycle conditions
+description: An output block has a `postcondition` that uses `self.wrong_attr` — but
+  the correct attribute for an output's self reference is `self.value`.
+difficulty: advanced
+expected_time: 20m
+level: level-11-postcondition-output
+module: module-12-advanced-patterns
+name: Self-Referential Error
+objective: Fix the postcondition to use `self.value` instead of `self.wrong_attr`.
+xp: 275

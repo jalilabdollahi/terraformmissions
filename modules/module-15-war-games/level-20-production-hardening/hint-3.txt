@@ -1,0 +1,1 @@
+After all 4 fixes, run `terraform plan` and verify: the sensitive output is redacted, the plan succeeds. Then try `terraform plan -var="token_length=4"` — it should fail with your validation error message.

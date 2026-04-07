@@ -1,0 +1,13 @@
+concepts:
+- lifecycle precondition
+- custom conditions
+- module lifecycle
+description: A child module resource has a `precondition` that requires `var.item_count
+  > 10`, but the variable defaults to `1`. The precondition always fails.
+difficulty: advanced
+expected_time: 18m
+level: level-13-module-precondition
+module: module-6-modules
+name: Impossible Precondition
+objective: Fix the precondition to `var.item_count > 0` so the default value passes.
+xp: 250

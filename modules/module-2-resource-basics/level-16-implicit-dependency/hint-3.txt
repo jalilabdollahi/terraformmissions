@@ -1,0 +1,1 @@
+Replace `.path` with `.filename`. The `local_file` resource stores the file path in the `filename` attribute.

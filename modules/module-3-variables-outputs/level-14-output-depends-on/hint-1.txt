@@ -1,0 +1,1 @@
+Run `terraform validate`. The error says `local_file.nonexistent` does not exist.

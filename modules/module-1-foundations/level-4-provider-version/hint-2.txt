@@ -1,0 +1,1 @@
+Look at the version string: `~3.6` is missing the `>`. The correct form is `~> 3.6`.

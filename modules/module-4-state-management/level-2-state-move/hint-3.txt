@@ -1,0 +1,1 @@
+`terraform state mv <old> <new>` renames a resource in state without destroying and recreating it — useful when you rename a resource in code.

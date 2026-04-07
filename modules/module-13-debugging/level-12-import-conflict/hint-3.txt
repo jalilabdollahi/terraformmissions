@@ -1,0 +1,1 @@
+Change `to = local_file.wrong_resource` to `to = local_file.config`.

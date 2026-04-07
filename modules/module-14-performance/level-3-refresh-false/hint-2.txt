@@ -1,0 +1,1 @@
+The goal is to only ignore the `keepers` attribute (which may be managed externally) while still allowing Terraform to detect and correct other attribute drift.

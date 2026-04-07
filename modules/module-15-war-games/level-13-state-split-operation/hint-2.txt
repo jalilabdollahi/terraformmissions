@@ -1,0 +1,1 @@
+For a state split, the `moved` blocks in config-first serve as tombstones: `moved { from = random_string.res_4  to = random_string.res_4 }`. This tells Terraform: 'this resource is being managed elsewhere now' — it removes them from config-first's state without destroying.

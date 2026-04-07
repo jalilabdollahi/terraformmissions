@@ -1,0 +1,1 @@
+`terraform state rm <address>` removes a resource from the state file without destroying the actual resource on disk.

@@ -1,0 +1,1 @@
+`ignore_changes` accepts a list of attribute names that Terraform should stop tracking after initial creation. The names must be valid for the specific resource type.

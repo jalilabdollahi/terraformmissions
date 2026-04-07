@@ -1,0 +1,1 @@
+Add `count = 2` to the resource and use `count.index` in `content` and `filename` to make them unique.

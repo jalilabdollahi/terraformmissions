@@ -1,0 +1,14 @@
+concepts:
+- moved with for_each instance keys
+- count to for_each migration
+- address syntax
+description: A `moved` block migrates `local_file.items[0]` (count-based) to `local_file.items["primary"]`
+  (for_each-based), but the string key `primary` is missing its quotes.
+difficulty: advanced
+expected_time: 22m
+level: level-7-moved-block-for-each
+module: module-12-advanced-patterns
+name: Key Quoting in moved Block
+objective: Add the missing quotes around the for_each instance key in the `moved`
+  block.
+xp: 300

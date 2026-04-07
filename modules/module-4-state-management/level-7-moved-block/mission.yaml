@@ -1,0 +1,15 @@
+concepts:
+- moved block
+- resource renaming
+- non-destructive refactoring
+description: A resource was renamed from `old_name` to `new_name` in the configuration,
+  but the `moved {}` block was forgotten. Without it, Terraform plans a destroy+create
+  instead of a rename.
+difficulty: intermediate
+expected_time: 15m
+level: level-7-moved-block
+module: module-4-state-management
+name: The Moved Block
+objective: Add a `moved { from = local_file.old_name  to = local_file.new_name }`
+  block so `terraform apply` performs an in-place rename rather than destroy+create.
+xp: 225

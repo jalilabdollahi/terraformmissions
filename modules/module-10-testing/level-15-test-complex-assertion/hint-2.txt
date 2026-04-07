@@ -1,0 +1,1 @@
+Check `main.tf` to see what each output actually produces. The `&&` condition requires *both* parts to be true.

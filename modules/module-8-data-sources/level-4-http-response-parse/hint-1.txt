@@ -1,0 +1,1 @@
+Run `terraform plan`. Terraform will report that the key `wrong_key` does not exist in the decoded object.

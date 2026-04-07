@@ -1,0 +1,1 @@
+With workspace support, Terraform automatically stores state in separate files per workspace. For a local backend, the default workspace uses `terraform.tfstate` and other workspaces use `terraform.tfstate.d/<name>/terraform.tfstate`.

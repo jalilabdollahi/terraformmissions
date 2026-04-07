@@ -1,0 +1,1 @@
+Run `terraform validate`. The error says `name` is a required variable and has no value.

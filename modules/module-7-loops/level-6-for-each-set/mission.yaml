@@ -1,0 +1,16 @@
+concepts:
+- for_each
+- toset
+- set deduplication
+description: '`for_each = toset(var.names)` with `var.names = ["a", "b", "a"]` works
+  fine because `toset()` deduplicates. However, the variable default is set to a list
+  with a duplicate `"a"`. The config works but produces only 2 instances instead of
+  the expected 3. The real bug: the variable default should not have duplicates.'
+difficulty: intermediate
+expected_time: 10m
+level: level-6-for-each-set
+module: module-7-loops
+name: Duplicate in toset()
+objective: Remove the duplicate `"a"` from `var.names` default so the intent is clear
+  and the set has exactly 2 unique values.
+xp: 175

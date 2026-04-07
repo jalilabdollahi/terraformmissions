@@ -1,0 +1,1 @@
+Change `version = "= 3.99.0"` to `version = "~> 3.6"`. Run `terraform init` — it should now succeed by finding and downloading a 3.6.x version.

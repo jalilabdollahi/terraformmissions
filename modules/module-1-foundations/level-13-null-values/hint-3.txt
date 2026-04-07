@@ -1,0 +1,1 @@
+Either remove `nullable = false`, or change `default = null` to a real default value like `default = "myapp"`.

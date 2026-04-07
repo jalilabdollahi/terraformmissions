@@ -1,0 +1,15 @@
+concepts:
+- conditional prevent_destroy
+- lifecycle meta-argument
+- workspace-aware config
+description: '`prevent_destroy = true` is hardcoded, blocking destruction in every
+  workspace including dev and test. Fix: use `terraform.workspace == "production"`
+  so only the production workspace is protected.'
+difficulty: advanced
+expected_time: 20m
+level: level-11-prevent-destroy-prod
+module: module-11-security
+name: Unconditional prevent_destroy Blocks All Environments
+objective: Make `prevent_destroy` conditional on the workspace so dev/test can be
+  destroyed freely.
+xp: 275

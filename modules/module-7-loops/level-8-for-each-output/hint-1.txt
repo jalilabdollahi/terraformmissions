@@ -1,0 +1,1 @@
+Run `terraform validate`. The `local_file` resource has no attribute named `path`.

@@ -1,0 +1,1 @@
+Rewrite so that `prefix` is a standalone value (e.g. `prefix = "svc"`), and `full_name` uses it.

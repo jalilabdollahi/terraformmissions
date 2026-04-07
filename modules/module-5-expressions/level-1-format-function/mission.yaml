@@ -1,0 +1,13 @@
+concepts:
+- format()
+- format specifiers
+description: '`format("%s-%d", "app")` is called with only one argument but the format
+  string expects two values — one `%s` (string) and one `%d` (integer).'
+difficulty: intermediate
+expected_time: 8m
+level: level-1-format-function
+module: module-5-expressions
+name: Format Function
+objective: Add the missing second argument so the call becomes `format("%s-%d", "app",
+  1)` and `terraform plan` succeeds.
+xp: 150

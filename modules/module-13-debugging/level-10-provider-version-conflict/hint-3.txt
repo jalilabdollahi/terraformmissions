@@ -1,0 +1,1 @@
+Align both modules to use `version = "~> 2.5"`. This satisfies both modules with a compatible constraint.

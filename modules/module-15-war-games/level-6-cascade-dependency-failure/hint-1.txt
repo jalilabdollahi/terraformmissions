@@ -1,0 +1,1 @@
+Run `terraform plan`. The error originates in `module.module_a`. Start debugging from the leaf module (no dependencies) — look at `modules/module_a/main.tf` and check what attribute is being referenced on `random_string.value`.

@@ -1,0 +1,15 @@
+concepts:
+- local backend
+- backend configuration
+- terraform init
+description: 'The `terraform {}` block configures a local backend with a path that
+  points to a nonexistent directory: `../../nonexistent/terraform.tfstate`. Terraform
+  cannot initialise.'
+difficulty: intermediate
+expected_time: 10m
+level: level-8-backend-local
+module: module-4-state-management
+name: Backend Basics
+objective: Fix the backend `path` to use `"terraform.tfstate"` (in the current directory)
+  so `terraform init` and `terraform plan` succeed.
+xp: 175

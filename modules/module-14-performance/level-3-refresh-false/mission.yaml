@@ -1,0 +1,17 @@
+concepts:
+- -refresh=false flag
+- stale state
+- lifecycle ignore_changes
+description: A resource was configured with `lifecycle { ignore_changes = all }` which
+  masks a real configuration issue. The broken config uses ignore_changes incorrectly
+  — it hides ALL changes instead of only the specific attribute that should be ignored.
+  Fix the lifecycle block to only ignore the `keepers` attribute, then verify plan
+  with -refresh=false succeeds.
+difficulty: expert
+expected_time: 25m
+level: level-3-refresh-false
+module: module-14-performance
+name: The Stale State Problem
+objective: Fix lifecycle ignore_changes to only ignore the `keepers` attribute, then
+  verify plan with -refresh=false succeeds.
+xp: 325

@@ -1,0 +1,1 @@
+`nonsensitive()` should only be called when the value is genuinely safe to expose. For a secret variable, it never is.

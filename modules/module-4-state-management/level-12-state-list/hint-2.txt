@@ -1,0 +1,1 @@
+Terraform meta-arguments (`count`, `for_each`, `depends_on`, `provider`, `lifecycle`) cannot be used as resource names.

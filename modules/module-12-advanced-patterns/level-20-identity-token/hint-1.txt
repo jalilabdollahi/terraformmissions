@@ -1,0 +1,1 @@
+Run `terraform validate`. The validation block rejects the default token value. Look at the regex pattern: `^[0-9a-f]{32,128}$`.

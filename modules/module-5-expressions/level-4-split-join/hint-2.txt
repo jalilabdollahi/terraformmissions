@@ -1,0 +1,1 @@
+The string uses semicolons (`;`) but `split()` is looking for commas (`,`). They don't match, so no split happens.

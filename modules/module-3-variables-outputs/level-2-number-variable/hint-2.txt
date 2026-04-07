@@ -1,0 +1,1 @@
+In HCL, `"42"` is a string literal. `42` (without quotes) is a number literal. The `type = number` declaration requires the latter.

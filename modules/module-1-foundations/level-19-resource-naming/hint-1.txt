@@ -1,0 +1,1 @@
+Run `terraform validate`. It says 'Invalid identifier' for the resource name.

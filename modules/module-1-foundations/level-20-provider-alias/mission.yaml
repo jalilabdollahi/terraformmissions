@@ -1,0 +1,14 @@
+concepts:
+- provider alias
+- provider meta-argument
+- multiple providers
+description: A provider alias is declared but the resource uses a wrong alias reference,
+  causing a validation error.
+difficulty: beginner
+expected_time: 10m
+level: level-20-provider-alias
+module: module-1-foundations
+name: Alias Identity
+objective: Fix the `provider` meta-argument on the resource to correctly reference
+  the declared alias.
+xp: 150

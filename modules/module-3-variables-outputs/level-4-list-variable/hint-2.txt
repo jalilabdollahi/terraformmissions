@@ -1,0 +1,1 @@
+`list(string)` means every element must be a string. The value `3` (unquoted) is a number.

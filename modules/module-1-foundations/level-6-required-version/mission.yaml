@@ -1,0 +1,12 @@
+concepts:
+- required_version
+- terraform version constraints
+description: The `required_version` constraint demands a Terraform version that doesn't
+  exist, blocking all operations.
+difficulty: beginner
+expected_time: 8m
+level: level-6-required-version
+module: module-1-foundations
+name: Version Lockout
+objective: Fix `required_version` to allow the currently installed Terraform version.
+xp: 125

@@ -1,0 +1,1 @@
+Run `terraform test -no-color`. The output will show the assert failed and print the current value of `output.result`.

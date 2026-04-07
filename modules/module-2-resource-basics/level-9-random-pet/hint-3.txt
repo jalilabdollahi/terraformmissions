@@ -1,0 +1,1 @@
+Change `separator = 123` to `separator = "-"`.

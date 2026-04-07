@@ -1,0 +1,1 @@
+Run `terraform plan` — it fails because the template references `${app_name}` but the vars map only has a key `name`.

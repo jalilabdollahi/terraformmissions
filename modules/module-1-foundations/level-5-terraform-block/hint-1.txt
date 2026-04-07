@@ -1,0 +1,1 @@
+Without the `terraform {}` block, Terraform uses the 'legacy' provider lookup. Check `terraform init` output for a warning about provider sources.

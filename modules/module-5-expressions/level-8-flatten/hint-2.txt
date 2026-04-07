@@ -1,0 +1,1 @@
+`flatten()` takes a list of lists and returns a single flat list. Every top-level element must be a list.

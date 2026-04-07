@@ -1,0 +1,5 @@
+venv/
+workspace/
+progress.json
+__pycache__/
+*.pyc

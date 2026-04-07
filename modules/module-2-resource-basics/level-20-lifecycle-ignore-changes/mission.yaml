@@ -1,0 +1,13 @@
+concepts:
+- lifecycle
+- ignore_changes
+description: A `local_file` resource has `lifecycle { ignore_changes = [nonexistent_attr]
+  }`, referencing an attribute that does not exist on `local_file`.
+difficulty: intermediate
+expected_time: 10m
+level: level-20-lifecycle-ignore-changes
+module: module-2-resource-basics
+name: Ignoring What Doesn't Exist
+objective: Fix `ignore_changes` to reference a valid attribute (or use `all`) so `terraform
+  validate` passes.
+xp: 150

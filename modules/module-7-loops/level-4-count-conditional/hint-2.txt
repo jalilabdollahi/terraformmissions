@@ -1,0 +1,1 @@
+`var.enabled` is `type = string` — strings are not booleans in HCL.

@@ -1,0 +1,1 @@
+HCL uses `${...}` for string interpolation, not `$(...)` which is bash syntax.

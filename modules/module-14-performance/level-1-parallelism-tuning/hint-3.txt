@@ -1,0 +1,1 @@
+Change `count = 0` to `count = 10`. Re-run `terraform plan` — it should now show 10 resources to add. The validate script runs apply with `-parallelism=10`.

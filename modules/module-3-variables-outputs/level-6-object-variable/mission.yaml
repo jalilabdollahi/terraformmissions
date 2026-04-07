@@ -1,0 +1,12 @@
+concepts:
+- object type
+- required attributes
+description: A variable has `type = object({ name = string, port = number })` but
+  its default is `{ name = "app" }` — missing the required `port` key.
+difficulty: intermediate
+expected_time: 10m
+level: level-6-object-variable
+module: module-3-variables-outputs
+name: Object Missing a Required Key
+objective: Add the missing `port` key to the default so `terraform validate` passes.
+xp: 150

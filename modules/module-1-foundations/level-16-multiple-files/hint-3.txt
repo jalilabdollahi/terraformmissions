@@ -1,0 +1,1 @@
+Add variable blocks for `environment` (string) and `debug` (bool) to `variables.tf`.

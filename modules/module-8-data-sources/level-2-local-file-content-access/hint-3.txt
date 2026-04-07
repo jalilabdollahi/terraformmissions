@@ -1,0 +1,1 @@
+Change `data.local_file.readme.content_base64` to `data.local_file.readme.content` in the output block.

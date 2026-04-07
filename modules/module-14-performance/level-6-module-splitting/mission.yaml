@@ -1,0 +1,16 @@
+concepts:
+- moved blocks
+- module splitting
+- zero-downtime refactor
+description: A monolithic main.tf with 5 resources has been refactored into a child
+  module. However, the `moved` blocks are missing from the root config, so Terraform
+  will plan to destroy all 5 original resources and recreate them inside the module.
+  Add the missing moved blocks to make the refactor zero-destructive.
+difficulty: expert
+expected_time: 28m
+level: level-6-module-splitting
+module: module-14-performance
+name: Module Splitting with moved Blocks
+objective: Add moved blocks for all 5 resources so that `terraform plan` shows no
+  destroy operations.
+xp: 350

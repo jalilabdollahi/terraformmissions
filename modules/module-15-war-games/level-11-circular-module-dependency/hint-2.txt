@@ -1,0 +1,1 @@
+The fix is to break the cycle by identifying what both modules actually need: they both need a common seed value. Move that seed creation to the root module and pass it as a shared input to BOTH modules.

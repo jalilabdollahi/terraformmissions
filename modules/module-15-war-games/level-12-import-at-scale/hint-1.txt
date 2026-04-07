@@ -1,0 +1,1 @@
+Run `terraform plan`. The errors will reference the import blocks with wrong IDs. The comment at the top of main.tf documents which IDs are wrong and what they should be.

@@ -1,0 +1,1 @@
+Run `terraform validate`. The error says there is a cycle: `module.module_a → module.module_b → module.module_a`. Terraform's evaluation is directed (like a DAG) — cycles are impossible to resolve.

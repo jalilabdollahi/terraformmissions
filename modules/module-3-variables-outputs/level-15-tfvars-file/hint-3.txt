@@ -1,0 +1,1 @@
+Add the missing `=` between the variable name and its value: `environment = "production"`.

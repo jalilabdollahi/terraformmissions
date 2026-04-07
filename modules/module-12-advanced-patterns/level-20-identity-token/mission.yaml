@@ -1,0 +1,15 @@
+concepts:
+- auth patterns
+- variable validation
+- regex in Terraform
+description: An auth token variable has a `validation` block with an overly strict
+  regex that rejects valid token formats. The regex only allows lowercase hex, but
+  real tokens contain uppercase letters and hyphens.
+difficulty: advanced
+expected_time: 25m
+level: level-20-identity-token
+module: module-12-advanced-patterns
+name: Token Validation Trap
+objective: Fix the variable validation regex to accept alphanumeric characters and
+  hyphens, 32-128 characters long.
+xp: 325

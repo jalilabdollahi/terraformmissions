@@ -1,0 +1,14 @@
+concepts:
+- init errors
+- provider source
+- required_providers
+description: The `required_providers` block specifies a provider from a fake registry
+  `notarealregistry.example.com/fake/provider`. `terraform init` fails because this
+  provider does not exist.
+difficulty: advanced
+expected_time: 15m
+level: level-9-init-failure
+module: module-13-debugging
+name: Provider Not Found
+objective: Replace the fake provider with the real `hashicorp/local` provider.
+xp: 225

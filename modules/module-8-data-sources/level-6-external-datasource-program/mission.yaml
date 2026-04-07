@@ -1,0 +1,14 @@
+concepts:
+- external data source
+- executable
+- program list
+description: The external data source references a binary that does not exist on the
+  system.
+difficulty: intermediate
+expected_time: 12m
+level: level-6-external-datasource-program
+module: module-8-data-sources
+name: Missing Executable
+objective: Fix the `program` list to use a valid executable that outputs JSON, so
+  `terraform plan` succeeds.
+xp: 200

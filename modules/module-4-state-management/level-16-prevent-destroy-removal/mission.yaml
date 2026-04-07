@@ -1,0 +1,15 @@
+concepts:
+- prevent_destroy
+- lifecycle
+- destroy plan
+description: A `local_file` resource has `lifecycle { prevent_destroy = true }`. This
+  blocks any destroy operation. The validator checks that a destroy plan succeeds
+  — so `prevent_destroy` must be removed or set to `false`.
+difficulty: intermediate
+expected_time: 15m
+level: level-16-prevent-destroy-removal
+module: module-4-state-management
+name: Prevent Destroy Removal
+objective: Change `prevent_destroy = true` to `prevent_destroy = false` (or remove
+  the lifecycle block) so `terraform plan -destroy` succeeds.
+xp: 225

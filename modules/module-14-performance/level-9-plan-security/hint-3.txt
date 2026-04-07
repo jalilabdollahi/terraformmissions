@@ -1,0 +1,1 @@
+Add `sensitive = true` to the `database_password` output block. Re-run `terraform plan` and verify the password is shown as `(sensitive value)` not the raw string.

@@ -1,0 +1,1 @@
+Change the postcondition condition to `self.file_permission == "0600"` to match the actual permission.

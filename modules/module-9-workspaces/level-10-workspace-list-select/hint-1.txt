@@ -1,0 +1,1 @@
+Run `terraform plan -input=false`. It fails because `var.workspace_name` has no default and cannot be resolved without user input.

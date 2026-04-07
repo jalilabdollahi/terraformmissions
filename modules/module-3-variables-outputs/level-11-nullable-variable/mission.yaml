@@ -1,0 +1,13 @@
+concepts:
+- nullable
+- null default contradiction
+description: 'A variable has `nullable = false` and `default = null`. This is a contradiction:
+  `nullable = false` means the variable can never be null, but `default = null` sets
+  the default to null.'
+difficulty: intermediate
+expected_time: 10m
+level: level-11-nullable-variable
+module: module-3-variables-outputs
+name: Null and Non-Nullable Don't Mix
+objective: Fix the contradiction so `terraform validate` passes.
+xp: 175

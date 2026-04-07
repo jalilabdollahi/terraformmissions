@@ -1,0 +1,1 @@
+Add up: `min_upper` (2) + `min_lower` (2) + `min_numeric` (2) = 6. But `length` is only 5. It is one character short.

@@ -1,0 +1,15 @@
+concepts:
+- templatefile()
+- file()
+- path.module
+- relative paths
+description: The `templatefile()` function references a template file that doesn't
+  exist at the given path.
+difficulty: beginner
+expected_time: 8m
+level: level-15-file-references
+module: module-1-foundations
+name: File Not Found
+objective: Create the missing template file (or fix the path) so `terraform plan`
+  succeeds.
+xp: 125

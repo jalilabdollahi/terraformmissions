@@ -1,0 +1,1 @@
+In HCL, string values must be surrounded by double quotes. `default` without quotes is treated as an identifier, not the word "default".

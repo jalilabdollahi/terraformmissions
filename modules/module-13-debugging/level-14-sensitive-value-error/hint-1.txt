@@ -1,0 +1,1 @@
+Run `terraform plan`. The error says the `for_each` value is derived from a sensitive value, which is not allowed.

@@ -1,0 +1,1 @@
+Add `sensitive = true` to the `output "secret_content"` block in the child module.

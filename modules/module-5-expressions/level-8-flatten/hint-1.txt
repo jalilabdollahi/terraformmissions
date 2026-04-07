@@ -1,0 +1,1 @@
+Run `terraform validate` — it reports a type error because `flatten` cannot mix lists and strings at the top level.

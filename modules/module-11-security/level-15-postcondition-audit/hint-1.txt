@@ -1,0 +1,1 @@
+Run `terraform apply`. It fails with the postcondition error. Check whether the postcondition matches the actual `file_permission` value set on the resource.

@@ -1,0 +1,1 @@
+A `moved` block maps an old address (`from`) to a new address (`to`). The `to` must match a declared resource; `from` is the historical state address.

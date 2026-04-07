@@ -1,0 +1,13 @@
+concepts:
+- string literals
+- double quotes
+- HCL syntax
+description: A string value was entered with a mismatched quote — the string never
+  closes, causing a parse error.
+difficulty: beginner
+expected_time: 5m
+level: level-7-string-literals
+module: module-1-foundations
+name: Quote Disaster
+objective: Fix the unclosed string literal so `terraform validate` passes.
+xp: 100

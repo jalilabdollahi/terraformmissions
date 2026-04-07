@@ -1,0 +1,1 @@
+Run `terraform plan`. The error says the module `file_writer` does not have an output named `file_path`. Look at what output the module actually declares.

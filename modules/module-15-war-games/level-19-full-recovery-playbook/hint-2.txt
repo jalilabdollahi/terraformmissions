@@ -1,0 +1,1 @@
+Issue 1: Run `terraform state rm random_id.old_resource` to remove the stale type entry. Issue 2: Add `moved { from = random_string.old_name  to = random_string.new_name }` in main.tf. Issue 3: Change `length = 0` to `length = 8` in the `config_error` resource.

@@ -1,0 +1,1 @@
+Run `terraform apply` twice. The second `terraform plan` still shows a change to `content` even though nothing real has changed. This is a perpetual diff.

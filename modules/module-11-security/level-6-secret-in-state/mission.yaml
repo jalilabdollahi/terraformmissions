@@ -1,0 +1,15 @@
+concepts:
+- secrets in state
+- local_sensitive_file
+- file permissions
+description: '`random_password.db.result` is written to a `local_file` resource, creating
+  a plaintext credentials file. Fix: use `local_sensitive_file` instead to enforce
+  stricter file permissions.'
+difficulty: advanced
+expected_time: 20m
+level: level-6-secret-in-state
+module: module-11-security
+name: Password Written to Plaintext File
+objective: Replace `local_file` with `local_sensitive_file` so the credentials file
+  is created with restrictive permissions.
+xp: 275

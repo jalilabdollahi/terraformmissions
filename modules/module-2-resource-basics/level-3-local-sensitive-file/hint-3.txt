@@ -1,0 +1,1 @@
+Add `file_permission = "0600"` to the resource block. `0600` means owner read/write only — no access for group or others.

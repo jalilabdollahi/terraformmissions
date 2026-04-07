@@ -1,0 +1,1 @@
+The `provider` meta-argument expects a reference in the form `<provider_type>.<alias>` — not a quoted string.

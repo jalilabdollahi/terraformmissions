@@ -1,0 +1,14 @@
+concepts:
+- TLS chain
+- resource references
+- tls_locally_signed_cert
+description: '`tls_locally_signed_cert` references `ca_key_algorithm = "RSA"` (a hardcoded
+  string) instead of `tls_private_key.ca.algorithm`. Fix the reference.'
+difficulty: advanced
+expected_time: 20m
+level: level-7-tls-cert-chain
+module: module-11-security
+name: Wrong ca_key_algorithm in TLS Cert Chain
+objective: Replace the hardcoded string with the correct reference to `tls_private_key.ca.algorithm`
+  so `terraform apply` succeeds.
+xp: 275

@@ -1,0 +1,1 @@
+In HCL, `"true"` is a string literal. The `sensitive` attribute is a boolean and requires the unquoted `true`.

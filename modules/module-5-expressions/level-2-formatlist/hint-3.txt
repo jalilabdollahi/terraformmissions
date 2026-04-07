@@ -1,0 +1,1 @@
+The simplest fix is to reduce to one placeholder: `formatlist("%s", ["a","b"])`.

@@ -1,0 +1,13 @@
+concepts:
+- module input types
+- type system
+- number vs string
+description: The child module expects `var.port` as a `number`, but the root passes
+  a string `"8080"` (with quotes).
+difficulty: intermediate
+expected_time: 12m
+level: level-3-module-input-type
+module: module-6-modules
+name: Type Mismatch at the Module Boundary
+objective: Fix the type mismatch so `terraform validate` passes.
+xp: 200

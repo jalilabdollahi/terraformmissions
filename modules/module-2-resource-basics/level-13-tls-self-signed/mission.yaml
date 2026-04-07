@@ -1,0 +1,12 @@
+concepts:
+- tls_self_signed_cert
+- validity_period_hours
+description: A `tls_self_signed_cert` resource has `validity_period_hours = -1`. A
+  certificate cannot have a negative validity period.
+difficulty: beginner
+expected_time: 8m
+level: level-13-tls-self-signed
+module: module-2-resource-basics
+name: Negative Time Makes No Sense
+objective: Fix `validity_period_hours` so `terraform validate` passes.
+xp: 125

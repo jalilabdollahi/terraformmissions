@@ -1,0 +1,16 @@
+concepts:
+- templatefile() function
+- for_each evaluation
+- expression evaluation efficiency
+description: A config calls `templatefile()` inside a `for_each` loop over 10 services.
+  The template path is wrong — it points to a non-existent subdirectory — so the plan
+  fails for all 10 resources simultaneously. Fix the template path to the correct
+  relative location.
+difficulty: expert
+expected_time: 30m
+level: level-11-lazy-evaluation
+module: module-14-performance
+name: Lazy Evaluation and templatefile()
+objective: Fix the templatefile() path so `terraform plan` succeeds for all 10 items
+  in the for_each.
+xp: 375

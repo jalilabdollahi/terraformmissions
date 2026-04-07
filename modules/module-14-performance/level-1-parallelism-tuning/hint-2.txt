@@ -1,0 +1,1 @@
+The `count` argument is set to `0`. Terraform will create exactly 0 resources. Change it to `10` to create all 10 resources. Also read the comment about -parallelism — `=0` is invalid; use a positive integer like `=10`.

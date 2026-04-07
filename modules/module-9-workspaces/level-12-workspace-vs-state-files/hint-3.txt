@@ -1,0 +1,1 @@
+Remove the dynamic path and replace it with a static value: `path = "terraform.tfstate"`. Terraform will manage workspace state files automatically.

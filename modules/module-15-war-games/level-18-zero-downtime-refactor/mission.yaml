@@ -1,0 +1,15 @@
+concepts:
+- zero-downtime refactor
+- combined rename + module move
+- moved blocks composition
+description: 'A full restructure is being performed: 3 root-level resources are being
+  renamed AND moved into a module simultaneously. The moved blocks for all 3 renames
+  + module relocation are missing. Add all moved blocks so the plan shows zero destroys.'
+difficulty: expert
+expected_time: 60m
+level: level-18-zero-downtime-refactor
+module: module-15-war-games
+name: Zero-Downtime Full Refactor
+objective: Add all required moved blocks for the 3 resources being renamed and moved
+  into a module. Plan must show no destroy.
+xp: 600

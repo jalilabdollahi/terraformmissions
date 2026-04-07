@@ -1,0 +1,1 @@
+A range where the minimum is larger than the maximum is mathematically impossible. Think about which value should be smaller.

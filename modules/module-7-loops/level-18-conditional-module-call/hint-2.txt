@@ -1,0 +1,1 @@
+With `count = var.enabled ? 1 : 0`, the module is either `[0]` (if enabled) or absent.

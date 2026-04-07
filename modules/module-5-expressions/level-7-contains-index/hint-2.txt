@@ -1,0 +1,1 @@
+`contains(list, value)` returns `true` or `false` and never errors. Use it for membership checks.

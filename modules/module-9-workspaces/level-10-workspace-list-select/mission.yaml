@@ -1,0 +1,13 @@
+concepts:
+- workspace commands
+- variable default
+- non-interactive plan
+description: A variable used to hold the workspace name has no default value, causing
+  `terraform plan` to require interactive input.
+difficulty: intermediate
+expected_time: 10m
+level: level-10-workspace-list-select
+module: module-9-workspaces
+name: Variable Default Missing
+objective: Add `default = "default"` to the variable so `terraform plan` works non-interactively.
+xp: 175

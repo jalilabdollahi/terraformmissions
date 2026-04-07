@@ -1,0 +1,1 @@
+Change the `templatefile()` path from `"${path.module}/templates/configs/service.tpl"` to `"${path.module}/templates/service.tpl"`. This removes the non-existent subdirectory.

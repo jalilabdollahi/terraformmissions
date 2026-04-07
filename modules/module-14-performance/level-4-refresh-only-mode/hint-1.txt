@@ -1,0 +1,1 @@
+Run `terraform plan`. Notice that changing `keepers` in the config would force replacement of the resource (destroy + create). In production this destroys a live secret token — catastrophic.

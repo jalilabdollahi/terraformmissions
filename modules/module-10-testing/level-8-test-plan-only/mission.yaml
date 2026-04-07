@@ -1,0 +1,15 @@
+concepts:
+- plan vs apply in tests
+- known after apply
+- test command selection
+description: A `run` block uses `command = "plan"` but asserts an output value that
+  is only known after apply. During plan, the output is `(known after apply)` and
+  the assertion always fails.
+difficulty: advanced
+expected_time: 18m
+level: level-8-test-plan-only
+module: module-10-testing
+name: Asserting Applied Values During Plan
+objective: Change the command to `"apply"` so the output value is known and the assertion
+  can succeed.
+xp: 250

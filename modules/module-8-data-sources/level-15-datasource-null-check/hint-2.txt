@@ -1,0 +1,1 @@
+Terraform's `try()` function evaluates expressions in order and returns the first one that succeeds without error. If the first expression errors, it falls back to the next.

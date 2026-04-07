@@ -1,0 +1,1 @@
+Run `terraform plan`. Terraform sees `random_id.legacy_id` in state but it's not in the config, AND `random_string.service_token` is in config but not in state. There's a type mismatch — the old type (`random_id`) and new type (`random_string`) are different resources.

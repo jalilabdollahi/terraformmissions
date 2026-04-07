@@ -1,0 +1,1 @@
+Add `1` as the second argument: `format("%s-%d", "app", 1)`.

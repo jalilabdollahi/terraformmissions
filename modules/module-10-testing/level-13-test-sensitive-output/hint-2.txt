@@ -1,0 +1,1 @@
+You cannot compare sensitive outputs directly in test conditions. Instead, test structural properties: is it non-empty? Does it have the right length? Use `length(output.password) > 0`.

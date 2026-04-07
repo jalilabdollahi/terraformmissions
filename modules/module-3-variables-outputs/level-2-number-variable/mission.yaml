@@ -1,0 +1,14 @@
+concepts:
+- variable types
+- type mismatch
+description: A variable has `type = number` and `default = "42"` — the number is wrapped
+  in quotes, making it a string. Terraform may coerce this, but it is considered a
+  type mismatch and should be corrected.
+difficulty: beginner
+expected_time: 5m
+level: level-2-number-variable
+module: module-3-variables-outputs
+name: Quoted Numbers Are Not Numbers
+objective: Fix the default value so it is an unquoted number and `terraform validate`
+  passes.
+xp: 100

@@ -1,0 +1,1 @@
+Break the cycle: use `local` values to pre-define the filenames. Both resources can reference `local.a_path` and `local.b_path` without depending on each other.

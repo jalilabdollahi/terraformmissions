@@ -1,0 +1,1 @@
+Add `resource "local_file" "manifest" { ... }` and `output "manifest_path" { value = local_file.manifest.filename }` to `main.tf`.

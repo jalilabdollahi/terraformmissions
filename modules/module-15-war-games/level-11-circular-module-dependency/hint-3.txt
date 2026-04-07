@@ -1,0 +1,1 @@
+Create a `random_string.shared_seed` in the root main.tf. Change both modules to accept a `shared_seed` variable instead of `input_from_b` / `input_from_a`. Pass `random_string.shared_seed.result` to both modules. Remove the cross-module references.

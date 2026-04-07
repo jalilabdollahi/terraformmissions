@@ -1,0 +1,1 @@
+Add a `resource "local_file" "base"` block with a `content` and `filename` attribute to complete the chain.

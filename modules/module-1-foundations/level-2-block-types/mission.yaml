@@ -1,0 +1,14 @@
+concepts:
+- output block
+- block types
+- HCL keywords
+description: The config uses the wrong keyword for declaring an output value — it
+  says `outputs` instead of `output`.
+difficulty: beginner
+expected_time: 5m
+level: level-2-block-types
+module: module-1-foundations
+name: Block Identity Crisis
+objective: Fix the block keyword so the output is declared correctly and `terraform
+  validate` passes.
+xp: 100

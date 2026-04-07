@@ -1,0 +1,14 @@
+concepts:
+- known after apply
+- for_each constraints
+- plan time values
+description: '`for_each` uses `random_string.id.result` as a key — but `random_string.result`
+  is only known after apply, not during planning. Terraform rejects this because `for_each`
+  keys must be known at plan time.'
+difficulty: advanced
+expected_time: 20m
+level: level-16-for-each-known-after-apply
+module: module-7-loops
+name: for_each Key Unknown at Plan Time
+objective: Replace the `random_string` key with a static string key so the plan succeeds.
+xp: 275

@@ -1,0 +1,13 @@
+concepts:
+- precondition logic
+- custom conditions
+- variable validation
+description: A precondition is meant to ensure `var.min_size` is less than `var.max_size`,
+  but the condition is written with `>` instead of `<`, inverting the logic.
+difficulty: advanced
+expected_time: 20m
+level: level-17-custom-condition
+module: module-12-advanced-patterns
+name: Backwards Logic
+objective: Fix the precondition so it correctly validates that `min_size < max_size`.
+xp: 275

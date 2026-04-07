@@ -1,0 +1,1 @@
+Wrap the whole `for` expression with `flatten(...)`: `toset(flatten([for svc in ... : [for port in ...]]))` .

@@ -1,0 +1,1 @@
+Check the resource name in `main.tf` — it says `null_resource.job`. The taint command targets `null_resource.task`.

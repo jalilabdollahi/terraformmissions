@@ -1,0 +1,13 @@
+concepts:
+- concat()
+- merge()
+description: '`merge(["a","b"], ["c"])` uses `merge()` on lists, but `merge()` is
+  designed for maps. Use `concat()` to combine lists.'
+difficulty: intermediate
+expected_time: 10m
+level: level-9-concat-merge
+module: module-5-expressions
+name: Concat vs Merge
+objective: Replace `merge(...)` with `concat(["a","b"], ["c"])` so `terraform validate`
+  passes.
+xp: 175

@@ -1,0 +1,1 @@
+For `for_each` resources with string keys, instance addresses use quoted strings: `resource_type.label["key"]`. The numeric `from` addresses are correct for the old count-based state.

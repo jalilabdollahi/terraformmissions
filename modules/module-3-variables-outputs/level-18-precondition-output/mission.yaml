@@ -1,0 +1,12 @@
+concepts:
+- output precondition
+description: An output has a `precondition` block requiring `var.port >= 1024`, but
+  the variable's default is `80` — which fails the precondition. `terraform plan`
+  exits with an error.
+difficulty: intermediate
+expected_time: 15m
+level: level-18-precondition-output
+module: module-3-variables-outputs
+name: Precondition Fails on Its Own Default
+objective: Change the variable default to `8080` so `terraform plan` succeeds.
+xp: 200

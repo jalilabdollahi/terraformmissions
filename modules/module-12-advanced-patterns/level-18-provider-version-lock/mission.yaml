@@ -1,0 +1,14 @@
+concepts:
+- lock file management
+- provider hashes
+- terraform init
+description: The `.terraform.lock.hcl` file contains an invalid provider hash, causing
+  `terraform init` to fail with a hash mismatch error.
+difficulty: advanced
+expected_time: 22m
+level: level-18-provider-version-lock
+module: module-12-advanced-patterns
+name: Corrupted Lock File
+objective: Delete the corrupted lock file so `terraform init -upgrade` can regenerate
+  it correctly.
+xp: 300

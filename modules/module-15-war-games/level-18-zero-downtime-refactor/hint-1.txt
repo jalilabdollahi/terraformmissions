@@ -1,0 +1,1 @@
+Run `terraform plan`. You will see Terraform wants to destroy 3 old resources (`old_alpha`, `old_beta`, `old_gamma`) and create 3 new ones inside the module. The moved blocks in main.tf map old root addresses to new module addresses.

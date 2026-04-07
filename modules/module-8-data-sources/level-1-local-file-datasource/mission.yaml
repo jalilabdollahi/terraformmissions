@@ -1,0 +1,14 @@
+concepts:
+- data local_file
+- filename
+- path.module
+description: A data source reads a local file, but the path is wrong and Terraform
+  cannot find it.
+difficulty: intermediate
+expected_time: 8m
+level: level-1-local-file-datasource
+module: module-8-data-sources
+name: File Not Found
+objective: Fix the filename path so the data source can locate `data.txt` and `terraform
+  plan` succeeds.
+xp: 150

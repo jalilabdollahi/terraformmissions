@@ -1,0 +1,15 @@
+concepts:
+- count
+- count.index
+- unique filenames
+description: '`count = 3` creates three instances of a `local_file` resource, but
+  all three use the same `filename = "config.txt"` — no `count.index` is used. The
+  three instances would all write to the same file.'
+difficulty: intermediate
+expected_time: 8m
+level: level-1-count-basics
+module: module-7-loops
+name: Three Files, Same Name
+objective: Use `count.index` in the `filename` so each instance gets a unique filename
+  like `config-0.txt`, `config-1.txt`, `config-2.txt`.
+xp: 150

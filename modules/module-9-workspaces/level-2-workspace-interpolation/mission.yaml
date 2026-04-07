@@ -1,0 +1,13 @@
+concepts:
+- workspace interpolation
+- conditional expression
+- string literals
+description: A workspace conditional is missing quotes around the string `"default"`,
+  causing a parse error.
+difficulty: intermediate
+expected_time: 10m
+level: level-2-workspace-interpolation
+module: module-9-workspaces
+name: Unquoted String in Condition
+objective: Fix the condition so `terraform validate` passes.
+xp: 175

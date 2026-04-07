@@ -1,0 +1,1 @@
+Add 5 `moved` blocks in main.tf, mapping each root-level address (e.g. `random_string.token_a`) to its new module address (e.g. `module.strings.random_string.token_a`). Re-run plan — no destroys should appear.

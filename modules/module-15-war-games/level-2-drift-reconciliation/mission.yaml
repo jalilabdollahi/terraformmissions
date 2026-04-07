@@ -1,0 +1,16 @@
+concepts:
+- drift reconciliation
+- configuration vs state
+- output validation
+description: Three resources have drifted — their configuration in main.tf does not
+  match what they should be. The 'real' desired state is documented in the comments.
+  Fix all three resources so they match the desired configuration, then verify all
+  three outputs contain the expected values.
+difficulty: expert
+expected_time: 30m
+level: level-2-drift-reconciliation
+module: module-15-war-games
+name: Drift Reconciliation
+objective: Fix all 3 drifted resource configurations so apply succeeds and all 3 output
+  checks pass.
+xp: 375

@@ -1,0 +1,13 @@
+concepts:
+- workspace vs separate state files
+- backend limitations
+- static backend config
+description: The backend block uses `${terraform.workspace}` inside the path, which
+  is not allowed. Backend blocks must have static configuration.
+difficulty: intermediate
+expected_time: 18m
+level: level-12-workspace-vs-state-files
+module: module-9-workspaces
+name: Invalid Backend Interpolation
+objective: Remove the interpolation from the backend block so `terraform init` succeeds.
+xp: 250

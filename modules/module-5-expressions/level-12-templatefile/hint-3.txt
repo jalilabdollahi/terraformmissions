@@ -1,0 +1,1 @@
+In `main.tf`, change `{ name = var.app }` to `{ app_name = var.app }` in the `templatefile()` call.

@@ -1,0 +1,14 @@
+concepts:
+- -target flag
+- dependency graph
+- resource attributes
+description: Three chained resources A → B → C exist, but C references `local_file.resource_b.content_md5`
+  which is not an exported attribute of `local_file`.
+difficulty: intermediate
+expected_time: 12m
+level: level-11-targeted-apply
+module: module-4-state-management
+name: Targeted Apply
+objective: Fix the reference in `resource_c` from `.content_md5` to `.filename` so
+  `terraform apply` succeeds for all three resources.
+xp: 200

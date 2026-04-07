@@ -1,0 +1,1 @@
+Terraform workspaces already store state in separate locations automatically. For a local backend, state is kept at `terraform.tfstate.d/<workspace>/terraform.tfstate` without any manual path manipulation.

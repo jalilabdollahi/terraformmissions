@@ -1,0 +1,1 @@
+Replace the `timestamp()` keeper with a stable value — for example, a version variable that the operator increments only when rotation is desired.

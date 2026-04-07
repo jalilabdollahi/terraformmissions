@@ -1,0 +1,1 @@
+Run `terraform apply`. The first resource applies successfully, but the second fails with a `file_permission` validation error.

@@ -1,0 +1,1 @@
+Change `filename = "${path.module}/app.conf"` to `filename = "${path.module}/app-${terraform.workspace}.conf"`.

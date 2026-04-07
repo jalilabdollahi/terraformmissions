@@ -1,0 +1,14 @@
+concepts:
+- workspace backend isolation
+- backend limitations
+- static backend config
+description: The backend `path` attribute tries to use `${terraform.workspace}` interpolation,
+  which is not allowed in backend blocks.
+difficulty: intermediate
+expected_time: 15m
+level: level-6-workspace-backend
+module: module-9-workspaces
+name: No Interpolation in Backend
+objective: Remove the invalid interpolation and use a static path. Workspaces automatically
+  separate state. `terraform init` must succeed.
+xp: 225

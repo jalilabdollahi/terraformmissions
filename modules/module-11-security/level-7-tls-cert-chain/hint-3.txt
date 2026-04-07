@@ -1,0 +1,1 @@
+Change `ca_key_algorithm = "RSA"` to `ca_key_algorithm = tls_private_key.ca.algorithm`.

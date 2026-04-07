@@ -1,0 +1,1 @@
+Even commented-out credentials are a security violation. Version control history is permanent — once committed, credentials in comments can be recovered from git history.

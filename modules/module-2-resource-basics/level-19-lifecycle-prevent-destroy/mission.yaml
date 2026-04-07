@@ -1,0 +1,14 @@
+concepts:
+- lifecycle
+- prevent_destroy
+description: A resource has `lifecycle { prevent_destroy = true }`. When you try to
+  plan a destroy, Terraform exits with error code 1 because the lifecycle rule blocks
+  it.
+difficulty: intermediate
+expected_time: 10m
+level: level-19-lifecycle-prevent-destroy
+module: module-2-resource-basics
+name: Protected from Deletion
+objective: Set `prevent_destroy = false` so that `terraform plan -destroy` exits 0
+  or 2 (not 1).
+xp: 150

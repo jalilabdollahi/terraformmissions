@@ -1,0 +1,1 @@
+Run `terraform plan`. There are TWO errors: (1) root passes `token_size` but module_a expects `token_length`, and (2) module_a passes `string_length` but module_b expects `token_length`. Fix both.

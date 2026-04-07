@@ -1,0 +1,13 @@
+concepts:
+- module composition
+- module output to input
+- wiring modules
+description: Module A outputs `config_path`. The root passes that to Module B as `config_file`,
+  but Module B's variable is named `config_path`, not `config_file`.
+difficulty: advanced
+expected_time: 20m
+level: level-16-module-composition
+module: module-6-modules
+name: Module Composition Mismatch
+objective: Fix the root to pass `config_path` (not `config_file`) to Module B.
+xp: 275

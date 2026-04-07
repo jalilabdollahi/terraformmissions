@@ -1,0 +1,14 @@
+concepts:
+- data source depends_on
+- resource ordering
+- apply ordering
+description: A data source reads a file that is created by a `local_file` resource,
+  but the data source tries to read the file before it is created.
+difficulty: intermediate
+expected_time: 15m
+level: level-7-datasource-depends-on
+module: module-8-data-sources
+name: Ordering Matters
+objective: Add `depends_on` to the data source so it waits for the resource to create
+  the file first, and `terraform apply` succeeds.
+xp: 225

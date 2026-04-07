@@ -1,0 +1,13 @@
+concepts:
+- bool type
+- string vs bool
+- type coercion
+description: The `special` attribute is set to the string `"true"` instead of the
+  boolean `true`, causing a type error.
+difficulty: beginner
+expected_time: 5m
+level: level-12-boolean-values
+module: module-1-foundations
+name: True or False?
+objective: Fix the boolean attribute so `terraform validate` passes.
+xp: 100

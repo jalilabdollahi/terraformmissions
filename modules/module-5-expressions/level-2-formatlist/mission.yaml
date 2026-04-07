@@ -1,0 +1,12 @@
+concepts:
+- formatlist()
+description: '`formatlist("%s-%s", ["a","b"])` has two `%s` placeholders but only
+  one list argument. `formatlist` requires a list for each placeholder.'
+difficulty: intermediate
+expected_time: 10m
+level: level-2-formatlist
+module: module-5-expressions
+name: Format List
+objective: 'Fix the call to use a single placeholder: `formatlist("%s", ["a","b"])`
+  so the output is `["a", "b"]`.'
+xp: 175

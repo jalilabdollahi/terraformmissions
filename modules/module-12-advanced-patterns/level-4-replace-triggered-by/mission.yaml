@@ -1,0 +1,13 @@
+concepts:
+- replace_triggered_by
+- lifecycle
+- resource references
+description: A lifecycle block uses `replace_triggered_by = [null_resource.wrong_ref]`,
+  but no resource named `null_resource.wrong_ref` exists in the configuration.
+difficulty: advanced
+expected_time: 20m
+level: level-4-replace-triggered-by
+module: module-12-advanced-patterns
+name: Triggered by Nothing
+objective: Fix the `replace_triggered_by` to reference a resource that actually exists.
+xp: 275

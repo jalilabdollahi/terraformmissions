@@ -1,0 +1,1 @@
+Change `>` to `<`: `condition = var.min_size < var.max_size`.

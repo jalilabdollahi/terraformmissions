@@ -1,0 +1,1 @@
+A `dynamic "setting"` block generates blocks of type `setting`. If the resource expects `settings` (plural), the dynamic block must also be named `settings`.

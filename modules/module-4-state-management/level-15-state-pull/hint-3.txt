@@ -1,0 +1,1 @@
+`terraform state pull` outputs the raw state as JSON. You can pipe it to `python3 -m json.tool` or `jq` to inspect its structure.

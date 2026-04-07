@@ -1,0 +1,1 @@
+Count the `provider "local" {}` blocks in the test file. Each provider can only be configured once (unless you use aliases).

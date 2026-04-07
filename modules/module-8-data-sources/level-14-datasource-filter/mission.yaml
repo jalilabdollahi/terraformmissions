@@ -1,0 +1,15 @@
+concepts:
+- data source content
+- jsondecode
+- for expression
+- filtering
+description: A `for` expression tries to filter data source content directly, but
+  the content is a string. It must be decoded with `jsondecode` first.
+difficulty: intermediate
+expected_time: 15m
+level: level-14-datasource-filter
+module: module-8-data-sources
+name: String Is Not a List
+objective: Wrap the data source content in `jsondecode()` before filtering so `terraform
+  plan` succeeds.
+xp: 225

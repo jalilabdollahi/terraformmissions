@@ -1,0 +1,1 @@
+Read the comments in main.tf carefully — each resource has a comment explaining what the desired configuration should be. There are 3 separate drifted attributes across the 3 resources.

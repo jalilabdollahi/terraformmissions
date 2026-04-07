@@ -1,0 +1,15 @@
+concepts:
+- count.index offset
+- splat expression
+- output values
+description: 'Three files are created: `file-0.txt`, `file-1.txt`, `file-2.txt`. The
+  output expects files named `file-1.txt` through `file-3.txt` — an off-by-one in
+  the output expression.'
+difficulty: intermediate
+expected_time: 10m
+level: level-3-count-index-off-by-one
+module: module-7-loops
+name: Off-by-One Output
+objective: Fix the output to correctly reference `file-0.txt` through `file-2.txt`
+  using `local_file.files[*].filename`.
+xp: 175

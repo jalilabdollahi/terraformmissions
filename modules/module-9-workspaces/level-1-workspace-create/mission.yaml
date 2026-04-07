@@ -1,0 +1,13 @@
+concepts:
+- terraform.workspace
+- typo
+- interpolation
+description: 'The config uses `terraform.workspace` to build a filename, but there
+  is a typo: `terraform.workpsace` instead of `terraform.workspace`.'
+difficulty: intermediate
+expected_time: 10m
+level: level-1-workspace-create
+module: module-9-workspaces
+name: Workspace Typo
+objective: Fix the typo so `terraform validate` passes.
+xp: 175

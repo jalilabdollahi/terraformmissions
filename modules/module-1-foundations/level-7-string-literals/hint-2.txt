@@ -1,0 +1,1 @@
+Look at the `content` attribute. The string opens with `"` but never closes — the `#` starts a comment inside what should still be a string.

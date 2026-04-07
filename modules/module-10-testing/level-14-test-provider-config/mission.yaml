@@ -1,0 +1,13 @@
+concepts:
+- provider config in tests
+- provider block
+- duplicate configuration
+description: The test file configures the `local` provider twice using `provider`
+  blocks. Terraform rejects duplicate provider configurations. Remove the duplicate.
+difficulty: advanced
+expected_time: 22m
+level: level-14-test-provider-config
+module: module-10-testing
+name: Duplicate Provider Configuration in Test
+objective: Remove the duplicate `provider` block so `terraform test` passes.
+xp: 300

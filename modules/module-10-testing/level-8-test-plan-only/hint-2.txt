@@ -1,0 +1,1 @@
+Resource-computed attributes like `id` are only available after the resource is actually created. During `plan`, they are `(known after apply)`.

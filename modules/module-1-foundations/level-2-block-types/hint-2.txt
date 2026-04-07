@@ -1,0 +1,1 @@
+Terraform has specific top-level block types: `resource`, `variable`, `output`, `locals`, `data`, `module`, `provider`, `terraform`. None of them are plural.

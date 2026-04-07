@@ -1,0 +1,1 @@
+The value `"hello"` is a string, but the variable is declared as `type = number`. One of them must change.

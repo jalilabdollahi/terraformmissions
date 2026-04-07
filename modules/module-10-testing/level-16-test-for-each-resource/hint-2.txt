@@ -1,0 +1,1 @@
+Check `main.tf` — the `for_each` map uses string keys. Look at the `default` value of `var.files` to see the available keys.

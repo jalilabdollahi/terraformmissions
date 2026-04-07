@@ -1,0 +1,1 @@
+The two provider blocks define aliases `primary` and `secondary`. The resource references `local.wrong` — this alias does not exist.

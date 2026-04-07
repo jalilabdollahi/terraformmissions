@@ -1,0 +1,16 @@
+concepts:
+- type conversion errors
+- tolist
+- tomap
+- type system
+description: A local value uses `tolist(tomap(["a","b","c"]))` — converting a list
+  to a map requires key-value pairs, not a plain list. This causes a type conversion
+  error.
+difficulty: advanced
+expected_time: 22m
+level: level-17-type-mismatch-deep
+module: module-13-debugging
+name: Type Conversion Tangle
+objective: Fix the function chain to correctly create a list of strings without invalid
+  type conversions.
+xp: 300

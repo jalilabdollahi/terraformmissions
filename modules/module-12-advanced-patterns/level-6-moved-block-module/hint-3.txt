@@ -1,0 +1,1 @@
+Change `module.wrong_module.local_file.config` to `module.storage.local_file.config`.

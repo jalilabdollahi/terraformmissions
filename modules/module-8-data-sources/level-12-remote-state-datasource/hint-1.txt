@@ -1,0 +1,1 @@
+Run `terraform plan`. The error says the state file path does not exist. The validate script creates a file called `network.tfstate` in the current directory.

@@ -1,0 +1,1 @@
+Wrap `var.service_tokens` with `nonsensitive()`: `for_each = nonsensitive(var.service_tokens)`. This tells Terraform the keys are safe to expose.

@@ -1,0 +1,1 @@
+Run `terraform test`. Terraform will error because the sensitive output cannot be used in a condition that reveals its value.

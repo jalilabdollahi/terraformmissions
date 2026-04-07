@@ -1,0 +1,1 @@
+Team1 exports an output named `infra_token`. Team2 references `network_token` — these names don't match. The output names must be identical.

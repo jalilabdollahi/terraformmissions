@@ -1,0 +1,1 @@
+A random string of length zero produces nothing — the provider enforces a minimum of 1.

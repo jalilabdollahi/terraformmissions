@@ -1,0 +1,1 @@
+Change `type = string` to `type = bool` and `default = "true"` to `default = true`.

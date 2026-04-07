@@ -1,0 +1,18 @@
+concepts:
+- provider upgrade
+- breaking attribute renames
+- provider changelog
+description: 'A provider was upgraded and the new version renamed an attribute. The
+  config still uses the old attribute name `override_special` which was renamed to
+  `override_special` — wait, actually the resource `random_string` does not accept
+  `numeric` as an attribute name; the correct name is `numeric` in older versions
+  but the resource uses `min_numeric` for control. The config uses a completely wrong
+  attribute `char_count` that does not exist. Fix: replace it with the correct attribute
+  `length`.'
+difficulty: expert
+expected_time: 35m
+level: level-3-breaking-change-rollback
+module: module-15-war-games
+name: Breaking Change Rollback
+objective: Fix the wrong attribute name so `terraform apply` succeeds.
+xp: 400

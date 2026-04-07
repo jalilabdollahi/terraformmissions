@@ -1,0 +1,1 @@
+Look at both resource blocks in main.tf. The `prevent_destroy = true` is on `temp_resource`, but it should be on `protected_data` (which is the resource that should never be deleted).

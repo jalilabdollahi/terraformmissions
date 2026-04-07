@@ -1,0 +1,15 @@
+concepts:
+- complex refactoring
+- count to for_each migration
+- moved blocks
+- instance keys
+description: Three resources are being migrated from `count` to `for_each`. Multiple
+  `moved` blocks are present but all use incorrect instance key formats — unquoted
+  identifiers instead of quoted string keys.
+difficulty: expert
+expected_time: 30m
+level: level-19-complex-refactor
+module: module-12-advanced-patterns
+name: The Great Migration
+objective: Fix all three `moved` blocks to use correct for_each string key format.
+xp: 400

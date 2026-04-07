@@ -1,0 +1,1 @@
+The `removed {}` block (introduced in Terraform 1.7) tells Terraform to remove a resource from state WITHOUT destroying it. Use `lifecycle { destroy = false }` inside the removed block to prevent any destroy API call.

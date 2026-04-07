@@ -1,0 +1,1 @@
+Run `terraform init` — it will fail saying it cannot find the module source. Look at the `source` value in the `module` block.

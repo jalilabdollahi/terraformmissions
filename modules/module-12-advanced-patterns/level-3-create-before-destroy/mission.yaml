@@ -1,0 +1,13 @@
+concepts:
+- create_before_destroy
+- lifecycle
+- resource naming
+description: Two resources share the same static filename and both use `create_before_destroy
+  = true`. When Terraform tries to replace them, a name collision occurs.
+difficulty: advanced
+expected_time: 20m
+level: level-3-create-before-destroy
+module: module-12-advanced-patterns
+name: Name Collision on Replacement
+objective: Make the filenames unique so that replacement succeeds without collision.
+xp: 275

@@ -1,0 +1,1 @@
+Config-a defines one output: `infrastructure_id`. Config-b references `infra_id` — a shorter, different name. These must match exactly.

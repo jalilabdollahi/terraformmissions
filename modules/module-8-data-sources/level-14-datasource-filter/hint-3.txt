@@ -1,0 +1,1 @@
+Change `for s in data.local_file.services.content` to `for s in jsondecode(data.local_file.services.content)` in the `locals` block.

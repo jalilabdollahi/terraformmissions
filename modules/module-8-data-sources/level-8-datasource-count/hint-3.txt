@@ -1,0 +1,1 @@
+Change `data.local_file.configs[3].content` to `data.local_file.configs[0].content` to access the first instance.

@@ -1,0 +1,14 @@
+concepts:
+- tfvars secrets
+- sensitive outputs
+- variable files
+description: '`terraform.tfvars` contains `db_password = "supersecret123"`. The config
+  references it in a plain (non-sensitive) output, which will print the value. Fix:
+  mark the output as `sensitive`.'
+difficulty: advanced
+expected_time: 15m
+level: level-4-secret-in-tfvars
+module: module-11-security
+name: Secret in tfvars Exposed via Output
+objective: Add `sensitive = true` to the output so the secret from tfvars is redacted.
+xp: 225

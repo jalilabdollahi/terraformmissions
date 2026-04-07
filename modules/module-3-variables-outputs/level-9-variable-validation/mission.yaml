@@ -1,0 +1,14 @@
+concepts:
+- validation block
+- condition
+description: A variable has a `validation` block with `condition = var.env == "prod"`.
+  The default value is `"dev"`, so the condition is always false and terraform plan
+  fails with the validation error message.
+difficulty: intermediate
+expected_time: 10m
+level: level-9-variable-validation
+module: module-3-variables-outputs
+name: The Condition Always Fails
+objective: Fix the `condition` to accept `"dev"`, `"staging"`, and `"prod"` so `terraform
+  plan` succeeds with the default value.
+xp: 175

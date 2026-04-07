@@ -1,0 +1,14 @@
+concepts:
+- locals
+- dependency cycles
+- expression evaluation
+description: Two local values reference each other, creating a dependency cycle that
+  Terraform cannot resolve.
+difficulty: beginner
+expected_time: 10m
+level: level-18-locals-cycle
+module: module-1-foundations
+name: Circular Reference
+objective: Break the cycle by rewriting the locals so each one is independently computable.
+  `terraform validate` must pass.
+xp: 150

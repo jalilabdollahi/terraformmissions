@@ -1,0 +1,1 @@
+`values(map)` returns a list of a map's values. `keys(map)` returns a list of its keys.

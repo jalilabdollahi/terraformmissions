@@ -1,0 +1,1 @@
+`cidrsubnet(prefix, newbits, netnum)` adds `newbits` to the prefix length. `/24 + 8 = /32` — a single host, leaving no room for subnets.

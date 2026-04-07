@@ -1,0 +1,1 @@
+The `local_file` resource requires both `content` (or `source`) and `filename`. Add `filename = "${path.module}/managed.txt"`.

@@ -1,0 +1,16 @@
+concepts:
+- state partitioning
+- terraform_remote_state
+- cross-config outputs
+description: 'A large config has been split into two: config-a (infrastructure) and
+  config-b (application). Config-b reads config-a''s state via terraform_remote_state,
+  but references the wrong output key. Fix the output key reference so config-b can
+  correctly consume config-a''s outputs.'
+difficulty: expert
+expected_time: 28m
+level: level-5-state-partition
+module: module-14-performance
+name: State Partitioning
+objective: Fix the wrong output key in config-b's remote_state reference so both configs
+  can be applied.
+xp: 350

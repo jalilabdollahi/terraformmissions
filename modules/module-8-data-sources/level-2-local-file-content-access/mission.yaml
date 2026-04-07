@@ -1,0 +1,14 @@
+concepts:
+- content vs content_base64
+- data local_file
+- output values
+description: A data source reads a README file, but the output uses the Base64-encoded
+  attribute instead of plain text.
+difficulty: intermediate
+expected_time: 8m
+level: level-2-local-file-content-access
+module: module-8-data-sources
+name: Lost in Encoding
+objective: Fix the output to use `content` instead of `content_base64` so the output
+  shows readable text.
+xp: 150

@@ -1,0 +1,14 @@
+concepts:
+- local_file
+- filename
+- path.module
+description: A `local_file` resource points its `filename` at a deeply nested directory
+  `/tmp/nonexistent/dir/config.txt` that Terraform will not create automatically.
+  The apply fails because the parent directories do not exist.
+difficulty: beginner
+expected_time: 5m
+level: level-1-local-file-create
+module: module-2-resource-basics
+name: The Unreachable Path
+objective: Fix the `filename` attribute so `terraform apply` succeeds.
+xp: 100

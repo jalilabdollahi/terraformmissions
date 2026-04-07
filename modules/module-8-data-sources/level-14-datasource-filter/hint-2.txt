@@ -1,0 +1,1 @@
+To iterate over the JSON array in the file, you must first convert the string to a Terraform list using `jsondecode()`.

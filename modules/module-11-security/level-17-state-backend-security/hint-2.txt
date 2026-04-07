@@ -1,0 +1,1 @@
+Backend credentials should never appear in `.tf` files. Use environment variables (`AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`) or a separate `-backend-config` file excluded from source control.

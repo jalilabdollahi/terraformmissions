@@ -1,0 +1,1 @@
+Change the condition to `var.item_count > 0` so any positive count passes.

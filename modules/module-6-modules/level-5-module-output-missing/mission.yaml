@@ -1,0 +1,14 @@
+concepts:
+- module outputs
+- output declaration
+- child module encapsulation
+description: The child module creates a file but declares no `output` block. The root
+  tries to reference `module.mymod.filename` which doesn't exist.
+difficulty: intermediate
+expected_time: 12m
+level: level-5-module-output-missing
+module: module-6-modules
+name: Missing Output Declaration
+objective: Add an `output "filename"` block to the child module so the root can access
+  the value.
+xp: 200

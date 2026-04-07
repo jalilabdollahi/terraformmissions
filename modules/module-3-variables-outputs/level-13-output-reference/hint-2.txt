@@ -1,0 +1,1 @@
+Although `content` is an *input* argument of `local_file`, it is not exposed as an *exported* attribute you can reference.

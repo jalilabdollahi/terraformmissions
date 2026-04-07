@@ -1,0 +1,1 @@
+When two resources share a filename and one must be created before the other is destroyed, the filesystem will complain about the file already existing.

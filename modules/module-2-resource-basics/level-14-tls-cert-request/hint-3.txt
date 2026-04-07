@@ -1,0 +1,1 @@
+Add a `subject` block inside `tls_cert_request` with at least `common_name` and `organization`.

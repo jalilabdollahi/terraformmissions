@@ -1,0 +1,14 @@
+concepts:
+- test assertions
+- output verification
+- condition expressions
+description: The test asserts that `output.result == "wrong"`, but the module actually
+  outputs `"correct"`. The assertion is inverted.
+difficulty: advanced
+expected_time: 20m
+level: level-20-module-test-assert
+module: module-6-modules
+name: Wrong Test Assertion
+objective: Fix the assertion condition to `output.result == "correct"` so `terraform
+  test` passes.
+xp: 275

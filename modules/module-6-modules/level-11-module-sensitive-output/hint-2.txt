@@ -1,0 +1,1 @@
+When a sensitive variable flows into an output, that output must also be marked `sensitive = true`.

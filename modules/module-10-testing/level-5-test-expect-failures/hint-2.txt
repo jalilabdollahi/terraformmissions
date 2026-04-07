@@ -1,0 +1,1 @@
+`expect_failures` takes a list of Terraform *references*, not strings. References are unquoted expressions like `var.port`, not `"var.port"`.

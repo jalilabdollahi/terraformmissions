@@ -1,0 +1,13 @@
+concepts:
+- lookup()
+description: '`lookup(var.config, "port")` is called with only 2 arguments. The `lookup()`
+  function requires a third argument: the default value to return if the key is not
+  found.'
+difficulty: intermediate
+expected_time: 10m
+level: level-6-lookup-function
+module: module-5-expressions
+name: Lookup Function
+objective: 'Add a default value: `lookup(var.config, "port", 8080)` so `terraform
+  validate` passes.'
+xp: 175

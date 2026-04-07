@@ -1,0 +1,1 @@
+Open `main.tf` and find the actual resource name. The format is `<resource_type>.<resource_name>` — check what comes after `resource "local_file"`.

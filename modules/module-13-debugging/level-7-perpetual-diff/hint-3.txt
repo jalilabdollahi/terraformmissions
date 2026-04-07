@@ -1,0 +1,1 @@
+Either replace `timestamp()` with a static string, or add `lifecycle { ignore_changes = [content] }` to prevent content drift from triggering updates.

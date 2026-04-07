@@ -1,0 +1,1 @@
+In Terraform, variables must be declared before use. Create a `variables.tf` file in the workspace.

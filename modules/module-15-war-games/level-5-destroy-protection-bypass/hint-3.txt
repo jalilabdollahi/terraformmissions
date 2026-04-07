@@ -1,0 +1,1 @@
+Remove the entire `lifecycle { prevent_destroy = true }` block from `random_string.temp_resource`. Optionally, add it to `random_string.protected_data` to properly protect the right resource. Then re-run `terraform plan -destroy`.

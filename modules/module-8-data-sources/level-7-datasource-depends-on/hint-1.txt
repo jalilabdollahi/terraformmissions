@@ -1,0 +1,1 @@
+Run `terraform apply`. Because the data source and resource operate in the same apply phase, the data source may try to read the file before `local_file.writer` has created it.

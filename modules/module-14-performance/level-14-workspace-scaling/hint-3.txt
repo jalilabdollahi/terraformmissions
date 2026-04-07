@@ -1,0 +1,1 @@
+In both the `keepers` block and the `token_names` for expression, change the interpolation to use `"${terraform.workspace}-token-${count.index + 1}"` (and `i + 1` in the for expression). Workspace comes first, separated by a dash.

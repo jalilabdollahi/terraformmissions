@@ -1,0 +1,1 @@
+A `locals` block is like a map — you cannot have two entries with the same key.

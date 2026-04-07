@@ -1,0 +1,1 @@
+Run `terraform init`. It fails with an error about interpolation in the backend block. Backend configuration is evaluated before the Terraform runtime, so no expressions are allowed.

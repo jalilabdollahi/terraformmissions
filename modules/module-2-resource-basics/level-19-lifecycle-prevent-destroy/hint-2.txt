@@ -1,0 +1,1 @@
+`prevent_destroy = true` is a safety guard for production resources. It blocks *any* Terraform plan that would destroy the resource.

@@ -1,0 +1,1 @@
+`override_special` restricts which special characters can appear. If it is empty and `special = true`, there are no valid special characters to pick from — a contradiction.

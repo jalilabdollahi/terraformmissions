@@ -1,0 +1,1 @@
+In the `keepers` block of `resource_c`, change `random_string.resource_a.id` to `random_string.resource_a.result`. Then run `terraform validate` again to confirm.

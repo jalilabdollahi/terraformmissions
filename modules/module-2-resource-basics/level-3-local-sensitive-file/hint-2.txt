@@ -1,0 +1,1 @@
+`local_sensitive_file` is designed for secrets. It requires you to explicitly declare file permissions to prevent accidental world-readable files.

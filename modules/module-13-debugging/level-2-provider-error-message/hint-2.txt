@@ -1,0 +1,1 @@
+File permission values in Terraform's `local_file` are octal strings. The number `644` is decimal, not octal — and it's the wrong type entirely.

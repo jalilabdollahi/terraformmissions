@@ -1,0 +1,1 @@
+`toset(list)` converts a list to a set (removing duplicates and dropping order).

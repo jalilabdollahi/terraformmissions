@@ -1,0 +1,1 @@
+Change `resource "local_files" "config"` to `resource "local_file" "config"`.

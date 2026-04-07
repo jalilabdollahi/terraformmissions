@@ -1,0 +1,15 @@
+concepts:
+- removed block
+- TF 1.7+
+- state management
+description: A `removed` block is used to tell Terraform to forget about `local_file.old`
+  without destroying it, but the resource is still declared in the config — causing
+  a conflict.
+difficulty: advanced
+expected_time: 20m
+level: level-8-removed-block
+module: module-12-advanced-patterns
+name: Ghost Resource
+objective: Remove the `resource` block for `local_file.old` from the config, keeping
+  only the `removed` block.
+xp: 275

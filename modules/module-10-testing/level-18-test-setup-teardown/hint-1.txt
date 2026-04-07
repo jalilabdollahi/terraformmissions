@@ -1,0 +1,1 @@
+Run `terraform test`. The error will say `output.manifest_path` does not exist.

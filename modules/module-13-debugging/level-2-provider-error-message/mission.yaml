@@ -1,0 +1,14 @@
+concepts:
+- provider error messages
+- attribute types
+- file permissions
+description: The `local_file` resource has `file_permission = 644` (a number), but
+  the provider requires a string. The error message from the provider tells you exactly
+  what to fix.
+difficulty: advanced
+expected_time: 15m
+level: level-2-provider-error-message
+module: module-13-debugging
+name: Wrong Attribute Type
+objective: Fix `file_permission` to be the string `"0644"`.
+xp: 225

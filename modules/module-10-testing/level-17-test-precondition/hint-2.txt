@@ -1,0 +1,1 @@
+The `validation` block is on `variable "filename"`, not on the `local_file.config` resource. `expect_failures` must reference where the check lives.

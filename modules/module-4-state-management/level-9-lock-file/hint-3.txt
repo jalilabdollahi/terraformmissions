@@ -1,0 +1,1 @@
+Delete `.terraform.lock.hcl` and run `terraform init -upgrade` to regenerate it with correct hashes.

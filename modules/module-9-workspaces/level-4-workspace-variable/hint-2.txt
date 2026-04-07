@@ -1,0 +1,1 @@
+To access a value defined in a `locals` block, use the prefix `local.` (singular), not `locals.` (plural with an s).

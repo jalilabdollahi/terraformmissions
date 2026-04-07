@@ -1,0 +1,12 @@
+concepts:
+- timeouts block
+- duration strings
+description: A resource has `timeouts { create = 600 }` with a raw number. Terraform
+  timeout values must be duration strings like `"10m"` or `"1h"`.
+difficulty: beginner
+expected_time: 8m
+level: level-18-resource-timeout
+module: module-2-resource-basics
+name: Duration is a String, Not a Number
+objective: Fix the `timeouts` block so `terraform validate` passes.
+xp: 125

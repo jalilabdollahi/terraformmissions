@@ -1,0 +1,1 @@
+A Certificate Signing Request must contain a subject — the entity requesting the certificate. The `subject {}` block provides this information (the X.509 distinguished name).

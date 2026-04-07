@@ -1,0 +1,1 @@
+In `team2/main.tf`, change `data.terraform_remote_state.team1.outputs.network_token` to `data.terraform_remote_state.team1.outputs.infra_token`.

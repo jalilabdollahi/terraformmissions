@@ -1,0 +1,1 @@
+Run `terraform apply`. The error says the value for `content_base64` is not valid base64.

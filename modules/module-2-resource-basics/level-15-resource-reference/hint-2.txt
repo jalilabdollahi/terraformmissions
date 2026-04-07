@@ -1,0 +1,1 @@
+`random_string.token` by itself refers to the entire resource object (all its attributes). In a string interpolation context, Terraform expects a primitive value.

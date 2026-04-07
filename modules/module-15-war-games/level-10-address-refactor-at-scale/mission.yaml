@@ -1,0 +1,15 @@
+concepts:
+- large-scale refactoring
+- moved blocks at scale
+- zero-downtime rename
+description: 5 resources were renamed as part of a large refactor. The new config
+  has the correct resource names, but the `moved` blocks mapping old names to new
+  names are missing. Without them, Terraform will plan to destroy all 5 old resources
+  and create 5 new ones. Add all 5 moved blocks to make the refactor zero-destructive.
+difficulty: expert
+expected_time: 45m
+level: level-10-address-refactor-at-scale
+module: module-15-war-games
+name: Address Refactor at Scale
+objective: Add all 5 moved blocks so `terraform plan` shows no destroy operations.
+xp: 450

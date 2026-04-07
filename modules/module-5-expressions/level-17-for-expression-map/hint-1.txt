@@ -1,0 +1,1 @@
+Run `terraform validate` — it reports a syntax error in the for expression.

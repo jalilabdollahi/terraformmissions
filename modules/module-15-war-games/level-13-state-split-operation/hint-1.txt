@@ -1,0 +1,1 @@
+Run `terraform plan` inside config-first/. You will see that Terraform plans to destroy `res_4` and `res_5` because they are no longer in the config. Add `moved` blocks to prevent this.

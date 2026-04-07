@@ -1,0 +1,1 @@
+Run `terraform validate`. The error reports a dependency cycle between `local_file.a` and `local_file.b`.

@@ -1,0 +1,1 @@
+Change the regex to `^[A-Za-z0-9-]{32,128}$` to allow uppercase letters, lowercase letters, digits, and hyphens.

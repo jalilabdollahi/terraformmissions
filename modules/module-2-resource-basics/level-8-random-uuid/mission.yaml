@@ -1,0 +1,12 @@
+concepts:
+- random_uuid
+- resource attributes
+description: An output references `random_uuid.app_id.result`, but `random_uuid` does
+  not have a `result` attribute. The correct attribute is `id`.
+difficulty: beginner
+expected_time: 5m
+level: level-8-random-uuid
+module: module-2-resource-basics
+name: UUID Got the Wrong Attribute
+objective: Fix the output reference so `terraform validate` passes.
+xp: 100

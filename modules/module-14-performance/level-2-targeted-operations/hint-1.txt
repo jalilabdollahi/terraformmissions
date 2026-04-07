@@ -1,0 +1,1 @@
+Run `terraform validate`. The error will tell you which attribute does not exist on `random_string`. Read the schema for `random_string` in the Terraform Registry — what attributes does it expose?

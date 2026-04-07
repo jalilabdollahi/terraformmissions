@@ -1,0 +1,15 @@
+concepts:
+- dependency cycle
+- dependency graph
+- locals
+description: '`local_file.a` content references `local_file.b.filename` and `local_file.b`
+  content references `local_file.a.filename`, creating a dependency cycle. Fix by
+  using a local value to break the cycle.'
+difficulty: advanced
+expected_time: 20m
+level: level-5-cycle-detection
+module: module-13-debugging
+name: The Infinite Loop
+objective: Break the cycle by introducing a `local` value that both resources can
+  reference without circular dependency.
+xp: 275

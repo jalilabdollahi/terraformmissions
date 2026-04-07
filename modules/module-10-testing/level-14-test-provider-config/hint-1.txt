@@ -1,0 +1,1 @@
+Run `terraform test`. The error will mention a duplicate provider configuration for `local`.

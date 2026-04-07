@@ -1,0 +1,12 @@
+concepts:
+- provider meta-argument syntax
+- provider aliases
+description: A resource sets `provider = "local.primary"` using a string literal.
+  Terraform requires a provider reference (not a string) for this meta-argument.
+difficulty: advanced
+expected_time: 18m
+level: level-2-provider-meta-argument
+module: module-12-advanced-patterns
+name: String vs Reference
+objective: Fix the `provider` meta-argument syntax from a string to a proper reference.
+xp: 250

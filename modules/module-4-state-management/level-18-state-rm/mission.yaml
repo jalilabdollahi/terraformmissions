@@ -1,0 +1,16 @@
+concepts:
+- state rm
+- resource type
+- state cleanup
+description: The resource is declared with type `local_files` (with a trailing 's')
+  — this provider resource type doesn't exist. Fix the type so apply works, then the
+  validator runs `terraform state rm`.
+difficulty: intermediate
+expected_time: 12m
+level: level-18-state-rm
+module: module-4-state-management
+name: State Remove
+objective: Change `resource "local_files" "config"` to `resource "local_file" "config"`
+  (remove the trailing 's') so apply succeeds and `terraform state rm` can clean it
+  up.
+xp: 200

@@ -1,0 +1,15 @@
+concepts:
+- terraform state mv
+- resource renaming
+description: A `local_file` resource is declared but the `filename` attribute is missing,
+  preventing apply. After the fix the validator will rename the resource in state
+  with `terraform state mv`.
+difficulty: intermediate
+expected_time: 12m
+level: level-2-state-move
+module: module-4-state-management
+name: State Mover
+objective: Add the missing `filename` attribute so `terraform apply` succeeds. The
+  validator will then run `terraform state mv local_file.old_name local_file.new_name`
+  and verify the new address exists in state.
+xp: 200

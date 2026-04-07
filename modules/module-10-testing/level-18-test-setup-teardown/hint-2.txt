@@ -1,0 +1,1 @@
+The test expects the config to produce a `manifest_path` output. Look at `main.tf` — neither `local_file.manifest` nor the `output "manifest_path"` block exists.

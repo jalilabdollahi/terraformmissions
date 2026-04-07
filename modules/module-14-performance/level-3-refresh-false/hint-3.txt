@@ -1,0 +1,1 @@
+Change `ignore_changes = all` to `ignore_changes = [keepers]`. The list form accepts specific attribute names. After the fix, plan with `-refresh=false` should succeed.

@@ -1,0 +1,1 @@
+Run `terraform plan`. Because `maybe.txt` does not exist in the directory, the data source cannot read it and the plan fails. You need to handle this case.

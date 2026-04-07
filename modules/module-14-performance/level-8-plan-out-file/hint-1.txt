@@ -1,0 +1,1 @@
+Run `terraform plan`. The error is about the `random_string` constraints — the sum of minimum character requirements exceeds the total string length. What do all the min_* values add up to compared to length?

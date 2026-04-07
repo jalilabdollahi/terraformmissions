@@ -1,0 +1,1 @@
+Triggers on `null_resource` cause replacement when their values change. If the trigger value is the same, Terraform sees no change.

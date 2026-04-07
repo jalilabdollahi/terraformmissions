@@ -1,0 +1,1 @@
+Look at `modules/hello/outputs.tf` to see what outputs the child module actually declares.

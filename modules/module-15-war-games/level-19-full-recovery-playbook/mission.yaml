@@ -1,0 +1,16 @@
+concepts:
+- full incident recovery
+- compound issues
+- systematic debugging
+description: 'A production incident has left the config with three simultaneous issues:
+  (1) a corrupt/wrong resource type in state (random_id instead of random_string),
+  (2) a resource that was renamed without a moved block, and (3) a resource with a
+  wrong attribute value. Fix ALL three issues to achieve a clean apply.'
+difficulty: expert
+expected_time: 60m
+level: level-19-full-recovery-playbook
+module: module-15-war-games
+name: Full Recovery Playbook
+objective: Resolve all three issues (stale state type, missing moved block, wrong
+  attribute) so `terraform apply` succeeds cleanly.
+xp: 550

@@ -1,0 +1,14 @@
+concepts:
+- sensitive outputs
+- module sensitive values
+- output sensitivity
+description: A child module takes a `sensitive` variable and returns it as an output,
+  but the output doesn't declare `sensitive = true`. Terraform will error because
+  a sensitive value flows into a non-sensitive output.
+difficulty: intermediate
+expected_time: 15m
+level: level-11-module-sensitive-output
+module: module-6-modules
+name: Sensitive Output Leak
+objective: Add `sensitive = true` to the child module's output block.
+xp: 225

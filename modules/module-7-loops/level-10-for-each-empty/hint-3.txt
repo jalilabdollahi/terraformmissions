@@ -1,0 +1,1 @@
+Update `var.items` default to include at least the `main` key.

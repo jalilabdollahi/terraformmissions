@@ -1,0 +1,1 @@
+Every `resource` block must be closed with a matching `}`. Count the opening and closing braces.

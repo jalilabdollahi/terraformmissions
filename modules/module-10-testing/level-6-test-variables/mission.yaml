@@ -1,0 +1,13 @@
+concepts:
+- test variable overrides
+- type constraints
+- variables block in tests
+description: The test file overrides `var.item_count` with `"three"` (a string), but
+  the variable is declared as `type = number`. Terraform rejects the type mismatch.
+difficulty: advanced
+expected_time: 18m
+level: level-6-test-variables
+module: module-10-testing
+name: Wrong Type in Test Variable Override
+objective: Fix the variable override so it passes a number and `terraform test` succeeds.
+xp: 250

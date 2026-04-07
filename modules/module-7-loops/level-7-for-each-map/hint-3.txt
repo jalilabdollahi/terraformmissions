@@ -1,0 +1,1 @@
+Replace all occurrences of `each.name` with `each.key`.

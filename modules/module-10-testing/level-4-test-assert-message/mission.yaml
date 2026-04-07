@@ -1,0 +1,14 @@
+concepts:
+- assert block
+- error_message required
+- test documentation
+description: The `assert` block has `error_message = ""` — an empty string. Terraform
+  requires a non-empty error message in every assert.
+difficulty: advanced
+expected_time: 15m
+level: level-4-test-assert-message
+module: module-10-testing
+name: Empty Error Message
+objective: Add a meaningful error message so the assert is valid and `terraform test`
+  passes.
+xp: 225

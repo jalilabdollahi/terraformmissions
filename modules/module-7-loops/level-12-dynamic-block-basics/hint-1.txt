@@ -1,0 +1,1 @@
+Run `terraform validate`. The `dynamic` block name must match the nested block type it generates.

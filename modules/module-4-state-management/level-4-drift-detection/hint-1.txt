@@ -1,0 +1,1 @@
+Run `terraform validate` — it reports that `var.file_contents` is not declared. Check the variable name.

@@ -1,0 +1,1 @@
+Change `command = "plan"` to `command = "apply"` so the resource is created and its `id` is available for assertion.

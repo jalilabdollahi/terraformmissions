@@ -1,0 +1,13 @@
+concepts:
+- replace()
+- string functions
+description: '`replace(var.name, "/[^a-z]/", "-", "g")` is called with 4 arguments,
+  but `replace()` only accepts 3. The trailing `"g"` flag is not a valid parameter.'
+difficulty: intermediate
+expected_time: 8m
+level: level-3-string-functions
+module: module-5-expressions
+name: String Functions
+objective: Remove the extra `"g"` argument so the call is `replace(var.name, "/[^a-z]/",
+  "-")` and `terraform validate` passes.
+xp: 150

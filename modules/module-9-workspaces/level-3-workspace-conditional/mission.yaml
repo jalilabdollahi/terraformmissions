@@ -1,0 +1,14 @@
+concepts:
+- workspace-based conditionals
+- count
+- string comparison
+description: A workspace conditional checks for `"prodution"` (missing the 'c'), so
+  it never matches the actual workspace name `"production"`.
+difficulty: intermediate
+expected_time: 10m
+level: level-3-workspace-conditional
+module: module-9-workspaces
+name: Production Misspelled
+objective: Fix the typo so the count conditional works correctly and `terraform plan`
+  passes.
+xp: 175

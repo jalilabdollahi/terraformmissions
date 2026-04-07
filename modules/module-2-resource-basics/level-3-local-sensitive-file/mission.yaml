@@ -1,0 +1,12 @@
+concepts:
+- local_sensitive_file
+- file_permission
+description: A `local_sensitive_file` resource is declared without the required `file_permission`
+  attribute. `terraform validate` reports a missing required argument.
+difficulty: beginner
+expected_time: 8m
+level: level-3-local-sensitive-file
+module: module-2-resource-basics
+name: Permission Denied by Design
+objective: Add the missing `file_permission` attribute so `terraform validate` passes.
+xp: 125

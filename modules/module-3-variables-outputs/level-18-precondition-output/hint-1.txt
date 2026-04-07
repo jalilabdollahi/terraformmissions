@@ -1,0 +1,1 @@
+Run `terraform plan`. The error shows the output precondition failed because `var.port` (80) is less than 1024.

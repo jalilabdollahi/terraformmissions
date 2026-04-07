@@ -1,0 +1,1 @@
+If you just want a list of strings, use `tolist(["a", "b", "c"])` directly — no `tomap()` needed.

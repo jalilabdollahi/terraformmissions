@@ -1,0 +1,13 @@
+concepts:
+- implicit dependencies
+- resource attributes
+description: Two `local_file` resources exist. The second references `local_file.first.path`
+  to get the first file's path — but `local_file` does not expose a `.path` attribute.
+  The correct attribute is `.filename`.
+difficulty: intermediate
+expected_time: 10m
+level: level-16-implicit-dependency
+module: module-2-resource-basics
+name: The Wrong Breadcrumb
+objective: Fix the attribute reference so `terraform apply` succeeds.
+xp: 150

@@ -1,0 +1,1 @@
+Run `terraform validate`. The error says you must use `[*]` or `[N]` with a count resource.

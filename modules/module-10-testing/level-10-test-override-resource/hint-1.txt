@@ -1,0 +1,1 @@
+Run `terraform test`. The error will say the target resource `local_file.wrong_name` does not exist in the configuration.

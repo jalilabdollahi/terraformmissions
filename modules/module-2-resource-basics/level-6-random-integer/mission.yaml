@@ -1,0 +1,13 @@
+concepts:
+- random_integer
+- min
+- max
+description: A `random_integer` resource has `min = 100` and `max = 10`. The minimum
+  value is greater than the maximum, which is invalid.
+difficulty: beginner
+expected_time: 5m
+level: level-6-random-integer
+module: module-2-resource-basics
+name: Min Greater Than Max
+objective: Swap `min` and `max` so `terraform validate` passes.
+xp: 100

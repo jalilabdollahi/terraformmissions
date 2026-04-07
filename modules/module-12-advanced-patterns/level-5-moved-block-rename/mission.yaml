@@ -1,0 +1,15 @@
+concepts:
+- moved block
+- state refactoring
+- resource renaming
+description: A resource was renamed from `local_file.old` to `local_file.new`, but
+  the `moved` block has `from` and `to` swapped — it points from `new` to `old` instead
+  of the correct direction.
+difficulty: advanced
+expected_time: 20m
+level: level-5-moved-block-rename
+module: module-12-advanced-patterns
+name: Moving in the Wrong Direction
+objective: Fix the `moved` block so Terraform maps the old state address to the new
+  resource name without destroying and recreating.
+xp: 275

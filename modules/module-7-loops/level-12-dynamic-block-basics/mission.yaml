@@ -1,0 +1,15 @@
+concepts:
+- dynamic block naming
+- nested blocks
+- dynamic block
+description: A `dynamic` block is named `"setting"` but the resource uses nested blocks
+  called `"settings"` (plural). The dynamic block name must match the nested block
+  name exactly.
+difficulty: intermediate
+expected_time: 12m
+level: level-12-dynamic-block-basics
+module: module-7-loops
+name: Wrong Dynamic Block Name
+objective: Rename the `dynamic "setting"` block to `dynamic "settings"` to match the
+  nested block name.
+xp: 200

@@ -1,0 +1,14 @@
+concepts:
+- comments
+- '# inline comment'
+- /* block comment */
+- HCL syntax
+description: A `/* block comment */` was left unclosed inside an attribute assignment,
+  corrupting the entire config.
+difficulty: beginner
+expected_time: 5m
+level: level-14-comments-inline
+module: module-1-foundations
+name: Comment Catastrophe
+objective: Fix or remove the unclosed block comment so `terraform validate` passes.
+xp: 100

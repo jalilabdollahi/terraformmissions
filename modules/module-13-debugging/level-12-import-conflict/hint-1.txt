@@ -1,0 +1,1 @@
+Run `terraform plan`. The error says `local_file.wrong_resource` is not declared in the configuration.

@@ -1,0 +1,16 @@
+concepts:
+- prevent_destroy removal
+- lifecycle blocks
+- planned destroy
+description: 'A resource has `prevent_destroy = true` in its lifecycle block, but
+  this resource needs to be decommissioned. The prevent_destroy was added to the wrong
+  resource — it should be on `protected_data`, not `temp_resource`. Fix: remove prevent_destroy
+  from `temp_resource` so that `plan -destroy` succeeds.'
+difficulty: expert
+expected_time: 35m
+level: level-5-destroy-protection-bypass
+module: module-15-war-games
+name: Destroy Protection Bypass
+objective: Remove prevent_destroy from temp_resource so `terraform plan -destroy`
+  can plan its destruction.
+xp: 400

@@ -1,0 +1,1 @@
+Adding `sensitive = true` to an output causes Terraform to redact the value in all CLI output and to mark it as sensitive in downstream consumers.

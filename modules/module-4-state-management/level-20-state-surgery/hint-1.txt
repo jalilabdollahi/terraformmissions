@@ -1,0 +1,1 @@
+Run `terraform validate` — it reports `local_files` as an invalid resource type. The correct type is `local_file`.

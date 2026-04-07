@@ -1,0 +1,1 @@
+Add a `lifecycle { ignore_changes = [keepers] }` block inside the `random_string` resource. The validate script will then apply and run `terraform apply -refresh-only` to verify state sync.

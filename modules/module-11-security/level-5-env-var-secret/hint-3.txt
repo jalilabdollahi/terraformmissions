@@ -1,0 +1,1 @@
+Rename the variable from `DB_PASSWORD` to `db_password` in both the `variable` block and anywhere it is referenced.

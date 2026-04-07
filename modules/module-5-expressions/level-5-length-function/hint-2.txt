@@ -1,0 +1,1 @@
+`length()` can be called directly on a map: `length(var.items)` returns the number of keys.

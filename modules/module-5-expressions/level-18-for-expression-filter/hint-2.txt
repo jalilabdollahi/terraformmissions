@@ -1,0 +1,1 @@
+`var.items` is declared as `list(string)`. To compare numerically, convert with `tonumber(x)` first.

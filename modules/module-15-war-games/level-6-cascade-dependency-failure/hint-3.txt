@@ -1,0 +1,1 @@
+In `modules/module_a/main.tf`, change `random_string.value.id` to `random_string.value.result`. This single fix unblocks the entire A → B → C dependency chain.

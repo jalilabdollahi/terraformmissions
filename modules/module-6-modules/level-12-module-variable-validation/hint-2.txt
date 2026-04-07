@@ -1,0 +1,1 @@
+The validation condition is too strict. Use `contains(["dev", "staging", "prod"], var.env)` to allow real environments.

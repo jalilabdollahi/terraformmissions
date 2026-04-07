@@ -1,0 +1,1 @@
+Run `terraform plan`. Terraform warns or errors that a sensitive value is being used in a non-sensitive output.

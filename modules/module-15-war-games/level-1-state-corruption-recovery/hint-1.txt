@@ -1,0 +1,1 @@
+Try running `terraform plan`. You will get a JSON parse error from the state file. Terraform cannot operate with a corrupt state file. The state file is at `terraform.tfstate` in the working directory.

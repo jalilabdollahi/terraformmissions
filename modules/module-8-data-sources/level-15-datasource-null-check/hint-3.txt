@@ -1,0 +1,1 @@
+Change `value = data.local_file.maybe.content` to `value = try(data.local_file.maybe.content, "default")`. This returns `"default"` if the data source cannot read the file.

@@ -1,0 +1,1 @@
+Run `terraform validate`. The `hashicorp/http` provider validates the URL format at plan/validate time and requires a proper absolute URL.

@@ -1,0 +1,1 @@
+To access a specific `for_each` instance, use the key: `data.local_file.files["a.txt"]`. The key must be one of the values from the `for_each` set.

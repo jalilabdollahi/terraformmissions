@@ -1,0 +1,1 @@
+Look at the child module's `variable "port"` declaration — it has `type = number`.

@@ -1,0 +1,1 @@
+Check `main.tf` for the actual data source declaration. The format is `data.<type>.<name>`.

@@ -1,0 +1,1 @@
+The `null_resource.watcher` trigger maps use `local_file.nonexistent.id`. There is no resource named `nonexistent` — only `config`.

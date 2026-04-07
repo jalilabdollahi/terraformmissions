@@ -1,0 +1,14 @@
+concepts:
+- import block
+- TF 1.5+
+- declarative import
+description: Terraform 1.5 introduced `import {}` blocks for declarative imports.
+  The config has an `import` block with the wrong file path as the resource ID.
+difficulty: intermediate
+expected_time: 12m
+level: level-6-import-block
+module: module-4-state-management
+name: Declarative Import
+objective: Fix the `import` block's `id` to match `"${path.module}/config.txt"` —
+  the same path used in the resource's `filename` attribute.
+xp: 200

@@ -1,0 +1,1 @@
+Remove the quotes from `"true"` so it becomes `true`.

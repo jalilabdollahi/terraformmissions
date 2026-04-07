@@ -1,0 +1,1 @@
+`depends_on` must reference resources that actually exist. `local_file.nonexistent` is a phantom reference — there is no such resource block.

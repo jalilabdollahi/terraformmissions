@@ -1,0 +1,16 @@
+concepts:
+- state recovery
+- resource types
+- state list
+- output expressions
+description: Three resources are declared, but `config_b` uses the invalid type `local_files`.
+  Fix both the resource type and the output reference so all three resources apply
+  and appear in state.
+difficulty: advanced
+expected_time: 25m
+level: level-20-state-surgery
+module: module-4-state-management
+name: State Surgery
+objective: Change `resource "local_files" "config_b"` to `resource "local_file" "config_b"`
+  and fix the output. `terraform apply` must succeed with all 3 resources in state.
+xp: 300

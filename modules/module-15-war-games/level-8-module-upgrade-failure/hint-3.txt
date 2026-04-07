@@ -1,0 +1,1 @@
+In the root `main.tf`, change `module.file_writer.file_path` to `module.file_writer.filename`. This updates the caller to match the module's new output name.

@@ -1,0 +1,15 @@
+concepts:
+- keepers
+- password rotation
+- timestamp() side effects
+description: 'The `random_password` resource has `keepers = { always_rotate = timestamp()
+  }`. Because `timestamp()` changes on every plan, the password rotates on every apply.
+  Fix: use a stable keeper value.'
+difficulty: advanced
+expected_time: 20m
+level: level-9-random-password-rotation
+module: module-11-security
+name: Password Forced to Rotate on Every Apply
+objective: Replace the volatile `timestamp()` keeper with a stable value so the password
+  only rotates when intentionally triggered.
+xp: 275

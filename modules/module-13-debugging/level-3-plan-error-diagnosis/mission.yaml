@@ -1,0 +1,14 @@
+concepts:
+- plan errors
+- resource references
+- null_resource triggers
+description: A `null_resource` has a trigger that references `local_file.nonexistent.id`
+  — a resource that is not declared in the configuration. This causes `terraform plan`
+  to fail.
+difficulty: advanced
+expected_time: 18m
+level: level-3-plan-error-diagnosis
+module: module-13-debugging
+name: Plan Failure Forensics
+objective: Fix the trigger to reference a resource that actually exists in the config.
+xp: 250

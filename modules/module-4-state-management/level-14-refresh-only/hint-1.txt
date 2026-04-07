@@ -1,0 +1,1 @@
+Run `terraform validate` — `local_file` has no attribute `size`. Check the provider docs for valid attributes.

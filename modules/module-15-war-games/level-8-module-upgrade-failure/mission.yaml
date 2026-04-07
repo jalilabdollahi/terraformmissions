@@ -1,0 +1,15 @@
+concepts:
+- module upgrade
+- output renaming
+- breaking module changes
+description: A child module was upgraded and its output was renamed from `file_path`
+  to `filename`. The root module still references the old output name `file_path`.
+  Fix the root module to use the new output name `filename`.
+difficulty: expert
+expected_time: 40m
+level: level-8-module-upgrade-failure
+module: module-15-war-games
+name: Module Upgrade Failure
+objective: Update the root module's output reference from `file_path` to `filename`
+  so `terraform plan` succeeds.
+xp: 425

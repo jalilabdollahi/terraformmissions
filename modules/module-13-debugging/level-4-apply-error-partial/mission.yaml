@@ -1,0 +1,14 @@
+concepts:
+- partial apply recovery
+- apply errors
+- attribute validation
+description: Two resources exist. The first is valid; the second has `file_permission
+  = 999` which is not a valid octal permission string, causing it to fail on apply.
+  Fix the second resource so the full apply succeeds.
+difficulty: advanced
+expected_time: 20m
+level: level-4-apply-error-partial
+module: module-13-debugging
+name: Partial Apply Recovery
+objective: Fix `file_permission = 999` to a valid octal string like `"0644"`.
+xp: 275

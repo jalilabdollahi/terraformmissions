@@ -1,0 +1,1 @@
+Update `for_each` and adjust `each.value` usage (it's now the filename string, not the resource object).

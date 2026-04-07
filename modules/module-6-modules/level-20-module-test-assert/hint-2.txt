@@ -1,0 +1,1 @@
+Look at the child module's output — `local_file.result.content` is `"correct"`. The test asserts it equals `"wrong"`.

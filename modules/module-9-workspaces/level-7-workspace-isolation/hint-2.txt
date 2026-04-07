@@ -1,0 +1,1 @@
+Use `terraform.workspace` in the filename to make each workspace's file unique: `"app-${terraform.workspace}.conf"`.

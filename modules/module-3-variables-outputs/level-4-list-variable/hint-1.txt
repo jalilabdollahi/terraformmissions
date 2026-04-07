@@ -1,0 +1,1 @@
+Run `terraform validate`. The error says element index 2 is a number but a string is required.

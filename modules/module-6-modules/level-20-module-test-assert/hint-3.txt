@@ -1,0 +1,1 @@
+Change `output.result == "wrong"` to `output.result == "correct"`.

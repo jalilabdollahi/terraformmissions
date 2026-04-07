@@ -1,0 +1,1 @@
+Change `command = "apply_all"` to `command = "apply"`.

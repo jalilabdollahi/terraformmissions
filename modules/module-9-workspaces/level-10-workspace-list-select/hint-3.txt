@@ -1,0 +1,1 @@
+Add `default = "default"` to the `variable "workspace_name"` block.

@@ -1,0 +1,1 @@
+After both fixes, the chain becomes: root passes `token_length=16` → module_a receives `token_length` and passes it as `token_length` → module_b receives `token_length` and uses it for the random_string length.

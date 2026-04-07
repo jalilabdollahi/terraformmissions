@@ -1,0 +1,15 @@
+concepts:
+- count to for_each migration
+- moved block
+- state migration
+description: Resources were migrated from `count`-based to `for_each`-based, renaming
+  from `local_file.items[0]` and `local_file.items[1]` to `local_file.items["alpha"]`
+  and `local_file.items["beta"]`. Without `moved` blocks, Terraform will destroy and
+  recreate.
+difficulty: advanced
+expected_time: 20m
+level: level-17-count-to-for-each-migration
+module: module-7-loops
+name: count to for_each Migration
+objective: Add `moved` blocks to map the old count indices to the new for_each keys.
+xp: 275

@@ -1,0 +1,16 @@
+concepts:
+- multi-team conflicts
+- remote state output keys
+- team coordination
+description: Team 1 manages infrastructure resources and exposes outputs via remote
+  state. Team 2's config reads Team 1's state but accidentally references the wrong
+  output key — they used `network_token` but Team 1 exports `infra_token`. Fix Team
+  2's config to use the correct output key.
+difficulty: expert
+expected_time: 45m
+level: level-16-multi-team-conflict
+module: module-15-war-games
+name: Multi-Team Conflict
+objective: Fix the wrong output key reference in team2/main.tf so `terraform plan`
+  succeeds after team1 is applied.
+xp: 450

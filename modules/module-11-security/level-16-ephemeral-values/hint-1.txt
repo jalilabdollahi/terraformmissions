@@ -1,0 +1,1 @@
+There are two problems: (1) `local_file` is used instead of `local_sensitive_file` for a secret, and (2) `output "token_preview"` exposes the sensitive variable without `sensitive = true`.

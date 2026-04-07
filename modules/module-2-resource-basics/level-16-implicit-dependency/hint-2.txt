@@ -1,0 +1,1 @@
+Check the `local_file` resource schema. The file path is exposed through a different attribute name.

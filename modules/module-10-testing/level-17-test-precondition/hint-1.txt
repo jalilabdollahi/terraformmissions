@@ -1,0 +1,1 @@
+Run `terraform test`. Terraform may report that `local_file.config` is not expected to fail, or that the expected failure was not produced by the right check.

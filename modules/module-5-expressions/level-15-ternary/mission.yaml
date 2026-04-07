@@ -1,0 +1,13 @@
+concepts:
+- ternary operator
+- type consistency
+description: '`var.enabled ? "yes" : 0` mixes types — the true branch is a string
+  `"yes"` but the false branch is a number `0`. Both branches must be the same type.'
+difficulty: intermediate
+expected_time: 10m
+level: level-15-ternary
+module: module-5-expressions
+name: Ternary Operator
+objective: 'Fix the false branch to be a string: `var.enabled ? "yes" : "no"` so `terraform
+  validate` passes.'
+xp: 175

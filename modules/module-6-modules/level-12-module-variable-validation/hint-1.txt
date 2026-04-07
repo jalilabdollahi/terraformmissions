@@ -1,0 +1,1 @@
+Run `terraform plan`. The error is a variable validation failure: the condition `var.env == "valid"` fails for `"prod"`.

@@ -1,0 +1,13 @@
+concepts:
+- map(string)
+- type mismatch
+description: 'A variable is declared as `type = map(string)` but its default has mixed
+  types: `{ a = "x", b = 2 }`. The value `2` is a number, not a string.'
+difficulty: beginner
+expected_time: 8m
+level: level-5-map-variable
+module: module-3-variables-outputs
+name: Mixed Types in a String Map
+objective: Fix the default value so all map values are strings and `terraform validate`
+  passes.
+xp: 125

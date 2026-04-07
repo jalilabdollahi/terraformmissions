@@ -1,0 +1,1 @@
+Look at `modules/mod_b/main.tf` — the variable is named `config_path`, not `config_file`.

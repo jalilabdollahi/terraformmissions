@@ -1,0 +1,1 @@
+In `modules/generator/main.tf`, change the output value from `random_string.token.id` to `random_string.token.result`. This fixes the root cause; the cascade through processor and reporter will resolve automatically.

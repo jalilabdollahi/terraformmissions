@@ -1,0 +1,15 @@
+concepts:
+- nonsensitive() misuse
+- sensitive output
+- secret protection
+description: 'The output directly wraps a sensitive variable in `nonsensitive()`,
+  exposing it. Fix it: remove `nonsensitive()` and mark the output as `sensitive =
+  true`.'
+difficulty: advanced
+expected_time: 18m
+level: level-3-nonsensitive-override
+module: module-11-security
+name: Direct nonsensitive() on Secret Variable
+objective: Remove `nonsensitive()` and add `sensitive = true` to the output so the
+  secret is protected.
+xp: 250

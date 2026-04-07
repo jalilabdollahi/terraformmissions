@@ -1,0 +1,1 @@
+Splat expressions (`resource[*].attr`) work when a resource has `count` or `for_each`, producing a list or map.

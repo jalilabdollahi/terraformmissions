@@ -1,0 +1,1 @@
+Add `name = "app-${count.index}"` to the module block.

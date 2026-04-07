@@ -1,0 +1,1 @@
+Run `terraform plan` and look at how many resources will be created. The number should be 10 — is it? Inspect the `count` argument in the resource block.

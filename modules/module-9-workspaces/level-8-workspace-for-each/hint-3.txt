@@ -1,0 +1,1 @@
+Add `default = { env = "development", replicas = 1 }` as the first key in the `workspace_config` map.

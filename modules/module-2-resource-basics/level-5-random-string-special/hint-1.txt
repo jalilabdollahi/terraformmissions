@@ -1,0 +1,1 @@
+Run `terraform apply`. The error is about `override_special` being set to an empty string while `special = true`.

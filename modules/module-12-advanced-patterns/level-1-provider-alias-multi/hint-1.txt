@@ -1,0 +1,1 @@
+Run `terraform validate`. The error will mention an unknown provider configuration. Look at the `provider =` line inside the resource.

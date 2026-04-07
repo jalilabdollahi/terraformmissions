@@ -1,0 +1,13 @@
+concepts:
+- for expression
+- map production
+description: '`{for k, v in var.tags : k, v}` uses a comma between the key and value
+  expressions. Map-producing for expressions require `=>` as the separator.'
+difficulty: intermediate
+expected_time: 12m
+level: level-17-for-expression-map
+module: module-5-expressions
+name: For Expression Map
+objective: 'Change the comma to `=>`: `{for k, v in var.tags : k => v}` so `terraform
+  validate` passes.'
+xp: 200

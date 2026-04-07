@@ -1,0 +1,1 @@
+Run `terraform version` to see your installed version. Then run `terraform validate` to see the constraint error.

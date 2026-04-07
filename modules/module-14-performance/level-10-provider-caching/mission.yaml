@@ -1,0 +1,15 @@
+concepts:
+- provider caching
+- TF_PLUGIN_CACHE_DIR
+- version constraints
+description: A config uses a non-existent provider version constraint, simulating
+  a scenario where the local provider cache has a valid version but the constraint
+  requires a version that doesn't exist — causing a cache miss and download failure.
+  Fix the version constraint to a valid one so `terraform init` succeeds.
+difficulty: expert
+expected_time: 25m
+level: level-10-provider-caching
+module: module-14-performance
+name: Provider Caching
+objective: Fix the provider version constraint so `terraform init` succeeds.
+xp: 325

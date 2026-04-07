@@ -1,0 +1,1 @@
+List-producing for expressions produce values: `[for item in list : item]`. Map-producing expressions produce key-value pairs: `{for k, v in map : k => v}`.
