@@ -13,7 +13,6 @@ No cloud. No AWS bill. No hidden lab costs.
 
 **Design and implementation by: Jalil Abdollahi**  
 Email: `jalil.abdollahi@gmail.com`
-
 ---
 
 ## Features
