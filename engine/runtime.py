@@ -17,7 +17,11 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 VALIDATE_LIB = REPO_ROOT / "engine" / "validate_lib.sh"
-PLUGIN_CACHE = REPO_ROOT / ".cache" / "terraform-plugins"
+# Read-only provider mirror (built by install.sh). Terraform never writes into a
+# filesystem mirror, so parallel inits can't corrupt it (a shared TF_PLUGIN_CACHE_DIR can:
+# on macOS an in-place overwrite of a signed provider binary makes it un-launchable).
+PROVIDER_MIRROR = REPO_ROOT / ".cache" / "provider-mirror"
+CLI_CONFIG = REPO_ROOT / ".cache" / "terraformrc"
 MARKER_DIR = ".tm"
 MARKER_FILE = "level"
 
@@ -25,15 +29,42 @@ SETUP_TIMEOUT = 300
 VALIDATE_TIMEOUT = 300
 
 
+def _mirrored_providers() -> list[str]:
+    base = PROVIDER_MIRROR / "registry.terraform.io"
+    if not base.is_dir():
+        return []
+    return sorted(f"registry.terraform.io/{ns.name}/{p.name}"
+                  for ns in base.iterdir() if ns.is_dir() for p in ns.iterdir() if p.is_dir())
+
+
+def cli_config() -> Path | None:
+    """Write a CLI config that installs mirrored providers from the local mirror and
+    everything else from the registry. Returns None if no mirror exists."""
+    providers = _mirrored_providers()
+    if not providers:
+        return None
+    inc = ", ".join(f'"{p}"' for p in providers)
+    text = (
+        "provider_installation {\n"
+        f'  filesystem_mirror {{\n    path    = "{PROVIDER_MIRROR}"\n    include = [{inc}]\n  }}\n'
+        f"  direct {{\n    exclude = [{inc}]\n  }}\n"
+        "}\n"
+    )
+    try:
+        if not CLI_CONFIG.exists() or CLI_CONFIG.read_text(encoding="utf-8") != text:
+            CLI_CONFIG.parent.mkdir(parents=True, exist_ok=True)
+            tmp = CLI_CONFIG.with_suffix(f".{os.getpid()}.tmp")
+            tmp.write_text(text, encoding="utf-8")
+            tmp.replace(CLI_CONFIG)
+    except OSError:
+        return None
+    return CLI_CONFIG
+
+
 def terraform_env(workspace: Path, level_path: Path | None = None, tmp: Path | None = None) -> dict[str, str]:
     """Environment for every terraform / validator / setup subprocess."""
-    PLUGIN_CACHE.mkdir(parents=True, exist_ok=True)
     env = {
         **os.environ,
-        "TF_PLUGIN_CACHE_DIR": str(PLUGIN_CACHE),
-        # Allow using cached providers even before a lock file has checksums for them,
-        # so levels work offline once the cache is warm.
-        "TF_PLUGIN_CACHE_MAY_BREAK_DEPENDENCY_LOCK_FILE": "1",
         "CHECKPOINT_DISABLE": "1",
         "WORKSPACE": str(workspace),
         "TM_LIB": str(VALIDATE_LIB),
@@ -48,15 +79,19 @@ def terraform_env(workspace: Path, level_path: Path | None = None, tmp: Path | N
     env.pop("TF_CLI_ARGS", None)
     env.pop("TF_CLI_ARGS_plan", None)
     env.pop("TF_CLI_ARGS_apply", None)
+    env.pop("TF_PLUGIN_CACHE_DIR", None)
+    cfg = cli_config()
+    if cfg is not None:
+        env["TF_CLI_CONFIG_FILE"] = str(cfg)
     return env
 
 
 def apply_runtime_env() -> None:
-    """Make interactive terraform passthrough commands use the same cache settings."""
-    PLUGIN_CACHE.mkdir(parents=True, exist_ok=True)
-    os.environ.setdefault("TF_PLUGIN_CACHE_DIR", str(PLUGIN_CACHE))
-    os.environ.setdefault("TF_PLUGIN_CACHE_MAY_BREAK_DEPENDENCY_LOCK_FILE", "1")
+    """Make interactive terraform passthrough commands use the same provider mirror."""
     os.environ.setdefault("CHECKPOINT_DISABLE", "1")
+    cfg = cli_config()
+    if cfg is not None and "TF_CLI_CONFIG_FILE" not in os.environ:
+        os.environ["TF_CLI_CONFIG_FILE"] = str(cfg)
 
 
 def terraform_init(workspace: Path, env: dict[str, str] | None = None) -> subprocess.CompletedProcess[str]:

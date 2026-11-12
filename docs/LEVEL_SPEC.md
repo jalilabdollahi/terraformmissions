@@ -74,8 +74,10 @@ A validator must check **observable behaviour that only the intended fix produce
 
 ## Environment & constraints
 
-- Terraform ≥ 1.10 is assumed (installed: 1.17). Providers available in the warm cache — prefer these,
-  with constraints that allow the cached version:
+- Terraform ≥ 1.10 is assumed (installed: 1.17). Providers come from a local read-only mirror
+  (`.cache/provider-mirror`, wired in via `TF_CLI_CONFIG_FILE` by the runtime) — **only these versions
+  exist**, so constraints must allow one of them. Older versions for upgrade/lock-file lessons:
+  local 2.4.0 & 1.4.0, null 3.1.1, random 3.5.1 & 2.3.1, tls 3.4.0. Current versions:
   `hashicorp/local ~> 2.5` (2.9.1), `null ~> 3.2` (3.3.2), `random ~> 3.6` (3.9.1), `tls ~> 4.0` (4.4.2),
   `time ~> 0.12` (0.14.2), `archive ~> 2.4` (2.8.1), `external ~> 2.3` (2.4.2), `http ~> 3.4` (3.6.3).
   The built-in `terraform_data` resource and `terraform_remote_state` data source need no provider.

@@ -163,10 +163,11 @@ python3 -m pip install --quiet --upgrade pip
 python3 -m pip install --quiet -r "$REPO_ROOT/requirements.txt"
 echo "✅  Python venv ready"
 
-# ── Warm the provider cache (missions start fast and work offline later) ──────
+# ── Build the local provider mirror (missions start fast and work offline) ────
 echo ""
 echo "Downloading Terraform providers used by the missions (one time)..."
-mkdir -p "$REPO_ROOT/.cache/terraform-plugins"
+MIRROR="$REPO_ROOT/.cache/provider-mirror"
+mkdir -p "$MIRROR"
 WARM_DIR="$(mktemp -d)"
 cat > "$WARM_DIR/main.tf" <<'TFEOF'
 terraform {
@@ -182,10 +183,34 @@ terraform {
   }
 }
 TFEOF
-if (cd "$WARM_DIR" && TF_PLUGIN_CACHE_DIR="$REPO_ROOT/.cache/terraform-plugins" terraform init -input=false -no-color >/dev/null 2>&1); then
-  echo "✅  Provider cache ready"
+# Older versions used by the upgrade / lock-file missions.
+mkdir -p "$WARM_DIR/old" "$WARM_DIR/older"
+cat > "$WARM_DIR/old/main.tf" <<'TFEOF'
+terraform {
+  required_providers {
+    local  = { source = "hashicorp/local", version = "2.4.0" }
+    null   = { source = "hashicorp/null", version = "3.1.1" }
+    random = { source = "hashicorp/random", version = "3.5.1" }
+    tls    = { source = "hashicorp/tls", version = "3.4.0" }
+  }
+}
+TFEOF
+cat > "$WARM_DIR/older/main.tf" <<'TFEOF'
+terraform {
+  required_providers {
+    local  = { source = "hashicorp/local", version = "1.4.0" }
+    random = { source = "hashicorp/random", version = "2.3.1" }
+  }
+}
+TFEOF
+WARM_OK=1
+for d in "$WARM_DIR" "$WARM_DIR/old" "$WARM_DIR/older"; do
+  (cd "$d" && TF_CLI_CONFIG_FILE=/dev/null TF_PLUGIN_CACHE_DIR="$MIRROR" terraform init -input=false -no-color >/dev/null 2>&1) || WARM_OK=0
+done
+if [[ "$WARM_OK" == 1 ]]; then
+  echo "✅  Provider mirror ready"
 else
-  echo "⚠️  Could not pre-download providers (offline?). They will be downloaded on first use."
+  echo "⚠️  Could not download every provider (offline?). Missing ones are fetched on first use."
 fi
 rm -rf "$WARM_DIR"
 
