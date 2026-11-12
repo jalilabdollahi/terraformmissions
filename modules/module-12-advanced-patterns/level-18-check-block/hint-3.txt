@@ -1,1 +1,1 @@
-Create `check "silo_sensor" { data "local_file" "sensor" { filename = ... }  assert { condition = trimspace(data.local_file.sensor.content) == "ok"  error_message = ... } }` and delete the lifecycle block and the root-level data source.
+Create `check "clarifier_sensor" { data "local_file" "sensor" { filename = ... }  assert { condition = trimspace(data.local_file.sensor.content) == "ok"  error_message = ... } }` and delete the lifecycle block and the root-level data source.

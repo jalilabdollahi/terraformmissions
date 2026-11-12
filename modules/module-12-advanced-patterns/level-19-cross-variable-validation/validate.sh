@@ -28,6 +28,6 @@ expect_rejected "session ending before it starts" -var start_hour=18 -var end_ho
 expect_rejected "session of zero length" -var start_hour=15 -var end_hour=15
 
 tm_apply
-tm_assert_file_equals bee/plan.txt "30 guests at 5 tables of 6, 14:00-17:00"$'\n'
+tm_assert_file_equals slam/plan.txt "30 guests at 5 tables of 6, 14:00-17:00"$'\n'
 tm_assert_no_changes
 tm_pass "impossible seating and times are rejected by variable validation, valid ones pass"

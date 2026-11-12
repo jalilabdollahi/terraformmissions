@@ -1,9 +1,9 @@
-# Marrow Quay terminal: everything in one state.
+# Rustfield scrapyard: everything in one state.
 
 # --- yard identity (rarely changes, painted on trucks) ---------------------------
 resource "random_pet" "yard_name" {
   length = 2
-  prefix = "quay"
+  prefix = "scrap"
 }
 
 resource "random_integer" "gate_count" {

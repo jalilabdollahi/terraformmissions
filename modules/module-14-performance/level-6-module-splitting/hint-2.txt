@@ -1,1 +1,1 @@
-Each new module needs its own variables and outputs. The label module cannot reach into the others; the root passes `module.pour.<output>` and `module.wick.<output>` into it. Existing objects still live at `module.workshop.*` in state, and a plan that does not know that will destroy them.
+Each new module needs its own variables and outputs. The label module cannot reach into the others; the root passes `module.pour.<output>` and `module.colour.<output>` into it. Existing objects still live at `module.workshop.*` in state, and a plan that does not know that will destroy them.

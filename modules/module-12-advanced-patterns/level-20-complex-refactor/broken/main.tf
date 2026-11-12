@@ -1,29 +1,29 @@
-# Pier Pavilion seaside arcade: cabinet tokens and cards.
+# Bounce Hollow trampoline park: court wristbands and cards.
 # A big refactor landed in one commit (see NOTES.md for the three jobs). The code is
 # already in its final shape, but nothing tells Terraform how the existing objects map
 # onto it, so the plan wants to destroy and recreate almost everything.
 
-variable "cabinets" {
+variable "courts" {
   type    = list(string)
-  default = ["skee-ball", "claw", "racer"]
+  default = ["freestyle", "dodgeball", "ninja"]
 }
 
-resource "random_id" "token" {
-  for_each    = toset(var.cabinets)
+resource "random_id" "band" {
+  for_each    = toset(var.courts)
   byte_length = 3
 }
 
-resource "local_file" "cabinet_card" {
-  for_each = toset(var.cabinets)
+resource "local_file" "court_card" {
+  for_each = toset(var.courts)
   filename = "${path.module}/cards/${each.key}.txt"
-  content  = "cabinet ${each.key} token ${random_id.token[each.key].hex}\n"
+  content  = "court ${each.key} band ${random_id.band[each.key].hex}\n"
 }
 
-resource "random_integer" "jackpot" {
+resource "random_integer" "highscore" {
   min = 1000
   max = 9999
 }
 
-output "jackpot" {
-  value = random_integer.jackpot.result
+output "highscore" {
+  value = random_integer.highscore.result
 }

@@ -1,7 +1,7 @@
 # Common mistakes
 
 - **Copying the library into each component.** Three copies drift apart; call the one shared module via
-  `../../modules/signal_sheet`.
+  `../../modules/plan_sheet`.
 - **Keeping `main.tf` in the root "for convenience".** The root would still own resources in a shared
   state, defeating the split; the root must be empty.
 - **Using `path.root` for `out_dir` in the component.** When the component is the root this works, but

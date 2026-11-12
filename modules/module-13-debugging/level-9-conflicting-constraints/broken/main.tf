@@ -1,24 +1,24 @@
-# Alpenrose mountain hut - weekend booking sheet.
+# Willow Wren houseboat rental - weekend booking sheet.
 
-module "bunks" {
-  source = "./modules/bunks"
-  hut    = "alpenrose"
+module "berths" {
+  source = "./modules/berths"
+  boat   = "willow-wren"
 }
 
-module "meals" {
-  source = "./modules/meals"
-  hut    = "alpenrose"
+module "galley" {
+  source = "./modules/galley"
+  boat   = "willow-wren"
 }
 
 resource "local_file" "booking_sheet" {
-  filename = "${path.module}/hut/booking.txt"
-  content  = "Bunk room ${module.bunks.room_label} | soup batch ${module.meals.soup_batch}\n"
+  filename = "${path.module}/boat/booking.txt"
+  content  = "Cabin ${module.berths.cabin_label} | galley batch ${module.galley.supply_batch}\n"
 }
 
-output "room_label" {
-  value = module.bunks.room_label
+output "cabin_label" {
+  value = module.berths.cabin_label
 }
 
-output "soup_batch" {
-  value = module.meals.soup_batch
+output "supply_batch" {
+  value = module.galley.supply_batch
 }

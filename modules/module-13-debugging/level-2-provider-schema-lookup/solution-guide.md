@@ -1,4 +1,4 @@
-# Walkthrough - Cellar Door Schema
+# Walkthrough - Vault Door Schema
 
 1. `terraform validate` lists three `Unsupported argument` errors. Each one names the resource type but not what
    to use instead.

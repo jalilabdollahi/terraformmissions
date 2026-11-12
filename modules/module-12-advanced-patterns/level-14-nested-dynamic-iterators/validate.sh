@@ -17,10 +17,10 @@ for n in sorted(z.namelist()):
     print(n + "|" + z.read(n).decode().strip())
 PY
 )
-EXPECT=$'east/sunburst.txt|cut sheet for sunburst\nnorth/lily.txt|cut sheet for lily\nnorth/rose-window.txt|cut sheet for rose-window'
+EXPECT=$'east/satchel.txt|stitch sheet for satchel\nnorth/belt.txt|stitch sheet for belt\nnorth/wallet.txt|stitch sheet for wallet'
 [[ "$LISTING" == "$EXPECT" ]] || {
   echo "   zip contains:"; sed 's/^/   │ /' <<<"$LISTING"
-  tm_fail "the kit must hold exactly east/sunburst.txt, north/lily.txt and north/rose-window.txt"
+  tm_fail "the kit must hold exactly east/satchel.txt, north/belt.txt and north/wallet.txt"
 }
 tm_assert_no_changes
-tm_pass "the kit zip holds one correctly named entry per panel"
+tm_pass "the kit zip holds one correctly named entry per piece"

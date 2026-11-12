@@ -1,1 +1,1 @@
-Apply, then look at the marquee folder. Think about which resource Terraform deletes last, and which file path that resource owns.
+Apply, then look at the billboard folder. Think about which resource Terraform deletes last, and which file path that resource owns.

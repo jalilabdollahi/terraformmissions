@@ -1,4 +1,4 @@
-# Thimble & Thread quilting bee: seating and session times.
+# Open Mic Inkwell poetry slam: seating and session times.
 # Two rules tie variables together:
 #   - the guest count must fit the tables (guests <= tables * seats_per_table)
 #   - the session must end after it starts (end_hour > start_hour)
@@ -41,6 +41,6 @@ variable "end_hour" {
 }
 
 resource "local_file" "seating_plan" {
-  filename = "${path.module}/bee/plan.txt"
+  filename = "${path.module}/slam/plan.txt"
   content  = "${var.guests} guests at ${var.tables} tables of ${var.seats_per_table}, ${var.start_hour}:00-${var.end_hour}:00\n"
 }

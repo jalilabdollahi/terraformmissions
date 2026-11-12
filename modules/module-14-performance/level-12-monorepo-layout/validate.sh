@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 source "$TM_LIB"
 
-COMPONENTS="interlocking timetable platform-display"
+COMPONENTS="junction-controller bus-priority crossing-countdown"
 expected() {
   case "$1" in
-  interlocking) printf '%s\n' 'Signal 12 holds at danger while points 7 are reversed' 'Release only after track circuit TC-4 clears' ;;
-  timetable) printf '%s\n' '06:12 Cullen Junction to Bramley, platform 2' '06:40 Bramley to Cullen Junction, platform 1' ;;
-  platform-display) printf '%s\n' 'Platform 2: next train 06:12 to Bramley' 'Mind the gap at car 3' ;;
+  junction-controller) printf '%s\n' 'Signal 12 holds red while the tram crossing is active' 'Release only after loop detector LD-4 clears' ;;
+  bus-priority) printf '%s\n' '06:12 Route 9 to Eastgate: green extension 8s' '06:40 Route 9 to Mapleton: green extension 8s' ;;
+  crossing-countdown) printf '%s\n' 'Crossing 2: walk signal in 12 seconds' 'Mind the cyclists in the bike lane' ;;
   esac
 }
 
@@ -14,16 +14,16 @@ expected() {
 if grep -qE '^[[:space:]]*(module|resource)[[:space:]]+"' ./*.tf 2>/dev/null; then
   tm_fail "the repository root still declares modules or resources; they belong in components/*"
 fi
-[[ -d modules/signal_sheet ]] || tm_fail "the shared library modules/signal_sheet must stay"
+[[ -d modules/plan_sheet ]] || tm_fail "the shared library modules/plan_sheet must stay"
 
 for c in $COMPONENTS; do
   d="components/$c"
   [[ -d "$d" ]] || tm_fail "$d does not exist"
   ls "$d"/*.tf >/dev/null 2>&1 || tm_fail "$d contains no .tf files"
   grep -q 'required_providers' "$d"/*.tf || tm_fail "$d has no terraform.tf with required_providers; each component is a standalone root"
-  grep -qE 'source[[:space:]]*=[[:space:]]*"\.\./\.\./modules/signal_sheet"' "$d"/*.tf \
-    || tm_fail "$d must call the shared library with source = \"../../modules/signal_sheet\""
-  if grep -qE '(components/|\.\./(interlocking|timetable|platform-display))' "$d"/main.tf 2>/dev/null; then
+  grep -qE 'source[[:space:]]*=[[:space:]]*"\.\./\.\./modules/plan_sheet"' "$d"/*.tf \
+    || tm_fail "$d must call the shared library with source = \"../../modules/plan_sheet\""
+  if grep -qE '(components/|\.\./(junction-controller|bus-priority|crossing-countdown))' "$d"/main.tf 2>/dev/null; then
     tm_fail "$d refers to another component; components must be independent"
   fi
 done
@@ -62,4 +62,4 @@ for c in $COMPONENTS; do
 done
 
 tm_init
-tm_pass "three standalone components, each with its own state, built from modules/signal_sheet"
+tm_pass "three standalone components, each with its own state, built from modules/plan_sheet"

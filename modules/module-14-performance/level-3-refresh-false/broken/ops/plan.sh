@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Planning wrapper for the freezer config.
+# Planning wrapper for the chiller config.
 #   ops/plan.sh quick   fast loop while editing code on a laptop
 #   ops/plan.sh audit   nightly drift check run by the monitoring cron
 cd "$(dirname "$0")/.." || exit 1

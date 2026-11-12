@@ -1,4 +1,4 @@
-# Walkthrough: Cuckoo Ticket Closing Line
+# Walkthrough: Piano Ticket Closing Line
 
 1. **Validate.**
    ```
@@ -13,6 +13,6 @@
    resource itself: that is why the ticket lives in `input`.
 4. **Fix.**
    ```hcl
-   command = "mkdir -p repairs && echo 'closed ${self.input.ticket}' >> repairs/bench.log"
+   command = "mkdir -p visits && echo 'closed ${self.input.ticket}' >> visits/diary.log"
    ```
-5. Apply, then `terraform apply -replace=terraform_data.repair_ticket` to watch the log gain a `closed` line. Type `check`.
+5. Apply, then `terraform apply -replace=terraform_data.tuning_ticket` to watch the log gain a `closed` line. Type `check`.

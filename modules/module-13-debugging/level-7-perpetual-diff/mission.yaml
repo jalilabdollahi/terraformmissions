@@ -1,12 +1,12 @@
-name: Atlas Index Churn
+name: Volume Index Churn
 description: >-
-  The cartographers' guild publishes an atlas index file from Terraform. Every plan - even straight
+  Lumen Press publishes an encyclopedia volume index file from Terraform. Every plan - even straight
   after an apply, with nobody touching anything - wants to rewrite it, and the CI job that expects
   "No changes" has been red for a week.
 objective: >-
   Find out why plans never settle and fix every source of the churn: after one apply, repeated plans
-  must show no changes. atlas/index.md must keep its "Generated:" line as an RFC 3339 timestamp stamped
-  once at creation, and list the sheets alphabetically. Do not paper over it with ignore_changes.
+  must show no changes. volume/index.md must keep its "Generated:" line as an RFC 3339 timestamp stamped
+  once at creation, and list the entries alphabetically. Do not paper over it with ignore_changes.
 xp: 275
 difficulty: advanced
 expected_time: 15m

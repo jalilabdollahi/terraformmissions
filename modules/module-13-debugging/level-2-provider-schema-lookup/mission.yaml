@@ -1,12 +1,12 @@
-name: Cellar Door Schema
+name: Vault Door Schema
 description: >-
-  The Marsh Hollow wine cellar issues a new door code and schedules its next insurance audit from
+  The Garnet & Gold jeweller's issues a new door code and schedules its next insurance audit from
   a small Terraform config. Someone wrote the arguments from memory and now every resource block is
   rejected with "Unsupported argument" - and the docs site is down for maintenance.
 objective: >-
   Use the provider schemas that Terraform already has on disk (terraform providers schema -json) to
   find the real argument names, then make apply succeed: an 18 character code without special characters
-  in cellar/door-code.txt with file mode 0600, and an audit_due output exactly 30 days after 2026-03-01T00:00:00Z.
+  in vault/door-code.txt with file mode 0600, and an audit_due output exactly 30 days after 2026-03-01T00:00:00Z.
 xp: 225
 difficulty: advanced
 expected_time: 12m

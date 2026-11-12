@@ -1,4 +1,4 @@
-# Walkthrough - Beacon Check Trace
+# Walkthrough - Sled Check Trace
 
 1. **Reproduce with a trace.**
    ```bash
@@ -11,11 +11,11 @@
 3. **Find the plugin version.** `grep "starting plugin" tf.log` prints the plugin path
    `.terraform/providers/registry.terraform.io/hashicorp/local/<version>/...`. The same version is in
    `.terraform.lock.hcl`.
-4. **Fix the cause.** The probe filename uses `local_file.beacon_index.filename`, a *file*, as if it were a directory.
-   Replace it with `dirname(local_file.beacon_index.filename)`.
+4. **Fix the cause.** The probe filename uses `local_file.sled_index.filename`, a *file*, as if it were a directory.
+   Replace it with `dirname(local_file.sled_index.filename)`.
 5. **Write the answer** to `answers/trace.txt`:
    ```
-   failed_resource=local_file.beacon_probe
+   failed_resource=local_file.sled_probe
    failed_rpc=ApplyResourceChange
    provider_version=<the version you found>
    ```

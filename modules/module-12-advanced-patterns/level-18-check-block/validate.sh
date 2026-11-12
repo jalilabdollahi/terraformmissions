@@ -2,7 +2,7 @@
 source "$TM_LIB"
 
 # status.txt belongs to another system: it stays degraded
-tm_assert_file_contains silo/status.txt "degraded" "silo/status.txt is written by the sensor system and must not be edited"
+tm_assert_file_contains clarifier/status.txt "degraded" "clarifier/status.txt is written by the sensor system and must not be edited"
 
 SHAPE=$(python3 - <<'PY'
 import glob, re
@@ -23,7 +23,7 @@ grep -q blocking <<<"$L2" && tm_fail "no precondition or postcondition may remai
 
 tm_validate "the configuration does not validate"
 tm_apply
-tm_assert_file_equals reports/silo-4-shift.txt "silo 4 shift report: intake logged"$'\n'
+tm_assert_file_equals reports/clarifier-4-shift.txt "clarifier 4 shift report: intake logged"$'\n'
 
 # the degraded sensor must still be reported, as a warning
 tm_plan_json

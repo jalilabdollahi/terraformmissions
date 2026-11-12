@@ -1,8 +1,8 @@
-# Walkthrough - Frostbite Till Flash
+# Walkthrough - Sprayer Flash Recovery
 
-1. `terraform plan` shows `terraform_data.till_firmware is tainted, so must be replaced`. That tells you *what* Terraform
+1. `terraform plan` shows `terraform_data.sprayer_firmware is tainted, so must be replaced`. That tells you *what* Terraform
    will do, not why the last attempt failed.
-2. `terraform state show terraform_data.till_firmware` confirms the `tainted` flag.
+2. `terraform state show terraform_data.sprayer_firmware` confirms the `tainted` flag.
 3. Run `terraform apply` once and read the provisioner output. It prints
    `flash: image file not found: ./image/firmware-4.2.1.bin` and then `exit status 3`.
 4. `ls` shows the folder is `images/`. Correct `IMAGE_DIR` in `main.tf`.

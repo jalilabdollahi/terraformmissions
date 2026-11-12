@@ -1,1 +1,1 @@
-`quick` and `audit` are the same command, and both carry `-refresh=false`. With refresh disabled Terraform never looks at freezer/ice-core-b.txt, so it still believes the file exists. Only the audit needs to read reality.
+`quick` and `audit` are the same command, and both carry `-refresh=false`. With refresh disabled Terraform never looks at chiller/yoghurt-b.txt, so it still believes the file exists. Only the audit needs to read reality.

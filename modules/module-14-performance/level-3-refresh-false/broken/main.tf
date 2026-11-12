@@ -1,21 +1,21 @@
-# Halvorsen Lab freezer setpoints, one file per unit.
+# Greenfield Market chilled-aisle setpoints, one file per unit.
 
-variable "freezers" {
+variable "chillers" {
   type = map(number)
   default = {
-    "ice-core-a" = -80
-    "ice-core-b" = -80
-    "plasma-c"   = -40
-    "reagent-d"  = -20
+    "yoghurt-a" = 2
+    "yoghurt-b" = 2
+    "salad-c"   = 4
+    "deli-d"    = 5
   }
 }
 
-resource "local_file" "freezer" {
-  for_each = var.freezers
-  filename = "${path.module}/freezer/${each.key}.txt"
+resource "local_file" "chiller" {
+  for_each = var.chillers
+  filename = "${path.module}/chiller/${each.key}.txt"
   content  = "${each.key} setpoint ${each.value}C\n"
 }
 
-output "freezer_count" {
-  value = length(local_file.freezer)
+output "chiller_count" {
+  value = length(local_file.chiller)
 }

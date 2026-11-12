@@ -1,4 +1,4 @@
-# Deepvein salt mine - shaft inspection report.
+# Brightstone diamond mine - shaft inspection report.
 
 data "external" "shaft_scan" {
   program = ["python3", "${path.module}/scripts/probe.py"]

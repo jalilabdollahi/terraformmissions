@@ -1,12 +1,12 @@
-name: Net Control Cycle
+name: Patrol Roster Cycle
 description: >-
-  The Brookfield amateur radio club publishes a roster and a schedule for its Tuesday net from Terraform.
-  The roster quotes the schedule's checksum so operators can tell they have matching sheets, and the
-  schedule points operators to the roster file. After the last edit, plan stops with an "Error: Cycle".
+  The Elmwood Neighbourhood Watch publishes a roster and a schedule for its Tuesday patrol from Terraform.
+  The roster quotes the schedule's checksum so walkers can tell they have matching sheets, and the
+  schedule points walkers to the roster file. After the last edit, plan stops with an "Error: Cycle".
 objective: >-
-  Break the dependency cycle without deleting either file and without depends_on: net/roster.txt must
-  contain the line "schedule checksum: " followed by the real SHA-256 of net/schedule.txt (computed
-  by Terraform, not typed), and net/schedule.txt must still mention the roster file path net/roster.txt.
+  Break the dependency cycle without deleting either file and without depends_on: patrol/roster.txt must
+  contain the line "schedule checksum: " followed by the real SHA-256 of patrol/schedule.txt (computed
+  by Terraform, not typed), and patrol/schedule.txt must still mention the roster file path patrol/roster.txt.
 xp: 275
 difficulty: advanced
 expected_time: 12m

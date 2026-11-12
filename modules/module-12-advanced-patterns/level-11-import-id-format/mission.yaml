@@ -1,12 +1,12 @@
-name: Three Kinds Of IDs
+name: Tagged, Stamped And Staked
 description: >-
-  The Cooper's Ridge pigeon loft keeps a paper register of a ring number, a release timestamp and a
-  loft code, and wants them adopted into Terraform. All three import blocks use the register values,
+  The Cooper's Ridge sea turtle hatchery keeps a paper register of a flipper tag number, a release timestamp and a
+  nest code, and wants them adopted into Terraform. All three import blocks use the register values,
   but each provider expects its own import ID format, so the plan fails or wants to replace what it
   imported.
 objective: >-
-  Correct the three import IDs so ring 212, release time 2025-04-12T06:30:00Z and loft code Yd4Pxg are
-  adopted exactly, nothing is destroyed or replaced, and loft/certificate.txt shows the register
+  Correct the three import IDs so tag 212, release time 2025-04-12T06:30:00Z and nest code Yd4Pxg are
+  adopted exactly, nothing is destroyed or replaced, and hatchery/certificate.txt shows the register
   values. Keep each import pointed at the same resource.
 xp: 260
 difficulty: advanced

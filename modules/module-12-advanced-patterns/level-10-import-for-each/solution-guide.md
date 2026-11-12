@@ -1,4 +1,4 @@
-# Walkthrough: Four Paper Tickets
+# Walkthrough: Four Shaping Tickets
 
 1. **Plan.** `Plan: 1 to import, 3 to add, 0 to change, 0 to destroy.` Three tickets get new random numbers.
 2. **Look at the map.** Every value, such as `"7316,1000,9999"`, is already a complete import ID for

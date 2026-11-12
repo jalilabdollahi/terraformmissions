@@ -1,4 +1,4 @@
-# Walkthrough: Retiring The Null Ledger
+# Walkthrough: Trebuchet Ledger Goes Built-In
 
 1. **Validate.**
    ```

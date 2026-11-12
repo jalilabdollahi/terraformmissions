@@ -1,18 +1,18 @@
-variable "fair_name" {
+variable "con_name" {
   type    = "string"
-  default = "Ashby County Fair"
+  default = "Nova City Comic Con"
 }
 
 variable "stalls" {
   type    = "list"
-  default = ["pies", "jam", "honey"]
+  default = ["posters", "cards", "figures"]
 }
 
 variable "prices" {
   type = "map"
   default = {
-    pies  = 4
-    jam   = 3
-    honey = 6
+    posters = 4
+    cards   = 3
+    figures = 6
   }
 }

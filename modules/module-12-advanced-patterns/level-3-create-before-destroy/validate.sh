@@ -8,23 +8,23 @@ tm_assert_config_has 'create_before_destroy[[:space:]]*=[[:space:]]*true' "the s
 
 # The plan must replace the board, new one first.
 tm_plan_json
-ORDER=$(jq -c '.resource_changes[] | select(.address=="local_file.marquee") | .change.actions' "$TM_TMP/plan.json")
+ORDER=$(jq -c '.resource_changes[] | select(.address=="local_file.billboard") | .change.actions' "$TM_TMP/plan.json")
 # (on a repeated check the board is already replaced, so the plan is a no-op)
-if [[ "$ORDER" == '["no-op"]' && "$(tm_state_attr local_file.marquee id)" != "$OLD" ]]; then ORDER='["create","delete"]'; fi
-[[ "$ORDER" == '["create","delete"]' ]] || tm_fail "expected local_file.marquee to be replaced create-then-delete, plan says: $ORDER"
+if [[ "$ORDER" == '["no-op"]' && "$(tm_state_attr local_file.billboard id)" != "$OLD" ]]; then ORDER='["create","delete"]'; fi
+[[ "$ORDER" == '["create","delete"]' ]] || tm_fail "expected local_file.billboard to be replaced create-then-delete, plan says: $ORDER"
 
 tm_apply
 
-FN=$(tm_state_attr local_file.marquee filename)
-[[ -n "$FN" ]] || tm_fail "local_file.marquee is not in state"
-[[ -f "$FN" ]] || tm_fail "the marquee file '$FN' is missing after the replacement — the old board's deletion removed it"
-tm_assert_file_equals "$FN" "NOW SHOWING: Return of the Giant Ant"$'\n'
+FN=$(tm_state_attr local_file.billboard filename)
+[[ -n "$FN" ]] || tm_fail "local_file.billboard is not in state"
+[[ -f "$FN" ]] || tm_fail "the billboard file '$FN' is missing after the replacement — the old board's deletion removed it"
+tm_assert_file_equals "$FN" "ON THE BOARD: Sunrise Cereal Summer Sale"$'\n'
 
-NOW=$(tm_state_attr local_file.marquee id)
-[[ "$NOW" != "$OLD" ]] || tm_fail "the marquee board was not replaced"
+NOW=$(tm_state_attr local_file.billboard id)
+[[ "$NOW" != "$OLD" ]] || tm_fail "the billboard board was not replaced"
 
 # nothing stale may be left on disk
-STALE=$(grep -rl 'Night of the Comet' marquee 2>/dev/null)
+STALE=$(grep -rl 'Harvest Bank Mortgage Month' billboard 2>/dev/null)
 [[ -z "$STALE" ]] || tm_fail "last week's board is still on disk: $STALE"
 
 tm_assert_no_changes

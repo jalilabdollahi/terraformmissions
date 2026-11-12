@@ -2,10 +2,10 @@ variable "batch_code" {
   type = string
 }
 
-variable "wick_cm" {
+variable "pigment_pct" {
   type = number
 }
 
-variable "scent" {
+variable "shade" {
   type = string
 }

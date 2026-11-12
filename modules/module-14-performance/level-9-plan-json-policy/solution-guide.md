@@ -1,4 +1,4 @@
-# Walkthrough — Bonded Warehouse Gate
+# Walkthrough — Whisky Bond Gate
 
 1. **Make test plans.** `terraform show -json plan.tfplan > plan.json`. Copy it to `bad-*.json` and edit
    `change.actions` / `change.after.file_permission` by hand to try each rule.

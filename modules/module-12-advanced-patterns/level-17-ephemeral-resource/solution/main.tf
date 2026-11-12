@@ -1,24 +1,24 @@
-# Frostbite ice cream trucks: payment terminal 07 needs a certificate signing request.
-# The terminal's private key must exist only for the duration of the run: it is generated
+# ZipWheel e-scooter rental: scooter 07 needs a certificate signing request.
+# The scooter's private key must exist only for the duration of the run: it is generated
 # as an ephemeral resource, used to sign the request and never written to the state file.
-# The request itself (public data) is saved to pki/terminal-07.csr.
+# The request itself (public data) is saved to pki/scooter-07.csr.
 
-ephemeral "tls_private_key" "terminal" {
+ephemeral "tls_private_key" "scooter" {
   algorithm   = "ECDSA"
   ecdsa_curve = "P256"
 }
 
-resource "tls_cert_request" "terminal" {
-  private_key_pem_wo         = ephemeral.tls_private_key.terminal.private_key_pem
+resource "tls_cert_request" "scooter" {
+  private_key_pem_wo         = ephemeral.tls_private_key.scooter.private_key_pem
   private_key_pem_wo_version = 1
 
   subject {
-    common_name  = "terminal-07.frostbite.example"
-    organization = "Frostbite Ice Cream Trucks"
+    common_name  = "scooter-07.zipwheel.example"
+    organization = "ZipWheel E-Scooter Rental"
   }
 }
 
 resource "local_file" "csr" {
-  filename = "${path.module}/pki/terminal-07.csr"
-  content  = tls_cert_request.terminal.cert_request_pem
+  filename = "${path.module}/pki/scooter-07.csr"
+  content  = tls_cert_request.scooter.cert_request_pem
 }

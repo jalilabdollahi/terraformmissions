@@ -1,1 +1,1 @@
-Run `terraform plan`, then look in `lanes/` and `receipts/`. The plan says something about forgetting an object; is that what the closure needs?
+Run `terraform plan`, then look in `targets/` and `receipts/`. The plan says something about forgetting an object; is that what the closure needs?

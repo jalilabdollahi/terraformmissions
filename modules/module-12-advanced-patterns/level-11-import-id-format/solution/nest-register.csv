@@ -1,0 +1,4 @@
+field,value,note
+tag_number,212,"stamped on the flipper tag; the generator range was 100 to 999"
+release_time,2025-04-12T06:30:00Z,"first hatchling release, UTC"
+nest_code,Yd4Pxg,"painted on the nest marker stake; it is the URL-safe base64 form"

@@ -14,5 +14,5 @@ The usual suspects are:
 - **Provider normalisation** (the API returns a different spelling than you wrote), the realm of `lifecycle.ignore_changes`.
 
 The tempting fix, `ignore_changes = [content]`, suppresses the symptom and also all *legitimate* updates, so the file would never
-change again when the sheets do. Find the unstable input and remove it. When you cannot control a provider's normalisation,
+change again when the entries do. Find the unstable input and remove it. When you cannot control a provider's normalisation,
 `ignore_changes` is acceptable, but only for that one attribute and with a comment explaining why.

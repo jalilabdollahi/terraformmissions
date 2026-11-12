@@ -1,20 +1,20 @@
-# Harrow Farm grain co-op: shift report for silo 4.
-# The temperature sensor's status lives in silo/status.txt (written by another system).
-# The farm wants to be NOTIFIED when the sensor is not "ok", but the shift report must
+# Millbrook Water Treatment Plant: shift report for clarifier 4.
+# The turbidity sensor's status lives in clarifier/status.txt (written by another system).
+# The plant wants to be NOTIFIED when the sensor is not "ok", but the shift report must
 # be written every shift regardless. Right now a degraded sensor blocks the whole apply.
 
-check "silo_sensor" {
+check "clarifier_sensor" {
   data "local_file" "sensor" {
-    filename = "${path.module}/silo/status.txt"
+    filename = "${path.module}/clarifier/status.txt"
   }
 
   assert {
     condition     = trimspace(data.local_file.sensor.content) == "ok"
-    error_message = "Silo 4 temperature sensor is not reporting ok."
+    error_message = "Clarifier 4 turbidity sensor is not reporting ok."
   }
 }
 
 resource "local_file" "shift_report" {
-  filename = "${path.module}/reports/silo-4-shift.txt"
-  content  = "silo 4 shift report: intake logged\n"
+  filename = "${path.module}/reports/clarifier-4-shift.txt"
+  content  = "clarifier 4 shift report: intake logged\n"
 }

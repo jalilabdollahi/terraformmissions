@@ -74,7 +74,7 @@ bash policy/check.sh >/dev/null 2>&1; code=$?
 tm_init
 tm_plan_json
 creates=$(jq '[.resource_changes[]? | select(.change.actions == ["create"])] | length' "$TM_TMP/plan.json")
-[[ "$creates" -ge 4 ]] || tm_fail "the workspace plan creates $creates manifests; the four bonded lots must be planned"
+[[ "$creates" -ge 4 ]] || tm_fail "the workspace plan creates $creates manifests; the four bonded casks must be planned"
 bash policy/check.sh "$TM_TMP/plan.json" >"$TM_TMP/real.out" 2>&1; code=$?
 if [[ "$code" != "0" ]]; then
   sed 's/^/   │ /' "$TM_TMP/real.out"

@@ -1,11 +1,11 @@
 name: Key That Never Lands
 description: >-
-  Frostbite Ice Cream Trucks wants terminal 07's private key to exist only during the run. The key is
+  ZipWheel E-Scooter Rental wants scooter 07's private key to exist only during the run. The key is
   an ephemeral resource, but handing it to the certificate request makes Terraform refuse with
   'Invalid use of ephemeral value'.
 objective: >-
   Keep the ephemeral tls_private_key and sign the request with it through the argument that is allowed
-  to take ephemeral values. The CSR must be saved to pki/terminal-07.csr, no private key may appear in
+  to take ephemeral values. The CSR must be saved to pki/scooter-07.csr, no private key may appear in
   the state, and the plan must be clean afterwards.
 xp: 300
 difficulty: advanced

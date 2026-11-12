@@ -13,7 +13,7 @@ tm_assert_no_changes
 OWNERS=$(terraform show -json | jq '[.values.root_module.resources[]? | select(.type == "local_file") | select(.values.filename | test("board/notices.md$"))] | length')
 [[ "$OWNERS" == "1" ]] || tm_fail "$OWNERS resources manage board/notices.md - exactly one resource must own it"
 
-EXPECTED=$'# Quilting Bee notices\nMeets Thursdays at 7 in the church hall.\n\n## Events\n- 14 Nov: charity quilt raffle\n- 28 Nov: batting swap\n'
+EXPECTED=$'# Community Centre notices\nOpen weekdays 9 to 5 in the main hall.\n\n## Events\n- 14 Nov: winter coat drive\n- 28 Nov: toy swap\n'
 tm_assert_file_equals board/notices.md "$EXPECTED" "board/notices.md must hold the intro, a blank line, then the events list"
 tm_assert_output board_path "./board/notices.md"
 tm_pass "one resource owns the noticeboard and plans are stable"

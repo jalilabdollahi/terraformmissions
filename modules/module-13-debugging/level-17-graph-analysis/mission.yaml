@@ -1,8 +1,8 @@
-name: Bottling Line Graph
+name: Olive Oil Bottling Graph
 description: >-
-  The Tidewater Brewery's bottling paperwork is generated from seven linked resources, and the dispatch
+  The Sunridge Olive Oil Mill's bottling paperwork is generated from seven linked resources, and the dispatch
   step sometimes fails on a fresh checkout with "bottling/manifest.txt is missing" - and works when
-  you just run the apply again. The plant manager also asks two questions about the setup: which resource
+  you just run the apply again. The mill manager also asks two questions about the setup: which resource
   has the most others hanging off it, and how long the longest chain of "must exist before" is.
 objective: >-
   Use terraform graph to read the dependency edges. Write answers/graph.txt with two lines, hub=<address

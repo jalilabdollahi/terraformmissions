@@ -1,11 +1,11 @@
-# Frostbite ice-cream vans - till controller firmware rollout.
+# Critter Clear pest control vans - sprayer controller firmware rollout.
 
 variable "firmware_version" {
   type    = string
   default = "4.2.1"
 }
 
-resource "terraform_data" "till_firmware" {
+resource "terraform_data" "sprayer_firmware" {
   input = var.firmware_version
 
   provisioner "local-exec" {
@@ -20,5 +20,5 @@ resource "terraform_data" "till_firmware" {
 }
 
 output "firmware_target" {
-  value = terraform_data.till_firmware.output
+  value = terraform_data.sprayer_firmware.output
 }

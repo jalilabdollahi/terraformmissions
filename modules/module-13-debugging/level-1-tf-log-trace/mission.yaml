@@ -1,8 +1,8 @@
-name: Beacon Check Trace
+name: Sled Check Trace
 description: >-
-  The Col du Lac avalanche patrol writes its beacon test sheets with Terraform. Last night's apply
-  died halfway through, the on-call engineer pasted a vague error into the channel, and the avalanche
-  forecast bulletin is now waiting. Support also wants the exact plugin version from the trace for
+  Frostline Snowmobile Tours writes its sled check sheets with Terraform. Last night's apply
+  died halfway through, the on-call engineer pasted a vague error into the channel, and the morning
+  departure briefing is now waiting. Support also wants the exact plugin version from the trace for
   their ticket.
 objective: >-
   Capture a trace with TF_LOG and TF_LOG_PATH, find which resource failed and during which provider

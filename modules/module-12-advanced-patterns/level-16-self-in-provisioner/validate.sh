@@ -13,18 +13,18 @@ PY
 )
 [[ -n "$DESTROY_CMD" ]] || tm_fail "keep the destroy-time provisioner that writes the 'closed' line"
 grep -q 'self\.' <<<"$DESTROY_CMD" || tm_fail "the destroy-time provisioner has to read the ticket through self"
-grep -q 'terraform_data\.repair_ticket\|var\.' <<<"$DESTROY_CMD" && tm_fail "a destroy-time provisioner may only use self (not the resource's name or variables)"
+grep -q 'terraform_data\.tuning_ticket\|var\.' <<<"$DESTROY_CMD" && tm_fail "a destroy-time provisioner may only use self (not the resource's name or variables)"
 
 tm_validate "the configuration does not validate"
 tm_apply
 
-grep -qF 'opened CC-2041 (Black Forest wall cuckoo)' repairs/bench.log 2>/dev/null || tm_fail "repairs/bench.log has no 'opened' line for CC-2041"
+grep -qF 'opened PT-2041 (Steinbeck upright piano)' visits/diary.log 2>/dev/null || tm_fail "visits/diary.log has no 'opened' line for PT-2041"
 
 # Replace the ticket: that destroys the old record, so its destroy-time provisioner must log the closing.
-BEFORE=$(grep -cF 'closed CC-2041' repairs/bench.log 2>/dev/null)
-tm_apply -replace=terraform_data.repair_ticket
-AFTER=$(grep -cF 'closed CC-2041' repairs/bench.log 2>/dev/null)
-[[ "$AFTER" -gt "$BEFORE" ]] || tm_fail "replacing the ticket did not log 'closed CC-2041': the destroy-time provisioner is not working"
+BEFORE=$(grep -cF 'closed PT-2041' visits/diary.log 2>/dev/null)
+tm_apply -replace=terraform_data.tuning_ticket
+AFTER=$(grep -cF 'closed PT-2041' visits/diary.log 2>/dev/null)
+[[ "$AFTER" -gt "$BEFORE" ]] || tm_fail "replacing the ticket did not log 'closed PT-2041': the destroy-time provisioner is not working"
 
 tm_assert_no_changes
 tm_pass "the destroy-time provisioner reads the ticket through self and logged the closing"

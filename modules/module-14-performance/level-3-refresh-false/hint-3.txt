@@ -1,1 +1,1 @@
-Keep `-refresh=false` in the `quick` branch. In the `audit` branch remove it, so plan refreshes before comparing and exits 2 listing `local_file.freezer["ice-core-b"]` as to be created. Do not run apply; the audit only reports.
+Keep `-refresh=false` in the `quick` branch. In the `audit` branch remove it, so plan refreshes before comparing and exits 2 listing `local_file.chiller["yoghurt-b"]` as to be created. Do not run apply; the audit only reports.

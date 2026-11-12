@@ -1,4 +1,4 @@
-# Ember & Ash hot-sauce lab - blind tasting cards.
+# Golden Crunch crisp factory - blind tasting cards.
 
 variable "panel_size" {
   description = "How many flavours go on this week's tasting panel."
@@ -7,7 +7,7 @@ variable "panel_size" {
 }
 
 resource "random_shuffle" "panel" {
-  input        = ["habanero", "ghost pepper", "chipotle", "smoked paprika", "scotch bonnet"]
+  input        = ["salt and vinegar", "cheese and onion", "smoky bacon", "prawn cocktail", "roast chicken"]
   result_count = var.panel_size
 }
 

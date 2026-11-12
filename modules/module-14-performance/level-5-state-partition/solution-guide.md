@@ -1,4 +1,4 @@
-# Walkthrough — Container Yard Split
+# Walkthrough — Scrapyard Identity Split
 
 1. **Create core/** with its own `terraform.tf` (random provider) and `main.tf` holding
    `random_pet.yard_name`, `random_integer.gate_count` and outputs `yard_name`, `gate_count`.

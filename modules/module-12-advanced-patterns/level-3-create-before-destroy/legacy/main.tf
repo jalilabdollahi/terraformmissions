@@ -1,25 +1,25 @@
-# Moonlight Drive-In: the marquee board file.
-# The projectionist wants zero gap on the sign, so the replacement is written first and the
-# old board is removed afterwards (create_before_destroy). Tonight's feature just changed.
+# Roadside Billboard Co.: the highway board file.
+# The sign crew wants zero gap on the billboard, so the replacement is written first and the
+# old board is removed afterwards (create_before_destroy). This week's advert just changed.
 
-variable "film" {
+variable "campaign" {
   type    = string
-  default = "Night of the Comet"
+  default = "Harvest Bank Mortgage Month"
 }
 
 locals {
-  slug = lower(replace(var.film, " ", "-"))
+  slug = lower(replace(var.campaign, " ", "-"))
 }
 
-resource "local_file" "marquee" {
-  filename = "${path.module}/marquee/now-showing.txt"
-  content  = "NOW SHOWING: ${var.film}\n"
+resource "local_file" "billboard" {
+  filename = "${path.module}/billboard/current-ad.txt"
+  content  = "ON THE BOARD: ${var.campaign}\n"
 
   lifecycle {
     create_before_destroy = true
   }
 }
 
-output "marquee_file" {
-  value = local_file.marquee.filename
+output "billboard_file" {
+  value = local_file.billboard.filename
 }

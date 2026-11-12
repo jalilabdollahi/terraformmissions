@@ -1,4 +1,4 @@
-# Walkthrough: Ladder Export Guards
+# Walkthrough: Squash Ladder Guards
 
 1. **Validate.** `Error: Invalid reference in precondition ... Configuration for data.local_file.ladder
    may not refer to itself.`

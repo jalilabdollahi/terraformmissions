@@ -1,11 +1,11 @@
-name: Rain Gauge Reconcile
+name: Geyser Feed Reconcile
 description: >-
-  Gauge 07 on the Pellam Moor weather network reports into feeds/gauge-07.json, and the dashboard
-  reads the rainfall straight from Terraform's outputs. The feed has moved on since the last
+  Geyser 07 in the Whistling Basin Geyser Park reports into feeds/geyser-07.json, and the dashboard
+  reads the eruption height straight from Terraform's outputs. The feed has moved on since the last
   apply, so the dashboard is stale. Meanwhile a colleague has left an unreviewed edit to the
-  station banner in variables.tf, which a normal apply would push live.
+  park banner in variables.tf, which a normal apply would push live.
 objective: >-
-  Make Terraform's recorded output latest_rainfall_mm match the current feed, without applying
+  Make Terraform's recorded output latest_height_m match the current feed, without applying
   the banner edit: banner.txt must keep its old text, the variables.tf edit must stay in place,
   and "terraform plan -refresh-only" must report nothing left to accept.
 xp: 321

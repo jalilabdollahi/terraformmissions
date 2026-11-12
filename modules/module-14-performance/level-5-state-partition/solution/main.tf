@@ -1,4 +1,4 @@
-# Marrow Quay terminal: shift planning. The yard identity now lives in core/.
+# Rustfield scrapyard: shift planning. The yard identity now lives in core/.
 
 data "terraform_remote_state" "core" {
   backend = "local"

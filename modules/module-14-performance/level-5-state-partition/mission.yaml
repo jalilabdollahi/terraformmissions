@@ -1,7 +1,7 @@
-name: Container Yard Split
+name: Scrapyard Identity Split
 description: >-
-  The Marrow Quay container terminal has one Terraform state for everything: the yard identity
-  (a random name and the gate count, both painted on trucks and printed on customs forms) and the
+  The Rustfield scrapyard has one Terraform state for everything: the yard identity
+  (a random name and the gate count, both painted on trucks and printed on waste-licence forms) and the
   crane roster that the shift planners change daily. Every roster tweak makes the platform team wait
   on a plan that also refreshes the yard identity. Time to partition: the identity moves to its own
   configuration under core/, and the roster configuration reads it from there.

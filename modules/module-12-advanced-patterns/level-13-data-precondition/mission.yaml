@@ -1,6 +1,6 @@
-name: Ladder Export Guards
+name: Squash Ladder Guards
 description: >-
-  The Rookery Chess Club reads its monthly ladder from a CSV export. The guard that should stop a bad
+  The Baseline Squash Club reads its monthly court ladder from a CSV export. The guard that should stop a bad
   export was written as a single precondition that reads the data source's own content, and Terraform
   refuses to load the configuration.
 objective: >-

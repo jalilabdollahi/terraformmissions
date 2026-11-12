@@ -1,12 +1,12 @@
-name: Four Paper Tickets
+name: Four Shaping Tickets
 description: >-
-  The Spoke & Sprocket bike shop is retiring its old ticket software. Four job tickets are already in
-  customers' hands, but only the frame job was written as an import. The plan shows the other three
+  Saltwater Shapers surfboard workshop is retiring its old ticket software. Four paper job tickets are already
+  pinned to blanks on the racks, but only the longboard job was written as an import. The plan shows the other three
   being created with brand-new numbers.
 objective: >-
-  Adopt all four tickets (frame 4021, wheels 7316, brakes 2288, chain 5907) with a single import block
-  that loops over var.legacy_tickets. Nothing is created, the mechanic keeps their codename, and
-  shop/board.txt lists the original numbers in alphabetical order.
+  Adopt all four tickets (longboard 4021, shortboard 7316, fish 2288, gun 5907) with a single import block
+  that loops over var.legacy_tickets. Nothing is created, the shaper keeps their codename, and
+  shop/queue.txt lists the original numbers in alphabetical order.
 xp: 275
 difficulty: advanced
 expected_time: 15m

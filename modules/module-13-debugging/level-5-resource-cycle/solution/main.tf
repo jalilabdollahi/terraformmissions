@@ -1,32 +1,32 @@
-# Weekly 2-metre net for the Brookfield amateur radio club.
+# Weekly evening patrol for the Elmwood Neighbourhood Watch.
 
 locals {
-  net_name    = "Brookfield Tuesday Net"
-  roster_path = "${path.module}/net/roster.txt"
+  patrol_name    = "Elmwood Tuesday Patrol"
+  roster_path = "${path.module}/patrol/roster.txt"
 }
 
 # The roster must prove it belongs to the current schedule by quoting the schedule's checksum.
-resource "local_file" "net_roster" {
+resource "local_file" "patrol_roster" {
   filename = local.roster_path
   content  = <<-EOT
-    ${local.net_name} - roster
-    schedule checksum: ${local_file.net_schedule.content_sha256}
-    net control: K9BRK
-    check-ins: W9ABC, N9XYZ, KD9QRS
+    ${local.patrol_name} - roster
+    schedule checksum: ${local_file.patrol_schedule.content_sha256}
+    patrol lead: Mrs Okafor
+    walkers: Ana, Ben, Chidi
   EOT
 }
 
-# The schedule tells operators where to find the roster.
-resource "local_file" "net_schedule" {
-  filename = "${path.module}/net/schedule.txt"
+# The schedule tells walkers where to find the roster.
+resource "local_file" "patrol_schedule" {
+  filename = "${path.module}/patrol/schedule.txt"
   content  = <<-EOT
-    ${local.net_name} - schedule
+    ${local.patrol_name} - schedule
     roster file: ${local.roster_path}
-    20:00 net control calls the net on 145.230 MHz
-    20:30 open floor
+    20:00 patrol lead briefs the walkers at the Elm Street gate
+    20:30 patrol sets out
   EOT
 }
 
 output "roster_checksum_line" {
-  value = element(split("\n", local_file.net_roster.content), 1)
+  value = element(split("\n", local_file.patrol_roster.content), 1)
 }

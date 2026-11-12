@@ -1,4 +1,4 @@
-# Rookery Chess Club: the monthly ladder is read from a CSV export.
+# Baseline Squash Club: the monthly court ladder is read from a CSV export.
 # Two guards were meant to protect the read:
 #   - before reading: the file must exist and must be a .csv
 #   - after reading: its first line must be the header "rank,player,rating"

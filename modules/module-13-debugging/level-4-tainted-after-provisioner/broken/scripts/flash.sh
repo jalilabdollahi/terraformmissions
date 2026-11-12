@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Flashes a firmware image onto a van's ticket-till controller (simulated).
+# Flashes a firmware image onto a van's sprayer controller (simulated).
 # Needs: VAN_ID, FIRMWARE, IMAGE_DIR
 image="$IMAGE_DIR/firmware-$FIRMWARE.bin"
 echo "flash: van=$VAN_ID firmware=$FIRMWARE"

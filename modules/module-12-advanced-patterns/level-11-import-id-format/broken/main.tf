@@ -1,8 +1,8 @@
-# Cooper's Ridge pigeon loft: three registry values that already exist on paper
-# (see loft-register.csv) and must be adopted. Every provider chooses its own import ID
+# Cooper's Ridge turtle hatchery: three registry values that already exist on paper
+# (see nest-register.csv) and must be adopted. Every provider chooses its own import ID
 # format, and the IDs below were typed in whatever format seemed natural.
 
-resource "random_integer" "ring" {
+resource "random_integer" "tag" {
   min = 100
   max = 999
 }
@@ -12,12 +12,12 @@ resource "time_static" "release" {
   triggers = {}
 }
 
-resource "random_id" "loft" {
+resource "random_id" "nest" {
   byte_length = 4
 }
 
 import {
-  to = random_integer.ring
+  to = random_integer.tag
   id = "212"
 }
 
@@ -27,11 +27,11 @@ import {
 }
 
 import {
-  to = random_id.loft
+  to = random_id.nest
   id = "5a4c8b0f"
 }
 
 resource "local_file" "certificate" {
-  filename = "${path.module}/loft/certificate.txt"
-  content  = "ring ${random_integer.ring.result}, released ${time_static.release.rfc3339}, loft ${random_id.loft.b64_url}\n"
+  filename = "${path.module}/hatchery/certificate.txt"
+  content  = "tag ${random_integer.tag.result}, released ${time_static.release.rfc3339}, nest ${random_id.nest.b64_url}\n"
 }

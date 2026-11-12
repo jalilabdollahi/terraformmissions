@@ -1,11 +1,11 @@
-name: Lane Seven Closes For Good
+name: Target Seven Stands Down
 description: >-
-  Strikeforce Lanes is closing lane 7 permanently. The block was replaced by a removed block that was
-  copied from last month's 'just stop managing it' migration, so the score sheet stays on disk and the
-  insurance receipt never gets written.
+  Fletcher's Meadow Archery Range is closing target 7 permanently. The block was replaced by a removed block that was
+  copied from last month's 'just stop managing it' migration, so the scorecard stays on disk and the
+  retirement receipt never gets written.
 objective: >-
-  Decommission lane 7 properly: its sheet lanes/lane-7.txt must be destroyed, the destroy-time
-  provisioner must leave receipts/lane-7.txt, lane 7 must be gone from state, and lanes 5 and 6 must
+  Decommission target 7 properly: its scorecard targets/target-7.txt must be destroyed, the destroy-time
+  provisioner must leave receipts/target-7.txt, target 7 must be gone from state, and targets 5 and 6 must
   keep their IDs.
 xp: 275
 difficulty: advanced

@@ -1,1 +1,1 @@
-Keep the lifecycle rule, but make the filename unique per film: use `local.slug`, which is already computed, inside the `filename`.
+Keep the lifecycle rule, but make the filename unique per advert: use `local.slug`, which is already computed, inside the `filename`.

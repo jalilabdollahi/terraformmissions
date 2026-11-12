@@ -1,6 +1,6 @@
 resource "local_file" "label" {
   filename = "${path.root}/out/label.txt"
-  content  = "Batch ${var.batch_code} | wick ${var.wick_cm} cm | scent: ${var.scent}\n"
+  content  = "Batch ${var.batch_code} | pigment ${var.pigment_pct}% | shade: ${var.shade}\n"
 }
 
 output "label_text" {

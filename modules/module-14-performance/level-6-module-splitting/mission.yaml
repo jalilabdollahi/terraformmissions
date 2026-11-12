@@ -1,13 +1,13 @@
-name: Candle Works Split
+name: Crayon Factory Split
 description: >-
-  Tallow and Thyme makes scented candles. One module, modules/workshop, pours the wax batch, cuts
-  the wick spec and prints the label, and every new product line wants only part of it: the
-  wholesale line has no labels, the refill line has no wicks. Batch IDs are already printed on
+  Wax & Wonder makes crayons. One module, modules/workshop, pours the wax batch, cuts
+  the colour spec and prints the label, and every new product line wants only part of it: the
+  wholesale line has no labels, the refill line has no colour. Batch IDs are already printed on
   boxes in the warehouse, so nothing may be destroyed along the way.
 objective: >-
   Replace modules/workshop with three composable modules: modules/pour (random_id.batch and
-  local_file.pour_sheet), modules/wick (local_file.wick_spec) and modules/label (local_file.label,
-  fed by the outputs of the other two). The root calls module.pour, module.wick and module.label,
+  local_file.pour_sheet), modules/colour (local_file.colour_spec) and modules/label (local_file.label,
+  fed by the outputs of the other two). The root calls module.pour, module.colour and module.label,
   the existing objects end up at the new addresses with the same batch ID, and the plan is clean.
 xp: 335
 difficulty: expert

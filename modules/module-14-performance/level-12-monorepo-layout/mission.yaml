@@ -1,12 +1,12 @@
-name: Junction Box Monorepo
+name: Traffic Light Monorepo
 description: >-
-  Cullen Junction's signalling team keeps three subsystems (interlocking, timetable, platform
-  display) in one root module and one state file, so a timetable tweak locks the interlocking plan
-  and one failed apply blocks everybody. They already share a module library, modules/signal_sheet.
+  Mapleton Crossroads' traffic-light team keeps three subsystems (junction controller, bus priority,
+  crossing countdown) in one root module and one state file, so a bus-priority tweak locks the junction-controller plan
+  and one failed apply blocks everybody. They already share a module library, modules/plan_sheet.
   Each subsystem should be its own root module with its own state, still built from the shared library.
 objective: >-
-  Create components/interlocking, components/timetable and components/platform-display. Each is a
-  standalone root module (its own terraform.tf and local state) calling ../../modules/signal_sheet
+  Create components/junction-controller, components/bus-priority and components/crossing-countdown. Each is a
+  standalone root module (its own terraform.tf and local state) calling ../../modules/plan_sheet
   and writing out/<component>.txt with the same lines as today. The repository root must no longer
   declare any module or resource. The validator initialises and applies every component separately.
 xp: 378

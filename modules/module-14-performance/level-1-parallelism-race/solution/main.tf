@@ -1,4 +1,4 @@
-# Brackenhill bell foundry: furnace bookkeeping.
+# Cobbleton cutlery works: furnace bookkeeping.
 #
 # Terraform walks the dependency graph and runs independent nodes AT THE SAME TIME
 # (default: 10 at once). Two nodes with no edge between them may run in either order,
@@ -12,19 +12,19 @@ resource "time_sleep" "furnace_settle" {
 # The alloy ledger records the melt. Its content depends on the furnace, so it is
 # created after the settle delay.
 resource "local_file" "alloy_ledger" {
-  filename = "${path.module}/foundry/alloy-ledger.txt"
-  content  = "Melt logged at ${time_sleep.furnace_settle.id}: 78% copper, 22% tin\n"
+  filename = "${path.module}/works/alloy-ledger.txt"
+  content  = "Melt logged at ${time_sleep.furnace_settle.id}: 74% iron, 18% chromium, 8% nickel\n"
 }
 
-# The casting slip is copied from the ledger by a shell command.
-resource "terraform_data" "casting_slip" {
+# The stamping slip is copied from the ledger by a shell command.
+resource "terraform_data" "stamping_slip" {
   depends_on = [local_file.alloy_ledger]
 
   provisioner "local-exec" {
-    command = "cat ${local_file.alloy_ledger.filename} > ${path.module}/foundry/casting-slip.txt"
+    command = "cat ${local_file.alloy_ledger.filename} > ${path.module}/works/stamping-slip.txt"
   }
 }
 
 output "slip_path" {
-  value = "${path.module}/foundry/casting-slip.txt"
+  value = "${path.module}/works/stamping-slip.txt"
 }

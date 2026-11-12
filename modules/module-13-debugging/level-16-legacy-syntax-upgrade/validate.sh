@@ -21,8 +21,8 @@ tm_apply
 tm_assert_no_changes
 tm_assert_no_changes
 
-tm_assert_file_equals fair/programme.txt $'Ashby County Fair\nStalls: pies, jam, honey\nExtras: tombola, face painting\n'
-tm_assert_file_equals fair/prices.txt $'honey: 6\njam: 3\npies: 4\nextra face painting: 5\nextra tombola: 2\n'
+tm_assert_file_equals con/programme.txt $'Nova City Comic Con\nStalls: posters, cards, figures\nExtras: cosplay, meet and greet\n'
+tm_assert_file_equals con/prices.txt $'cards: 3\nfigures: 6\nposters: 4\nextra cosplay: 2\nextra meet and greet: 5\n'
 tm_assert_output stall_count 3
-tm_assert_output_jq extras '. == ["tombola","face painting"]'
-tm_pass "modern syntax, no warnings, same fair paperwork"
+tm_assert_output_jq extras '. == ["cosplay","meet and greet"]'
+tm_pass "modern syntax, no warnings, same convention paperwork"

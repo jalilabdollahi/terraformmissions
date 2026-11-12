@@ -1,4 +1,4 @@
-# Walkthrough: Seats For Every Quilter
+# Walkthrough: Seats For Every Listener
 
 1. **Probe the current behaviour.**
    `terraform plan -var guests=99` fails with `Error: Resource precondition failed`: late, inside the resource.

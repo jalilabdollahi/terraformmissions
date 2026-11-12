@@ -1,6 +1,6 @@
 name: Blind Tasting Count
 description: >-
-  The Ember & Ash hot-sauce lab shuffles five flavours and prints one blind-tasting card for each
+  The Golden Crunch crisp factory shuffles five flavours and prints one blind-tasting card for each
   flavour picked for the panel. Planning stops with "Invalid count argument ... depends on resource
   attributes that cannot be determined until apply", even though the panel size is just a variable.
 objective: >-

@@ -1,9 +1,9 @@
-name: Wardrobe Cull
+name: Stockroom Cull
 description: >-
-  The Alderney Opera wardrobe department tried to retire one record with
+  The Madcap Fancy Dress Hire stockroom team tried to retire one record with
   "terraform destroy -target=local_file.costume_register". Terraform warned about the
   target, then quietly took the fitting roster and the dry-cleaning notice down as well,
-  because both are built on top of the register. Opening night is Friday.
+  because both are built on top of the register. Halloween weekend starts on Friday.
 objective: >-
   Bring everything back without a -target flag: all four resources in state, the rack seal
   unchanged, the register, roster and notices.log in place, and a clean plan. The dry-cleaning

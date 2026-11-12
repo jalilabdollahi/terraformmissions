@@ -1,13 +1,13 @@
-name: Foundry Pour Order
+name: Cutlery Melt Order
 description: >-
-  The Brackenhill bell foundry writes a casting slip from the alloy ledger every time the
+  The Cobbleton cutlery works writes a stamping slip from the alloy ledger every time the
   furnace config is applied. Since the team upgraded to a faster CI runner the apply fails
   most mornings with "No such file or directory", yet it "worked on my laptop" back when
   everything ran one step at a time. Somebody already pasted -parallelism=1 into the deploy
   script as a workaround.
 objective: >-
-  Make a normal parallel apply succeed every time. The casting slip step must read the alloy
-  ledger only after the ledger exists, and foundry/casting-slip.txt must contain the ledger text.
+  Make a normal parallel apply succeed every time. The stamping slip step must read the alloy
+  ledger only after the ledger exists, and works/stamping-slip.txt must contain the ledger text.
   No -parallelism flag anywhere (script or config), and no sleep or polling loop in the command.
 xp: 300
 difficulty: expert

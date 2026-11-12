@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 source "$TM_LIB"
 
-tm_assert_config_has 'module[[:space:]]+"bunks"' "the bunks module must stay"
-tm_assert_config_has 'module[[:space:]]+"meals"' "the meals module must stay"
-tm_assert_config_has 'random_integer' "the meals module must still draw the soup batch"
+tm_assert_config_has 'module[[:space:]]+"berths"' "the berths module must stay"
+tm_assert_config_has 'module[[:space:]]+"galley"' "the galley module must stay"
+tm_assert_config_has 'random_integer' "the galley module must still draw the supply batch"
 tm_assert_config_lacks '~>[[:space:]]*2\.3' "a constraint that only allows random 2.x can never agree with the root module"
 
 [[ -f .terraform.lock.hcl ]] || tm_fail "terraform init has not produced a lock file - the constraints are still unsatisfiable"
@@ -18,9 +18,9 @@ tm_apply
 tm_assert_no_changes
 tm_assert_no_changes
 
-ROOM=$(tm_output_raw room_label)
-SOUP=$(tm_output_raw soup_batch)
-[[ "$ROOM" == alpenrose-room-* ]] || tm_fail "room_label looks wrong: '$ROOM'"
-[[ "$SOUP" =~ ^[0-9]{3}$ ]] || tm_fail "soup_batch should be a three digit number: '$SOUP'"
-tm_assert_file_equals hut/booking.txt "Bunk room $ROOM | soup batch $SOUP"$'\n' "hut/booking.txt does not match the module outputs"
+CABIN=$(tm_output_raw cabin_label)
+SUPPLY=$(tm_output_raw supply_batch)
+[[ "$CABIN" == willow-wren-cabin-* ]] || tm_fail "cabin_label looks wrong: '$CABIN'"
+[[ "$SUPPLY" =~ ^[0-9]{3}$ ]] || tm_fail "supply_batch should be a three digit number: '$SUPPLY'"
+tm_assert_file_equals boat/booking.txt "Cabin $CABIN | galley batch $SUPPLY"$'\n' "boat/booking.txt does not match the module outputs"
 tm_pass "one random provider ($LOCKED) now satisfies the root and both modules"

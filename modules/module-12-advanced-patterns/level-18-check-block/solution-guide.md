@@ -1,20 +1,20 @@
-# Walkthrough: Silo Sensor Warning
+# Walkthrough: Turbidity Sensor Warning
 
 1. **Plan.**
    ```
    Error: Resource precondition failed
-     Silo 4 temperature sensor is not reporting ok.
+     Clarifier 4 turbidity sensor is not reporting ok.
    ```
-   The farm's rule is blocking the shift report.
+   The plant's rule is blocking the shift report.
 2. **Choose the right tool.** Rules that must *prevent* a change are conditions. Rules that *tell you
    something is off* are checks.
 3. **Rewrite.** Move the data source inside a `check` block and use `assert`:
    ```hcl
-   check "silo_sensor" {
-     data "local_file" "sensor" { filename = "${path.module}/silo/status.txt" }
+   check "clarifier_sensor" {
+     data "local_file" "sensor" { filename = "${path.module}/clarifier/status.txt" }
      assert {
        condition     = trimspace(data.local_file.sensor.content) == "ok"
-       error_message = "Silo 4 temperature sensor is not reporting ok."
+       error_message = "Clarifier 4 turbidity sensor is not reporting ok."
      }
    }
    ```

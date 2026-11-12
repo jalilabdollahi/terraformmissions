@@ -1,21 +1,21 @@
-# Spoke & Sprocket bike repair: job ticket numbers.
-# Four jobs already have paper tickets in the shop (see var.legacy_tickets, written as
-# "number,min,max" which is the import ID format of random_integer). The old shop software
+# Saltwater Shapers surfboard workshop: job ticket numbers.
+# Four jobs already have paper tickets in the workshop (see var.legacy_tickets, written as
+# "number,min,max" which is the import ID format of random_integer). The old workshop software
 # is retired, so every ticket has to be adopted. Only the first one made it into the code.
 
 variable "legacy_tickets" {
   type = map(string)
   default = {
-    frame  = "4021,1000,9999"
-    wheels = "7316,1000,9999"
-    brakes = "2288,1000,9999"
-    chain  = "5907,1000,9999"
+    longboard  = "4021,1000,9999"
+    shortboard = "7316,1000,9999"
+    fish       = "2288,1000,9999"
+    gun        = "5907,1000,9999"
   }
 }
 
-resource "random_pet" "mechanic" {
+resource "random_pet" "shaper" {
   length = 2
-  prefix = "mech"
+  prefix = "shaper"
 }
 
 resource "random_integer" "ticket" {
@@ -25,14 +25,14 @@ resource "random_integer" "ticket" {
 }
 
 import {
-  to = random_integer.ticket["frame"]
-  id = var.legacy_tickets["frame"]
+  to = random_integer.ticket["longboard"]
+  id = var.legacy_tickets["longboard"]
 }
 
-resource "local_file" "board" {
-  filename = "${path.module}/shop/board.txt"
+resource "local_file" "queue" {
+  filename = "${path.module}/shop/queue.txt"
   content = join("\n", concat(
-    ["on shift: ${random_pet.mechanic.id}"],
+    ["on shift: ${random_pet.shaper.id}"],
     [for job in sort(keys(random_integer.ticket)) : "${job}: #${random_integer.ticket[job].result}"],
     [""]
   ))

@@ -2,6 +2,6 @@ variable "batch_prefix" {
   type = string
 }
 
-variable "scent" {
+variable "shade" {
   type = string
 }

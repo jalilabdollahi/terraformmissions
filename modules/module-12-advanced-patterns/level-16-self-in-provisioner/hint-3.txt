@@ -1,1 +1,1 @@
-Replace `terraform_data.repair_ticket.input.ticket` with `self.input.ticket` in the destroy command.
+Replace `terraform_data.tuning_ticket.input.ticket` with `self.input.ticket` in the destroy command.

@@ -15,4 +15,4 @@ the type gives "Unsupported argument". Second, the `null_resource` block has to 
 moved block's source still exists and Terraform refuses the move.
 
 Real-world takeaway: migrate placeholder resources with `moved`, not with destroy and create. Anything
-that referenced the old ID (flight cards, tags, downstream systems) keeps working, and the plan shows `has moved to`.
+that referenced the old ID (shot cards, tags, downstream systems) keeps working, and the plan shows `has moved to`.

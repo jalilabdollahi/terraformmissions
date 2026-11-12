@@ -1,20 +1,20 @@
-# Ashby County Fair - programme and price board.
+# Nova City Comic Con - programme and price board.
 
 locals {
   stall_list = var.stalls
-  extras     = ["tombola", "face painting"]
-  extra_fees = { tombola = 2, "face painting" = 5 }
+  extras     = ["cosplay", "meet and greet"]
+  extra_fees = { cosplay = 2, "meet and greet" = 5 }
 }
 
 resource "local_file" "programme" {
-  filename = "${path.module}/fair/programme.txt"
-  content  = "${var.fair_name}\nStalls: ${join(", ", local.stall_list)}\nExtras: ${join(", ", local.extras)}\n"
+  filename = "${path.module}/con/programme.txt"
+  content  = "${var.con_name}\nStalls: ${join(", ", local.stall_list)}\nExtras: ${join(", ", local.extras)}\n"
 }
 
 resource "local_file" "price_board" {
   depends_on = [local_file.programme]
 
-  filename = "${path.module}/fair/prices.txt"
+  filename = "${path.module}/con/prices.txt"
   content  = "${join("\n", concat(formatlist("%s: %s", keys(var.prices), values(var.prices)), formatlist("extra %s: %s", keys(local.extra_fees), values(local.extra_fees))))}\n"
 }
 

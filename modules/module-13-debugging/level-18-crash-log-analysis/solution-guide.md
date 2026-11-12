@@ -1,4 +1,4 @@
-# Walkthrough - Salt Mine Crash Log
+# Walkthrough - Diamond Mine Crash Log
 
 1. Open `crash.log`. Skip the INFO/TRACE preamble and find the first line that is not a log line: `panic: interface conversion:
    interface {} is map[string]interface {}, not string`. A Go panic means the *plugin* crashed, not Terraform core.

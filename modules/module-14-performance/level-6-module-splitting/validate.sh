@@ -4,7 +4,7 @@ source "$TM_LIB"
 BATCH=$(tm_recall batch); LABEL=$(tm_recall label)
 [[ -n "$BATCH" ]] || tm_fail "mission state is missing — run 'reset' to restore the level"
 
-for m in pour wick label; do
+for m in pour colour label; do
   [[ -d modules/$m ]] || tm_fail "modules/$m does not exist"
   grep -qE '^[[:space:]]*resource[[:space:]]' modules/$m/*.tf 2>/dev/null \
     || tm_fail "modules/$m declares no resources"
@@ -18,11 +18,11 @@ if grep -qE '^[[:space:]]*module[[:space:]]' modules/*/*.tf 2>/dev/null; then
   tm_fail "the small modules should stay independent (no module calls inside modules/*)"
 fi
 tm_assert_config_has 'module\.pour\.' "the label module must be fed from module.pour outputs"
-tm_assert_config_has 'module\.wick\.' "the label module must be fed from module.wick outputs"
+tm_assert_config_has 'module\.colour\.' "the label module must be fed from module.colour outputs"
 
 grep -qE 'resource[[:space:]]+"random_id"' modules/pour/*.tf || tm_fail "random_id.batch belongs in modules/pour"
 grep -qE '"pour_sheet"' modules/pour/*.tf || tm_fail "local_file.pour_sheet belongs in modules/pour"
-grep -qE '"wick_spec"' modules/wick/*.tf || tm_fail "local_file.wick_spec belongs in modules/wick"
+grep -qE '"colour_spec"' modules/colour/*.tf || tm_fail "local_file.colour_spec belongs in modules/colour"
 grep -qE '"label"' modules/label/*.tf || tm_fail "local_file.label belongs in modules/label"
 
 tm_init
@@ -34,7 +34,7 @@ tm_apply
 
 tm_assert_in_state module.pour.random_id.batch "random_id.batch must live at module.pour.random_id.batch"
 tm_assert_in_state module.pour.local_file.pour_sheet "module.pour.local_file.pour_sheet is not in state"
-tm_assert_in_state module.wick.local_file.wick_spec "module.wick.local_file.wick_spec is not in state"
+tm_assert_in_state module.colour.local_file.colour_spec "module.colour.local_file.colour_spec is not in state"
 tm_assert_in_state module.label.local_file.label "module.label.local_file.label is not in state"
 all_state=$(tm_state_list)
 if grep -q '^module\.workshop' <<<"$all_state"; then

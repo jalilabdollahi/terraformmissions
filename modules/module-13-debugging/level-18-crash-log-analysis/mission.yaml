@@ -1,6 +1,6 @@
-name: Salt Mine Crash Log
+name: Diamond Mine Crash Log
 description: >-
-  The Deepvein salt mine's overnight CI job died with a plugin crash instead of a normal error, and
+  The Brightstone diamond mine's overnight CI job died with a plugin crash instead of a normal error, and
   the only thing it left behind is crash.log in the workspace. The morning shaft inspection report
   has not been produced and the safety officer wants to know exactly what crashed.
 objective: >-

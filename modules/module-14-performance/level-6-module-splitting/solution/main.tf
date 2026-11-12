@@ -1,24 +1,24 @@
-# Tallow and Thyme candle works: three composable modules.
+# Wax & Wonder crayon factory: three composable modules.
 
 module "pour" {
   source = "./modules/pour"
 
-  batch_prefix = "tt-"
-  scent        = "fig and cedar"
+  batch_prefix = "ww-"
+  shade        = "sunset orange"
 }
 
-module "wick" {
-  source = "./modules/wick"
+module "colour" {
+  source = "./modules/colour"
 
-  wick_cm = 7
+  pigment_pct = 7
 }
 
 module "label" {
   source = "./modules/label"
 
   batch_code = module.pour.batch_code
-  wick_cm    = module.wick.wick_cm
-  scent      = "fig and cedar"
+  pigment_pct = module.colour.pigment_pct
+  shade      = "sunset orange"
 }
 
 moved {
@@ -32,8 +32,8 @@ moved {
 }
 
 moved {
-  from = module.workshop.local_file.wick_spec
-  to   = module.wick.local_file.wick_spec
+  from = module.workshop.local_file.colour_spec
+  to   = module.colour.local_file.colour_spec
 }
 
 moved {

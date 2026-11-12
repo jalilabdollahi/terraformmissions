@@ -1,22 +1,22 @@
-# Cartographers' guild - published atlas index.
+# Lumen Press encyclopedia - published volume index.
 
 data "external" "archive" {
-  program = ["python3", "${path.module}/scripts/list_sheets.py"]
+  program = ["python3", "${path.module}/scripts/list_entries.py"]
 }
 
 locals {
-  sheets = split(",", data.external.archive.result.names)
+  entries = split(",", data.external.archive.result.names)
 }
 
-resource "local_file" "atlas_index" {
-  filename = "${path.module}/atlas/index.md"
+resource "local_file" "volume_index" {
+  filename = "${path.module}/volume/index.md"
   content  = <<-EOT
-    # Guild atlas index
+    # Lumen Press volume index
     Generated: ${timestamp()}
-    ${join("\n", [for s in local.sheets : "- ${s}"])}
+    ${join("\n", [for s in local.entries : "- ${s}"])}
   EOT
 }
 
-output "sheet_count" {
-  value = length(local.sheets)
+output "entry_count" {
+  value = length(local.entries)
 }

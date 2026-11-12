@@ -1,11 +1,11 @@
-name: Retiring The Null Ledger
+name: Trebuchet Ledger Goes Built-In
 description: >-
-  The Kettleby Moor weather station is dropping the null provider and switched its launch ledger from
+  The Hartley Heath Trebuchet Society is dropping the null provider and switched its launch ledger from
   null_resource to the built-in terraform_data. Terraform now rejects the config, and even after
-  fixing that it would throw away the ledger ID that is already printed on every flight card.
+  fixing that it would throw away the ledger ID that is already printed on every shot card.
 objective: >-
   Convert the ledger to terraform_data.launch_ledger using the argument the new type actually has and
-  a moved block from null_resource.launch_ledger. The ID must stay the same, the flight card must not
+  a moved block from null_resource.launch_ledger. The ID must stay the same, the shot card must not
   be rewritten, and the plan must be clean.
 xp: 275
 difficulty: advanced

@@ -1,11 +1,11 @@
-name: Frostbite Till Flash
+name: Sprayer Flash Recovery
 description: >-
-  Frostbite Ice Cream flashes new firmware onto the till controller in each van from a local-exec
+  Critter Clear Pest Control flashes new firmware onto the sprayer controller in each van from a local-exec
   provisioner. Yesterday's rollout to van-07 failed halfway, and Terraform has marked the resource
   as tainted. The next apply wants to replace it - but the same failure is waiting.
 objective: >-
   Find out why the flash script failed (read its output), repair the configuration, and let Terraform
-  replace the tainted terraform_data.till_firmware so that flashed/van-07.stamp exists. The resource
+  replace the tainted terraform_data.sprayer_firmware so that flashed/van-07.stamp exists. The resource
   must be recreated by a successful provisioner run: untainting it or hiding the failure does not
   count.
 xp: 275

@@ -1,18 +1,18 @@
-# Saltreach bonded warehouse: one manifest per lot. This config is compliant;
+# Glenmorrow whisky bonded warehouse: one manifest per cask. This config is compliant;
 # the gate script is what needs work.
 
-variable "lots" {
+variable "casks" {
   type = map(string)
   default = {
-    "lot-0412" = "green coffee, 120 sacks"
-    "lot-0413" = "olive oil, 40 drums"
-    "lot-0419" = "saffron, 2 crates"
-    "lot-0424" = "tea chests, 300"
+    "cask-0412" = "single malt, 40 casks"
+    "cask-0413" = "rye whisky, 30 casks"
+    "cask-0419" = "grain spirit, 12 casks"
+    "cask-0424" = "peated malt, 25 casks"
   }
 }
 
 resource "local_file" "manifest" {
-  for_each        = var.lots
+  for_each        = var.casks
   filename        = "${path.module}/bonded/${each.key}.txt"
   content         = "${each.key}: ${each.value}\n"
   file_permission = "0640"

@@ -1,11 +1,11 @@
-name: Seal Moves Backwards
+name: Master Key Moves Backwards
 description: >-
-  St. Brannoc's scriptorium renamed the abbot's wax-seal key from seal to abbot_seal and added a moved
+  Hollis & Daughter Locksmiths renamed the safe's master key resource from master to master_key and added a moved
   block to keep it. Now terraform plan refuses to run at all and complains about a 'moved object' that
   'still exists'.
 objective: >-
   Repair the moved block so it records the rename in the right direction. The key must keep its
-  fingerprint under tls_private_key.abbot_seal, the register file must not be rewritten, and the plan
+  fingerprint under tls_private_key.master_key, the register file must not be rewritten, and the plan
   must be clean.
 xp: 250
 difficulty: advanced

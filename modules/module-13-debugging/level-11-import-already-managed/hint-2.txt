@@ -1,1 +1,1 @@
-`terraform state show` on both `random_integer` addresses prints the same `id`. The object was imported a second time under `random_integer.cabinet_dup`, and the configuration no longer mentions that address.
+`terraform state show` on both `random_integer` addresses prints the same `id`. The object was imported a second time under `random_integer.service_dup`, and the configuration no longer mentions that address.

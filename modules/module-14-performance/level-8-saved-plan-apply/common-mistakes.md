@@ -8,4 +8,4 @@
   plan, review, then apply the file.
 - **Trying to patch or force the stale plan.** There is no `-force`; the state serial it was made
   from no longer exists, and re-planning is the only way.
-- **Applying with `-target` to match the plan.** It leaves hearings out and the plan unclean.
+- **Applying with `-target` to match the plan.** It leaves transfers out and the plan unclean.

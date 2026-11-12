@@ -6,8 +6,8 @@ root module is the unit that has a state, a lock, a plan and an apply. Making ea
 root gives you:
 
 - **Speed**: a plan refreshes only that component's resources, not the whole estate.
-- **Safety**: a bad apply or a corrupted state affects one subsystem; the interlocking state is not
-  locked while someone edits the timetable.
+- **Safety**: a bad apply or a corrupted state affects one subsystem; the junction-controller state is not
+  locked while someone edits the bus-priority.
 - **Ownership**: CODEOWNERS and CI paths line up with directories, so each team reviews and deploys its own.
 
 The costs are real. Components cannot reference each other's resources; they share data through

@@ -1,1 +1,1 @@
-List the resources in modules/workshop and sort them by job (pouring, wicking, labelling). Note what the label needs from each of the other two.
+List the resources in modules/workshop and sort them by job (pouring, colouring, labelling). Note what the label needs from each of the other two.

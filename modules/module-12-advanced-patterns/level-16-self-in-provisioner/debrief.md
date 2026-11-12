@@ -9,7 +9,7 @@ provisioner could reference them, destroys would sometimes fail, or form depende
 
 The practical consequence is a design habit: anything a destroy provisioner needs must be stored on the
 resource. `terraform_data` is ideal because its `input` can carry arbitrary values (here ticket and
-clock), and `self.input.ticket` reads them back from state. For other resources you put values in
+piano), and `self.input.ticket` reads them back from state. For other resources you put values in
 `triggers` or tags and read them through `self`.
 
 Provisioners remain a last resort, as the Terraform docs say, since a failing script leaves a tainted

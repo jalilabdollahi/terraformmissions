@@ -1,12 +1,12 @@
-name: Alpenrose Version Clash
+name: Willow Wren Version Clash
 description: >-
-  The Alpenrose mountain hut generates its weekend booking sheet through two small local modules.
-  Since the meals module was copied in from an older repository, terraform init fails with "no available
+  Willow Wren Houseboat Rental generates its weekend booking sheet through two small local modules.
+  Since the galley module was copied in from an older repository, terraform init fails with "no available
   releases match the given constraints" and nobody can plan.
 objective: >-
   Work out which constraints cannot be satisfied together and fix the module that is too strict, so
   that a single version of the random provider (3.6 or newer, as the root module requires) serves
-  the whole configuration. Both modules and the booking sheet in hut/booking.txt must keep working.
+  the whole configuration. Both modules and the booking sheet in boat/booking.txt must keep working.
 xp: 300
 difficulty: advanced
 expected_time: 15m

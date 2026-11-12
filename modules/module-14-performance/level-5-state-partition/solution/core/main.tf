@@ -1,8 +1,8 @@
-# Marrow Quay terminal: yard identity (its own state).
+# Rustfield scrapyard: yard identity (its own state).
 
 resource "random_pet" "yard_name" {
   length = 2
-  prefix = "quay"
+  prefix = "scrap"
 }
 
 resource "random_integer" "gate_count" {

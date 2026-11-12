@@ -1,30 +1,30 @@
-# Tannenbaum cuckoo clock repair bench: one ticket record per clock on the bench.
-# The workshop log (repairs/bench.log) must say when a ticket is opened and when it is
+# Wren & Hammer piano tuner: one ticket record per piano on the round.
+# The tuner's diary (visits/diary.log) must say when a ticket is opened and when it is
 # closed. "Closed" is written by a destroy-time provisioner, which runs when the ticket
 # record is removed or replaced.
 
 variable "ticket" {
   type    = string
-  default = "CC-2041"
+  default = "PT-2041"
 }
 
-variable "clock" {
+variable "piano" {
   type    = string
-  default = "Black Forest wall cuckoo"
+  default = "Steinbeck upright piano"
 }
 
-resource "terraform_data" "repair_ticket" {
+resource "terraform_data" "tuning_ticket" {
   input = {
     ticket = var.ticket
-    clock  = var.clock
+    piano  = var.piano
   }
 
   provisioner "local-exec" {
-    command = "mkdir -p repairs && echo 'opened ${self.input.ticket} (${self.input.clock})' >> repairs/bench.log"
+    command = "mkdir -p visits && echo 'opened ${self.input.ticket} (${self.input.piano})' >> visits/diary.log"
   }
 
   provisioner "local-exec" {
     when    = destroy
-    command = "mkdir -p repairs && echo 'closed ${self.input.ticket}' >> repairs/bench.log"
+    command = "mkdir -p visits && echo 'closed ${self.input.ticket}' >> visits/diary.log"
   }
 }

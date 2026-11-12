@@ -1,4 +1,4 @@
-# Tidewater Brewery - bottling line paperwork and dispatch.
+# Sunridge Olive Oil Mill - bottling line paperwork and dispatch.
 
 resource "random_pet" "batch" {
   length    = 2
@@ -6,9 +6,9 @@ resource "random_pet" "batch" {
   prefix    = "run"
 }
 
-resource "local_file" "recipe" {
-  filename = "${path.module}/bottling/recipe.txt"
-  content  = "Recipe sheet for ${random_pet.batch.id}\n"
+resource "local_file" "pressing" {
+  filename = "${path.module}/bottling/pressing.txt"
+  content  = "Pressing sheet for ${random_pet.batch.id}\n"
 }
 
 # The label printer needs a moment to warm up before it can print proofs.
@@ -26,13 +26,13 @@ resource "local_file" "labels" {
 
 resource "local_file" "cap_order" {
   filename = "${path.module}/bottling/caps.txt"
-  content  = "Cap order for ${random_pet.batch.id}: 4800 crown caps\n"
+  content  = "Cap order for ${random_pet.batch.id}: 4800 screw caps\n"
 }
 
 # The manifest lists the sheets that belong to the run.
 resource "local_file" "manifest" {
   filename = "${path.module}/bottling/manifest.txt"
-  content  = "Manifest: recipe ${local_file.recipe.content_sha256}, labels ${local_file.labels.content_sha256}\n"
+  content  = "Manifest: pressing ${local_file.pressing.content_sha256}, labels ${local_file.labels.content_sha256}\n"
 }
 
 # Dispatch pulls the run's paperwork out of the bottling folder and logs the hand-over.

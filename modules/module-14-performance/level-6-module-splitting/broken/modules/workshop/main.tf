@@ -6,19 +6,19 @@ resource "random_id" "batch" {
 
 resource "local_file" "pour_sheet" {
   filename = "${path.root}/out/pour-sheet.txt"
-  content  = "Pour ${random_id.batch.hex}: ${var.scent} soy wax at 62C\n"
+  content  = "Pour ${random_id.batch.hex}: ${var.shade} paraffin wax at 62C\n"
 }
 
-# --- wick cutting ----------------------------------------------------------------
-resource "local_file" "wick_spec" {
-  filename = "${path.root}/out/wick-spec.txt"
-  content  = "Cotton wick, ${var.wick_cm} cm\n"
+# --- colour mixing ---------------------------------------------------------------
+resource "local_file" "colour_spec" {
+  filename = "${path.root}/out/colour-spec.txt"
+  content  = "Pigment load, ${var.pigment_pct} percent\n"
 }
 
 # --- labelling -------------------------------------------------------------------
 resource "local_file" "label" {
   filename = "${path.root}/out/label.txt"
-  content  = "Batch ${random_id.batch.hex} | wick ${var.wick_cm} cm | scent: ${var.scent}\n"
+  content  = "Batch ${random_id.batch.hex} | pigment ${var.pigment_pct}% | shade: ${var.shade}\n"
 }
 
 output "label_text" {

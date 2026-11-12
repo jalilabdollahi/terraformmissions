@@ -1,4 +1,4 @@
-# Walkthrough — Wardrobe Cull
+# Walkthrough — Stockroom Cull
 
 1. **See what is left.** `terraform state list` prints only `random_id.rack_seal`.
 2. **See what Terraform wants.** `terraform plan` ends with `Plan: 3 to add, 0 to change, 0 to destroy.`
@@ -8,5 +8,5 @@
    terraform apply
    ```
    Targeting again would only rebuild part of the graph and leave the plan unclean.
-4. **Check.** `terraform plan` says *No changes*. `wardrobe/notices.log` now has two lines: the
+4. **Check.** `terraform plan` says *No changes*. `stockroom/notices.log` now has two lines: the
    original creation and the recreation. Replaying with `-replace` would add a third.

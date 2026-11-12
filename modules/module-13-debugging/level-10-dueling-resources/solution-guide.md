@@ -1,4 +1,4 @@
-# Walkthrough - Noticeboard Tug of War
+# Walkthrough - Community Board Tug of War
 
 1. `terraform apply`, then `terraform plan`. One of the two resources shows up as `will be created` again (the provider found its file changed, so it dropped it from state). Apply again and look at the plan:
    it is now the other one. That alternation is the signature of two resources fighting over one object.

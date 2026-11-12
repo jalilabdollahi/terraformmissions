@@ -1,6 +1,6 @@
-name: Bonded Warehouse Gate
+name: Whisky Bond Gate
 description: >-
-  The Port of Saltreach runs a customs-bonded warehouse whose manifests are managed in Terraform.
+  Glenmorrow Distillery runs a whisky bonded warehouse whose manifests are managed in Terraform.
   Before any plan may be applied, the pipeline pipes "terraform show -json" into policy/check.sh
   and blocks on a non-zero exit. The script was written in a hurry: last week a replacement of a
   manifest file sailed through, a world-readable manifest was approved, and a plan file that

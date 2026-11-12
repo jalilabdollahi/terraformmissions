@@ -1,22 +1,22 @@
-# Ludlow County Court: hearing docket, one file per case.
+# Ludlow Land Registry Office: title register, one file per transfer.
 
-variable "hearings" {
+variable "transfers" {
   type = map(string)
   default = {
-    "c-3011" = "Hartnell v. Quayle, 2026-03-04, Court 2"
-    "c-3012" = "Re: Marchbank Estate, 2026-03-04, Court 1"
-    "c-3013" = "Orrin Mills v. County Roads, 2026-03-05, Court 2"
-    "c-3014" = "Pell v. Pell, 2026-03-06, Court 3"
-    "c-3015" = "Tidewater Co-op, licence review, 2026-03-06, Court 1"
+    "t-3011" = "Plot 14 Elm Lane: Hartnell to Quayle, 2026-03-04, Desk 2"
+    "t-3012" = "Marchbank Estate: boundary correction, 2026-03-04, Desk 1"
+    "t-3013" = "Orrin Mills: lease to County Roads, 2026-03-05, Desk 2"
+    "t-3014" = "Pell Farm: split title, 2026-03-06, Desk 3"
+    "t-3015" = "Tidewater Co-op: mortgage release, 2026-03-06, Desk 1"
   }
 }
 
-resource "local_file" "docket" {
-  for_each = var.hearings
-  filename = "${path.module}/docket/${each.key}.txt"
-  content  = "Case ${each.key}: ${each.value}\n"
+resource "local_file" "register" {
+  for_each = var.transfers
+  filename = "${path.module}/register/${each.key}.txt"
+  content  = "Title ${each.key}: ${each.value}\n"
 }
 
-output "docketed" {
-  value = sort(keys(local_file.docket))
+output "registered" {
+  value = sort(keys(local_file.register))
 }

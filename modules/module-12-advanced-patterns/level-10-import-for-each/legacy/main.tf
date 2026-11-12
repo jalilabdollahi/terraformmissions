@@ -3,7 +3,7 @@ variable "legacy_tickets" {
   default = {}
 }
 
-resource "random_pet" "mechanic" {
+resource "random_pet" "shaper" {
   length = 2
-  prefix = "mech"
+  prefix = "shaper"
 }

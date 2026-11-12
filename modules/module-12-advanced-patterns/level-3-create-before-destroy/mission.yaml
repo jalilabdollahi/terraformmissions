@@ -1,11 +1,11 @@
-name: Marquee Never Goes Dark
+name: Billboard Never Goes Dark
 description: >-
-  The Moonlight Drive-In writes its marquee board with create_before_destroy so the sign is never
-  blank. Tonight's feature changed and the apply 'succeeds', yet the sign file is gone afterwards and
+  Roadside Billboard Co. writes its highway board with create_before_destroy so the sign is never
+  blank. This week's advert changed and the apply 'succeeds', yet the sign file is gone afterwards and
   the next plan wants to create it again.
 objective: >-
-  Keep create_before_destroy, replace the board with tonight's feature (NOW SHOWING: Return of the
-  Giant Ant), and end up with a board file on disk, no leftover file for last week's film, and a clean
+  Keep create_before_destroy, replace the board with this week's advert (ON THE BOARD: Sunrise
+  Cereal Summer Sale), and end up with a board file on disk, no leftover file for last week's advert, and a clean
   plan.
 xp: 275
 difficulty: advanced
