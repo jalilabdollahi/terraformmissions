@@ -1,25 +1,23 @@
-# The Stale State Problem
+# Debrief — a skipped refresh is a skipped look at reality
 
-## What Was Broken
-`lifecycle { ignore_changes = all }` is a blunt instrument that tells Terraform to never modify
-a resource regardless of what drifts. While useful in rare edge cases (e.g. externally managed
-resources), it is almost always an anti-pattern because it prevents Terraform from enforcing
-desired state and silently hides real configuration errors.
+By default `terraform plan` refreshes first: it asks every provider to read the real object and
+updates state, then compares code to that fresh picture. `-refresh=false` skips the reads and trusts
+the state file. On a large estate that can turn a plan from minutes into seconds, so it is a
+legitimate speed-up, and it is **safe when you are checking what your own code change does** against
+infrastructure nobody else touches.
 
-## The Fix
-Replace `ignore_changes = all` with `ignore_changes = [keepers]` to only ignore the specific
-attribute that is legitimately managed outside Terraform.
+It is **unsafe whenever the question is "has anything changed behind our back?"** The deleted setpoint
+file is exactly that. Terraform's stale belief that the file exists means the plan is clean and the
+monitoring cron stays green for as long as the flag is there.
 
-## -refresh=false Explained
-`terraform plan -refresh=false` skips the state refresh step (reading real infrastructure state).
-Use cases:
-- **Speed**: skipping refresh on large configs with hundreds of resources
-- **Offline/air-gapped environments**: no API access during planning
-- **Using a known-good state snapshot**: avoid re-querying APIs when state is known accurate
+A workable split for teams:
 
-**Risk:** If real infrastructure has drifted since last refresh, `-refresh=false` will miss it.
-Always understand whether your state is trustworthy before using this flag.
+- Inner loop (editing, reviewing a PR): `-refresh=false` is fine, optionally with `-target` for
+  a single module while debugging.
+- Pre-apply plan, the one that gets approved: always refreshed.
+- Scheduled drift audit: refreshed, using `-detailed-exitcode` so exit 2 can page someone; add
+  `-refresh-only` if you want a report limited to out-of-band changes.
 
-## Key Takeaway
-`ignore_changes = all` is a last resort. Always prefer `ignore_changes = [specific_attribute]`
-to maintain Terraform's ability to detect and correct real drift.
+Real-world takeaway: put the mode in the script name or argument, not in somebody's shell history,
+and make sure the one that detects drift is the one that reads reality. A copied flag in a wrapper
+script is exactly how a "green" audit goes stale for months.

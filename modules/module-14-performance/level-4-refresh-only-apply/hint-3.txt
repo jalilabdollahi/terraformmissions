@@ -1,0 +1,1 @@
+Run `terraform apply -refresh-only` and approve. It records the new data-source values and outputs in state and touches no real object, so banner.txt stays as it is.

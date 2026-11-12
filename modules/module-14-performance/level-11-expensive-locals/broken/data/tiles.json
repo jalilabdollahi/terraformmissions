@@ -1,0 +1,293 @@
+{
+ "projection": "mercator",
+ "tiles": [
+  {
+   "id": "s015",
+   "region": "south",
+   "zoom": 1,
+   "bytes": 912384
+  },
+  {
+   "id": "e034",
+   "region": "east",
+   "zoom": 1,
+   "bytes": 460800
+  },
+  {
+   "id": "n003",
+   "region": "north",
+   "zoom": 5,
+   "bytes": 656384
+  },
+  {
+   "id": "s017",
+   "region": "south",
+   "zoom": 1,
+   "bytes": 77824
+  },
+  {
+   "id": "n011",
+   "region": "north",
+   "zoom": 1,
+   "bytes": 664576
+  },
+  {
+   "id": "w043",
+   "region": "west",
+   "zoom": 2,
+   "bytes": 857088
+  },
+  {
+   "id": "w041",
+   "region": "west",
+   "zoom": 4,
+   "bytes": 480256
+  },
+  {
+   "id": "s022",
+   "region": "south",
+   "zoom": 2,
+   "bytes": 584704
+  },
+  {
+   "id": "s020",
+   "region": "south",
+   "zoom": 4,
+   "bytes": 382976
+  },
+  {
+   "id": "s021",
+   "region": "south",
+   "zoom": 4,
+   "bytes": 660480
+  },
+  {
+   "id": "s024",
+   "region": "south",
+   "zoom": 3,
+   "bytes": 564224
+  },
+  {
+   "id": "s023",
+   "region": "south",
+   "zoom": 2,
+   "bytes": 711680
+  },
+  {
+   "id": "w048",
+   "region": "west",
+   "zoom": 1,
+   "bytes": 181248
+  },
+  {
+   "id": "w042",
+   "region": "west",
+   "zoom": 1,
+   "bytes": 633856
+  },
+  {
+   "id": "s018",
+   "region": "south",
+   "zoom": 2,
+   "bytes": 293888
+  },
+  {
+   "id": "n005",
+   "region": "north",
+   "zoom": 5,
+   "bytes": 539648
+  },
+  {
+   "id": "n002",
+   "region": "north",
+   "zoom": 4,
+   "bytes": 514048
+  },
+  {
+   "id": "w044",
+   "region": "west",
+   "zoom": 3,
+   "bytes": 393216
+  },
+  {
+   "id": "w037",
+   "region": "west",
+   "zoom": 1,
+   "bytes": 758784
+  },
+  {
+   "id": "e031",
+   "region": "east",
+   "zoom": 2,
+   "bytes": 578560
+  },
+  {
+   "id": "n006",
+   "region": "north",
+   "zoom": 5,
+   "bytes": 872448
+  },
+  {
+   "id": "w038",
+   "region": "west",
+   "zoom": 1,
+   "bytes": 264192
+  },
+  {
+   "id": "e028",
+   "region": "east",
+   "zoom": 5,
+   "bytes": 921600
+  },
+  {
+   "id": "n010",
+   "region": "north",
+   "zoom": 5,
+   "bytes": 889856
+  },
+  {
+   "id": "s019",
+   "region": "south",
+   "zoom": 5,
+   "bytes": 71680
+  },
+  {
+   "id": "e026",
+   "region": "east",
+   "zoom": 1,
+   "bytes": 520192
+  },
+  {
+   "id": "e035",
+   "region": "east",
+   "zoom": 1,
+   "bytes": 345088
+  },
+  {
+   "id": "w045",
+   "region": "west",
+   "zoom": 1,
+   "bytes": 366592
+  },
+  {
+   "id": "w047",
+   "region": "west",
+   "zoom": 4,
+   "bytes": 835584
+  },
+  {
+   "id": "s014",
+   "region": "south",
+   "zoom": 2,
+   "bytes": 694272
+  },
+  {
+   "id": "w040",
+   "region": "west",
+   "zoom": 4,
+   "bytes": 434176
+  },
+  {
+   "id": "n008",
+   "region": "north",
+   "zoom": 4,
+   "bytes": 358400
+  },
+  {
+   "id": "e025",
+   "region": "east",
+   "zoom": 1,
+   "bytes": 735232
+  },
+  {
+   "id": "e027",
+   "region": "east",
+   "zoom": 3,
+   "bytes": 466944
+  },
+  {
+   "id": "n009",
+   "region": "north",
+   "zoom": 2,
+   "bytes": 135168
+  },
+  {
+   "id": "w039",
+   "region": "west",
+   "zoom": 2,
+   "bytes": 95232
+  },
+  {
+   "id": "e033",
+   "region": "east",
+   "zoom": 1,
+   "bytes": 630784
+  },
+  {
+   "id": "e029",
+   "region": "east",
+   "zoom": 1,
+   "bytes": 782336
+  },
+  {
+   "id": "s013",
+   "region": "south",
+   "zoom": 5,
+   "bytes": 721920
+  },
+  {
+   "id": "e036",
+   "region": "east",
+   "zoom": 4,
+   "bytes": 110592
+  },
+  {
+   "id": "n012",
+   "region": "north",
+   "zoom": 4,
+   "bytes": 515072
+  },
+  {
+   "id": "e032",
+   "region": "east",
+   "zoom": 3,
+   "bytes": 71680
+  },
+  {
+   "id": "e030",
+   "region": "east",
+   "zoom": 3,
+   "bytes": 370688
+  },
+  {
+   "id": "n004",
+   "region": "north",
+   "zoom": 2,
+   "bytes": 234496
+  },
+  {
+   "id": "n001",
+   "region": "north",
+   "zoom": 4,
+   "bytes": 627712
+  },
+  {
+   "id": "n007",
+   "region": "north",
+   "zoom": 2,
+   "bytes": 139264
+  },
+  {
+   "id": "w046",
+   "region": "west",
+   "zoom": 3,
+   "bytes": 56320
+  },
+  {
+   "id": "s016",
+   "region": "south",
+   "zoom": 5,
+   "bytes": 106496
+  }
+ ]
+}

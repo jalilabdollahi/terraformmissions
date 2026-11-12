@@ -1,0 +1,1 @@
+Every resource parses the same file and loops over the same tiles. Terraform evaluates each expression separately wherever it is written; it does not share results between them. Values used more than once belong in `locals`.

@@ -1,1 +1,1 @@
-Change `ignore_changes = all` to `ignore_changes = [keepers]`. The list form accepts specific attribute names. After the fix, plan with `-refresh=false` should succeed.
+Keep `-refresh=false` in the `quick` branch. In the `audit` branch remove it, so plan refreshes before comparing and exits 2 listing `local_file.freezer["ice-core-b"]` as to be created. Do not run apply; the audit only reports.

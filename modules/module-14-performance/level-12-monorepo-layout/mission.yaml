@@ -1,0 +1,21 @@
+name: Junction Box Monorepo
+description: >-
+  Cullen Junction's signalling team keeps three subsystems (interlocking, timetable, platform
+  display) in one root module and one state file, so a timetable tweak locks the interlocking plan
+  and one failed apply blocks everybody. They already share a module library, modules/signal_sheet.
+  Each subsystem should be its own root module with its own state, still built from the shared library.
+objective: >-
+  Create components/interlocking, components/timetable and components/platform-display. Each is a
+  standalone root module (its own terraform.tf and local state) calling ../../modules/signal_sheet
+  and writing out/<component>.txt with the same lines as today. The repository root must no longer
+  declare any module or resource. The validator initialises and applies every component separately.
+xp: 378
+difficulty: expert
+expected_time: 25m
+concepts:
+  - monorepo layout
+  - root modules per component
+  - shared module library
+  - state isolation
+module: module-14-performance
+level: level-12-monorepo-layout

@@ -1,0 +1,1 @@
+A root module is a directory with its own terraform.tf and its own state. Each component needs a terraform.tf (required_providers), a main.tf calling the library through a relative path (`../../modules/signal_sheet`), and `out_dir` based on `path.module` so its file lands inside its own folder. The old root main.tf must go.

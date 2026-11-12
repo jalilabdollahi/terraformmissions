@@ -1,0 +1,1 @@
+In modules/stage add `output "stage_contract" { value = { version = var.contract_version stage_id = var.stage_id power_budget_kw = var.power_budget_kw } }` and `output "power_kw" { value = var.power_budget_kw deprecated = "..." }`; remove the loose outputs. In lighting.tf add `lifecycle { precondition { condition = startswith(module.stage.stage_contract.version, "2.") ... } }`.

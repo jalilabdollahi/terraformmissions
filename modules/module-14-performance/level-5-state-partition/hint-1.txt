@@ -1,1 +1,1 @@
-Run `terraform init && terraform plan` inside config-b/. The error references an output key that does not exist in config-a's state. Look at config-a/main.tf — what is the actual output name?
+Run `terraform state list`. Decide which resources belong to the rarely-changing identity and which to the daily roster, and create a core/ directory for the first group.

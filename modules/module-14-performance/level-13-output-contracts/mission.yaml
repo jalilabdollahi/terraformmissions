@@ -1,0 +1,21 @@
+name: Mudflat Stage Contract
+description: >-
+  At the Mudflat Music Festival the stage team owns modules/stage, and two other teams build on its
+  outputs: lighting reads the power budget, rigging reads "power_kw". During a tidy-up the stage team
+  renamed power_kw to power_budget_kw and the rigging pipeline broke on a Friday night. Both teams
+  now want a written contract: a stable output with a version, and a transition period for old names.
+objective: >-
+  In modules/stage, publish an output stage_contract (an object with exactly version,
+  stage_id and power_budget_kw, where version comes from var.contract_version) and keep the old
+  power_kw output alive with a deprecated message, so rigging.tf (which must stay untouched) works again.
+  In lighting.tf, make the consumer refuse a contract whose major version is not 2 with a precondition.
+xp: 385
+difficulty: expert
+expected_time: 25m
+concepts:
+  - output contracts
+  - deprecated outputs
+  - precondition
+  - versioned interfaces
+module: module-14-performance
+level: level-13-output-contracts

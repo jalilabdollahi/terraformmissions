@@ -1,0 +1,21 @@
+name: Foundry Pour Order
+description: >-
+  The Brackenhill bell foundry writes a casting slip from the alloy ledger every time the
+  furnace config is applied. Since the team upgraded to a faster CI runner the apply fails
+  most mornings with "No such file or directory", yet it "worked on my laptop" back when
+  everything ran one step at a time. Somebody already pasted -parallelism=1 into the deploy
+  script as a workaround.
+objective: >-
+  Make a normal parallel apply succeed every time. The casting slip step must read the alloy
+  ledger only after the ledger exists, and foundry/casting-slip.txt must contain the ledger text.
+  No -parallelism flag anywhere (script or config), and no sleep or polling loop in the command.
+xp: 300
+difficulty: expert
+expected_time: 20m
+concepts:
+  - parallelism
+  - implicit vs explicit dependencies
+  - depends_on
+  - race conditions
+module: module-14-performance
+level: level-1-parallelism-race

@@ -1,0 +1,19 @@
+name: Wardrobe Cull
+description: >-
+  The Alderney Opera wardrobe department tried to retire one record with
+  "terraform destroy -target=local_file.costume_register". Terraform warned about the
+  target, then quietly took the fitting roster and the dry-cleaning notice down as well,
+  because both are built on top of the register. Opening night is Friday.
+objective: >-
+  Bring everything back without a -target flag: all four resources in state, the rack seal
+  unchanged, the register, roster and notices.log in place, and a clean plan. The dry-cleaning
+  notice must have fired exactly once more than the original run (notices.log has 2 lines).
+xp: 307
+difficulty: expert
+expected_time: 12m
+concepts:
+  - "-target"
+  - dependency fallout
+  - partial destroy recovery
+module: module-14-performance
+level: level-2-target-collateral

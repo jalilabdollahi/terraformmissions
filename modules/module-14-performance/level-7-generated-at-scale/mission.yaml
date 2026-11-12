@@ -1,0 +1,21 @@
+name: Stadium Seat Tags
+description: >-
+  Fairmount Park stadium prints a tag file for every one of its 300 seats, and the config that
+  makes them is 300 hand-pasted resource blocks. Adding a new block of seats means pasting ten
+  more and hoping nobody mistypes a row number; last season two seats shipped with identical tags.
+  The groundskeepers also need the same files to stay in place: re-creating a tag reprints it.
+objective: >-
+  Replace the 300 resource blocks with exactly one data-driven local_file resource using for_each
+  (6 blocks A-F, rows 1-5, seats 01-10; keys like "a-1-01"). The 300 existing tag files must be
+  moved to the new addresses (local_file.seat["a-1-01"], ...) with no destroy or replace, and
+  the plan must end clean.
+xp: 342
+difficulty: expert
+expected_time: 30m
+concepts:
+  - for_each at scale
+  - setproduct
+  - moved blocks
+  - copy-paste refactoring
+module: module-14-performance
+level: level-7-generated-at-scale

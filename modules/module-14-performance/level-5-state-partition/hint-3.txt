@@ -1,1 +1,1 @@
-In config-b/main.tf, change `data.terraform_remote_state.infra.outputs.infra_id` to `data.terraform_remote_state.infra.outputs.infrastructure_id`.
+Move with `terraform state mv -state-out=core/terraform.tfstate <addr> <addr>` for both resources. Apply core once so its outputs exist in its state. In the root use `data "terraform_remote_state" "core" { backend = "local" config = { path = "${path.module}/core/terraform.tfstate" } }` and read `.outputs.yard_name` / `.outputs.gate_count`.

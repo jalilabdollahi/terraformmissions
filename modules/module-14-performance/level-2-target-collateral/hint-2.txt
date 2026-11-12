@@ -1,0 +1,1 @@
+A targeted destroy removes the target plus everything that depends on it. The register, the roster and the notice are gone; only the rack seal remained. You need to recreate them all, and you do not want to touch the seal.

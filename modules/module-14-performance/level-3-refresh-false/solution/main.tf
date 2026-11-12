@@ -1,12 +1,21 @@
-resource "random_string" "cached_token" {
-  length  = 16
-  special = false
+# Halvorsen Lab freezer setpoints, one file per unit.
 
-  lifecycle {
-    ignore_changes = [keepers]
+variable "freezers" {
+  type = map(number)
+  default = {
+    "ice-core-a" = -80
+    "ice-core-b" = -80
+    "plasma-c"   = -40
+    "reagent-d"  = -20
   }
 }
 
-output "token" {
-  value = random_string.cached_token.result
+resource "local_file" "freezer" {
+  for_each = var.freezers
+  filename = "${path.module}/freezer/${each.key}.txt"
+  content  = "${each.key} setpoint ${each.value}C\n"
+}
+
+output "freezer_count" {
+  value = length(local_file.freezer)
 }

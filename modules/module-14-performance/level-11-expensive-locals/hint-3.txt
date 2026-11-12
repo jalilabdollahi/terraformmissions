@@ -1,0 +1,1 @@
+Add `locals { tiles = jsondecode(file("${path.module}/data/tiles.json")).tiles  checksum = sha256(jsonencode(local.tiles)) ... }` and replace every repeated expression with `local.tiles` / `local.checksum`. Group per-region ids in a local map as well. Run `terraform plan`: it must say no changes.

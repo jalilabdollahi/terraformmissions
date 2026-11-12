@@ -1,1 +1,0 @@
-Run `terraform apply` and check the `token_names` output. The current convention produces names like `token_1_default` — but the required convention is `default-token-1` (workspace first, dash separator).

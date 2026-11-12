@@ -1,0 +1,1 @@
+Start with `set -euo pipefail` and `cd "$(dirname "$0")/.."`, then run exactly: terraform fmt -check -recursive; terraform init -input=false; terraform validate; terraform plan -input=false -out=ci-plan.tfplan. No apply.

@@ -1,24 +1,23 @@
-# State Partitioning
+# Debrief — smaller states, explicit contracts
 
-## What Was Broken
-Config-b referenced `data.terraform_remote_state.infra.outputs.infra_id`, but config-a exports
-its output as `infrastructure_id` — a different key name. This causes a runtime error when
-config-b tries to access a non-existent key from the remote state.
+One state file per big configuration means every plan refreshes everything, every apply takes the
+same lock, and a mistake anywhere has the whole estate in range. Partitioning splits that by rate of
+change and ownership: slow, risky foundations in one root module, fast daily churn in another.
 
-## The Fix
-Update the reference in config-b to use the correct output key: `infrastructure_id`.
+Partitioning has two halves that people routinely do in the wrong order:
 
-## State Partitioning Benefits
-Large Terraform configs are split into partitions (separate state files) for:
-- **Blast radius reduction** — mistakes in the app layer cannot destroy core infrastructure
-- **Faster operations** — each partition has fewer resources to plan and apply
-- **Team autonomy** — different teams own different state partitions with independent lock cycles
-- **Reduced state lock contention** — concurrent operations in different partitions don't block each other
+1. **Move the objects.** `terraform state mv -state-out=...` (or `terraform state rm` plus an `import`
+   in the other root) transfers the record of an object without touching the real thing. If you just
+   delete the resources from the old config and recreate them in the new one, the real objects are
+   destroyed and re-created (new random names, new IDs, new IP addresses).
+2. **Define the contract.** The consumer must not reach into the other configuration's resources; it
+   reads **outputs**, via `terraform_remote_state` or a better-managed channel (SSM parameters, a
+   registry, a data source lookup). Outputs are the API; the producer has to apply after adding them,
+   as the consumer reads the *state*, not the code.
 
-## Output Contracts
-`terraform_remote_state` creates an implicit API contract: the output key names. Treat them as
-public, versioned API surface. Never rename outputs without coordinating with all consumers.
+The cost is ordering: core must be applied before the roster, and you give up the single graph, so
+cross-state dependencies become your responsibility. That is acceptable for foundations that change
+monthly, and a poor trade for two resources that change together.
 
-## Key Takeaway
-Treat outputs from shared state as a public API. Document them, version them, and avoid renaming
-them without updating all consumers. Consider using a wrapper module to abstract the contract.
+Real-world takeaway: split states along "who changes it and how often", back up both states first,
+move before you apply, and treat outputs as a versioned interface.

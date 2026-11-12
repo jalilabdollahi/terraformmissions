@@ -1,11 +1,14 @@
-# These 5 resources were in the root module and have been moved to modules/strings/.
-# Missing: moved blocks to tell Terraform the resources relocated.
-# Without moved blocks, Terraform plans to destroy originals and recreate inside the module.
+# Tallow and Thyme candle works.
+# One module does everything; the product lines want to pick and choose.
 
-module "strings" {
-  source = "./modules/strings"
+module "workshop" {
+  source = "./modules/workshop"
+
+  batch_prefix = "tt-"
+  wick_cm      = 7
+  scent        = "fig and cedar"
 }
 
-output "all_results" {
-  value = module.strings.results
+output "label_text" {
+  value = module.workshop.label_text
 }

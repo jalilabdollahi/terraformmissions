@@ -1,0 +1,1 @@
+Search main.tf for `jsondecode(` and `sha256(`. Count them, then look at what each one is used for.

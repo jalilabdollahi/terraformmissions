@@ -1,1 +1,1 @@
-Config-a defines one output: `infrastructure_id`. Config-b references `infra_id` — a shorter, different name. These must match exactly.
+Two things are needed: configuration (core/ with the two resources plus outputs, root with a `terraform_remote_state` data source) and state (the existing objects must be moved into core's state file, not re-created).

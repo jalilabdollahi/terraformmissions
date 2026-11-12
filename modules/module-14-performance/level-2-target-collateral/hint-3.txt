@@ -1,0 +1,1 @@
+Run a normal `terraform apply` with no -target. The plan should show exactly 3 resources to add and the seal untouched. Do not use -replace or destroy anything else.

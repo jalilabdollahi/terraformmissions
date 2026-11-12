@@ -1,0 +1,1 @@
+Open .terraform.lock.hcl and count the entries under `hashes`. Then read `terraform providers lock -help` and look at the options that tell it where to get packages.

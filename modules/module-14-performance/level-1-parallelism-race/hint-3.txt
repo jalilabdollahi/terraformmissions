@@ -1,0 +1,1 @@
+Give the slip resource a dependency on the ledger: either `depends_on = [local_file.alloy_ledger]`, or (better) reference `local_file.alloy_ledger.filename` inside the command so the dependency is implicit. Then delete `-parallelism=1` from scripts/deploy.sh.

@@ -1,0 +1,1 @@
+Use `index("delete")` on the actions array; check `.change.after.file_permission // ""` only when the actions include create or update; add the filename test (`^(\./)?bonded/` and no `..`); and validate the input first with `jq -e . "$plan"`, exiting 2 when it fails. Collect VIOLATION lines and exit 1 if there are any.

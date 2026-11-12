@@ -1,0 +1,1 @@
+Run `terraform plan` and read the error. Then open the three files that touch the module's outputs: modules/stage/main.tf, lighting.tf and rigging.tf.

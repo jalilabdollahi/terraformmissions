@@ -1,0 +1,1 @@
+`terraform init` records only the checksum of the platform it ran on. `terraform providers lock -platform=...` adds checksums for other platforms. At base camp the packages come from the vendored mirror, so the command also needs `-fs-mirror`.

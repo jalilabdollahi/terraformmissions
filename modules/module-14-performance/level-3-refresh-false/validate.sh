@@ -1,18 +1,33 @@
 #!/usr/bin/env bash
-set -euo pipefail
+source "$TM_LIB"
 
-# First apply to create the resource
-if ! terraform apply -auto-approve -no-color -input=false 2>&1; then
-    echo "FAIL: initial apply failed"
-    exit 1
+tm_assert_config_has 'resource "local_file" "freezer"' "the freezer resource must stay in the config"
+tm_assert_file ops/plan.sh "ops/plan.sh is missing"
+tm_assert_in_state 'local_file.freezer["ice-core-b"]' "mission state is missing — run 'reset' to restore the level"
+[[ ! -e freezer/ice-core-b.txt ]] \
+  || tm_fail "freezer/ice-core-b.txt exists again — this mission wants the drift to stay in place so the audit can find it (run 'reset' if you applied)"
+
+# quick: must stay fast = must not read reality, so it is blind to the drift and exits 0.
+bash ops/plan.sh quick >"$TM_TMP/quick.out" 2>&1
+quick_code=$?
+if [[ "$quick_code" != "0" ]]; then
+  cat "$TM_TMP/quick.out" | head -15 | sed 's/^/   │ /'
+  tm_fail "ops/plan.sh quick exited $quick_code with the drift still present — the fast loop should trust state (-refresh=false) and report nothing"
 fi
 
-# Plan with -refresh=false should succeed (exit 0 = no changes, exit 2 = changes, exit 1 = error)
-terraform plan -refresh=false -detailed-exitcode -no-color -input=false 2>&1
-CODE=$?
-if [[ $CODE -eq 0 ]] || [[ $CODE -eq 2 ]]; then
-    echo "PASS: plan -refresh=false succeeded"
-    exit 0
+# audit: must read reality and exit 2 naming the missing freezer.
+bash ops/plan.sh audit >"$TM_TMP/audit.out" 2>&1
+audit_code=$?
+if [[ "$audit_code" != "2" ]]; then
+  tm_fail "ops/plan.sh audit exited $audit_code — the nightly check has to notice the deleted setpoint file (expected exit 2)"
 fi
-echo "FAIL: plan -refresh=false returned error (exit $CODE)"
-exit 1
+grep -q 'ice-core-b' "$TM_TMP/audit.out" \
+  || tm_fail "the audit output does not mention ice-core-b"
+
+# other modes keep failing.
+bash ops/plan.sh bogus >/dev/null 2>&1
+[[ $? != 0 ]] || tm_fail "ops/plan.sh must reject unknown modes with a non-zero exit"
+
+# The audit must not have changed anything.
+[[ ! -e freezer/ice-core-b.txt ]] || tm_fail "the audit script must only plan, never apply"
+tm_pass "quick stays blind and fast; audit exits 2 and reports ice-core-b missing"

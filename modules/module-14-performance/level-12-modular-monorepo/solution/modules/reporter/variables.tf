@@ -1,3 +1,0 @@
-variable "processed" {
-  type = string
-}

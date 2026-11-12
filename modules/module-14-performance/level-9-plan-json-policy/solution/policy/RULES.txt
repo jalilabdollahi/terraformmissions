@@ -1,0 +1,18 @@
+Saltreach bonded warehouse - plan policy
+
+The gate reads the JSON from `terraform show -json <planfile>` and is run as:
+
+    policy/check.sh plan.json
+
+R1  No object may be deleted or replaced. Any change whose actions include "delete"
+    (plain delete, delete+create, create+delete) is a violation, whatever the resource type.
+R2  Every local_file that is being created or updated must set file_permission to a
+    mode that gives nothing to "other": the last octal digit must be 0 (0600, 0640, 0750 ...).
+    A missing or null file_permission is a violation. Resources that are only read
+    or unchanged (data sources, no-op) are not checked.
+R3  Every local_file that is being created or updated must have a filename inside bonded/
+    ("./bonded/..." or "bonded/...") and the filename must not contain "..".
+R4  Fail closed: a missing, unreadable or non-JSON plan file gives exit code 2, never 0.
+
+Exit codes: 0 compliant, 1 at least one violation (print "VIOLATION: <address>: <reason>"
+for each), 2 cannot evaluate.

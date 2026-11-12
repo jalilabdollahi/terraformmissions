@@ -1,33 +1,46 @@
-module "strings" {
-  source = "./modules/strings"
+# Tallow and Thyme candle works: three composable modules.
+
+module "pour" {
+  source = "./modules/pour"
+
+  batch_prefix = "tt-"
+  scent        = "fig and cedar"
 }
 
-# moved blocks: tell Terraform the resources relocated from root to the module
-moved {
-  from = random_string.token_a
-  to   = module.strings.random_string.token_a
+module "wick" {
+  source = "./modules/wick"
+
+  wick_cm = 7
 }
 
-moved {
-  from = random_string.token_b
-  to   = module.strings.random_string.token_b
-}
+module "label" {
+  source = "./modules/label"
 
-moved {
-  from = random_string.token_c
-  to   = module.strings.random_string.token_c
-}
-
-moved {
-  from = random_string.token_d
-  to   = module.strings.random_string.token_d
+  batch_code = module.pour.batch_code
+  wick_cm    = module.wick.wick_cm
+  scent      = "fig and cedar"
 }
 
 moved {
-  from = random_string.token_e
-  to   = module.strings.random_string.token_e
+  from = module.workshop.random_id.batch
+  to   = module.pour.random_id.batch
 }
 
-output "all_results" {
-  value = module.strings.results
+moved {
+  from = module.workshop.local_file.pour_sheet
+  to   = module.pour.local_file.pour_sheet
+}
+
+moved {
+  from = module.workshop.local_file.wick_spec
+  to   = module.wick.local_file.wick_spec
+}
+
+moved {
+  from = module.workshop.local_file.label
+  to   = module.label.local_file.label
+}
+
+output "label_text" {
+  value = module.label.label_text
 }

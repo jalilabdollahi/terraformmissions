@@ -1,0 +1,19 @@
+name: Docket Approval Plan
+description: >-
+  Ludlow County Court's change process says the clerk who applies the docket must apply exactly
+  the plan the registrar signed off, not whatever a fresh plan looks like at apply time. The
+  registrar approved plan.tfplan this morning, but before the clerk could use it another clerk
+  applied one of the new hearings by hand. Now "terraform apply plan.tfplan" refuses to run.
+objective: >-
+  Get all five hearings (docket/c-3011 ... c-3015) onto disk by applying a freshly saved plan file:
+  plan.tfplan must be a new, valid saved plan that still contained the creations you applied,
+  it must differ from the stale one the level started with, and the plan must be clean afterwards.
+xp: 349
+difficulty: expert
+expected_time: 15m
+concepts:
+  - plan -out
+  - apply with a plan file
+  - stale plans
+module: module-14-performance
+level: level-8-saved-plan-apply
