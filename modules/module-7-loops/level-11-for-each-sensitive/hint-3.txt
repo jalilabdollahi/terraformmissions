@@ -1,0 +1,1 @@
+Loop over the names only: `for_each = nonsensitive(toset(keys(var.pins)))`, then read the secret with `var.pins[each.key]` for `content`. Leave `sensitive = true` on the variable.

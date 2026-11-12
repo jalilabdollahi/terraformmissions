@@ -1,0 +1,1 @@
+Let the list decide: `count = length(var.dogs)`. Nothing else in the resource needs to change.

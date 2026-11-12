@@ -1,0 +1,18 @@
+name: Painted On The Hull
+description: >-
+  The Coastwatch lifeboat stations each have a random mascot name that is already painted on the
+  boats. Someone converted the mascots from count to for_each so stations are identified by name.
+  The state still has them at numeric positions, and the plan wants to replace all three.
+objective: >-
+  Add moved blocks so Terraform moves random_pet.mascot[0], [1] and [2] to their station keys
+  (padstow, sennen, penlee) with the same names - no mascot destroyed or recreated - and finish
+  with a clean plan.
+xp: 275
+difficulty: intermediate
+expected_time: 15m
+concepts:
+  - moved block
+  - count to for_each
+  - refactoring state
+module: module-7-loops
+level: level-17-count-to-for-each-moved

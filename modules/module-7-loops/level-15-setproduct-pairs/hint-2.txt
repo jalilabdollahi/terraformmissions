@@ -1,0 +1,1 @@
+`setproduct(rooms, days)` returns a *list of lists* - one `[room, day]` pair per element - not a map or a set of strings. And the pairs are tuples, so `each.value.room` would not work either.

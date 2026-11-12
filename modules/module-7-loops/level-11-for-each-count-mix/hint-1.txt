@@ -1,1 +1,0 @@
-Run `terraform validate`. `module.mymod["key"]` is invalid — `count` modules use numeric indices.

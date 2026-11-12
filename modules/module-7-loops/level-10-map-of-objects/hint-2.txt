@@ -1,0 +1,1 @@
+With a `map(object({...}))` variable, `each.key` is the slot name but `each.value` is an *object* with three attributes. An object cannot be interpolated into a string as a whole.

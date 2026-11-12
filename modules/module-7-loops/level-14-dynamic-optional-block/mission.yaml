@@ -1,0 +1,19 @@
+name: Transcript Optional
+description: >-
+  The Tidewater Maritime Museum ships an audio-guide zip. A large-print transcript is added only
+  when the curator has written one, but the pack builder insists on the transcript entry and fails
+  whenever the variable is left empty.
+objective: >-
+  Build packs/audio-guide.zip with the stops list and guide script always present, and the large-
+  print transcript entry only when var.transcript is not null. With the default (null) the plan
+  must succeed and the zip must have two entries.
+xp: 240
+difficulty: intermediate
+expected_time: 12m
+concepts:
+  - dynamic blocks
+  - optional blocks
+  - null
+  - conditional for_each
+module: module-7-loops
+level: level-14-dynamic-optional-block

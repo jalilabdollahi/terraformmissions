@@ -1,0 +1,1 @@
+Open the generated cards. Whose name is on the captain's card? Then look at which of `each.key` and `each.value` each argument uses.

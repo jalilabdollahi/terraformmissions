@@ -1,0 +1,1 @@
+Run `terraform validate` and read which block type it says is not expected inside `archive_file`.

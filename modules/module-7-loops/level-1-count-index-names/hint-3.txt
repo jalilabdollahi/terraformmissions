@@ -1,0 +1,1 @@
+Inside a resource that uses `count`, `count.index` is the current instance number. Put it in the filename string: `"${path.module}/cards/clue-${count.index}.txt"`.

@@ -1,0 +1,1 @@
+Make that one block dynamic: `for_each = var.transcript == null ? [] : [var.transcript]`. An empty list generates zero blocks, a one-element list generates one.

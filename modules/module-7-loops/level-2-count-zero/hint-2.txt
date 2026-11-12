@@ -1,1 +1,0 @@
-Use the `try()` function to return a fallback value when the reference fails.

@@ -1,0 +1,1 @@
+All four instances of local_file.clue_card compute the same `filename`, so they write to one path and the last one wins. Each instance needs a name that depends on its own position.

@@ -1,0 +1,1 @@
+Add three `moved` blocks, one per station, following the original list order: `from = random_pet.mascot[0]` `to = random_pet.mascot["padstow"]`, `[1]` to `sennen`, `[2]` to `penlee`.

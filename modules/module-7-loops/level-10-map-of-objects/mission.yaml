@@ -1,0 +1,18 @@
+name: Slot Slips
+description: >-
+  Millbrook food bank schedules pickup slots in a variable of objects: who collects, how many
+  boxes and when. The slip generator tries to print the whole slot object into a string, and
+  Terraform refuses.
+objective: >-
+  Make each slip read exactly 'Slot <name>: <volunteer> collects <boxes> boxes at <time>' (one
+  line, trailing newline), taking the three values from the slot object. Keep for_each over
+  var.slots.
+xp: 210
+difficulty: intermediate
+expected_time: 9m
+concepts:
+  - for_each
+  - map of objects
+  - each.value attributes
+module: module-7-loops
+level: level-10-map-of-objects

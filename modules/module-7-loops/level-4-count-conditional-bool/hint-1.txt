@@ -1,0 +1,1 @@
+Run `terraform plan` and read the error: it points at the `count` line and says something about the condition's type.

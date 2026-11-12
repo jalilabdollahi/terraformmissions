@@ -1,0 +1,1 @@
+`var.floodlights ? 1 : 0` needs a bool. The variable is declared as `string` and given the word "on", and Terraform only auto-converts the literal strings "true" and "false" - not "on".

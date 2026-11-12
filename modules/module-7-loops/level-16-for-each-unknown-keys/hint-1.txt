@@ -1,0 +1,1 @@
+Run `terraform plan` on a fresh workspace and read which resource attribute the error says is not yet known.

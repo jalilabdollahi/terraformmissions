@@ -1,0 +1,1 @@
+Shift the number you show people, not the number of instances: use `count.index + 1` both in the `format("bay-%02d", ...)` call and in the content. Leave `count = var.bays` alone.

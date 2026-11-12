@@ -1,1 +1,0 @@
-Remove the duplicate `"a"` from the `default` list.

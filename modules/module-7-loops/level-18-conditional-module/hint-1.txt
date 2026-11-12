@@ -1,0 +1,1 @@
+Run `terraform plan` and read what it says `module.snack_bar` is, now that the module call has `count`.

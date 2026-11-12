@@ -1,1 +1,0 @@
-Change `filename` to `"${path.module}/config-${count.index}.txt"`.

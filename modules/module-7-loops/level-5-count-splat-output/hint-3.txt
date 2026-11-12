@@ -1,0 +1,1 @@
+Use a splat to read the attribute from every instance: `local_file.permit[*].filename`, or an equivalent `for` expression.

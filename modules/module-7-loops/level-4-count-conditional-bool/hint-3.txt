@@ -1,0 +1,1 @@
+Declare `type = bool` in variables.tf and write `floodlights = true` (no quotes) in terraform.tfvars. Both the count and the notice text will then work unchanged.

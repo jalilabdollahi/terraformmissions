@@ -1,0 +1,19 @@
+name: Closed Snack Bar
+description: >-
+  Rooftop Cinema switches its snack-bar module on with count on screening nights only. The root
+  outputs read the module's outputs as if it always existed, and Terraform now says the module is
+  a tuple.
+objective: >-
+  Make menu_path and menu_items work in both states: with the snack bar open they show the path (a
+  string) and the item list; with it closed, menu_path is null and menu_items is an empty list.
+  Keep count on the module call.
+xp: 250
+difficulty: intermediate
+expected_time: 14m
+concepts:
+  - conditional module
+  - one()
+  - splat
+  - count on modules
+module: module-7-loops
+level: level-18-conditional-module

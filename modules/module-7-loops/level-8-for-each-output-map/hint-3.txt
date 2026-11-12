@@ -1,0 +1,1 @@
+Loop over the resource: `{ for film, t in local_file.ticket : film => t.filename }` gives the film-to-path map.

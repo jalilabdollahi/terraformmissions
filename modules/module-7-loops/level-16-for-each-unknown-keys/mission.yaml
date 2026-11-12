@@ -1,0 +1,19 @@
+name: Keys From The Future
+description: >-
+  The Kelpwater marine lab stamps each sample label with the id of the survey run, a random_id.
+  The plan dies on the very first run: Terraform complains that the for_each keys depend on
+  something it only knows after apply.
+objective: >-
+  Make the labels work on a fresh plan: one local_file.label per sample, keyed by the plain sample
+  name (kelp-a, kelp-b, urchin-c), while the file name and text still carry the run id
+  (labels/<sample>-<run id>.txt).
+xp: 250
+difficulty: intermediate
+expected_time: 14m
+concepts:
+  - for_each
+  - unknown values
+  - static keys
+  - random_id
+module: module-7-loops
+level: level-16-for-each-unknown-keys

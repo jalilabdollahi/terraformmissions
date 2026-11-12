@@ -1,0 +1,1 @@
+`iterator = lesson` renames the loop variable. Once it is set, the default name (the block label, `source`) is no longer defined inside `content`, so `source.value.file` is a reference to nothing.

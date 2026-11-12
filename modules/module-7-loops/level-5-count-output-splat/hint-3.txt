@@ -1,1 +1,0 @@
-Use `local_file.config[*].filename` to get a list of all filenames.

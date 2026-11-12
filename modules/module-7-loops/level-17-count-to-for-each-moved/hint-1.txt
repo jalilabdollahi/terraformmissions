@@ -1,0 +1,1 @@
+Run `terraform plan`. Which instances are to be destroyed, and which created? Then run `terraform state list` to see how the mascots are addressed today.
