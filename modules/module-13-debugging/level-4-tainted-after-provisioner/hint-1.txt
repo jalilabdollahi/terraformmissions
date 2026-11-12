@@ -1,0 +1,1 @@
+`terraform plan` says the resource is tainted and will be replaced. Before applying, find out what the provisioner printed when it failed: run `terraform apply` and read the lines starting with `flash:`.

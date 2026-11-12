@@ -1,0 +1,1 @@
+Terraform can print every argument a provider supports without a network: `terraform providers schema -json`. Pipe it to `jq` (or save it to a file) instead of reading it in the terminal.

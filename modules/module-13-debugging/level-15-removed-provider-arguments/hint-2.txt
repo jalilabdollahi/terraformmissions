@@ -1,0 +1,1 @@
+In provider 4.x `key_algorithm` is a read-only (computed) attribute. Terraform now reads the algorithm from the private key itself, so you must not set it on `tls_cert_request` or `tls_self_signed_cert`.

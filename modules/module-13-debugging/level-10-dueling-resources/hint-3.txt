@@ -1,0 +1,1 @@
+Replace the two resources by one `local_file` whose content is the intro, a newline, `## Events` and the bullet lines, built from `local.intro` and `local.events`.

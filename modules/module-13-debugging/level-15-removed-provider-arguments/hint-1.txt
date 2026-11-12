@@ -1,0 +1,1 @@
+Read the error's argument name and resource type, then look at that resource's schema: `terraform providers schema -json | jq` shows which attributes are configurable and which are `computed` only.

@@ -1,0 +1,20 @@
+name: Frostbite Till Flash
+description: >-
+  Frostbite Ice Cream flashes new firmware onto the till controller in each van from a local-exec
+  provisioner. Yesterday's rollout to van-07 failed halfway, and Terraform has marked the resource
+  as tainted. The next apply wants to replace it - but the same failure is waiting.
+objective: >-
+  Find out why the flash script failed (read its output), repair the configuration, and let Terraform
+  replace the tainted terraform_data.till_firmware so that flashed/van-07.stamp exists. The resource
+  must be recreated by a successful provisioner run: untainting it or hiding the failure does not
+  count.
+xp: 275
+difficulty: advanced
+expected_time: 15m
+concepts:
+- tainted resources
+- local-exec failure
+- recovery
+- terraform state show
+module: module-13-debugging
+level: level-4-tainted-after-provisioner

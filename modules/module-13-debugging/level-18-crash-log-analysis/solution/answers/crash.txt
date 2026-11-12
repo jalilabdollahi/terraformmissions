@@ -1,0 +1,2 @@
+crashed_resource=data.external.shaft_scan
+offending_key=readings

@@ -1,1 +1,0 @@
-Run `terraform init`. The error says the provider at `notarealregistry.example.com/fake/provider` cannot be found.

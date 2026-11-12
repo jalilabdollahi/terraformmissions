@@ -1,0 +1,1 @@
+Both `local_file.board_intro` and `local_file.board_events` write `local.board_file`. Each apply, the last writer wins, and the other resource sees a file that no longer matches its own `content`.

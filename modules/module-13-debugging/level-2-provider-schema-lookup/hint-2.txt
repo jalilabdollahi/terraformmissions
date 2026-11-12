@@ -1,0 +1,1 @@
+Three names are wrong, one per resource. Look up each resource type under `provider_schemas[...].resource_schemas`, then list its `block.attributes` keys: `random_password`, `local_sensitive_file` and `time_offset`.

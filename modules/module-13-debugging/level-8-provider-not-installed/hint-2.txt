@@ -1,0 +1,1 @@
+The new `signing.tf` and a new `required_providers` entry need the `hashicorp/tls` plugin, which is not installed in `.terraform/` yet. The lock file does not mention it either.

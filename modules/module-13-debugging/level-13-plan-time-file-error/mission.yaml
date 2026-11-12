@@ -1,0 +1,20 @@
+name: Studio Notes Not Found
+description: >-
+  The Harbour Lane recording studio writes the engineer's session notes with one resource and quotes
+  them on the producer's track sheet in another. On a fresh checkout terraform plan stops with "no
+  file exists at studio/notes.txt", although the very next resource is supposed to create that file.
+objective: >-
+  Make a fresh workspace plan and apply successfully without creating studio/notes.txt by hand: the
+  track sheet must still quote the notes, studio/track-sheet.txt must begin with "Session notes (3
+  takes):", and the take_count output must be 3. Terraform, not you, must be the thing that writes
+  the notes file.
+xp: 275
+difficulty: advanced
+expected_time: 12m
+concepts:
+- plan-time functions
+- file()
+- resource references
+- evaluation order
+module: module-13-debugging
+level: level-13-plan-time-file-error

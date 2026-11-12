@@ -1,0 +1,1 @@
+`claim` is `null` for unclaimed items, so `item.claim.holder` fails, and an unset `phone` is `null`, which cannot be interpolated into a string. You need a guard that returns a default instead of raising an error.

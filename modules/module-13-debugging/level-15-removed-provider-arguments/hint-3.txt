@@ -1,0 +1,1 @@
+Delete the `key_algorithm = ...` lines from both resources. Everything else (private_key_pem, subject, validity_period_hours, allowed_uses) stays. Do not change the `~> 4.0` constraint.

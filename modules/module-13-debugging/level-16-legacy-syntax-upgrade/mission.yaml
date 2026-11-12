@@ -1,0 +1,21 @@
+name: County Fair Legacy Syntax
+description: >-
+  The Ashby County Fair committee inherited a Terraform repository written for version 0.11 in 2017.
+  It prints the programme and price board, but today's Terraform rejects it: quoted type names, list()
+  and map() calls, and a wall of deprecation warnings (interpolation-only expressions, quoted references
+  in depends_on).
+objective: >-
+  Modernise the syntax without changing what the config produces: fair/programme.txt must read "Ashby
+  County Fair", "Stalls: pies, jam, honey" and "Extras: tombola, face painting"; fair/prices.txt must
+  list honey, jam, pies and then the two extras sorted by name; outputs stall_count = 3 and extras
+  = ["tombola","face painting"]. terraform validate must finish with zero errors and zero warnings.
+xp: 250
+difficulty: advanced
+expected_time: 15m
+concepts:
+- 0.11 syntax
+- interpolation-only expressions
+- list() and map()
+- type constraints
+module: module-13-debugging
+level: level-16-legacy-syntax-upgrade

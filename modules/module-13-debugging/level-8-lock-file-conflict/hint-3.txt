@@ -1,1 +1,0 @@
-Delete `.terraform.lock.hcl` with `rm -f .terraform.lock.hcl` and run `terraform init` again to regenerate it.

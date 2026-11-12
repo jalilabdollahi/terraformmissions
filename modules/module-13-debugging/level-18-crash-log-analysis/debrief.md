@@ -1,33 +1,19 @@
-# Negative Count Crash
+# Debrief - reading a crash like a maintainer
 
-## What Was Broken
-`count = -1` is an invalid value. Terraform's `count` meta-argument must be a non-negative
-integer (0 or greater).
+Terraform normally reports problems as tidy `Error:` blocks. When a *provider plugin* panics, the output looks different: a Go stack trace
+(`panic: ...`, `goroutine N [running]`) followed by "Plugin did not respond" or "Terraform crashed!". Newer versions also
+write a `crash.log`. It looks frightening but follows a pattern, and you can extract the answer in a minute:
 
-## The Fix
-```hcl
-count = 1
-```
+1. **Find the panic line.** It states the *kind* of failure: here a type assertion failed (`interface conversion`), so a value had a shape the code did not expect.
+2. **Read the top of the stack.** The first frame inside the provider's package names the function: `externalDataSource.Read` tells you which
+   data source or resource type, and which operation (Read, Plan, Apply).
+3. **Read the lines before the panic.** The trace log shows what the provider was doing: which program, which request, which key.
+4. **Map it back to your config.** The `with data.external.shaft_scan` block in the wrapping error is the address; the key name tells
+   you which attribute to inspect.
 
-## count Value Rules
-| Value | Result |
-|---|---|
-| `0` | No instances created (resource is "disabled") |
-| `1` | One instance |
-| `N` | N instances (indexes 0 to N-1) |
-| `-1` | Invalid — error |
-| Unknown | Invalid at plan time — error |
+A provider crash is a bug (the provider should have reported a clean error), and you can report it with the trace, but your workaround
+is usually in your own configuration: avoid the input shape that triggers it. Here, by sending a string instead of an object and decoding it on the
+Terraform side.
 
-## Reading Terraform Error Patterns
-Terraform's error messages for invalid values always include:
-1. The attribute that has the invalid value
-2. The constraint that was violated
-3. Sometimes a suggestion for the correct value
-
-## Why It Matters
-Negative counts and similar invalid values are typically introduced by:
-- Bug in a calculation: `var.scale - var.reserved` going negative
-- Wrong variable default
-- Copy-paste error
-
-Always validate calculated `count` values are non-negative before using them.
+Habits: capture `TF_LOG=TRACE TF_LOG_PATH=...` when reproducing, keep the provider version from the trace, search the provider's issue tracker for the panic text, and never paste a
+crash log into a public ticket without reading it first: values from your configuration can end up in it.

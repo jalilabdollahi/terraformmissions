@@ -1,1 +1,0 @@
-The provider name `myfakelocal` and source `notarealregistry.example.com/fake/provider` are both fabricated. The real provider you want is `hashicorp/local`.

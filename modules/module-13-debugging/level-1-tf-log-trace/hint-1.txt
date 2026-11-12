@@ -1,0 +1,1 @@
+Run `TF_LOG=TRACE TF_LOG_PATH=./tf.log terraform apply` and search tf.log for `[ERROR]` and for `tf_rpc=`. Lines from the provider carry the RPC name; the line where the plugin starts carries its path with the version in it.

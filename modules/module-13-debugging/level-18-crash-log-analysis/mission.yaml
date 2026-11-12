@@ -1,13 +1,21 @@
-concepts:
-- terraform error patterns
-- count constraints
-- invalid values
-description: A resource uses `count = -1`, which is an invalid value. Terraform rejects
-  negative counts with a clear error. Fix by setting `count = 1`.
-difficulty: advanced
-expected_time: 30m
-level: level-18-crash-log-analysis
-module: module-13-debugging
-name: Negative Count Crash
-objective: Change `count = -1` to `count = 1` to produce a valid configuration.
+name: Salt Mine Crash Log
+description: >-
+  The Deepvein salt mine's overnight CI job died with a plugin crash instead of a normal error, and
+  the only thing it left behind is crash.log in the workspace. The morning shaft inspection report
+  has not been produced and the safety officer wants to know exactly what crashed.
+objective: >-
+  Read crash.log, find the resource that crashed and the offending key, and write answers/crash.txt
+  with exactly two lines: crashed_resource=<resource address> and offending_key=<key name>. Then change
+  the configuration so that this path no longer gets the shape that crashed it: reports/shaft-b.txt
+  must say "Shaft B inspected by R. Voss: deepest reading 311 m", computed from the probe's readings,
+  with a clean plan afterwards.
 xp: 350
+difficulty: advanced
+expected_time: 20m
+concepts:
+- crash logs
+- panic traces
+- external data source
+- jsondecode
+module: module-13-debugging
+level: level-18-crash-log-analysis

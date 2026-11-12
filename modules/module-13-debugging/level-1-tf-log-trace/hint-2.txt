@@ -1,0 +1,1 @@
+The failing call is an apply-time call on the probe marker: Terraform asks the provider to create a file whose parent "directory" is actually the index file written by another resource.

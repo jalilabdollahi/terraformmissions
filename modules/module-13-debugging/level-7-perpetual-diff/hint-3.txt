@@ -1,1 +1,1 @@
-Either replace `timestamp()` with a static string, or add `lifecycle { ignore_changes = [content] }` to prevent content drift from triggering updates.
+Create the timestamp once with a `time_static` resource and use its `rfc3339` attribute, and wrap the name list in `sort(...)`. After one apply, `terraform plan` must report no changes.

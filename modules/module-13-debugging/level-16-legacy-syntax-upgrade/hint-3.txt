@@ -1,0 +1,1 @@
+`type = list(string)` / `map(number)` / `string`; `list("a","b")` becomes `["a", "b"]`; `map("k", 1)` becomes `{ k = 1 }`; `depends_on = [local_file.programme]`; and `"${var.stalls}"` becomes `var.stalls`. Interpolation inside longer strings stays.

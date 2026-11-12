@@ -1,0 +1,20 @@
+name: Noticeboard Tug of War
+description: >-
+  Two volunteers at the Thistledown quilting bee each added a Terraform resource that writes the church-hall
+  noticeboard. Every plan now wants to rewrite the file, every apply "fixes" one half and breaks the
+  other, and the board shows only the standing text or only the events list depending on who ran Terraform
+  last.
+objective: >-
+  Make exactly one resource own board/notices.md so that it holds both the standing text and the events
+  list (intro first, a blank line, then "## Events" and the dated bullets) and the plan stays clean
+  on every run. Keep the local values that define the texts.
+xp: 275
+difficulty: advanced
+expected_time: 12m
+concepts:
+- conflicting resources
+- single owner
+- flip-flop diffs
+- state inspection
+module: module-13-debugging
+level: level-10-dueling-resources

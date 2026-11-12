@@ -1,1 +1,0 @@
-Wrap the access: `try(data.local_file.maybe.content, "default content")`.

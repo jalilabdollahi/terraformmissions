@@ -1,0 +1,1 @@
+Four categories: type constraints in quotes (`"list"`, `"map"`, `"string"`), the removed `list()` and `map()` functions, `depends_on` written as strings, and `"${...}"` wrappers around a single expression.

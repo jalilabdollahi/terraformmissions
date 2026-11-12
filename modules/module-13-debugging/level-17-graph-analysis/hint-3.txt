@@ -1,0 +1,1 @@
+Add `depends_on = [local_file.manifest]` to `terraform_data.dispatch`. Then the longest chain is random_pet.batch -> time_sleep.printer_warmup -> labels -> manifest -> dispatch = 5 resources, and `random_pet.batch` has three direct dependents (recipe, printer_warmup, cap_order). Write `hub=random_pet.batch` and `longest_chain=5`.

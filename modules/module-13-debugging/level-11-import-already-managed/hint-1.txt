@@ -1,0 +1,1 @@
+Run `terraform plan` and read why the resource would be destroyed, then compare `terraform state list` with the resources in main.tf.

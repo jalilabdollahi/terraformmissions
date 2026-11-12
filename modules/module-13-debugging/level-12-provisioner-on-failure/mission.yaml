@@ -1,0 +1,20 @@
+name: Silent Darkroom Failure
+description: >-
+  The Silver Halide film lab starts each developing run from a local-exec provisioner. The pipeline
+  has been green all week, yet the darkroom log for batch 114 does not exist and the customers' film
+  is still undeveloped. Someone added a setting to keep the pipeline green when the script complains.
+objective: >-
+  Remove the setting that hides the failure, repair the real cause so the script succeeds, and make
+  Terraform run the provisioner again on the existing resource (it is already in state and counted
+  as successfully created). darkroom/batch-114.log must contain batch=batch-114 bath=20C status=developed,
+  written by the provisioner.
+xp: 300
+difficulty: advanced
+expected_time: 15m
+concepts:
+- on_failure
+- provisioners
+- hidden errors
+- -replace
+module: module-13-debugging
+level: level-12-provisioner-on-failure

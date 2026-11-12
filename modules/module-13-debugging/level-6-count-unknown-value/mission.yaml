@@ -1,0 +1,20 @@
+name: Blind Tasting Count
+description: >-
+  The Ember & Ash hot-sauce lab shuffles five flavours and prints one blind-tasting card for each
+  flavour picked for the panel. Planning stops with "Invalid count argument ... depends on resource
+  attributes that cannot be determined until apply", even though the panel size is just a variable.
+objective: >-
+  Make the number of cards known at plan time while still printing a card per flavour on the shuffled
+  panel: with the default panel_size of 3, apply must create cards/card-1.txt to card-3.txt with three
+  different flavours from the shuffle, and planning with -var panel_size=4 must work and add exactly
+  one more card.
+xp: 275
+difficulty: advanced
+expected_time: 12m
+concepts:
+- count
+- unknown values
+- plan vs apply
+- known after apply
+module: module-13-debugging
+level: level-6-count-unknown-value

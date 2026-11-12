@@ -1,1 +1,1 @@
-Run `terraform validate`. The error says the `count` value must be a non-negative integer, but `-1` is negative.
+Read crash.log from the bottom up: the human-readable `Error:` blocks at the end say which block crashed and what it was decoding, and the line above the `panic:` shows what the provider was doing. Ignore the WARN line about `local_file`; it is not related.

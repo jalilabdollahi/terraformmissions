@@ -1,0 +1,36 @@
+2026-11-09T02:14:07.331+0100 [INFO]  Terraform version: 1.9.8
+2026-11-09T02:14:07.331+0100 [INFO]  Go runtime version: go1.22.9
+2026-11-09T02:14:07.331+0100 [INFO]  CLI args: []string{"terraform", "apply", "-auto-approve"}
+2026-11-09T02:14:07.332+0100 [DEBUG] Attempting to open CLI config file: /home/ci/.terraformrc
+2026-11-09T02:14:07.402+0100 [INFO]  backend/local: starting Apply operation
+2026-11-09T02:14:07.455+0100 [WARN]  local_file.inspection_report: argument "sensitive_content" is deprecated (not used in this configuration)
+2026-11-09T02:14:07.471+0100 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/local\"]" visited
+2026-11-09T02:14:07.472+0100 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/external\"]" visited
+2026-11-09T02:14:07.474+0100 [TRACE] dag/walk: vertex "data.external.shaft_scan (expand)" starting visit
+2026-11-09T02:14:07.475+0100 [TRACE] provider.terraform-provider-external_v2.3.4_x5: Calling data source: tf_data_source_type=external tf_rpc=ReadDataSource
+2026-11-09T02:14:07.481+0100 [DEBUG] provider.terraform-provider-external_v2.3.4_x5: Executing program: program=python3 args=./scripts/probe.py
+2026-11-09T02:14:07.533+0100 [DEBUG] provider.terraform-provider-external_v2.3.4_x5: Program finished: exit_status=0 stdout_bytes=104
+2026-11-09T02:14:07.534+0100 [TRACE] provider.terraform-provider-external_v2.3.4_x5: Decoding program result into map[string]string
+panic: interface conversion: interface {} is map[string]interface {}, not string
+
+goroutine 38 [running]:
+github.com/hashicorp/terraform-provider-external/internal/provider.(*externalDataSource).Read(0xc0001a4b40, {0x1b2c3d8, 0xc00046a2d0}, {{{0x1b3f1e0, 0xc00046a420}, {0x1b3f1e0, 0xc00046a450}}, {0x1b3d8c0, 0xc00046a480}}, 0xc0002f9a68)
+	/go/pkg/mod/github.com/hashicorp/terraform-provider-external@v2.3.4/internal/provider/data_source.go:187 +0x9f4
+github.com/hashicorp/terraform-plugin-framework/internal/fwserver.(*Server).ReadDataSource(0xc000212180, {0x1b2c3d8, 0xc00046a2d0}, 0xc0002f9bb8, 0xc0002f9d90)
+	/go/pkg/mod/github.com/hashicorp/terraform-plugin-framework@v1.4.2/internal/fwserver/server_readdatasource.go:100 +0x4b6
+github.com/hashicorp/terraform-plugin-go/tfprotov6/tf6server.(*server).ReadDataSource(0xc0003a2160, {0x1b2c3d8, 0xc00046a2d0}, 0xc0001c2380)
+	/go/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.19.1/tfprotov6/tf6server/server.go:556 +0x3a7
+
+Error: Plugin did not respond
+
+  with data.external.shaft_scan,
+  on main.tf line 3, in data "external" "shaft_scan":
+   3: data "external" "shaft_scan" {
+
+The plugin encountered an error, and failed to respond to the plugin.(*GRPCProvider).ReadDataSource call. The plugin logs may contain more details.
+
+Error: Terraform crashed!
+
+The plugin crashed while decoding the value of key "readings" in the program result.
+The key held a JSON object where only strings are allowed.
+Crash report written to crash.log.

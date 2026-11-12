@@ -1,0 +1,1 @@
+Remove `on_failure = continue` and the trailing `C` after `${var.bath_temp_c}`. The resource is already in state, so make Terraform recreate it: `terraform apply -replace=terraform_data.develop_batch`.
