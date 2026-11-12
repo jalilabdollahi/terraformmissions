@@ -1,1 +1,1 @@
-Run `terraform test` and read the very first error. It points at line 1 of the test file, not at the fare code.
+Run `terraform test` and read the very first error. It points at line 1 of the test file, not at the price code.

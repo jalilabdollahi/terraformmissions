@@ -1,5 +1,5 @@
-variable "trucks" {
-  description = "Trucks that registered for the rally."
+variable "shoots" {
+  description = "Productions that applied for a street closure."
   type        = list(string)
-  default     = ["taco-tide", "dumpling-dash", "waffle-wagon", "smoky-sam"]
+  default     = ["harbour-heist", "rooftop-chase", "diner-scene", "alley-duel"]
 }

@@ -6,7 +6,7 @@ tm_assert_file "$T" "tests/dispatch.tftest.hcl is missing"
 tm_assert_config_has '^mock_provider[[:space:]]+"random"' "the random provider must stay mocked"
 tm_assert_config_has 'mock_resource[[:space:]]+"random_id"' "random_id is no longer mocked"
 tm_assert_config_has 'mock_resource[[:space:]]+"random_integer"' "random_integer is no longer mocked"
-tm_assert_config_has 'DW-AB12CD34' "the ticket assertion must expect DW-AB12CD34"
+tm_assert_config_has 'WC-AB12CD34' "the ticket assertion must expect WC-AB12CD34"
 tm_assert_config_has 'zone-4' "the zone assertion must expect zone-4"
 n=$(grep -cE '^run[[:space:]]+"' "$T")
 [[ "$n" -eq 3 ]] || tm_fail "expected the three original runs, found $n"
@@ -38,7 +38,7 @@ PY
     tm_fail "the suite passes although the code has this bug: $label"
   fi
 }
-bug "ticket prefix changed" '"DW-${' '"DX-${'
+bug "ticket prefix changed" '"WC-${' '"WX-${'
 bug "ticket not upper-cased" 'upper(random_id.ticket.hex)' 'random_id.ticket.hex'
 bug "zone label changed" '"zone-${' '"z-${'
 tm_pass "the mock pins both random values and the format assertions bite"

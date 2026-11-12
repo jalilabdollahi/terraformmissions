@@ -1,8 +1,8 @@
-name: "Night Courier Dead Drop"
+name: "Night Taxi Dispatch Hand-off"
 description: >-
-  A night courier service generates a one-shot session token inside a small issuer module and leaves it in a drop box through a provisioner. The token comes from an ephemeral resource so it should never be stored, yet Terraform refuses to plan the root module.
+  A night taxi rank generates a one-shot session token inside a small issuer module and leaves it in a dispatch box through a provisioner. The token comes from an ephemeral resource so it should never be stored, yet Terraform refuses to plan the root module.
 objective: >-
-  Make the config apply so the token created by the issuer module's ephemeral random_password reaches drop/session.token, while it appears nowhere in the state file. Keep the ephemeral resource in the module, and do not replace it with a regular random_password.
+  Make the config apply so the token created by the issuer module's ephemeral random_password reaches handoff/session.token, while it appears nowhere in the state file. Keep the ephemeral resource in the module, and do not replace it with a regular random_password.
 xp: 325
 difficulty: advanced
 expected_time: 15m

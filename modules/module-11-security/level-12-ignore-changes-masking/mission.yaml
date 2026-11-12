@@ -1,6 +1,6 @@
 name: "Lindenhurst Gate Rules"
 description: >-
-  The allotment association tightened its gate rules in code last month, and terraform plan has reported no changes ever since. When a member checked the actual rules file, the gate was still open to the whole internet. Someone silenced a noisy diff during a rushed release.
+  The retirement village committee tightened its gate rules in code last month, and terraform plan has reported no changes ever since. When a resident checked the actual rules file, the gate was still open to the whole internet. Someone silenced a noisy diff during a rushed release.
 objective: >-
   Find what keeps the tightened rules from being applied. After a successful apply, gate/access-rules.json must allow only 10.20.0.0/16 with mode 0640, and later edits to the rules in code must show up in plans again.
 xp: 300

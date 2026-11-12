@@ -13,6 +13,6 @@ ephemeral "random_password" "session" {
 }
 
 output "session_token" {
-  description = "one-shot token for the courier hand-off"
+  description = "one-shot token for the taxi hand-off"
   value       = ephemeral.random_password.session.result
 }

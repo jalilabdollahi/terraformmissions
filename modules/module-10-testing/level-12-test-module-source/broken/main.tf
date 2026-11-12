@@ -1,11 +1,11 @@
-module "blocks" {
-  source = "./modules/block"
+module "tiles" {
+  source = "./modules/tile"
 }
 
-module "border" {
-  source = "./modules/border"
+module "frieze" {
+  source = "./modules/frieze"
 }
 
 output "total_cm2" {
-  value = module.blocks.fabric_cm2 + module.border.border_cm2
+  value = module.tiles.tile_cm2 + module.frieze.frieze_cm2
 }

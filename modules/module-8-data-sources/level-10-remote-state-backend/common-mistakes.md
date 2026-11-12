@@ -6,6 +6,6 @@
   adapts to the producer, not the other way round.
 - **Using `../depot-team/...`.** Paths are relative to where Terraform runs, not the `.tf` file;
   `${path.module}` is the safe anchor.
-- **Hard-coding `NBD-04` and the other values.** The validator changes the bay count in the depot
+- **Hard-coding `NGD-04` and the other values.** The validator changes the bay count in the depot
   team's state and expects the header to follow.
 - **Switching `backend = "local"` to `"s3"` or another type.** There is no network or bucket here.

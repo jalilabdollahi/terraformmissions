@@ -4,7 +4,7 @@ Preconditions (and postconditions) are guardrails attached to a resource, data s
 `lifecycle`. If the condition is false, Terraform stops with a custom error. They are a different kind of
 check from variable validation because they can look at several inputs or at other resources together, and
 they belong to the object they protect. In tests, `expect_failures` accepts these objects directly:
-`terraform_data.crossing_permit`, `data.some.thing`, `output.name`, or `check.name`.
+`terraform_data.display_permit`, `data.some.thing`, `output.name`, or `check.name`.
 
 Two ways to get the negative test wrong appear in this level. Naming the **wrong object**, such as the
 variable that feeds the rule, means the real failure is "unexpected" and the one you expected never happens;

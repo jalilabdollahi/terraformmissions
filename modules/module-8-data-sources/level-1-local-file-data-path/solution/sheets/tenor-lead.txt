@@ -1,0 +1,4 @@
+pan: Tenor Lead
+notes: 29
+gauge: 1.2mm
+tuner: Marcus Boodoo

@@ -1,13 +1,13 @@
-# The stall roster of the Emberfall hot-sauce festival. A pre-commit step also prints the
+# The sculpture roster of the Emberfall ice sculpture festival. A pre-commit step also prints the
 # repository's active ignore rules so reviewers can see what is (not) being committed.
 variable "festival" {
   type    = string
-  default = "Emberfall Chilli Weekend"
+  default = "Emberfall Frostbite Weekend"
 }
 
-variable "stalls" {
+variable "sculptures" {
   type    = list(string)
-  default = ["smoky-habanero", "verde-fire", "ghost-pepper-co"]
+  default = ["frozen-dragon", "aurora-arch", "polar-bear-pair"]
 }
 
 locals {
@@ -17,9 +17,9 @@ locals {
   ]
 }
 
-resource "local_file" "stall_roster" {
-  filename = "${path.module}/festival/stalls.txt"
-  content  = "${var.festival}\n${join("\n", var.stalls)}\n"
+resource "local_file" "sculpture_roster" {
+  filename = "${path.module}/festival/sculptures.txt"
+  content  = "${var.festival}\n${join("\n", var.sculptures)}\n"
 }
 
 resource "local_file" "ignore_audit" {

@@ -1,23 +1,23 @@
-variable "courier_route" {
+variable "taxi_route" {
   type    = string
-  default = "harbour-to-hilltop"
+  default = "station-to-airport"
 }
 
 module "issuer" {
   source = "./modules/issuer"
 }
 
-# Leaves the one-shot token in the courier's drop box. The token itself must never be stored.
+# Leaves the one-shot token in the dispatch box. The token itself must never be stored.
 resource "terraform_data" "handoff" {
   input = {
-    route = var.courier_route
+    route = var.taxi_route
   }
 
   provisioner "local-exec" {
-    command = "bash ${path.module}/bin/drop.sh"
+    command = "bash ${path.module}/bin/handoff.sh"
 
     environment = {
-      COURIER_ROUTE = self.input.route
+      TAXI_ROUTE = self.input.route
       SESSION_TOKEN = module.issuer.session_token
     }
   }

@@ -1,0 +1,10 @@
+{
+  "stock": [
+    {"id": "T-01", "class": "garden", "status": "serviceable", "age_years": 3},
+    {"id": "T-02", "class": "power",   "status": "serviceable", "age_years": 6},
+    {"id": "T-03", "class": "power",   "status": "repair",      "age_years": 9},
+    {"id": "T-04", "class": "garden", "status": "serviceable", "age_years": 7},
+    {"id": "T-05", "class": "power",   "status": "serviceable", "age_years": 2},
+    {"id": "T-06", "class": "decor",  "status": "retired",     "age_years": 14}
+  ]
+}

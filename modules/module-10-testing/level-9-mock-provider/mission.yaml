@@ -1,11 +1,11 @@
-name: Dog Walk Dispatch Mock
+name: Window Crew Dispatch Mock
 description: >-
-  A dog-walking agency stamps every job with a random ticket and a random dispatch zone. To test the
+  A window-cleaning company stamps every job with a random ticket and a random dispatch zone. To test the
   stamp format deterministically the team wrapped the random provider in a mock, but the mock either
   fails to load or hands out random values anyway.
 objective: >-
   Repair the mock_provider "random" block in tests/dispatch.tftest.hcl so that mocked values reach the
-  outputs: ticket DW-AB12CD34 and zone-4. All three runs must pass without removing the mock.
+  outputs: ticket WC-AB12CD34 and zone-4. All three runs must pass without removing the mock.
 xp: 265
 difficulty: advanced
 expected_time: 12m

@@ -1,11 +1,11 @@
-name: Kayak Club Rota
+name: Tool Library Rota
 description: >-
-  The kayak club's boat shed keeps a JSON fleet register. The weekend rota must list the
-  serviceable boats by class and send the broken ones to the repair bench, but the
+  The tool library's stock room keeps a JSON stock register. The weekend rota must list the
+  serviceable tools by class and send the broken ones to the mending corner, but the
   expression that filters the register does not even evaluate.
 objective: >-
-  Fix the filter so ready_by_class is {"river": ["K-01","K-04"], "sea": ["K-02","K-05"]}
-  and needs_repair is ["K-03"]. The outputs must keep being computed from the register.
+  Fix the filter so ready_by_class is {"garden": ["T-01","T-04"], "power": ["T-02","T-05"]}
+  and needs_repair is ["T-03"]. The outputs must keep being computed from the register.
 xp: 200
 difficulty: intermediate
 expected_time: 12m

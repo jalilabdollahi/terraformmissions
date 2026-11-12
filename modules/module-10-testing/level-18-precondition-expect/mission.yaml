@@ -1,7 +1,7 @@
-name: Heavy Load Bridge Permit
+name: Fireworks Display Permit
 description: >-
-  A county issues bridge crossing permits through Terraform, and two preconditions on the permit resource refuse
-  vehicles that are too heavy or too tall. The negative tests meant to prove that the refusals work report
+  The county fireworks permit office issues display permits through Terraform, and two preconditions on the permit resource refuse
+  displays that carry too much explosive or stack their racks too tall. The negative tests meant to prove that the refusals work report
   failures of their own.
 objective: >-
   Make within_limits, too_heavy and too_tall pass, with each negative run using expect_failures on the object

@@ -1,1 +1,1 @@
-`fileset()` returns file names relative to the folder it scanned, so `each.value` is just `b07-oak.txt`. A `for_each` data source is a map of instances, so the `[*]` splat does not work on it. The map keys are the full file names.
+`fileset()` returns file names relative to the folder it scanned, so `each.value` is just `l07-kelp.txt`. A `for_each` data source is a map of instances, so the `[*]` splat does not work on it. The map keys are the full file names.

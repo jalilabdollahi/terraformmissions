@@ -1,1 +1,1 @@
-Use `source = "./modules/block"` and `source = "./modules/border"`. After changing a module source, run `terraform init` once more so Terraform registers it, then `terraform test`.
+Use `source = "./modules/tile"` and `source = "./modules/frieze"`. After changing a module source, run `terraform init` once more so Terraform registers it, then `terraform test`.

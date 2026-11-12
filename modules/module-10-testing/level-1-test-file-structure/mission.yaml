@@ -1,11 +1,11 @@
-name: Toll Plaza Fare Table
+name: Photo Booth Price Table
 description: >-
-  The Eastgate toll plaza keeps its fare formula in Terraform and a colleague who normally writes
+  The Eastgate photo-booth kiosk keeps its pricing formula in Terraform and a colleague who normally writes
   pytest added a test file for it. Running terraform test refuses to even start, complaining
-  about the blocks in tests/fares.tftest.hcl.
+  about the blocks in tests/prices.tftest.hcl.
 objective: >-
-  Make terraform test run and pass all three scenarios (single_axle, three_axles, discount_half) in
-  tests/fares.tftest.hcl without removing any of them or weakening what they assert.
+  Make terraform test run and pass all three scenarios (single_print, three_prints, discount_half) in
+  tests/prices.tftest.hcl without removing any of them or weakening what they assert.
 xp: 225
 difficulty: advanced
 expected_time: 8m

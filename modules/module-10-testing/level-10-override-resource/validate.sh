@@ -3,11 +3,11 @@ source "$TM_LIB"
 
 T=tests/ticket.tftest.hcl
 tm_assert_file "$T" "tests/ticket.tftest.hcl is missing"
-tm_assert_config_has 'bench-3/turns-8' "the default ticket assertion has been removed"
+tm_assert_config_has 'station-3/scoops-8' "the default ticket assertion has been removed"
 tm_assert_config_has 'run\.ticket_default\.ticket' "the reprint assertion has been removed"
 n=$(grep -cE '^[[:space:]]*override_resource[[:space:]]*\{' "$T")
 [[ "$n" -ge 2 ]] || tm_fail "expected two override_resource blocks, found $n"
-[[ -f modules/mainspring/main.tf ]] || tm_fail "the mainspring module is gone"
+[[ -f modules/glitter/main.tf ]] || tm_fail "the glitter module is gone"
 
 tm_tf test -verbose
 rc=$?
@@ -38,7 +38,7 @@ PY
     tm_fail "the suite passes although $label"
   fi
 }
-flip "the ticket prefix is wrong" ticket.tf '"bench-${' '"slot-${'
-flip "the module no longer feeds the ticket" ticket.tf 'module.mainspring.turns' '99'
-flip "the root resource is renamed" ticket.tf 'resource "random_integer" "bench_slot"' 'resource "random_integer" "bench_slot_renamed"'
+flip "the ticket prefix is wrong" ticket.tf '"station-${' '"slot-${'
+flip "the module no longer feeds the ticket" ticket.tf 'module.glitter.scoops' '99'
+flip "the root resource is renamed" ticket.tf 'resource "random_integer" "station_slot"' 'resource "random_integer" "station_slot_renamed"'
 tm_pass "every override target resolves and the ticket assertions bite"

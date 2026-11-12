@@ -1,1 +1,1 @@
-In `too_heavy` use `expect_failures = [terraform_data.crossing_permit]`. In `too_tall`, keep that same address but also set `vehicle_height_m = 5.2` (the clearance is 4.5 m); at the default 3.0 m nothing fails.
+In `too_heavy` use `expect_failures = [terraform_data.display_permit]`. In `too_tall`, keep that same address but also set `rack_height_m = 5.2` (the limit is 4.5 m); at the default 3.0 m nothing fails.

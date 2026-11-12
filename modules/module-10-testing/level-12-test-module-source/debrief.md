@@ -12,7 +12,7 @@ is wrong. Second, **installation**: module sources used by test files are record
 runs. After editing one you must init again; otherwise Terraform reports the module as not installed even
 though the directory exists.
 
-Note also that sources must start with `./` or `../` for local paths. A bare `modules/block` is read as a
+Note also that sources must start with `./` or `../` for local paths. A bare `modules/tile` is read as a
 registry address and rejected. Remote sources (registry, Git) work the same way, which lets a test pull a
 helper from another repository.
 

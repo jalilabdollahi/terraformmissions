@@ -1,1 +1,1 @@
-Change `filename` in `data "local_file" "tuning_sheet"` to `"${path.module}/sheets/principal-8.txt"`. Keep the `path.module` prefix.
+Change `filename` in `data "local_file" "tuning_sheet"` to `"${path.module}/sheets/tenor-lead.txt"`. Keep the `path.module` prefix.

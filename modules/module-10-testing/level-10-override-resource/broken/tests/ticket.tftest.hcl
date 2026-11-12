@@ -1,5 +1,5 @@
 override_resource {
-  target = random_integer.tension
+  target = random_integer.dose
   values = {
     result = 8
   }
@@ -7,15 +7,15 @@ override_resource {
 
 run "ticket_default" {
   override_resource {
-    target = random_integer.bench
+    target = random_integer.station
     values = {
       result = 3
     }
   }
 
   assert {
-    condition     = output.ticket == "bench-3/turns-8"
-    error_message = "slot 3 and 8 winding turns give bench-3/turns-8"
+    condition     = output.ticket == "station-3/scoops-8"
+    error_message = "slot 3 and 8 glitter scoops give station-3/scoops-8"
   }
 }
 

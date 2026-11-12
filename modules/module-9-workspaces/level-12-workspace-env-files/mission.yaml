@@ -1,12 +1,12 @@
-name: Mast Profiles
+name: Wheel Profiles
 description: >-
-  Pinewood Mobile, a mobile phone mast operator, keeps one YAML settings file per environment in env/, chosen by workspace name.
+  Pinewood Ferris Wheel Hire keeps one YAML settings file per environment in env/, chosen by workspace name.
   In the dev workspace the build dies complaining about an attribute on a string, and in prod
   there is no settings file for the workspace at all.
 objective: >-
   In workspaces dev, staging and prod the config must load env/<workspace>.yaml and write
-  out/<workspace>-mast.conf. The outputs carrier and power_watts must be 796.5/50 for dev,
-  1842.5/200 for staging and 2652.5/1000 for prod.
+  out/<workspace>-wheel.conf. The outputs rotation and pod_count must be 412.5/12 for dev,
+  540.5/24 for staging and 725.5/36 for prod.
 xp: 195
 difficulty: intermediate
 expected_time: 12m

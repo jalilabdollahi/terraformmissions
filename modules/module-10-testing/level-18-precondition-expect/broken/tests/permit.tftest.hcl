@@ -2,8 +2,8 @@ run "within_limits" {
   command = plan
 
   assert {
-    condition     = output.permit_code == "permit:28t/3m"
-    error_message = "a 28 t, 3 m vehicle gets an ordinary permit"
+    condition     = output.permit_code == "permit:28kg/3m"
+    error_message = "a 28 kg, 3 m rack display gets an ordinary permit"
   }
 }
 
@@ -11,11 +11,11 @@ run "too_heavy" {
   command = plan
 
   variables {
-    vehicle_tonnes = 55
+    shell_kg = 55
   }
 
   expect_failures = [
-    var.vehicle_tonnes,
+    var.shell_kg,
   ]
 }
 
@@ -23,6 +23,6 @@ run "too_tall" {
   command = plan
 
   expect_failures = [
-    terraform_data.crossing_permit,
+    terraform_data.display_permit,
   ]
 }

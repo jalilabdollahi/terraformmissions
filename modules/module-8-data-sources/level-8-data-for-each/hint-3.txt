@@ -1,1 +1,1 @@
-Build the full path: `"${path.module}/samples/${each.value}"`. Replace the splat with `[for sheet in data.local_file.sample : sheet.content]` (or `values(...)`). Use `trimsuffix(key, ".txt")` as the key in the `brix` local.
+Build the full path: `"${path.module}/samples/${each.value}"`. Replace the splat with `[for sheet in data.local_file.sample : sheet.content]` (or `values(...)`). Use `trimsuffix(key, ".txt")` as the key in the `growth` local.

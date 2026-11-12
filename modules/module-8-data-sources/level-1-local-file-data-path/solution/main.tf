@@ -1,24 +1,24 @@
-# Pipe-organ voicing: the tuning sheet is kept as a plain text file next to this config.
+# Steelpan tuning yard: the tuning sheet is kept as a plain text file next to this config.
 
 data "local_file" "tuning_sheet" {
-  filename = "${path.module}/sheets/principal-8.txt"
+  filename = "${path.module}/sheets/tenor-lead.txt"
 }
 
 locals {
   sheet_lines = split("\n", trimspace(data.local_file.tuning_sheet.content))
-  stop_name   = trimspace(split(":", local.sheet_lines[0])[1])
-  pipe_count  = tonumber(regex("pipes: ([0-9]+)", data.local_file.tuning_sheet.content)[0])
+  pan_name   = trimspace(split(":", local.sheet_lines[0])[1])
+  note_count  = tonumber(regex("notes: ([0-9]+)", data.local_file.tuning_sheet.content)[0])
 }
 
-resource "local_file" "chest_card" {
-  filename = "${path.module}/out/chest-card.txt"
-  content  = "Wind chest card\nStop: ${local.stop_name}\nPipes to voice: ${local.pipe_count}\n"
+resource "local_file" "pan_card" {
+  filename = "${path.module}/out/pan-card.txt"
+  content  = "Pan card\nPan: ${local.pan_name}\nNotes to tune: ${local.note_count}\n"
 }
 
-output "stop_name" {
-  value = local.stop_name
+output "pan_name" {
+  value = local.pan_name
 }
 
-output "pipe_count" {
-  value = local.pipe_count
+output "note_count" {
+  value = local.note_count
 }

@@ -1,22 +1,22 @@
-# Kayak club: the fleet register is a JSON file kept by the boat shed. The rota needs the boats
-# that can go out today, grouped by class, and the list that must go to the repair bench.
+# Tool library: the stock register is a JSON file kept in the stock room. The rota needs the tools
+# that can go out today, grouped by class, and the list that must go to the mending corner.
 
 data "local_file" "register" {
-  filename = "${path.module}/club/fleet.json"
+  filename = "${path.module}/library/stock.json"
 }
 
 locals {
-  fleet = jsondecode(data.local_file.register.content).fleet
+  stock = jsondecode(data.local_file.register.content).stock
 
-  ready_by_class = { for boat in local.fleet : boat.class => boat.id... if boat.status == "serviceable" }
-  needs_repair   = [for boat in local.fleet : boat.id if boat.status == "repair"]
+  ready_by_class = { for tool in local.stock : tool.class => tool.id... if tool.status == "serviceable" }
+  needs_repair   = [for tool in local.stock : tool.id if tool.status == "repair"]
 }
 
 resource "local_file" "rota" {
-  filename = "${path.module}/club/rota.txt"
+  filename = "${path.module}/library/rota.txt"
   content = join("\n", concat(
     [for class, ids in local.ready_by_class : "${class}: ${join(", ", ids)}"],
-    ["bench: ${join(", ", local.needs_repair)}", ""]
+    ["mending: ${join(", ", local.needs_repair)}", ""]
   ))
 }
 

@@ -1,8 +1,8 @@
-# Casino count room: the drop safe's combination is kept in a file on the cage laptop. The door card for the
-# pit boss is generated from it.
+# Charity shop till room: the takings safe's combination is kept in a file on the back-office laptop. The door card
+# for the shift manager is generated from it.
 
 data "local_file" "combination" {
-  filename = "${path.module}/countroom/combination.txt"
+  filename = "${path.module}/tillroom/combination.txt"
 }
 
 locals {
@@ -10,9 +10,9 @@ locals {
 }
 
 resource "local_file" "door_card" {
-  filename        = "${path.module}/countroom/door-card.txt"
+  filename        = "${path.module}/tillroom/door-card.txt"
   file_permission = "0644"
-  content         = "Pit boss - safe combination: ${local.dial_code}\n"
+  content         = "Shift manager - safe combination: ${local.dial_code}\n"
 }
 
 output "combination" {

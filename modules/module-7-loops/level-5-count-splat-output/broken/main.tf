@@ -1,16 +1,16 @@
-# Street-food rally: one trading permit per truck.
+# Film shoots: one street-closure permit per production.
 
-resource "local_file" "permit" {
-  count    = length(var.trucks)
-  filename = "${path.module}/permits/${var.trucks[count.index]}.txt"
-  content  = "Trading permit for ${var.trucks[count.index]} - pitch ${count.index + 1}\n"
+resource "local_file" "closure" {
+  count    = length(var.shoots)
+  filename = "${path.module}/closures/${var.shoots[count.index]}.txt"
+  content  = "Street-closure permit for ${var.shoots[count.index]} - slot ${count.index + 1}\n"
 }
 
-# Council portal expects a list with the path of every permit.
-output "permit_paths" {
-  value = local_file.permit[0].filename
+# Film office portal expects a list with the path of every closure permit.
+output "closure_paths" {
+  value = local_file.closure[0].filename
 }
 
-output "permit_count" {
-  value = length(local_file.permit)
+output "closure_count" {
+  value = length(local_file.closure)
 }

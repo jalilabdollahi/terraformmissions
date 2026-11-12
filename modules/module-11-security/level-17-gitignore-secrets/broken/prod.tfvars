@@ -1,2 +1,2 @@
-festival = "Emberfall Chilli Weekend"
-stall_payment_key = "demo-not-a-real-secret-emberfall-0042"
+festival = "Emberfall Frostbite Weekend"
+supplier_payment_key = "demo-not-a-real-secret-emberfall-0042"

@@ -1,7 +1,7 @@
-# Gate access rules for the Lindenhurst allotment association.
+# Gate access rules for the Lindenhurst Gated Retirement Village.
 locals {
   rules = {
-    site       = "lindenhurst-allotments"
+    site       = "lindenhurst-village"
     allow_from = ["10.20.0.0/16"]
     deny_other = true
   }

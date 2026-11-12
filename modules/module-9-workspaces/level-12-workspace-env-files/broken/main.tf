@@ -1,18 +1,18 @@
-# Pinewood Mobile mast settings, loaded from env/<workspace>.yaml.
+# Pinewood Ferris Wheel Hire settings, loaded from env/<workspace>.yaml.
 
 locals {
   settings = file("${path.module}/env/${terraform.workspace}.yaml")
 }
 
-resource "local_file" "mast" {
-  filename = "${path.module}/out/${terraform.workspace}-mast.conf"
-  content  = "carrier_mhz=${local.settings.carrier_mhz}\npower_watts=${local.settings.power_watts}\n"
+resource "local_file" "wheel" {
+  filename = "${path.module}/out/${terraform.workspace}-wheel.conf"
+  content  = "spin_seconds=${local.settings.spin_seconds}\npod_count=${local.settings.pod_count}\n"
 }
 
-output "carrier" {
-  value = local.settings.carrier_mhz
+output "rotation" {
+  value = local.settings.spin_seconds
 }
 
-output "power_watts" {
-  value = local.settings.power_watts
+output "pod_count" {
+  value = local.settings.pod_count
 }

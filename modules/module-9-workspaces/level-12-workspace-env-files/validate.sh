@@ -22,18 +22,18 @@ probe_apply() {
 
 tm_assert_config_has 'terraform\.workspace' "the settings file must be chosen with terraform.workspace"
 tm_assert_config_has 'yamldecode' "the YAML file must be decoded"
-tm_assert_config_lacks '2652\.5|1842\.5|796\.5' "do not copy the settings values into the configuration"
+tm_assert_config_lacks '725\.5|540\.5|412\.5' "do not copy the settings values into the configuration"
 
 probe_init
-check_env() {  # workspace carrier power
+check_env() {  # workspace rotation pods
   probe_apply "$1"
   local f p
-  f=$(pt output -raw carrier 2>/dev/null); p=$(pt output -raw power_watts 2>/dev/null)
-  [[ "$f" == "$2" ]] || tm_fail "workspace '$1': carrier is '$f', expected $2"
-  [[ "$p" == "$3" ]] || tm_fail "workspace '$1': power_watts is '$p', expected $3"
-  grep -qx "carrier_mhz=$2" "$PROBE/out/$1-mast.conf" || tm_fail "out/$1-mast.conf does not contain carrier_mhz=$2"
+  f=$(pt output -raw rotation 2>/dev/null); p=$(pt output -raw pod_count 2>/dev/null)
+  [[ "$f" == "$2" ]] || tm_fail "workspace '$1': rotation is '$f', expected $2"
+  [[ "$p" == "$3" ]] || tm_fail "workspace '$1': pod_count is '$p', expected $3"
+  grep -qx "spin_seconds=$2" "$PROBE/out/$1-wheel.conf" || tm_fail "out/$1-wheel.conf does not contain spin_seconds=$2"
 }
-check_env dev 796.5 50
-check_env staging 1842.5 200
-check_env prod 2652.5 1000
+check_env dev 412.5 12
+check_env staging 540.5 24
+check_env prod 725.5 36
 tm_pass "dev, staging and prod each load their own settings file"

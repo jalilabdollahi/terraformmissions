@@ -19,15 +19,15 @@ refuse "a public shelf"            -var 'shelves={vault={retention_days=400,publ
 C=$(tm_plan_code -var 'shelves={vault={retention_days=30,public=false}}')
 [[ "$C" == "0" || "$C" == "2" ]] || { tm_show_last; tm_fail "a shelf at exactly 30 days, private, must be allowed"; }
 
-# the archive's own shelves must satisfy its own policy
+# the shop's own shelves must satisfy its own policy
 tm_apply
-tm_assert_output_jq shelf_names 'length == 4' "the four archive shelves must all still exist"
-for s in intake reels ledger lobby; do
+tm_assert_output_jq shelf_names 'length == 4' "the four shop shelves must all still exist"
+for s in intake watches ledger window; do
   f="shelves/$s.manifest"
   tm_assert_file "$f" "manifest for shelf $s is missing"
   grep -q '^public=false$' "$f" || tm_fail "shelf $s is still public"
   days=$(sed -n 's/^retention_days=//p' "$f")
-  [[ "$days" -ge 30 ]] || tm_fail "shelf $s keeps material only $days days"
+  [[ "$days" -ge 30 ]] || tm_fail "shelf $s holds pledged items only $days days"
 done
 tm_assert_no_changes
 tm_pass "the policy is enforced by a precondition and every real shelf complies"

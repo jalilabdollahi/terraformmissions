@@ -1,11 +1,11 @@
-name: Organ Loft Tuning Sheet
+name: Steelpan Tuning Sheet
 description: >-
-  The voicer at St Brannock's church keeps each organ stop's tuning notes in a text
-  file. Terraform is supposed to read the sheet and print a wind-chest card, but the
-  plan dies before a single pipe is counted.
+  The tuner at the Calypso Hill steelpan yard keeps each pan's tuning notes in a text
+  file. Terraform is supposed to read the sheet and print a pan card, but the
+  plan dies before a single note is counted.
 objective: >-
-  Make the data source read the real tuning sheet so that output stop_name is
-  "Principal 8'" and pipe_count is 56, and out/chest-card.txt is generated from it.
+  Make the data source read the real tuning sheet so that output pan_name is
+  "Tenor Lead" and note_count is 29, and out/pan-card.txt is generated from it.
   The values must keep coming from the sheet, not from the config.
 xp: 150
 difficulty: intermediate

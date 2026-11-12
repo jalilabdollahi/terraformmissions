@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 source "$TM_LIB"
 tm_assert_file .gitignore "the .gitignore file is missing"
-command -v git >/dev/null 2>&1 || tm_fail "git is needed for this mission's validator but is not installed"
+command -v git >/dev/null 2>&1 || tm_fail "git is needed for this mission's validator but is not insculptureed"
 
 tm_validate "the configuration does not validate"
 tm_apply
@@ -28,14 +28,14 @@ MUST_IGNORE=(
   "terraform.tfvars"
   "creds.tfvars.json"
   "crash.log"
-  "modules/stalls/.terraform/modules/modules.json"
+  "modules/sculptures/.terraform/modules/modules.json"
 )
 MUST_TRACK=(
   "main.tf"
   "terraform.tf"
   ".terraform.lock.hcl"
   "terraform.tfvars.example"
-  "modules/stalls/main.tf"
+  "modules/sculptures/main.tf"
 )
 for f in "${MUST_IGNORE[@]}" "${MUST_TRACK[@]}"; do mk "$f"; done
 

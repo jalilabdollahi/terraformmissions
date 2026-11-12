@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 source "$TM_LIB"
 
-T=tests/kit.tftest.hcl
-tm_assert_file "$T" "tests/kit.tftest.hcl is missing"
-for r in block_fabric border_fabric kit_total; do
+T=tests/panel.tftest.hcl
+tm_assert_file "$T" "tests/panel.tftest.hcl is missing"
+for r in tile_area frieze_area panel_total; do
   tm_assert_config_has "^run[[:space:]]+\"$r\"" "run \"$r\" is missing"
 done
-tm_assert_config_has 'fabric_cm2[[:space:]]*==[[:space:]]*3468' "the block fabric assertion (3468) is gone"
-tm_assert_config_has 'border_cm2[[:space:]]*==[[:space:]]*7400' "the border fabric assertion (7400) is gone"
+tm_assert_config_has 'tile_cm2[[:space:]]*==[[:space:]]*3468' "the tile area assertion (3468) is gone"
+tm_assert_config_has 'frieze_cm2[[:space:]]*==[[:space:]]*7400' "the frieze area assertion (7400) is gone"
 
 # every module source in the test file must be an existing local directory
 python3 - "$T" <<'PY'
@@ -47,6 +47,6 @@ PY
   (cd "$d" && terraform init -no-color && terraform test -no-color) >"$TM_TMP/cut.out" 2>&1 \
     && tm_fail "the suite passes although $why"
 }
-cut "block seam allowance is wrong" modules/block/main.tf '(var.edge_cm + 2) * (var.edge_cm + 2)' '(var.edge_cm + 1) * (var.edge_cm + 1)'
-cut "border corners are forgotten" modules/border/main.tf ' + 4 * var.strip_cm * var.strip_cm' ''
+cut "tile grout allowance is wrong" modules/tile/main.tf '(var.edge_cm + 2) * (var.edge_cm + 2)' '(var.edge_cm + 1) * (var.edge_cm + 1)'
+cut "frieze corners are forgotten" modules/frieze/main.tf ' + 4 * var.strip_cm * var.strip_cm' ''
 tm_pass "both helper modules are tested at their own boundary and mutants are caught"

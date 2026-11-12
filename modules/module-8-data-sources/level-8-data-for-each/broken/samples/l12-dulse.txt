@@ -1,0 +1,2 @@
+growth: 24.1
+nitrate: 5.8

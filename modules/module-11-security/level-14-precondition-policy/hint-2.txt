@@ -1,1 +1,1 @@
-The condition only checks retention_days > 0 and never looks at the public flag, so almost anything passes. Once it is tightened, the archive's own default shelves must also comply.
+The condition only checks retention_days > 0 and never looks at the public flag, so almost anything passes. Once it is tightened, the shop's own default shelves must also comply.

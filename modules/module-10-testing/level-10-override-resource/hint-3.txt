@@ -1,1 +1,1 @@
-Use `target = random_integer.bench_slot` for the root resource and `target = module.mainspring.random_integer.tension` for the one inside the module. Keep `values` as they are.
+Use `target = random_integer.station_slot` for the root resource and `target = module.glitter.random_integer.dose` for the one inside the module. Keep `values` as they are.

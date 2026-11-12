@@ -15,8 +15,8 @@ Two habits make these errors rare:
   file, so the config keeps working whichever directory you run Terraform from, and keeps working
   once the code is moved into a module.
 - **Keep the lookup the source of truth.** The validator edited the sheet and re-applied; the card
-  changed with it. If you had typed `56` into the config the plan would have passed once and then
-  silently drifted the first time somebody re-voiced the stop.
+  changed with it. If you had typed `29` into the config the plan would have passed once and then
+  silently drifted the first time somebody re-tuned the pan.
 
 In real projects the same pattern reads ssh public keys, license files, CSV exports from other
 tools or rendered configuration from a previous pipeline stage. The first thing to check in any

@@ -1,3 +1,0 @@
-Jasmine Sambac
-bottled: 2022-05-11
-note: top

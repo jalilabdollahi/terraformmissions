@@ -1,12 +1,12 @@
-resource "random_integer" "bench_slot" {
+resource "random_integer" "station_slot" {
   min = 1
   max = 6
 }
 
-module "mainspring" {
-  source = "./modules/mainspring"
+module "glitter" {
+  source = "./modules/glitter"
 }
 
 output "ticket" {
-  value = "bench-${random_integer.bench_slot.result}/turns-${module.mainspring.turns}"
+  value = "station-${random_integer.station_slot.result}/scoops-${module.glitter.scoops}"
 }

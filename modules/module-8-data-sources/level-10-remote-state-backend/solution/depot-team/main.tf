@@ -1,4 +1,4 @@
-# The bus depot team's configuration. Their published facts are the outputs below.
+# The gritting depot team's configuration. Their published facts are the outputs below.
 
 variable "bay_count" {
   type    = number
@@ -6,7 +6,7 @@ variable "bay_count" {
 }
 
 output "depot_code" {
-  value = "NBD-04"
+  value = "NGD-04"
 }
 
 output "bay_count" {

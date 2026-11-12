@@ -12,16 +12,16 @@ runs = {p.split('"', 1)[0]: p for p in parts}
 for name in ("within_limits", "too_heavy", "too_tall"):
     if name not in runs:
         print("run %s is missing" % name); sys.exit(2)
-for name, var, lo in (("too_heavy", "vehicle_tonnes", 40), ("too_tall", "vehicle_height_m", 4.5)):
+for name, var, lo in (("too_heavy", "shell_kg", 40), ("too_tall", "rack_height_m", 4.5)):
     b = runs[name]
-    if "expect_failures" not in b or "terraform_data.crossing_permit" not in b:
-        print("%s must expect a failure on terraform_data.crossing_permit" % name); sys.exit(3)
+    if "expect_failures" not in b or "terraform_data.display_permit" not in b:
+        print("%s must expect a failure on terraform_data.display_permit" % name); sys.exit(3)
     if re.search(r'expect_failures\s*=\s*\[[^\]]*var\.', b):
         print("%s expects a variable, which holds no precondition" % name); sys.exit(4)
     m = re.search(r'\b%s\s*=\s*([0-9.]+)' % var, b)
     if not m or float(m.group(1)) <= lo:
         print("%s must set %s above %s" % (name, var, lo)); sys.exit(5)
-other = {"too_heavy": "vehicle_height_m", "too_tall": "vehicle_tonnes"}
+other = {"too_heavy": "rack_height_m", "too_tall": "shell_kg"}
 for name, var in other.items():
     if re.search(r'\b%s\s*=' % var, runs[name]):
         print("%s must violate only its own rule" % name); sys.exit(6)
@@ -50,6 +50,6 @@ PY
   [[ $? -eq 0 ]] || return 0
   (cd "$d" && terraform test -no-color) >"$TM_TMP/disarm.out" 2>&1 && tm_fail "the suite passes although the $rule precondition is disarmed"
 }
-disarm weight 'var.vehicle_tonnes <= 40' 'true'
-disarm height 'var.vehicle_height_m <= 4.5' 'true'
+disarm weight 'var.shell_kg <= 40' 'true'
+disarm height 'var.rack_height_m <= 4.5' 'true'
 tm_pass "each precondition has a negative run that names the resource and breaks only its own rule"

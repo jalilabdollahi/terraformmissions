@@ -1,11 +1,11 @@
-name: Quilt Kit Modules
+name: Mosaic Panel Modules
 description: >-
-  The Thimble and Thread quilting guild keeps two small helper modules, one for blocks and one for the
-  border, and a kit order that combines them. Two test runs are meant to exercise the helpers directly
+  The harbourside tile mosaic guild keeps two small helper modules, one for tiles and one for the
+  frieze, and a panel order that combines them. Two test runs are meant to exercise the helpers directly
   but cannot find them.
 objective: >-
-  Make block_fabric, border_fabric and kit_total pass: each module run must point at the helper module's
-  real directory, and the tests must keep checking 3468 cm2 for blocks and 7400 cm2 for the border.
+  Make tile_area, frieze_area and panel_total pass: each module run must point at the helper module's
+  real directory, and the tests must keep checking 3468 cm2 for tiles and 7400 cm2 for the frieze.
 xp: 280
 difficulty: advanced
 expected_time: 12m

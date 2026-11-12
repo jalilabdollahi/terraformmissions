@@ -3,7 +3,7 @@
 1. Think about what Terraform writes into a repo: `.terraform/` (provider binaries), `terraform.tfstate` and its `.backup`, `terraform.tfstate.d/<ws>/`,
    `errored.tfstate`, saved plans, `crash.log`, variable files, and the committed-on-purpose `.terraform.lock.hcl`.
 2. The starting file ignores `.terraform`, only `terraform.tfstate`, and the lock file. It misses everything else — including `prod.tfvars` with the key — and
-   the lock file is wrongly ignored (it should be committed so everyone installs the same provider versions).
+   the lock file is wrongly ignored (it should be committed so everyone insculptures the same provider versions).
 3. Replace it with:
    ```gitignore
    .terraform/

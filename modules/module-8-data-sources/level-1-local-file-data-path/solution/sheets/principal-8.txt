@@ -1,4 +1,0 @@
-stop: Principal 8'
-pipes: 56
-pressure: 78mm
-voicer: Aldous Penhale

@@ -1,1 +1,1 @@
-Use condition = each.value.retention_days >= 30 && !each.value.public. Then raise the ledger shelf's retention to at least 30 days and make lobby non-public.
+Use condition = each.value.retention_days >= 30 && !each.value.public. Then raise the ledger shelf's retention to at least 30 days and make window non-public.

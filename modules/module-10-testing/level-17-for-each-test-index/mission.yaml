@@ -1,11 +1,11 @@
-name: Motorhome Pitch Cards
+name: Concours Stand Cards
 description: >-
-  Every vehicle at the Quayside motorhome campsite gets a pitch card generated from a map of vehicles. The tests try to
+  Every car entered in the Quayside classic car concours gets a stand card generated from a map of entries. The tests try to
   inspect individual cards but address them as if the cards were a numbered list, and Terraform rejects
   every one of them.
 objective: >-
-  Fix the instance addresses in tests/campsite.tftest.hcl so that nomad_card, voyager_card and all_cards_issued
-  pass, addressing the for_each instances by key. The three-vehicle check and the pitch text must stay.
+  Fix the instance addresses in tests/concours.tftest.hcl so that arrow_card, regent_card and all_cards_issued
+  pass, addressing the for_each instances by key. The three-entry check and the stand text must stay.
 xp: 305
 difficulty: advanced
 expected_time: 10m

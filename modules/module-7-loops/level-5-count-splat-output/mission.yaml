@@ -1,11 +1,11 @@
-name: One Permit Shown
+name: One Closure Shown
 description: >-
-  The street-food rally issues a permit per truck with a counted resource. The council's portal
-  reads the permit_paths output and keeps complaining that it receives a single string, with only
-  the first truck's permit.
+  The city film office issues a closure permit per production with a counted resource. The film office's portal
+  reads the closure_paths output and keeps complaining that it receives a single string, with only
+  the first production's permit.
 objective: >-
-  Make permit_paths a list that contains the path of every permit, in truck order, for any number
-  of trucks - including an empty list when no truck registered.
+  Make closure_paths a list that contains the path of every closure permit, in production order, for any number
+  of shoots - including an empty list when no production applied.
 xp: 165
 difficulty: intermediate
 expected_time: 7m
