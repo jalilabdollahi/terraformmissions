@@ -1,0 +1,21 @@
+name: Meridian Dish Blackout
+description: >-
+  03:12 — the Meridian Radio Observatory correlator pages everyone: Terraform will not even
+  list the array's resources. A disk-full event cut terraform.tfstate off mid-write. There is a
+  terraform.tfstate.backup next to it, but it is one apply old: the west dish and the north
+  dish's retune were applied after it was taken. The receiver serials are burned into dish
+  firmware and cannot change before the 06:00 observing block.
+objective: >-
+  Make Terraform read a healthy state again and bring all four dishes (north, south, east, west)
+  under management with their ORIGINAL receiver serials. The final plan must be clean with
+  nothing destroyed or replaced, and calibration/dish-north.cfg must show the 1420.4 MHz retune.
+xp: 350
+difficulty: expert
+expected_time: 30m
+concepts:
+  - corrupt state recovery
+  - state backup
+  - terraform import
+  - triage order
+module: module-15-war-games
+level: level-1-corrupt-state-backup

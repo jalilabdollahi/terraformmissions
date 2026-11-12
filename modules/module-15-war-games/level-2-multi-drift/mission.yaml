@@ -1,0 +1,22 @@
+name: Harrow Ironworks Drift
+description: >-
+  Harrow Ironworks starts a new bronze campaign at dawn and the pre-pour audit finds the
+  control files disagree with Terraform in five different ways. A tech mistyped furnace A's
+  quench time, furnace B's file vanished in a PLC swap, the foreman hot-fixed the pour recipe
+  with metallurgy's blessing (ticket INC-4471), mold C was scrapped and its file removed, and
+  somebody tainted the campaign heat lot although the stamps have already shipped.
+objective: >-
+  Reconcile all five objects in the right direction. Furnace A gets the code's quench time back,
+  furnace B's file is restored, the approved 1450 C pour temperature becomes the new value in
+  the code, mold C is retired from management for good, and the heat lot keeps its original ID.
+  End with a clean plan and no pending destroy.
+xp: 360
+difficulty: expert
+expected_time: 30m
+concepts:
+  - drift triage
+  - adopt versus revert
+  - terraform untaint
+  - retiring resources
+module: module-15-war-games
+level: level-2-multi-drift

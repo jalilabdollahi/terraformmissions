@@ -1,0 +1,1 @@
+Plan: keep a copy of terraform.tfstate; build a merged file from the LIVE state (same lineage, serial + 1) and add only random_id.docket_seal and the c2 instance of random_pet.courtroom from the snapshot; terraform state push the merged file; terraform plan should show no new random values; apply and check docket/*.txt.

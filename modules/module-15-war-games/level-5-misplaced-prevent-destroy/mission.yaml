@@ -1,0 +1,21 @@
+name: Calder Reach Annex Teardown
+description: >-
+  Change CHG-2291 retires the north annex berths at Calder Reach Shipyard. The change is merged
+  (annex_enabled = false) but every plan stops cold: an audit added prevent_destroy to the annex's
+  berth tag, the very thing being retired. Meanwhile the one object that must never be destroyed,
+  the serial on the yard's operating charter filed with the harbour authority, has no protection
+  at all, and the harbour master wants the annex gone today.
+objective: >-
+  Complete the decommission so the annex objects are destroyed and removed from state. The charter
+  serial must keep its ID, carry the only prevent_destroy guard in the configuration, and the
+  yard manifest must no longer reference the annex. Finish with a clean plan.
+xp: 385
+difficulty: expert
+expected_time: 35m
+concepts:
+  - prevent_destroy placement
+  - decommission
+  - count 0 module
+  - keepers replacement
+module: module-15-war-games
+level: level-5-misplaced-prevent-destroy

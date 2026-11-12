@@ -1,0 +1,1 @@
+Plan: root passes regional_id = var.dispatch_id; region passes radio_id = var.regional_id to post; rename the entry in terraform.tfvars to dispatch_id; terraform plan must show no replacement and the file stations/mr-alpine-7.txt unchanged before you apply. grep -rn "callsign" to prove nothing old is left.

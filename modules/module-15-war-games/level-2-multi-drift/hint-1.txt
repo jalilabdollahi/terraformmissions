@@ -1,0 +1,1 @@
+Run `terraform plan` and sort every line into one of three piles: revert the real world to the code, change the code to match the real world, or stop managing the object. Also run `terraform state show random_id.heat_lot` and read the very first line carefully.

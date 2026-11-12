@@ -1,0 +1,1 @@
+Plan: wrap the Hall B reference in the floor plan with try(..., []); check `kill -0 4242` and the lock contents, then remove crates/manifest.lock; terraform apply so that the destroy provisioners run for s2 and s3; delete signage/s3.txt by hand; terraform plan to confirm clean and check crates/unrig.log.

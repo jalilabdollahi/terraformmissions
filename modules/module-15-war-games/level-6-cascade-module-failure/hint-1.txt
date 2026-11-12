@@ -1,0 +1,1 @@
+Only the first error is visible because later modules cannot be evaluated until their inputs are. Fix from the top of the chain downward, running `terraform validate` after each change and expecting a NEW error next.

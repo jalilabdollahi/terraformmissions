@@ -1,0 +1,1 @@
+Plan: rename the input and output in the root (members, callsigns); add moved blocks for random_pet.member -> callsign and local_file.card -> duty_card, in the module so every caller gets them; pass shift_hours = 12 explicitly from the root; plan must show no create/destroy and no changes after apply.

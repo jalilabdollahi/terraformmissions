@@ -1,0 +1,1 @@
+Plan: pass belts as map(object({capacity})) built from local.capacities; restore byte_length = 3 in modules/belts; call sorters with module.belts.belt_serials and capacity = module.belts.capacity; in dispatch use sum(values(...)) for the total and pick the key whose load equals max(...) for busiest. Run plan and make sure nothing is replaced before applying.

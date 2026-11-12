@@ -1,0 +1,1 @@
+Fixing the three declaration mismatches makes the plan run, and then it is NOT clean: the value is silently missing somewhere upstream of the first module, so a placeholder default flows down and Terraform replaces objects whose keepers depend on it. Check the tfvars file against the variable names.

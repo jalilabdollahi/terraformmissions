@@ -1,0 +1,21 @@
+name: Halden Hall B Teardown
+description: >-
+  Sunday night's Hall B teardown at the Halden Trade Fair died partway: the runner was killed
+  after stand s1 was handed back, mid-way through s2. The venue wants the hall empty and the bays
+  returned by morning, but now nothing moves. The floor plan fails to render with Hall B switched
+  off, the rigging handover refuses to run, and a signage file for stand s3 is lying around with
+  no state behind it. The exhibitor register must survive for next year's contracts.
+objective: >-
+  Finish the teardown: every Hall B object gone from state, all three bays returned through the
+  real handover (crates/unrig.log shows s1, s2 and s3), no leftover signage files, no stale lock,
+  and the exhibitor register keeping its serial. End with a clean plan.
+xp: 400
+difficulty: expert
+expected_time: 40m
+concepts:
+  - interrupted destroy
+  - destroy-time provisioners
+  - orphaned files
+  - optional module references
+module: module-15-war-games
+level: level-8-interrupted-destroy

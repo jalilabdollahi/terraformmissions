@@ -1,0 +1,21 @@
+name: Karst Peak Id Rename
+description: >-
+  A naming cleanup at Karst Peak Mountain Rescue renamed the station's callsign variable to an id
+  at every layer of the dispatch radio plan, but three different people merged three different
+  layers and nobody ran an end-to-end plan. The pipeline is red with an error that moves one layer
+  deeper every time it is "fixed". Field radios are programmed with the current beacon serial and
+  repeater channel, and the weekend search window opens in an hour.
+objective: >-
+  Make the renamed variables line up from the root through region to post and supply the station
+  identity MR-ALPINE-7 through the new names. The beacon serial and the repeater channel must keep
+  their values, nothing may be destroyed or replaced, and the final plan must be clean.
+xp: 410
+difficulty: expert
+expected_time: 40m
+concepts:
+  - variable rename chain
+  - nested modules
+  - undeclared tfvars
+  - keepers replacement
+module: module-15-war-games
+level: level-10-renamed-variable-chain

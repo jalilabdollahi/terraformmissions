@@ -1,0 +1,1 @@
+Two kinds of change are hiding in the changelog besides the renamed names: resource addresses that moved inside the module, which Terraform reads as destroy-and-create, and a default that changed value, which Terraform reads as an ordinary in-place update to every duty card.

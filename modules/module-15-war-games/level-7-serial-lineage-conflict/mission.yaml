@@ -1,0 +1,22 @@
+name: Pellham Docket Lineage Clash
+description: >-
+  A botched cleanup session erased the filing seal and courtroom c2's call-sign from the live
+  state at Pellham Municipal Court. A clerk has a full copy on a laptop, but terraform state push
+  refuses it, and the copy is also stale: courtroom c3's call-sign was legitimately re-rolled
+  after it was taken (CHG-0710), and it still lists a decommissioned archive index. Printed
+  binders carry the real values; the court sits at 09:00.
+objective: >-
+  Restore the missing docket seal and the c2 call-sign from recovery/docket-snapshot.tfstate
+  without changing the live state's lineage and with a serial higher than the incident state's.
+  c3 must keep its newer call-sign, the archive index must not return, and the plan must be clean
+  with nothing destroyed.
+xp: 395
+difficulty: expert
+expected_time: 40m
+concepts:
+  - state lineage and serial
+  - state push
+  - state merge by hand
+  - stale snapshots
+module: module-15-war-games
+level: level-7-serial-lineage-conflict

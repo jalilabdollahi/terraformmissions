@@ -1,0 +1,20 @@
+name: Tern Field Baggage Cascade
+description: >-
+  The capacity-aware sortation release rewrote all three baggage-hall modules at once and the
+  morning departure bank is minutes away. CI shows one red error in the belts module and nothing
+  else, but the sorter and dispatch modules sit behind it and nobody has seen their plans yet.
+  Belt controllers have their serial numbers engraved, so those cannot change.
+objective: >-
+  Repair the module chain end to end: belts, then sorters, then dispatch. All four belt serials
+  and both sorter names keep their existing values, total_capacity must evaluate to 130 and
+  busiest_sorter to transfer by computation, and the plan must finish clean.
+xp: 390
+difficulty: expert
+expected_time: 40m
+concepts:
+  - cascading module errors
+  - module interfaces
+  - triage order
+  - output correctness
+module: module-15-war-games
+level: level-6-cascade-module-failure
