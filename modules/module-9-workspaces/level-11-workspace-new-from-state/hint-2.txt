@@ -1,0 +1,1 @@
+A plain `terraform workspace new rehearsal` starts with an empty state, and the next apply would invent a new codename. You want the snapshot's contents as the starting state.

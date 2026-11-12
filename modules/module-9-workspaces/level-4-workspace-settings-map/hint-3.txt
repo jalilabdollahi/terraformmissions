@@ -1,0 +1,1 @@
+Add a `qa = { stalls = 12, hours = "09-16", music = false }` entry next to dev and prod. Keep the lookup by `terraform.workspace`.

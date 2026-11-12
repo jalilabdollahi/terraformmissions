@@ -1,0 +1,1 @@
+A `check` block only produces a warning: the run continues and exit code stays 0. To actually stop Terraform, the condition has to be attached to a resource or output.

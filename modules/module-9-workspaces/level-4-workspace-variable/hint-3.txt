@@ -1,1 +1,0 @@
-Change `locals.env_config[terraform.workspace]` to `local.env_config[terraform.workspace]`.

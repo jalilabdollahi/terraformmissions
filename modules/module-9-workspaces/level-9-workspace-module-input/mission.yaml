@@ -1,14 +1,18 @@
-concepts:
-- workspace module inputs
-- map lookup
-- module variables
-description: A module receives its environment name from a workspace-keyed map, but
-  the current workspace is not in the map.
+name: Strike Zone Overflow
+description: >-
+  The Rolling Thunder bowling alley builds its lane sheets with a small module whose lane count
+  comes from the workspace: four for prod, two for staging. When a developer opened a throwaway
+  workspace for pull request 142, the module rejected the run before a single lane was created.
+objective: >-
+  Keep 4 lanes in prod and 2 in staging, and give every other workspace (such as pr-142 or
+  hotfix-7) exactly 1 lane, without weakening the module's own input validation.
+xp: 215
 difficulty: intermediate
-expected_time: 15m
-level: level-9-workspace-module-input
+expected_time: 14m
+concepts:
+  - module input
+  - lookup with default
+  - variable validation
+  - terraform.workspace
 module: module-9-workspaces
-name: Module Missing Workspace Key
-objective: Add the missing workspace key to the map so the module input resolves and
-  `terraform plan` passes.
-xp: 225
+level: level-9-workspace-module-input

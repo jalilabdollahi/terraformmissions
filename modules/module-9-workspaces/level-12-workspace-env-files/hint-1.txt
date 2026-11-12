@@ -1,0 +1,1 @@
+Run `terraform plan` in the dev workspace. The error is about the type of `local.settings`. Then list `env/` and compare file names with `terraform workspace list`.

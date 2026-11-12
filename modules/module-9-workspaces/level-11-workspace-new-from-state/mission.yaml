@@ -1,0 +1,18 @@
+name: Rehearsal Tea Room
+description: >-
+  The Foxglove tea room named its seasonal blend with a random codename and stored a snapshot of
+  that state in snapshots/tea-ledger.tfstate. The staff want a workspace called rehearsal that
+  begins with that same blend, not a brand new codename.
+objective: >-
+  Create the workspace rehearsal seeded from snapshots/tea-ledger.tfstate: it must be selected,
+  hold the original blend codename from the snapshot, and show a clean plan. Do not change the
+  configuration.
+xp: 230
+difficulty: intermediate
+expected_time: 12m
+concepts:
+  - workspace new -state
+  - state seeding
+  - terraform state pull
+module: module-9-workspaces
+level: level-11-workspace-new-from-state

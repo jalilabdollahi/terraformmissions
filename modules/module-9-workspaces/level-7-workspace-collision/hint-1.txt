@@ -1,0 +1,1 @@
+Run `terraform plan` in the east workspace and see which attribute of which file wants to change. Then list `out/`: how many files are there?

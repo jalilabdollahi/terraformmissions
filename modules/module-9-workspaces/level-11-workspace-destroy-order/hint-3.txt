@@ -1,1 +1,0 @@
-Change `"${path.module}/default-data.txt"` to `"${path.module}/${terraform.workspace}-data.txt"` in resource B's content.

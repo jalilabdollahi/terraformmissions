@@ -1,0 +1,1 @@
+Check `terraform workspace new -help`. One of its options takes a path to an existing state file.

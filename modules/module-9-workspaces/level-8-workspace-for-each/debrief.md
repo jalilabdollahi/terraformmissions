@@ -1,31 +1,20 @@
-# Missing Workspace Key in Map
+# Debrief: sets give resources stable names
 
-## What Was Broken
-The `workspace_config` map had entries for `staging` and `production`, but not `default`.
-When running in the default workspace, `local.workspace_config["default"]` throws an error.
+`for_each` creates one instance per element and names each instance by its **key**:
+`local_file.perch["mill-pond"]`. That is why it only takes maps and sets of strings. A list would
+identify instances by position, so removing the first element would renumber the rest and Terraform would
+think everything changed. `toset()` converts a list into a set, which has no order, and the elements
+themselves become the keys.
 
-## The Fix
-```hcl
-locals {
-  workspace_config = {
-    default    = { env = "development", replicas = 1 }
-    staging    = { env = "staging",     replicas = 1 }
-    production = { env = "production",  replicas = 3 }
-  }
-}
-```
+Combining this with workspaces is a good fit. The *list* varies by workspace and the *resource block* stays
+the same. Each workspace has its own state, so `pilot` and `network` track their own instances. Notice the
+file path also contains `terraform.workspace`, otherwise both workspaces would write the same
+`elm-hill.txt` (the collision problem in an earlier mission).
 
-## Safe Lookup Pattern
-If not all workspaces need to be in the map, use `try()` to provide a fallback:
-```hcl
-locals {
-  config = try(
-    local.workspace_config[terraform.workspace],
-    local.workspace_config["default"]
-  )
-}
-```
+Two caveats. `toset` silently drops duplicates, which is helpful here and surprising if the duplicate
+mattered; and the keys must be known at plan time, so you cannot build the list from another resource's
+attribute that is only known after apply.
 
-## Best Practice
-Always include a `default` entry in workspace-keyed maps. It acts as the fallback for any
-workspace not explicitly listed and prevents accidental plan failures.
+**When workspaces are the wrong tool:** if one environment needs a *different shape* (extra resource types,
+different dependencies) rather than just more or fewer instances, adding the conditions to the shared code
+quickly makes it unreadable. Use modules with an input per environment, or separate root modules.

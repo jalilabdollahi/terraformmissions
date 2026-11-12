@@ -1,0 +1,1 @@
+Wrap the call as `yamldecode(file(...))`, and rename `env/production.yaml` to `env/prod.yaml`, since the workspace is called prod.

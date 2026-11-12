@@ -1,0 +1,1 @@
+Move `terraform.tfstate.d/winter.tfstate` to `terraform.tfstate.d/winter/terraform.tfstate`. Do not run apply first: that would create a second, new state for the same files.

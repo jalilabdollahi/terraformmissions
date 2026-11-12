@@ -1,1 +1,1 @@
-Add `default = { env = "development", replicas = 1 }` as the first key in the `workspace_config` map.
+Wrap the list with `toset(...)`: `for_each = toset(local.active)`. A set drops the duplicated station on its own.

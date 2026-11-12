@@ -1,0 +1,1 @@
+Run `terraform workspace new -state=snapshots/tea-ledger.tfstate rehearsal`. It creates and selects the workspace with a copy of that state.

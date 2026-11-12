@@ -1,0 +1,1 @@
+Select trial, run `terraform destroy`, select another workspace (default), then run `terraform workspace delete trial`.

@@ -1,0 +1,1 @@
+The workspace is called `prod`, but the comparison says `"prd"`. Change the literal to `"prod"` and keep it a comparison, so other workspaces still stay below prod.

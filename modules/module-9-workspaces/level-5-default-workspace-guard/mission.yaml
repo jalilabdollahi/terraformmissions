@@ -1,0 +1,19 @@
+name: The Unwatched Clock Tower
+description: >-
+  Each bell tower in the Marlow carillon network has its own workspace. The chime schedule must
+  never be applied in the nameless default workspace, so someone added a guard. It prints a polite
+  warning in default and then carries on creating files.
+objective: >-
+  Applying in the default workspace must fail and write nothing, with an error rather than a
+  warning. In any named workspace, such as tower-a or tower-b, the apply must still succeed and
+  write out/<workspace>-chimes.txt.
+xp: 200
+difficulty: intermediate
+expected_time: 12m
+concepts:
+  - check block
+  - precondition
+  - terraform.workspace
+  - default workspace
+module: module-9-workspaces
+level: level-5-default-workspace-guard

@@ -1,1 +1,1 @@
-Run `terraform plan`. Terraform reports a key error because `local.env_map["default"]` does not exist. The current workspace is `default`.
+Run `terraform plan` in the pr-142 workspace. The error comes from the module's variable, not from the root. What value did the root pass in?

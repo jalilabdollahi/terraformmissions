@@ -1,13 +1,18 @@
-concepts:
-- workspace interpolation
-- conditional expression
-- string literals
-description: A workspace conditional is missing quotes around the string `"default"`,
-  causing a parse error.
+name: Harvest Crate Labels
+description: >-
+  Hollis Orchard keeps one workspace per harvest, such as autumn or spring-late. The crate
+  manifest is meant to be named after the harvest, but the files and labels come out stamped with
+  the literal text of the expression instead of the workspace name.
+objective: >-
+  In a workspace named autumn, Terraform must write out/autumn-crates.txt whose first line is
+  'Harvest: autumn', and the output crate_label must be 'autumn-3'. The same config must work for
+  any workspace name.
+xp: 180
 difficulty: intermediate
 expected_time: 10m
-level: level-2-workspace-interpolation
+concepts:
+  - terraform.workspace
+  - string interpolation
+  - locals
 module: module-9-workspaces
-name: Unquoted String in Condition
-objective: Fix the condition so `terraform validate` passes.
-xp: 175
+level: level-2-workspace-interpolation

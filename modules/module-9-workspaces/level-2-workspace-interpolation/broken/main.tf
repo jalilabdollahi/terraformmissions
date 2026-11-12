@@ -1,10 +1,16 @@
-# The comparison uses an unquoted identifier "default" instead of the string "default".
-# Fix: add quotes around default in the condition.
+# Hollis Orchard crate manifest.
+# One workspace per harvest.
 
 locals {
-  env = terraform.workspace == default ? "dev" : terraform.workspace
+  harvest = "terraform.workspace"
+  crates  = ["apples", "pears", "quince"]
 }
 
-output "environment" {
-  value = local.env
+resource "local_file" "manifest" {
+  filename = "${path.module}/out/${local.harvest}-crates.txt"
+  content  = "Harvest: {terraform.workspace}\n${join("\n", [for c in local.crates : "crate ${c}"])}\n"
+}
+
+output "crate_label" {
+  value = format("%s-%d", "terraform.workspace", length(local.crates))
 }

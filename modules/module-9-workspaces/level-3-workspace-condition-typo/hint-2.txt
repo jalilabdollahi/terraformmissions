@@ -1,0 +1,1 @@
+`local.is_prod` is false in prod because the name it compares against is not the real workspace name. Compare it with `terraform workspace list`.

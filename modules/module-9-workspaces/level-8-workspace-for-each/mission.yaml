@@ -1,14 +1,18 @@
-concepts:
-- for_each workspace config
-- map keys
-- workspace conditional
-description: A `for_each` uses a map keyed by workspace names, but the `default` workspace
-  is missing from the map.
+name: Relay Perches
+description: >-
+  A pigeon-post network keeps one perch card per relay station. The pilot workspace runs two
+  stations and the network workspace runs every station, each with its own list in a locals map.
+  The plan refuses to expand the list into resources.
+objective: >-
+  In the pilot workspace there must be exactly two local_file.perch instances and in the network
+  workspace exactly four, keyed by station slug (elm-hill, dovecote, mill-pond, ash-cross). The
+  output station_count must match.
+xp: 210
 difficulty: intermediate
 expected_time: 12m
-level: level-8-workspace-for-each
+concepts:
+  - for_each
+  - toset
+  - terraform.workspace
 module: module-9-workspaces
-name: Missing Workspace Key in Map
-objective: Add the `default` key to the map so `terraform plan` succeeds in the default
-  workspace.
-xp: 200
+level: level-8-workspace-for-each

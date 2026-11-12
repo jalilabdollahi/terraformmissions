@@ -1,0 +1,1 @@
+The workspace is not empty: its state still tracks a file. You cannot delete the workspace you are in, and `-force` would abandon the file on disk instead of removing it.

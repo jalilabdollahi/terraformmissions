@@ -1,1 +1,1 @@
-Change `terraform.workspace == default` to `terraform.workspace == "default"`.
+A quoted "terraform.workspace" is a string. Use the bare reference `terraform.workspace` where a value is expected, and `${terraform.workspace}` inside a larger string. The content line needs a `$` in front of the braces.

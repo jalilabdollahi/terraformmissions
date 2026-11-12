@@ -1,1 +1,1 @@
-Run `terraform validate`. Terraform interprets `default` without quotes as a variable or reference, not a string literal.
+Run `terraform apply` and look at the name of the file created under out/. Then compare it with the text inside it and the `crate_label` output.

@@ -1,0 +1,1 @@
+Run `terraform workspace select staging`, then `terraform apply`. Staging has an empty state, so Terraform will create out/staging-groomer-plan.txt there.
