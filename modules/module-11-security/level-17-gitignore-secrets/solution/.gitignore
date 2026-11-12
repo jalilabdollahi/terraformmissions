@@ -1,0 +1,17 @@
+# Local Terraform working directory (provider binaries)
+.terraform/
+
+# State holds every secret in plain text
+*.tfstate
+*.tfstate.*
+
+# Saved plans embed variable values, including secrets
+*.tfplan
+
+# Variable files: may hold secrets. The documented template stays tracked.
+*.tfvars
+*.tfvars.json
+
+# Crash logs can dump variable values
+crash.log
+crash.*.log

@@ -1,0 +1,1 @@
+keepers = { stamp = timestamp() } gets a new value each run, so Terraform sees the keeper changed and replaces the password. The keeper should be a value that you choose to change.

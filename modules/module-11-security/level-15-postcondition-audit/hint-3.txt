@@ -1,1 +1,1 @@
-Change the postcondition condition to `self.file_permission == "0600"` to match the actual permission.
+Use condition = self.result.exists == "true" && self.result.mode == "600" and change the key_mode default to "0600".

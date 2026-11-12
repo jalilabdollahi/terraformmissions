@@ -1,0 +1,1 @@
+Add ephemeral = true to variable gateway_token, remove the token from input, and read var.gateway_token directly in the provisioner's environment block (provisioners may use ephemeral values).

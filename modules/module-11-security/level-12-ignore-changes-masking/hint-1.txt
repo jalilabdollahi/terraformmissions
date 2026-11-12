@@ -1,0 +1,1 @@
+Compare the rules in main.tf with the file on disk: cat gate/access-rules.json. Then ask why terraform plan says there is nothing to do.

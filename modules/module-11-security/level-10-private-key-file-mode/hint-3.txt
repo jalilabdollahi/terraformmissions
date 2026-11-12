@@ -1,0 +1,1 @@
+Change the private key resource to local_sensitive_file with file_permission = "0600" and directory_permission = "0700". The public key also creates keys/, so give it directory_permission = "0700" too (its file stays 0644).

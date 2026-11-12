@@ -1,0 +1,1 @@
+The root certificate is not flagged as a CA and is not allowed to sign, and the controller certificate is signed with the controller's own private key instead of the CA's key.

@@ -1,0 +1,1 @@
+Remove --password from the command and add an environment = { LANDING_PASSWORD = var.landing_password } map to the local-exec provisioner.

@@ -1,0 +1,1 @@
+Create resource "random_password" "radio_admin" with length = 24 and min_lower/min_upper/min_numeric = 2, remove the local, and interpolate random_password.radio_admin.result into the file content.

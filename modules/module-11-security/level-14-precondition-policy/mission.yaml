@@ -1,15 +1,14 @@
-concepts:
-- precondition security policy
-- environment allow-list
-- lifecycle precondition
-description: 'A resource precondition uses `condition = var.env != "production"`,
-  which blocks the resource from being created in production. The intention is to
-  allow dev, staging, and production. Fix: use `contains(["dev","staging","production"],
-  var.env)`.'
-difficulty: advanced
-expected_time: 22m
-level: level-14-precondition-policy
-module: module-11-security
-name: Precondition Blocks Production Deployment
-objective: Fix the precondition so it allows valid environments including production.
+name: "Halloway Shelf Policy"
+description: >-
+  The Halloway newsreel archive has a rule that every storage shelf keeps its material at least 30 days and is never public. A precondition on the shelf manifests was meant to enforce it, but a reviewer found shelves that break the rule happily applying.
+objective: >-
+  Make the precondition on local_file.shelf_manifest enforce the policy (retention_days of at least 30 and public = false) so that violating shelves fail with a resource precondition error, and bring the archive's own default shelves into compliance without removing any of them.
 xp: 300
+difficulty: advanced
+expected_time: 15m
+concepts:
+  - precondition
+  - lifecycle
+  - policy as code
+module: module-11-security
+level: level-14-precondition-policy

@@ -1,0 +1,1 @@
+The lifecycle meta-argument has a setting that makes any plan that would destroy the resource fail. It must be set on each object you want to protect, here both of them.

@@ -1,0 +1,1 @@
+Terraform cannot use a sensitive value as a for_each key set, because it would have to print resource addresses. And anything computed from a secret (even a sha256) is sensitive too, so an output of it must say so.

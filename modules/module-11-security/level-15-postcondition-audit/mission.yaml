@@ -1,15 +1,14 @@
-concepts:
-- postcondition audit
-- self reference
-- file permissions
-description: 'A postcondition asserts `self.file_permission == "0644"` but the resource
-  creates the file with `file_permission = "0600"`. The postcondition will always
-  fail. Fix: align the postcondition with the actual permission.'
-difficulty: advanced
-expected_time: 22m
-level: level-15-postcondition-audit
-module: module-11-security
-name: Postcondition File Permission Mismatch
-objective: Change the postcondition to check `"0600"` so it matches the resource and
-  `terraform apply` succeeds.
+name: "Dunlin Field Key Audit"
+description: >-
+  The Dunlin Field control tower signs its logbook entries with a secret kept in a key file, and an audit step reads the file's real mode after Terraform has created it. The audit only checks that the file exists, and the key is currently created readable by everyone on the tower server.
+objective: >-
+  Make the postcondition on data.external.key_audit fail whenever the key file is not mode 600, and make the default key_mode produce a compliant 0600 file. An apply with a looser key_mode (0644, 0640, 0660) must fail with a postcondition error.
 xp: 300
+difficulty: advanced
+expected_time: 15m
+concepts:
+  - postcondition
+  - audit checks
+  - file permissions
+module: module-11-security
+level: level-15-postcondition-audit

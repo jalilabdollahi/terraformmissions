@@ -1,0 +1,1 @@
+Add lifecycle { prevent_destroy = true } to random_password.box_master and to local_sensitive_file.deed_register, then check terraform plan -destroy errors with 'Instance cannot be destroyed'.

@@ -1,0 +1,1 @@
+Set keepers = { ticket = var.rotation_ticket }. Apply, then apply again to confirm nothing changes; bump the variable to rotate on purpose.

@@ -1,0 +1,1 @@
+Delete the gateway_api_key line from terraform.tfvars. Keep the variable declaration (sensitive, no default) and supply the value with export TF_VAR_gateway_api_key=... before running terraform.

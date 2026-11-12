@@ -1,0 +1,1 @@
+The password is interpolated into command. Terraform gives a provisioner a separate way to hand values to a child process without putting them in argv.

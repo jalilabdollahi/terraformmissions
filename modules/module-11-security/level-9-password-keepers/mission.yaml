@@ -1,0 +1,14 @@
+name: "Fiddlestick Locker Combination"
+description: >-
+  The Fiddlestick & Sons circus rotates the rigging-locker combination by raising a ticket number, but the generated password changes on every single apply, and riggers keep getting locked out mid-show. The password resource was given a keepers map in an attempt to tie it to something.
+objective: >-
+  Make the combination change only when var.rotation_ticket changes: stable across repeated plans and applies, new after raising the ticket (for example to RIG-101), and stable again afterwards.
+xp: 275
+difficulty: advanced
+expected_time: 12m
+concepts:
+  - random_password keepers
+  - controlled rotation
+  - timestamp()
+module: module-11-security
+level: level-9-password-keepers

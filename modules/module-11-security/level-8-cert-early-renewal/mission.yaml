@@ -1,0 +1,14 @@
+name: "Gullcove Pump Certificate"
+description: >-
+  The Gullcove fuel dock's pump controller carries a self-signed certificate that was issued with a validity of just six hours and no renewal window. The harbour master wants it replaced with a certificate that lasts months and that Terraform starts renewing a week before it runs out.
+objective: >-
+  Rotate the certificate in pki/pump.pem (a new serial) so it is valid for at least 60 days, and configure early_renewal_hours of at least 168 (and below the validity) on tls_self_signed_cert.pump. The plan must be clean afterwards and pki/pump.key must stay mode 0600.
+xp: 250
+difficulty: advanced
+expected_time: 12m
+concepts:
+  - tls_self_signed_cert
+  - early_renewal_hours
+  - certificate rotation
+module: module-11-security
+level: level-8-cert-early-renewal

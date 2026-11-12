@@ -1,0 +1,1 @@
+A literal in .tf is a shared secret that never changes. The random provider can produce a password that is stored (sensitively) in state and referenced by other resources.

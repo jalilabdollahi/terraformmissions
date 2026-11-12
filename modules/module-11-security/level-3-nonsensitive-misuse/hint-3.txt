@@ -1,0 +1,1 @@
+Wrap only a non-revealing fact: nonsensitive(length(var.alarm_code)). Use var.alarm_code directly (still sensitive) for the output, mark that output sensitive = true, and print only the length on the panel.

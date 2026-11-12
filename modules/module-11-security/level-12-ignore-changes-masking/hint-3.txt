@@ -1,0 +1,1 @@
+Remove ignore_changes = all (and the lifecycle block that holds only that), apply, and check the file again. Do not replace it with a narrower ignore list that still covers content or file_permission.

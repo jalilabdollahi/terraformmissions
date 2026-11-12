@@ -1,30 +1,13 @@
-# Postcondition File Permission Mismatch
+# Debrief — verify the result, not only the request
 
-## What Was Broken
-The postcondition asserted `self.file_permission == "0644"`, but the resource set
-`file_permission = "0600"`. Since `0600 != 0644`, the postcondition always failed.
+A `precondition` asks "is it safe to try?" A `postcondition` asks "did what we got meet the standard?". Because it runs after the provider has returned, it can inspect real attributes
+of `self`: the file mode that exists on disk, the tags a cloud service really applied, the TLS version the endpoint actually negotiates. That makes it the natural home for audit rules
+where the configured value and the real value might differ.
 
-## Postcondition as a Security Audit Gate
-Postconditions are evaluated *after* apply and check the actual resulting state. They are
-powerful for security auditing:
+In this mission the audit looks at the world through a data source (an `external` script reading the file's true mode), and the postcondition lives on that data source.
+This pattern — "create, then read back and assert" — catches providers that silently clamp or ignore a setting, umask surprises, and drift introduced later: the postcondition on a data source
+is also re-evaluated on every plan, so a key that someone `chmod`ed to 0644 fails the next run.
 
-```hcl
-lifecycle {
-  postcondition {
-    condition     = self.file_permission == "0600"
-    error_message = "Credential file must not be world-readable. Got: ${self.file_permission}."
-  }
-}
-```
-
-If someone changes the `file_permission` to `"0644"`, the apply will fail with the postcondition
-error — immediately catching the security regression.
-
-## self Reference in Postconditions
-Inside a `postcondition`, `self` refers to the resource's post-apply attributes, allowing you
-to verify the actual deployed state rather than the planned state.
-
-## Why It Matters
-Postconditions act as automated security compliance checks. A mismatch between the intended
-permission (`"0644"`) and the secure default (`"0600"`) would typically be a bug in the
-postcondition, not in the resource.
+Keep two things in mind. A weak condition gives false assurance, which is worse than none: the stock phrase "must exist" proves nothing about security. And a failed postcondition does
+not roll back — the object has been created, and Terraform stops. Treat the failure as an alarm: fix the cause, then re-apply. Combined with a precondition on inputs and validation on variables, it forms a
+defence in depth for a policy.

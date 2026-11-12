@@ -1,0 +1,1 @@
+Add .terraform/, *.tfstate and *.tfstate.*, *.tfplan, *.tfvars, *.tfvars.json and crash logs; remove the .terraform.lock.hcl line. Keep terraform.tfvars.example tracked (it does not match *.tfvars).

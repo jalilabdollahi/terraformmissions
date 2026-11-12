@@ -1,0 +1,1 @@
+Try terraform plan -var 'allowed_cidrs=["::/0"]' and -var min_tls_version=1.0. Both are accepted, which the policy says they must not be.

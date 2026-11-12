@@ -1,0 +1,14 @@
+name: "Emberfall Ignore List"
+description: >-
+  The Emberfall hot-sauce festival's Terraform repo has a prod.tfvars with the stall payment key in it and a short .gitignore that someone wrote from memory. Last week a teammate's git add . picked up a state backup, and nobody noticed that the one file meant to be committed, the provider lock file, is on the ignore list.
+objective: >-
+  Fix .gitignore so that .terraform/ directories, every kind of state file (terraform.tfstate, .backup, workspace states, errored.tfstate), saved plan files (*.tfplan), secret variable files (*.tfvars and *.tfvars.json) and crash logs are ignored, while *.tf files, .terraform.lock.hcl and terraform.tfvars.example stay tracked. reports/ignore-audit.txt must keep matching the live rules.
+xp: 275
+difficulty: advanced
+expected_time: 12m
+concepts:
+  - .gitignore
+  - state files
+  - secret tfvars
+module: module-11-security
+level: level-17-gitignore-secrets

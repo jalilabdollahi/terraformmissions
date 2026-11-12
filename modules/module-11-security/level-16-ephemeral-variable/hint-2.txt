@@ -1,0 +1,1 @@
+The token is copied into terraform_data.input, and everything in input is persisted to state. sensitive hides it on screen; it does not keep it out of state. Terraform has a variable setting for values that must never be persisted.

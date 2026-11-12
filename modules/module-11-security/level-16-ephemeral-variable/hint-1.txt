@@ -1,0 +1,1 @@
+Run terraform state pull after an apply with TF_VAR_gateway_token set and search it for the token. Then look at what the terraform_data resource stores in its input.

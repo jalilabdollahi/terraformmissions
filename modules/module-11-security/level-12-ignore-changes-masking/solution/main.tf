@@ -1,0 +1,18 @@
+# Gate access rules for the Lindenhurst allotment association.
+locals {
+  rules = {
+    site       = "lindenhurst-allotments"
+    allow_from = ["10.20.0.0/16"]
+    deny_other = true
+  }
+}
+
+resource "local_file" "gate_rules" {
+  filename        = "${path.module}/gate/access-rules.json"
+  content         = "${jsonencode(local.rules)}\n"
+  file_permission = "0640"
+}
+
+output "rules_file" {
+  value = local_file.gate_rules.filename
+}

@@ -1,1 +1,0 @@
-Run `terraform apply`. The config applies but produces a cert that expires in 1 hour — nearly immediately useless.

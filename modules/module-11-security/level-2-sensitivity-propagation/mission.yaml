@@ -1,0 +1,14 @@
+name: "Seals Of The Salt Road"
+description: >-
+  A caravan company issues one wax-seal token per trading post and keeps each in a file. The ledger config sensitive-marks the whole post-to-token map, and Terraform refuses to plan, complaining about for_each and about an output that was derived from the secrets.
+objective: >-
+  Make the config apply: a plain set variable post_names (default petra, merv, palmyra) drives for_each, a sensitive map variable seal_tokens supplies each token, post_count is 3, and seal_digests (sha256 of each token) is a sensitive output. Do not use nonsensitive().
+xp: 250
+difficulty: advanced
+expected_time: 15m
+concepts:
+  - sensitive propagation
+  - for_each
+  - derived secrets
+module: module-11-security
+level: level-2-sensitivity-propagation

@@ -1,0 +1,1 @@
+Split the map in two: variable post_names (set of strings, not secret) for for_each, and variable seal_tokens (sensitive map) read with var.seal_tokens[each.key]. Mark the digests output sensitive = true.

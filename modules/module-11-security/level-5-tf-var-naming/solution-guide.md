@@ -1,0 +1,14 @@
+# Walkthrough — Wrong Name On The Boathouse Door
+
+1. Reproduce what CI does:
+   ```bash
+   export TF_VAR_boathouse_code=demo-not-a-real-secret-oar-4408 TF_VAR_club_region=severn-north
+   export TF_VAR_crew_roster='["stroke","cox","bow"]'
+   terraform plan
+   ```
+   Terraform asks for (or fails on) `BoathouseCode` and `club-region`. It only ever looks for `TF_VAR_BoathouseCode`
+   and `TF_VAR_club-region`, and the second cannot be exported by a POSIX shell at all.
+2. Rename `BoathouseCode` -> `boathouse_code` and `club-region` -> `club_region` in the variable blocks **and** in
+   the two resources.
+3. `crew_roster` already matches, and shows that complex types work through the environment: Terraform parses the value as HCL/JSON.
+4. Re-run the plan, then type `check`.

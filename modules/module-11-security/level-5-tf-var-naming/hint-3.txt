@@ -1,0 +1,1 @@
+Rename variable BoathouseCode to boathouse_code and club-region to club_region, and update every var. reference to match.

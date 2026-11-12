@@ -1,0 +1,1 @@
+Open .gitignore and list what it covers. Then imagine a git status after a plan, an apply in a workspace, and after creating prod.tfvars.

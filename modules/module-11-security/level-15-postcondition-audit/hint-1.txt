@@ -1,1 +1,1 @@
-Run `terraform apply`. It fails with the postcondition error. Check whether the postcondition matches the actual `file_permission` value set on the resource.
+Run terraform apply and then ls -l tower/. Compare the real mode with the audited_mode output and with the condition inside the postcondition block.
