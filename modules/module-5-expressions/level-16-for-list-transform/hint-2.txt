@@ -1,0 +1,1 @@
+With two iterator names over a list, the first is the index (a number) and the second is the element. The label expression has them swapped. The pour sheet refers to a name that is not declared after 'for'.

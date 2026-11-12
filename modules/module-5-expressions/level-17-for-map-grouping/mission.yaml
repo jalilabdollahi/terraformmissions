@@ -1,0 +1,14 @@
+name: Port Selby Carousels
+description: >-
+  Port Selby Airport groups its arriving flights by baggage carousel to print one announcement board per carousel. Plan fails with a duplicate key as soon as two flights share a carousel.
+objective: >-
+  Build by_carousel so each carousel maps to the list of its flights in arrival order (C1: SB204, SB311, SB520; C2: KL881, KL112; C3: AE090) and create exactly one board file per carousel.
+xp: 205
+difficulty: intermediate
+expected_time: 9m
+concepts:
+  - for expression
+  - grouping mode
+  - duplicate keys
+module: module-5-expressions
+level: level-17-for-map-grouping

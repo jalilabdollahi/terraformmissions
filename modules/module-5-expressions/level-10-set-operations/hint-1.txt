@@ -1,0 +1,1 @@
+Run terraform apply and compare each output with the three sign-up sheets by hand. One output has repeats, one has too many people, and one lists someone who owns a robe.

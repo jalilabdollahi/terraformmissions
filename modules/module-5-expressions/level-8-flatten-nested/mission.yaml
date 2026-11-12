@@ -1,0 +1,14 @@
+name: Roxy Showing Stubs
+description: >-
+  The Roxy Picture House prints one ticket stub per film showing, driven by a programme that lists the films for each screen. The nested loop that builds the showings gives Terraform a list of lists, and for_each cannot make sense of it.
+objective: >-
+  Produce a flat list of showings (screen + film) and one local_file stub per showing, keyed "<screen>/<film>": six stubs for the default programme, correct for any programme.
+xp: 210
+difficulty: intermediate
+expected_time: 10m
+concepts:
+  - flatten
+  - nested for
+  - for_each over lists
+module: module-5-expressions
+level: level-8-flatten-nested

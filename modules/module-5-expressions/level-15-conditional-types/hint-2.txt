@@ -1,0 +1,1 @@
+Both results of a ? : must be the same kind of value. A list in one branch and a bare string in the other is rejected; a number paired with a word is turned into text, and arithmetic on the word fails.

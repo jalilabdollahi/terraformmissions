@@ -1,0 +1,1 @@
+Use the boolean directly, if t.staffed && t.height_m >= var.min_height_m. There is no need to compare a boolean with anything.

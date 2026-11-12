@@ -1,0 +1,1 @@
+Two separate problems: the Terraform path skips the top-level observatory key, and YAML 1.1 style scalars are being coerced. A bare no or off becomes a boolean false, and 2.10 is a number, so it prints as 2.1.

@@ -1,0 +1,15 @@
+name: Kallavik Core Depths
+description: >-
+  Kallavik Ice Station logs ice-core sample depths per drill site. The summary script calls max() and min() with a list, and terraform plan complains about the wrong type for the numbers parameter.
+objective: >-
+  Report the deepest (90.25 m) and shallowest (7.75 m) sample over all sites, their span (82.5 m), and the deepest sample of each site, computed from var.cores.
+xp: 170
+difficulty: intermediate
+expected_time: 7m
+concepts:
+  - max
+  - min
+  - argument expansion
+  - flatten
+module: module-5-expressions
+level: level-5-argument-expansion

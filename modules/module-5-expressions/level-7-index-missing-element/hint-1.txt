@@ -1,0 +1,1 @@
+Read the plan error. It comes from index(), and the value being searched for is var.start_bell. Is that bell actually in the list?

@@ -1,0 +1,14 @@
+name: Skerry Head Instrument Roster
+description: >-
+  Skerry Head Observatory generates its instrument roster by decoding config.yaml. Plan complains about a missing attribute, and once that is sorted out the roster shows firmware 2.1 instead of 2.10 and a Norwegian interface language of false.
+objective: >-
+  Make the roster read Hartmann fw 2.10 lang no, Corvus fw 1.8 lang en, Pegasus fw 3.0 lang off, with the site name Skerry Head and 2 enabled instruments. The Terraform code must still use yamldecode(file(...)) and work for other config files.
+xp: 225
+difficulty: intermediate
+expected_time: 12m
+concepts:
+  - yamldecode
+  - YAML type coercion
+  - nested key paths
+module: module-5-expressions
+level: level-11-yamldecode-config

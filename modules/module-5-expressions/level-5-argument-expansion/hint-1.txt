@@ -1,0 +1,1 @@
+Read the plan error. It says what type of value max() received for its numbers parameter, and shows which line it came from.

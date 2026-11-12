@@ -1,0 +1,14 @@
+name: Nightjar Sleeper Manifest
+description: >-
+  The Nightjar Express prints its sleeper-car manifest from a template string with a %{ for } loop and %{ if } directives. Every directive leaves a blank line behind, so the conductor's sheet is full of gaps.
+objective: >-
+  Make the manifest render exactly: the header line, Berths:, one '  <berth>  <name>' line per passenger with ' (breakfast)' appended where booked, then 'Total: N' with no blank lines (and 'No passengers tonight.' for an empty train).
+xp: 225
+difficulty: intermediate
+expected_time: 12m
+concepts:
+  - template directives
+  - for and if directives
+  - whitespace stripping
+module: module-5-expressions
+level: level-20-template-directives

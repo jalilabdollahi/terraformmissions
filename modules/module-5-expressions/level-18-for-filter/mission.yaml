@@ -1,0 +1,14 @@
+name: Cinder Valley Watch Roster
+description: >-
+  Cinder Valley Fire Service filters its lookout towers with a for expression: staffed and tall enough for tonight's roster. The roster comes out completely empty, and nobody on the crew can say why.
+objective: >-
+  Keep staffed towers whose height is at least var.min_height_m (25 m): Raven Knob, Tamarack and Grey Rock, in that order. A tower exactly at the minimum counts.
+xp: 185
+difficulty: intermediate
+expected_time: 8m
+concepts:
+  - for expression filter
+  - if clause
+  - boolean comparison
+module: module-5-expressions
+level: level-18-for-filter

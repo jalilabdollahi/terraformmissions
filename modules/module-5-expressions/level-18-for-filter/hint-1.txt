@@ -1,0 +1,1 @@
+Print the roster and compare with the tower list. Nothing passes the filter, so one comparison in the if clause is never true. Check what type each side of == has.

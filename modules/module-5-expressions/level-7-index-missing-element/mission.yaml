@@ -1,0 +1,15 @@
+name: Bell Tower Peal Order
+description: >-
+  At St Aldhelm's the ringing master names the bell to start on, and a script rotates the tower order to match. This week's sheet names Michael, who is not in the tower, and plan refuses to run.
+objective: >-
+  Rotate the bell list so it starts at the named bell. If the name is not in the tower, ring in tower order from the first bell (start_index 0). It must work for any list of bells.
+xp: 185
+difficulty: intermediate
+expected_time: 9m
+concepts:
+  - index
+  - contains
+  - slice
+  - guarding errors
+module: module-5-expressions
+level: level-7-index-missing-element

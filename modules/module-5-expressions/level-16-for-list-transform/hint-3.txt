@@ -1,0 +1,1 @@
+Use [for position, scent in var.scents : ...] and make the pour-sheet body use the name you declared, batch, as in batch.scent and batch.wax_g.

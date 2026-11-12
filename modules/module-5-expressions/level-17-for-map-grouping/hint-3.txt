@@ -1,0 +1,1 @@
+Add three dots after the value expression: { for a in var.arrivals : a.carousel => a.flight... }. Each value becomes a list of everything that shared the key.

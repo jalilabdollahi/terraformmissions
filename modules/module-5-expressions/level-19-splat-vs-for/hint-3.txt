@@ -1,0 +1,1 @@
+For the map, loop with a for expression over its values, [for role, c in var.cast : c.puppeteer], or turn the values into a list first with values(var.cast)[*].strings.

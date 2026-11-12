@@ -1,0 +1,14 @@
+name: Orchard Marionette Programme
+description: >-
+  The Little Orchard Marionette Theatre prints programme notes from three inputs: a cast map keyed by role, a crew list and an optional understudy. The splat expressions on the crew and understudy behave, but the ones on the cast map make plan fail with an unsupported attribute.
+objective: >-
+  Report each puppeteer once in role-key order (Odile, Bram), the crew names, the understudy list (empty when there is none), and the total number of strings (30), keeping splat only where it is appropriate.
+xp: 210
+difficulty: intermediate
+expected_time: 10m
+concepts:
+  - splat expression
+  - for expression
+  - maps vs lists
+module: module-5-expressions
+level: level-19-splat-vs-for

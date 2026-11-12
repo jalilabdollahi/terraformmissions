@@ -1,0 +1,1 @@
+cleaned = replace(trimspace(t), ",", "."), then filter: boat => tonumber(t) if can(tonumber(t)).

@@ -1,0 +1,1 @@
+Use a conditional: contains(var.bells, var.start_bell) ? index(var.bells, var.start_bell) : 0. The slices already handle index 0.

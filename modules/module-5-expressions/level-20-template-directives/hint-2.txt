@@ -1,0 +1,1 @@
+A directive can strip the whitespace and newline next to it with a tilde: %{ for p in list ~}. Without it, the line break after the directive stays in the output.

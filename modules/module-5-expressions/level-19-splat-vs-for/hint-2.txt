@@ -1,0 +1,1 @@
+The splat operator [*] is designed for lists and tuples. Applied to a map it wraps the whole map into a one-element list, so .puppeteer is looked up on the map itself and does not exist. Crew is a list, so [*] works there.

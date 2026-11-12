@@ -1,0 +1,14 @@
+name: Cobbold Feed Whiteboard
+description: >-
+  The keepers' feed whiteboard at Cobbold Wildlife Park is generated from a ration table. When the manager added an okapi and a capybara to the animal list, plan started failing because they have no tailored ration.
+objective: >-
+  Give listed species their own ration and every other animal the standard ration from var.standard_ration_kg (okapi 3 kg and capybara 3 kg by default), with no hard-coded number.
+xp: 165
+difficulty: intermediate
+expected_time: 7m
+concepts:
+  - lookup
+  - map defaults
+  - missing keys
+module: module-5-expressions
+level: level-6-lookup-default

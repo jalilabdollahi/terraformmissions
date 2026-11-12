@@ -1,0 +1,1 @@
+A pattern is only treated as a regular expression when it is wrapped in forward slashes, like "/\\s+/". Without them it is searched for as literal text. Separately, check the argument order of the fault-note call: string, pattern, replacement.

@@ -1,0 +1,1 @@
+formatlist() needs every list argument to have the same length, while a plain (non-list) value is repeated for every row. The hand-typed ["GBP", "GBP"] has two elements and the tiers list has three.

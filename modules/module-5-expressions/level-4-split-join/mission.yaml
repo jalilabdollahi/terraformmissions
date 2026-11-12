@@ -1,0 +1,15 @@
+name: Waymark Pilgrim Trails
+description: >-
+  The Waymark Society's volunteers type each pilgrim trail's waypoints as one comma-separated string. The printed signposts count a blank stop on the Quiet Loop and show stray spaces and double arrows on Heron Way.
+objective: >-
+  Parse each string into clean waypoint names: Heron Way has 3 stops (Oak Gate → Mill Ford → Stone Cross) and the Quiet Loop has 0 and reads closed for walkers. It must hold for other strings too.
+xp: 185
+difficulty: intermediate
+expected_time: 10m
+concepts:
+  - split
+  - join
+  - empty elements
+  - trimspace
+module: module-5-expressions
+level: level-4-split-join

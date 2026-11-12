@@ -1,0 +1,1 @@
+label = merge(var.house_label, var.blend_label) and allergens = distinct(concat(var.house_allergens, var.blend_allergens)).

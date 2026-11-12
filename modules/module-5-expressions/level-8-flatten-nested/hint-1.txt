@@ -1,0 +1,1 @@
+Look at the error on the for_each line. It complains about reading an attribute from a value. Print local.showings in terraform console and look at its shape.

@@ -1,0 +1,1 @@
+Apply and compare stop_counts with the number of real waypoints. Quiet Loop has no waypoints but is not counting zero.

@@ -1,0 +1,16 @@
+observatory:
+  name: Skerry Head
+  dome_count: 2
+  instruments:
+    - name: Hartmann
+      firmware: "2.10"
+      language: "no"
+      enabled: true
+    - name: Corvus
+      firmware: "1.8"
+      language: en
+      enabled: true
+    - name: Pegasus
+      firmware: "3.0"
+      language: "off"
+      enabled: false

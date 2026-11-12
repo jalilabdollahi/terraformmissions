@@ -1,0 +1,1 @@
+Build the list with a for expression: trim each piece and keep it only if what is left is not empty: [for s in split(",", csv) : trimspace(s) if trimspace(s) != ""].

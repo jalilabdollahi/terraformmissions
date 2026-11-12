@@ -1,0 +1,14 @@
+name: Stubai Ridge Day Pass
+description: >-
+  The day-pass desk at Stubai Ridge decides lifts and price with two ternary expressions. One of them is rejected by plan for mixing a list with a string, and the other would turn the discount into text for junior guests and break the price for adults.
+objective: >-
+  Make lifts always a list (north, summit, glacier in peak season, north otherwise) and discount_factor always a number (0.5 for juniors, 1 otherwise) so price_eur is a number for every combination of the two flags.
+xp: 195
+difficulty: intermediate
+expected_time: 9m
+concepts:
+  - conditional expression
+  - type consistency
+  - ternary
+module: module-5-expressions
+level: level-15-conditional-types
