@@ -1,0 +1,1 @@
+Run `terraform validate`: the error is about the data source referring to itself inside `precondition`. Ask what exists at the moment a precondition runs.

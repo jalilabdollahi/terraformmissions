@@ -1,0 +1,18 @@
+name: Cuckoo Ticket Closing Line
+description: >-
+  The Tannenbaum cuckoo clock bench logs 'opened' and 'closed' for every repair ticket using
+  provisioners on a terraform_data record. The closing line is written when the ticket is destroyed,
+  but Terraform refuses the configuration because of what that provisioner refers to.
+objective: >-
+  Keep both provisioners and make the destroy-time one legal by reading the ticket through self.
+  Afterwards repairs/bench.log must show 'opened CC-2041 (Black Forest wall cuckoo)', and replacing
+  the ticket must append 'closed CC-2041'.
+xp: 260
+difficulty: advanced
+expected_time: 12m
+concepts:
+  - destroy provisioners
+  - self
+  - provisioner references
+module: module-12-advanced-patterns
+level: level-16-self-in-provisioner

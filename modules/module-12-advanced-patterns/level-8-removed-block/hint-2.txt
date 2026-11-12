@@ -1,1 +1,0 @@
-The `removed` block is used AFTER you have already deleted the `resource` block from your config. It handles the state cleanup.

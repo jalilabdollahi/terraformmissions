@@ -1,20 +1,20 @@
-# Triggered by Nothing
+# Debrief: replace_triggered_by forces a replacement from outside
 
-## What Was Broken
-`replace_triggered_by = [null_resource.wrong_ref]` references a resource label `wrong_ref` that
-does not exist. Terraform validates all references during `terraform validate`.
+Most attribute changes are applied in place; only "forces replacement" attributes rebuild an object.
+Sometimes the dependency is behavioural and not in the schema: a device must be re-provisioned
+when its firmware changes, a VM must be rebuilt when the launch template changes. For that,
+`lifecycle { replace_triggered_by = [ ... ] }` says: whenever one of these objects is updated or
+replaced, replace me as well.
 
-## The Fix
-```hcl
-lifecycle {
-  replace_triggered_by = [null_resource.trigger]
-}
-```
+Each entry has to be a reference to a managed resource, or to an attribute of one, never to a variable or a
+data source. A reference to a resource triggers on any change of that resource, an attribute
+reference only triggers when that attribute's value changes. That is why choosing the correct
+target matters: pointing at the wrong resource is silent. The configuration is valid, the plan
+is clean, and the cabinet simply never gets rebuilt.
 
-## replace_triggered_by
-This lifecycle argument forces replacement of the resource when any of the listed resources change.
-All listed resources must be declared in the same configuration.
+`terraform_data` is useful as the "trigger source". Its `input` and `output` attributes give you a
+small, always-available resource whose changes you can watch, which is the modern replacement for
+`null_resource` with `triggers`.
 
-## Why It Matters
-Dangling references are caught at validate/plan time, not at apply time. Always ensure every
-resource reference points to a declared resource.
+Real-world takeaway: when you add a replace trigger, test it with a deliberate change and read the
+plan for the sentence "has to be replaced due to changes in ...".

@@ -1,0 +1,1 @@
+Read the error message of `terraform plan` slowly: it names one of the two addresses in the moved block and says something about where it is declared.

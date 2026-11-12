@@ -1,0 +1,1 @@
+A destroy-time provisioner runs when the resource is already leaving the configuration, so it may only use `self` (plus `count.index` and `each.key`). Other resources, variables and the resource's own name are all refused. The first provisioner already shows the right style.

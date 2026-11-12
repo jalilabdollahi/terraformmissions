@@ -1,0 +1,1 @@
+Inside `removed`, `lifecycle { destroy = false }` tells Terraform to drop the object from state but leave the real thing. That is the opposite of decommissioning.

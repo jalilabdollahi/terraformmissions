@@ -1,1 +1,0 @@
-The `output` block exposes the password in plain text in terminal output. Add `sensitive = true` to hide it.

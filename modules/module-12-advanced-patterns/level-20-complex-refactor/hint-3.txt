@@ -1,0 +1,1 @@
+Order from NOTES.md: skee-ball = 0, claw = 1, racer = 2. Write `moved { from = random_id.token[0]  to = random_id.token["skee-ball"] }` and the same for `local_file.cabinet_card` and for the other two cabinets. Then `removed { from = random_pet.mascot  lifecycle { destroy = false } }` and `import { to = random_integer.jackpot  id = "7421,1000,9999" }`.

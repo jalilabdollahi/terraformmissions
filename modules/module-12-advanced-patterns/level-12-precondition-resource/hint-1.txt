@@ -1,1 +1,0 @@
-Run `terraform plan`. The precondition check fails because `var.env` defaults to `"dev"`, which is not equal to `"production"`.

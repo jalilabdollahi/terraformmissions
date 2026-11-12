@@ -1,0 +1,1 @@
+`to` is a full resource address. The key is declared inside the module call named `hut`, so its address starts with `module.hut.`. Import blocks themselves stay in the root module.

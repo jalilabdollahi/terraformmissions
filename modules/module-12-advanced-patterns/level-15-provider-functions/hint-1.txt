@@ -1,0 +1,1 @@
+Run `terraform validate` and read the whole error: it ends with an instruction about the provider name and a particular block.

@@ -1,1 +1,0 @@
-The precondition is too restrictive — it only allows `"production"`. Valid environments are `dev`, `staging`, and `production`.

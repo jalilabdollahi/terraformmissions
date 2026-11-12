@@ -1,0 +1,1 @@
+In a moved block `from` is the address the object has in STATE today and `to` is the address it should have in the CONFIGURATION. The two are swapped here.

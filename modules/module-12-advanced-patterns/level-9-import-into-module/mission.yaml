@@ -1,0 +1,18 @@
+name: Key Number Rk9mPg
+description: >-
+  The alpine club's Eagle's Nest hut register moved into its own module. The brass key tag says
+  Rk9mPg, and that exact number has to be adopted into the module, but terraform plan complains that
+  the import target does not exist in the configuration.
+objective: >-
+  Adopt the existing key number Rk9mPg into module.hut.random_id.key with an import block in the root
+  module. Afterwards the key hex must come from that adopted ID, the hut mascot must keep its name,
+  and the plan must be clean.
+xp: 275
+difficulty: advanced
+expected_time: 14m
+concepts:
+  - import blocks
+  - module addresses
+  - adopting objects
+module: module-12-advanced-patterns
+level: level-9-import-into-module

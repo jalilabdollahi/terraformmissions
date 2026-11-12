@@ -1,0 +1,18 @@
+name: Seal Moves Backwards
+description: >-
+  St. Brannoc's scriptorium renamed the abbot's wax-seal key from seal to abbot_seal and added a moved
+  block to keep it. Now terraform plan refuses to run at all and complains about a 'moved object' that
+  'still exists'.
+objective: >-
+  Repair the moved block so it records the rename in the right direction. The key must keep its
+  fingerprint under tls_private_key.abbot_seal, the register file must not be rewritten, and the plan
+  must be clean.
+xp: 250
+difficulty: advanced
+expected_time: 15m
+concepts:
+  - moved blocks
+  - from and to
+  - refactoring
+module: module-12-advanced-patterns
+level: level-5-moved-direction

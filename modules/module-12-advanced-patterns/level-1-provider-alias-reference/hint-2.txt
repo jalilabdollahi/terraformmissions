@@ -1,0 +1,1 @@
+The south tag names an alias, `random.south`, that no `provider "random"` block declares. The north tag does name a real alias but wraps it in quotes, which is the pre-0.12 syntax.

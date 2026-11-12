@@ -1,0 +1,1 @@
+Read `NOTES.md`, then `terraform plan` and sort the lines into three groups: indexed objects replaced by keyed ones, an object that is destroyed because it left the code, and a value that is created instead of adopted.

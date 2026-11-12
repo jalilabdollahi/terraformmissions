@@ -1,0 +1,1 @@
+Set `destroy = true` (or delete the lifecycle block: true is the default). Because the object is destroyed through the removed block, its destroy-time provisioner runs and writes the receipt.

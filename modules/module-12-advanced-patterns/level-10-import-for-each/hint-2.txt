@@ -1,0 +1,1 @@
+Import blocks accept `for_each` (Terraform 1.7+). Inside, `each.key` is the instance key of the resource and `each.value` is the provider ID. Both resource and import iterate over the same map.

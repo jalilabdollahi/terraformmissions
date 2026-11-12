@@ -1,1 +1,1 @@
-Give each resource a unique filename: `config-a.txt` and `config-b.txt`.
+Keep the lifecycle rule, but make the filename unique per film: use `local.slug`, which is already computed, inside the `filename`.

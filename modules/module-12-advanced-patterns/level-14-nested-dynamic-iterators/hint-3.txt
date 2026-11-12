@@ -1,0 +1,1 @@
+Use `sheet.value.path` and `sheet.value.content` in the content block. In the inner loop write `for _, panel in spec.panels` (any name that is not `shop`) so `shop` still means the workshop.

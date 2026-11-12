@@ -1,0 +1,19 @@
+name: Back Bench Spare Reel
+description: >-
+  The Quillfeather typewriter shop moved ribbon numbering into a module. Inside it, the spare reel
+  asks for a provider configuration called random.spare, but terraform validate says that
+  configuration is missing, as if it had been removed.
+objective: >-
+  Give the ribbon_stock module a proper declaration of the extra provider configuration it needs, and
+  pass the root's random.back_bench configuration into it. The spare reel must be tracked in state
+  under the back_bench alias, the primary reel on the default configuration, and terraform validate
+  must be free of warnings.
+xp: 260
+difficulty: advanced
+expected_time: 18m
+concepts:
+  - configuration_aliases
+  - providers map
+  - child module providers
+module: module-12-advanced-patterns
+level: level-2-configuration-aliases

@@ -1,0 +1,1 @@
+Replace `terraform_data.varnish_batch.output...` with `self.output...` in both conditions.

@@ -1,0 +1,20 @@
+name: Pier Pavilion Big Bang
+description: >-
+  The Pier Pavilion arcade merged a large refactor into one commit: cabinet tokens and cards moved
+  from count to for_each, the gull mascot left the configuration, and the prize-board jackpot must now
+  be managed. Terraform sees none of that intent and plans to destroy and recreate almost everything.
+objective: >-
+  Describe all three changes in code (moved blocks, a removed block with destroy = false, an import
+  block) so that the plan has no destroys or replacements: the three cabinet tokens and cards keep
+  their IDs under name keys, the mascot leaves state while its costume stays valid, jackpot 7421 is
+  adopted, and the plan ends clean.
+xp: 400
+difficulty: advanced
+expected_time: 30m
+concepts:
+  - moved blocks
+  - removed blocks
+  - import blocks
+  - zero-downtime refactoring
+module: module-12-advanced-patterns
+level: level-20-complex-refactor

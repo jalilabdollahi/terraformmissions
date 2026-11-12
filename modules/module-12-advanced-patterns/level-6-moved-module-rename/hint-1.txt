@@ -1,0 +1,1 @@
+Run `terraform plan` and compare the addresses: everything under `module.shaft_a` is destroyed, everything under `module.north_shaft` is created.

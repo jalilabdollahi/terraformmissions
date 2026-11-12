@@ -1,0 +1,1 @@
+`precondition`/`postcondition` stop the run when they fail. A `check` block runs after the plan or apply and reports failures as warnings. It can even hold its own `data` source, so a failing read does not break the rest.

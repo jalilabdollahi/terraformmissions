@@ -1,0 +1,1 @@
+Try `terraform plan -var guests=99` and read the error title. Then try `-var start_hour=18 -var end_hour=17`.

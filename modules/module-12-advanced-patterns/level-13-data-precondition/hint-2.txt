@@ -1,0 +1,1 @@
+A precondition runs BEFORE the data is read, so it can only use inputs (variables, `fileexists`, `endswith`). A check on what was read belongs in a `postcondition`, where `self` is available.

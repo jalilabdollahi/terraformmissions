@@ -1,17 +1,25 @@
-resource "local_file" "config_a" {
-  content  = "config A"
-  filename = "${path.module}/config-a.txt"
+# Moonlight Drive-In: the marquee board file.
+# The projectionist wants zero gap on the sign, so the replacement is written first and the
+# old board is removed afterwards (create_before_destroy). Tonight's feature just changed.
+
+variable "film" {
+  type    = string
+  default = "Return of the Giant Ant"
+}
+
+locals {
+  slug = lower(replace(var.film, " ", "-"))
+}
+
+resource "local_file" "marquee" {
+  filename = "${path.module}/marquee/now-showing-${local.slug}.txt"
+  content  = "NOW SHOWING: ${var.film}\n"
 
   lifecycle {
     create_before_destroy = true
   }
 }
 
-resource "local_file" "config_b" {
-  content  = "config B"
-  filename = "${path.module}/config-b.txt"
-
-  lifecycle {
-    create_before_destroy = true
-  }
+output "marquee_file" {
+  value = local_file.marquee.filename
 }

@@ -1,1 +1,0 @@
-Replace `local_file` with `local_sensitive_file` and add `sensitive = true` to the output block.
