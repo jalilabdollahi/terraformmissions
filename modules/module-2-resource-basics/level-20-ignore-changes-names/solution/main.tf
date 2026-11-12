@@ -1,16 +1,16 @@
-# Feeding journal for the Crumbwell sourdough starter.
-# The baker keeps personal notes in starter-notes.txt. Terraform creates the file
-# with a first line, and from then on the content is the baker's business, so
-# Terraform must not overwrite it on later runs. The feeding schedule file,
+# Build journal for the Crumbwell vintage motorbike restoration.
+# The mechanic keeps personal notes in build-notes.txt. Terraform creates the file
+# with a first line, and from then on the content is the mechanic's business, so
+# Terraform must not overwrite it on later runs. The work schedule file,
 # however, is managed by Terraform and must always match the config.
 
 locals {
-  feeding_every_hours = 12
+  shift_length_hours = 12
 }
 
-resource "local_file" "starter_notes" {
-  filename = "${path.module}/journal/starter-notes.txt"
-  content  = "Starter day 1 - bubbly and sweet-smelling. Feed 1:5:5 at ${local.feeding_every_hours}h.\n"
+resource "local_file" "build_notes" {
+  filename = "${path.module}/journal/build-notes.txt"
+  content  = "Build day 1 - frame stripped and primed. Shift change every ${local.shift_length_hours}h.\n"
 
   lifecycle {
     ignore_changes = [content]
@@ -19,5 +19,5 @@ resource "local_file" "starter_notes" {
 
 resource "local_file" "schedule" {
   filename = "${path.module}/journal/schedule.txt"
-  content  = "Feed the starter every ${local.feeding_every_hours} hours.\n"
+  content  = "Change shifts every ${local.shift_length_hours} hours.\n"
 }

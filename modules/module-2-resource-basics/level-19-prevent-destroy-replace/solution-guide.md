@@ -7,5 +7,5 @@
    destroy-and-create, and prevent_destroy forbids it.
 3. Decide. The mission says the label is cosmetic and should follow the rename, while the ledger is the
    permanent record. So remove `prevent_destroy` from the shelf label only; the ledger keeps it.
-4. `terraform apply`. Check `terraform output shelf_label` starts with `bunker-`, and that the ledger id in
-   `vault/catalogue.txt` is unchanged.
+4. `terraform apply`. Check `terraform output shelf_label` starts with `depot-`, and that the ledger id in
+   `stock/catalogue.txt` is unchanged.

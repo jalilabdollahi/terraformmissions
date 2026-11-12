@@ -5,7 +5,7 @@ Sometimes you need a rebuild with no code change: a secret leaked, a server is m
 must be reissued. That is what `terraform apply -replace=ADDRESS` is for.
 
 It is a *planned* operation. `terraform plan -replace=...` shows exactly what will happen, including side effects
-on dependants (here the crew card file is rewritten with the new code). You can review the plan before you
+on dependants (here the staff card file is rewritten with the new code). You can review the plan before you
 commit to it.
 
 It supersedes the older `terraform taint` command. Taint modifies the state ("this object is

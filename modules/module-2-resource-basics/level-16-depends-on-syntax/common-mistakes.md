@@ -1,4 +1,4 @@
 - Putting the reference in quotes but without a dot attribute. Quoted references are rejected.
-- Using `depends_on = local_file.chapters` without brackets. The argument must be a list.
-- Deleting the depends_on lines. The counter may then run before chapters.txt exists, and the mission requires the declared dependency.
-- Creating book/chapter-count.txt by hand. The shell step must be what produces it.
+- Using `depends_on = local_file.clues` without brackets. The argument must be a list.
+- Deleting the depends_on lines. The counter may then run before clues.txt exists, and the mission requires the declared dependency.
+- Creating puzzle/clue-count.txt by hand. The shell step must be what produces it.

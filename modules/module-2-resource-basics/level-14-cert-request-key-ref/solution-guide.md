@@ -5,4 +5,4 @@
 2. `tls_private_key` exports both `private_key_pem` and `public_key_pem`, and the argument is named
    `private_key_pem` for a reason: a CSR is signed with the private key and embeds the public key.
 3. Change the reference to `tls_private_key.sensor.private_key_pem`.
-4. `terraform apply`, then verify with `openssl req -in pki/humidity-07.csr -noout -verify -subject`.
+4. `terraform apply`, then verify with `openssl req -in pki/turbine-07.csr -noout -verify -subject`.

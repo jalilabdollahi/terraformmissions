@@ -1,10 +1,10 @@
-name: Sourdough Journal Guard
+name: Garage Build Journal Guard
 description: >-
-  The baker at Crumbwell wants Terraform to create the starter journal once and then leave it
-  alone, while the feeding schedule keeps following the config. The ignore_changes list names
+  The mechanic at Crumbwell wants Terraform to create the build journal once and then leave it
+  alone, while the work schedule keeps following the config. The ignore_changes list names
   attributes that local_file does not have, so Terraform refuses the config.
 objective: >-
-  Make Terraform ignore later changes to the starter notes' content (the file must keep its
+  Make Terraform ignore later changes to the build notes' content (the file must keep its
   original first line) while journal/schedule.txt is updated to the new 12 hour schedule. Do
   not use ignore_changes = all.
 xp: 150

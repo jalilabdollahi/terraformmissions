@@ -1,8 +1,8 @@
-name: The Unloaded Summer File
+name: The Unloaded Winter File
 description: >-
-  Glasshouse 3's nightly job runs plain terraform apply and still keeps the winter climate settings, even though the summer values sit in prod.tfvars right next to the code. Nothing errors, the tomatoes are just cold.
+  Birch Room 3's nightly job runs plain terraform apply and still keeps the summer climate settings, even though the winter values sit in prod.tfvars right next to the code. Nothing errors, the saunas are just lukewarm.
 objective: >-
-  Make plain terraform apply (no flags) use the summer settings: target_temp_c 24, vent_mode auto, misting_per_day 6. Keep the defaults in variables.tf as the winter baseline.
+  Make plain terraform apply (no flags) use the winter settings: target_temp_c 90, vent_mode auto, steam_per_day 6. Keep the defaults in variables.tf as the summer baseline.
 xp: 180
 difficulty: intermediate
 expected_time: 8m

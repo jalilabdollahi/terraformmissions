@@ -1,29 +1,29 @@
-# Daily bake sheet for the Corner Crumb bakery.
-# The shop manager prints everything under out/ and pins it by the ovens.
+# Daily shift board for the Tinkertop toy factory.
+# The floor manager prints everything under out/ and pins it beside the assembly line.
 
 locals {
-  bakes = {
-    sourdough = 24
-    rye       = 12
-    focaccia  = 18
+  builds = {
+    teddy  = 24
+    robot  = 12
+    puzzle = 18
   }
-  sheet_lines = [for name, qty in local.bakes : "${format("%-10s", name)} x ${qty}"]
+  board_lines = [for name, qty in local.builds : "${format("%-10s", name)} x ${qty}"]
 }
 
-resource "local_file" "bake_sheet" {
-  filename = "${path.module}/out/bake-sheet.txt"
-  content  = "BAKE SHEET\n${join("\n", local.sheet_lines)}\n"
+resource "local_file" "shift_board" {
+  filename = "${path.module}/out/shift-board.txt"
+  content  = "SHIFT BOARD\n${join("\n", local.board_lines)}\n"
 }
 
-resource "local_file" "price_labels" {
-  filename = "${path.module}/out/price-labels.txt"
-  content  = "sourdough 4.50\nrye 5.25\nfocaccia 3.75\n"
+resource "local_file" "pallet_labels" {
+  filename = "${path.module}/out/pallet-labels.txt"
+  content  = "teddy 4.50\nrobot 5.25\npuzzle 3.75\n"
 }
 
-output "bake_sheet_path" {
-  value = local_file.bake_sheet.filename
+output "shift_board_path" {
+  value = local_file.shift_board.filename
 }
 
-output "total_loaves" {
-  value = sum(values(local.bakes))
+output "total_toys" {
+  value = sum(values(local.builds))
 }

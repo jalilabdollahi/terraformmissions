@@ -1,10 +1,10 @@
-# Walkthrough — Hollow Ridge Bookings
+# Walkthrough — Quayside Lane Bookings
 
 1. **Run `terraform validate`.** You will see errors like:
    ```
    Error: Unsupported block type
      on main.tf line 2:
-      2: varible "telescope" {
+      2: varible "lane" {
    Blocks of type "varible" are not expected here. Did you mean "variable"?
    ```
    and the same for `outputs` ("Did you mean "output"?").

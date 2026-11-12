@@ -2,7 +2,7 @@ terraform {
   required_version = ">= 1.10"
 
   backend "local" {
-    path = "state/ferry.tfstate"
+    path = "state/tuktuk.tfstate"
   }
 
   required_providers {

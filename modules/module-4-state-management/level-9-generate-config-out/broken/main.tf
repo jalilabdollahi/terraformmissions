@@ -1,4 +1,4 @@
-# Ares Station: greenhouse dome controller credentials.
+# Ferrous Bay robot warehouse: robot controller credentials.
 # imports.tf already points at three live objects. The resource blocks are missing.
 #
 # Team rules for the final configuration:

@@ -2,7 +2,7 @@
 
 `local_file.filename` is an ordinary path. Terraform resolves it relative to the directory you run
 it in, and `path.module` expands to the directory that holds the current module's `.tf` files. Writing
-`"${path.module}/out/bake-sheet.txt"` anchors the file to the project instead of to wherever someone
+`"${path.module}/out/shift-board.txt"` anchors the file to the project instead of to wherever someone
 happened to start their shell.
 
 Two details worth remembering. First, `filename` is a "force new" argument: change it and Terraform

@@ -1,1 +1,1 @@
-Set `path = "states/ferry-prod.tfstate"` in terraform.tf, then run `terraform init -reconfigure` (it switches the backend without copying anything). `terraform plan` should now report no changes.
+Set `path = "states/tuktuk-prod.tfstate"` in terraform.tf, then run `terraform init -reconfigure` (it switches the backend without copying anything). `terraform plan` should now report no changes.

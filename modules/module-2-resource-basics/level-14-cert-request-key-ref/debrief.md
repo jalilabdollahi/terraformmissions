@@ -12,6 +12,6 @@ safety net is the provider's error message and a quick `openssl req -verify`.
 
 Notice how this config keeps the key and CSR in one state: the key is regenerated only when you
 replace it, so the CSR stays stable between plans. If you ever re-create the key, you must request
-a new certificate as well, because the old one no longer matches. Also, treat `humidity-07.key` as
+a new certificate as well, because the old one no longer matches. Also, treat `turbine-07.key` as
 a secret: the mode `0600` is set by `local_sensitive_file`, but the same key sits in plaintext in the
 Terraform state file.

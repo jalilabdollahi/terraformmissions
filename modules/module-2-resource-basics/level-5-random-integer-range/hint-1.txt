@@ -1,1 +1,1 @@
-Run `terraform apply` and read the error attached to random_integer.winning_ticket.
+Run `terraform apply` and read the error attached to random_integer.winning_card.

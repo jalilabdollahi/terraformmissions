@@ -1,12 +1,12 @@
-# Meadowbrook Apiary: hive records.
-# The queen registry belongs to the breeders' association now.
+# Meadowbrook Stud: horse records.
+# The stud book belongs to the breeders' association now.
 
 resource "random_id" "season_tag" {
   byte_length = 3
-  prefix      = "bee-"
+  prefix      = "foal-"
 }
 
-resource "local_file" "inspection_log" {
-  filename = "${path.module}/records/inspection-log.txt"
-  content  = "Season ${random_id.season_tag.hex}: 14 hives inspected, no foulbrood.\n"
+resource "local_file" "vet_log" {
+  filename = "${path.module}/records/vet-log.txt"
+  content  = "Season ${random_id.season_tag.hex}: 14 mares inspected, no strangles.\n"
 }

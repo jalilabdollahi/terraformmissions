@@ -1,27 +1,27 @@
-# Grotte Verte cheese cave — shop label feed.
+# Acetaia Bruna vinegar loft — shop label feed.
 # The online shop reads `shop_label` and sells whatever it says. Nothing may be
-# published for a wheel that has not matured for at least `min_affinage_days`
-# (last month a 28-day wheel was sold as "mature" because the number was never checked).
+# published for a barrel that has not aged for at least `min_ageing_days`
+# (last month a 28-day barrel was sold as "mature" because the number was never checked).
 
-variable "wheel_name" {
+variable "barrel_name" {
   type    = string
-  default = "Alpine Tomme"
+  default = "Modena Reserve"
 }
 
-variable "affinage_days" {
-  description = "Days this wheel has spent maturing in the cave."
+variable "ageing_days" {
+  description = "Days this barrel has spent ageing in the loft."
   type        = number
   default     = 75
 }
 
-variable "min_affinage_days" {
-  description = "Minimum maturation (days) before a wheel may be offered for sale."
+variable "min_ageing_days" {
+  description = "Minimum ageing (days) before a barrel may be offered for sale."
   type        = number
   default     = 60
 }
 
 locals {
-  label = "${var.wheel_name}, matured ${var.affinage_days} days"
+  label = "${var.barrel_name}, aged ${var.ageing_days} days"
 }
 
 resource "local_file" "label_feed" {

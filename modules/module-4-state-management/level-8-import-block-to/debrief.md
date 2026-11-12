@@ -8,7 +8,7 @@ the import gets reviewed, versioned and repeatable across workspaces.
 Both fields can be wrong in different ways:
 
 - **`to`** has to match an existing resource address, including `for_each` keys such as
-  `random_integer.berth["north"]`. A wrong name fails during plan with "Configuration for import
+  `random_integer.room["north"]`. A wrong name fails during plan with "Configuration for import
   target does not exist".
 - **`id`** has a provider-specific format. A wrong value either fails ("Cannot import non-existent
   remote object") or, as here, imports something slightly different from the code and shows up as a

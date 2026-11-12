@@ -1,11 +1,11 @@
-name: Bakery Print Run
+name: Toy Factory Shift Board
 description: >-
-  The Corner Crumb bakery prints everything in its out/ folder and pins it beside the ovens.
-  Since the last change the daily bake sheet keeps landing in the project root, where nobody
-  looks, while the price labels are filed correctly.
+  The Tinkertop toy factory prints everything in its out/ folder and pins it beside the assembly line.
+  Since the last change the daily shift board keeps landing in the project root, where nobody
+  looks, while the pallet labels are filed correctly.
 objective: >-
-  Write the bake sheet to out/bake-sheet.txt (inside the module directory, like the price
-  labels) and make nothing be left behind as bake-sheet.txt in the project root.
+  Write the shift board to out/shift-board.txt (inside the module directory, like the pallet
+  labels) and make nothing be left behind as shift-board.txt in the project root.
 xp: 115
 difficulty: beginner
 expected_time: 5m

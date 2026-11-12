@@ -1,1 +1,1 @@
-Run `terraform state list` and compare it with the file you want to keep. Think about which two places currently "own" the queen registry: the code and the state.
+Run `terraform state list` and compare it with the file you want to keep. Think about which two places currently "own" the stud book: the code and the state.

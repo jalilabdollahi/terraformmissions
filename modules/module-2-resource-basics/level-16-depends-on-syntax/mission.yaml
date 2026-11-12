@@ -1,11 +1,11 @@
-name: Cookbook Bindery Order
+name: Crossword Desk Order
 description: >-
-  At the Linden Lane bindery a shell command counts the cookbook's chapters, so it must run
-  only after chapters.txt exists. The author tried to declare that with depends_on, but
+  At the Marlow Street compiling desk a shell command counts the crossword's clues, so it must run
+  only after clues.txt exists. The author tried to declare that with depends_on, but
   Terraform complains about both depends_on lists.
 objective: >-
-  Fix both depends_on arguments so they are valid resource references to local_file.chapters,
-  keep the page counter's depends_on, and produce book/chapter-count.txt containing 5.
+  Fix both depends_on arguments so they are valid resource references to local_file.clues,
+  keep the clue counter's depends_on, and produce puzzle/clue-count.txt containing 5.
 xp: 145
 difficulty: beginner
 expected_time: 8m

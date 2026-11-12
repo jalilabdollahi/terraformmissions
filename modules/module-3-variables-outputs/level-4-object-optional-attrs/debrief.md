@@ -2,7 +2,7 @@
 
 An `object({...})` type constraint is strict: every attribute you list is required, and unknown
 attributes are discarded. That strictness is useful (it catches typos like `pirce`) but a menu where
-"most drinks come in one size" needs a way to say "you may leave this out".
+"most flavours come in one size" needs a way to say "you may leave this out".
 
 `optional(type, default)` does that. It was an experimental feature for a long time and has been stable
 since Terraform 1.3. Without the second argument the missing attribute becomes `null`; with it,

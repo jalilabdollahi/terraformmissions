@@ -1,9 +1,9 @@
-# Walkthrough — Lost Card Catalog
+# Walkthrough — Lost Stock List
 
 1. **See the damage.**
    ```bash
    terraform state list
-   # local_file.catalog_index
+   # local_file.stock_index
    terraform plan
    # Plan: 3 to add, 1 to change, 0 to destroy.
    ```
@@ -18,6 +18,6 @@
    cp terraform.tfstate.backup terraform.tfstate
    ```
    Alternatively `terraform state push -force terraform.tfstate.backup` (the backup's serial is older than the current one, so `-force` is required).
-4. **Verify.** `terraform plan` prints "No changes". The librarian name is the old one. Type `check`.
+4. **Verify.** `terraform plan` prints "No changes". The manager name is the old one. Type `check`.
 
 Do this *before* running any other state-changing command: each one overwrites the backup file.

@@ -1,4 +1,4 @@
-# Walkthrough — Stale Seed Lock
+# Walkthrough — Stale Bean Lock
 
 1. **Read the error.**
    ```bash

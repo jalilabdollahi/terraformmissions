@@ -1,25 +1,25 @@
-# Port of Karaburun: cargo manifest tracking.
-# The state of this workspace has been applied several times. Customs wants
-# its serial, lineage and the container seal value.
+# Hammerstone Auction House: lot catalogue tracking.
+# The state of this workspace has been applied several times. The authentication desk wants
+# its serial, lineage and the lot seal value.
 
 variable "revision" {
-  description = "Manifest revision, bumped every time the manifest is re-filed."
+  description = "Catalogue revision, bumped every time the catalogue is re-issued."
   type        = number
   default     = 3
 }
 
-resource "terraform_data" "cargo_manifest" {
+resource "terraform_data" "lot_catalogue" {
   input = {
-    vessel   = random_pet.vessel.id
+    artwork  = random_pet.artwork.id
     revision = var.revision
   }
 }
 
-resource "random_pet" "vessel" {
+resource "random_pet" "artwork" {
   length = 2
-  prefix = "mv"
+  prefix = "art"
 }
 
-resource "random_id" "container_seal" {
+resource "random_id" "lot_seal" {
   byte_length = 5
 }

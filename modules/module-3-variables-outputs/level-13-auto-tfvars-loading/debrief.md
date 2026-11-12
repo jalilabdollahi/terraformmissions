@@ -7,10 +7,10 @@ has a short list of file names it picks up on its own:
 2. `terraform.tfvars.json`
 3. any `*.auto.tfvars` or `*.auto.tfvars.json`, in lexical order
 
-Everything else — `prod.tfvars`, `staging.tfvars`, `env/summer.tfvars` — is inert unless you pass
+Everything else — `prod.tfvars`, `staging.tfvars`, `env/winter.tfvars` — is inert unless you pass
 `-var-file=...` explicitly. Terraform does not warn about the unused file, because from its point of
 view it is not part of the configuration at all. The nightly job simply runs with the defaults, and the
-mistake surfaces as "the tomatoes were cold".
+mistake surfaces as "the guests were lukewarm".
 
 Two good designs:
 - **One workspace/directory per environment** with its own `terraform.tfvars` (or `*.auto.tfvars`).

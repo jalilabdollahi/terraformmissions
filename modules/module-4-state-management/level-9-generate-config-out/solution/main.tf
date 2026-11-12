@@ -1,7 +1,7 @@
-# Ares Station: greenhouse dome controller credentials.
+# Ferrous Bay robot warehouse: robot controller credentials.
 # imports.tf already points at three live objects.
 
-resource "random_string" "bay_label" {
+resource "random_string" "aisle_label" {
   length      = 8
   lower       = true
   min_lower   = 0
@@ -13,7 +13,7 @@ resource "random_string" "bay_label" {
   upper       = true
 }
 
-resource "random_password" "airlock_pin" {
+resource "random_password" "charging_pin" {
   length      = 12
   lower       = true
   min_lower   = 0
@@ -25,7 +25,7 @@ resource "random_password" "airlock_pin" {
   upper       = true
 }
 
-resource "random_integer" "irrigation_zone" {
+resource "random_integer" "picking_zone" {
   max = 64
   min = 1
 }

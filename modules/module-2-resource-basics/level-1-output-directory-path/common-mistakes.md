@@ -1,4 +1,4 @@
-- Moving the file by hand with `mv bake-sheet.txt out/`. Terraform's state still points at the old path, so the next plan recreates the root file.
-- Using an absolute path such as `/Users/me/project/out/bake-sheet.txt`. It works on one machine only and breaks for everyone else.
-- Deleting the bake_sheet resource and creating the file in the shell. The mission needs Terraform to manage it.
-- Writing `out/bake-sheet.txt` without `${path.module}`. It works only when Terraform is started from the project directory.
+- Moving the file by hand with `mv shift-board.txt out/`. Terraform's state still points at the old path, so the next plan recreates the root file.
+- Using an absolute path such as `/Users/me/project/out/shift-board.txt`. It works on one machine only and breaks for everyone else.
+- Deleting the shift_board resource and creating the file in the shell. The mission needs Terraform to manage it.
+- Writing `out/shift-board.txt` without `${path.module}`. It works only when Terraform is started from the project directory.

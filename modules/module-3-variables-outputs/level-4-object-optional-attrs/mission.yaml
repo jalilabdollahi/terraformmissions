@@ -1,8 +1,8 @@
 name: Menu Without Sizes
 description: >-
-  The Quill & Kettle café exports its drink menu to the till through a typed variable. Most drinks come in one size, so the paper menu leaves it blank, and Terraform rejects the tfvars file.
+  The Frosty Spoon ice-cream parlour exports its flavour menu to the till through a typed variable. Most flavours come in one size, so the paper menu leaves it blank, and Terraform rejects the tfvars file.
 objective: >-
-  Keep the menu data and make every drink that omits size end up with size regular, including new entries passed on the command line. Explicit sizes must be kept.
+  Keep the menu data and make every flavour that omits size end up with size regular, including new entries passed on the command line. Explicit sizes must be kept.
 xp: 140
 difficulty: beginner
 expected_time: 7m

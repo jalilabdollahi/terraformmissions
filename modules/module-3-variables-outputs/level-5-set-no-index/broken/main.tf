@@ -1,16 +1,16 @@
-# Marlowe Street Library — featured shelf.
+# Reel Deal Video — staff-picks window.
 # The front window shows one featured genre per month: the one that comes
 # first in the alphabet among the genres on the donation list.
 
 variable "branch" {
   type    = string
-  default = "Marlowe Street Branch"
+  default = "Reel Deal Video Branch"
 }
 
 variable "donated_genres" {
   description = "Genres in this month's donation boxes (no duplicates, no order)."
   type        = set(string)
-  default     = ["poetry", "astronomy", "cookery", "mystery"]
+  default     = ["western", "animation", "noir", "musical"]
 }
 
 locals {

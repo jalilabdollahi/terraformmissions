@@ -9,8 +9,8 @@ Terraform has several places to assert things, and each has its own job:
 - `output { precondition { ... } }` — may this *published value* leave the module? It can reference
   anything the output can see: variables, locals, resource attributes.
 
-The cheese cave's rule is about what is offered for sale, so the output is the natural place. The
-precondition runs at plan time when the inputs are known, so a bad wheel is rejected during review, long
+The vinegar loft's rule is about what is offered for sale, so the output is the natural place. The
+precondition runs at plan time when the inputs are known, so a bad barrel is rejected during review, long
 before the shop's feed changes. It reads the minimum from a variable, which keeps the policy adjustable
 without editing the check.
 

@@ -1,8 +1,8 @@
-# Orpheum Theatre: crew door codes.
-# One code per entrance, printed on crew cards. The booth code leaked.
+# Club Velvet: staff door codes.
+# One code per entrance, printed on staff cards. The DJ dj code leaked.
 
 locals {
-  entrances = toset(["stage", "pit", "box-office", "booth"])
+  entrances = toset(["main", "vip", "cloakroom", "dj"])
 }
 
 resource "random_integer" "door_code" {
@@ -11,8 +11,8 @@ resource "random_integer" "door_code" {
   max      = 9999
 }
 
-resource "local_file" "crew_card" {
-  filename = "${path.module}/cards/crew.txt"
+resource "local_file" "staff_card" {
+  filename = "${path.module}/cards/staff.txt"
   content = join("\n", concat(
     [for e in sort(keys(random_integer.door_code)) : "${e}: ${random_integer.door_code[e].result}"],
     [""]

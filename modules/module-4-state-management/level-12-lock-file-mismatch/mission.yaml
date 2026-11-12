@@ -1,6 +1,6 @@
-name: Stale Seed Lock
+name: Stale Bean Lock
 description: >-
-  The Svalbard seed catalog module was bumped to require the random provider ~> 3.6 for a new
+  The Ember Lane bean catalog module was bumped to require the random provider ~> 3.6 for a new
   feature, but the committed .terraform.lock.hcl still pins version 3.5.1 from last year.
   terraform init refuses to continue, and the catalog cannot be generated.
 objective: >-

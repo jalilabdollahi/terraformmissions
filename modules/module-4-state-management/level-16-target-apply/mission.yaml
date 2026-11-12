@@ -1,12 +1,12 @@
-name: Pilot Chart First
+name: Route Chart First
 description: >-
-  Port Meridian's dispatch config has three parts. Tonight the harbour master only needs the
-  route chart published. The cargo manifest is blocked until customs delivers a stamp file, and
+  Meridian Haulage's dispatch config has three parts. Tonight the transport manager only needs the
+  route chart published. The load manifest is blocked until weighbridge delivers a ticket file, and
   a full apply fails on that. A plain terraform apply is useless right now.
 objective: >-
   Apply only the route chart with -target, so that local_file.route_chart and the route code it
-  depends on exist, while random_pet.pilot, local_file.cargo_manifest and out/cargo-manifest.txt
-  do not. Leave the configuration (including the customs precondition) untouched.
+  depends on exist, while random_pet.driver, local_file.load_manifest and out/load-manifest.txt
+  do not. Leave the configuration (including the weighbridge precondition) untouched.
 xp: 220
 difficulty: intermediate
 expected_time: 10m

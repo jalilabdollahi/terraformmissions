@@ -1,8 +1,8 @@
-# Quill & Kettle café — menu export for the till system.
+# Frosty Spoon ice-cream parlour — menu export for the till system.
 
 locals {
   menu = [
-    for d in var.drinks : {
+    for d in var.flavours : {
       name  = d.name
       price = d.price
       size  = d.size
@@ -12,7 +12,7 @@ locals {
 
 resource "local_file" "till_menu" {
   filename = "${path.module}/till/menu.json"
-  content  = jsonencode({ cafe = var.cafe_name, items = local.menu })
+  content  = jsonencode({ parlour = var.parlour_name, items = local.menu })
 }
 
 output "menu" {

@@ -1,11 +1,11 @@
-name: Seed Vault Shelf Rename
+name: Hardware Shop Shelf Rename
 description: >-
-  The Thornfield seed library renamed its shelf prefix from attic to bunker. The shelf label
+  The Thornfield hardware shop renamed its shelf prefix from yard to depot. The shelf label
   should follow, but its random_pet is force-new on prefix changes and carries
-  prevent_destroy, so every plan now fails. The vault ledger id next to it must never be
+  prevent_destroy, so every plan now fails. The shop ledger id next to it must never be
   replaced.
 objective: >-
-  Get the shelf label replaced with the new bunker- prefix and keep the vault ledger UUID
+  Get the shelf label replaced with the new depot- prefix and keep the shop ledger UUID
   exactly as it was, still protected by prevent_destroy. Finish with a clean plan.
 xp: 150
 difficulty: beginner

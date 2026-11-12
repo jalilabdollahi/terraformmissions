@@ -1,16 +1,16 @@
-# Svalbard seed vault: catalog reference generator.
+# Ember Lane coffee roastery: bean catalog reference generator.
 
-resource "random_pet" "accession" {
+resource "random_pet" "lot" {
   length    = 3
   separator = "-"
-  prefix    = "sv"
+  prefix    = "rb"
 }
 
-resource "local_file" "catalog_card" {
+resource "local_file" "bean_card" {
   filename = "${path.module}/catalog/card.txt"
-  content  = "Accession ${random_pet.accession.id}: barley, 2 kg, sealed\n"
+  content  = "Lot ${random_pet.lot.id}: Ethiopian beans, 2 kg, sealed\n"
 }
 
 output "catalog_ref" {
-  value = random_pet.accession.id
+  value = random_pet.lot.id
 }

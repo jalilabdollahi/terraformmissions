@@ -13,6 +13,6 @@ grep -qE '^3\.([6-9]|[1-9][0-9])\.' <<<"$LOCKED" || tm_fail "the lock file still
 
 tm_validate
 tm_apply
-tm_assert_output_jq catalog_ref 'startswith("sv-")' "output catalog_ref is missing or wrong"
+tm_assert_output_jq catalog_ref 'startswith("rb-")' "output catalog_ref is missing or wrong"
 tm_assert_no_changes
 tm_pass "init works with random $LOCKED locked and the catalog was generated"

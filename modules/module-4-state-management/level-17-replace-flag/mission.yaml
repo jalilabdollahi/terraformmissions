@@ -1,10 +1,10 @@
-name: Stage Door Codes
+name: Velvet Door Codes
 description: >-
-  The Orpheum Theatre generates door codes with Terraform, one per entrance. A stagehand
-  texted the lighting-booth code to a friend, so that single code must be regenerated tonight,
-  while the stage door, orchestra pit and box office codes stay valid on the printed crew cards.
+  Club Velvet generates door codes with Terraform, one per entrance. A bartender
+  texted the DJ booth code to a friend, so that single code must be regenerated tonight,
+  while the main door, VIP and cloakroom codes stay valid on the printed staff cards.
 objective: >-
-  Regenerate only random_integer.door_code["booth"] using a Terraform CLI option, so its value
+  Regenerate only random_integer.door_code["dj"] using a Terraform CLI option, so its value
   changes while the other three codes stay exactly as they were. Do not change the code, and
   finish with a clean plan.
 xp: 215

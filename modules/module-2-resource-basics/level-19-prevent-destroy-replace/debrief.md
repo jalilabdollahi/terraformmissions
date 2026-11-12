@@ -7,11 +7,11 @@ the feature working: it stops you before the apply starts.
 
 The skill here is deciding what to do next. You have three honest options:
 
-1. revert the change that forces replacement (keep `attic`);
+1. revert the change that forces replacement (keep `yard`);
 2. accept the replacement by removing the guard, applying, and optionally putting the guard back;
 3. avoid the replacement through another route (for example a new resource, or `moved` blocks).
 
-Here the shelf label is disposable, so option 2 was right, and the vault ledger kept its protection. For a
+Here the shelf label is disposable, so option 2 was right, and the shop ledger kept its protection. For a
 database the answer would be the opposite: you would change the design instead.
 
 Two cautions. `prevent_destroy` lives in the configuration, so removing the block removes the guard for

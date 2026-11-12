@@ -1,8 +1,8 @@
-name: Renamed Lift Passes
+name: Renamed Wave Passes
 description: >-
-  At Kestrel Peak ski resort a refactor renamed two resources to match the new naming scheme:
+  At Splashdown Cove water park a refactor renamed two resources to match the new naming scheme:
   the day-pass code and the turnstile sign. Terraform now plans to destroy both and issue new
-  codes, but the codes are already on sold tickets.
+  codes, but the codes are already on sold wristbands.
 objective: >-
   Keep the new names random_id.day_pass and local_file.turnstile_sign, and record the renames
   in the configuration with moved blocks so the existing objects (same IDs) are kept. Apply,

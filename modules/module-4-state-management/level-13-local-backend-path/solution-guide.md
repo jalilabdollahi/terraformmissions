@@ -1,17 +1,17 @@
-# Walkthrough — Ghost Ferry State
+# Walkthrough — Ghost Tuk-Tuk State
 
 1. **Notice the symptom.** `terraform plan` shows `Plan: 3 to add`, and `terraform state list` is empty.
 2. **Find the real state.**
    ```bash
    ls states/
-   # ferry-prod.tfstate
-   terraform state list -state=states/ferry-prod.tfstate
-   # local_file.timetable, random_integer.departure_minute, random_pet.ferry_name
+   # tuktuk-prod.tfstate
+   terraform state list -state=states/tuktuk-prod.tfstate
+   # local_file.timetable, random_integer.departure_minute, random_pet.tuktuk_name
    ```
 3. **Fix the path** in the `backend "local"` block of terraform.tf:
    ```hcl
    backend "local" {
-     path = "states/ferry-prod.tfstate"
+     path = "states/tuktuk-prod.tfstate"
    }
    ```
 4. **Re-initialise.** Terraform now says `Backend configuration changed`. Use:

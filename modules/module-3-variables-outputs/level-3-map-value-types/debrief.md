@@ -1,7 +1,7 @@
 # Debrief — a type constraint is a schema
 
-`map(string)` reads as "keys are names, every value is a string". The nursery's data is richer: each
-seedling carries a number and a string. Terraform's collection types (`list`, `map`, `set`) require
+`map(string)` reads as "keys are names, every value is a string". The farm's data is richer: each
+silkworm carries a number and a string. Terraform's collection types (`list`, `map`, `set`) require
 **one** element type; when the elements are structured, that element type is an `object({...})` with
 named attributes.
 

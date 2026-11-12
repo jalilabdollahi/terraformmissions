@@ -1,1 +1,1 @@
-The configuration plans and applies fine — the problem is what it does NOT do. Try `terraform plan -var affinage_days=28` and see whether anything protects the shop.
+The configuration plans and applies fine — the problem is what it does NOT do. Try `terraform plan -var ageing_days=28` and see whether anything protects the shop.

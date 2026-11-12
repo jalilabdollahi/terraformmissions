@@ -1,7 +1,7 @@
 # Debrief — moved blocks make a refactor travel with the code
 
 A resource's address is its identity in the state. Rename the block and Terraform sees an unknown
-address (to create) and an orphaned state entry (to destroy). For a ticket code or a database that is
+address (to create) and an orphaned state entry (to destroy). For a wristband code or a database that is
 a disaster.
 
 A `moved` block fixes this declaratively: `from` is the old address, `to` the new one. During

@@ -1,28 +1,28 @@
-# Port Calder pilotage notice generator.
+# Calder Bay whale-watching sailing notice generator.
 
 resource "local_file" "notice" {
-  filename = "${path.module}/notice/pilotage.txt"
+  filename = "${path.module}/notice/sailing.txt"
   content = join("\n", [
-    "PILOTAGE NOTICE - ${upper(var.port_name)}",
-    "Berths: ${var.berth_count}",
-    "Entry windows: ${join(" / ", var.tide_windows)}",
-    "Pilot compulsory over 40 m: ${var.pilot_required ? "YES" : "no"}",
+    "SAILING NOTICE - ${upper(var.tour_name)}",
+    "Seats: ${var.seat_count}",
+    "Sailings: ${join(" / ", var.sailing_times)}",
+    "Lifejackets compulsory on deck: ${var.lifejackets_required ? "YES" : "no"}",
     "",
   ])
 }
 
-output "port" {
-  value = var.port_name
+output "tour" {
+  value = var.tour_name
 }
 
-output "berths" {
-  value = var.berth_count
+output "seats" {
+  value = var.seat_count
 }
 
-output "windows" {
-  value = var.tide_windows
+output "sailings" {
+  value = var.sailing_times
 }
 
-output "pilot_required" {
-  value = var.pilot_required
+output "lifejackets_required" {
+  value = var.lifejackets_required
 }

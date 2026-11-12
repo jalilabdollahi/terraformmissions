@@ -1,4 +1,4 @@
 - Removing prevent_destroy from both resources. The ledger is the permanent record, and the mission requires it to stay protected.
-- Reverting the prefix to attic. The library asked for the bunker prefix.
+- Reverting the prefix to yard. The shop asked for the depot prefix.
 - Using `terraform apply -target=...` to dodge the error. The guard still blocks any plan that destroys the resource.
 - Deleting the state entry with `terraform state rm`. It orphans the old object and hides the problem; the plan then tries to create a duplicate.

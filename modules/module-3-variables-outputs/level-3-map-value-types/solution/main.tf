@@ -1,43 +1,43 @@
-# Fernwood Nursery — seedling tray planner.
-# Each seedling has a germination time and a tray letter. The type
+# Mulberry Hill silk farm — silkworm tray planner.
+# Each silkworm batch has a hatch time and a tray letter. The type
 # constraint was copied from the old "tray only" version of the file.
 
-variable "seedlings" {
-  description = "Seedling name => germination info."
+variable "silkworms" {
+  description = "Silkworm name => hatch info."
   type = map(object({
     days = number
     tray = string
   }))
   default = {
-    tomato = {
+    bombyx = {
       days = 7
       tray = "A"
     }
-    basil = {
+    tussah = {
       days = 5
       tray = "A"
     }
-    pepper = {
+    muga = {
       days = 12
       tray = "C"
     }
-    leek = {
+    eri = {
       days = 14
       tray = "B"
     }
   }
 }
 
-resource "local_file" "label" {
-  for_each = var.seedlings
-  filename = "${path.module}/labels/${each.key}.txt"
-  content  = "${each.key}: tray ${each.value.tray}, sprouts in ${each.value.days} days\n"
+resource "local_file" "tag" {
+  for_each = var.silkworms
+  filename = "${path.module}/tags/${each.key}.txt"
+  content  = "${each.key}: tray ${each.value.tray}, hatches in ${each.value.days} days\n"
 }
 
 output "slowest_days" {
-  value = max([for s in var.seedlings : s.days]...)
+  value = max([for s in var.silkworms : s.days]...)
 }
 
 output "trays_in_use" {
-  value = sort(distinct([for s in var.seedlings : s.tray]))
+  value = sort(distinct([for s in var.silkworms : s.tray]))
 }

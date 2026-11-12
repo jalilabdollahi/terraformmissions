@@ -1,10 +1,10 @@
-name: Hollow Ridge Bookings
+name: Quayside Lane Bookings
 description: >-
-  The Hollow Ridge observatory keeps its telescope booking sheet in Terraform. After a late-night
+  The Quayside public swimming baths keeps its lane booking sheet in Terraform. After a late-night
   edit, terraform refuses to read the file and complains about block types it has never heard of.
 objective: >-
-  Fix the misspelled top-level block keywords so the configuration applies and sky/booking.txt
-  reads "Instrument: Dobsonian 12-inch" and "Slot length: 3h" on two lines. Keep the telescope variable
+  Fix the misspelled top-level block keywords so the configuration applies and lanes/booking.txt
+  reads "Lane: Lane 4 (fast, 25 m)" and "Slot length: 3h" on two lines. Keep the lane variable
   and the booking_path output.
 xp: 100
 difficulty: beginner

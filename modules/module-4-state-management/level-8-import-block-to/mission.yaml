@@ -1,11 +1,11 @@
-name: Berth Sheet Import
+name: Room Sheet Import
 description: >-
-  Dockmaster Ilse wrote an import block to adopt berth number the harbour already assigned to
-  the cargo vessel, but terraform plan rejects it. Once the address is sorted out, the plan
+  Warden Ilse wrote an import block to adopt room number the halls already assigned to
+  the first-year student, but terraform plan rejects it. Once the address is sorted out, the plan
   still wants to throw the number away and draw a fresh one.
 objective: >-
-  Fix imports.tf so the import block adopts the real berth number into
-  random_integer.berth_number (the number and range are on harbour/berth-sheet.txt), then run
+  Fix imports.tf so the import block adopts the real room number into
+  random_integer.room_number (the number and range are on halls/room-sheet.txt), then run
   apply so it is imported. The state must hold the original number and the plan must be clean.
 xp: 210
 difficulty: intermediate

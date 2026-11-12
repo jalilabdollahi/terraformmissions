@@ -1,7 +1,7 @@
-# Debrief — Gilded Heron Quiz
+# Debrief — Buzzer Row Quiz Show
 
 **What broke.** Terraform is strongly typed at the edges: variable declarations carry a type, and every
-resource argument has one too. `teams` was declared `number`, and `result_count` expects a number, but
+resource argument has one too. `contestants` was declared `number`, and `result_count` expects a number, but
 both were given the *words* "eight" and "three". Terraform has an automatic conversion between strings and
 numbers, but it only works when the text actually looks like a number.
 

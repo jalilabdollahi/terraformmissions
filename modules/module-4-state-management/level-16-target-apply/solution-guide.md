@@ -1,6 +1,6 @@
-# Walkthrough — Pilot Chart First
+# Walkthrough — Route Chart First
 
-1. **See the blocker.** `terraform plan` ends with `Resource precondition failed ... Customs stamp missing`.
+1. **See the blocker.** `terraform plan` ends with `Resource precondition failed ... Weighbridge ticket missing`.
    A normal apply cannot proceed.
 2. **Target the chart.**
    ```bash
@@ -15,5 +15,5 @@
    # local_file.route_chart
    # random_id.route_code
    ```
-   `random_pet.pilot` is not there: it does not depend on the chart.
+   `random_pet.driver` is not there: it does not depend on the chart.
 4. Type `check`. Do not edit the precondition to make the full plan pass.

@@ -1,1 +1,1 @@
-`map(string)` means every value is a single string, but each seedling value is an object with `days` and `tray`. The type must describe the object.
+`map(string)` means every value is a single string, but each silkworm value is an object with `days` and `tray`. The type must describe the object.

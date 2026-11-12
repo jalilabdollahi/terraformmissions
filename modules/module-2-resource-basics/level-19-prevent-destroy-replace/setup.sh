@@ -6,7 +6,7 @@ cp main.tf "$TM_TMP/main.tf"
 python3 - <<'PY'
 import pathlib
 p = pathlib.Path("main.tf")
-p.write_text(p.read_text().replace('prefix = "bunker"', 'prefix = "attic"'))
+p.write_text(p.read_text().replace('prefix = "depot"', 'prefix = "yard"'))
 PY
 tm_apply
 tm_record ledger "$(tm_state_attr random_uuid.ledger id)"

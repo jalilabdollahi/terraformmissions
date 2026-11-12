@@ -1,1 +1,1 @@
-Write depends_on = [local_file.chapters] in both places.
+Write depends_on = [local_file.clues] in both places.

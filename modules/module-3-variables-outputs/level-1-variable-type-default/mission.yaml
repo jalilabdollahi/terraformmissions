@@ -1,8 +1,8 @@
-name: Three Ovens, No Number
+name: Three Machines, No Number
 description: >-
-  The Crumb & Ember bakery sizes its dough order from a small Terraform planner. Maya wrote the oven count the way she says it out loud, and now the planner refuses to load at all.
+  The Suds & Sparks laundromat sizes its detergent order from a small Terraform planner. Maya wrote the machine count the way she says it out loud, and now the planner refuses to load at all.
 objective: >-
-  Make terraform apply succeed with oven_count = 3 as a real number, so the output daily_loaves is 120 (3 ovens x 40 loaves). Keep the variable's type as number.
+  Make terraform apply succeed with machine_count = 3 as a real number, so the output daily_cycles is 120 (3 machines x 40 cycles). Keep the variable's type as number.
 xp: 125
 difficulty: beginner
 expected_time: 5m

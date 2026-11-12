@@ -1,8 +1,8 @@
 name: Wiki Colon Syndrome
 description: >-
-  Port Calder's pilotage notice takes its inputs from terraform.tfvars, which someone pasted from the old ops wiki. Terraform will not even read the file.
+  The Calder Bay whale-watching sailing notice takes its inputs from terraform.tfvars, which someone pasted from the old ops wiki. Terraform will not even read the file.
 objective: >-
-  Make plain terraform apply read terraform.tfvars and produce the notice for Port Calder with 14 berths, entry windows 05:10 and 17:25, and a compulsory pilot. Keep the values in terraform.tfvars (no defaults in the variable blocks).
+  Make plain terraform apply read terraform.tfvars and produce the notice for Calder Bay Whale Tours with 14 seats, sailings at 08:30 and 14:15, and compulsory lifejackets. Keep the values in terraform.tfvars (no defaults in the variable blocks).
 xp: 175
 difficulty: intermediate
 expected_time: 7m

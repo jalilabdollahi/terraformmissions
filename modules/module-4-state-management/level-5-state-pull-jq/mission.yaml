@@ -1,12 +1,12 @@
-name: Manifest Fingerprints
+name: Provenance Fingerprints
 description: >-
-  Harbour customs wants proof that the cargo-manifest state file they were handed is the genuine
+  Hammerstone's authentication desk wants proof that the lot-catalogue state file they were handed is the genuine
   one. They ask for three fingerprints: the state's serial number, its lineage ID, and the hex
-  value of the container seal. The raw state JSON has all of them.
+  value of the lot seal. The raw state JSON has all of them.
 objective: >-
   Pull the state with terraform state pull and use jq to write answers/serial.txt (the state
   serial), answers/lineage.txt (the lineage UUID) and answers/seal-hex.txt (the hex attribute
-  of random_id.container_seal). Change nothing in the infrastructure.
+  of random_id.lot_seal). Change nothing in the infrastructure.
 xp: 200
 difficulty: intermediate
 expected_time: 12m

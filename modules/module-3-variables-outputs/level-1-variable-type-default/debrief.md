@@ -18,5 +18,5 @@ constraint also gives your teammates a clear error if they pass `"three"` throug
   it does not belong in the declaration.
 - `terraform validate` is cheap and needs no credentials. Run it in CI and in a pre-commit hook so
   mismatches like this one never reach a plan review.
-- Descriptions (like "Deck ovens firing at 4 a.m.") are documentation for the next person; write
-  them as if that person is you, at 4 a.m., in a hurry.
+- Descriptions (like "Front-loading washers running from 6 a.m.") are documentation for the next person; write
+  them as if that person is you, at 6 a.m., in a hurry.

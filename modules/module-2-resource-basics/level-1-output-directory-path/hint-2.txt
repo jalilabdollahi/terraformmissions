@@ -1,1 +1,1 @@
-The bake_sheet resource writes to the module root. The price_labels resource shows the folder convention: out/ under ${path.module}.
+The shift_board resource writes to the module root. The pallet_labels resource shows the folder convention: out/ under ${path.module}.

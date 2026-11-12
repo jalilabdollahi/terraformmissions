@@ -1,1 +1,1 @@
-`terraform apply -replace='random_integer.door_code["booth"]'`. Check the plan: `1 to add, 1 to change (the crew card), 1 to destroy`, and nothing about stage, pit or box-office.
+`terraform apply -replace='random_integer.door_code["dj"]'`. Check the plan: `1 to add, 1 to change (the staff card), 1 to destroy`, and nothing about main, vip or cloakroom.

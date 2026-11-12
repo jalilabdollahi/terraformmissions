@@ -1,12 +1,12 @@
-name: Hive Handover
+name: Stud Book Handover
 description: >-
-  Meadowbrook Apiary's queen registry is moving to the regional breeders' association, who will
-  maintain records/queen-registry.txt themselves from now on. Our Terraform config still
+  Meadowbrook Stud's stud book is moving to the regional breeders' association, who will
+  maintain records/stud-book.txt themselves from now on. Our Terraform config still
   manages that file, so the next cleanup would delete the association's only copy.
 objective: >-
-  Stop managing local_file.queen_registry without deleting the file: remove it from the state
-  and from the configuration, keep records/queen-registry.txt on disk untouched, keep
-  local_file.inspection_log managed, and finish with a clean plan. Use the state CLI, not a
+  Stop managing local_file.stud_book without deleting the file: remove it from the state
+  and from the configuration, keep records/stud-book.txt on disk untouched, keep
+  local_file.vet_log managed, and finish with a clean plan. Use the state CLI, not a
   removed block.
 xp: 190
 difficulty: intermediate

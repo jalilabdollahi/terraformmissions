@@ -1,4 +1,4 @@
-# Debrief — Hollow Ridge Bookings
+# Debrief — Quayside Lane Bookings
 
 **What broke.** Every top-level construct in HCL starts with a *block type* keyword. Terraform has a
 small fixed vocabulary: `terraform`, `provider`, `resource`, `data`, `variable`, `locals`, `output`,
@@ -18,4 +18,4 @@ is `variable`.
 **Real-world takeaway.** Syntax-level typos are caught by `terraform validate` in a second. Make it
 a pre-commit habit, and use an editor with the Terraform language server: it underlines unknown block
 types as you type, long before you run any command. The variable must also stay wired in: the validator
-re-applied with a different `telescope` value to prove the input still drives the file.
+re-applied with a different `lane` value to prove the input still drives the file.

@@ -1,10 +1,10 @@
-name: Harvest Fair Raffle
+name: Lucky Strike Jackpot Draw
 description: >-
-  The Ashby Harvest Fair raffle is drawn by Terraform to keep the chairman honest, but the
-  draw refuses to run at all. The committee insists the tickets still run from 1000 to 1499.
+  The Lucky Strike bingo hall's jackpot draw is drawn by Terraform to keep the caller honest, but the
+  draw refuses to run at all. Management insists the cards still run from 1000 to 1499.
 objective: >-
-  Draw a winning ticket between 1000 and 1499 inclusive using random_integer.winning_ticket,
-  keep the locals as they are, and have hall/winner.txt announce that ticket.
+  Draw a winning card between 1000 and 1499 inclusive using random_integer.winning_card,
+  keep the locals as they are, and have hall/winner.txt announce that card.
 xp: 120
 difficulty: beginner
 expected_time: 5m

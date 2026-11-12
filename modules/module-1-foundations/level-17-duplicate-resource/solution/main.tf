@@ -1,10 +1,10 @@
-# Show posters for the Hartley Planetarium. One text poster per show.
+# Flash sheets for the Inkwell Row tattoo studio. One text flash sheet per design.
 variable "venue" {
   type    = string
-  default = "Hartley Planetarium, Dome A"
+  default = "Inkwell Row Tattoo, Booth A"
 }
 
-resource "local_file" "poster" {
-  filename = "${path.module}/posters/comet-night.txt"
-  content  = "COMET NIGHT\nFriday 20:00 - ${var.venue}\nBring a blanket.\n"
+resource "local_file" "flash_sheet" {
+  filename = "${path.module}/flash/swallow.txt"
+  content  = "SWALLOW\nFriday 18:00 - ${var.venue}\nWalk-ins welcome.\n"
 }

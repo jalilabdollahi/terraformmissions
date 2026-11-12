@@ -1,12 +1,12 @@
-name: Lost Card Catalog
+name: Lost Stock List
 description: >-
-  A tired intern at the Alder Street Library applied a half-edited branch that had three of the
-  catalog resources deleted. Terraform dutifully dropped them from the state, the intern has
-  since restored the code, and the plan now wants to create new librarian names, shelf codes and
-  card numbers, which would invalidate every printed card.
+  A tired intern at Redline Motors applied a half-edited branch that had three of the
+  stock-list resources deleted. Terraform dutifully dropped them from the state, the intern has
+  since restored the code, and the plan now wants to create new manager names, bay codes and
+  stock numbers, which would invalidate every printed windscreen sticker.
 objective: >-
-  Bring back the lost state entries so that random_pet.head_librarian,
-  random_string.shelf_code and random_integer.card_number are tracked again with their
+  Bring back the lost state entries so that random_pet.sales_manager,
+  random_string.bay_code and random_integer.stock_number are tracked again with their
   ORIGINAL values, and the plan is clean. Do not run terraform apply to "fix" it.
 xp: 210
 difficulty: intermediate

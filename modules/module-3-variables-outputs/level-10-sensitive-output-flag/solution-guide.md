@@ -1,4 +1,4 @@
-# Walkthrough — Harbor Inn
+# Walkthrough — Granite Gate Mall
 
 1. **Diagnose.** `terraform plan` fails with
    `Error: Output refers to sensitive values ... To reduce the risk of accidentally exporting sensitive data that was intended to be only internal, Terraform requires that any root module output containing sensitive data be explicitly marked as sensitive`.

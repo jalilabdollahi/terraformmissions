@@ -1,1 +1,1 @@
-Use ignore_changes = [content] on local_file.starter_notes only, then apply so the schedule file picks up the 12 hour value.
+Use ignore_changes = [content] on local_file.build_notes only, then apply so the schedule file picks up the 12 hour value.

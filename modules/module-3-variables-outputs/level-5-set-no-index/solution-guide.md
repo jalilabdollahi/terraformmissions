@@ -1,4 +1,4 @@
-# Walkthrough — Marlowe Street Library
+# Walkthrough — Reel Deal Video
 
 1. **Diagnose.** `terraform plan` fails: `Invalid index ... This value does not have any indices.` The
    expression is `var.donated_genres[0]` and the variable is `set(string)`.
@@ -6,4 +6,4 @@
    an arbitrary element.
 3. **Fix.** Decide the order yourself. The mission says "first in the alphabet", so:
    `local.featured = sort(tolist(var.donated_genres))[0]`.
-4. **Verify.** `terraform output featured_genre` is `astronomy`, no matter the order in the default.
+4. **Verify.** `terraform output featured_genre` is `animation`, no matter the order in the default.

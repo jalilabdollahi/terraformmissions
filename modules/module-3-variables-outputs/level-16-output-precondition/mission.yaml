@@ -1,8 +1,8 @@
-name: Young Wheel Goes Live
+name: Young Barrel Goes Live
 description: >-
-  Grotte Verte's online shop sells whatever the shop_label output says. Last month a 28-day wheel was published as mature because nothing checked the number. The rule exists only as a comment in main.tf.
+  Acetaia Bruna's online shop sells whatever the shop_label output says. Last month a 28-day barrel was published as mature because nothing checked the number. The rule exists only as a comment in main.tf.
 objective: >-
-  Add a precondition to the shop_label output so that a plan fails when affinage_days is below min_affinage_days (the default 75 days still publishes, exactly 60 is allowed, and raising the minimum variable raises the bar).
+  Add a precondition to the shop_label output so that a plan fails when ageing_days is below min_ageing_days (the default 75 days still publishes, exactly 60 is allowed, and raising the minimum variable raises the bar).
 xp: 195
 difficulty: intermediate
 expected_time: 9m

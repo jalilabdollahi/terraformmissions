@@ -1,10 +1,10 @@
-name: Greenhouse Sensor CSR
+name: Offshore Wind Sensor CSR
 description: >-
-  Fernhollow Greenhouses generate a key and a signing request for each humidity sensor, and
+  Saltmarsh Offshore Wind generates a key and a signing request for each turbine sensor, and
   the CA team signs the request. The CSR resource refuses to build, and the error complains
   about the PEM it was given.
 objective: >-
-  Build pki/humidity-07.csr as a valid certificate request signed by the sensor's own key, so
+  Build pki/turbine-07.csr as a valid certificate request signed by the sensor's own key, so
   that the public key inside the CSR is the public half of tls_private_key.sensor. Keep the
   private key file too.
 xp: 140

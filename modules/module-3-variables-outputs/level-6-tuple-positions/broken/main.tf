@@ -1,10 +1,10 @@
-# Ridgeline weather station — daily status line for the mountain hut board.
+# Ashfall volcano monitoring post — daily status line for the crater-rim warning board.
 # A reading is a fixed-position tuple: [station id, temperature in C, online?]
 
 variable "latest_reading" {
   description = "[station id, temperature in degrees C, is the sensor online]"
   type        = tuple([string, number, bool])
-  default     = [18.5, "north-ridge", true]
+  default     = [142.5, "summit-vent", true]
 }
 
 locals {
@@ -13,7 +13,7 @@ locals {
   online     = var.latest_reading[2]
 }
 
-resource "local_file" "hut_board" {
+resource "local_file" "warning_board" {
   filename = "${path.module}/board/status.txt"
   content  = "${local.station_id}: ${local.temp_c} C, sensor ${local.online ? "online" : "OFFLINE"}\n"
 }

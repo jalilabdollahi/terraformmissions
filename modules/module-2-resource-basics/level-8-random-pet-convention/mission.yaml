@@ -1,11 +1,11 @@
-name: Telescope Nicknames
+name: Donkey Nicknames
 description: >-
-  Cragmoor Observatory names its telescopes with random pet names so members can book them on
-  a shared calendar. The reflector's nickname is accepted by the booking sheet, but the
-  refractor's nickname is rejected every time.
+  Cragmoor Donkey Sanctuary names its donkeys with random pet names so sponsors can book visits with them on
+  a shared calendar. The jack's nickname is accepted by the sponsor card, but the
+  jenny's nickname is rejected every time.
 objective: >-
-  Make both nicknames match ^scope-[a-z]+-[a-z]+$ (the prefix, then exactly two words,
-  separated by hyphens). Keep both resources and have the booking sheet list them.
+  Make both nicknames match ^donkey-[a-z]+-[a-z]+$ (the prefix, then exactly two words,
+  separated by hyphens). Keep both resources and have the sponsor card list them.
 xp: 130
 difficulty: beginner
 expected_time: 6m

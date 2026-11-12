@@ -1,12 +1,12 @@
-variable "greenhouse" {
+variable "spa_room" {
   type    = string
-  default = "Glasshouse 3"
+  default = "Birch Room 3"
 }
 
 variable "target_temp_c" {
   description = "Target air temperature in degrees C."
   type        = number
-  default     = 18
+  default     = 70
 }
 
 variable "vent_mode" {
@@ -15,8 +15,8 @@ variable "vent_mode" {
   default     = "manual"
 }
 
-variable "misting_per_day" {
-  description = "How many misting cycles per day."
+variable "steam_per_day" {
+  description = "How many steam bursts per day."
   type        = number
   default     = 2
 }

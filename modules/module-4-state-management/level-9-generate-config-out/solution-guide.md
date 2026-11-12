@@ -1,4 +1,4 @@
-# Walkthrough — Dome Controller Roster
+# Walkthrough — Robot Controller Roster
 
 1. **Generate a draft.**
    ```bash

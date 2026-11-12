@@ -1,8 +1,8 @@
-name: Dome Controller Roster
+name: Robot Controller Roster
 description: >-
-  The Ares Station greenhouse dome runs three controller credentials that were created by hand
+  The Ferrous Bay robot warehouse runs three controller credentials that were created by hand
   and are now listed in import blocks (imports.tf). Nobody has written the matching resource
-  blocks, and the station's lint rules are strict about how the final config must look.
+  blocks, and the warehouse's lint rules are strict about how the final config must look.
 objective: >-
   Let Terraform draft the resource blocks with plan -generate-config-out, then tidy them into
   main.tf following the team rules in main.tf (all resources in main.tf only, no null-valued

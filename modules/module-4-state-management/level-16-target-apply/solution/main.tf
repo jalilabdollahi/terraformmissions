@@ -1,6 +1,6 @@
-# Port Meridian: dispatch board.
-# Tonight only the route chart can go out. The cargo manifest waits for the
-# customs stamp (pending/customs-stamp.txt), which has not arrived.
+# Meridian Haulage: dispatch board.
+# Tonight only the route chart can go out. The load manifest waits for the
+# weighbridge ticket (pending/weighbridge-ticket.txt), which has not arrived.
 
 resource "random_id" "route_code" {
   byte_length = 3
@@ -9,22 +9,22 @@ resource "random_id" "route_code" {
 
 resource "local_file" "route_chart" {
   filename = "${path.module}/out/route-chart.txt"
-  content  = "Inbound route ${random_id.route_code.hex}: channel 3, draught limit 9 m\n"
+  content  = "Inbound route ${random_id.route_code.hex}: motorway M3, height limit 4 m\n"
 }
 
-resource "random_pet" "pilot" {
+resource "random_pet" "driver" {
   length = 1
-  prefix = "pilot"
+  prefix = "driver"
 }
 
-resource "local_file" "cargo_manifest" {
-  filename = "${path.module}/out/cargo-manifest.txt"
-  content  = "Manifest for route ${random_id.route_code.hex}, cleared by customs\n"
+resource "local_file" "load_manifest" {
+  filename = "${path.module}/out/load-manifest.txt"
+  content  = "Manifest for route ${random_id.route_code.hex}, cleared at the weighbridge\n"
 
   lifecycle {
     precondition {
-      condition     = fileexists("${path.module}/pending/customs-stamp.txt")
-      error_message = "Customs stamp missing: pending/customs-stamp.txt has not been delivered."
+      condition     = fileexists("${path.module}/pending/weighbridge-ticket.txt")
+      error_message = "Weighbridge ticket missing: pending/weighbridge-ticket.txt has not been delivered."
     }
   }
 }

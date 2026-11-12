@@ -1,10 +1,10 @@
-variable "cafe_name" {
+variable "parlour_name" {
   type    = string
-  default = "Quill & Kettle"
+  default = "Frosty Spoon"
 }
 
-variable "drinks" {
-  description = "Menu entries. Size is optional on the paper menu: most drinks come in one size."
+variable "flavours" {
+  description = "Menu entries. Size is optional on the paper menu: most flavours come in one size."
   type = list(object({
     name  = string
     price = number

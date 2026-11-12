@@ -1,10 +1,10 @@
-# Kestrel Peak lift tickets.
-# Both resources were renamed in a cleanup commit (lift_pass -> day_pass,
-# gate_sign -> turnstile_sign). The tickets already printed carry the old code.
+# Splashdown Cove day wristbands.
+# Both resources were renamed in a cleanup commit (wave_pass -> day_pass,
+# entrance_sign -> turnstile_sign). The wristbands already printed carry the old code.
 
 resource "random_id" "day_pass" {
   byte_length = 4
-  prefix      = "KP-"
+  prefix      = "SC-"
 }
 
 resource "local_file" "turnstile_sign" {
@@ -13,11 +13,11 @@ resource "local_file" "turnstile_sign" {
 }
 
 moved {
-  from = random_id.lift_pass
+  from = random_id.wave_pass
   to   = random_id.day_pass
 }
 
 moved {
-  from = local_file.gate_sign
+  from = local_file.entrance_sign
   to   = local_file.turnstile_sign
 }

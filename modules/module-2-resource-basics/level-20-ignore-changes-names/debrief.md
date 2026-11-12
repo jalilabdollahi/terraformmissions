@@ -10,7 +10,7 @@ Choose the narrowest list that does the job. `ignore_changes = all` is tempting 
 drift in everything else; here it would have stopped the schedule from following the config, too.
 Also note what ignoring does not do: the attribute stays in config and state as it was at creation, new
 resources of the same name will use the new value, and if the resource is ever replaced
-for another reason, Terraform will write the *current config value*, not the baker's notes.
+for another reason, Terraform will write the *current config value*, not the mechanic's notes.
 
 Typical real-world uses are fields something else owns: autoscaling's `desired_count`, tags added
 by a governance tool, a password rotated outside Terraform. Always write a comment next to the

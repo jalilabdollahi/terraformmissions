@@ -1,6 +1,6 @@
-name: Seabreeze Guest Wi-Fi
+name: Cobalt Yard Visitor Wi-Fi
 description: >-
-  The Seabreeze Inn generates a fresh guest Wi-Fi password for each stay, but the voucher
+  The Cobalt Yard coworking space generates a fresh visitor Wi-Fi password for each day pass, but the voucher
   printer has been silent since someone tightened the password rules. Terraform will not
   produce a password at all.
 objective: >-

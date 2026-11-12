@@ -1,6 +1,6 @@
-# Question picker for the Friday pub quiz at The Gilded Heron.
-variable "teams" {
-  description = "How many teams registered tonight"
+# Question picker for the Saturday-night TV game show Buzzer Row.
+variable "contestants" {
+  description = "How many contestants are on set tonight"
   type        = number
   default     = 8
 }
@@ -19,15 +19,15 @@ resource "random_shuffle" "round_one" {
   result_count = 3
 }
 
-resource "local_file" "question_sheet" {
-  filename = "${path.module}/quiz/round-one.txt"
-  content  = "Teams registered: ${var.teams}\n${join("\n", random_shuffle.round_one.result)}\n"
+resource "local_file" "question_cards" {
+  filename = "${path.module}/studio/round-one.txt"
+  content  = "Contestants on set: ${var.contestants}\n${join("\n", random_shuffle.round_one.result)}\n"
 }
 
 output "picked_questions" {
   value = random_shuffle.round_one.result
 }
 
-output "team_count" {
-  value = var.teams
+output "contestant_count" {
+  value = var.contestants
 }

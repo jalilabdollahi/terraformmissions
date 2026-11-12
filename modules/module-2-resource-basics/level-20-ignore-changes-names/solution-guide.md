@@ -5,5 +5,5 @@
 2. The attribute that holds the text of a `local_file` is `content`.
 3. Change the list to `ignore_changes = [content]`. Because setup applied the previous config (24h)
    and the code now says 12h, the plan then updates only `journal/schedule.txt`.
-4. `terraform apply`; `cat journal/starter-notes.txt` still has the original day 1 line and
+4. `terraform apply`; `cat journal/build-notes.txt` still has the original day 1 line and
    `cat journal/schedule.txt` says 12 hours.

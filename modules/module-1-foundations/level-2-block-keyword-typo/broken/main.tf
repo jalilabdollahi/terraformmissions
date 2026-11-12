@@ -1,7 +1,7 @@
-# Night-sky booking sheet for the Hollow Ridge observatory.
-varible "telescope" {
+# Lane booking sheet for the Quayside public swimming baths.
+varible "lane" {
   type    = string
-  default = "Dobsonian 12-inch"
+  default = "Lane 4 (fast, 25 m)"
 }
 
 variable "slot_hours" {
@@ -10,8 +10,8 @@ variable "slot_hours" {
 }
 
 resource "local_file" "booking" {
-  filename = "${path.module}/sky/booking.txt"
-  content  = "Instrument: ${var.telescope}\nSlot length: ${var.slot_hours}h\n"
+  filename = "${path.module}/lanes/booking.txt"
+  content  = "Lane: ${var.lane}\nSlot length: ${var.slot_hours}h\n"
 }
 
 outputs "booking_path" {

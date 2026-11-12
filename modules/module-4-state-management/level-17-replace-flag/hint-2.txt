@@ -1,1 +1,1 @@
-`-replace=ADDRESS` forces replacement of one resource instance. The address is a for_each instance: `random_integer.door_code["booth"]`, and the shell will strip the inner quotes unless you quote the whole argument. Use `terraform state list` to copy the exact address.
+`-replace=ADDRESS` forces replacement of one resource instance. The address is a for_each instance: `random_integer.door_code["dj"]`, and the shell will strip the inner quotes unless you quote the whole argument. Use `terraform state list` to copy the exact address.

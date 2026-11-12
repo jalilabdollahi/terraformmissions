@@ -1,27 +1,27 @@
-# Maturation log for the Hollow Oak cheese cave.
-# terraform_data holds a small record for each wheel batch so other resources
+# Ageing log for the Cedar Lane cigar humidor house.
+# terraform_data holds a small record for each cigar batch so other resources
 # can read it back; the log file is generated from that record.
 
 variable "batch_code" {
   type    = string
-  default = "HO-0412"
+  default = "CL-0412"
 }
 
 resource "terraform_data" "batch_record" {
   input = {
-    batch   = var.batch_code
-    wheels  = 36
-    ripened = false
+    batch  = var.batch_code
+    boxes  = 36
+    rested = false
   }
 
   triggers_replace = [var.batch_code]
 }
 
-resource "local_file" "cave_log" {
-  filename = "${path.module}/cave/maturation.log"
-  content  = "batch=${terraform_data.batch_record.output.batch} wheels=${terraform_data.batch_record.output.wheels}\n"
+resource "local_file" "humidor_log" {
+  filename = "${path.module}/humidor/ageing.log"
+  content  = "batch=${terraform_data.batch_record.output.batch} boxes=${terraform_data.batch_record.output.boxes}\n"
 }
 
-output "wheel_count" {
-  value = terraform_data.batch_record.output.wheels
+output "box_count" {
+  value = terraform_data.batch_record.output.boxes
 }
