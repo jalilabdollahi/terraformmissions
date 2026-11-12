@@ -1,1 +1,0 @@
-Replace the broken quoted string with a `<<-EOF` heredoc block.

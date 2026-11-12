@@ -1,1 +1,0 @@
-Change `outputs` to `output`.

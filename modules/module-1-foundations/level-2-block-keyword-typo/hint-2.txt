@@ -1,0 +1,1 @@
+Terraform only knows a fixed list of top-level block types (terraform, provider, resource, data, variable, locals, output, module, moved...). Two of the blocks use a word that is not on that list.

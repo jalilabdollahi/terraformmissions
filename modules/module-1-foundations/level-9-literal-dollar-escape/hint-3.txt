@@ -1,0 +1,1 @@
+Double the dollar sign: write `$${HOME}` and `$${PUMP_SECONDS:-30}`. Terraform turns `$${` into a literal `${`. Leave `${var.bay}` alone.

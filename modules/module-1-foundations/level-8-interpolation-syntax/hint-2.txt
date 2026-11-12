@@ -1,0 +1,1 @@
+Terraform only substitutes an expression inside a string when it is wrapped in a dollar sign and curly braces. Compare the spelling of the Wind line (which works) with the other two.

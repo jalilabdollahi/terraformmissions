@@ -1,0 +1,1 @@
+Run `terraform validate` and note the names in each "undeclared input variable" error. Then search all .tf files for a `variable` block with that name.

@@ -1,0 +1,1 @@
+Rewrite the Station and Altitude references exactly like the Wind one: a dollar sign, an opening brace, var.<name>, a closing brace.

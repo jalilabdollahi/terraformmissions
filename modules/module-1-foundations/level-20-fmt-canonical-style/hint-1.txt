@@ -1,0 +1,1 @@
+Run `terraform fmt -check -recursive` — it lists every file that fails. Note how many, and in which folders.

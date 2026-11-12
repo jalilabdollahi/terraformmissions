@@ -1,0 +1,16 @@
+name: Wax And Groove Prices
+description: >-
+  A record shop prices its used sleeves with Terraform. The owner's notes were pasted in as comments,
+  using the styles of SQL, an INI file and HTML, and now Terraform cannot even read the file.
+objective: >-
+  Make the file parse using comment syntax HCL understands, and write shop/price-list.csv
+  with one "title,price" line per record, prices rounded to two decimals after the 10 percent markup.
+xp: 130
+difficulty: beginner
+expected_time: 6m
+concepts:
+  - comments
+  - "#, // and /* */"
+  - parser errors
+module: module-1-foundations
+level: level-13-comment-syntax

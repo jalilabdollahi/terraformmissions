@@ -1,0 +1,16 @@
+name: Copper Kettle Menu
+description: >-
+  The tavern's menu board file is generated from a heredoc, and the front-of-house tablet shows every
+  line pushed four spaces to the right. The cook wants the file to match the config's text shape.
+objective: >-
+  Make tavern/menu.txt start at column 0 (the title and closing line unindented) while keeping the
+  two-space indent of the three dish lines under the title. Keep the soup variable in use.
+xp: 115
+difficulty: beginner
+expected_time: 6m
+concepts:
+  - heredoc
+  - indented heredoc
+  - whitespace
+module: module-1-foundations
+level: level-7-heredoc-indentation

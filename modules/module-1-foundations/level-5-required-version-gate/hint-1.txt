@@ -1,0 +1,1 @@
+Run `terraform init` and read the message: it names the Terraform version you have and the constraint it was compared with.

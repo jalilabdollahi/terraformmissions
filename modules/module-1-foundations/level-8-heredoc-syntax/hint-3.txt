@@ -1,1 +1,0 @@
-Change `<<EOF` to `<<-EOF` on the `content` line.

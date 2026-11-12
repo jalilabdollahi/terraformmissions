@@ -1,0 +1,1 @@
+In HCL, `name = { ... }` assigns an object value to an attribute, while `name { ... }` opens a nested block. `required_providers` and `lifecycle` are blocks, so the equals sign is wrong.

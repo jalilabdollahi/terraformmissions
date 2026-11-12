@@ -1,0 +1,1 @@
+Every `var.x` that you use must have a matching `variable "x" {}` block somewhere in the module; the file name does not matter. None of the three has one.

@@ -1,0 +1,1 @@
+Change `--` and `;` at the start of those lines to `#`, and wrap the multi-line note in `/*` and `*/` instead of `<!--` and `-->`.

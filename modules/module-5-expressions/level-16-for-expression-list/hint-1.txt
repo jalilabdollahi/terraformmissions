@@ -1,1 +1,0 @@
-Run `terraform validate` — it reports that a string value has no attribute `value`.

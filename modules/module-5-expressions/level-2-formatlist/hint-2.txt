@@ -1,1 +1,0 @@
-`formatlist` maps over lists: each placeholder needs its own list. `formatlist("%s-%s", ["a","b"], ["x","y"])` would produce `["a-x", "b-y"]`.

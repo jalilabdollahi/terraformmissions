@@ -1,1 +1,0 @@
-Only `local.primary` was declared via `provider "local" { alias = "primary" }`. There is no `local.secondary`.

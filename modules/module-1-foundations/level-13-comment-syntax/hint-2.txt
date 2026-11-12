@@ -1,0 +1,1 @@
+HCL has exactly three comment styles: `#` and `//` for a single line, and `/* ... */` for a block. SQL (`--`), INI (`;`) and HTML (`<!-- -->`) comments are not among them.

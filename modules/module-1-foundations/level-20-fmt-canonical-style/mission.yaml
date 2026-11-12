@@ -1,0 +1,16 @@
+name: Kestrel Street Timetable
+description: >-
+  The tram depot's CI pipeline now runs "terraform fmt -check -recursive" before anything else, and the
+  timetable repository fails it on every file, including one tucked away in a subfolder.
+objective: >-
+  Reformat the repository so terraform fmt -check -recursive passes with no output. Keep the files
+  (including extras/depot-notes.tf) and the same behaviour: depot/line-7.txt and depot/stop-count.txt unchanged.
+xp: 150
+difficulty: beginner
+expected_time: 6m
+concepts:
+  - terraform fmt
+  - canonical style
+  - CI gates
+module: module-1-foundations
+level: level-20-fmt-canonical-style

@@ -1,0 +1,16 @@
+name: Static And Signal Slugs
+description: >-
+  A podcast team generates episode URL slugs with random_pet and lets editors override the word separator.
+  Without an override the slugs come out glued together as "epwisefox" instead of the usual "ep-wise-fox".
+objective: >-
+  With slug_separator unset the slug must look like ep-word-word (the provider default separator);
+  with -var slug_separator=_ it must use underscores. Don't hard-code the separator.
+xp: 125
+difficulty: beginner
+expected_time: 7m
+concepts:
+  - null
+  - optional arguments
+  - empty string
+module: module-1-foundations
+level: level-12-null-omits-argument

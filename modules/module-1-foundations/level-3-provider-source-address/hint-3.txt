@@ -1,0 +1,1 @@
+In terraform.tf, the `local` entry has `source = "hashicorp/localfile"`. The real address is `hashicorp/local`. Fix it and run `terraform init` again.

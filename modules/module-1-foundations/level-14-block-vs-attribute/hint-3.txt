@@ -1,0 +1,1 @@
+Remove the `=` in `required_providers = {` (terraform.tf) and in `lifecycle = {` (main.tf). Keep everything inside the braces as it is.

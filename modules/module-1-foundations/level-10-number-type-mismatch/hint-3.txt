@@ -1,0 +1,1 @@
+Change the variable default `"eight"` to `8` and `result_count = "three"` to `result_count = 3`. Numbers are written without quotes.

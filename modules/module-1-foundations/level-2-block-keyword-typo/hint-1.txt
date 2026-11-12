@@ -1,0 +1,1 @@
+Run `terraform validate`. Every error names a line — look at the very first word of the block that starts there.

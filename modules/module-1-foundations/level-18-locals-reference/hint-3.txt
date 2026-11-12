@@ -1,0 +1,1 @@
+Rename the block to `locals {`, change every `locals.x` into `local.x`, and make `wheel_price` use `local.wheel_kg * local.price_per_kg` instead of typed numbers.

@@ -1,0 +1,1 @@
+Replace `"=> 3.6"` with `">= 3.6"` (greater-or-equal is written with the `>` first) and `"~>= 2.5"` with `"~> 2.5"` (pessimistic operator on its own).

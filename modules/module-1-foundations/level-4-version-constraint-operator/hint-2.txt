@@ -1,0 +1,1 @@
+Version constraints use only these operators: `=`, `!=`, `>`, `>=`, `<`, `<=` and `~>`. Compare the two strings in terraform.tf against that list.

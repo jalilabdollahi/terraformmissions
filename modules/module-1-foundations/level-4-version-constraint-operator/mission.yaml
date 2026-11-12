@@ -1,0 +1,16 @@
+name: Fete Tombola Draw
+description: >-
+  The village fête draws its tombola winner with Terraform, but init stops with complaints about
+  "invalid version constraint" for two providers, so no ticket can be drawn.
+objective: >-
+  Repair both provider version constraints so terraform init works (keep a constraint on each of the
+  two providers) and the winning ticket, a number from 100 to 499, is written to fete/stage-board.txt.
+xp: 105
+difficulty: beginner
+expected_time: 6m
+concepts:
+  - version constraints
+  - operators
+  - terraform init
+module: module-1-foundations
+level: level-4-version-constraint-operator

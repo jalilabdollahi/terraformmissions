@@ -1,0 +1,1 @@
+Apply and look at the `slug` output. Then compare what an unset separator means to random_pet with what the variable passes in.

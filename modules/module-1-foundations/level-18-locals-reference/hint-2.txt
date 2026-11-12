@@ -1,0 +1,1 @@
+Declaring uses the plural keyword `locals { ... }`, one block holding many values. Reading uses the singular `local.name`. Both spellings are wrong in this file.

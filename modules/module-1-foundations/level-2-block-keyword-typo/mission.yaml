@@ -1,0 +1,17 @@
+name: Hollow Ridge Bookings
+description: >-
+  The Hollow Ridge observatory keeps its telescope booking sheet in Terraform. After a late-night
+  edit, terraform refuses to read the file and complains about block types it has never heard of.
+objective: >-
+  Fix the misspelled top-level block keywords so the configuration applies and sky/booking.txt
+  reads "Instrument: Dobsonian 12-inch" and "Slot length: 3h" on two lines. Keep the telescope variable
+  and the booking_path output.
+xp: 100
+difficulty: beginner
+expected_time: 5m
+concepts:
+  - block types
+  - variable block
+  - output block
+module: module-1-foundations
+level: level-2-block-keyword-typo

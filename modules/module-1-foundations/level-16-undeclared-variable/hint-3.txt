@@ -1,0 +1,1 @@
+Create variables.tf with `variable "race_city"` (string, default "Porto"), `variable "runner_count"` (number, 1200) and `variable "first_bib"` (number, 1001).

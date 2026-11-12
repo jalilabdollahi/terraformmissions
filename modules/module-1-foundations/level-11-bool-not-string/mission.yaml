@@ -1,0 +1,17 @@
+name: Driftwood Wi-Fi Vouchers
+description: >-
+  The hostel's guest Wi-Fi vouchers come from random_string, tuned for a label printer that can only
+  print capital letters and digits. Terraform now refuses the character-class settings, even though
+  "yes" and "enabled" were perfectly clear to the author.
+objective: >-
+  Make the voucher an 8-character code made only of capital letters and digits (A-Z, 0-9). Use real
+  true/false values for the character-class arguments, and write the code to hostel/voucher-slip.txt.
+xp: 125
+difficulty: beginner
+expected_time: 6m
+concepts:
+  - bool type
+  - random_string
+  - type errors
+module: module-1-foundations
+level: level-11-bool-not-string

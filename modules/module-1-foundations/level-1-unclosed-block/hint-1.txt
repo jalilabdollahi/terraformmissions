@@ -1,0 +1,1 @@
+Read the error from `terraform validate`: it names a file and a line number. Look at the block that starts on that line.

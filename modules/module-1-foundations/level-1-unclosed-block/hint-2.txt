@@ -1,0 +1,1 @@
+The error says a block has no closing brace before the end of the file. Count the `{` and `}` of the last resource in main.tf.

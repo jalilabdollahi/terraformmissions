@@ -1,0 +1,16 @@
+name: Hartley Planetarium Posters
+description: >-
+  The planetarium prints one poster per show. A colleague copied the comet-night poster into a new file
+  for the autumn eclipse tour, and now Terraform refuses to load the module because something is declared twice.
+objective: >-
+  Keep both shows. After applying, posters/comet-night.txt and posters/eclipse-tour.txt must both exist
+  with their own text, and state must hold two local_file resources.
+xp: 140
+difficulty: beginner
+expected_time: 6m
+concepts:
+  - resource addresses
+  - duplicate declarations
+  - multi-file modules
+module: module-1-foundations
+level: level-17-duplicate-resource

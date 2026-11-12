@@ -1,0 +1,1 @@
+Run `terraform validate`: the errors mention names like HOME and PUMP_SECONDS that are not Terraform variables. Where do they appear?

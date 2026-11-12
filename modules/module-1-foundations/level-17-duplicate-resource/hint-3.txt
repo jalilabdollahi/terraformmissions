@@ -1,0 +1,1 @@
+Keep the original `local_file.poster` and give the block in posters.tf a different name, for example `"eclipse_poster"`.

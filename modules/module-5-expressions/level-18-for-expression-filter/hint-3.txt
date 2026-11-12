@@ -1,1 +1,0 @@
-Change `if x > 10` to `if tonumber(x) > 10`.

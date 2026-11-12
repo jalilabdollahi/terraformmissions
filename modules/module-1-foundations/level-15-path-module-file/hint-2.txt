@@ -1,0 +1,1 @@
+A relative path in file() is resolved from the directory Terraform is run in, and the snippets are inside the templates/ subfolder. The reliable way to say "next to this module" is a built-in value.

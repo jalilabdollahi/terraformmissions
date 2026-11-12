@@ -1,1 +1,0 @@
-Replace `index(local.allowed, "d")` with `contains(local.allowed, "d")` and update the output.

@@ -1,0 +1,1 @@
+Make the variable default `null` instead of `""` (or write `separator = var.slug_separator == "" ? null : var.slug_separator`). Passing a value with -var must still work.

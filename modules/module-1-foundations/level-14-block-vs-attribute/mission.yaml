@@ -1,0 +1,17 @@
+name: Alder Hollow Seed Vault
+description: >-
+  The community seed library prints one label per seed lot and wants later inspector changes to leave the
+  label alone. The author wrote two settings as if they were attributes, and Terraform says they are
+  not expected there.
+objective: >-
+  Fix the configuration so it applies and writes vault/label-BEAN-2031.txt, and so that changing the
+  inspector variable later produces no plan changes (content changes are ignored). Use proper nested blocks.
+xp: 130
+difficulty: beginner
+expected_time: 7m
+concepts:
+  - blocks vs attributes
+  - lifecycle
+  - required_providers
+module: module-1-foundations
+level: level-14-block-vs-attribute

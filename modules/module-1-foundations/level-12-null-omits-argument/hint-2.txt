@@ -1,0 +1,1 @@
+An empty string "" is a real value ("use no separator at all"), so random_pet does not apply its default. Only `null` means "argument not set".

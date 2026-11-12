@@ -1,0 +1,1 @@
+These arguments are switches: Terraform wants the bare words true or false, not text. "yes", "no", "enabled" and "disabled" are strings and none of them converts to a boolean.

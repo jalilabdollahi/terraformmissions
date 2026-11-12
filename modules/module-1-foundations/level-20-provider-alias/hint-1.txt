@@ -1,1 +1,0 @@
-Run `terraform validate`. It says 'provider configuration not present' for `local.secondary`.

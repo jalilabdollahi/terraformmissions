@@ -1,1 +1,0 @@
-Change `"c"` to `["c"]` to make it a single-element list.

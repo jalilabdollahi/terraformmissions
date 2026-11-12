@@ -1,0 +1,16 @@
+name: Saltmarsh Tide Card
+description: >-
+  The harbour office tide card used to build fine, but today every Terraform command stops
+  immediately with a message about the Terraform version being unsupported by the configuration.
+objective: >-
+  Update the version gate in terraform.tf so the installed Terraform is accepted (the gate must stay in
+  place) and harbour/tides.csv is written with its header and two port rows.
+xp: 110
+difficulty: beginner
+expected_time: 5m
+concepts:
+  - required_version
+  - version gate
+  - terraform block
+module: module-1-foundations
+level: level-5-required-version-gate

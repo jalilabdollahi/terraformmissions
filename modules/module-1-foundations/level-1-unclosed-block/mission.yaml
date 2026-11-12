@@ -1,0 +1,16 @@
+name: Crumb And Kettle
+description: >-
+  The Crumb & Kettle bakery prints its oven schedule from Terraform. Someone edited main.tf
+  at 4 a.m. and now every command dies with a parser error before the first loaf is planned.
+objective: >-
+  Make the configuration parse and apply so bakery/oven-schedule.txt lists the three
+  batches (05:30 sourdough, 06:15 rye, 07:00 focaccia), one per line, and bakery/dough-card.txt still exists.
+xp: 100
+difficulty: beginner
+expected_time: 5m
+concepts:
+  - HCL blocks
+  - parser errors
+  - braces
+module: module-1-foundations
+level: level-1-unclosed-block

@@ -1,0 +1,17 @@
+name: Kestrel Ridge Bulletin
+description: >-
+  The mountain weather station publishes a daily bulletin from Terraform variables. The plan is happy,
+  but the published bulletin shows raw text such as "$(var.station)" where the numbers should be.
+objective: >-
+  Make weather/bulletin.txt contain the real values of the station, altitude_m and wind_knots variables
+  on three lines ("Station: Kestrel Ridge", "Altitude: 1840 m", "Wind: 23 knots") and keep them driven
+  by the variables.
+xp: 115
+difficulty: beginner
+expected_time: 5m
+concepts:
+  - string interpolation
+  - variables
+  - template syntax
+module: module-1-foundations
+level: level-8-interpolation-syntax
