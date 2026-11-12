@@ -195,6 +195,7 @@ def show_mission_briefing(
     level_num: int,
     total_levels: int,
     mission: dict,
+    workspace: Path | None = None,
 ) -> None:
     name        = mission.get("name", "???")
     description = mission.get("description", "")
@@ -220,7 +221,11 @@ def show_mission_briefing(
 
     lines.append("\n")
     lines.append("📂 Open a second terminal and edit the broken files:\n", style="grey50")
-    lines.append("   cd terraformissions/workspace/current\n", style="bold bright_white")
+    ws = str(workspace) if workspace else "workspace/current"
+    home = str(Path.home())
+    if ws.startswith(home):
+        ws = "~" + ws[len(home):]
+    lines.append(f"   cd {ws}\n", style="bold bright_white")
     lines.append("   Then type  ", style="grey50")
     lines.append("check", style="bold bright_cyan")
     lines.append("  here when ready.\n", style="grey50")
@@ -415,6 +420,9 @@ class PaginatedDisplay:
 
     @staticmethod
     def _getkey() -> str:
+        if not sys.stdin.isatty():
+            line = sys.stdin.readline()
+            return line[:1] if line.strip() else "\r"
         fd = sys.stdin.fileno()
         old = termios.tcgetattr(fd)
         try:
@@ -427,7 +435,10 @@ class PaginatedDisplay:
     def show(self) -> None:
         if not self.lines:
             return
-        term_h = os.get_terminal_size().lines if hasattr(os, "get_terminal_size") else 40
+        try:
+            term_h = os.get_terminal_size().lines
+        except OSError:
+            term_h = 40
         page_size = max(10, term_h - 8)
         pages = self._page_ranges(page_size)
         idx = 0

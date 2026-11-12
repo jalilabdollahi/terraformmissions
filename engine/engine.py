@@ -23,6 +23,7 @@ try:
     from engine.certificate import generate_certificate, render_certificate_panel, save_certificate
     from engine.player import prompt_player_name
     from engine.reset import prepare_level
+    from engine.runtime import apply_runtime_env, run_validator as _runtime_validator, terraform_init, workspace_level
     from engine.ui import (
         console,
         module_title,
@@ -41,6 +42,7 @@ except ModuleNotFoundError:
     from certificate import generate_certificate, render_certificate_panel, save_certificate
     from player import prompt_player_name
     from reset import prepare_level
+    from runtime import apply_runtime_env, run_validator as _runtime_validator, terraform_init, workspace_level
     from ui import (
         console,
         module_title,
@@ -93,7 +95,10 @@ def terraform_install_hint() -> tuple[str, str]:
 
 
 def check_terraform_available() -> bool:
-    result = subprocess.run(["terraform", "version"], capture_output=True, text=True, check=False, timeout=10)
+    try:
+        result = subprocess.run(["terraform", "version"], capture_output=True, text=True, check=False, timeout=30)
+    except (FileNotFoundError, subprocess.TimeoutExpired):
+        return False
     return result.returncode == 0
 
 
@@ -199,32 +204,20 @@ def advance(modules: list[dict], mi: int, li: int) -> tuple[int | None, int | No
 # ── Validator ─────────────────────────────────────────────────────────────────
 
 def _auto_init() -> None:
-    """Run terraform init silently before every check so the player never has to."""
+    """Run terraform init silently (no -upgrade, shared plugin cache) so the player never has to."""
     console.print("[grey50]⟳  terraform init...[/grey50]", end="\r")
-    subprocess.run(
-        ["terraform", "init", "-no-color", "-input=false", "-upgrade"],
-        cwd=str(WORKSPACE),
-        capture_output=True,
-        text=True,
-        check=False,
-    )
+    try:
+        terraform_init(WORKSPACE)
+    except subprocess.TimeoutExpired:
+        pass
     console.print(" " * 30, end="\r")  # clear the line
 
 
 def run_validator(level_path: Path) -> subprocess.CompletedProcess[str]:
-    validator = level_path / "validate.sh"
-    if not validator.exists():
-        raise FileNotFoundError(f"validate.sh missing in {level_path}")
-    _auto_init()
-    env = {**os.environ, "WORKSPACE": str(WORKSPACE), "LEVEL_PATH": str(level_path)}
-    return subprocess.run(
-        ["bash", str(validator)],
-        cwd=str(WORKSPACE),
-        capture_output=True,
-        text=True,
-        check=False,
-        env=env,
-    )
+    console.print("[grey50]⟳  validating...[/grey50]", end="\r")
+    result = _runtime_validator(WORKSPACE, level_path)
+    console.print(" " * 30, end="\r")
+    return result
 
 
 # ── Terraform passthrough ─────────────────────────────────────────────────────
@@ -254,25 +247,49 @@ def run_terraform_info(cmd: str) -> None:
 
 # ── Guide / solution display ──────────────────────────────────────────────────
 
-def show_guide(level_path: Path) -> None:
-    guide_path = level_path / "solution-guide.md"
-    if guide_path.exists():
-        render_markdown("Walkthrough", guide_path.read_text(encoding="utf-8"), "bright_yellow")
-        return
-
+def show_solution(level_path: Path) -> None:
+    """Show the reference solution files and, if any, the commands the player must run."""
     solution_dir = level_path / "solution"
     if not solution_dir.exists():
         console.print("[yellow]No solution available for this level.[/yellow]")
         return
 
-    tf_files = sorted(solution_dir.glob("*.tf"))
-    if not tf_files:
-        console.print("[yellow]No .tf files found in solution/.[/yellow]")
+    tf_files = sorted(p for p in solution_dir.rglob("*") if p.is_file() and ".terraform" not in p.parts)
+    if not tf_files and not (level_path / "solution.sh").exists():
+        console.print("[yellow]No solution files found.[/yellow]")
         return
 
     for f in tf_files:
-        syntax = Syntax(f.read_text(encoding="utf-8"), "hcl", theme="ansi_dark", line_numbers=True)
-        console.print(Panel(syntax, title=f"[bold bright_yellow]solution/{f.name}[/bold bright_yellow]", border_style="bright_yellow"))
+        rel = f.relative_to(solution_dir)
+        syntax = Syntax(f.read_text(encoding="utf-8"), _lexer_for(f), theme="ansi_dark", line_numbers=True)
+        console.print(Panel(syntax, title=f"[bold bright_yellow]solution/{rel}[/bold bright_yellow]", border_style="bright_yellow"))
+
+    script = level_path / "solution.sh"
+    if script.exists():
+        lines = [ln for ln in script.read_text(encoding="utf-8").splitlines()
+                 if ln.strip() and not ln.startswith("#!") and "TM_LIB" not in ln]
+        syntax = Syntax("\n".join(lines), "bash", theme="ansi_dark")
+        console.print(Panel(syntax, title="[bold bright_yellow]Commands to run in the workspace[/bold bright_yellow]", border_style="bright_yellow"))
+
+
+def _lexer_for(path: Path) -> str:
+    if path.suffix in {".sh"}:
+        return "bash"
+    if path.suffix in {".json"}:
+        return "json"
+    if path.suffix in {".yaml", ".yml"}:
+        return "yaml"
+    if path.suffix in {".py"}:
+        return "python"
+    return "hcl"
+
+
+def show_guide(level_path: Path) -> None:
+    guide_path = level_path / "solution-guide.md"
+    if guide_path.exists():
+        render_markdown("Walkthrough", guide_path.read_text(encoding="utf-8"), "bright_yellow")
+        return
+    show_solution(level_path)
 
 
 def show_debrief(level_path: Path) -> None:
@@ -351,7 +368,8 @@ def complete_level(progress: dict, modules: list[dict], mi: int, li: int, award_
     input()
     console.clear()
 
-    prepare_level(REPO_ROOT, modules[next_mi]["levels"][next_li]["path"])
+    nxt = modules[next_mi]["levels"][next_li]
+    prepare_level(REPO_ROOT, nxt["path"], nxt["id"])
     return True
 
 
@@ -417,6 +435,7 @@ _TERRAFORM_VERBS = {
 # ── Main game loop ────────────────────────────────────────────────────────────
 
 def game_loop() -> int:
+    apply_runtime_env()
     # Terraform availability check
     console.print("[grey70]Checking Terraform...[/grey70]", end="\r")
     if not check_terraform_available():
@@ -439,8 +458,8 @@ def game_loop() -> int:
         console.print(Panel(
             Text.assemble(
                 ("No levels found.\n\n", "bold red"),
-                ("Run the level builder:\n", "white"),
-                ("  python3 scripts/build_levels.py\n", "bright_cyan"),
+                ("Rebuild the level registry:\n", "white"),
+                ("  python3 scripts/generate_registry.py\n", "bright_cyan"),
                 ("Then re-run ./play.sh", "grey70"),
             ),
             title="[bold red]No Levels Found[/bold red]",
@@ -471,7 +490,10 @@ def game_loop() -> int:
 
     mi, li = current_position(modules, progress)
     current_level = modules[mi]["levels"][li]
-    prepare_level(REPO_ROOT, current_level["path"])
+    if workspace_level(WORKSPACE) == current_level["id"]:
+        console.print("[grey50]Resuming your workspace for this mission (type [bold]reset[/bold] to restore the broken files).[/grey50]")
+    else:
+        prepare_level(REPO_ROOT, current_level["path"], current_level["id"])
 
     if not progress.get("level_start_time"):
         progress["level_start_time"] = time.time()
@@ -492,7 +514,7 @@ def game_loop() -> int:
         max_xp_mod  = compute_max_xp_by_module(modules)
         max_total   = sum(max_xp_mod.values())
         show_progress_summary(modules, completed, xp_by_mod, int(progress.get("total_xp", 0)), max_xp_mod, max_total, modules[mi]["name"])
-        show_mission_briefing(mi + 1, len(modules), li + 1, len(modules[mi]["levels"]), mission)
+        show_mission_briefing(mi + 1, len(modules), li + 1, len(modules[mi]["levels"]), mission, WORKSPACE)
         show_help()
 
         while True:
@@ -523,26 +545,26 @@ def game_loop() -> int:
 
             # ── Hints ─────────────────────────────────────────────────────────
             if command == "hint":
-                hint_index += 1
-                hint_path = current_level["path"] / f"hint-{min(hint_index, 3)}.txt"
-                if hint_path.exists():
-                    show_guidance(f"Hint {min(hint_index, 3)}", [hint_path.read_text(encoding="utf-8").strip()])
+                next_path = current_level["path"] / f"hint-{hint_index + 1}.txt"
+                if next_path.exists():
+                    hint_index += 1
+                    show_guidance(f"Hint {hint_index}", [next_path.read_text(encoding="utf-8").strip()])
+                elif hint_index:
+                    console.print("[yellow]No more hints — try [bold]guide[/bold] for the full walkthrough.[/yellow]")
+                    last = current_level["path"] / f"hint-{hint_index}.txt"
+                    show_guidance(f"Hint {hint_index}", [last.read_text(encoding="utf-8").strip()])
                 else:
-                    console.print("[yellow]No more hints for this mission.[/yellow]")
+                    console.print("[yellow]No hints for this mission.[/yellow]")
                 continue
 
             # ── Solution ──────────────────────────────────────────────────────
             if command == "solution":
-                show_guide(current_level["path"])
+                show_solution(current_level["path"])
                 continue
 
             # ── Guide ─────────────────────────────────────────────────────────
             if command == "guide":
-                guide_path = current_level["path"] / "solution-guide.md"
-                if guide_path.exists():
-                    render_markdown("Walkthrough", guide_path.read_text(encoding="utf-8"), "bright_yellow")
-                else:
-                    show_guide(current_level["path"])
+                show_guide(current_level["path"])
                 continue
 
             # ── Debrief ───────────────────────────────────────────────────────
@@ -625,7 +647,7 @@ def game_loop() -> int:
 
             # ── Reset ─────────────────────────────────────────────────────────
             if command == "reset":
-                prepare_level(REPO_ROOT, current_level["path"])
+                prepare_level(REPO_ROOT, current_level["path"], current_level["id"])
                 hint_index = 0
                 progress["level_start_time"] = time.time()
                 save_progress(progress)
@@ -655,7 +677,11 @@ def game_loop() -> int:
                         "current_module": "", "current_level": "", "module_certificates": [],
                         "time_per_level": {}, "level_start_time": time.time(),
                     }
+                    first = modules[0]["levels"][0]
+                    progress["current_module"] = modules[0]["name"]
+                    progress["current_level"] = first["name"]
                     save_progress(progress)
+                    prepare_level(REPO_ROOT, first["path"], first["id"])
                     console.print("[bright_green]✅ Progress reset. Starting from Module 1.[/bright_green]")
                     hint_index = 0
                     break
