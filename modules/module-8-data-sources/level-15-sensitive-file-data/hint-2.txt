@@ -1,0 +1,1 @@
+`data "local_file"` has no idea its content is a secret, so the value flows through plan, apply and outputs unmasked. The same provider has a data source that marks `content` as sensitive. Once the value is sensitive, Terraform will make you mark any output that carries it too, and the card's permission is a separate argument.

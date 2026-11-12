@@ -1,0 +1,1 @@
+Go through the module output: `module.north_lock.reading.level_cm`, `module.south_lock.reading.keeper`, and so on. Replace all four wrong references in `locals` and the log content.

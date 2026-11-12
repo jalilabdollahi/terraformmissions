@@ -1,0 +1,19 @@
+name: Barrel Sample Sheets
+description: >-
+  A vineyard cellar keeps one sample sheet per barrel. Terraform reads every sheet with a
+  single for_each data source and builds the cellar board, but the config trips over how
+  for_each names, finds and returns its instances.
+objective: >-
+  Make the data source read samples/*.txt and output brix as a map keyed by barrel id
+  without the extension ({"b07-oak": 23.4, "b12-chestnut": 24.1, "b15-oak": 22.8}),
+  with average_brix "23.43". A sheet added to samples/ must appear automatically.
+xp: 200
+difficulty: intermediate
+expected_time: 12m
+concepts:
+  - for_each on data sources
+  - fileset
+  - each.value
+  - instance keys
+module: module-8-data-sources
+level: level-8-data-for-each

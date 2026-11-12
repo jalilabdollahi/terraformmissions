@@ -1,0 +1,1 @@
+Run `terraform plan` and read the error: it names the data source and a path. Then compare that path with what `ls` shows in your workspace.

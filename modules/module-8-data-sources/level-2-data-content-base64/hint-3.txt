@@ -1,0 +1,1 @@
+Read `data.local_file.rose.content_base64` and feed it to `content_base64` (not `content`) on `local_file.proof`.

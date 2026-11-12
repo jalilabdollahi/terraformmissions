@@ -1,0 +1,19 @@
+name: Cave Survey Probes
+description: >-
+  Three probe scripts feed the base-camp board of a cave survey: borehole depth, oxygen
+  and humidity. Terraform cannot start any of them, and each failure has a different
+  cause.
+objective: >-
+  Make all three external data sources run, so the outputs read depth_m 84, o2_pct 19.6
+  and humidity_pct 97 from survey/readings.txt, and camp/board.txt is written. Keep the
+  data sources and the probe scripts.
+xp: 200
+difficulty: intermediate
+expected_time: 12m
+concepts:
+  - data.external
+  - program path
+  - interpreter
+  - executable bit
+module: module-8-data-sources
+level: level-5-external-program-path

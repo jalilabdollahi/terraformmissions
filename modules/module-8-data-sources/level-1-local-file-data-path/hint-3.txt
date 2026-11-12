@@ -1,0 +1,1 @@
+Change `filename` in `data "local_file" "tuning_sheet"` to `"${path.module}/sheets/principal-8.txt"`. Keep the `path.module` prefix.

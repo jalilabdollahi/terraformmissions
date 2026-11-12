@@ -1,0 +1,1 @@
+Run `terraform plan`. There are two separate problems to meet; fix the first error, then plan again for the next. Note the exact file names or addresses in the messages.

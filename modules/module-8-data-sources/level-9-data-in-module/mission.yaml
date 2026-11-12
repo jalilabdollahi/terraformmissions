@@ -1,0 +1,18 @@
+name: Canal Lock Watch
+description: >-
+  Each lock keeper on the canal leaves a JSON note. A small local module wraps the data
+  source that reads one note and hands back a reading. The root config that calls the
+  module twice cannot find the values it asks for.
+objective: >-
+  Make the root config use what the module really outputs. lowest_level_cm must be 148 and
+  open_gates must be ["north"]; the watch log must show both keepers. The data source must
+  stay inside the module.
+xp: 175
+difficulty: intermediate
+expected_time: 10m
+concepts:
+  - data sources in modules
+  - module outputs
+  - object outputs
+module: module-8-data-sources
+level: level-9-data-in-module

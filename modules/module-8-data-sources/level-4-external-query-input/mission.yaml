@@ -1,0 +1,18 @@
+name: Falconry Weigh-In
+description: >-
+  The mews keeps a script that turns a falcon's body weight into its ideal flying
+  weight. Terraform passes the bird and the numbers to it, but every plan dies with
+  a complaint from the script about a missing query.
+objective: >-
+  Deliver bird, weight_g and target_pct to bin/flying-weight.sh the way the external
+  data source supports. With the defaults, flying_weight_g must be 959 and the
+  weigh-in file must show 61 g to lose. Changing the variables must change the answer.
+xp: 200
+difficulty: intermediate
+expected_time: 12m
+concepts:
+  - data.external
+  - query
+  - stdin JSON
+module: module-8-data-sources
+level: level-4-external-query-input

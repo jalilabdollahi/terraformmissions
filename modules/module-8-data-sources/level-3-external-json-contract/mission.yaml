@@ -1,0 +1,18 @@
+name: Balloon Basket Manifest
+description: >-
+  Before each dawn flight of the hot-air balloon Lark, a helper script totals the
+  passengers' weight and Terraform prints the flight card. Since the script was
+  extended with a pilot name and a weight limit, Terraform refuses to read its answer.
+objective: >-
+  Fix the script so the external data source accepts it. Terraform must then output
+  total_kg 303, headroom_kg 57 and the four passenger names, all computed from
+  manifest/passengers.csv.
+xp: 175
+difficulty: intermediate
+expected_time: 12m
+concepts:
+  - data.external
+  - flat string map
+  - JSON contract
+module: module-8-data-sources
+level: level-3-external-json-contract

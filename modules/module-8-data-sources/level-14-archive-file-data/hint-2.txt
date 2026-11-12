@@ -1,0 +1,1 @@
+Three separate issues: `source_dir` points at a folder that does not exist; the draft `.tmp` label would be zipped as well, and `archive_file` has an argument to leave files out; and `output_base64sha256` is a base64 digest, while the museum needs the plain hex SHA-256 attribute.

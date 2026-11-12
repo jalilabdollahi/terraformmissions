@@ -1,0 +1,1 @@
+Start with the error from `terraform plan`: it says an archive "could not archive missing" something. Compare the `source_dir` with `ls`. After that, open the finished zip and compare its checksum with the one in the output.

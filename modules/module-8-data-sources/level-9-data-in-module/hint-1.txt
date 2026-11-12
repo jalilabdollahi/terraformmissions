@@ -1,0 +1,1 @@
+Read the `terraform plan` error: it names an attribute that "this object does not have". Then open `modules/lock-notes/outputs.tf` to see what the module really exposes.

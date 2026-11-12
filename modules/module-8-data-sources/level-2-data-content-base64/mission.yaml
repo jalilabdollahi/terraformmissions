@@ -1,0 +1,17 @@
+name: Compass Rose Proof
+description: >-
+  The map room copies a binary engraving of the compass rose into a press folder as a
+  proof. It applies cleanly, but every following plan insists the proof has changed and
+  wants to replace it.
+objective: >-
+  Make press/rose-proof.png a byte-for-byte copy of art/compass-rose.png, and make the
+  plan clean after apply. Keep reading the engraving through the data source.
+xp: 175
+difficulty: intermediate
+expected_time: 10m
+concepts:
+  - data.local_file
+  - content vs content_base64
+  - binary files
+module: module-8-data-sources
+level: level-2-data-content-base64

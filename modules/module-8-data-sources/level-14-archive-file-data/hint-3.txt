@@ -1,0 +1,1 @@
+Use `source_dir = "${path.module}/specimens"`, add `excludes = ["label-draft.tmp"]`, and replace `output_base64sha256` with `output_sha256` in the receipt and in the `bundle_sha256` output.

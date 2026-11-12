@@ -1,0 +1,18 @@
+name: Kayak Club Rota
+description: >-
+  The kayak club's boat shed keeps a JSON fleet register. The weekend rota must list the
+  serviceable boats by class and send the broken ones to the repair bench, but the
+  expression that filters the register does not even evaluate.
+objective: >-
+  Fix the filter so ready_by_class is {"river": ["K-01","K-04"], "sea": ["K-02","K-05"]}
+  and needs_repair is ["K-03"]. The outputs must keep being computed from the register.
+xp: 200
+difficulty: intermediate
+expected_time: 12m
+concepts:
+  - for expressions
+  - filtering with if
+  - grouping mode
+  - jsondecode
+module: module-8-data-sources
+level: level-12-data-filter-for

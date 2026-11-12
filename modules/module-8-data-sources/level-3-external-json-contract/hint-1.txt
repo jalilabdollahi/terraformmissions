@@ -1,0 +1,1 @@
+Run `terraform plan` and read the error from `data.external.load`. It complains about the JSON the program printed. Run `python3 bin/manifest.py` yourself and look at the shape of what it prints.

@@ -1,0 +1,1 @@
+Read the error from `data.external.flying_weight`, then open `bin/flying-weight.sh` and see where it reads its input from (look at the first lines).

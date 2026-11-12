@@ -1,0 +1,1 @@
+Run `terraform plan` and fix errors one by one. Then print the `brix` output and look closely at the map keys: are they what the mission asks for?

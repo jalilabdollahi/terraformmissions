@@ -1,1 +1,0 @@
-Change `local.parsed["wrong_key"]` to `local.parsed["app_name"]` (or any valid key from the JSON file).

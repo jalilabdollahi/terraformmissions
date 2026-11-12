@@ -1,0 +1,1 @@
+Run `terraform plan` and read which guest and which attribute the error is about. Then look at `event/guests.json`: not every object has every key, and one has an explicit `null`.

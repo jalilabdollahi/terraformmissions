@@ -1,1 +1,0 @@
-Change `data.local_file.reader.content_base64` to `data.local_file.reader.content` in the output block.

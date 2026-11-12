@@ -1,0 +1,10 @@
+{
+  "fleet": [
+    {"id": "K-01", "class": "river", "status": "serviceable", "age_years": 3},
+    {"id": "K-02", "class": "sea",   "status": "serviceable", "age_years": 6},
+    {"id": "K-03", "class": "sea",   "status": "repair",      "age_years": 9},
+    {"id": "K-04", "class": "river", "status": "serviceable", "age_years": 7},
+    {"id": "K-05", "class": "sea",   "status": "serviceable", "age_years": 2},
+    {"id": "K-06", "class": "surf",  "status": "retired",     "age_years": 14}
+  ]
+}

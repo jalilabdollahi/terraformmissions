@@ -1,0 +1,17 @@
+name: Puppet Theatre Season Bill
+description: >-
+  The puppet theatre's box office prints its season bill from outputs that the stage-crew
+  team publishes in their own Terraform state. The plan fails because the box office
+  asks for outputs that are not there, and then treats one of them as the wrong kind of value.
+objective: >-
+  Read the stage crew's real outputs correctly. total_seats must be 160 and head_rigger
+  "Wilhelmina Pike", both derived from the remote state, and the bill must list both stages.
+xp: 200
+difficulty: intermediate
+expected_time: 12m
+concepts:
+  - terraform_remote_state
+  - outputs attribute
+  - output types
+module: module-8-data-sources
+level: level-11-remote-state-outputs

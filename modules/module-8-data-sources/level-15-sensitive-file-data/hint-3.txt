@@ -1,0 +1,1 @@
+Change the data source to `data "local_sensitive_file" "combination"` (update the reference in `locals`), add `sensitive = true` to the `combination` output, and set `file_permission = "0600"` on the door card.

@@ -1,0 +1,1 @@
+Two mismatches: the box office asks for an output called `stage_plan`, but the crew publishes `stages`. And `crew_leads` is published as a list, yet the box office looks it up like a map with a string key.

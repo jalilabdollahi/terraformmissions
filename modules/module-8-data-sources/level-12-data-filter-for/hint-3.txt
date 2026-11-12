@@ -1,0 +1,1 @@
+Write `{ for boat in local.fleet : boat.class => boat.id... if boat.status == "serviceable" }`. The three dots after the value switch on grouping mode, which builds a list per key.
