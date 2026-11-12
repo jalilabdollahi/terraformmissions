@@ -1,0 +1,1 @@
+Three things are easy to miss: the old room objects are numbered by position, and the order of the old list (r2, r1, r3) is visible in out/dairy-sheet.txt through the capacities; the "rennet" module was renamed AND the resource inside it was renamed; and the trial batch is no longer in the code, but it must not be destroyed either.

@@ -1,0 +1,1 @@
+Read SPLIT-PLAN.md, then compare monolith/main.tf with the three scaffolded stacks resource by resource. Every address must land in exactly one stack; decide which ones are renamed on the way.

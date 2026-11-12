@@ -1,0 +1,1 @@
+Filter the stations map on status == "active"; compute byte_length from the serial length (floor(length(serial) * 3 / 4)); add ONE import block with for_each = local.gauges, to = random_id.gauge[each.key], id = each.value.serial. Run terraform plan, which should show 15 imports and only the roster file as a create, then apply.

@@ -1,0 +1,8 @@
+{
+  "relays": {
+    "north-head": "ch-12",
+    "south-pier": "ch-14",
+    "harbour-mouth": "ch-16",
+    "lighthouse": "ch-18"
+  }
+}

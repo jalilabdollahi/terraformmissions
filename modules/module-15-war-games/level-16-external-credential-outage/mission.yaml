@@ -1,0 +1,23 @@
+name: Brannock Quota Blackout
+description: >-
+  INCIDENT 6230 - Brannock Quay fish market. Tonight's landing-permit pipeline dies at plan time
+  with "External Program Execution Failed" and one unhelpful stderr line. The security team
+  rotated credentials last week; the previous night's run was cut off mid-stamp and left the
+  trawler Marguerite's permit half issued. The vessel key is already printed on the trawler's
+  paperwork.
+objective: >-
+  Restore the pipeline using the information in logs/quota-lookup.log and the rotation hand-off:
+  supply the correct production credential the way the rotation ticket demands (never in Terraform
+  code, file mode 600), correct whatever else the log reveals, and make sure the interrupted permit
+  stamp is genuinely redone. The vessel key must keep its ID, the tooling in bin/ must not be edited
+  and the plan must end clean.
+xp: 535
+difficulty: expert
+expected_time: 50m
+concepts:
+  - external data source failures
+  - log-driven diagnosis
+  - credential handling
+  - tainted resources
+module: module-15-war-games
+level: level-16-external-credential-outage

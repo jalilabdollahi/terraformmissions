@@ -1,0 +1,1 @@
+terraform plan wants to create 17 new gauges. Read register/gauges.json: it already holds the serials. Decide which of the 17 stations Terraform should manage at all, and look at how random_id behaves when its configuration disagrees with an existing value.

@@ -1,27 +1,27 @@
-resource "random_string" "new_name" {
-  length  = 10
-  special = false
-  upper   = false
+# Aurelia Ice Camp - power, radio and the nightly beacon check.
+
+module "power" {
+  source = "./modules/power"
 }
 
-resource "random_string" "config_error" {
-  length  = 8
-  special = false
-  upper   = false
+module "comms" {
+  source       = "./modules/comms"
+  generator_id = module.power.generator_id
 }
 
-resource "random_string" "healthy_resource" {
-  length  = 8
-  special = false
-  upper   = false
+resource "local_file" "camp_manifest" {
+  filename = "${path.module}/out/camp-manifest.txt"
+  content  = "power generator ${module.power.generator_id}\nfuel ${module.power.fuel}\nradio channel ${module.comms.channel}\n"
 }
 
-# Fix for ISSUE 2: moved block to reconcile old_name → new_name rename
-moved {
-  from = random_string.old_name
-  to   = random_string.new_name
+resource "terraform_data" "beacon" {
+  input = module.comms.channel
+
+  provisioner "local-exec" {
+    command = "mkdir -p ${path.module}/out && printf 'beacon OK for %s\\n' '${module.power.generator_id}' > ${path.module}/out/beacon.txt"
+  }
 }
 
-output "new_name_result"     { value = random_string.new_name.result }
-output "config_error_result" { value = random_string.config_error.result }
-output "healthy_result"      { value = random_string.healthy_resource.result }
+output "fuel_litres" {
+  value = module.power.fuel
+}

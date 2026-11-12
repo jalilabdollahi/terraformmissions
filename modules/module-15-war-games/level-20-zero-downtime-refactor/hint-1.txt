@@ -1,0 +1,1 @@
+Read the plan header: it lists every object as destroy plus create. Put terraform state list next to the new module tree and write down, for each old address, where it must live in the new tree. Not everything is a move.

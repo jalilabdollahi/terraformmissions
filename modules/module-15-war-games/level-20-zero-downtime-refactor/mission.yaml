@@ -1,0 +1,23 @@
+name: Pennywhistle Module Tree
+description: >-
+  INCIDENT 0420 - Pennywhistle Dairy. The milkhouse control plane was a single flat file; PR #88
+  restructured it into milkhouse, caves (with a nested rooms module), compliance and cultures
+  modules, retired null_resource in favour of terraform_data, renamed the "rennet" module to "cultures"
+  and dropped the scratch trial batch. The pipeline plan now wants to destroy and rebuild everything,
+  including the dairy licence, the room capacities on the tank plates and the CIP cleaning
+  record, in the middle of a production week.
+objective: >-
+  Make the refactored tree adopt the running dairy with zero destroys and zero re-issued values:
+  describe every address change (flat to module, nested module, count index to named key,
+  null_resource to terraform_data, renamed module and renamed resource inside it) with moved blocks,
+  forget the trial batch without destroying it using a removed block, and end with a clean plan.
+xp: 600
+difficulty: expert
+expected_time: 60m
+concepts:
+  - moved blocks across modules
+  - removed blocks
+  - null_resource to terraform_data
+  - zero-destroy refactor
+module: module-15-war-games
+level: level-20-zero-downtime-refactor

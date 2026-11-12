@@ -1,0 +1,1 @@
+List what each team stack actually holds with terraform state list inside stacks/orchard, stacks/press and stacks/cellar. One of them may look empty: check every workspace there before believing it.

@@ -1,0 +1,1 @@
+The biggest serial is a trap twice over: one copy belongs to a different project (other lineage) and another is truncated JSON. The freshest valid copy of this lineage is still older than CI run 217, so one object created after it (see the CI log) will be missing from it.

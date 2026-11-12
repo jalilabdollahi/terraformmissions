@@ -1,0 +1,1 @@
+Run terraform plan and read the first error. Then open terraform.tfstate (jq makes it readable) and look at the keys of a resources[].instances[] entry: schema_version, index_key, attributes.

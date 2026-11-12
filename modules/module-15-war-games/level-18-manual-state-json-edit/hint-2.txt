@@ -1,0 +1,1 @@
+There are two separate problems in the JSON. The first prevents Terraform from loading the state at all (a schema_version newer than the installed provider). Once the state loads, a second one shows up in the plan: instances addressed by position instead of by name. Matching positions to names needs real evidence: out/inspection-log.txt.

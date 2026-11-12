@@ -1,0 +1,1 @@
+Write one moved block per changed address (6 loaders, 7 ramp stands, 5 dock doors, 2 singletons), for example from = random_integer.stand_slot[0] to = random_integer.stand["C3"]. Find which name owns each index by matching state values against the manifest. A wrong mapping still plans cleanly for ramp stands, so verify the values before you apply. Then run terraform apply.

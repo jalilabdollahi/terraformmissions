@@ -1,1 +1,0 @@
-Run `terraform validate`. The error references `var.api_key` which is undefined. Check `variables.tf` — what is the variable actually named?

@@ -1,0 +1,22 @@
+name: Halcyon Stack Breakup
+description: >-
+  INCIDENT 4108 - Halcyon Opera House. The one-state opera house stack has become so big that
+  every box-office tweak locks the streaming team out of their deploys, and last night two plans
+  collided. Change board CAB-4471 approved splitting it into venue, ticketing and streaming
+  stacks. The three new configs are scaffolded; the live objects are still all in monolith/. The
+  seat capacity and pass series are already printed on tickets, so nothing may be re-issued.
+objective: >-
+  Move every object out of the monolith state into the right new stack (venue/, ticketing/,
+  streaming/) without destroying or re-creating any of them: the former random_id.cdn_key lives
+  on as random_id.stream_key. Streaming needs the gold pass series exported by ticketing. Leave
+  monolith/ empty of objects and resource code, and finish with clean plans in all three stacks.
+xp: 505
+difficulty: expert
+expected_time: 55m
+concepts:
+  - state mv between state files
+  - terraform_remote_state
+  - stack ordering
+  - renames during a split
+module: module-15-war-games
+level: level-14-state-split

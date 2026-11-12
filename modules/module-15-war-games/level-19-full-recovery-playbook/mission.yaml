@@ -1,16 +1,23 @@
-concepts:
-- full incident recovery
-- compound issues
-- systematic debugging
-description: 'A production incident has left the config with three simultaneous issues:
-  (1) a corrupt/wrong resource type in state (random_id instead of random_string),
-  (2) a resource that was renamed without a moved block, and (3) a resource with a
-  wrong attribute value. Fix ALL three issues to achieve a clean apply.'
+name: Aurelia Ice Camp Reset
+description: >-
+  INCIDENT 9001 - Aurelia Ice Camp, polar night. The camp laptop's disk filled during an apply and
+  terraform.tfstate is cut off mid-file. The previous state backup is one apply old and misses the
+  fuel tank registered last night. Meanwhile a colleague tainted the radio key and the beacon "to be
+  safe", someone hand-edited the radio sheet, and a module refactor merged earlier left the
+  configuration unable to plan at all. The generator serial, fuel figure and radio key are stamped
+  on equipment.
+objective: >-
+  Bring the camp back: restore a readable state of the same lineage, repair the configuration
+  errors that stop planning, re-adopt the fuel tank with its recorded litres, keep the radio key
+  and every other ID, redo only the beacon that really failed, undo the manual drift and finish with
+  a clean plan and no tainted objects.
+xp: 580
 difficulty: expert
 expected_time: 60m
-level: level-19-full-recovery-playbook
+concepts:
+  - corrupt state recovery
+  - untaint vs replace
+  - import after restore
+  - module output cascade
 module: module-15-war-games
-name: Full Recovery Playbook
-objective: Resolve all three issues (stale state type, missing moved block, wrong
-  attribute) so `terraform apply` succeeds cleanly.
-xp: 550
+level: level-19-full-recovery-playbook

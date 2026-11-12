@@ -1,0 +1,21 @@
+name: Harwick Pager Mixup
+description: >-
+  INCIDENT 2209 - Harwick Coastguard. During a night debugging session an engineer left the
+  "staging" workspace selected and applied the hotfix branch. Four production lifeboat pager
+  relays (north-head, south-pier, harbour-mouth, lighthouse) now exist in the staging state,
+  the prod workspace has never heard of them, and the radio room is loading relay cards whose
+  keys must not change.
+objective: >-
+  Make the prod workspace the owner of the four relay keys and cards with their original IDs,
+  leave staging holding only its own region seed, and stop the config from pinning the
+  environment so both workspaces plan cleanly with no destroys. Do not recreate any relay key.
+xp: 470
+difficulty: expert
+expected_time: 45m
+concepts:
+  - workspaces
+  - state mv between state files
+  - terraform.workspace
+  - cross-environment recovery
+module: module-15-war-games
+level: level-12-wrong-workspace-apply

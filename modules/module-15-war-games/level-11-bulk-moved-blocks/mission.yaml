@@ -1,0 +1,22 @@
+name: Nordhavn Reindex
+description: >-
+  INCIDENT 0617 - Nordhavn air cargo hub. A Friday refactor swapped every count-indexed
+  resource for for_each and renamed two singletons, and Monday's pipeline plan wants to destroy
+  and recreate 20 objects: six loader serials, seven stand-block numbers, five dock doors, the
+  hub licence and the opening timestamp. The stand slot numbers are printed on the ground-handling
+  tablets and the licence is registered with the civil aviation authority.
+objective: >-
+  Keep the refactored code (for_each, names random_id.loader, random_integer.stand,
+  terraform_data.dock, random_uuid.hub_licence, time_static.opening) and describe all 20
+  address changes with moved blocks, mapping each old index to the right new key. Every object
+  must keep its original value, nothing may be destroyed and the plan must end clean.
+xp: 450
+difficulty: expert
+expected_time: 45m
+concepts:
+  - moved blocks
+  - count to for_each
+  - index to key mapping
+  - refactor safety
+module: module-15-war-games
+level: level-11-bulk-moved-blocks

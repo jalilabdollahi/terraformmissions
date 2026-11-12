@@ -1,0 +1,11 @@
+RT-2291 - quarterly credential rotation (security team)
+
+The quota-registry production token that Terraform used was revoked in this rotation.
+The replacement is in vault-export.json next to this note (service "quota-registry").
+Do NOT use the sandbox token for production lookups.
+
+Where it goes: the quota tooling reads QUOTA_TOKEN from the environment, or the file
+.credentials/quota-token in the repo checkout. The file is git-ignored and must be mode 600.
+Never put a token in .tf or .tfvars files.
+
+Questions: #sec-rotation

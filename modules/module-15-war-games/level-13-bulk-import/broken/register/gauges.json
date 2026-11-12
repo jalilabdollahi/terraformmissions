@@ -1,0 +1,91 @@
+{
+  "network": "alderwater-flood-warning",
+  "exported_by": "asset-db nightly dump",
+  "stations": [
+    {
+      "station": "weir-north",
+      "serial": "jFN3jgPC",
+      "status": "active"
+    },
+    {
+      "station": "weir-south",
+      "serial": "tYaTt0bG",
+      "status": "active"
+    },
+    {
+      "station": "mill-race",
+      "serial": "-q6D0fOT",
+      "status": "active"
+    },
+    {
+      "station": "ford-lane",
+      "serial": "M3kDtC00",
+      "status": "active"
+    },
+    {
+      "station": "abbey-bridge",
+      "serial": "1OdApsmM",
+      "status": "active"
+    },
+    {
+      "station": "old-spillway",
+      "serial": "JRtxdVyX",
+      "status": "retired"
+    },
+    {
+      "station": "tannery-sluice",
+      "serial": "4DRb1R-A",
+      "status": "active"
+    },
+    {
+      "station": "orchard-brook",
+      "serial": "qTmoYDEq",
+      "status": "active"
+    },
+    {
+      "station": "quarry-pool",
+      "serial": "pskszRyf",
+      "status": "active"
+    },
+    {
+      "station": "kiln-bend",
+      "serial": "ntfDTSlr",
+      "status": "active"
+    },
+    {
+      "station": "lock-4",
+      "serial": "j-w_CzAFU2Q",
+      "status": "active"
+    },
+    {
+      "station": "lock-5",
+      "serial": "SUKLGybu1HY",
+      "status": "active"
+    },
+    {
+      "station": "brewery-culvert",
+      "serial": "_DM3lZLx",
+      "status": "retired"
+    },
+    {
+      "station": "reed-island",
+      "serial": "8z2G8OEM",
+      "status": "active"
+    },
+    {
+      "station": "osier-bank",
+      "serial": "w4Sdd2e8",
+      "status": "active"
+    },
+    {
+      "station": "saltings",
+      "serial": "JvnskGNOtmg",
+      "status": "active"
+    },
+    {
+      "station": "lower-ferry",
+      "serial": "L-5rp26aIY8",
+      "status": "active"
+    }
+  ]
+}

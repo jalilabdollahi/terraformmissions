@@ -1,1 +1,1 @@
-Run `terraform plan`. Read ALL errors carefully — there are three separate issues. Tackle them in order: (1) stale state type, (2) missing moved block, (3) wrong attribute value. Use `terraform state list` to see what's in state.
+Triage in order of blocking: nothing else can be examined until Terraform can read state, so deal with terraform.tfstate first (is there a usable copy?). Then fix whatever stops the configuration from planning, and only then look at what the plan wants to do.
