@@ -1,0 +1,1 @@
+Two settings of the provisioner disagree with reality: working_dir points at a directory that does not exist yet, and the interpreter list is missing the flag that tells bash the next argument is a command string.

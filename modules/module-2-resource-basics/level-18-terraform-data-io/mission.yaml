@@ -1,0 +1,18 @@
+name: Cheese Cave Records
+description: >-
+  The Hollow Oak cheese cave keeps a small record per wheel batch in the built-in
+  terraform_data resource and writes a maturation log from it. Terraform complains that the
+  record's output cannot be configured, and the log references an attribute that is not there.
+objective: >-
+  Store the batch record in terraform_data.batch_record using its input, read it back through
+  its output attribute, and produce cave/maturation.log reading 'batch=HO-0412 wheels=36'
+  while keeping the triggers_replace on the batch code.
+xp: 145
+difficulty: beginner
+expected_time: 8m
+concepts:
+  - terraform_data
+  - input and output
+  - triggers_replace
+module: module-2-resource-basics
+level: level-18-terraform-data-io

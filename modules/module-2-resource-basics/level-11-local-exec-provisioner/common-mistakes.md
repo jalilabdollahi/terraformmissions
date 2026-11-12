@@ -1,0 +1,4 @@
+- Creating dist/ by hand. It hides the working_dir problem but the missing `-c` is still there.
+- Removing `interpreter` entirely and leaving the broken working_dir. The default interpreter works but the directory error remains.
+- Replacing the provisioner with a local_file resource. The mission is to repair the local-exec step.
+- Putting the version straight into the command and removing the environment block, so the stamp ignores var.release.

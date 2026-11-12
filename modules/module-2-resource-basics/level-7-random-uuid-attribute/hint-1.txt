@@ -1,0 +1,1 @@
+Run `terraform validate`. The message names an attribute and says the object does not have it.

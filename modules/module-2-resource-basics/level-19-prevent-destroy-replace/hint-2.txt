@@ -1,0 +1,1 @@
+Changing prefix on random_pet forces a new resource, and prevent_destroy blocks any plan that would destroy or replace it. Think about which of the two resources actually needs the protection.

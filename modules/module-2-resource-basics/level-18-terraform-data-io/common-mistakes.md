@@ -1,0 +1,4 @@
+- Setting both `input` and `output`. The output attribute is computed and read-only, so the error stays.
+- Keeping `output = {...}` and silencing the error with `ignore_changes`. A computed-only attribute can never be configured.
+- Dropping `triggers_replace`. The record would then not be replaced when the batch code changes, and the mission asks to keep it.
+- Replacing terraform_data with a local value. The mission is about this resource's input/output.

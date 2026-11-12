@@ -1,0 +1,1 @@
+ecdsa_curve takes the provider's own spelling of the NIST curves, which is not how they are usually written in prose or in openssl.

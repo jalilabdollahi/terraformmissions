@@ -1,0 +1,1 @@
+Add allowed_uses = ["digital_signature", "key_encipherment", "server_auth"] and write `subject { ... }` without the equals sign.

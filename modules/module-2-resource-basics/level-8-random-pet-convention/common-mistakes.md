@@ -1,0 +1,4 @@
+- Changing only `length`. The prefix and the separator still break the pattern.
+- Post-processing with `lower(replace(...))` in the output. The file and state keep the bad name; fix the resource itself.
+- Setting `length = 3` hoping to count the prefix as a word. The prefix is never counted.
+- Hard-coding the nickname. The mission needs generated names.

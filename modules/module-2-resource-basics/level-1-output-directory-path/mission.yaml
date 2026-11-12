@@ -1,0 +1,17 @@
+name: Bakery Print Run
+description: >-
+  The Corner Crumb bakery prints everything in its out/ folder and pins it beside the ovens.
+  Since the last change the daily bake sheet keeps landing in the project root, where nobody
+  looks, while the price labels are filed correctly.
+objective: >-
+  Write the bake sheet to out/bake-sheet.txt (inside the module directory, like the price
+  labels) and make nothing be left behind as bake-sheet.txt in the project root.
+xp: 115
+difficulty: beginner
+expected_time: 5m
+concepts:
+  - local_file
+  - filename
+  - path.module
+module: module-2-resource-basics
+level: level-1-output-directory-path

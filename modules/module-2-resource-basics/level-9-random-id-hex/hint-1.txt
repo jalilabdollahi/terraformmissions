@@ -1,0 +1,1 @@
+Print the tag with `terraform output batch_tag`. Which attribute of random_id are you reading?

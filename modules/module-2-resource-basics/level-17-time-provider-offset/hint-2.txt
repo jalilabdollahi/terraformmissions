@@ -1,0 +1,1 @@
+offset_days is a number (not text with a unit). And time_offset exports the result in formats such as rfc3339, unix, year, month, day... but not `timestamp`.

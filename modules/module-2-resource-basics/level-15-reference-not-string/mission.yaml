@@ -1,0 +1,17 @@
+name: Board Game Cafe Slips
+description: >-
+  The Dicewood board-game cafe prints a reservation slip for every group, but the slips all
+  read like source code and the outputs show variable names instead of values. Terraform plans
+  without a single error.
+objective: >-
+  Make hoststand/slip.txt read 'Your table: <table name>, seat <seat number>' using the real
+  generated values, and make the table_name and seat_number outputs return the actual values.
+xp: 140
+difficulty: beginner
+expected_time: 6m
+concepts:
+  - references
+  - string interpolation
+  - output values
+module: module-2-resource-basics
+level: level-15-reference-not-string

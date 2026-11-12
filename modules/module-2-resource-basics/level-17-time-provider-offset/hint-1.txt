@@ -1,0 +1,1 @@
+Run `terraform validate` and read both errors, one about an attribute and one about a value.

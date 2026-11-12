@@ -1,0 +1,4 @@
+- Keeping `.b64_url` and running the result through `lower()` and `replace()`. The characters stay base64 and the length is wrong.
+- Only switching to `.hex` and keeping `byte_length = 12`. You get 24 hex characters, not 12.
+- Fixing only the output and forgetting the file name. The logbook entry keeps the old base64 tag and leftover files confuse the scanner.
+- Using `.dec`. Decimal is not hexadecimal and its length varies.

@@ -1,0 +1,4 @@
+- Keeping `subject = { ... }` and adding allowed_uses. The block syntax error remains.
+- Using `allowed_uses = ["any"]`. It is not a valid value; use the exact usage names.
+- Using only `digital_signature`. The certificate validates but is not marked for TLS server use.
+- Adding `is_ca_certificate = true` to silence a browser warning. That turns a server cert into a CA and is not what was asked.

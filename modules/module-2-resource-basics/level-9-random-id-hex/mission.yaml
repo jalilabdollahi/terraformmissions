@@ -1,0 +1,18 @@
+name: Darkroom Batch Tags
+description: >-
+  Silverhalide Darkroom stamps a 12 character hex tag on each film canister, but the tags
+  coming out of Terraform are long, mixed-case, and contain dashes and underscores. The
+  logbook scanner rejects them and the log file names are a mess too.
+objective: >-
+  Make the batch tag exactly 12 lowercase hex characters (^[0-9a-f]{12}$), use it in the
+  batch_tag output and in the logbook file name (logbook/batch-<tag>.txt), and keep the
+  content showing the same tag.
+xp: 130
+difficulty: beginner
+expected_time: 7m
+concepts:
+  - random_id
+  - hex vs base64
+  - byte_length
+module: module-2-resource-basics
+level: level-9-random-id-hex

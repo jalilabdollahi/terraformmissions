@@ -1,0 +1,1 @@
+Each min_* argument reserves that many positions of the password. Their sum cannot exceed length.

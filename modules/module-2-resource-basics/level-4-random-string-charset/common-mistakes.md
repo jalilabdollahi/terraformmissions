@@ -1,0 +1,4 @@
+- Wrapping the result in `substr(..., 0, 10)` and `lower()`. Special characters survive, so the format rule still fails.
+- Hard-coding a card number string. The mission wants a generated number that follows the rule.
+- Setting only `length = 10` and leaving upper and special on, since 'lower' and 'numeric' are already true. All four classes are combined.
+- Using `override_special = ""` to hide punctuation. It only changes the set of special characters and does not disable them.

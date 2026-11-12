@@ -1,1 +1,0 @@
-Certificate validity is measured in hours. `-1` would mean the certificate expired one hour before it was issued — mathematically impossible.

@@ -1,0 +1,4 @@
+- Switching to `random_uuid.drop_id.id` only on the output and leaving the ticket broken. All three references must be corrected.
+- Replacing the UUIDs with `uuid()`. That function changes on every plan, so the pickup code would never be stable.
+- Quoting the references so the error disappears. The ticket would then contain the literal text of the address.
+- Deleting the receipt field to get fewer errors. The ticket needs both identifiers.

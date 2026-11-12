@@ -1,0 +1,1 @@
+Run `terraform validate` and read all the errors: there are two different ones in the certificate resource.

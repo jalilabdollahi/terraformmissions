@@ -1,0 +1,18 @@
+name: Print Shop Release Stamp
+description: >-
+  The Inkwell Press print server decides which template bundle is live by reading
+  dist/RELEASE, which a local-exec step is supposed to write after each release. Since the
+  script was tidied, terraform apply fails and no stamp is ever written.
+objective: >-
+  Make the null_resource's local-exec provisioner run successfully and write dist/RELEASE
+  containing exactly the line release=2024.3-rc1 (taken from var.release). Keep it a local-
+  exec provisioner.
+xp: 135
+difficulty: beginner
+expected_time: 10m
+concepts:
+  - local-exec
+  - interpreter
+  - working_dir
+module: module-2-resource-basics
+level: level-11-local-exec-provisioner

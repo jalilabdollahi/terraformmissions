@@ -1,0 +1,4 @@
+- Replacing `time_offset` with `timeadd(timestamp(), "336h")`. It works once and then changes on every plan.
+- Fixing only the attribute and leaving `offset_days = "14d"`. The apply still fails.
+- Writing `offset_days = "14"` and `offset_hours = 336` both. Setting two units adds them together and gives 28 days.
+- Removing `base_rfc3339`. The expiry would be 14 days after 'now' for the offset resource, not the frozen issue time.

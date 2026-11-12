@@ -1,0 +1,1 @@
+Use ecdsa_curve = "P256" (no hyphen). The other accepted values are P224, P384 and P521.

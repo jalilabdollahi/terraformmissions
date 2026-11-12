@@ -1,0 +1,1 @@
+null_resource.triggers is a map of strings. One value is a list of four cue names, and a list is not a string.

@@ -1,0 +1,17 @@
+name: Seabreeze Guest Wi-Fi
+description: >-
+  The Seabreeze Inn generates a fresh guest Wi-Fi password for each stay, but the voucher
+  printer has been silent since someone tightened the password rules. Terraform will not
+  produce a password at all.
+objective: >-
+  Keep the password at 12 characters and make it contain at least 2 uppercase, 2 lowercase, 2
+  digits and 2 special characters. The voucher file must contain the generated password.
+xp: 125
+difficulty: beginner
+expected_time: 7m
+concepts:
+  - random_password
+  - min_* arguments
+  - sensitive values
+module: module-2-resource-basics
+level: level-6-password-min-constraints

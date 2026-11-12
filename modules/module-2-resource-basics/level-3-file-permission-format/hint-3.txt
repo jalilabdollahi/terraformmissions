@@ -1,0 +1,1 @@
+Use "0600" for the token, "0644" for the manifest and "0755" for directory_permission. Quote them: they are strings, not numbers.

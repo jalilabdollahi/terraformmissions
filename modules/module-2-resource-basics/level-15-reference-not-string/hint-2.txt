@@ -1,0 +1,1 @@
+Quotation marks make Terraform treat text as a literal string. A bare reference (outside quotes) is evaluated, and inside a longer string you must interpolate with ${ }.

@@ -1,0 +1,1 @@
+Run `terraform apply` and read both nicknames in the outputs. Compare them with the pattern in the comment.

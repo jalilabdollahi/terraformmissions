@@ -1,0 +1,4 @@
+- Writing `file_permission = 0600` without quotes. HCL reads it as the decimal number 600 and the provider rejects it.
+- Running `chmod 600 fleet/sync.token` after apply. It works until the next replacement, and the plan will not know about it.
+- Using symbolic modes like `u=rw`. The provider only understands octal strings.
+- Only fixing the file modes and forgetting `directory_permission`; the directory mode then stays wrong.

@@ -1,0 +1,1 @@
+Look at the 'Attributes Reference' of random_uuid: unlike random_pet's id, the generated text lives in a different exported attribute.

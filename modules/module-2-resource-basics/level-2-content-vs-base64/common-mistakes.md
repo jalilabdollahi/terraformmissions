@@ -1,0 +1,4 @@
+- Deleting `content_base64` instead. The file then contains the base64 text and is not a valid image.
+- Decoding by hand with `base64 -d` and committing a binary. The mission wants Terraform to write it from the encoded string.
+- Wrapping the value in `base64decode()` inside `content`. Terraform strings are text; arbitrary bytes get mangled, so this breaks on real binaries.
+- Removing the local_file entirely and copying a PNG into signage/. The resource must stay managed.

@@ -1,0 +1,1 @@
+ignore_changes takes attribute names of that very resource type. local_file's text attribute is not called contents or body.

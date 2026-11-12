@@ -1,0 +1,4 @@
+- Fixing only the outputs and leaving the file content a literal string, or the other way round. Both are needed.
+- Wrapping the reference in `tostring()` inside quotes. It is still a literal.
+- Using single quotes (`'random_pet.table.id'`). HCL does not have single-quoted strings; it is a syntax error.
+- Hard-coding the generated values copied from state. They break on the next replacement.

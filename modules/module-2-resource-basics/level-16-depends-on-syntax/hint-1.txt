@@ -1,0 +1,1 @@
+Run `terraform validate`. There are two different messages, one per resource: a warning and an error.

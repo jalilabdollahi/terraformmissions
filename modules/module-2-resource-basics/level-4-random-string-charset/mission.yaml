@@ -1,0 +1,17 @@
+name: Library Card Numbers
+description: >-
+  The Marlowe Street library's card scanner only accepts 10 characters of lowercase letters
+  and digits. The generated card numbers come out too long and full of capitals and
+  punctuation, and the scanner keeps beeping at them.
+objective: >-
+  Make random_string.card_number produce exactly 10 characters matching ^[a-z0-9]{10}$ and
+  keep the card file in cards/new-member.txt showing that number.
+xp: 120
+difficulty: beginner
+expected_time: 6m
+concepts:
+  - random_string
+  - character classes
+  - naming rules
+module: module-2-resource-basics
+level: level-4-random-string-charset

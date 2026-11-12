@@ -1,1 +1,0 @@
-The command `echoo` does not exist on most systems — it is a typo of the shell built-in `echo`.

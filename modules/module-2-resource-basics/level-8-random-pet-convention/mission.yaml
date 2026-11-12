@@ -1,0 +1,18 @@
+name: Telescope Nicknames
+description: >-
+  Cragmoor Observatory names its telescopes with random pet names so members can book them on
+  a shared calendar. The reflector's nickname is accepted by the booking sheet, but the
+  refractor's nickname is rejected every time.
+objective: >-
+  Make both nicknames match ^scope-[a-z]+-[a-z]+$ (the prefix, then exactly two words,
+  separated by hyphens). Keep both resources and have the booking sheet list them.
+xp: 130
+difficulty: beginner
+expected_time: 6m
+concepts:
+  - random_pet
+  - prefix
+  - separator
+  - length
+module: module-2-resource-basics
+level: level-8-random-pet-convention
