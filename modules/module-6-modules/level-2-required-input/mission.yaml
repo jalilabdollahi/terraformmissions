@@ -1,0 +1,18 @@
+name: Lockgate Toll Ledger
+description: >-
+  The keeper of the Willowbrook lock computes boat tolls with a module called lockgate. After a
+  refactor the root configuration calls it with only some of its inputs, and terraform plan stops
+  with a complaint about a missing argument.
+objective: >-
+  Make the lockgate call complete so the module computes the toll from the root variables
+  vessel_beam_m and vessel_length_m. With the defaults the toll_pence output must be 8500, and
+  changing either variable must change the toll. Do not give the module's inputs default values.
+xp: 175
+difficulty: intermediate
+expected_time: 8m
+concepts:
+  - required variables
+  - module arguments
+  - module inputs
+module: module-6-modules
+level: level-2-required-input

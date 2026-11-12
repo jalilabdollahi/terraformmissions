@@ -1,0 +1,1 @@
+Use a `for` expression: `{ for voice, m in module.section : voice => m.minutes }` for the map, and `sum([for m in module.section : m.minutes])` (or `sum(values(...))`) for the total.

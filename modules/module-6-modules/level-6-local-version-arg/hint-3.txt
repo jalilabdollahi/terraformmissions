@@ -1,0 +1,1 @@
+Delete the `version = "~> 1.2"` line from the `module "pattern"` block. Keep `source = "./modules/folds"` and run `terraform init` again.

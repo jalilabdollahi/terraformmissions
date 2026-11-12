@@ -1,0 +1,1 @@
+Run `terraform plan` and read it as pairs: what is destroyed at the root, and what is created at `module.hangar`. Do those look like the same objects?

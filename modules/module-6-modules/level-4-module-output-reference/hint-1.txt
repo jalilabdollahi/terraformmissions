@@ -1,1 +1,0 @@
-Run `terraform validate`. The error says the module has no output named `wrong_output`.

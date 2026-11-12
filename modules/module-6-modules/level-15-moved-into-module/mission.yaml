@@ -1,0 +1,18 @@
+name: Zeppelin Hangar Extraction
+description: >-
+  The Aeroklub hangar has been issuing its mooring ticket and hangar manifest from the root configuration
+  for months. A refactor moved both resources into a module called hangar, and plan now wants to
+  destroy the live ticket (printed on the airship's paperwork) and create a new one.
+objective: >-
+  Keep the module and keep the existing ticket: the random_id and the manifest file must end up at
+  module.hangar.random_id.ticket and module.hangar.local_file.manifest with the same IDs as
+  before, and the plan must be clean. Record the move in the code with moved blocks.
+xp: 275
+difficulty: intermediate
+expected_time: 15m
+concepts:
+  - moved blocks
+  - refactoring into modules
+  - resource addresses
+module: module-6-modules
+level: level-15-moved-into-module

@@ -1,0 +1,1 @@
+Add `vintage = var.vintage` to the `module "bottler"` block in modules/press/main.tf.

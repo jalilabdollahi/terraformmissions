@@ -1,0 +1,1 @@
+Run `terraform plan`. The error says which argument of module.windcheck got an "Inappropriate value", and what it expected instead.

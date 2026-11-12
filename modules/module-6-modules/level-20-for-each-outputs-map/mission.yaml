@@ -1,0 +1,19 @@
+name: Choir Rehearsal Slots
+description: >-
+  The Fairbank choir books a rehearsal room per voice section with one module instance each. The
+  coordinator's summary outputs are meant to map each section to its minutes and to total them, but
+  the splat expressions she used choke on the module instances.
+objective: >-
+  Make rehearsal_minutes a map from section name to rehearsal minutes (5 per singer) and
+  total_minutes their sum. With the defaults (soprano 12, alto 9, tenor 6, bass 7 singers) the map is
+  soprano 60, alto 45, tenor 30, bass 35 and the total 170; with -var 'sections={bass=3,alto=4}' the
+  total must be 35.
+xp: 255
+difficulty: intermediate
+expected_time: 12m
+concepts:
+  - for_each module outputs
+  - for expressions
+  - collecting outputs into maps
+module: module-6-modules
+level: level-20-for-each-outputs-map

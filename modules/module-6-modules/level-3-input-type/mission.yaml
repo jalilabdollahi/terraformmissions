@@ -1,0 +1,18 @@
+name: Gust Gauge Verdict
+description: >-
+  The Skagen kite festival decides each morning which kites may fly from a list of gust readings.
+  The operator types the readings into one variable as comma-separated text, and the windcheck module
+  now rejects that value with a type error.
+objective: >-
+  Keep the root variable gusts as a comma-separated string, and make the windcheck module receive
+  it as the list of numbers it expects. With the default readings the verdict output must be
+  "fly all kites"; with -var gusts="15,40" it must be "stunt kites only".
+xp: 185
+difficulty: intermediate
+expected_time: 10m
+concepts:
+  - module input types
+  - type conversion
+  - split
+module: module-6-modules
+level: level-3-input-type

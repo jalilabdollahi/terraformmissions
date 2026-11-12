@@ -1,0 +1,1 @@
+Run `terraform plan`. The error is about a file that cannot be read. Compare the path in the message with where narration.tpl really is.

@@ -1,0 +1,1 @@
+Add `providers = { local = local, local.mirror = local.offsite }` to the `module "ledger"` block. Left side: names inside the module. Right side: configurations in the root. Pass the default one too, because an explicit map replaces automatic inheritance.

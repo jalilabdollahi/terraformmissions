@@ -1,0 +1,1 @@
+The caller's values are fine; the module's rule is inverted. The conditional picks the sunrise limit for standard flights and the other way round. Test the ternary by hand: a standard flight with 10 passengers must give true.

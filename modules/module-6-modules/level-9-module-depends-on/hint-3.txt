@@ -1,0 +1,1 @@
+Tell Terraform about the relationship that it cannot see: add a `depends_on` argument to the `module "resurfacer"` block listing `module.chiller`.

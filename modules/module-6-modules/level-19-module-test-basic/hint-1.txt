@@ -1,1 +1,0 @@
-Run `terraform test`. It fails immediately with a syntax or command error.

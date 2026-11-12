@@ -1,0 +1,1 @@
+Don't downgrade the root. Relax the module's constraint to a range that includes 2.x, such as `>= 2.4`. A reusable module should state a lower bound, not pin a major version it does not need.

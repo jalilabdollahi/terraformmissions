@@ -1,0 +1,1 @@
+Run `terraform init` and read the last sentence of the error. It says why Terraform decided to treat your local path as something else.

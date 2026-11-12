@@ -1,0 +1,1 @@
+Look at the label that comes out: the orchard arrives, the vintage does not. Follow the vintage variable from main.tf downwards, module by module, and see where it stops.

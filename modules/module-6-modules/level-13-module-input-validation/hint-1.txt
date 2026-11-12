@@ -1,0 +1,1 @@
+Run `terraform plan` and read the validation error messages. They were written by the module author to tell callers what a valid value looks like.

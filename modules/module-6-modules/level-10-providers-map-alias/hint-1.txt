@@ -1,0 +1,1 @@
+Run `terraform init` (or `plan`) and read the message about provider configurations for module.ledger. Then read the `terraform` block at the top of modules/ledger/main.tf.

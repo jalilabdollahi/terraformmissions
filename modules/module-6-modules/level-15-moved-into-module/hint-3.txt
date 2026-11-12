@@ -1,0 +1,1 @@
+In the root configuration add a `moved { from = ... to = ... }` block for each resource. `from` is the old root address, `to` is the full address inside the module, starting with `module.hangar.`.

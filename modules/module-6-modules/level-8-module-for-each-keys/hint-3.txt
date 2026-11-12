@@ -1,0 +1,1 @@
+Wrap the list in `toset(...)`. Then address the instance with the key as it is spelled in the default list: `module.piece["..."]`.

@@ -1,0 +1,18 @@
+name: Radio Lineup Defaults
+description: >-
+  The Hollow Hill community radio station declares its streams in a map and lets a module fill the gaps:
+  128 kbps and a station jingle unless the stream says otherwise. The module's type demands every field,
+  so any stream that omits one is rejected.
+objective: >-
+  Let the module accept streams that omit bitrate_kbps and jingle, defaulting them to 128 and true
+  respectively, while genre stays mandatory. radio/lineup.txt must read "kids stories@128k",
+  "late_show jazz@128k +jingle" and "morning talk@64k +jingle", one per line.
+xp: 265
+difficulty: intermediate
+expected_time: 15m
+concepts:
+  - optional attributes
+  - object types
+  - default values
+module: module-6-modules
+level: level-19-optional-object-defaults

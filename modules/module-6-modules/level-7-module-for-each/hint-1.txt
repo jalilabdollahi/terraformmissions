@@ -1,1 +1,0 @@
-Run `terraform validate`. The error says you can't reference a `for_each` module without specifying a key.

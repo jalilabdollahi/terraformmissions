@@ -1,0 +1,18 @@
+name: Fish Market Stall Board
+description: >-
+  The Quayside fish market posts a board for every stall: a JSON record and a list of its fields. The
+  stall module already publishes owner, pitch and catch as outputs. The root configuration tries to
+  use the whole module object as a single value and Terraform rejects both attempts.
+objective: >-
+  Use the entire module.stall object as the value: the board file board/stall.json must contain it
+  as JSON, and the fields output must list the module's output names alphabetically
+  (catch, owner, pitch). Don't type the field names or values out by hand: they must follow the module.
+xp: 250
+difficulty: intermediate
+expected_time: 12m
+concepts:
+  - module object
+  - jsonencode
+  - keys function
+module: module-6-modules
+level: level-18-whole-module-output

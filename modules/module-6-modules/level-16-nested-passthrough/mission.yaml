@@ -1,0 +1,19 @@
+name: Cider Press Vintage
+description: >-
+  Applewick Orchard labels its cider bottles through two nested modules: the press takes the orchard
+  and vintage from the root and hands them to the bottler, which writes the label. Every label
+  comes out with the right orchard but "unknown" as the vintage.
+objective: >-
+  Thread the vintage variable all the way down: root, press module, bottler module. With the
+  default 2023 the file cider/applewick-2023.txt must read "Applewick Orchard cider, vintage 2023";
+  with -var vintage=2019 the label and the file name must follow, and the label output must stay
+  available at the root.
+xp: 235
+difficulty: intermediate
+expected_time: 12m
+concepts:
+  - nested modules
+  - passing variables
+  - module hierarchy
+module: module-6-modules
+level: level-16-nested-passthrough

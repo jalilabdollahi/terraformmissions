@@ -1,0 +1,18 @@
+name: Hartwell Offsite Ledger
+description: >-
+  The Hartwell museum records every conservation treatment twice: once with its primary provider and once
+  with the aliased "offsite" provider. The ledger module was written to expect a second provider
+  configuration, and the root configuration never hands one over.
+objective: >-
+  Give module.ledger both provider configurations: the default local provider for its
+  primary copy and the aliased local.offsite for its mirror copy. State must record
+  module.ledger.local_file.mirror as managed by the offsite provider configuration.
+xp: 260
+difficulty: intermediate
+expected_time: 15m
+concepts:
+  - provider aliases
+  - providers map
+  - configuration_aliases
+module: module-6-modules
+level: level-10-providers-map-alias

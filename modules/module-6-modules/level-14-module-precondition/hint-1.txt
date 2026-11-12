@@ -1,0 +1,1 @@
+Run `terraform plan` with the default booking and read the error. Then look at the `precondition` blocks inside modules/booking/main.tf.

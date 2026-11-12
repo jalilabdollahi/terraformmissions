@@ -1,0 +1,1 @@
+A source that does not start with `./` or `../` is not a local path — Terraform tries to read it as a registry address. Once that is fixed, compare the folder name you wrote with the real folder under modules/.

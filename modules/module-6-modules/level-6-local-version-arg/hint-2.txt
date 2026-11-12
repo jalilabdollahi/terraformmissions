@@ -1,0 +1,1 @@
+`version` is only meaningful for modules fetched from a registry. A module loaded from a local directory is whatever the folder currently contains, so Terraform has nothing to match a version constraint against.

@@ -1,0 +1,1 @@
+`random_password.result` is sensitive. An output exposing it must declare `sensitive = true`. Terraform enforces the rule on the root output, but the module output is where the secret enters the interface, so it should carry the flag too — otherwise every caller has to remember it.

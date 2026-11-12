@@ -1,0 +1,1 @@
+Two inputs are wrong in different ways: the code is built from the raw troupe name and an unpadded number, and doors_open_min receives a value counted in hours while the module wants minutes.

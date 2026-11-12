@@ -1,0 +1,18 @@
+name: Paper Crane Pattern Book
+description: >-
+  The Hinoki origami club prints fold instructions through a module kept in the same repository. A
+  newcomer added a version argument to the module call "to be safe", and now terraform init
+  rejects the whole configuration.
+objective: >-
+  Make the call to the local module work again, keeping source ./modules/folds. With the default
+  model crane, models/crane.txt must list 6 steps and the steps output must be 6; with -var
+  model=frog the steps output must be 4.
+xp: 175
+difficulty: intermediate
+expected_time: 8m
+concepts:
+  - module version argument
+  - local modules
+  - registry vs local
+module: module-6-modules
+level: level-6-local-version-arg

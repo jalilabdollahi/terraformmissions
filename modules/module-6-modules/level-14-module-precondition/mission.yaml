@@ -1,0 +1,18 @@
+name: Balloon Basket Limits
+description: >-
+  Skyward Balloons flies two kinds of trip. A module guards each booking with a precondition so that
+  the sunrise basket carries at most 8 passengers and the standard basket at most 12. Since a
+  refactor the guard turns away perfectly legal bookings and accepts illegal ones.
+objective: >-
+  Repair the precondition inside the module: sunrise flights allow 1 to 8 passengers, standard flights
+  allow 1 to 12, anything else must be rejected by the module's own error message. The default booking
+  (standard, 10 passengers) must apply and write manifest.txt with "standard flight: 10 passengers".
+xp: 245
+difficulty: intermediate
+expected_time: 12m
+concepts:
+  - precondition
+  - lifecycle blocks
+  - module guards
+module: module-6-modules
+level: level-14-module-precondition

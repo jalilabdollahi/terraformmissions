@@ -1,0 +1,1 @@
+Run `terraform plan` and read the two errors. Each one says what type an argument needs and what type it actually got.

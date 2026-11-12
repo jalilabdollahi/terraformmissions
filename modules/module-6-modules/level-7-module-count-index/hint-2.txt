@@ -1,0 +1,1 @@
+A module with `count` is a *list* of module instances, so you must pick instances (`module.post[0]`) or collect from all of them. Two more things are off: every instance gets `number = 1`, and instance indexes start at 0 and end at length-1.

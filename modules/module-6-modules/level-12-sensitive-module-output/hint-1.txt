@@ -1,0 +1,1 @@
+Run `terraform plan`. The error names an output and says it "refers to sensitive values". Find that output, then look at the module output it forwards.

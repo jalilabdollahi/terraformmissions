@@ -1,1 +1,0 @@
-The logic is inverted. Change `self.value == ""` to `self.value != ""`.

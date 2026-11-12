@@ -1,0 +1,1 @@
+Inside a child module, `path.module` is the directory of that module's own files and `path.root` is the directory of the root configuration. The code uses them the wrong way round: the template lives with the module, the output belongs to the root.

@@ -1,1 +1,0 @@
-A `moved` block tells Terraform that an object was renamed, so it updates the state entry in place instead of destroying and recreating.

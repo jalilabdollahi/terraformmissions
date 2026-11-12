@@ -1,0 +1,1 @@
+Add the missing argument to the `module "lockgate"` block and feed it from the root variable that already exists for it. Don't give the child variable a default — the next boat would silently be charged the wrong toll.
