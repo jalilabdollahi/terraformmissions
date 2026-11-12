@@ -1,0 +1,18 @@
+name: Record Label Pressroom
+description: >-
+  A small record label's Terraform writes a sleeve note through a "press" provider alias and a read-only
+  master log through a "vault" alias. The test file configures providers of its own, and one alias
+  is not the one the code expects.
+objective: >-
+  Make sleeve_goes_to_press, master_is_read_only and catalog_number_flows pass by giving the test file
+  provider blocks for exactly the aliases the configuration requires (press and vault), and map them
+  in the runs that pass providers explicitly.
+xp: 290
+difficulty: advanced
+expected_time: 12m
+concepts:
+  - provider block in tests
+  - provider aliases
+  - providers mapping
+module: module-10-testing
+level: level-14-test-provider-block

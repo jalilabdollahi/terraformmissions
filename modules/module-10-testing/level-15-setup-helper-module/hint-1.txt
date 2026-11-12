@@ -1,0 +1,1 @@
+Run `terraform test` and read the first failing run. The failure is in a helper run named `setup`, not in the cinema logic.

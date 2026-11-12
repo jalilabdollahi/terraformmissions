@@ -1,0 +1,1 @@
+Use `local_file.board_card["tacotl"]` and `local_file.board_card["pierogi"]`. Not `[0]`, and keys are case-sensitive: `Pierogi` is not `pierogi`.

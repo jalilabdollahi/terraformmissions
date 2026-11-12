@@ -1,1 +1,0 @@
-The `command` argument inside a `run` block accepts exactly two values: `"apply"` (the default) and `"plan"`.

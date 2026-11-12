@@ -1,0 +1,1 @@
+Run `terraform test -verbose`. One assertion shows a normal Diff for the label; the other shows only `(sensitive value)`, and a warning says the error message "refers to sensitive values".

@@ -1,1 +1,1 @@
-Terraform test files support three top-level block types: `run`, `variables`, and `provider`. There is no `tests` block.
+A `.tftest.hcl` file is made of `run` blocks (plus a few optional top-level blocks). The scenarios are declared with a block type that does not take a label the way the author expected.

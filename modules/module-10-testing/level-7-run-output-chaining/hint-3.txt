@@ -1,0 +1,1 @@
+Move `run "measure_main"` above `run "order_cloth"`, and read `run.measure_main.sail_area` (the output name from sailloft.tf), not `.area`.

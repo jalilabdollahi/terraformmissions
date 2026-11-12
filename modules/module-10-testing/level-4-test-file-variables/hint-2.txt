@@ -1,0 +1,1 @@
+Shared inputs in a test file are declared with a block, not an attribute. The error message even suggests the block type: it takes no `=` and its contents are plain `name = value` lines.

@@ -1,0 +1,1 @@
+Write `mock_resource "random_id" { defaults = { hex = "ab12cd34" } }`. For `random_integer` the computed attribute is called `result`, not `value`: `defaults = { result = 4 }`.

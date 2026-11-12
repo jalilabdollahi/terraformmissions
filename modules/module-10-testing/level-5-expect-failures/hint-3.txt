@@ -1,0 +1,1 @@
+Use `expect_failures = [var.dose_mg]` in dose_too_high and `expect_failures = [var.interval_hours]` in interval_too_short. Not `variable.dose_mg`, and each run must name the variable whose validation it triggers.

@@ -1,0 +1,1 @@
+Policy is 8 digits, but the test expects `length(output.lock_code) == 6`. Change it to 8. The label assertion expects `unit a-14` in lower case; use `Unit A-14`. Do not wrap the code itself in `nonsensitive()`.

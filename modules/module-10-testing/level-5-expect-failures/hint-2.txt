@@ -1,0 +1,1 @@
+`expect_failures` takes a list of references to checkable objects. For an input variable validation the reference is the same one you use in code to read the variable. One run spells it differently, the other points at a different variable than the one it breaks.

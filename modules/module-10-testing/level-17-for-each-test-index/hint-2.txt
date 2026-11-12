@@ -1,0 +1,1 @@
+A resource with `for_each` is a map of instances keyed by the keys of the collection; `count` resources are lists. You reach one instance with square brackets and a quoted string key, exactly as in `terraform state list`.

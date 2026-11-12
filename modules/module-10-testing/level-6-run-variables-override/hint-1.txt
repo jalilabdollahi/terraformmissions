@@ -1,0 +1,1 @@
+Run `terraform test`. A run fails with `Invalid value for input variable`, and the runs after it are reported as skipped, not as failed.

@@ -1,1 +1,0 @@
-Run `terraform test`. The failure output will show you the current values of `output.a` and `output.b`.

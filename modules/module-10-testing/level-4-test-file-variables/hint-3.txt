@@ -1,0 +1,1 @@
+Change `variables = {` to `variables {` at the top of tests/pairings.tftest.hcl. Keep the file-level block outside every run, and the `players` override inside `odd_roster_gets_bye`.

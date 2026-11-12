@@ -1,0 +1,17 @@
+name: Dispensary Label Guardrails
+description: >-
+  A pharmacy label generator refuses dangerous doses with variable validation, and two tests are
+  supposed to prove it. Both report that the validation fired - and still fail, one complaining that
+  an expected failure never happened.
+objective: >-
+  Make dose_too_high and interval_too_short pass by pointing expect_failures at the right variable
+  address in each run, without touching the validation rules in label.tf.
+xp: 245
+difficulty: advanced
+expected_time: 10m
+concepts:
+  - expect_failures
+  - variable validation
+  - checkable object addresses
+module: module-10-testing
+level: level-5-expect-failures

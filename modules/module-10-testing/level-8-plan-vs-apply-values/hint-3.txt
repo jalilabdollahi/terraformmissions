@@ -1,0 +1,1 @@
+Set `command = apply` on `batch_code_shape` and `tint_in_range`. Leave `ratio_label` on `command = plan`: it only reads variables, so it is known at plan time and stays fast.

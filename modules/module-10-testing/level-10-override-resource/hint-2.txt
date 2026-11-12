@@ -1,0 +1,1 @@
+`target` is a full resource address, exactly as it appears in `terraform state list`. One address has a typo in the resource name. The other resource lives inside a child module, and an address inside a module starts with `module.<name>.`.

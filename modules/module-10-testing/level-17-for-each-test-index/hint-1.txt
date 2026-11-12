@@ -1,0 +1,1 @@
+Read the first `Error:` block, then fix it and read the next: one is about the wrong kind of index, the other about a key that does not exist.

@@ -1,1 +1,1 @@
-Replace `tests "verify_greeting"` with `run "verify_greeting"` in the test file.
+Every scenario block starts with `test "name" {`. Each one must start with `run "name" {` instead; the assert blocks inside are fine.

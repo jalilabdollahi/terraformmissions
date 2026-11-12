@@ -1,5 +1,6 @@
-# Common Mistakes
+# Common mistakes
 
-- **`tests {}` instead of `run {}`** — the block that defines a test scenario is `run`, not `tests`.
-- **Confusing `.tftest.hcl` with regular `.tf` files** — test files have their own block vocabulary.
-- **Missing the run block label** — `run "name_here"` requires a quoted label string.
+- **Deleting the test file.** `terraform test` then reports `0 passed, 0 failed` and exits 0, but the fare formula is untested again - the mission checks that the three scenarios still exist.
+- **Renaming only the first block.** Every `test "..."` block fails the same way; fix all three.
+- **Moving the assertions to the top level.** `assert` is only valid inside a `run` block (`Unsupported block type`).
+- **Changing the fare formula so the old expectations match.** The formula is correct; the file structure is what is broken.

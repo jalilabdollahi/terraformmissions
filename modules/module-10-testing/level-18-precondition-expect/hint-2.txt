@@ -1,0 +1,1 @@
+A `precondition` is attached to the resource that declares it, so that is the object to list in `expect_failures`; the input variable it reads is not the failing object. And a negative run only passes if its variables really violate the rule.

@@ -1,1 +1,0 @@
-Change `target = local_file.wrong_name` to `target = local_file.config`.

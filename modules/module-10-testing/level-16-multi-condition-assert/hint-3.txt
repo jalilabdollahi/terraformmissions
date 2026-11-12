@@ -1,0 +1,1 @@
+The failing fact is `output.route.bolts == 9`. The code computes bolts with `floor(var.height_m / 2)`, which rounds 8.5 down to 8; a bolt is needed for the remaining half pair, so use `ceil`. Fix the code, keep the test strict.

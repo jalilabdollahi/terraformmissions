@@ -1,0 +1,1 @@
+A `variables {}` block inside a run must give each variable a value its declared type accepts. One override is a string with a unit in it where a number is declared, and a later one is a list where the code declares a map.

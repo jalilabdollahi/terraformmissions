@@ -1,1 +1,0 @@
-Change `local_file.config` to `var.filename` in the `expect_failures` list.
