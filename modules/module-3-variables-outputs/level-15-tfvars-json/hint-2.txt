@@ -1,0 +1,1 @@
+There are two problems: a trailing comma after the last property (JSON forbids it), and `site` is given as a string `"36.2,-118.9"` while the variable is an object with `lat` and `lon`.

@@ -1,0 +1,1 @@
+Terraform reads `terraform.tfvars` first, then `*.auto.tfvars` files; later sources override earlier ones. `rehearsal.auto.tfvars` therefore beats the reviewed value 45 with its 5.

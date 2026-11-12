@@ -1,0 +1,1 @@
+Run `terraform validate`. The error names the variable and says the default is not compatible with its type constraint — look at what a value in that map actually is.

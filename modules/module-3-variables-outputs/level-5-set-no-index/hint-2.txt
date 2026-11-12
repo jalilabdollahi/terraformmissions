@@ -1,0 +1,1 @@
+A `set` has no positions — it is unordered, so there is no "first" element to index. You must turn it into an ordered list before picking one.

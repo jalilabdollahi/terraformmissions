@@ -1,0 +1,14 @@
+name: Password In The URL
+description: >-
+  The Harbor Inn's front-desk tool opens the captive portal admin page through a URL that Terraform builds with the admin password inside. Terraform refuses to plan, complaining about sensitive values.
+objective: >-
+  Make terraform apply succeed while the password stays protected: portal_login_url must be a sensitive output (redacted by terraform output, still the full URL in -json) and the password variable must remain sensitive.
+xp: 170
+difficulty: beginner
+expected_time: 6m
+concepts:
+  - sensitive
+  - outputs
+  - secrets
+module: module-3-variables-outputs
+level: level-10-sensitive-output-flag

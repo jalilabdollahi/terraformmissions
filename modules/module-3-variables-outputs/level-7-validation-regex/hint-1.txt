@@ -1,0 +1,1 @@
+Run `terraform plan`. The failing check is the variable's own error_message — the default value itself does not pass. Compare the default with the regex character by character.

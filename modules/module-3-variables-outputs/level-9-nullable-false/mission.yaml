@@ -1,0 +1,14 @@
+name: Null Beats The Default
+description: >-
+  Deepfreeze Backups generates vault policies through a small module with a sensible 30-day default. The pipeline forwards an optional override variable, and since nobody sets it, the module chokes on a null.
+objective: >-
+  Make terraform apply succeed so effective_retention is 30 when no override is given, while -var retention_override=7 still yields 7. The fix belongs in the module's variable declaration; keep passing the root variable straight through.
+xp: 165
+difficulty: beginner
+expected_time: 8m
+concepts:
+  - nullable
+  - modules
+  - defaults
+module: module-3-variables-outputs
+level: level-9-nullable-false

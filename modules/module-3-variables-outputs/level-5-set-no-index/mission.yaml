@@ -1,0 +1,14 @@
+name: The Unordered Shelf
+description: >-
+  At Marlowe Street Library the featured genre in the window is meant to be the alphabetically first genre in the donation boxes. The genres live in a set, and the card generator trips on the first one.
+objective: >-
+  Make featured_genre the alphabetically first genre (astronomy for the default set) while donated_genres stays a set(string); the check also plans with other genre sets.
+xp: 145
+difficulty: beginner
+expected_time: 6m
+concepts:
+  - sets
+  - tolist
+  - sort
+module: module-3-variables-outputs
+level: level-5-set-no-index

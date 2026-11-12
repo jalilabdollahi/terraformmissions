@@ -1,0 +1,1 @@
+Inside `object({...})` every attribute is required unless it is marked optional. Two of the four drinks have no `size`, so the whole variable is rejected.

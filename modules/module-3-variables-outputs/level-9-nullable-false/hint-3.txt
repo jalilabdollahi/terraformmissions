@@ -1,0 +1,1 @@
+In modules/vault/variables.tf add `nullable = false` to `variable "retention_days"`. With that, Terraform replaces a null argument with the default (30).

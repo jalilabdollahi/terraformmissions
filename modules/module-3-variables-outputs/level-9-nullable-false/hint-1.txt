@@ -1,0 +1,1 @@
+Run `terraform plan` and read the error about a null value. Follow it into the module: what does the module receive when `retention_override` is unset?

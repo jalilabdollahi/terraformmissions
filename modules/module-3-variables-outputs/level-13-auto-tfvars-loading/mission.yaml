@@ -1,0 +1,14 @@
+name: The Unloaded Summer File
+description: >-
+  Glasshouse 3's nightly job runs plain terraform apply and still keeps the winter climate settings, even though the summer values sit in prod.tfvars right next to the code. Nothing errors, the tomatoes are just cold.
+objective: >-
+  Make plain terraform apply (no flags) use the summer settings: target_temp_c 24, vent_mode auto, misting_per_day 6. Keep the defaults in variables.tf as the winter baseline.
+xp: 180
+difficulty: intermediate
+expected_time: 8m
+concepts:
+  - tfvars
+  - auto-loading
+  - var-files
+module: module-3-variables-outputs
+level: level-13-auto-tfvars-loading

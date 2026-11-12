@@ -1,0 +1,1 @@
+Run `terraform plan` and read the first error: it points into `terraform.tfvars`, not into a `.tf` file.

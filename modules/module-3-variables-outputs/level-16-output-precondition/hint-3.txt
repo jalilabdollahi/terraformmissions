@@ -1,0 +1,1 @@
+Inside `output "shop_label"` add a `precondition { condition = var.affinage_days >= var.min_affinage_days  error_message = "..." }`. Use the variable for the threshold; do not hard-code 60.

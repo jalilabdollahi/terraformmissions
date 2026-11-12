@@ -1,0 +1,1 @@
+Terraform only loads `terraform.tfvars`, `terraform.tfvars.json`, and files ending in `.auto.tfvars` / `.auto.tfvars.json` automatically. A file named `prod.tfvars` is only read if you pass `-var-file=prod.tfvars`, which the nightly job does not.

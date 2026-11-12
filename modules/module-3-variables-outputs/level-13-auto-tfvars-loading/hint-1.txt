@@ -1,0 +1,1 @@
+Run `terraform plan` and compare the planned values with what is in `prod.tfvars`. Do the summer values show up? Then ask yourself when Terraform reads a variable-definitions file on its own.

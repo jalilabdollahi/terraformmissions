@@ -1,0 +1,1 @@
+Run `terraform validate` and read the two "Unsupported attribute" errors: each tells you the resource and the attribute name it could not find.

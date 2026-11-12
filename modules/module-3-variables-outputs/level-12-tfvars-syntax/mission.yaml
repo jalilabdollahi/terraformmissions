@@ -1,0 +1,14 @@
+name: Wiki Colon Syndrome
+description: >-
+  Port Calder's pilotage notice takes its inputs from terraform.tfvars, which someone pasted from the old ops wiki. Terraform will not even read the file.
+objective: >-
+  Make plain terraform apply read terraform.tfvars and produce the notice for Port Calder with 14 berths, entry windows 05:10 and 17:25, and a compulsory pilot. Keep the values in terraform.tfvars (no defaults in the variable blocks).
+xp: 175
+difficulty: intermediate
+expected_time: 7m
+concepts:
+  - tfvars
+  - hcl-syntax
+  - input-variables
+module: module-3-variables-outputs
+level: level-12-tfvars-syntax

@@ -1,0 +1,1 @@
+`local_file` has no attribute called `path` or `sha256`. Check the provider documentation (section "Attribute Reference") or run `terraform providers schema -json` to see what it exports.

@@ -1,0 +1,1 @@
+Run `terraform plan` and find the "Invalid index" error — it names the expression and tells you how many elements the list actually has.

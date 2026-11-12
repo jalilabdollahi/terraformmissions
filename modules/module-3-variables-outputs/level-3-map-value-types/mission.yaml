@@ -1,0 +1,14 @@
+name: Seedlings In The Wrong Tray
+description: >-
+  Fernwood Nursery tracks every seedling's germination time and tray in a map. The type constraint was copied from the old tray-only file, and terraform refuses to load the new data.
+objective: >-
+  Fix the variable's type constraint so the default loads, 4 label files are created, slowest_days is 14 and trays_in_use is [A, B, C]. Do not use any; days must stay a number.
+xp: 135
+difficulty: beginner
+expected_time: 6m
+concepts:
+  - map(object)
+  - type constraints
+  - for_each
+module: module-3-variables-outputs
+level: level-3-map-value-types

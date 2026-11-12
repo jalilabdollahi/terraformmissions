@@ -1,0 +1,1 @@
+Replace every colon with an equals sign: `port_name = "Port Calder"`, `berth_count = 14`, `tide_windows = ["05:10", "17:25"]`, `pilot_required = true`. No braces, no commas between lines.

@@ -1,0 +1,14 @@
+name: The Phantom Hyphen
+description: >-
+  The Aurelia Opera House checks season ticket codes such as ORC-2041 with a validation block. Since it was added, even the default code is rejected, and the box office has started to bypass it.
+objective: >-
+  Fix the validation so ORC-2041 and other well-formed codes (three capital letters, hyphen, four digits) are accepted and everything else is still rejected by the variable's own validation message.
+xp: 155
+difficulty: beginner
+expected_time: 7m
+concepts:
+  - validation
+  - regex
+  - can
+module: module-3-variables-outputs
+level: level-7-validation-regex

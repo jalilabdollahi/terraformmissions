@@ -1,0 +1,1 @@
+In variables.tf declare `size = optional(string, "regular")`. Leave terraform.tfvars as it is — the second argument is the default.

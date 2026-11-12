@@ -1,0 +1,1 @@
+Run `terraform validate` (or plan) and read the "Invalid default value for variable" error — it points at one variable block in main.tf.

@@ -1,0 +1,1 @@
+The variable is declared `type = number` but its default is a quoted word, "three". A number type needs a numeric literal.

@@ -1,0 +1,14 @@
+name: Regex Wall Of Text
+description: >-
+  The Spoke & Pedal bike-share app only publishes releases tagged like v3.12. A validation block should explain bad tags politely, but ops only see an unfriendly regex error when the tag is wrong.
+objective: >-
+  Make a malformed release tag fail with the variable's own error message (not a raw regex error), while v3.12 and v10.0 still pass.
+xp: 160
+difficulty: beginner
+expected_time: 7m
+concepts:
+  - validation
+  - can
+  - regex
+module: module-3-variables-outputs
+level: level-8-validation-can-wrap

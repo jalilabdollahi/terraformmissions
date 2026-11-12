@@ -1,0 +1,1 @@
+Compare each output expression with the variable's type: capacity and keepers live under `enclosure`; the attribute is `keepers` (plural); and the habitat keys are `savanna`, `aviary` and `reptile_house`.

@@ -1,0 +1,1 @@
+Run `terraform plan`. The error mentions "Output refers to sensitive values" and names one output block.

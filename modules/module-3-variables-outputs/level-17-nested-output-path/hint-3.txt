@@ -1,0 +1,1 @@
+savanna_capacity: `var.habitats["savanna"].enclosure.capacity`; aviary_lead_keeper: `var.habitats.aviary.enclosure.keepers[0]`; reptile_head_keeper: use the key `reptile_house`.

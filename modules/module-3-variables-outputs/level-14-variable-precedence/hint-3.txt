@@ -1,0 +1,1 @@
+The Thursday dry-run override is stale. Remove (or empty) `rehearsal.auto.tfvars` so that the 45 from terraform.tfvars is the final value. Do not move the number into the .tf files.

@@ -1,0 +1,1 @@
+Wrap the call in `can(...)`: `condition = can(regex("^v[0-9]+\.[0-9]+$", var.release_tag))`. `can` converts "this expression errored" into `false`.

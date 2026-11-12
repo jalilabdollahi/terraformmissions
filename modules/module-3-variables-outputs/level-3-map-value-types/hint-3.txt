@@ -1,0 +1,1 @@
+Change the type to `map(object({ days = number, tray = string }))`. Do not use `any`; the validator tries a non-numeric days value.
