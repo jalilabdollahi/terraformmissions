@@ -1,36 +1,36 @@
-# Harbourlight ferry — crossing timetable.
-# The notice board prints the first and the last sailing of the day.
-# Sailings are listed in order, earliest first.
+# Sunnyfield sunflower maze — gate timetable.
+# The gate board prints the first and the last entry slot of the day.
+# Entry slots are listed in order, earliest first.
 
-variable "service_name" {
+variable "maze_name" {
   type    = string
-  default = "Harbourlight Ferry"
+  default = "Sunnyfield Sunflower Maze"
 }
 
-variable "departures" {
-  description = "Departure times from the north pier, earliest first."
+variable "entry_times" {
+  description = "Entry times at the north gate, earliest first."
   type        = list(string)
   default     = ["06:15", "09:40", "13:05", "17:30"]
 }
 
 locals {
-  first_sailing = var.departures[0]
-  last_sailing  = var.departures[length(var.departures) - 1]
+  first_entry_slot = var.entry_times[0]
+  last_entry_slot  = var.entry_times[length(var.entry_times) - 1]
 }
 
-resource "local_file" "notice_board" {
-  filename = "${path.module}/board/notice.txt"
+resource "local_file" "gate_board" {
+  filename = "${path.module}/board/gate.txt"
   content  = <<-EOT
-    ${var.service_name}
-    First sailing: ${local.first_sailing}
-    Last sailing:  ${local.last_sailing}
+    ${var.maze_name}
+    First entry:   ${local.first_entry_slot}
+    Last entry:    ${local.last_entry_slot}
   EOT
 }
 
-output "last_departure" {
-  value = local.last_sailing
+output "last_entry" {
+  value = local.last_entry_slot
 }
 
-output "sailings_per_day" {
-  value = length(var.departures)
+output "entries_per_day" {
+  value = length(var.entry_times)
 }

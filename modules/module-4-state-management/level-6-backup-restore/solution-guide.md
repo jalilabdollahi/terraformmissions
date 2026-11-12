@@ -1,9 +1,9 @@
-# Walkthrough — Lost Stock List
+# Walkthrough — Lost Surplus Inventory
 
 1. **See the damage.**
    ```bash
    terraform state list
-   # local_file.stock_index
+   # local_file.inventory_index
    terraform plan
    # Plan: 3 to add, 1 to change, 0 to destroy.
    ```

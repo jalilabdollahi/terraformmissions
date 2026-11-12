@@ -3,12 +3,12 @@ variable "dishes" {
   default = ["smoked salmon", "reindeer stew", "cloudberry cream"]
 }
 
-module "galley" {
-  source = "./modules/galley"
+module "kitchen" {
+  source = "./modules/kitchen"
 
   dishes = var.dishes
 }
 
 output "courses" {
-  value = module.galley.course_count
+  value = module.kitchen.course_count
 }

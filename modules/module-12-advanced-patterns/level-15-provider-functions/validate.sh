@@ -9,13 +9,13 @@ tm_validate "the configuration does not validate"
 tm_apply
 
 EXPECT='limits = {
-  minutes    = 4
-  per_singer = 2
+  minutes     = 4
+  per_thrower = 2
 }
-open  = true
-room  = "Blue Note"
-seats = 24
-songs = ["Valerie", "Dancing Queen"]'
+open    = true
+room    = "Blue Note"
+seats   = 24
+targets = ["Bullseye", "Skull Board"]'
 [[ "$(cat stack/night.tfvars 2>/dev/null)" == "$EXPECT" ]] || {
   echo "   stack/night.tfvars contains:"; sed 's/^/   │ /' stack/night.tfvars 2>/dev/null
   tm_fail "stack/night.tfvars is not the encode_tfvars rendering of the venue object (keys sorted, nested objects expanded)"

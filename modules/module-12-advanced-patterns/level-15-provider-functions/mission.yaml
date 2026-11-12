@@ -1,6 +1,6 @@
-name: Karaoke Tfvars Writer
+name: Axe Bar Tfvars Writer
 description: >-
-  The Blue Note karaoke bar generates the settings file for its booking stack from a Terraform object,
+  The Blue Note axe-throwing bar generates the settings file for its booking stack from a Terraform object,
   and reads last month's file back to compute how many seats were added. The config uses Terraform's
   built-in provider functions, but Terraform says they do not exist.
 objective: >-

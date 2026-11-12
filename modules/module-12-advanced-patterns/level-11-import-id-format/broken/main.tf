@@ -1,37 +1,37 @@
-# Cooper's Ridge turtle hatchery: three registry values that already exist on paper
-# (see nest-register.csv) and must be adopted. Every provider chooses its own import ID
+# Cooper's Ridge Message-in-a-Bottle Society: three register values that already exist on paper
+# (see bottle-register.csv) and must be adopted. Every provider chooses its own import ID
 # format, and the IDs below were typed in whatever format seemed natural.
 
-resource "random_integer" "tag" {
+resource "random_integer" "bottle" {
   min = 100
   max = 999
 }
 
-resource "time_static" "release" {
+resource "time_static" "launch" {
   rfc3339  = "2025-04-12T06:30:00Z"
   triggers = {}
 }
 
-resource "random_id" "nest" {
+resource "random_id" "cork" {
   byte_length = 4
 }
 
 import {
-  to = random_integer.tag
+  to = random_integer.bottle
   id = "212"
 }
 
 import {
-  to = time_static.release
+  to = time_static.launch
   id = "1744439400"
 }
 
 import {
-  to = random_id.nest
+  to = random_id.cork
   id = "5a4c8b0f"
 }
 
 resource "local_file" "certificate" {
-  filename = "${path.module}/hatchery/certificate.txt"
-  content  = "tag ${random_integer.tag.result}, released ${time_static.release.rfc3339}, nest ${random_id.nest.b64_url}\n"
+  filename = "${path.module}/society/certificate.txt"
+  content  = "bottle ${random_integer.bottle.result}, launched ${time_static.launch.rfc3339}, cork ${random_id.cork.b64_url}\n"
 }

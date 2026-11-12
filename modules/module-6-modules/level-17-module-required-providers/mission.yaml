@@ -1,7 +1,7 @@
-name: Fjord Supper Menu
+name: Sauna Supper Menu
 description: >-
-  The Nordlys fjord cruise prints its evening menu with a module that the galley team wrote years ago.
-  The ship's root configuration uses a current local provider, and terraform init now says that no
+  The Nordlys Lakeside Sauna Retreat prints its evening menu with a module that the kitchen team wrote years ago.
+  The retreat's root configuration uses a current local provider, and terraform init now says that no
   provider version can satisfy everybody.
 objective: >-
   Make terraform init succeed with the root's provider requirement (hashicorp/local ~> 2.5) left

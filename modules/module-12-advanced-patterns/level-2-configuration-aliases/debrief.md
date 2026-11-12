@@ -2,7 +2,7 @@
 
 A child module normally inherits the default configuration of every provider it uses, with no
 code at all. That convenience stops at aliases. If a module wants a second configuration of a
-provider (a replica region, a second account, here a back bench), it has to say so with
+provider (a replica region, a second account, here a back wall), it has to say so with
 `configuration_aliases` inside its own `required_providers`. The module author is publishing an
 interface, just like for variables and outputs.
 

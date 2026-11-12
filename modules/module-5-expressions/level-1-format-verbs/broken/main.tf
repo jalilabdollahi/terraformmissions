@@ -1,4 +1,4 @@
-# Ridgeway Endurance Ride — ride-day vet cards.
+# Ridgeway Rickshaw Charity Rally — rally-day route cards.
 # Each rider's card is one printed line: tag, quoted name, distance, pace.
 
 variable "rider" {
@@ -28,8 +28,8 @@ locals {
   )
 }
 
-resource "local_file" "vet_card" {
-  filename = "${path.module}/cards/vet-card.txt"
+resource "local_file" "route_card" {
+  filename = "${path.module}/cards/route-card.txt"
   content  = "${local.card}\n"
 }
 

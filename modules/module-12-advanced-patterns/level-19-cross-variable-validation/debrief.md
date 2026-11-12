@@ -12,7 +12,7 @@ precondition runs while the plan is being assembled, and reports a resource addr
 resources use the same input you would also have to repeat the check.
 
 Which variable gets the validation? The one the caller should be told to fix. Rules about a pair go on the variable
-that is more likely to be wrong (here `guests` and `end_hour`).
+that is more likely to be wrong (here `students` and `end_hour`).
 
 For facts about real objects, such as an attribute that only exists after apply, a `precondition` or a
 `check` is still the right tool.

@@ -1,41 +1,41 @@
-# Hollin Farm Riding Stables — daily feed order for the grooms' whiteboard.
-# Breeds with a tailored ration are listed; anything else gets the standard ration.
+# Hollin Farm Hospital Kitchen — daily cook order for the diet whiteboard.
+# Diets with a tailored batch size are listed; anything else gets the standard batch.
 
-variable "rations_kg" {
+variable "batch_kg" {
   type = map(number)
   default = {
-    shire     = 28
-    welsh_cob = 9.5
-    shetland  = 1.2
+    regular     = 28
+    soft = 9.5
+    pureed  = 1.2
   }
 }
 
-variable "standard_ration_kg" {
+variable "standard_batch_kg" {
   type    = number
   default = 3
 }
 
-variable "horses" {
+variable "diets" {
   type    = list(string)
-  default = ["shire", "fjord", "shetland", "haflinger"]
+  default = ["regular", "low_salt", "pureed", "gluten_free"]
 }
 
 locals {
-  feed_order = {
-    for horse in var.horses :
-    horse => var.rations_kg[horse]
+  cook_order = {
+    for diet in var.diets :
+    diet => var.batch_kg[diet]
   }
 }
 
 resource "local_file" "whiteboard" {
-  filename = "${path.module}/board/feed.txt"
-  content  = "${join("\n", [for horse, kg in local.feed_order : "${horse}: ${kg} kg"])}\n"
+  filename = "${path.module}/board/diets.txt"
+  content  = "${join("\n", [for diet, kg in local.cook_order : "${diet}: ${kg} kg"])}\n"
 }
 
-output "feed_order" {
-  value = local.feed_order
+output "cook_order" {
+  value = local.cook_order
 }
 
 output "total_kg" {
-  value = sum([for kg in values(local.feed_order) : kg])
+  value = sum([for kg in values(local.cook_order) : kg])
 }

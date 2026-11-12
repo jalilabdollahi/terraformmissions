@@ -1,4 +1,4 @@
-# Walkthrough — Buoy State Relocation
+# Walkthrough — Kiosk State Relocation
 
 1. **Read the error.**
    ```bash
@@ -6,7 +6,7 @@
    # Error: Backend initialization required, please run "terraform init"
    #   Reason: Backend configuration block has changed
    ```
-2. **Find the old state.** `ls state/` shows `buoys.tfstate`; `ls vault/` does not exist yet.
+2. **Find the old state.** `ls state/` shows `kiosks.tfstate`; `ls vault/` does not exist yet.
 3. **Migrate, do not reconfigure.**
    ```bash
    terraform init -migrate-state

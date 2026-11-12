@@ -1,5 +1,5 @@
-# Pinball cabinet PB-114 "Atomic Gorilla".
-# A firmware release should reflash the cabinet: the cabinet record must be rebuilt from
+# Ghost train ride controller GT-114 "Crypt Express".
+# A firmware release should reflash the controller: the controller record must be rebuilt from
 # scratch (new ID) whenever the firmware pack changes. Calibration is just a setting and
 # must never trigger a rebuild.
 
@@ -21,10 +21,10 @@ resource "terraform_data" "calibration" {
   input = var.calibration
 }
 
-resource "terraform_data" "cabinet" {
+resource "terraform_data" "controller" {
   input = {
-    serial = "PB-114"
-    game   = "Atomic Gorilla"
+    serial = "GT-114"
+    ride   = "Crypt Express"
   }
 
   lifecycle {
@@ -33,6 +33,6 @@ resource "terraform_data" "cabinet" {
 }
 
 resource "local_file" "service_card" {
-  filename = "${path.module}/service/pb-114.txt"
-  content  = "cabinet ${terraform_data.cabinet.id} runs firmware ${terraform_data.firmware_pack.output}\n"
+  filename = "${path.module}/service/gt-114.txt"
+  content  = "controller ${terraform_data.controller.id} runs firmware ${terraform_data.firmware_pack.output}\n"
 }

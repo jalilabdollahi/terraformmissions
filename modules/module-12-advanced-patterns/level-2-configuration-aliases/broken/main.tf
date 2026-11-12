@@ -1,19 +1,19 @@
-# Typewriter repair shop: ribbon reel numbers.
-# The ribbon_stock module numbers a primary reel on the default provider and a spare
-# reel on a second, named provider configuration kept for the back bench.
+# Fishing tackle shop: reel serial numbers.
+# The reel_stock module numbers a primary reel on the default provider and a spare
+# reel on a second, named provider configuration kept for the back wall.
 
 provider "random" {
-  alias = "back_bench"
+  alias = "back_wall"
 }
 
-module "ribbons" {
-  source = "./modules/ribbon_stock"
+module "reels" {
+  source = "./modules/reel_stock"
 }
 
 output "primary_reel" {
-  value = module.ribbons.primary_reel
+  value = module.reels.primary_reel
 }
 
 output "spare_reel" {
-  value = module.ribbons.spare_reel
+  value = module.reels.spare_reel
 }

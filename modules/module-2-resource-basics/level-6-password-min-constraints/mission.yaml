@@ -1,11 +1,11 @@
-name: Cobalt Yard Visitor Wi-Fi
+name: Cobalt Yard Audio Guide Pass
 description: >-
-  The Cobalt Yard coworking space generates a fresh visitor Wi-Fi password for each day pass, but the voucher
+  The Cobalt Yard Castle Ruins Visitor Centre generates a fresh audio-guide app password for each day pass, but the voucher
   printer has been silent since someone tightened the password rules. Terraform will not
   produce a password at all.
 objective: >-
   Keep the password at 12 characters and make it contain at least 2 uppercase, 2 lowercase, 2
-  digits and 2 special characters. The voucher file must contain the generated password.
+  digits and 2 special characters. The day-pass voucher file must contain the generated password.
 xp: 125
 difficulty: beginner
 expected_time: 7m

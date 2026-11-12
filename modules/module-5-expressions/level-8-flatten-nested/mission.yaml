@@ -1,8 +1,8 @@
-name: Roxy Showing Stubs
+name: Roxy Bout Stubs
 description: >-
-  The Roxy Picture House prints one ticket stub per film showing, driven by a programme that lists the films for each screen. The nested loop that builds the showings gives Terraform a list of lists, and for_each cannot make sense of it.
+  The Roxy Boxing Club prints one ticket stub per bout, driven by a programme that lists the bouts for each ring. The nested loop that builds the bouts gives Terraform a list of lists, and for_each cannot make sense of it.
 objective: >-
-  Produce a flat list of showings (screen + film) and one local_file stub per showing, keyed "<screen>/<film>": six stubs for the default programme, correct for any programme.
+  Produce a flat list of bouts (ring + bout) and one local_file stub per bout, keyed "<ring>/<bout>": six stubs for the default programme, correct for any programme.
 xp: 210
 difficulty: intermediate
 expected_time: 10m

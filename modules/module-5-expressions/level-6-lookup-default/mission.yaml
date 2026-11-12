@@ -1,8 +1,8 @@
-name: Hollin Feed Whiteboard
+name: Hollin Diet Whiteboard
 description: >-
-  The grooms' feed whiteboard at Hollin Farm Riding Stables is generated from a ration table. When the manager added a fjord and a haflinger to the horse list, plan started failing because they have no tailored ration.
+  The cooks' diet whiteboard at Hollin Farm Hospital Kitchen is generated from a batch-size table. When the dietitian added low_salt and gluten_free to the diet list, plan started failing because they have no tailored batch size.
 objective: >-
-  Give listed breeds their own ration and every other horse the standard ration from var.standard_ration_kg (fjord 3 kg and haflinger 3 kg by default), with no hard-coded number.
+  Give listed diets their own batch size and every other diet the standard batch size from var.standard_batch_kg (low_salt 3 kg and gluten_free 3 kg by default), with no hard-coded number.
 xp: 165
 difficulty: intermediate
 expected_time: 7m

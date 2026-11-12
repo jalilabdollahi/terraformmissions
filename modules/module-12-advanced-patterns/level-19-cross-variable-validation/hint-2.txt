@@ -1,1 +1,1 @@
-Since Terraform 1.9 a variable's `validation` block may refer to other input variables, not only to its own value. So `guests` can be validated against `tables` and `seats_per_table`.
+Since Terraform 1.9 a variable's `validation` block may refer to other input variables, not only to its own value. So `students` can be validated against `benches` and `stools_per_bench`.

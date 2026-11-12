@@ -1,13 +1,13 @@
-# Splashdown Cove day wristbands.
-# Both resources were renamed in a cleanup commit (wave_pass -> day_pass,
-# entrance_sign -> turnstile_sign). The wristbands already printed carry the old code.
+# Splashdown Treetop Adventure Park climbing passes.
+# Both resources were renamed in a cleanup commit (zip_pass -> climb_pass,
+# gate_sign -> harness_sign). The harness tags already printed carry the old code.
 
-resource "random_id" "day_pass" {
+resource "random_id" "climb_pass" {
   byte_length = 4
-  prefix      = "SC-"
+  prefix      = "ST-"
 }
 
-resource "local_file" "turnstile_sign" {
-  filename = "${path.module}/signs/turnstile.txt"
-  content  = "Scan code ${random_id.day_pass.hex} at the gate\n"
+resource "local_file" "harness_sign" {
+  filename = "${path.module}/signs/harness.txt"
+  content  = "Scan code ${random_id.climb_pass.hex} at the briefing hut\n"
 }

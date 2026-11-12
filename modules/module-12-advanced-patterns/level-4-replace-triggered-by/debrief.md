@@ -10,7 +10,7 @@ Each entry has to be a reference to a managed resource, or to an attribute of on
 data source. A reference to a resource triggers on any change of that resource, an attribute
 reference only triggers when that attribute's value changes. That is why choosing the correct
 target matters: pointing at the wrong resource is silent. The configuration is valid, the plan
-is clean, and the cabinet simply never gets rebuilt.
+is clean, and the controller simply never gets rebuilt.
 
 `terraform_data` is useful as the "trigger source". Its `input` and `output` attributes give you a
 small, always-available resource whose changes you can watch, which is the modern replacement for

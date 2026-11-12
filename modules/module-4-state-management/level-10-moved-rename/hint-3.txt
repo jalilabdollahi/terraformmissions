@@ -1,1 +1,1 @@
-Add `moved { from = random_id.wave_pass  to = random_id.day_pass }` and the same for `local_file.entrance_sign` to `local_file.turnstile_sign`. Run `terraform plan` (it should list the two moves), then `terraform apply`.
+Add `moved { from = random_id.zip_pass  to = random_id.climb_pass }` and the same for `local_file.gate_sign` to `local_file.harness_sign`. Run `terraform plan` (it should list the two moves), then `terraform apply`.

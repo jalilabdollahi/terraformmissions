@@ -6,7 +6,7 @@ tm_assert_config_has 'format[[:space:]]*\(' "the card must be built with format(
 tm_apply
 tm_assert_output tag_label "TAG-00007"
 tm_assert_output card 'TAG-00007 | "Ines \"Flash\" Okafor" | 021.1 km | pace 4:51 min/km'
-tm_assert_file_equals cards/vet-card.txt 'TAG-00007 | "Ines \"Flash\" Okafor" | 021.1 km | pace 4:51 min/km
+tm_assert_file_equals cards/route-card.txt 'TAG-00007 | "Ines \"Flash\" Okafor" | 021.1 km | pace 4:51 min/km
 '
 
 # The card must be computed from the rider, not typed in.

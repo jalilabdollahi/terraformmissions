@@ -1,13 +1,13 @@
-name: Seats For Every Listener
+name: Stools For Every Student
 description: >-
-  The Open Mic Inkwell poetry slam must never plan more guests than seats, and a session must end
+  The Cocktail Masterclass Bar must never plan more students than stools, and a class must end
   after it starts. The seating rule only exists as a late precondition inside a resource, and the
   hours are not checked at all, so nonsense combinations get a long way into the plan.
 objective: >-
   Enforce both rules where the inputs are declared: with variable validation blocks that compare
   variables with each other. terraform plan must reject impossible combinations with 'Invalid value
   for variable', accept a full house and any other consistent values, and the default plan must still
-  produce slam/plan.txt.
+  produce class/plan.txt.
 xp: 275
 difficulty: advanced
 expected_time: 14m

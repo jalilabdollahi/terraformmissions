@@ -1,6 +1,6 @@
 # Debrief — square brackets demand, lookup() offers
 
-A map index like `var.rations_kg[horse]` is a demand: the key must exist or Terraform stops. That is
+A map index like `var.batch_kg[diet]` is a demand: the key must exist or Terraform stops. That is
 correct when a missing key means the data is wrong, and wrong when a missing key simply means "use
 the usual value".
 
@@ -15,7 +15,7 @@ Two details are easy to miss. First, `lookup()` without a third argument still e
 key, so the default is not optional for this use. Second, the default has to be convertible to the
 map's value type; a string default with a map of numbers will make the whole result a map of strings.
 
-Keeping the fallback in a variable (`standard_ration_kg`) rather than a literal makes the rule visible
+Keeping the fallback in a variable (`standard_batch_kg`) rather than a literal makes the rule visible
 and changeable in one place, and lets a test supply a different value to prove the fallback really is
 being used.
 

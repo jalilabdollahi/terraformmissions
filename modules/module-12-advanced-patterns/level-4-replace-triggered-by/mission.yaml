@@ -1,12 +1,12 @@
 name: Reflash On Release
 description: >-
-  Cabinet PB-114 at the Bumper & Flip arcade just got firmware 3.2. The operations team wanted the
-  cabinet record rebuilt on every firmware release, yet the plan only shows a small in-place update
-  for the firmware pack and leaves the cabinet alone.
+  Controller GT-114 at the Bumper & Flip Ghost Train just got firmware 3.2. The operations team wanted the
+  controller record rebuilt on every firmware release, yet the plan only shows a small in-place update
+  for the firmware pack and leaves the controller alone.
 objective: >-
-  Make a firmware change replace terraform_data.cabinet (new ID) while terraform_data.calibration and
+  Make a firmware change replace terraform_data.controller (new ID) while terraform_data.calibration and
   terraform_data.firmware_pack keep their IDs. Apply, and finish with a clean plan and an up-to-date
-  service/pb-114.txt.
+  service/gt-114.txt.
 xp: 275
 difficulty: advanced
 expected_time: 15m

@@ -1,6 +1,6 @@
 # Common mistakes
 
-- **Downgrading the root to `~> 1.4`.** Init may succeed against an older provider, but the ship standardises on the 2.x
+- **Downgrading the root to `~> 1.4`.** Init may succeed against an older provider, but the retreat standardises on the 2.x
   provider and the validator requires it.
 - **Deleting the module's `required_providers`.** Terraform then infers the provider but you lose the documented source
   address and range; reusable modules should declare what they need.

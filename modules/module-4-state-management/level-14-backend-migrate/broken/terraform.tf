@@ -2,7 +2,7 @@ terraform {
   required_version = ">= 1.10"
 
   backend "local" {
-    path = "vault/buoys-prod.tfstate"
+    path = "vault/kiosks-prod.tfstate"
   }
 
   required_providers {

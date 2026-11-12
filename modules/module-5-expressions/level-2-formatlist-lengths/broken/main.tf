@@ -1,9 +1,9 @@
-# Ashdown Racecourse gate office — one printed price line per enclosure tier.
+# Ashdown Steam Fair Showground gate office — one printed price line per ticket type.
 # Every line carries the same currency code, which comes from a single variable.
 
 variable "tiers" {
   type    = list(string)
-  default = ["Members", "Grandstand", "Silver Ring"]
+  default = ["Weekend Pass", "Day Ticket", "Evening Entry"]
 }
 
 variable "prices" {

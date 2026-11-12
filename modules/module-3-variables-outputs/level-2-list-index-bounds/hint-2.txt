@@ -1,1 +1,1 @@
-Lists count from zero. A four-element list has indexes 0 to 3, so `var.departures[4]` points one past the end.
+Lists count from zero. A four-element list has indexes 0 to 3, so `var.entry_times[4]` points one past the end.

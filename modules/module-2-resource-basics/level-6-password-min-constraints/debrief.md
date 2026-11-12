@@ -11,7 +11,7 @@ length, and the leftover positions are your entropy. A 12 character password wit
 has little randomness left in the composition, so when you can, raise `length` rather than lowering
 every minimum. Second, `random_password` differs from `random_string` only in one way that matters:
 its result is marked sensitive, so it is hidden in plan output. It is still written in clear text to
-the state file, and anything derived from it (here the voucher file) must stay sensitive as well,
+the state file, and anything derived from it (here the day-pass voucher file) must stay sensitive as well,
 which is why the voucher uses `local_sensitive_file`.
 
 If a downstream system rejects generated passwords, check the vendor's rules once and write them

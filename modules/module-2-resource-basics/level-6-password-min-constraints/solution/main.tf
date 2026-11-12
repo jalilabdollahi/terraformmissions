@@ -1,8 +1,8 @@
-# Visitor Wi-Fi vouchers for the Cobalt Yard coworking reception.
-# Policy from the router vendor: 12 characters, with some of every class so
-# the captive portal accepts it.
+# Audio-guide day passes for the Cobalt Yard Castle Ruins Visitor Centre.
+# Policy from the app vendor: 12 characters, with some of every class so
+# the guide app accepts it.
 
-resource "random_password" "visitor_wifi" {
+resource "random_password" "audio_guide" {
   length      = 12
   min_upper   = 3
   min_lower   = 3
@@ -11,11 +11,11 @@ resource "random_password" "visitor_wifi" {
 }
 
 resource "local_sensitive_file" "voucher" {
-  filename = "${path.module}/reception/wifi-voucher.txt"
-  content  = "Cobalt Yard visitor Wi-Fi\nPassword: ${random_password.visitor_wifi.result}\n"
+  filename = "${path.module}/ticket-desk/daypass-voucher.txt"
+  content  = "Cobalt Yard castle ruins audio guide\nPassword: ${random_password.audio_guide.result}\n"
 }
 
-output "visitor_wifi_password" {
-  value     = random_password.visitor_wifi.result
+output "audio_guide_password" {
+  value     = random_password.audio_guide.result
   sensitive = true
 }

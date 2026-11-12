@@ -1,4 +1,4 @@
-# Walkthrough — Ridgeway Vet Cards
+# Walkthrough — Ridgeway Route Cards
 
 1. Run `terraform plan`. The error is:
    `unsupported value for "%d" at 2: an integer is required.` Argument 2 of the `format()` call is the
@@ -13,4 +13,4 @@
    > format("%q", "Ines \"Flash\"")   # "\"Ines \\\"Flash\\\"\""
    ```
 3. Fix the three verbs: `%05d` for the tag, `%q` for the name, `%05.1f` for the distance.
-4. `terraform apply`, read `cards/vet-card.txt`, then run `check`.
+4. `terraform apply`, read `cards/route-card.txt`, then run `check`.

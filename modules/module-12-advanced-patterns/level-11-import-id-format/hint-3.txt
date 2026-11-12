@@ -1,1 +1,1 @@
-Use `id = "212,100,999"` for the tag, `id = "2025-04-12T06:30:00Z"` for the release and `id = "Yd4Pxg"` for the nest code. Keep `triggers = {}` on time_static so it does not force a replacement.
+Use `id = "212,100,999"` for the bottle, `id = "2025-04-12T06:30:00Z"` for the launch and `id = "Yd4Pxg"` for the cork code. Keep `triggers = {}` on time_static so it does not force a replacement.
