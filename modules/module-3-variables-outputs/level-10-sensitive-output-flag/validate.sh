@@ -15,7 +15,8 @@ sens=$(terraform output -json 2>/dev/null | jq -r '.portal_login_url.sensitive /
 url=$(terraform output -json portal_login_url | jq -r '.')
 [[ "$url" == "https://desk:${SECRET}@portal.harbor-inn.example/admin" ]] \
   || tm_fail "portal_login_url must still contain the real URL, found: '$url'"
-terraform output 2>/dev/null | grep -qF "$SECRET" \
+plain=$(terraform output 2>/dev/null)
+grep -qF -- "$SECRET" <<<"$plain" \
   && tm_fail "plain 'terraform output' prints the secret — it should be redacted"
 tm_assert_output inn "Harbor Inn"
 tm_pass "portal_login_url is marked sensitive: redacted in the CLI, still usable through -json"

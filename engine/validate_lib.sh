@@ -165,8 +165,10 @@ tm_assert_output_jq() {
 # ── State ─────────────────────────────────────────────────────────────────────
 
 tm_state_list() { terraform state list 2>/dev/null; }
-tm_state_has() { tm_state_list | grep -qxF "$1"; }
-tm_state_count() { tm_state_list | grep -c . ; }
+# Capture first: piping terraform into `grep -q` under pipefail can fail spuriously
+# (grep exits early, terraform gets SIGPIPE).
+tm_state_has() { local l; l=$(tm_state_list); grep -qxF -- "$1" <<<"$l"; }
+tm_state_count() { local l; l=$(tm_state_list); grep -c . <<<"$l"; }
 
 tm_assert_in_state()     { tm_state_has "$1" || tm_fail "${2:-'$1' is not in state}"; }
 tm_assert_not_in_state() { tm_state_has "$1" && tm_fail "${2:-'$1' should not be in state}"; return 0; }
