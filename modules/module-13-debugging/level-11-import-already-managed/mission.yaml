@@ -1,9 +1,9 @@
-name: Jukebox Service Duplicate
+name: Telephone Box Service Duplicate
 description: >-
-  Rewind Jukebox Restorations registers each jukebox's service code in Terraform. A technician
-  wanted to "re-adopt" the jukebox and imported its code under a second, temporary resource name,
+  Rewind Telephone Box Restorations registers each telephone box's service code in Terraform. A technician
+  wanted to "re-adopt" the telephone box and imported its code under a second, temporary resource name,
   then deleted the temporary block from the code. Now plan wants to destroy something that is not
-  in the configuration - and that something is the same jukebox the real resource manages.
+  in the configuration - and that something is the same telephone box the real resource manages.
 objective: >-
   Find out which state entry duplicates random_integer.service_code and remove only the duplicate
   from state, without destroying anything. The service code must stay unchanged, the code must keep

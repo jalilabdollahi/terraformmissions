@@ -8,23 +8,23 @@ if grep -rqiE 'parallelism' --include='*' --exclude-dir=.terraform --exclude-dir
 fi
 tm_assert_config_lacks '(sleep|until|while)[[:space:]]' \
   "the slip command must not wait or poll — express the ordering as a dependency"
-tm_assert_config_has 'resource "terraform_data" "stamping_slip"' "the stamping_slip resource has to stay"
-tm_assert_config_has 'cat[[:space:]].*alloy-ledger|cat[[:space:]].*alloy_ledger' \
-  "the slip must still be copied from the alloy ledger"
+tm_assert_config_has 'resource "terraform_data" "label_slip"' "the label_slip resource has to stay"
+tm_assert_config_has 'cat[[:space:]].*syrup-ledger|cat[[:space:]].*syrup_ledger' \
+  "the slip must still be copied from the syrup ledger"
 
 tm_init
 tm_validate
 
 # 2. The graph must contain a real edge slip -> ledger.
 graph=$(terraform graph 2>/dev/null)
-grep -Eq '"terraform_data.stamping_slip" -> "local_file.alloy_ledger"' <<<"$graph" \
-  || tm_fail "terraform graph shows no dependency edge from terraform_data.stamping_slip to local_file.alloy_ledger"
+grep -Eq '"terraform_data.label_slip" -> "local_file.syrup_ledger"' <<<"$graph" \
+  || tm_fail "terraform graph shows no dependency edge from terraform_data.label_slip to local_file.syrup_ledger"
 
 # 3. Run the full apply several times from scratch: default parallelism, then the deploy script.
 for round in 1 2 3; do
   terraform destroy -auto-approve -input=false -no-color >"$TM_LAST_OUT" 2>&1 \
     || { tm_show_last; tm_fail "round $round: terraform destroy failed"; }
-  rm -f works/stamping-slip.txt works/alloy-ledger.txt
+  rm -f workshop/label-slip.txt workshop/syrup-ledger.txt
   if [[ $round -lt 3 ]]; then
     if ! terraform apply -auto-approve -input=false -no-color >"$TM_LAST_OUT" 2>&1; then
       tm_show_last
@@ -36,9 +36,9 @@ for round in 1 2 3; do
       tm_fail "round $round: scripts/deploy.sh failed"
     fi
   fi
-  [[ -f works/stamping-slip.txt ]] || tm_fail "round $round: works/stamping-slip.txt was not produced"
-  grep -q '74% iron, 18% chromium, 8% nickel' works/stamping-slip.txt \
-    || tm_fail "round $round: the stamping slip does not contain the ledger text"
+  [[ -f workshop/label-slip.txt ]] || tm_fail "round $round: workshop/label-slip.txt was not produced"
+  grep -q '70% sugar, 20% glucose, 10% water' workshop/label-slip.txt \
+    || tm_fail "round $round: the label slip does not contain the ledger text"
 done
 
 tm_assert_no_changes

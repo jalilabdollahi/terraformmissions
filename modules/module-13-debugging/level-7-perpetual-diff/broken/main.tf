@@ -1,22 +1,22 @@
-# Lumen Press encyclopedia - published volume index.
+# Lumen Cartophilic Society trading-card album - published album index.
 
-data "external" "archive" {
-  program = ["python3", "${path.module}/scripts/list_entries.py"]
+data "external" "cabinet" {
+  program = ["python3", "${path.module}/scripts/list_cards.py"]
 }
 
 locals {
-  entries = split(",", data.external.archive.result.names)
+  cards = split(",", data.external.cabinet.result.names)
 }
 
-resource "local_file" "volume_index" {
-  filename = "${path.module}/volume/index.md"
+resource "local_file" "album_index" {
+  filename = "${path.module}/album/index.md"
   content  = <<-EOT
-    # Lumen Press volume index
+    # Lumen Cartophilic Society album index
     Generated: ${timestamp()}
-    ${join("\n", [for s in local.entries : "- ${s}"])}
+    ${join("\n", [for s in local.cards : "- ${s}"])}
   EOT
 }
 
-output "entry_count" {
-  value = length(local.entries)
+output "card_count" {
+  value = length(local.cards)
 }

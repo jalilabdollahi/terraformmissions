@@ -1,1 +1,1 @@
-Run `terraform plan` twice in a row and compare the two diffs of `local_file.volume_index`. Do the same lines change, or different ones each time?
+Run `terraform plan` twice in a row and compare the two diffs of `local_file.album_index`. Do the same lines change, or different ones each time?

@@ -1,1 +1,1 @@
-Two inputs differ between plans: `timestamp()` is evaluated on every plan, and the archive script prints the entry names in a different order on every run (it iterates over a Python set).
+Two inputs differ between plans: `timestamp()` is evaluated on every plan, and the cabinet script prints the card names in a different order on every run (it iterates over a Python set).

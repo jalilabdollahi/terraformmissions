@@ -1,12 +1,12 @@
-name: Silent Cleaning Failure
+name: Silent Binding Failure
 description: >-
-  Pressed & Proper dry-cleaning plant starts each cleaning run from a local-exec provisioner. The pipeline
-  has been green all week, yet the plant log for batch 114 does not exist and the customers' garments
-  are still uncleaned. Someone added a setting to keep the pipeline green when the script complains.
+  Pressed & Proper Bookbindery starts each binding run from a local-exec provisioner. The pipeline
+  has been green all week, yet the bindery log for batch 114 does not exist and the customers' books
+  are still unbound. Someone added a setting to keep the pipeline green when the script complains.
 objective: >-
   Remove the setting that hides the failure, repair the real cause so the script succeeds, and make
   Terraform run the provisioner again on the existing resource (it is already in state and counted
-  as successfully created). plant/batch-114.log must contain batch=batch-114 wash=20C status=cleaned,
+  as successfully created). bindery/batch-114.log must contain batch=batch-114 press=20C status=bound,
   written by the provisioner.
 xp: 300
 difficulty: advanced

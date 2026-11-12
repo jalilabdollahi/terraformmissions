@@ -6,8 +6,8 @@ are *really* ordered but the configuration never says so, the order you observe 
 scheduling, of how fast a provider is, of how loaded the CI machine is. Slow laptops and
 `-parallelism=1` make the accident happy; a fast runner makes it fail.
 
-Strings are opaque. A shell command that mentions `works/alloy-ledger.txt` does not create an edge,
-because Terraform does not parse your script. A reference such as `local_file.alloy_ledger.filename`
+Strings are opaque. A shell command that mentions `workshop/syrup-ledger.txt` does not create an edge,
+because Terraform does not parse your script. A reference such as `local_file.syrup_ledger.filename`
 does. When the link cannot be expressed as a value (a provisioner that reads a side effect, an API
 that needs another resource to exist), use `depends_on`.
 

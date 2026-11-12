@@ -1,12 +1,12 @@
-name: Volume Index Churn
+name: Album Index Churn
 description: >-
-  Lumen Press publishes an encyclopedia volume index file from Terraform. Every plan - even straight
+  The Lumen Cartophilic Society publishes its trading-card album index file from Terraform. Every plan - even straight
   after an apply, with nobody touching anything - wants to rewrite it, and the CI job that expects
   "No changes" has been red for a week.
 objective: >-
   Find out why plans never settle and fix every source of the churn: after one apply, repeated plans
-  must show no changes. volume/index.md must keep its "Generated:" line as an RFC 3339 timestamp stamped
-  once at creation, and list the entries alphabetically. Do not paper over it with ignore_changes.
+  must show no changes. album/index.md must keep its "Generated:" line as an RFC 3339 timestamp stamped
+  once at creation, and list the cards alphabetically. Do not paper over it with ignore_changes.
 xp: 275
 difficulty: advanced
 expected_time: 15m

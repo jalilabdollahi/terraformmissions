@@ -1,1 +1,1 @@
-Run `terraform plan -out=plan.tfplan` (it overwrites the stale file), check that it only adds transfers, then `terraform apply plan.tfplan`. Do not use plain `terraform apply`; the apply must come from the plan file.
+Run `terraform plan -out=plan.tfplan` (it overwrites the stale file), check that it only adds orders, then `terraform apply plan.tfplan`. Do not use plain `terraform apply`; the apply must come from the plan file.

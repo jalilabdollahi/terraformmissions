@@ -13,7 +13,7 @@ terraform providers lock -platform=linux_amd64 -platform=darwin_arm64 -platform=
 
 By default the command downloads each package from the registry and records both the `h1:` hash and
 the `zh:` hashes from the registry's signed checksum list. It never removes existing entries. In an
-air-gapped place such as base camp you can point it at a local mirror with `-fs-mirror` (or a network
+air-gapped place such as a pit garage you can point it at a local mirror with `-fs-mirror` (or a network
 mirror with `-net-mirror`) and it hashes the packages found there.
 
 Habits worth having:

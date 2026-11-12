@@ -1,4 +1,4 @@
-# Walkthrough - Jukebox Service Duplicate
+# Walkthrough - Telephone Box Service Duplicate
 
 1. `terraform plan` ends with
    `random_integer.service_dup will be destroyed (because random_integer.service_dup is not in configuration)`.
@@ -9,7 +9,7 @@
    terraform state show random_integer.service_code
    terraform state show random_integer.service_dup
    ```
-   Both show the same `id` and `result`: one real jukebox, two addresses.
+   Both show the same `id` and `result`: one real telephone box, two addresses.
 3. Terraform allows importing one object to several addresses; it never checks other addresses for the same ID.
    With real infrastructure, destroying "the extra one" would delete the object the real resource manages.
 4. Remove only the surplus address from state:

@@ -8,5 +8,5 @@
   the command fails; that platform is already in the file.
 - **Copying hashes from another project's lock file.** Hashes are per provider version and package;
   pasting one you did not obtain from the package itself defeats the control.
-- **Using `providers lock` without `-fs-mirror` at base camp.** It tries the registry, and there is no
+- **Using `providers lock` without `-fs-mirror` in the pit garage.** It tries the registry, and there is no
   network.

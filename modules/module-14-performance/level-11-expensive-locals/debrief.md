@@ -1,8 +1,8 @@
 # Debrief — compute once, name it, reuse it
 
 Terraform expressions are evaluated where they are written. If twelve resources contain
-`jsondecode(file("pieces.json"))`, the file is read and parsed twelve times per plan, and again for
-every refresh and apply. For a catalogue of 40 pieces nobody notices; for 40,000 pieces the repeated
+`jsondecode(file("shards.json"))`, the file is read and parsed twelve times per plan, and again for
+every refresh and apply. For a catalogue of 40 shards nobody notices; for 40,000 shards the repeated
 parse, the repeated list comprehension and a repeated `sha256(jsonencode(...))` dominate the run.
 
 A `locals` block is the right home for such values: it is evaluated once per run and referenced by

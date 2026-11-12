@@ -6,5 +6,5 @@
   slow every apply down; the ordering should be a dependency instead.
 - **Re-running apply until it passes.** The second run succeeds because the ledger now exists in
   state, which hides the bug from the first run on a fresh environment.
-- **Putting `depends_on` on the wrong side.** `depends_on = [terraform_data.stamping_slip]` inside the
+- **Putting `depends_on` on the wrong side.** `depends_on = [terraform_data.label_slip]` inside the
   ledger creates a cycle-free but backwards order: the slip then still runs first.

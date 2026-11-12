@@ -1,11 +1,11 @@
-name: Register Approval Plan
+name: Tree Order Approval Plan
 description: >-
-  Ludlow Land Registry Office's change process says the clerk who applies the register must apply exactly
-  the plan the registrar signed off, not whatever a fresh plan looks like at apply time. The
-  registrar approved plan.tfplan this morning, but before the clerk could use it another clerk
-  applied one of the new transfers by hand. Now "terraform apply plan.tfplan" refuses to run.
+  Ludlow Heritage Tree Preservation Office's change process says the officer who applies the register must apply exactly
+  the plan the head arborist signed off, not whatever a fresh plan looks like at apply time. The
+  head arborist approved plan.tfplan this morning, but before the officer could use it another officer
+  applied one of the new orders by hand. Now "terraform apply plan.tfplan" refuses to run.
 objective: >-
-  Get all five transfers (register/t-3011 ... t-3015) onto disk by applying a freshly saved plan file:
+  Get all five orders (register/t-3011 ... t-3015) onto disk by applying a freshly saved plan file:
   plan.tfplan must be a new, valid saved plan that still contained the creations you applied,
   it must differ from the stale one the level started with, and the plan must be clean afterwards.
 xp: 349
