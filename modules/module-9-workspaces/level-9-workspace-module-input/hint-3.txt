@@ -1,1 +1,1 @@
-Add `default = "development"` to the `env_map` in the `locals` block.
+Replace the chain with a lookup that has a default: define `{ prod = 4, staging = 2 }` in a local and use `lookup(local.lanes, terraform.workspace, 1)`. Or change the final branch to 1.

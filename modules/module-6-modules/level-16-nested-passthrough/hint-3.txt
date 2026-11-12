@@ -1,0 +1,1 @@
+Add `season = var.season` to the `module "canner"` block in modules/evaporator/main.tf.

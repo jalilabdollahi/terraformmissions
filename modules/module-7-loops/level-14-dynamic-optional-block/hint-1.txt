@@ -1,0 +1,1 @@
+Run `terraform plan` with the default variables and read which argument of which block is reported as missing.

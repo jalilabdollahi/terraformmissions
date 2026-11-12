@@ -1,0 +1,1 @@
+Spread the list into arguments with three dots after it: max(local.all_depths...). Do the same for min() and for the per-site max().

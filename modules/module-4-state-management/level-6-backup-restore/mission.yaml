@@ -1,0 +1,19 @@
+name: Lost Surplus Inventory
+description: >-
+  A tired intern at Redline Army-Surplus Store applied a half-edited branch that had three of the
+  inventory-list resources deleted. Terraform dutifully dropped them from the state, the intern has
+  since restored the code, and the plan now wants to create new manager names, aisle codes and
+  lot numbers, which would invalidate every printed shelf tag.
+objective: >-
+  Bring back the lost state entries so that random_pet.store_manager,
+  random_string.aisle_code and random_integer.lot_number are tracked again with their
+  ORIGINAL values, and the plan is clean. Do not run terraform apply to "fix" it.
+xp: 210
+difficulty: intermediate
+expected_time: 12m
+concepts:
+  - terraform.tfstate.backup
+  - state recovery
+  - state push
+module: module-4-state-management
+level: level-6-backup-restore

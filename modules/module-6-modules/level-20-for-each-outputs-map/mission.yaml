@@ -1,0 +1,19 @@
+name: Yoga Room Prep Times
+description: >-
+  The Lotus Lane yoga studio books a room per class style with one module instance each. The
+  coordinator's summary outputs are meant to map each class style to its minutes and to total them, but
+  the splat expressions she used choke on the module instances.
+objective: >-
+  Make prep_minutes a map from class style to prep minutes (5 per student) and
+  total_minutes their sum. With the defaults (vinyasa 12, hatha 9, yin 6, ashtanga 7 students) the map is
+  vinyasa 60, hatha 45, yin 30, ashtanga 35 and the total 170; with -var 'classes={ashtanga=3,hatha=4}' the
+  total must be 35.
+xp: 255
+difficulty: intermediate
+expected_time: 12m
+concepts:
+  - for_each module outputs
+  - for expressions
+  - collecting outputs into maps
+module: module-6-modules
+level: level-20-for-each-outputs-map

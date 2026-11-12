@@ -1,0 +1,1 @@
+Swap them: filename and `Name:` use `each.key`; `Role:` uses `each.value`. Two operators share the role attendant, which is why using a role in the filename collides.

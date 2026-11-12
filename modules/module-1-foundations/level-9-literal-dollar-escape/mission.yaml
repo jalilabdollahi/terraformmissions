@@ -1,0 +1,17 @@
+name: Dome Three Watering
+description: >-
+  Terraform generates the watering shell script for the Dome 3 greenhouse. The script is supposed to
+  use shell variables such as HOME and PUMP_SECONDS, but Terraform stops with errors about references
+  it does not know.
+objective: >-
+  Make dome3/water.sh contain the bay name filled in by Terraform and the shell expressions
+  ${HOME} and ${PUMP_SECONDS:-30} written literally, so the script is valid bash.
+xp: 120
+difficulty: beginner
+expected_time: 7m
+concepts:
+  - escape sequences
+  - template literals
+  - heredoc
+module: module-1-foundations
+level: level-9-literal-dollar-escape

@@ -1,0 +1,1 @@
+Normal arguments are saved to state, so an ephemeral value is refused there. Some resources offer a write-only twin of an argument (suffix `_wo`) that is sent to the provider but never stored.

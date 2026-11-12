@@ -1,0 +1,4 @@
+field,value,note
+bottle_number,212,"scratched into the glass base; the generator range was 100 to 999"
+launch_time,2025-04-12T06:30:00Z,"first bottle launched from the pier, UTC"
+cork_code,Yd4Pxg,"burned into the cork stopper; it is the URL-safe base64 form"

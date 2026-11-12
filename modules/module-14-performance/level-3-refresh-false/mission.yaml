@@ -1,17 +1,19 @@
-concepts:
-- -refresh=false flag
-- stale state
-- lifecycle ignore_changes
-description: A resource was configured with `lifecycle { ignore_changes = all }` which
-  masks a real configuration issue. The broken config uses ignore_changes incorrectly
-  — it hides ALL changes instead of only the specific attribute that should be ignored.
-  Fix the lifecycle block to only ignore the `keepers` attribute, then verify plan
-  with -refresh=false succeeds.
+name: Chiller Audit Shortcut
+description: >-
+  Greenfield Market keeps one setpoint file per chilled-aisle unit. Plans took too long, so
+  somebody gave ops/plan.sh a -refresh=false flag, and both its "quick" mode (used while editing
+  code) and its "audit" mode (used by the nightly drift check) now share it. Last night a
+  technician deleted the file for chiller yoghurt-b and the audit reported all clear.
+objective: >-
+  Keep "ops/plan.sh quick" fast (it must still skip the refresh and report no changes while the
+  drift is unfixed), but make "ops/plan.sh audit" refresh real infrastructure so that it exits 2
+  and names yoghurt-b. Any other mode must still exit non-zero.
+xp: 314
 difficulty: expert
-expected_time: 25m
-level: level-3-refresh-false
+expected_time: 12m
+concepts:
+  - "-refresh=false"
+  - drift detection
+  - plan modes
 module: module-14-performance
-name: The Stale State Problem
-objective: Fix lifecycle ignore_changes to only ignore the `keepers` attribute, then
-  verify plan with -refresh=false succeeds.
-xp: 325
+level: level-3-refresh-false

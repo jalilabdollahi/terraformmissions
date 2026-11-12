@@ -1,0 +1,1 @@
+Open `modules/reel_stock/main.tf` and find the `provider = ...` line. Then look at how the root calls the module and what a child module is allowed to see.

@@ -1,0 +1,1 @@
+Compare the variable names in main.tf with the exact names after TF_VAR_ in the mission description.

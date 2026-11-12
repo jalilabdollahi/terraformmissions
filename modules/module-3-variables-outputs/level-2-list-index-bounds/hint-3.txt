@@ -1,0 +1,1 @@
+Use the list length to find the last element: `var.entry_times[length(var.entry_times) - 1]` (or `element(var.entry_times, -1)`). Hard-coding 3 would break when the timetable changes.

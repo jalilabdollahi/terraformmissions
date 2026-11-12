@@ -1,0 +1,1 @@
+The module computes the token from an ephemeral resource, so any output that carries it must be marked as returning an ephemeral value. A plain output would have to be stored in state.

@@ -1,0 +1,1 @@
+Use `plugin_cache_dir = "$HOME/.terraform.d/plugin-cache"` and `disable_checkpoint = true` in ci/terraform.rc, and make agent-setup.sh run `mkdir -p "$HOME/.terraform.d/plugin-cache"`, the very same path.

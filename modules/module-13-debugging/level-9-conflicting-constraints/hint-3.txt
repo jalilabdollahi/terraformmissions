@@ -1,0 +1,1 @@
+Loosen the galley module's constraint so it accepts 3.x as well, for example `>= 2.3, < 4.0`; its single `random_integer` works on both. Do not lower the root constraint. Then run `terraform init` again.

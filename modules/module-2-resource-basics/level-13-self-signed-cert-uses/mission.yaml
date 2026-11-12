@@ -1,0 +1,18 @@
+name: Arena Scoreboard Certificate
+description: >-
+  Nightfall Arena runs a LAN-party scoreboard over HTTPS with its own self-signed certificate.
+  The certificate resource will not plan: it is missing something the browsers insist on, and
+  the subject was written in the wrong shape.
+objective: >-
+  Produce pki/scoreboard.pem: a self-signed certificate for scoreboard.arena.lan, organisation
+  Nightfall Arena, usable for server_auth (plus digital_signature and key_encipherment), valid
+  for 72 hours.
+xp: 135
+difficulty: beginner
+expected_time: 8m
+concepts:
+  - tls_self_signed_cert
+  - allowed_uses
+  - subject block
+module: module-2-resource-basics
+level: level-13-self-signed-cert-uses

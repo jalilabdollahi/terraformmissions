@@ -1,0 +1,1 @@
+Run `terraform test -verbose` and look at which run fails. Its assertion talks about the file on disk.

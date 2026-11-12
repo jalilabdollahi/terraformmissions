@@ -1,0 +1,1 @@
+Use a `for` expression: `{ for style, m in module.classroom : style => m.minutes }` for the map, and `sum([for m in module.classroom : m.minutes])` (or `sum(values(...))`) for the total.

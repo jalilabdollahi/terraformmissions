@@ -1,0 +1,18 @@
+name: Town Crier Call Roster
+description: >-
+  Master Aldous, the town crier, keeps his call roster in a module called crier. The town hall's root
+  configuration already reports the next call and the roster file, but the module never hands those
+  values out, so every plan ends in an unsupported-attribute error.
+objective: >-
+  Let the module expose what the root configuration asks for, without rewriting the root
+  references. With the default hour 14 the next_call output must be 15:00 and roster_file must be
+  ./calls/master-aldous.txt; with -var hour=23 the next call must be 00:00.
+xp: 190
+difficulty: intermediate
+expected_time: 10m
+concepts:
+  - output blocks in modules
+  - module interface
+  - encapsulation
+module: module-6-modules
+level: level-5-expose-output

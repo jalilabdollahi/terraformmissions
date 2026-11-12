@@ -1,0 +1,1 @@
+Read where the error points: it is a `file()` call evaluated during plan. Ask when `studio/notes.txt` comes into existence compared with when `file()` runs.

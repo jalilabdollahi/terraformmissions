@@ -1,0 +1,1 @@
+nonsensitive(var.alarm_code) strips the protection from the secret itself. nonsensitive() is only safe on a derived value that no longer reveals the secret.

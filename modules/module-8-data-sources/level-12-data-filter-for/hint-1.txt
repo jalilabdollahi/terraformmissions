@@ -1,0 +1,1 @@
+Run `terraform plan` and fix the first error, then plan again; there are two separate problems in the `ready_by_class` expression. Compare the attribute names with `library/stock.json`.

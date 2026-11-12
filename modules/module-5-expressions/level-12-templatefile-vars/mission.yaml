@@ -1,0 +1,14 @@
+name: Dunmore Telegram Form
+description: >-
+  The Dunmore Telegraph Office renders every outgoing telegram from telegram.tpl. After a tidy-up of the variable names, Terraform stops on the first placeholder and says the template's vars map does not contain a key.
+objective: >-
+  Render the telegram so the file reads STATION: DUNMORE, TO: Capt. Hale, Harbour Master, FROM: Office of the Postmaster, WORDS: 8, a --- line, then the body. It must be driven by the variables, with the template still a separate file.
+xp: 200
+difficulty: intermediate
+expected_time: 9m
+concepts:
+  - templatefile
+  - template variables
+  - vars map
+module: module-5-expressions
+level: level-12-templatefile-vars

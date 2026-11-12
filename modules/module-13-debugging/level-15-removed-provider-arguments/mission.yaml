@@ -1,0 +1,19 @@
+name: Spillway Gate Certificates
+description: >-
+  The Ironvale Dam Authority's spillway gate certificates were written years ago for the tls provider
+  3.x. The constraint now says "~> 4.0" and every plan fails with "Invalid Configuration for Read-Only
+  Attribute" on arguments that used to be required.
+objective: >-
+  Migrate the configuration to the tls 4.x schema without downgrading the provider: spillway/spillway-4.crt
+  and spillway/spillway-4.csr must be created for spillway-4.ironvale-dam.example (organization Ironvale Dam Authority),
+  the self-signed certificate must last 720 hours, and the plan must be clean afterwards.
+xp: 275
+difficulty: advanced
+expected_time: 15m
+concepts:
+- provider upgrade
+- removed arguments
+- read-only attributes
+- changelog reading
+module: module-13-debugging
+level: level-15-removed-provider-arguments

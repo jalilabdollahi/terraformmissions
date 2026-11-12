@@ -1,0 +1,1 @@
+The external data source only accepts a single flat JSON object where every value is a string. The script prints numbers, a list and a nested object. Fix the script, not the Terraform side.

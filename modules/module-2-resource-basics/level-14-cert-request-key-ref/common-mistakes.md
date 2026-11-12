@@ -1,0 +1,4 @@
+- Switching to `tls_private_key.sensor.private_key_openssh`. It is a different encoding the provider cannot decode as PEM here.
+- Hard-pasting a PEM into the config. The CSR would no longer match the managed key.
+- Removing the `private_key_pem` argument. It is required.
+- Generating the CSR with openssl by hand and dropping the resource. The mission wants Terraform to build it.

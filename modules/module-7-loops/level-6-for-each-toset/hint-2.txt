@@ -1,0 +1,1 @@
+`for_each` accepts a map or a *set* of strings, never a list. `var.dealers` is a `list(string)`, and it even contains briggs twice, which a set cannot hold.

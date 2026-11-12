@@ -1,0 +1,17 @@
+name: Tickets Without Keys
+description: >-
+  The Marrow Lane Literary Festival writes a ticket stub per session with for_each. The box-office app
+  wants an output that maps each event to its ticket file, but the output block errors as soon as
+  Terraform reads it.
+objective: >-
+  Make the ticket_files output a map from event slug to ticket path (three entries today), built
+  from the for_each resource. It must follow whatever sessions the variable holds.
+xp: 190
+difficulty: intermediate
+expected_time: 9m
+concepts:
+  - for_each
+  - for expression
+  - outputs
+module: module-7-loops
+level: level-8-for-each-output-map

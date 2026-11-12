@@ -1,0 +1,1 @@
+%d only accepts whole numbers, and 21.1 is not one. Also compare %5d with %05d, and ask which verb prints a string in quotes with escapes.

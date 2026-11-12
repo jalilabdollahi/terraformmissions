@@ -1,0 +1,1 @@
+Add `sensitive = true` to `output "portal_login_url"`. Do not remove the `sensitive` flag from the variable and do not use `nonsensitive()`.

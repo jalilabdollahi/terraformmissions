@@ -1,0 +1,1 @@
+Add `sensitive = true` to `output "door_code"` in main.tf and to `output "code"` in modules/room/main.tf. Don't reach for `nonsensitive()`: it would print the code in plain text.

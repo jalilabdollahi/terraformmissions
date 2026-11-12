@@ -1,0 +1,1 @@
+Read the plan summary: how many `will be imported` lines are there, and how many `will be created`? The map in `var.legacy_tickets` holds all four IDs.

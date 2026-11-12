@@ -1,1 +1,0 @@
-Change `<=` to `>=` so the condition passes only when the password has at least 8 characters.

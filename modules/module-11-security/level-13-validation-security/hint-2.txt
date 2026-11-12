@@ -1,1 +1,0 @@
-The condition `length(var.password) <= 8` means: pass if the password has 8 or fewer characters. This is the opposite of a minimum-length requirement.

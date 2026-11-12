@@ -1,1 +1,1 @@
-Change `count = -1` to `count = 1` to create exactly one instance.
+The external data source accepts only a flat map of strings. Make the probe send `readings` as a JSON *string* (`json.dumps(...)` inside the dict) and decode it in Terraform with `jsondecode(data.external.shaft_scan.result.readings)`. Answers: `crashed_resource=data.external.shaft_scan`, `offending_key=readings`.

@@ -1,0 +1,1 @@
+Run `terraform test -verbose` and read the second error of each failing run: "Missing expected failure" names the object Terraform was told to expect.

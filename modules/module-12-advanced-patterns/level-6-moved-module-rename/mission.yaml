@@ -1,0 +1,18 @@
+name: Shaft A Becomes North
+description: >-
+  The Kallmark salt mine inspects each shaft through a module call. The first call was renamed from
+  shaft_a to north_shaft, and the plan now wants to throw away the north shaft's inspection tag and
+  placard and issue new ones.
+objective: >-
+  Keep the new module call name north_shaft and the south shaft untouched. Use a single moved block to
+  move the whole module instance, so the north tag and placard keep their IDs, and finish with a clean
+  plan.
+xp: 260
+difficulty: advanced
+expected_time: 14m
+concepts:
+  - moved blocks
+  - module addresses
+  - renaming module calls
+module: module-12-advanced-patterns
+level: level-6-moved-module-rename

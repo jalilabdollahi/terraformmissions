@@ -1,0 +1,21 @@
+name: Shard Tray Index Costs
+description: >-
+  Brightbox Kaleidoscope Workshop builds kaleidoscopes from a catalogue of glass shards. Their Terraform plan,
+  which feeds six index files and two outputs from one catalogue, takes longer every time the
+  catalogue grows. A profiler trace shows the same JSON being read, parsed and hashed over and over:
+  jsondecode(file(...)) appears in twelve places and the checksum is recomputed three times.
+objective: >-
+  Compute the decoded catalogue and the checksum once, in locals, and have everything else
+  read them. The config may contain jsondecode(...) exactly once and sha256(...) exactly once,
+  must use a locals block, and every generated file and output must come out byte-identical, so
+  the plan stays clean.
+xp: 371
+difficulty: expert
+expected_time: 20m
+concepts:
+  - locals
+  - repeated expressions
+  - jsondecode
+  - plan performance
+module: module-14-performance
+level: level-11-expensive-locals

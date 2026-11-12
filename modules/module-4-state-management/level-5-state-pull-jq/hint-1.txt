@@ -1,0 +1,1 @@
+`terraform state pull` prints the entire state file as JSON to the screen. Pipe it into `jq` to explore: start with `terraform state pull | jq 'keys'`.

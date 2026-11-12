@@ -1,0 +1,1 @@
+Use interpreter = ["bash", "-c"] and working_dir = path.module (the project root). Then `mkdir -p dist` in the command creates dist/ relative to it.

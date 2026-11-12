@@ -1,0 +1,1 @@
+Pick the attributes you need: `each.value.volunteer`, `each.value.boxes` and `each.value.time`, e.g. `"Slot ${each.key}: ${each.value.volunteer} collects ${each.value.boxes} boxes at ${each.value.time}\n"`.

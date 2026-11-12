@@ -1,0 +1,1 @@
+Read modules/roster/CHANGELOG.txt before the plan. It lists everything that changed. Fix the errors it explains first (they are interface renames), then run plan and count what it wants to replace.

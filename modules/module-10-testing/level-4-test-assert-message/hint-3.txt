@@ -1,1 +1,0 @@
-Replace `error_message = ""` with a descriptive string like `"Instance count must be greater than zero."`

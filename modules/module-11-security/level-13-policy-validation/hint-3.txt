@@ -1,0 +1,1 @@
+For CIDRs use length(...) > 0 && alltrue([for c in ... : can(cidrhost(c, 0)) ? tonumber(split("/", c)[1]) >= 8 : false]); for TLS use contains(["1.2", "1.3"], var.min_tls_version).

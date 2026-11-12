@@ -1,0 +1,1 @@
+Compare the filename of the two local_file resources in main.tf. One of them is where the manager expects it.

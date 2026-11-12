@@ -1,1 +1,1 @@
-Change `null_resource.wrong_ref` to `null_resource.trigger`, which is the resource declared at the top of the file.
+Point the list at the firmware resource: `replace_triggered_by = [terraform_data.firmware_pack]` (or its `.output` attribute). Leave calibration out.

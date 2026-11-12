@@ -1,0 +1,1 @@
+Add `moved { from = module.shaft_a  to = module.north_shaft }` (on separate lines) to the root configuration, then run the plan again.

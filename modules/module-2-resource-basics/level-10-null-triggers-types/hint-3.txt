@@ -1,0 +1,1 @@
+Collapse the list into a string: `cues = join(",", local.running_order)` (or jsonencode(local.running_order)).

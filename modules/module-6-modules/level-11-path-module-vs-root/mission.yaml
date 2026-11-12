@@ -1,0 +1,18 @@
+name: Hollow Lane Audio Guide
+description: >-
+  The Hollow Lane ghost walk company generates audio-guide scripts from a template that ships inside the guide
+  module. Since the module was extracted, the scripts land in the wrong folder, and the template cannot
+  be found at all.
+objective: >-
+  Make module.guide read its template from its own directory and write the finished script into the root
+  workspace: audio/haunted-cellar.txt (not inside modules/guide). The audio_file output must be
+  ./audio/haunted-cellar.txt and the script must greet walkers of the stop named in the variable.
+xp: 200
+difficulty: intermediate
+expected_time: 10m
+concepts:
+  - path.module
+  - path.root
+  - templatefile
+module: module-6-modules
+level: level-11-path-module-vs-root

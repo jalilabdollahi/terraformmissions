@@ -1,0 +1,1 @@
+A `removed` block takes `from = <address>` and a nested `lifecycle { destroy = false }`. Without the lifecycle part Terraform will still destroy the object when it forgets it. The old resource block must be deleted.

@@ -1,0 +1,1 @@
+There are three wrong conditions: a comparison operator pointing the wrong way, a pairwise comparison between neighbouring checkpoints that points the wrong way, and a boolean output asserted as true when the scenario describes a runner who should miss the cutoff.

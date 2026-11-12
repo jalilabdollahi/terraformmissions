@@ -1,0 +1,1 @@
+random_integer wants `result,min,max`. time_static wants the RFC 3339 timestamp itself, not a Unix number. random_id wants the URL-safe base64 value, not the hex form.

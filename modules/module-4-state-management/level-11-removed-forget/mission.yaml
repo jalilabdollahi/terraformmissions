@@ -1,0 +1,18 @@
+name: Night Market Handoff
+description: >-
+  The Lantern Lane night market is handing its stall permit book to the city clerk, who will
+  keep editing permits/permit-book.txt in her own system. Our configuration still owns the
+  file; deleting the block would make Terraform delete the clerk's working copy.
+objective: >-
+  Stop managing local_file.permit_book with a removed block that has destroy = false, delete
+  the resource block, apply, and keep permits/permit-book.txt on disk. local_file.stall_map
+  stays managed and the plan ends clean. Do not use terraform state rm.
+xp: 200
+difficulty: intermediate
+expected_time: 12m
+concepts:
+  - removed block
+  - lifecycle destroy = false
+  - declarative forgetting
+module: module-4-state-management
+level: level-11-removed-forget

@@ -1,0 +1,18 @@
+name: Turbidity Sensor Warning
+description: >-
+  Millbrook Water Treatment Plant writes a shift report for clarifier 4 and wants to hear about a degraded
+  turbidity sensor without losing the report. At the moment a precondition blocks the whole apply
+  whenever the sensor file does not say ok.
+objective: >-
+  Turn the sensor rule into a non-blocking check with its own scoped data source. The shift report
+  must be written, terraform plan must show a 'Check block assertion failed' warning while
+  clarifier/status.txt says degraded, and no resource changes may be pending.
+xp: 275
+difficulty: advanced
+expected_time: 14m
+concepts:
+  - check blocks
+  - scoped data sources
+  - warnings vs errors
+module: module-12-advanced-patterns
+level: level-18-check-block

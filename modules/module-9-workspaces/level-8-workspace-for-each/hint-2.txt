@@ -1,1 +1,1 @@
-Add a `default` entry to the `workspace_config` map. For example: `default = { env = "development", replicas = 1 }`.
+`for_each` accepts a map or a set of strings, but `local.active` is a list. Also note that one station appears twice in the network list.

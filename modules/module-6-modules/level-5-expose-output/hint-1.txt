@@ -1,0 +1,1 @@
+Run `terraform plan` and read which attribute of `module.crier` is reported as missing. Then look at the end of modules/crier/main.tf.

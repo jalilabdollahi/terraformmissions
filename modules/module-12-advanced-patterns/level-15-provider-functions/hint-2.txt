@@ -1,0 +1,1 @@
+Provider-defined functions are only available when the provider is declared in `required_providers`, even for the one built into Terraform. Its source address is `terraform.io/builtin/terraform`.

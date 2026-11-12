@@ -1,0 +1,18 @@
+name: Groundsman On The Wrong Ground
+description: >-
+  Willowbank cricket ground writes its pitch-preparation plan per environment, with a workspace
+  each for staging and prod. A trainee ran terraform apply while the CLI was still sitting in the
+  default workspace, so the staging plan was never created where it belongs.
+objective: >-
+  Make the staging workspace the selected one and have the pitch preparation plan applied there:
+  out/staging-groundsman-plan.txt must exist and be tracked in staging's own state, the plan must be
+  clean, and the prod workspace must stay empty.
+xp: 175
+difficulty: intermediate
+expected_time: 8m
+concepts:
+  - workspace select
+  - terraform.workspace
+  - per-workspace state
+module: module-9-workspaces
+level: level-1-workspace-select

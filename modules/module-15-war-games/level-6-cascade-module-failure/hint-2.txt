@@ -1,0 +1,1 @@
+Three layers, three kinds of failure: a type mismatch at the belts call, interface drift at the sorters call (a renamed output and a new required input), and finally no error at all in dispatch, just wrong numbers. Also compare the byte_length of the belt IDs with what is in state.

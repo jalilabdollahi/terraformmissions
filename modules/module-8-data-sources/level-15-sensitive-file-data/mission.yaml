@@ -1,0 +1,19 @@
+name: Till Room Combination
+description: >-
+  The charity shop's till-room takings safe combination lives in a file on the back-office laptop, and
+  Terraform prints the shift manager's door card from it. Reviewers noticed the combination shows
+  up in plain text in the apply log, in the outputs, and in a card anybody on the machine
+  can read.
+objective: >-
+  Read the combination with the data source made for secrets, keep it out of plan, apply and
+  output display (the combination output must be marked sensitive and still return
+  the real value on request), and make tillroom/door-card.txt readable by its owner only (0600).
+xp: 225
+difficulty: intermediate
+expected_time: 12m
+concepts:
+  - data.local_sensitive_file
+  - sensitive outputs
+  - file_permission
+module: module-8-data-sources
+level: level-15-sensitive-file-data

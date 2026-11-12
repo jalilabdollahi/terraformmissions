@@ -1,0 +1,1 @@
+A `moved` block in the configuration maps an old address to a new one. You need one block per renamed resource, with `from` and `to` as plain addresses (no quotes).

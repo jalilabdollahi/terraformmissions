@@ -1,0 +1,18 @@
+name: Gilded Cuff Programme Codes
+description: >-
+  The Gilded Cuff magic show prints a programme line for each production through a module with
+  strict input checks: show codes must look like SOR-07 and doors must open between 15 and 90 minutes
+  before curtain. The caller feeds it raw values and the module's own validation rejects them.
+objective: >-
+  Fix the caller, not the checks. With the defaults (act "sorcerer", run number 7, doors 1 hour
+  early) the programme output must be "SOR-07 | doors 60 min before curtain". Run number 12 must give
+  SOR-12, and a 2-hour doors_open_hours must still be rejected by the module's validation.
+xp: 225
+difficulty: intermediate
+expected_time: 12m
+concepts:
+  - module input validation
+  - validation blocks
+  - caller-side conversion
+module: module-6-modules
+level: level-13-module-input-validation

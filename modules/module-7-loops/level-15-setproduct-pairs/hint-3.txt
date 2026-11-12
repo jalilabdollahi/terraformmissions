@@ -1,0 +1,1 @@
+Turn the pairs into a map with a `for` expression: key `"${pair[0]}/${pair[1]}"`, value `{ room = pair[0], day = pair[1] }`, and give that map to for_each.

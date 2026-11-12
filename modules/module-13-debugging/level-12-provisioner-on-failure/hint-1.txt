@@ -1,0 +1,1 @@
+A green apply does not prove the provisioner worked. Run `terraform apply -replace=terraform_data.bind_batch` once and read the `Warning` lines and the script's output.

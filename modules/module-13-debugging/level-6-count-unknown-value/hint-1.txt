@@ -1,0 +1,1 @@
+Read the error: it names the `count` line and the resource it depends on. Run `terraform plan` and look for the words "known only after apply".

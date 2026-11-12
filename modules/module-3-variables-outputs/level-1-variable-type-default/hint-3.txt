@@ -1,0 +1,1 @@
+Keep `type = number` and change the default from "three" to the digit 3 (no quotes).

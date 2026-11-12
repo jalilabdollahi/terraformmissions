@@ -1,0 +1,1 @@
+Use `coalesce(try(g.table, null), "TBA")` and `coalesce(try(g.diet, null), "no restrictions")` in the card text, and `try(g.diet, null) != null` in the `special_diets` filter.

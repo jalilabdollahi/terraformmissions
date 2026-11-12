@@ -1,1 +1,0 @@
-Replace `item.value` with `upper(item)` (or any string function/expression).

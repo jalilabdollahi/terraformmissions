@@ -1,0 +1,19 @@
+name: Stamp Sheet Label Receipt
+description: >-
+  The distributor wants the philatelic bureau's stamp-sheet labels as a single zip, with a receipt
+  carrying the bundle's checksum. The archive data source cannot build the bundle, and
+  the distributor's tooling expects a checksum format the receipt does not use.
+objective: >-
+  Build dist/bureau.zip from the labels folder, leaving out the unfinished
+  *.tmp draft labels. bundle_sha256 and the receipt must carry the hex SHA-256 of the zip
+  (the same value shasum -a 256 prints), and bundle_size its size in bytes.
+xp: 225
+difficulty: intermediate
+expected_time: 12m
+concepts:
+  - data.archive_file
+  - source_dir
+  - excludes
+  - output_sha256
+module: module-8-data-sources
+level: level-14-archive-file-data

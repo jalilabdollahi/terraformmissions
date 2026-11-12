@@ -1,0 +1,1 @@
+Give `calm_morning` an `override_data` block with `target = data.local_file.windmeter` and `values = { content = "6" }`. The attribute is `content`, not `contents`. Do the same in `gale_warning` with `content = "34"`.

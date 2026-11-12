@@ -1,0 +1,1 @@
+Read the plan error carefully: it says which configuration object it cannot find. Where does the key resource actually live?

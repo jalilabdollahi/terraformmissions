@@ -1,0 +1,1 @@
+The module computes a next call and writes a roster file, but it has no `output` blocks at all. From the outside, a module without outputs is an empty object.

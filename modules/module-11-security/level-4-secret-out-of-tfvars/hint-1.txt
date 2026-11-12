@@ -1,0 +1,1 @@
+Open terraform.tfvars. Ask which of those three lines should be allowed in a repository that other people can read.

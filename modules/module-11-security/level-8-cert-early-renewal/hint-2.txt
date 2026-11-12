@@ -1,0 +1,1 @@
+validity_period_hours is only 6 and early_renewal_hours is 0, so the cert is both short-lived and never renewed ahead of expiry. Changing the validity forces a new certificate.

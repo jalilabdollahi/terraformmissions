@@ -1,0 +1,1 @@
+Use `var.scores[count.index]` for the filename. For the titles, loop over the instances like the `notes` local does: `[for g in data.local_file.score : trimspace(regex("title: (.*)", g.content)[0])]`.

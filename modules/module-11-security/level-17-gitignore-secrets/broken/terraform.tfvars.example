@@ -1,0 +1,3 @@
+# copy to prod.tfvars (which is gitignored) and fill in real values
+festival          = "Emberfall Frostbite Weekend"
+supplier_payment_key = "<set me>"

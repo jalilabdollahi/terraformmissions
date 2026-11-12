@@ -1,0 +1,1 @@
+`module.cellar.<name>` can only reach the `output` blocks that modules/cellar/main.tf declares. Three of the names used in main.tf are not among them. Read the output blocks at the bottom of the module file.

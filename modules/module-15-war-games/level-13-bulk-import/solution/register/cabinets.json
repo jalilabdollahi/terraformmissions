@@ -1,0 +1,91 @@
+{
+  "network": "alderwater-defib-network",
+  "exported_by": "asset-db nightly dump",
+  "sites": [
+    {
+      "site": "town-hall",
+      "serial": "jFN3jgPC",
+      "status": "active"
+    },
+    {
+      "site": "library-foyer",
+      "serial": "tYaTt0bG",
+      "status": "active"
+    },
+    {
+      "site": "railway-concourse",
+      "serial": "-q6D0fOT",
+      "status": "active"
+    },
+    {
+      "site": "leisure-centre",
+      "serial": "M3kDtC00",
+      "status": "active"
+    },
+    {
+      "site": "abbey-gate",
+      "serial": "1OdApsmM",
+      "status": "active"
+    },
+    {
+      "site": "old-cinema",
+      "serial": "JRtxdVyX",
+      "status": "retired"
+    },
+    {
+      "site": "market-hall",
+      "serial": "4DRb1R-A",
+      "status": "active"
+    },
+    {
+      "site": "primary-school",
+      "serial": "qTmoYDEq",
+      "status": "active"
+    },
+    {
+      "site": "football-club",
+      "serial": "pskszRyf",
+      "status": "active"
+    },
+    {
+      "site": "bowls-club",
+      "serial": "ntfDTSlr",
+      "status": "active"
+    },
+    {
+      "site": "pier-kiosk",
+      "serial": "j-w_CzAFU2Q",
+      "status": "active"
+    },
+    {
+      "site": "bus-depot",
+      "serial": "SUKLGybu1HY",
+      "status": "active"
+    },
+    {
+      "site": "closed-pharmacy",
+      "serial": "_DM3lZLx",
+      "status": "retired"
+    },
+    {
+      "site": "marina-office",
+      "serial": "8z2G8OEM",
+      "status": "active"
+    },
+    {
+      "site": "fire-depot",
+      "serial": "w4Sdd2e8",
+      "status": "active"
+    },
+    {
+      "site": "harbour-cafe",
+      "serial": "JvnskGNOtmg",
+      "status": "active"
+    },
+    {
+      "site": "ferry-terminal",
+      "serial": "L-5rp26aIY8",
+      "status": "active"
+    }
+  ]
+}

@@ -1,13 +1,18 @@
-concepts:
-- create_before_destroy
-- lifecycle
-- resource naming
-description: Two resources share the same static filename and both use `create_before_destroy
-  = true`. When Terraform tries to replace them, a name collision occurs.
-difficulty: advanced
-expected_time: 20m
-level: level-3-create-before-destroy
-module: module-12-advanced-patterns
-name: Name Collision on Replacement
-objective: Make the filenames unique so that replacement succeeds without collision.
+name: Billboard Never Goes Dark
+description: >-
+  Roadside Billboard Co. writes its highway board with create_before_destroy so the sign is never
+  blank. This week's advert changed and the apply 'succeeds', yet the sign file is gone afterwards and
+  the next plan wants to create it again.
+objective: >-
+  Keep create_before_destroy, replace the board with this week's advert (ON THE BOARD: Sunrise
+  Cereal Summer Sale), and end up with a board file on disk, no leftover file for last week's advert, and a clean
+  plan.
 xp: 275
+difficulty: advanced
+expected_time: 15m
+concepts:
+  - create_before_destroy
+  - replacement order
+  - unique names
+module: module-12-advanced-patterns
+level: level-3-create-before-destroy

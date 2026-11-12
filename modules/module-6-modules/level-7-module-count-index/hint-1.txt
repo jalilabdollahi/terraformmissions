@@ -1,0 +1,1 @@
+Run `terraform plan`. The first error is about the `labels` output: Terraform is complaining about how `module.post` is addressed.

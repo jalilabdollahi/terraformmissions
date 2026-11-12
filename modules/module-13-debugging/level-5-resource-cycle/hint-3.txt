@@ -1,0 +1,1 @@
+Move the roster's path into a local value and use `local.roster_path` in both places. The schedule then no longer references `local_file.patrol_roster`, so the only remaining arrow is roster -> schedule.

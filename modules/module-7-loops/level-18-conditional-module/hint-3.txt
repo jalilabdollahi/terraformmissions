@@ -1,0 +1,1 @@
+Splat over the possibly-empty list and collapse it: `one(module.snack_bar[*].menu_path)` returns the value or null; `flatten(module.snack_bar[*].items)` returns the items or an empty list. `try(module.snack_bar[0].menu_path, null)` also works.

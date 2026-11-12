@@ -1,0 +1,12 @@
+roster module changelog
+
+2.0.0
+  - Renamed resources to match the station naming guide:
+      random_pet.member   -> random_pet.callsign
+      local_file.card     -> local_file.duty_card
+  - Input `crew` renamed to `members`.
+  - Output `member_names` renamed to `callsigns`.
+  - Default `shift_hours` lowered from 12 to 8 (new crew welfare policy).
+
+1.x
+  - Initial roster module.

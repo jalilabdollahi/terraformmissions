@@ -1,15 +1,15 @@
-concepts:
-- tolist()
-- type conversion
-- values()
-description: '`tolist(var.my_map)` tries to convert a `map(string)` to a list, but
-  `tolist()` only works on collections that are already list-like (tuples). Maps must
-  use `values()` to extract their values as a list.'
+name: Brightside Cubing Results
+description: >-
+  Judges at the Brightside Speedcubing Open type solve times by hand: some use a decimal comma, some leave a space in front, and cubers who did not finish write DNF or DSQ. The results script converts every entry with tonumber() and plan dies on the first one it cannot read.
+objective: >-
+  Convert the times to numbers (13,1 means 13.1, a leading space is ignored), keep only cubers with a numeric time in finishers, list the rest in no_time, and report the winner (Noor, 11.9 s). It must work for other raw_times maps.
+xp: 220
 difficulty: intermediate
-expected_time: 10m
-level: level-14-type-conversion
+expected_time: 12m
+concepts:
+  - tonumber
+  - can
+  - type conversion
+  - data cleaning
 module: module-5-expressions
-name: Type Conversion
-objective: Replace `tolist(var.my_map)` with `values(var.my_map)` so `terraform validate`
-  passes.
-xp: 175
+level: level-14-type-conversion

@@ -1,0 +1,17 @@
+name: Fenwick Cheese Cellar
+description: >-
+  The cheese cellar prints a label for every maturing wheel from a block of named constants. Terraform
+  rejects the constants block and, once that is out of the way, every place that reads them.
+objective: >-
+  Declare the constants with the right block keyword and read them with the right reference prefix, so
+  cellar/wheel-label.txt shows the cheese, rind, weight and a price of 248 EUR (8 kg times 31 per kg).
+  The price must be computed from the other two values.
+xp: 140
+difficulty: beginner
+expected_time: 7m
+concepts:
+  - locals
+  - local references
+  - computed values
+module: module-1-foundations
+level: level-18-locals-reference

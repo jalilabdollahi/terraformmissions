@@ -1,0 +1,1 @@
+Compare the length of `var.dogs` with the number of resources in `terraform state list`. Where does the 3 come from?

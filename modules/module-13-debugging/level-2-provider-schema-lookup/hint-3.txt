@@ -1,0 +1,1 @@
+The real names are `special` (bool), `file_permission` (string) and `offset_days` (number). Example: `terraform providers schema -json | jq '.provider_schemas["registry.terraform.io/hashicorp/time"].resource_schemas.time_offset.block.attributes | keys'`.

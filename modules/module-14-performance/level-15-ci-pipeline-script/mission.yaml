@@ -1,0 +1,22 @@
+name: Lens Lab Gatekeeper
+description: >-
+  Quillfeather Optics grinds prescription lenses and manages the order sheets in Terraform. Their
+  merge-request job is ci/pipeline.sh, but it was written as a list of commands: it reformats files
+  instead of checking them, waits for keyboard input that never comes, plans without saving
+  anything, keeps going after failures and always ends with "pipeline done" and exit 0.
+objective: >-
+  Rewrite ci/pipeline.sh as a real gate that runs, in this order, terraform fmt -check -recursive,
+  terraform init -input=false, terraform validate and terraform plan -input=false -out=<planfile>;
+  stops at the first failing step with a non-zero exit; never rewrites files or applies; leaves a
+  valid saved plan after a good run; and works no matter which directory it is started from.
+xp: 400
+difficulty: expert
+expected_time: 25m
+concepts:
+  - CI pipelines
+  - fmt -check
+  - init -input=false
+  - plan -out
+  - fail fast
+module: module-14-performance
+level: level-15-ci-pipeline-script

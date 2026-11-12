@@ -1,0 +1,1 @@
+everyone = setunion(concert, rehearsal); regulars = setintersection(concert, rehearsal); need_a_robe = setsubtract(concert, robe_owners).

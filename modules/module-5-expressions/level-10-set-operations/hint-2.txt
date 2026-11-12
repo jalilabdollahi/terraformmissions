@@ -1,0 +1,1 @@
+setunion() merges and removes duplicates; setintersection() keeps only common elements; setsubtract(a, b) keeps what is in a but not in b, so the order matters. concat() is not a set operation.

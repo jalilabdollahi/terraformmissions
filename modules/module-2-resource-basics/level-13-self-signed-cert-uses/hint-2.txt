@@ -1,0 +1,1 @@
+tls_self_signed_cert requires an allowed_uses list, and `subject` is a nested block, not an attribute set with `=`.

@@ -1,17 +1,18 @@
-# Name Collision on Replacement
+# Debrief: create_before_destroy needs unique names
 
-## What Was Broken
-Both `local_file.config_a` and `local_file.config_b` pointed to the same `filename = "shared.txt"`.
-With `create_before_destroy = true`, Terraform creates the new instance before deleting the old one.
-When the filename is the same, the new instance collides with the existing file.
+By default Terraform replaces an object in the safe-for-names order: destroy the old, then create the
+new. For things that must not have a gap (a load balancer, a DNS record, a billboard) you can flip the order
+with `create_before_destroy = true`. The price is that for a short while two objects exist at once,
+and that is only possible if their identities do not collide.
 
-## The Fix
-Give each resource a unique filename so they do not compete for the same path.
+Cloud APIs make this obvious: two buckets cannot share a name, so the create fails. A local file is
+sneakier. Terraform happily writes the new content over the same path, and then the old object's
+destroy step deletes that path. The apply reports success and the sign is gone. The plan on the next
+run notices the missing file and wants to create it again.
 
-## create_before_destroy Semantics
-- Normally: destroy old → create new
-- With `create_before_destroy`: create new → destroy old (requires unique identifiers)
+The fix is to make the name a function of whatever forces replacement: here the advert. A name with the
+version, a short random suffix, or `name_prefix` for cloud resources lets the old and new objects
+coexist. When you can not make names unique, accept a short gap and leave the default order.
 
-## Why It Matters
-`create_before_destroy` is useful for avoiding downtime but requires that new resources can coexist
-with old ones momentarily. Static, shared identifiers break this invariant.
+Real-world takeaway: whenever you add `create_before_destroy`, ask "what do the old and new object
+share?" and make that unique, and remember the setting spreads to dependencies as well.

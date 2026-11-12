@@ -1,0 +1,16 @@
+submarine:
+  name: Kittiwake
+  hatch_count: 2
+  crew:
+    - name: Okonkwo
+      manual: "2.10"
+      language: "no"
+      on_watch: true
+    - name: Reyes
+      manual: "1.8"
+      language: en
+      on_watch: true
+    - name: Lindqvist
+      manual: "3.0"
+      language: "off"
+      on_watch: false

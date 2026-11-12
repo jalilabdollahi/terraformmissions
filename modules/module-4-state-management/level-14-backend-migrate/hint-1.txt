@@ -1,0 +1,1 @@
+Run `terraform plan`. The error tells you the backend configuration changed and that Terraform needs to be initialised again. Two files disagree: terraform.tf (new path) and the state you already have (old path).

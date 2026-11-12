@@ -1,0 +1,1 @@
+Run `terraform plan` and see which value of `countdown_minutes` is used. Then list every file in this directory that could set a variable.

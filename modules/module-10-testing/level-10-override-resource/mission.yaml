@@ -1,0 +1,18 @@
+name: Snow Globe Overrides
+description: >-
+  A snow globe assembly workshop prints a work ticket from two random choices: an assembly station and the number of
+  glitter scoops to add to each globe. The tests override both random resources to fixed values, but Terraform
+  prints warnings about override targets and the assertions see random numbers.
+objective: >-
+  Correct the override_resource target addresses in tests/ticket.tftest.hcl (including the one inside
+  the glitter module) so that ticket_default sees station-3/scoops-8, ticket_reprinted sees the same ticket, and terraform test
+  finishes without any "Invalid override target" warning.
+xp: 270
+difficulty: advanced
+expected_time: 12m
+concepts:
+  - override_resource
+  - target address
+  - module addresses
+module: module-10-testing
+level: level-10-override-resource

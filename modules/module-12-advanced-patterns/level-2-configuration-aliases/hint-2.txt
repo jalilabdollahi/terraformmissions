@@ -1,0 +1,1 @@
+A child module only receives the default configuration of each provider automatically. A second configuration has to be declared by the child (inside `required_providers`) and handed over by the caller (inside `providers = { ... }`).

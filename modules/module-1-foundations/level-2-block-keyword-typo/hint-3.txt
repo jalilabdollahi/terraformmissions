@@ -1,0 +1,1 @@
+One block says `varible` (missing an "a") and another says `outputs` (plural). The correct keywords are `variable` and `output`.

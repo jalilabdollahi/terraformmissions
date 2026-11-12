@@ -1,0 +1,1 @@
+Run terraform plan -destroy and see what it intends to remove. Think about which settings live in a lifecycle block.

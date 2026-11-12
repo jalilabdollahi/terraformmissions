@@ -1,0 +1,1 @@
+On tls_self_signed_cert.root set is_ca_certificate = true and allowed_uses = ["cert_signing", "crl_signing", "digital_signature"]; on tls_locally_signed_cert.signals use ca_private_key_pem = tls_private_key.root.private_key_pem.

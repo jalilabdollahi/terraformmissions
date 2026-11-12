@@ -1,0 +1,1 @@
+Use local.cfg.submarine.crew in the code, and quote the strings in config.yaml: manual: "2.10", language: "no", language: "off".

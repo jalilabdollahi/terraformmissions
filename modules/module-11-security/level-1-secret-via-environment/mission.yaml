@@ -1,0 +1,14 @@
+name: "Whisper Down The Cable"
+description: >-
+  The Brest cable-landing station opens its uplink with a handshake script that Terraform starts through local-exec. A security reviewer ran ps during an apply and read the station password in the process list.
+objective: >-
+  Keep calling bin/handshake.sh with --site brest-landing, but stop putting the password in the command line. The script must receive it in its environment as LANDING_PASSWORD, with the variable staying sensitive.
+xp: 250
+difficulty: advanced
+expected_time: 10m
+concepts:
+  - local-exec
+  - environment
+  - process list exposure
+module: module-11-security
+level: level-1-secret-via-environment

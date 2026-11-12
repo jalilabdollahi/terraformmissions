@@ -1,0 +1,1 @@
+index() fails with 'item not found' when the element is absent; it never returns -1 or null like some languages. Ask first with contains().

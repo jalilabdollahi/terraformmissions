@@ -1,0 +1,21 @@
+name: Antenna Time Console
+description: >-
+  The Kestrel ground station books antenna time from a CSV of satellite passes embedded in its Terraform
+  config. The planning sheet came out with the wrong satellites on it, and after a quick edit the
+  per-family totals refuse to evaluate at all. Nobody wants to apply again just to find out what an
+  expression returns.
+objective: >-
+  Use terraform console to evaluate the pieces of the locals and repair the expressions. longest_windows
+  must be ["HERON-3","OSPREY-5","HERON-4"] (usable passes only, longest first), total_usable_minutes
+  must be 239 and per_family_minutes must map each family to a list of numeric minutes, e.g. HERON
+  = [120, 15].
+xp: 250
+difficulty: advanced
+expected_time: 15m
+concepts:
+- terraform console
+- csvdecode
+- sort pitfalls
+- grouping with ...
+module: module-13-debugging
+level: level-3-console-evaluation

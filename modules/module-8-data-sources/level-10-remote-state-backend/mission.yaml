@@ -1,0 +1,19 @@
+name: Gritter Depot Handshake
+description: >-
+  The gritting depot team publishes the depot code, bay count and first departure as
+  outputs of their own Terraform configuration, applied in the depot-team folder. The
+  route planning team's data source is supposed to read those facts, but the plan reports that
+  it cannot find any remote state.
+objective: >-
+  Make terraform_remote_state read the depot team's real state so that the routes
+  header says "Depot NGD-04: 6 bays, first gritter 05:12". The values must come from the
+  remote state, not from the config.
+xp: 200
+difficulty: intermediate
+expected_time: 12m
+concepts:
+  - terraform_remote_state
+  - local backend
+  - state path
+module: module-8-data-sources
+level: level-10-remote-state-backend

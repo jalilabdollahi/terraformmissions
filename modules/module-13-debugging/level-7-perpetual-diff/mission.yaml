@@ -1,16 +1,19 @@
-concepts:
-- perpetual diffs
-- timestamp()
-- lifecycle ignore_changes
-- idempotency
-description: A `local_file` resource uses `content = timestamp()`. Since `timestamp()`
-  returns a different value on every plan, Terraform always sees a diff and will never
-  converge.
+name: Album Index Churn
+description: >-
+  The Lumen Cartophilic Society publishes its trading-card album index file from Terraform. Every plan - even straight
+  after an apply, with nobody touching anything - wants to rewrite it, and the CI job that expects
+  "No changes" has been red for a week.
+objective: >-
+  Find out why plans never settle and fix every source of the churn: after one apply, repeated plans
+  must show no changes. album/index.md must keep its "Generated:" line as an RFC 3339 timestamp stamped
+  once at creation, and list the cards alphabetically. Do not paper over it with ignore_changes.
+xp: 275
 difficulty: advanced
-expected_time: 22m
-level: level-7-perpetual-diff
+expected_time: 15m
+concepts:
+- perpetual diff
+- timestamp()
+- ordering
+- time_static
 module: module-13-debugging
-name: The Never-Ending Plan
-objective: Fix the perpetual diff by using `lifecycle { ignore_changes = [content]
-  }` or a static content value.
-xp: 300
+level: level-7-perpetual-diff

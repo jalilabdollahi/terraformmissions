@@ -1,1 +1,0 @@
-Run `terraform test`. The assertion fails: `result should equal 'correct'`.

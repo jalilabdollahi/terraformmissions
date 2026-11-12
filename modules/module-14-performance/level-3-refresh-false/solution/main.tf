@@ -1,12 +1,21 @@
-resource "random_string" "cached_token" {
-  length  = 16
-  special = false
+# Greenfield Market chilled-aisle setpoints, one file per unit.
 
-  lifecycle {
-    ignore_changes = [keepers]
+variable "chillers" {
+  type = map(number)
+  default = {
+    "yoghurt-a" = 2
+    "yoghurt-b" = 2
+    "salad-c"   = 4
+    "deli-d"    = 5
   }
 }
 
-output "token" {
-  value = random_string.cached_token.result
+resource "local_file" "chiller" {
+  for_each = var.chillers
+  filename = "${path.module}/chiller/${each.key}.txt"
+  content  = "${each.key} setpoint ${each.value}C\n"
+}
+
+output "chiller_count" {
+  value = length(local_file.chiller)
 }

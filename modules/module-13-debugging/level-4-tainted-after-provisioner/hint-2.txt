@@ -1,0 +1,1 @@
+The script looks for `$IMAGE_DIR/firmware-$FIRMWARE.bin`, and says exactly which path it could not find. Compare that path with the directory that exists in the workspace.

@@ -1,0 +1,1 @@
+A CSR must be signed by the private key, because the signature proves possession. Look at which attribute of tls_private_key.sensor is passed in.

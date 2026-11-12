@@ -1,1 +1,0 @@
-The variable is declared as `type = number`, but `staging` is a string. The `-var` flag passes its value according to the declared type.

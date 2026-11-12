@@ -1,0 +1,17 @@
+name: Fireworks Display Permit
+description: >-
+  The county fireworks permit office issues display permits through Terraform, and two preconditions on the permit resource refuse
+  displays that carry too much explosive or stack their racks too tall. The negative tests meant to prove that the refusals work report
+  failures of their own.
+objective: >-
+  Make within_limits, too_heavy and too_tall pass, with each negative run using expect_failures on the object
+  that really holds the precondition and a variable override that really violates exactly that rule.
+xp: 315
+difficulty: advanced
+expected_time: 12m
+concepts:
+  - precondition
+  - expect_failures
+  - resource lifecycle conditions
+module: module-10-testing
+level: level-18-precondition-expect

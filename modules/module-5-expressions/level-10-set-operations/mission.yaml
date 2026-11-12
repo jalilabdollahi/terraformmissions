@@ -1,0 +1,15 @@
+name: Caerwen Robe Roll
+description: >-
+  The Caerwen Choral Society keeps hand-typed sign-up sheets for the concert, the rehearsal and the robe cupboard. Their roll-call script prints doubled names, lists the wrong people for robes, and calls everyone a regular.
+objective: >-
+  Compute everyone (each singer once), regulars (on both the concert and rehearsal sheets) and need_a_robe (concert singers without a robe), using set functions. Defaults give Anwen, Bryn and Rhys as the ones needing robes.
+xp: 195
+difficulty: intermediate
+expected_time: 9m
+concepts:
+  - setunion
+  - setintersection
+  - setsubtract
+  - argument order
+module: module-5-expressions
+level: level-10-set-operations

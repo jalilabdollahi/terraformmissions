@@ -1,0 +1,17 @@
+name: Spring Coupon Expiry
+description: >-
+  Marigold Sweets issues a spring coupon that expires fourteen days after it was created. The
+  expiry calculation uses the time provider, but Terraform rejects both the offset value and
+  the attribute the coupon file tries to print.
+objective: >-
+  Make time_offset.expiry exactly 14 days after time_static.issued, and have coupon.txt and
+  the coupon_expires output show the expiry as an RFC 3339 timestamp.
+xp: 145
+difficulty: beginner
+expected_time: 8m
+concepts:
+  - time_offset
+  - time_static
+  - provider attributes
+module: module-2-resource-basics
+level: level-17-time-provider-offset

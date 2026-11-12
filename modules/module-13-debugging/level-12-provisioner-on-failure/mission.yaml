@@ -1,0 +1,20 @@
+name: Silent Binding Failure
+description: >-
+  Pressed & Proper Bookbindery starts each binding run from a local-exec provisioner. The pipeline
+  has been green all week, yet the bindery log for batch 114 does not exist and the customers' books
+  are still unbound. Someone added a setting to keep the pipeline green when the script complains.
+objective: >-
+  Remove the setting that hides the failure, repair the real cause so the script succeeds, and make
+  Terraform run the provisioner again on the existing resource (it is already in state and counted
+  as successfully created). bindery/batch-114.log must contain batch=batch-114 press=20C status=bound,
+  written by the provisioner.
+xp: 300
+difficulty: advanced
+expected_time: 15m
+concepts:
+- on_failure
+- provisioners
+- hidden errors
+- -replace
+module: module-13-debugging
+level: level-12-provisioner-on-failure

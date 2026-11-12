@@ -1,0 +1,1 @@
+Run `terraform plan` and read the two lines that start with `-` and `+`. Terraform does not know the old and new addresses are the same object.

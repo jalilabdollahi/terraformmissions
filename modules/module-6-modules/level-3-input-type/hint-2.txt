@@ -1,0 +1,1 @@
+`gusts_kmh` expects a list of numbers, but var.gusts is one single string such as "12,18,25,28". Terraform will convert "12" to 12, but it can't turn a string into a list on its own.

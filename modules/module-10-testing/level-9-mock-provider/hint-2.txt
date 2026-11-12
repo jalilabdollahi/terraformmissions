@@ -1,0 +1,1 @@
+Inside `mock_resource`, the fixed values live in a `defaults` attribute (an object). And the keys of that object must be real attribute names of the resource's schema: a key Terraform does not recognise is ignored silently, so the provider invents a value instead.

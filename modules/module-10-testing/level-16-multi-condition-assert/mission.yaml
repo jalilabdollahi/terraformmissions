@@ -1,0 +1,18 @@
+name: Climbing Wall Route Card
+description: >-
+  A climbing gym generates a route card for every wall route: grade, hold colour, number of bolts and
+  whether a top rope is allowed. The test for the card is one long && assertion that fails with the message
+  "route card is wrong", which tells setters nothing.
+objective: >-
+  Split the compound asserts in tests/routes.tftest.hcl into separate asserts, one per fact, each with its own
+  specific error_message and no && in any condition. Then use the failing one to find and fix the real defect:
+  a 17 m route needs 9 bolts.
+xp: 300
+difficulty: advanced
+expected_time: 12m
+concepts:
+  - compound assertions
+  - error messages
+  - diagnosing failures
+module: module-10-testing
+level: level-16-multi-condition-assert

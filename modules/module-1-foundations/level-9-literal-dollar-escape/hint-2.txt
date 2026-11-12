@@ -1,0 +1,1 @@
+Inside a heredoc or quoted string, a dollar sign followed by an opening brace always starts a Terraform template expression. The two shell expressions need to be marked as literal text.

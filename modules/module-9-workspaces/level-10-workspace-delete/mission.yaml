@@ -1,0 +1,17 @@
+name: Retiring The Trial Batch
+description: >-
+  Willow Bend handmade paper mill spun up a workspace called trial for an experimental pulp recipe, and it
+  is now retired. A volunteer's attempt to delete the workspace was refused, and the mill does
+  not want orphaned files left in out/.
+objective: >-
+  Remove the trial workspace entirely, with its resources destroyed first so that out/trial-
+  batch.txt is gone, while the keep workspace and its batch file stay untouched.
+xp: 215
+difficulty: intermediate
+expected_time: 10m
+concepts:
+  - workspace delete
+  - terraform destroy
+  - orphaned resources
+module: module-9-workspaces
+level: level-10-workspace-delete

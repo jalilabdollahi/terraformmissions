@@ -1,0 +1,1 @@
+Two naming problems. (1) `iterator = sheet` renames the loop variable, so `source.value` no longer exists inside `content`. (2) The inner `for shop, piece` reuses the outer name `shop`, so the inner one shadows it and holds the list index.

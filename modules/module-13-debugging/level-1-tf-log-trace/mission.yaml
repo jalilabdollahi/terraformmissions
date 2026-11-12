@@ -1,0 +1,21 @@
+name: Sled Check Trace
+description: >-
+  Frostline Snowmobile Tours writes its sled check sheets with Terraform. Last night's apply
+  died halfway through, the on-call engineer pasted a vague error into the channel, and the morning
+  departure briefing is now waiting. Support also wants the exact plugin version from the trace for
+  their ticket.
+objective: >-
+  Capture a trace with TF_LOG and TF_LOG_PATH, find which resource failed and during which provider
+  call, then fix the configuration so apply succeeds and the plan stays clean. Write answers/trace.txt
+  with exactly three lines: failed_resource=<resource address>, failed_rpc=<PlanResourceChange or
+  ApplyResourceChange> and provider_version=<version of the local provider that ran>.
+xp: 225
+difficulty: advanced
+expected_time: 15m
+concepts:
+- TF_LOG
+- TF_LOG_PATH
+- provider RPC calls
+- trace reading
+module: module-13-debugging
+level: level-1-tf-log-trace

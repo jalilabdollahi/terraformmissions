@@ -1,1 +1,0 @@
-Replace `resource "local_file"` with `resource "local_sensitive_file"`. The arguments are identical.

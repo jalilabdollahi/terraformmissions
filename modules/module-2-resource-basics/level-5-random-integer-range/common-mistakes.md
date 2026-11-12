@@ -1,0 +1,4 @@
+- Swapping the values in the locals themselves. Management fixed the range, and the names would then lie.
+- Hard-coding `min = 1000` and `max = 1499` and removing the locals. It passes only if the locals are kept as the source of truth.
+- Widening the range to something like 1 to 9999 to dodge the error. Cards only exist from 1000 to 1499.
+- Wrapping the result in abs() or min()/max() functions. The error is in the resource arguments, not in the result.

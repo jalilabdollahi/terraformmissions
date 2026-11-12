@@ -1,0 +1,1 @@
+Replace every colon with an equals sign: `tour_name = "Calder Bay Whale Tours"`, `seat_count = 14`, `sailing_times = ["08:30", "14:15"]`, `lifejackets_required = true`. No braces, no commas between lines.

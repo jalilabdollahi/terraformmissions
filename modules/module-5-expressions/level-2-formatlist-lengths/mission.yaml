@@ -1,0 +1,14 @@
+name: Ashdown Admission Board
+description: >-
+  The gate office at Ashdown Steam Fair Showground builds its price board with formatlist(), one line per ticket type. Since someone pasted a hand-typed currency list into the call, terraform plan refuses to run at all.
+objective: >-
+  Make price_lines read Weekend Pass — GBP 45.00, Day Ticket — GBP 30.00, Evening Entry — GBP 18.50 for the defaults, using the single currency variable, and still work when there are more tiers.
+xp: 165
+difficulty: intermediate
+expected_time: 8m
+concepts:
+  - formatlist
+  - list lengths
+  - broadcasting a single value
+module: module-5-expressions
+level: level-2-formatlist-lengths

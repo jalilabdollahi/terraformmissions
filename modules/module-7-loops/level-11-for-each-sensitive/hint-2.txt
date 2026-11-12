@@ -1,0 +1,1 @@
+Instance keys appear in plain text in addresses and plan output, so Terraform bans sensitive values there. `var.pins` is sensitive as a whole - names and PINs alike. Only the *names* need to be keys, and they are public.

@@ -1,1 +1,1 @@
-In HCL, string values must be surrounded by double quotes. `default` without quotes is treated as an identifier, not the word "default".
+There are three separate mistakes, each making `terraform.workspace` plain text instead of an expression: one in a local value, one in the file content, one in the output.

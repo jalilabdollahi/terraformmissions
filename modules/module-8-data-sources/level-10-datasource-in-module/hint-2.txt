@@ -1,1 +1,0 @@
-Open `modules/reader/main.tf` and look at the `output` block. The output is named `file_content`, not `content`.

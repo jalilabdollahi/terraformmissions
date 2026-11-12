@@ -1,0 +1,1 @@
+Apply once, then run `terraform plan` again with no edits. Look at which attributes of `local_file.proof` Terraform says will change.

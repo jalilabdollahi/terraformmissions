@@ -1,0 +1,1 @@
+Run `terraform validate`. The error names the line inside `lifecycle` and says something about the configuration referring to itself.

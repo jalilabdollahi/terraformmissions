@@ -1,0 +1,1 @@
+Run `terraform import random_id.freezer_tag <barcode value from the sticker>`, then `terraform plan`: it must report no changes.

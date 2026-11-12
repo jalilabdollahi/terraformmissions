@@ -1,0 +1,1 @@
+Add the hyphen to the pattern: `^[A-Z]{3}-[0-9]{4}$`. Keep both anchors (`^` and `$`) so extra characters are still rejected.

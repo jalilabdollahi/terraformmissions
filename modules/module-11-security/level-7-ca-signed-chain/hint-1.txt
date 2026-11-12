@@ -1,0 +1,1 @@
+Run openssl verify -CAfile pki/root-ca.pem pki/signals.pem after an apply, and openssl x509 -in pki/root-ca.pem -noout -text. Two things about the root look off, and one wiring argument is suspicious.

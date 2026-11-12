@@ -1,0 +1,5 @@
+# Terraform CLI configuration for the render-farm CI agents.
+# Used via TF_CLI_CONFIG_FILE=ci/terraform.rc
+
+plugin_cache_dir   = "~/.terraform.d/plugin-cache"
+disable_checkpoint = false

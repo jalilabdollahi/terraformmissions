@@ -1,0 +1,1 @@
+`terraform import <address> <id>` adopts an object. For random_id the ID is the URL-safe base64 form of the value (the "Barcode" line), not the hex form. The address is the resource address from main.tf.

@@ -1,0 +1,1 @@
+Wrap each pattern in slashes. Order is replace(string, pattern, replacement). For the date use capture groups and reorder them in the replacement: "$3/$2/$1".

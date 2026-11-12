@@ -1,0 +1,1 @@
+Run `terraform plan` to see all four resources, and notice the error from the load manifest's precondition. You want Terraform to work on only part of the graph: see `terraform apply -help`.

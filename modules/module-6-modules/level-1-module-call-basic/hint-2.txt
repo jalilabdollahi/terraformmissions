@@ -1,1 +1,0 @@
-The child module lives at `./modules/hello/` relative to the root. `../hello` would go *up* one directory from where you are.

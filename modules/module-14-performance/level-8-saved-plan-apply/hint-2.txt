@@ -1,0 +1,1 @@
+A saved plan is only valid against the exact state it was made from. Another officer's apply changed the state, so Terraform refuses the old plan ("Saved plan is stale"). The plan file has to be regenerated, reviewed and then applied.

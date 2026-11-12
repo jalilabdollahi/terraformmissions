@@ -1,0 +1,1 @@
+Run `terraform plan` for the first error. After it is fixed, run `terraform apply` and unzip the kit: look at the folder names inside.

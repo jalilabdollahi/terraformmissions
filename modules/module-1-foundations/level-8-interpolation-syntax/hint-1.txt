@@ -1,0 +1,1 @@
+Apply, then `cat weather/bulletin.txt`. Look at which of the three lines still shows source code instead of a value.

@@ -1,0 +1,1 @@
+terraform_data has `input` (what you provide) and `output` (a computed copy of input). It has no `result`; that name belongs to the random_* resources.

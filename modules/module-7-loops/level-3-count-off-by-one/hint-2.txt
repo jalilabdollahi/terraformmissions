@@ -1,0 +1,1 @@
+`count.index` starts at 0, so the first sign is named bay-00 and the highest number is 5, not 6. The *count* is right (6 signs); only the number printed for humans is shifted.

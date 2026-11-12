@@ -1,1 +1,1 @@
-`terraform plan -detailed-exitcode` exits with code 0 (no changes), 1 (error), or 2 (changes needed). Code 2 after external modification means drift was detected.
+Set `peak_temp_c = 1320` and `hold_minutes = 40` in the locals of main.tf, then run `terraform apply` so the state is brought in line, then `terraform plan` should say "No changes".

@@ -1,0 +1,1 @@
+terraform plan wants to create 17 new cabinets. Read register/cabinets.json: it already holds the serials. Decide which of the 17 sites Terraform should manage at all, and look at how random_id behaves when its configuration disagrees with an existing value.

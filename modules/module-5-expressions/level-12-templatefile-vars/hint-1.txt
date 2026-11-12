@@ -1,0 +1,1 @@
+Read the error: it names a template placeholder that has no matching key. Open telegram.tpl and list every name used inside ${...}.

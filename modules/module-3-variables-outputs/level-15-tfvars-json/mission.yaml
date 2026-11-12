@@ -1,0 +1,14 @@
+name: Trailing Comma At The Arena
+description: >-
+  The Neon Rift laser tag arena receives its configuration as terraform.tfvars.json from the booking system. After a manual edit, Terraform refuses to read it, and after a first fix it complains again.
+objective: >-
+  Make plain terraform apply read terraform.tfvars.json: valid JSON, and the site given as an object with lat and lon. Keep the data in the JSON file (no defaults in the variable blocks).
+xp: 190
+difficulty: intermediate
+expected_time: 9m
+concepts:
+  - tfvars.json
+  - json-syntax
+  - input-variables
+module: module-3-variables-outputs
+level: level-15-tfvars-json

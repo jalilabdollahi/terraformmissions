@@ -1,0 +1,1 @@
+The probe filename is built from local_file.sled_index.filename itself, so it becomes `.../index.txt/probe-....ok`. Use `dirname()` of that filename so the marker lands beside the index. Then write the three answer lines (the provider version is in the plugin path of the log, e.g. `.../local/<version>/...`).

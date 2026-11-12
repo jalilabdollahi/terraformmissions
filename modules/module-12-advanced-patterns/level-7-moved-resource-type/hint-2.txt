@@ -1,0 +1,1 @@
+`terraform_data` has no `triggers`. Its equivalent is `triggers_replace`. And the type change must be recorded: `moved` blocks may go from `null_resource` to `terraform_data` because their schemas are compatible.

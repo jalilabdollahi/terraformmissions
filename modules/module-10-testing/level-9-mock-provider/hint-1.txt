@@ -1,0 +1,1 @@
+The first error is about the mock block's syntax. After fixing it, the next failure shows a *random-looking* value where the mock should have supplied a fixed one.

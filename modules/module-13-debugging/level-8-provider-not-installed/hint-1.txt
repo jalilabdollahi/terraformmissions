@@ -1,0 +1,1 @@
+Run `terraform plan` and read the first lines of the error. It names a provider by its full source address and tells you which command to run.

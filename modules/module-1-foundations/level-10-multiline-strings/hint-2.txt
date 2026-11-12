@@ -1,1 +1,0 @@
-For multi-line content, use a heredoc with `<<-EOF ... EOF`.

@@ -1,1 +1,0 @@
-Remove the `${terraform.workspace}` interpolation and use a static path: `path = "terraform.tfstate"`.

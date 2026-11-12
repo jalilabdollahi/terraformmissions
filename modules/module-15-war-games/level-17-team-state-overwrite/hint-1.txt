@@ -1,0 +1,1 @@
+Do not apply. Compare every candidate in recovery/ and the live terraform.tfstate with jq: lineage, serial, terraform_version and the list of resources. Identify which copies belong to this project at all.

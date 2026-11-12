@@ -1,0 +1,18 @@
+name: Regatta Cue Sheet
+description: >-
+  The Brightwater Regatta fireworks crew re-reads the cue sheet whenever a revision marker
+  changes. The marker resource follows the running order, but Terraform now rejects its
+  triggers with a type error.
+objective: >-
+  Make null_resource.cue_sheet apply with triggers whose values are all strings, keep the
+  running order as the list in locals, and make the cues trigger actually contain every cue
+  name so that changing the order would change the trigger.
+xp: 130
+difficulty: beginner
+expected_time: 7m
+concepts:
+  - null_resource
+  - triggers
+  - type conversion
+module: module-2-resource-basics
+level: level-10-null-triggers-types

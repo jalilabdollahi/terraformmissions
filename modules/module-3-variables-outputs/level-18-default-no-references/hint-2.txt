@@ -1,0 +1,1 @@
+A variable `default` must be a constant. Terraform evaluates variables before locals and resources, so a default cannot depend on another variable. Derived values are what `locals` are for.

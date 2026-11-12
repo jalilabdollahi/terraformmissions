@@ -1,0 +1,1 @@
+In `terraform.tf` add `terraform = { source = "terraform.io/builtin/terraform" }` next to `local`, then run `terraform init` and validate again.

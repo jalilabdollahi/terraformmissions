@@ -1,0 +1,14 @@
+name: Cinder Lane Serial Tags
+description: >-
+  The repair bench at Cinder Lane prints tags from messy intake notes. Nothing errors, but the printed serial still has punctuation, the fault note keeps its gaps, and the date is still the American-style ISO string.
+objective: >-
+  Make the tag show serial ZX4411B09, the note "Tape loader failing, border flickers on boot" and the date 17/03/2026 for the default inputs, by fixing the three replace() calls so they work for any input.
+xp: 190
+difficulty: intermediate
+expected_time: 10m
+concepts:
+  - replace
+  - regex patterns
+  - capture groups
+module: module-5-expressions
+level: level-3-regex-replace

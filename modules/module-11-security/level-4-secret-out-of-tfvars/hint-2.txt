@@ -1,0 +1,1 @@
+gateway_api_key = "..." is a live credential committed in plaintext. Terraform can read any input variable from an environment variable instead of a file.

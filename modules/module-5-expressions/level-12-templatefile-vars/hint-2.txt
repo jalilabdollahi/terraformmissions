@@ -1,0 +1,1 @@
+templatefile() only knows the names in the map you pass as its second argument. The template uses station, recipient, sender and body; the map offers station, to, from and message.

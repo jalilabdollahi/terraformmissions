@@ -1,1 +1,0 @@
-Change `type = number` to `type = string` and update `default = 0` to `default = "dev"`.

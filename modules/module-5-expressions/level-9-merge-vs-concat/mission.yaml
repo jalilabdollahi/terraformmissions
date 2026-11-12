@@ -1,0 +1,15 @@
+name: Tansy and Tin Pack Labels
+description: >-
+  Tansy & Tin print pack labels by layering each blend's details over the house label and adding the blend's allergens to the house warnings. Right now plan fails on the allergen line, and the label would show the house grade even when the blend has its own.
+objective: >-
+  Layer the blend label over the house label (blend wins), and combine the allergen lists house-first without repeats. Defaults must yield grade BOP, pack 100g pouch and allergens nuts, sesame, soy.
+xp: 195
+difficulty: intermediate
+expected_time: 10m
+concepts:
+  - merge
+  - concat
+  - override order
+  - distinct
+module: module-5-expressions
+level: level-9-merge-vs-concat

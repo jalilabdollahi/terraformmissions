@@ -1,0 +1,18 @@
+name: Helpline Queue Defaults
+description: >-
+  The Brightwater call centre declares its queues in a map and lets a module fill the gaps:
+  128 kbps and a hold jingle unless the queue says otherwise. The module's type demands every field,
+  so any queue that omits one is rejected.
+objective: >-
+  Let the module accept queues that omit bitrate_kbps and jingle, defaulting them to 128 and true
+  respectively, while skill stays mandatory. queues/rota.txt must read "billing refunds@128k",
+  "night_desk triage@128k +jingle" and "sales_line upgrades@64k +jingle", one per line.
+xp: 265
+difficulty: intermediate
+expected_time: 15m
+concepts:
+  - optional attributes
+  - object types
+  - default values
+module: module-6-modules
+level: level-19-optional-object-defaults

@@ -1,0 +1,1 @@
+Read the template from `${path.module}/templates/...` and write the script to `${path.root}/audio/...`. Both lines are in modules/guide/main.tf.

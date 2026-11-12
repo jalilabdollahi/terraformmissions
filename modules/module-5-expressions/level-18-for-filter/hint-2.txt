@@ -1,0 +1,1 @@
+== never converts types: the boolean true is not equal to the string "true". Also look at the height comparison against the wording 'at least'.

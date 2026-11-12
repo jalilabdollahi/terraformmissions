@@ -1,0 +1,1 @@
+merge() is for maps and objects only, and later arguments override earlier ones. Lists are joined with concat(). The label merge has the blend first, so the house values would win.

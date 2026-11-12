@@ -1,0 +1,1 @@
+A relative `source` in a test file is resolved from the directory you run `terraform test` in (the configuration root), not from the folder that holds the test file. And one of the two paths also names a directory that does not exist.

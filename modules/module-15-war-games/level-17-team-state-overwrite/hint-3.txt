@@ -1,0 +1,1 @@
+Push the freshest valid copy of the same lineage with terraform state push recovery/fenwick-state-tue-1200.json (no -force needed or wanted). Read the repair rack id from recovery/ci-run-217-apply.log and adopt it with terraform import random_integer.repair_rack "<id>,1,60"; then terraform apply to publish the output and plan again.

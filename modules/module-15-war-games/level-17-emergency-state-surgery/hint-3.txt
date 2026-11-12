@@ -1,1 +1,0 @@
-Run: `terraform state rm random_id.legacy_id` then `terraform apply -auto-approve`. The apply creates the `random_string.service_token` resource. Note: `moved` blocks cannot change resource TYPES — they only change addresses.

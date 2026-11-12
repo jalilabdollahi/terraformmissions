@@ -1,0 +1,1 @@
+The script reads one JSON object from standard input. The config instead appends the values to the command line, where the script never looks. The external data source has a dedicated argument that is turned into that stdin JSON.

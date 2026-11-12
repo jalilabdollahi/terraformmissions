@@ -1,1 +1,0 @@
-Change `local.wrong_alias` to `local.primary` in the `providers` map.

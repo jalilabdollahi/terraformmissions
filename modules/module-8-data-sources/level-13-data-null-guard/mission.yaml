@@ -1,0 +1,19 @@
+name: Banquet Place Cards
+description: >-
+  The caterer's guest list is a JSON export where table numbers and dietary notes are
+  only present for some guests, and sometimes explicitly null. The place-card config
+  crashes as soon as it meets a guest without them.
+objective: >-
+  Print a card for every guest: a missing table becomes "TBA" and a missing or null
+  diet becomes "no restrictions". With the supplied list, special_diets must be 2 and the
+  last card "Ambrose Tull | table TBA | nut allergy".
+xp: 225
+difficulty: intermediate
+expected_time: 12m
+concepts:
+  - null handling
+  - try()
+  - coalesce()
+  - optional JSON fields
+module: module-8-data-sources
+level: level-13-data-null-guard

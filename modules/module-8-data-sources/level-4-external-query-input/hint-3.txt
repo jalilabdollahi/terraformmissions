@@ -1,0 +1,1 @@
+Reduce `program` to `["bash", "${path.module}/bin/flying-weight.sh"]` and add `query = { bird = var.bird, weight_g = var.weight_g, target_pct = var.target_pct }` — the keys must match the ones the script reads.

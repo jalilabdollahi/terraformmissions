@@ -1,0 +1,1 @@
+Set validity_period_hours to something like 2160 (90 days) and early_renewal_hours to something like 336, keeping the renewal window smaller than the validity, then apply.

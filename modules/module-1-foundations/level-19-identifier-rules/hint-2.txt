@@ -1,0 +1,1 @@
+Identifiers may contain letters, digits, underscores and hyphens, and must not start with a digit. There are three offenders: one has a space, one starts with a digit, one contains a dot.

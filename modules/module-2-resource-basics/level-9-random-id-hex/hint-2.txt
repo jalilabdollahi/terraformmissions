@@ -1,0 +1,1 @@
+random_id exports several encodings of the same random bytes: b64_url, b64_std, hex and dec. One byte becomes two hex characters.

@@ -1,5 +1,8 @@
-# Common Mistakes
+# Common mistakes
 
-- **`tolist()` on maps** — not supported; use `values()` or `keys()`.
-- **Assuming map value order** — `values()` returns values in lexicographic key order in Terraform 0.15+.
-- **`toset()` vs `tolist()`** — `toset` removes duplicates and has no order; `tolist` preserves order.
+- **Wrapping the whole map in `try(..., {})`.** All cubers vanish when one value is bad.
+- **Editing `raw_times` to clean the data.** The judges' strings are the input; the second dataset
+  in the check has the same kinds of mess.
+- **Handling the comma but not the space.** `tonumber(" 11.9")` still fails; Noor is missing.
+- **Filtering with `t != "DNF"`.** DSQ and every other word still crash the conversion.
+- **Replacing every comma and dot.** Removing both turns 13,1 into 131.

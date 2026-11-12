@@ -1,0 +1,4 @@
+- Changing the algorithm to RSA to dodge the curve error. The firmware key is RSA already; telemetry must be ECDSA.
+- Writing the curve as `prime256v1` (openssl's name). The provider accepts only P224, P256, P384 and P521.
+- Dropping `ecdsa_curve` and trusting the default. You get P224, and the mission demands P256.
+- Lowering `rsa_bits` on the firmware key to make the apply faster. The ground stations require 4096.

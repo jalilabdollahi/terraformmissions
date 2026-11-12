@@ -1,0 +1,1 @@
+Run `terraform apply` and read the output carefully, including the `Outputs:` section. Then `ls -l tillroom/` to see who can read the door card.

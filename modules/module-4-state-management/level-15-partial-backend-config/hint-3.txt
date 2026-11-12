@@ -1,0 +1,1 @@
+Change `file_path` to `path` in config/backend-prod.hcl, then run `terraform init -reconfigure -backend-config=config/backend-prod.hcl` and `terraform apply`.

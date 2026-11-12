@@ -1,0 +1,17 @@
+name: Mosaic Panel Modules
+description: >-
+  The harbourside tile mosaic guild keeps two small helper modules, one for tiles and one for the
+  frieze, and a panel order that combines them. Two test runs are meant to exercise the helpers directly
+  but cannot find them.
+objective: >-
+  Make tile_area, frieze_area and panel_total pass: each module run must point at the helper module's
+  real directory, and the tests must keep checking 3468 cm2 for tiles and 7400 cm2 for the frieze.
+xp: 280
+difficulty: advanced
+expected_time: 12m
+concepts:
+  - run module block
+  - module source paths
+  - terraform init for tests
+module: module-10-testing
+level: level-12-test-module-source

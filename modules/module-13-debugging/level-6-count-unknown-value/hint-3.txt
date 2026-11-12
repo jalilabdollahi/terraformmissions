@@ -1,0 +1,1 @@
+Drive `count` from the same input that sets `result_count`: `count = var.panel_size`. Keep indexing `random_shuffle.panel.result[count.index]` inside the card - values may be unknown, the number of instances may not.

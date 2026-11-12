@@ -1,0 +1,1 @@
+List what each team stack actually holds with terraform state list inside stacks/fields, stacks/drying and stacks/packing. One of them may look empty: check every workspace there before believing it.

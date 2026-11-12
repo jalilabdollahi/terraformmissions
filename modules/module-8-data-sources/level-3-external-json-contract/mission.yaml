@@ -1,0 +1,18 @@
+name: Bungee Weigh-In Card
+description: >-
+  Before each session at the gorge bungee platform, a helper script totals the
+  jumpers' weight and Terraform prints the jump card. Since the script was
+  extended with a jump master name and a weight limit, Terraform refuses to read its answer.
+objective: >-
+  Fix the script so the external data source accepts it. Terraform must then output
+  total_kg 303, headroom_kg 57 and the four jumper names, all computed from
+  roster/jumpers.csv.
+xp: 175
+difficulty: intermediate
+expected_time: 12m
+concepts:
+  - data.external
+  - flat string map
+  - JSON contract
+module: module-8-data-sources
+level: level-3-external-json-contract

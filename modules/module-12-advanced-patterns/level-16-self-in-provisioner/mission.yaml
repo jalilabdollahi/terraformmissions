@@ -1,0 +1,18 @@
+name: Piano Ticket Closing Line
+description: >-
+  Wren & Hammer piano tuning logs 'opened' and 'closed' for every tuning ticket using
+  provisioners on a terraform_data record. The closing line is written when the ticket is destroyed,
+  but Terraform refuses the configuration because of what that provisioner refers to.
+objective: >-
+  Keep both provisioners and make the destroy-time one legal by reading the ticket through self.
+  Afterwards visits/diary.log must show 'opened PT-2041 (Steinbeck upright piano)', and replacing
+  the ticket must append 'closed PT-2041'.
+xp: 260
+difficulty: advanced
+expected_time: 12m
+concepts:
+  - destroy provisioners
+  - self
+  - provisioner references
+module: module-12-advanced-patterns
+level: level-16-self-in-provisioner

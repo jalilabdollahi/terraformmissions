@@ -1,0 +1,1 @@
+Add ~ before the closing brace of every directive that sits alone on its line: %{ for ... ~}, %{ endfor ~}, %{ if ... ~}, %{ else ~}, %{ endif ~}. Keep the inline %{ if p.breakfast } as it is.

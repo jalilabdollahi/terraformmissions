@@ -1,1 +1,0 @@
-Resource A writes to `${terraform.workspace}-data.txt`. Resource B should reference the same workspace-aware filename.

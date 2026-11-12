@@ -1,1 +1,0 @@
-Run `terraform validate`. The error says `local_file.config` has no attribute named `content`.

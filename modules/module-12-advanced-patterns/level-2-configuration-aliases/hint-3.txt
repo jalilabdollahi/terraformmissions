@@ -1,0 +1,1 @@
+In the module add `terraform { required_providers { random = { source = "hashicorp/random", configuration_aliases = [random.spare] } } }`. In the root's `module` block add `providers = { random = random, random.spare = random.back_wall }`.

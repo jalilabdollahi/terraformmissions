@@ -1,1 +1,0 @@
-Change `create = 600` to `create = "10m"`. Valid units are `s` (seconds), `m` (minutes), and `h` (hours).

@@ -1,0 +1,1 @@
+Terraform only shows the external program stderr. The real reason is written to logs/quota-lookup.log: read the last REFUSED line, and read handoff/rotation-ticket.txt for how credentials are meant to reach the tooling.

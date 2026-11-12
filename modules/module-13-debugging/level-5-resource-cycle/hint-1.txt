@@ -1,0 +1,1 @@
+`terraform validate` prints the two resources that form the loop. Draw the arrows yourself: which attribute of which resource does each file read?

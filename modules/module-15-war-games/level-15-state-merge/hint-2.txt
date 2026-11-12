@@ -1,0 +1,1 @@
+Two hidden problems: the packing state lives in the autumn workspace (stacks/packing/terraform.tfstate.d/autumn/), and the hand-written merged config does not match the teams reality. After the moves, a plan will say some random_integer must be replaced; compare each module call with the original team stack.

@@ -1,0 +1,17 @@
+name: Bay Zero
+description: >-
+  Quayside's multi-storey car park generates a sign per bay. The floor manager walked the deck
+  this morning and found a sign reading BAY 0 and no sign for the last bay number. Terraform
+  counts from zero; drivers do not.
+objective: >-
+  Label the signs 1-based: files signs/bay-01.txt to signs/bay-06.txt with content 'BAY n of 6'.
+  There must be exactly six signs and no bay-00; the number of bays must stay variable.
+xp: 160
+difficulty: intermediate
+expected_time: 7m
+concepts:
+  - count.index
+  - off-by-one
+  - format()
+module: module-7-loops
+level: level-3-count-off-by-one

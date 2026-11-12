@@ -1,0 +1,1 @@
+Make two blocks in the `lifecycle`: `precondition { condition = endswith(var.ladder_file, ".csv") && fileexists("${path.module}/${var.ladder_file}") ... }` and `postcondition { condition = startswith(self.content, "rank,player,rating") ... }`.

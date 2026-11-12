@@ -1,0 +1,14 @@
+name: Label That Knows Its Brewery
+description: >-
+  Copperkettle Brewing wants each batch label to default to the brewery name plus -batch, while still allowing special runs to override it. The variable default refers to another variable, and Terraform will not load the file.
+objective: >-
+  Make the label default to Copperkettle-batch and follow the brewery variable (Foxglove-batch for brewery=Foxglove), while an explicit batch_label still overrides it. Keep batch_label as an input variable.
+xp: 200
+difficulty: intermediate
+expected_time: 9m
+concepts:
+  - locals
+  - variable-defaults
+  - coalesce
+module: module-3-variables-outputs
+level: level-18-default-no-references

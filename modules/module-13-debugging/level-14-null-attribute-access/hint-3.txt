@@ -1,0 +1,1 @@
+`try(upper(item.claim.holder), "UNCLAIMED")` handles the missing claim. For the phone, `try(coalesce(item.claim.phone), "n/a")` also covers a claim without a phone (the `coalesce` raises when every argument is null, so `try` supplies the default).

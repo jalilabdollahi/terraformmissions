@@ -1,0 +1,1 @@
+`bore`: the config looks in a folder that does not exist. `air`: the program is launched directly, so the file must be executable and the OS needs permission to run it. `damp`: the file is a bash script but a different interpreter was given.

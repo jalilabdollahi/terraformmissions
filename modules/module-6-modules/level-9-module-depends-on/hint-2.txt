@@ -1,0 +1,1 @@
+The resurfacer is given the log path as a plain string, so there is no reference between it and the chiller. Terraform sees two unrelated modules and reads the file during planning, before the chiller has had a chance to write it.

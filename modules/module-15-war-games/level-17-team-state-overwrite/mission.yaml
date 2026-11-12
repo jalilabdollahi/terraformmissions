@@ -1,0 +1,23 @@
+name: Fenwick Lantern Overwrite
+description: >-
+  INCIDENT 7184 - Fenwick Lantern Parade Volunteers. The volunteer build rota runs from a state file on the shared
+  ops VM, and another team, restoring "last night's backup" for their own project, pushed a stale
+  copy over it. Terraform now wants to create steward Cleo's badge, the owl bench slot and a
+  fresh repair rack for the storm-damaged heron lantern, all of which already exist on paper and in the workshop.
+  The recovery folder holds every copy anyone could find, and CI run 217's apply log, whose state
+  upload failed.
+objective: >-
+  Recover the correct state: use the freshest valid copy of this project's own state (same
+  lineage, not just the highest serial), adopt the repair rack assigned by CI run 217 under its
+  original number, and finish with a clean plan. Every badge, bench slot, the rota epoch and
+  the rota file must keep its original ID, and nothing may be destroyed or re-issued.
+xp: 550
+difficulty: expert
+expected_time: 55m
+concepts:
+  - state lineage and serial
+  - state push
+  - import from logs
+  - choosing the right backup
+module: module-15-war-games
+level: level-17-team-state-overwrite

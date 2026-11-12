@@ -1,0 +1,1 @@
+Run `terraform plan` and read each import's error or replacement reason. Each resource type documents its own import ID syntax (see the provider docs, 'Import' section).

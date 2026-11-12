@@ -1,0 +1,21 @@
+name: Halden Field B Teardown
+description: >-
+  Sunday night's Field B teardown at Halden Marquee Hire died partway: the runner was killed
+  after marquee m1 was handed back, mid-way through m2. The landowner wants the field empty and the rigs
+  returned by morning, but now nothing moves. The site plan fails to render with Field B switched
+  off, the rigging handover refuses to run, and a tags file for marquee m3 is lying around with
+  no state behind it. The client register must survive for next season's contracts.
+objective: >-
+  Finish the teardown: every Field B object gone from state, all three rigs returned through the
+  real handover (crates/unrig.log shows m1, m2 and m3), no leftover tags files, no stale lock,
+  and the client register keeping its serial. End with a clean plan.
+xp: 400
+difficulty: expert
+expected_time: 40m
+concepts:
+  - interrupted destroy
+  - destroy-time provisioners
+  - orphaned files
+  - optional module references
+module: module-15-war-games
+level: level-8-interrupted-destroy

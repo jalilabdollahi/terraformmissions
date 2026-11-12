@@ -1,1 +1,1 @@
-The string uses semicolons (`;`) but `split()` is looking for commas (`,`). They don't match, so no split happens.
+split() on an empty string returns a list with ONE empty string, and pieces keep the spaces around the commas. So 'Oak Gate, Mill Ford,, Stone Cross,' gives 6 pieces, some blank, some with a leading space.

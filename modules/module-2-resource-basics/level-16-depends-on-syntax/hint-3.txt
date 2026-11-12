@@ -1,0 +1,1 @@
+Write depends_on = [local_file.clues] in both places.

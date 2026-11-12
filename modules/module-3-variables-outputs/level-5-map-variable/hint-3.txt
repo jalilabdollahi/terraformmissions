@@ -1,1 +1,0 @@
-Change `b = 2` to `b = "2"` — wrap the number in double quotes.

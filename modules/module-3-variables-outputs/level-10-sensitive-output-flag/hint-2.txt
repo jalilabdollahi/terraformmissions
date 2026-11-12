@@ -1,0 +1,1 @@
+The password variable is sensitive, and the URL output interpolates it. Terraform makes you acknowledge that by declaring the output sensitive too — otherwise it would print the secret.

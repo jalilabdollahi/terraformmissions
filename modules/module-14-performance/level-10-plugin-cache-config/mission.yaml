@@ -1,0 +1,22 @@
+name: Render Farm Plugin Shelf
+description: >-
+  Kiln Street Studios runs forty throwaway CI agents, and each one downloads the same provider
+  plugins on every "terraform init". The platform engineer added a CLI config file, ci/terraform.rc,
+  to share a plugin cache, but the agents' init logs still say "Installing ..." for every run and
+  nothing ever appears in the cache folder.
+objective: >-
+  Fix ci/terraform.rc and ci/agent-setup.sh so a CI agent gets a working shared plugin cache:
+  plugin_cache_dir must be an existing directory under $HOME (a literal ~ is not expanded),
+  agent-setup.sh must create exactly that directory, checkpoint phone-home must be disabled, and
+  two separate working directories initialised with this config must both link their providers
+  from the same cache.
+xp: 364
+difficulty: expert
+expected_time: 20m
+concepts:
+  - plugin_cache_dir
+  - CLI configuration file
+  - init performance
+  - CI agents
+module: module-14-performance
+level: level-10-plugin-cache-config

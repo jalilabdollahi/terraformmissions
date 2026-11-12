@@ -1,0 +1,1 @@
+Plan: wrap the Field B reference in the site plan with try(..., []); check `kill -0 4242` and the lock contents, then remove crates/manifest.lock; terraform apply so that the destroy provisioners run for m2 and m3; delete tags/m3.txt by hand; terraform plan to confirm clean and check crates/unrig.log.

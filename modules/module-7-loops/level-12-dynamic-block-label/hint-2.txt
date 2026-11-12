@@ -1,0 +1,1 @@
+The label after `dynamic` is the name of the nested block you are generating, and it must be a block type the resource really has. `files` is not one; check the provider documentation for what archive_file calls its repeated block.

@@ -1,0 +1,21 @@
+name: Whisky Bond Gate
+description: >-
+  Glenmorrow Distillery runs a whisky bonded warehouse whose manifests are managed in Terraform.
+  Before any plan may be applied, the pipeline pipes "terraform show -json" into policy/check.sh
+  and blocks on a non-zero exit. The script was written in a hurry: last week a replacement of a
+  manifest file sailed through, a world-readable manifest was approved, and a plan file that
+  could not even be read was reported as compliant.
+objective: >-
+  Fix policy/check.sh so it follows policy/RULES.txt exactly: exit 0 for a compliant plan, 1 when
+  a rule is broken (printing one VIOLATION line per problem), 2 when the plan file is missing or
+  not JSON. It is tested against many prepared plans plus the real plan of this workspace.
+xp: 357
+difficulty: expert
+expected_time: 25m
+concepts:
+  - terraform show -json
+  - jq
+  - policy as code
+  - fail closed
+module: module-14-performance
+level: level-9-plan-json-policy

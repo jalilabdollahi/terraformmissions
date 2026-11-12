@@ -1,0 +1,19 @@
+name: Longline Sample Sheets
+description: >-
+  A seaweed farm keeps one sample sheet per longline. Terraform reads every sheet with a
+  single for_each data source and builds the farm board, but the config trips over how
+  for_each names, finds and returns its instances.
+objective: >-
+  Make the data source read samples/*.txt and output growth as a map keyed by longline id
+  without the extension ({"l07-kelp": 23.4, "l12-dulse": 24.1, "l15-kelp": 22.8}),
+  with average_growth "23.43". A sheet added to samples/ must appear automatically.
+xp: 200
+difficulty: intermediate
+expected_time: 12m
+concepts:
+  - for_each on data sources
+  - fileset
+  - each.value
+  - instance keys
+module: module-8-data-sources
+level: level-8-data-for-each

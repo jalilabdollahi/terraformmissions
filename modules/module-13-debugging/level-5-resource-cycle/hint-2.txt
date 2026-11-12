@@ -1,0 +1,1 @@
+The roster needs a value that only exists after the schedule is written (its checksum). The schedule only needs the roster's *file name*, and that is something you wrote yourself in the config.

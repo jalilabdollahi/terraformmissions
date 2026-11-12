@@ -1,1 +1,0 @@
-In HCL, numbers are written without quotes: `16`, not `"16"`.

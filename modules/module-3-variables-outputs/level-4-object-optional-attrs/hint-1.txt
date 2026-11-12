@@ -1,0 +1,1 @@
+Run `terraform plan`. The error mentions `terraform.tfvars` and an attribute that "is required" — check which entries in that file lack it.

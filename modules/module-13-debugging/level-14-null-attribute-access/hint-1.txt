@@ -1,0 +1,1 @@
+The error names the exact expression: look at which attribute is read from `item.claim`. What is `item.claim` for the scarf and the thermos?

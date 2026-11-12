@@ -1,0 +1,1 @@
+Read the plan summary: "20 to add, 20 to destroy" after a pure refactor means state still lives under the old addresses. Run terraform state list and compare it with the resource blocks in main.tf, then plan how each old address maps to a new one.

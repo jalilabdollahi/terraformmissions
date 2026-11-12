@@ -1,0 +1,18 @@
+name: Room Sheet Import
+description: >-
+  Warden Ilse wrote an import block to adopt room number the halls already assigned to
+  the first-year student, but terraform plan rejects it. Once the address is sorted out, the plan
+  still wants to throw the number away and draw a fresh one.
+objective: >-
+  Fix imports.tf so the import block adopts the real room number into
+  random_integer.room_number (the number and range are on halls/room-sheet.txt), then run
+  apply so it is imported. The state must hold the original number and the plan must be clean.
+xp: 210
+difficulty: intermediate
+expected_time: 12m
+concepts:
+  - import block
+  - to address and id
+  - composite import IDs
+module: module-4-state-management
+level: level-8-import-block-to

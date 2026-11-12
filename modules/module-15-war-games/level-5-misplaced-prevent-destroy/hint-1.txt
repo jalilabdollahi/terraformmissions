@@ -1,0 +1,1 @@
+Run `terraform plan` and read the first error. Then ask which objects in this configuration are genuinely irreplaceable, and whether the guard sits on those.

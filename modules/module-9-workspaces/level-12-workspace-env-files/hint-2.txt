@@ -1,0 +1,1 @@
+Two problems: `file()` returns text, so attributes can't be read from it without decoding it, and one settings file is named after a different word than the workspace.

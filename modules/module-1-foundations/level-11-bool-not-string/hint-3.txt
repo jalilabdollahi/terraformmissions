@@ -1,0 +1,1 @@
+Replace the four values with `true` / `false` (no quotes). The printer wants capitals and digits, so upper and numeric are true; lower and special are false.

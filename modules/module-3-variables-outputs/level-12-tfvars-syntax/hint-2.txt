@@ -1,0 +1,1 @@
+A `.tfvars` file is written in HCL assignment syntax: `name = value`. The file uses `name: value`, which is YAML style, so the parser rejects it ("Argument or block definition required").

@@ -3,3 +3,6 @@ workspace/
 progress.json
 __pycache__/
 *.pyc
+.cache/
+certificates/
+.DS_Store

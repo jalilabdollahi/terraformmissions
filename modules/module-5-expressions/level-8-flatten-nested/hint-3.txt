@@ -1,0 +1,1 @@
+Wrap the whole nested for expression in flatten([...]) so the inner lists are merged into one list of objects.

@@ -1,0 +1,1 @@
+Select the prod workspace and run `terraform console`. Evaluate `terraform.workspace`, then evaluate `local.is_prod`.

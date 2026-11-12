@@ -1,1 +1,0 @@
-Delete the entire `resource "local_file" "old"` block, leaving only the `removed` block.

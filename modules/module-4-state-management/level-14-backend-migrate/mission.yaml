@@ -1,0 +1,18 @@
+name: Kiosk State Relocation
+description: >-
+  The Lakeland tourist-information kiosk network's state has lived in state/kiosks.tfstate since day one. The new
+  repository layout keeps secrets-adjacent files in vault/, so the backend block already points
+  at vault/kiosks-prod.tfstate, and terraform now refuses to run because the backend changed.
+objective: >-
+  Move the existing state to the new path declared in terraform.tf so it holds the original
+  kiosk serial and refresh interval, with no resources recreated, and finish with a clean plan.
+  Keep the backend path in terraform.tf as it is.
+xp: 230
+difficulty: intermediate
+expected_time: 12m
+concepts:
+  - terraform init -migrate-state
+  - backend change
+  - state relocation
+module: module-4-state-management
+level: level-14-backend-migrate

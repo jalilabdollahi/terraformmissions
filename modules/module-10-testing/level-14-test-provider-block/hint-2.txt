@@ -1,0 +1,1 @@
+The configuration declares two provider aliases it needs the caller to supply: `local.press` and `local.vault`. The test file acts as that caller and defines `provider "local"` blocks with aliases. One alias in the test file is spelled differently from the one the run maps.

@@ -1,0 +1,18 @@
+name: Route Chart First
+description: >-
+  Meridian Haulage's dispatch config has three parts. Tonight the transport manager only needs the
+  route chart published. The load manifest is blocked until weighbridge delivers a ticket file, and
+  a full apply fails on that. A plain terraform apply is useless right now.
+objective: >-
+  Apply only the route chart with -target, so that local_file.route_chart and the route code it
+  depends on exist, while random_pet.driver, local_file.load_manifest and out/load-manifest.txt
+  do not. Leave the configuration (including the weighbridge precondition) untouched.
+xp: 220
+difficulty: intermediate
+expected_time: 10m
+concepts:
+  - terraform apply -target
+  - resource dependencies
+  - partial apply
+module: module-4-state-management
+level: level-16-target-apply

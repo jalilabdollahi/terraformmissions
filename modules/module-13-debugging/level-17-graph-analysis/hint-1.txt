@@ -1,0 +1,1 @@
+Run `terraform graph` (it prints DOT text; an arrow `"A" -> "B"` means A depends on B) and look at the lines that mention `dispatch`. Then count arrows for the two answers.

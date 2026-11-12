@@ -1,0 +1,1 @@
+Write `{ for tool in local.stock : tool.class => tool.id... if tool.status == "serviceable" }`. The three dots after the value switch on grouping mode, which builds a list per key.

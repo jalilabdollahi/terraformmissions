@@ -1,1 +1,0 @@
-Run `terraform plan`. The error says that `local_file.old` is not declared. Check the `moved` block's `to` value.

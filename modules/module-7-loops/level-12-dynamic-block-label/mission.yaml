@@ -1,0 +1,17 @@
+name: Zip By Another Name
+description: >-
+  Greystone School bundles each trip's paperwork into one zip with archive_file, generating one
+  entry per document using a dynamic block. Terraform insists the block type does not exist.
+objective: >-
+  Make dist/trip-pack.zip contain one entry for every key of var.documents (consent-form.txt,
+  packing-list.txt, emergency-card.txt) with the matching text, using a dynamic block that
+  produces archive_file's own nested block type.
+xp: 215
+difficulty: intermediate
+expected_time: 10m
+concepts:
+  - dynamic blocks
+  - block label
+  - archive_file
+module: module-7-loops
+level: level-12-dynamic-block-label

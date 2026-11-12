@@ -1,0 +1,18 @@
+name: Drone Fleet Keys
+description: >-
+  Skylark's delivery drones verify telemetry with a P-256 ECDSA key, and the ground stations
+  accept firmware only when it is signed with RSA-4096. Terraform rejects the telemetry key,
+  so neither public key gets published to the fleet-keys folder.
+objective: >-
+  Create the telemetry key as ECDSA on the P256 curve and keep the firmware key as RSA 4096.
+  Both public keys must be written in OpenSSH format to fleet-keys/telemetry.pub and fleet-
+  keys/firmware.pub.
+xp: 135
+difficulty: beginner
+expected_time: 8m
+concepts:
+  - tls_private_key
+  - ecdsa_curve
+  - key algorithms
+module: module-2-resource-basics
+level: level-12-tls-key-algorithm

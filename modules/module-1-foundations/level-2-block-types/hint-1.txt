@@ -1,1 +1,0 @@
-Run `terraform validate`. The error says 'An argument or block definition is required' — look at the block keyword.

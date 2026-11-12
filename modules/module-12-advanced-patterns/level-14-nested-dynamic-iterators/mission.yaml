@@ -1,0 +1,18 @@
+name: Two Loops One Tooling Kit
+description: >-
+  Oak & Awl packs a tooling kit zip per workshop with a dynamic block fed by two nested loops.
+  Terraform plan fails because the content block refers to a name that no longer exists, and once that
+  is fixed the zip entries are named 0/belt.txt instead of north/belt.txt.
+objective: >-
+  Make the kit hold exactly east/satchel.txt, north/belt.txt and north/wallet.txt, each
+  containing 'stitch sheet for <piece>'. Keep the dynamic source block and the loop over var.workshops.
+xp: 290
+difficulty: advanced
+expected_time: 18m
+concepts:
+  - dynamic blocks
+  - iterator names
+  - nested for expressions
+  - variable shadowing
+module: module-12-advanced-patterns
+level: level-14-nested-dynamic-iterators

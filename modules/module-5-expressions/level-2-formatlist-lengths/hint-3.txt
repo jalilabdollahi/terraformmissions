@@ -1,0 +1,1 @@
+Pass the currency variable itself, not a list, as the second argument and let formatlist() repeat it for every row.

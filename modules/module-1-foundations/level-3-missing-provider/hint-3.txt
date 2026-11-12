@@ -1,1 +1,0 @@
-Use `~> 2.5` — this means 'any 2.x version >= 2.5', which is the recommended pattern.

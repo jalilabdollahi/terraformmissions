@@ -1,0 +1,1 @@
+Two things hide behind the adoption: not every site in the register is active, and not every serial is the same length. random_id.byte_length cannot be changed in place, so a wrong value turns every import into a replacement. A base64url serial of 8 characters is 6 bytes; longer serials are longer.

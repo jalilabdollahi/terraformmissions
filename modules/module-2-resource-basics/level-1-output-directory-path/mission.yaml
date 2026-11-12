@@ -1,0 +1,17 @@
+name: Toy Factory Shift Board
+description: >-
+  The Tinkertop toy factory prints everything in its out/ folder and pins it beside the assembly line.
+  Since the last change the daily shift board keeps landing in the project root, where nobody
+  looks, while the pallet labels are filed correctly.
+objective: >-
+  Write the shift board to out/shift-board.txt (inside the module directory, like the pallet
+  labels) and make nothing be left behind as shift-board.txt in the project root.
+xp: 115
+difficulty: beginner
+expected_time: 5m
+concepts:
+  - local_file
+  - filename
+  - path.module
+module: module-2-resource-basics
+level: level-1-output-directory-path

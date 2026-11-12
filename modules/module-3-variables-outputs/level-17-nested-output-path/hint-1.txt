@@ -1,0 +1,1 @@
+Run `terraform validate`. There are three separate errors, one per broken output — read each one for the exact expression it complains about.

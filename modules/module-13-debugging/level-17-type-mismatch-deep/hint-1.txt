@@ -1,1 +1,0 @@
-Run `terraform validate`. The error reports a type mismatch — `tomap()` cannot convert a list of strings to a map.

@@ -1,0 +1,1 @@
+Read the plan error about inconsistent conditional result types, then look at the other ternary: what type is each branch of the discount?

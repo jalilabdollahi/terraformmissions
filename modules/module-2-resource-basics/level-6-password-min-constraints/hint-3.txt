@@ -1,0 +1,1 @@
+4 + 4 + 3 + 3 = 14 > 12. Lower the minimums so they add up to at most 12, e.g. 3/3/3/2, while keeping every class at 2 or more.

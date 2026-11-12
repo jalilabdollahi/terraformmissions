@@ -1,1 +1,1 @@
-When two resources share a filename and one must be created before the other is destroyed, the filesystem will complain about the file already existing.
+With create_before_destroy the new board is written first, then the old one is destroyed. Both boards have the same `filename`, so destroying the old one deletes the file the new one just wrote.

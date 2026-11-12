@@ -1,0 +1,17 @@
+name: Marta And Idris Invitations
+description: >-
+  A wedding invitation is stitched together from two text snippets kept in the templates/ folder.
+  Terraform stops during plan, claiming that it cannot find either file.
+objective: >-
+  Make letters/invitation.txt contain the greeting, the header snippet and the footer snippet from
+  templates/. Reference the snippets with paths anchored to the module directory, not the shell's
+  current directory.
+xp: 135
+difficulty: beginner
+expected_time: 7m
+concepts:
+  - file()
+  - path.module
+  - relative paths
+module: module-1-foundations
+level: level-15-path-module-file

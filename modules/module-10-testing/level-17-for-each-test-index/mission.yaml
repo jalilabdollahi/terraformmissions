@@ -1,0 +1,17 @@
+name: Concours Stand Cards
+description: >-
+  Every car entered in the Quayside classic car concours gets a stand card generated from a map of entries. The tests try to
+  inspect individual cards but address them as if the cards were a numbered list, and Terraform rejects
+  every one of them.
+objective: >-
+  Fix the instance addresses in tests/concours.tftest.hcl so that arrow_card, regent_card and all_cards_issued
+  pass, addressing the for_each instances by key. The three-entry check and the stand text must stay.
+xp: 305
+difficulty: advanced
+expected_time: 10m
+concepts:
+  - for_each instances
+  - instance keys in tests
+  - resource addressing
+module: module-10-testing
+level: level-17-for-each-test-index

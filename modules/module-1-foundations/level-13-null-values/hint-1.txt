@@ -1,1 +1,0 @@
-Run `terraform validate`. It reports a contradiction between `nullable = false` and `default = null`.

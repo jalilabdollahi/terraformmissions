@@ -1,0 +1,1 @@
+local_file offers content (text), content_base64 (bytes) and source. They are mutually exclusive, and a PNG is binary data.

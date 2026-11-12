@@ -1,0 +1,1 @@
+Create components/junction-controller/{terraform.tf,main.tf} with `module "sheet" { source = "../../modules/plan_sheet" unit = "junction-controller" out_dir = "${path.module}/out" lines = [...] }` using the same lines as the current module call, repeat for bus-priority and crossing-countdown, then delete the three module calls from the root main.tf.

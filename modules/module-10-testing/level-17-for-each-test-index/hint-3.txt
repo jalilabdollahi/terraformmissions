@@ -1,0 +1,1 @@
+Use `local_file.stand_card["arrow"]` and `local_file.stand_card["regent"]`. Not `[0]`, and keys are case-sensitive: `Regent` is not `regent`.

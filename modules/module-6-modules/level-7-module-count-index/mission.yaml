@@ -1,0 +1,19 @@
+name: Boardwalk Lamp Posts
+description: >-
+  The Brightwater boardwalk numbers its lamp posts through a module that is instantiated once per
+  post with count. The first attempt stamps the same number on every post, and the outputs that
+  report the posts refuse to compile.
+objective: >-
+  Create posts_total instances of module.post, numbered starting from 1 (labels LP-01, LP-02, ...),
+  and make the labels output the list of all labels and last_label the label of the final
+  post. With the default of 3 posts labels is LP-01, LP-02, LP-03; with -var posts_total=5 it
+  has five entries.
+xp: 195
+difficulty: intermediate
+expected_time: 12m
+concepts:
+  - count on modules
+  - module instances
+  - splat expressions
+module: module-6-modules
+level: level-7-module-count-index

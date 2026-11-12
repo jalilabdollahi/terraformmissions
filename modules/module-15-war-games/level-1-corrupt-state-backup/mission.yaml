@@ -1,0 +1,21 @@
+name: Meridian Detector Blackout
+description: >-
+  03:12 — the Meridian Particle Collider trigger system pages everyone: Terraform will not even
+  list the ring's resources. A disk-full event cut terraform.tfstate off mid-write. There is a
+  terraform.tfstate.backup next to it, but it is one apply old: the west station and the north
+  station's retune were applied after it was taken. The trigger serials are burned into trigger-board
+  firmware and cannot change before the 06:00 beam fill.
+objective: >-
+  Make Terraform read a healthy state again and bring all four stations (north, south, east, west)
+  under management with their ORIGINAL trigger serials. The final plan must be clean with
+  nothing destroyed or replaced, and calibration/station-north.cfg must show the 1420.4 kHz retune.
+xp: 350
+difficulty: expert
+expected_time: 30m
+concepts:
+  - corrupt state recovery
+  - state backup
+  - terraform import
+  - triage order
+module: module-15-war-games
+level: level-1-corrupt-state-backup

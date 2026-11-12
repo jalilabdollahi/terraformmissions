@@ -1,0 +1,1 @@
+terraform apply works; print the manifest and count the empty lines. Each line that holds only a %{ ... } directive is still a line of the template, so its newline survives.

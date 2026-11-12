@@ -1,0 +1,1 @@
+Look at how the 300 blocks differ: block letter, row number, seat number, and nothing else. Run `terraform state list | head` to see the old addresses.

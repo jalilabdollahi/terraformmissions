@@ -1,0 +1,1 @@
+Try `terraform workspace delete trial` and read the message. It tells you why Terraform refuses.

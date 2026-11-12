@@ -1,0 +1,1 @@
+The engraving is a PNG, not text. The `content` attribute is a string and Terraform stores strings as UTF-8 text, so raw bytes do not survive. The data source also exposes a second, binary-safe attribute.

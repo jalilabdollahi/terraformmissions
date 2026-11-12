@@ -1,0 +1,1 @@
+After `terraform apply` run `terraform output closure_paths`. Is it a list or a single value? Compare it with `closure_count`.

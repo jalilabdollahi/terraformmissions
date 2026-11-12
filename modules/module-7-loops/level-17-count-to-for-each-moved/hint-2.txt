@@ -1,0 +1,1 @@
+State holds `random_pet.mascot[0]`, `[1]`, `[2]` (from the old `count`). The code now wants `random_pet.mascot["odette"]` etc. Terraform sees different addresses and plans replace. You must tell it which old address became which new one.

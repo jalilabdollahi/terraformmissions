@@ -1,0 +1,1 @@
+Use `private_key_pem_wo = ephemeral.tls_private_key.scooter.private_key_pem` and add `private_key_pem_wo_version = 1` (the version is what you bump to resend the secret).

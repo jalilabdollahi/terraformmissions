@@ -1,0 +1,14 @@
+name: Wickham Jar Labels
+description: >-
+  Wickham Candle Works builds its jar labels and pouring sheet with for expressions. Plan fails with an invalid operand while numbering the jars, and then complains about a variable that does not exist while writing the pouring sheet.
+objective: >-
+  Number the jars from 01 in list order with upper-case scents (01-LAVENDER, 02-CEDAR, 03-FIG & HONEY), write one 'scent: grams g' line per batch, and total the wax at 1350 g. All derived from the variables.
+xp: 180
+difficulty: intermediate
+expected_time: 8m
+concepts:
+  - for expression
+  - list iteration
+  - index and value
+module: module-5-expressions
+level: level-16-for-list-transform

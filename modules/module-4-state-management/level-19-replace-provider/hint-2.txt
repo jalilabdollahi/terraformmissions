@@ -1,0 +1,1 @@
+The state records the random provider as `registry.terraform.io/-/random` (the Terraform 0.12 placeholder for "unknown namespace"). The current address is `registry.terraform.io/hashicorp/random`. There is a state subcommand that rewrites exactly this.

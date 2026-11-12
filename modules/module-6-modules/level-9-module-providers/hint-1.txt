@@ -1,1 +1,0 @@
-Run `terraform validate`. The error mentions `local.wrong_alias` is not declared.

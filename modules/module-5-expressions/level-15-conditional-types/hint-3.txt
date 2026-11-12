@@ -1,0 +1,1 @@
+Return a list in both branches of zips, ["canopy"] instead of "canopy", and a number in both branches of discount_factor, 1 instead of "full".

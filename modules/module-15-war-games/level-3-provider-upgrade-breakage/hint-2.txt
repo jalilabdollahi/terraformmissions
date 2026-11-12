@@ -1,0 +1,1 @@
+After the upgrade, validate fails on arguments the 4.x provider now computes itself (they became read-only). Fix those, then run `terraform plan` and study which attributes are marked "forces replacement" - and which resources they belong to. Compare with `terraform state list` to see which objects are the irreplaceable ones.

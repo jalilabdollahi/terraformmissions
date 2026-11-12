@@ -1,0 +1,1 @@
+Run `terraform test -verbose`. Compare each failing `error_message` (the intent) with the condition above it and the `Diff:` or `LHS/RHS` values Terraform prints.

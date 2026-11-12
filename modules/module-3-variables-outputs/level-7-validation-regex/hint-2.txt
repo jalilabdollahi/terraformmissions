@@ -1,0 +1,1 @@
+The pattern `^[A-Z]{3}[0-9]{4}$` describes three letters immediately followed by four digits. The example code ORC-2041 has a hyphen in between, so the condition can never be true for a real code.

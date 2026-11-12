@@ -1,0 +1,14 @@
+name: Hollin Diet Whiteboard
+description: >-
+  The cooks' diet whiteboard at Hollin Farm Hospital Kitchen is generated from a batch-size table. When the dietitian added low_salt and gluten_free to the diet list, plan started failing because they have no tailored batch size.
+objective: >-
+  Give listed diets their own batch size and every other diet the standard batch size from var.standard_batch_kg (low_salt 3 kg and gluten_free 3 kg by default), with no hard-coded number.
+xp: 165
+difficulty: intermediate
+expected_time: 7m
+concepts:
+  - lookup
+  - map defaults
+  - missing keys
+module: module-5-expressions
+level: level-6-lookup-default

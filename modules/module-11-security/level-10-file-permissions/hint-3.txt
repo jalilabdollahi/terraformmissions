@@ -1,1 +1,0 @@
-Change `file_permission = "777"` to `file_permission = "0600"`.

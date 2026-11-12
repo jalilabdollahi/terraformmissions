@@ -1,0 +1,1 @@
+Only terraform.tfstate is ignored, so the backup, workspace and errored state files, plan files and every tfvars file are exposed. And .terraform.lock.hcl is ignored although it should be committed to pin provider versions.

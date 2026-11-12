@@ -1,0 +1,1 @@
+Run ci/pipeline.sh in a copy of the repo with a badly indented file, and again with a broken reference. Watch what it does and what exit code you get.

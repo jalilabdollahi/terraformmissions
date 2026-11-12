@@ -1,1 +1,0 @@
-Change `local_file.nonexistent.id` to `local_file.config.id` in the triggers map.

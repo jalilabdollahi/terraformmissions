@@ -1,0 +1,1 @@
+A provider source address has the form `namespace/type`, and the type is the word that resource names start with: local_file belongs to the provider `local`.

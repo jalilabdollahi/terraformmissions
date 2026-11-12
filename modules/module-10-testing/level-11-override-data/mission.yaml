@@ -1,0 +1,18 @@
+name: Disc Golf Wind Check
+description: >-
+  Terraform decides whether the disc golf course may open for play by reading the wind meter's output file. That file
+  only exists on the course, so the tests have to fake the reading with override_data, and
+  two of the three scenarios cannot read it.
+objective: >-
+  Make calm_morning, gale_warning and gusty_edge pass using override_data on
+  data.local_file.windmeter in each run (values must set the real attribute that the code reads).
+  Do not create sensor/wind-kph.txt.
+xp: 275
+difficulty: advanced
+expected_time: 12m
+concepts:
+  - override_data
+  - data sources in tests
+  - values attributes
+module: module-10-testing
+level: level-11-override-data

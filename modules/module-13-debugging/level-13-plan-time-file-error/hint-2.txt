@@ -1,0 +1,1 @@
+`file()` runs while Terraform builds the plan, but the notes file is created only by `local_file.session_notes` during apply. On a fresh checkout it is not there yet. Terraform already knows the content, because it is the resource's own `content` argument.

@@ -1,1 +1,0 @@
-Change the output to `value = try(local_file.config[0].filename, "")`.

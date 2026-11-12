@@ -1,0 +1,1 @@
+A plain `<<EOT` heredoc keeps every space of every line exactly as written. The heredoc operator that strips the common leading indentation has one extra character.

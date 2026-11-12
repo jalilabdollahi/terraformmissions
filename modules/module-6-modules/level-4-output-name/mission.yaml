@@ -1,0 +1,18 @@
+name: Mycelium Batch Cards
+description: >-
+  The Hollowpine mushroom farm tags every grow room through a module called cellar, which exposes
+  a batch id, a humidity target and the path of the printed tray card. The root configuration that
+  reports them keeps tripping over names that the module does not have.
+objective: >-
+  Make the root configuration read the module's real outputs, so that the root outputs batch,
+  humidity and card show SHI-W14, 78 and ./cards/shiitake.txt with the defaults. They must follow
+  the species and week variables when those change. Do not edit the module.
+xp: 180
+difficulty: intermediate
+expected_time: 10m
+concepts:
+  - module outputs
+  - output names
+  - attribute errors
+module: module-6-modules
+level: level-4-output-name

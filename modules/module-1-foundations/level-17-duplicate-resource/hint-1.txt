@@ -1,0 +1,1 @@
+Run `terraform validate`. The error names two file/line pairs. What do those two blocks have in common?

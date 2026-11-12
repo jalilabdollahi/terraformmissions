@@ -1,0 +1,1 @@
+`local.layouts[terraform.workspace]` raises an error when the map has no entry with the workspace's name. The qa entry simply does not exist.

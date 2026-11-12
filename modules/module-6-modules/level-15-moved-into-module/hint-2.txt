@@ -1,0 +1,1 @@
+Moving code into a module changes the resource's address from `random_id.ticket` to `module.shed.random_id.ticket`. State still holds the old address, so Terraform sees a deletion and a creation. A `moved` block tells it these are one object.

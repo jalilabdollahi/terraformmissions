@@ -1,1 +1,0 @@
-The `tls` provider supports only three algorithms: RSA, ECDSA, and ED25519. DSA is a legacy algorithm and is not implemented.

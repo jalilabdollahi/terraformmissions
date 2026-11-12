@@ -1,0 +1,1 @@
+Three things are easy to miss: the old stall objects are numbered by position, and the order of the old list (h2, h1, h3) is visible in out/works-sheet.txt through the load ratings; the "paint" module was renamed AND the resource inside it was renamed; and the prototype run is no longer in the code, but it must not be destroyed either.

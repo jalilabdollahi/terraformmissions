@@ -1,0 +1,1 @@
+Run `terraform plan`. The first message is about the `for_each` argument of module.piece and tells you what kind of value it wants.

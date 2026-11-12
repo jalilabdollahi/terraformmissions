@@ -1,1 +1,0 @@
-Add `.result` to access the generated string: `${random_string.token.result}`.

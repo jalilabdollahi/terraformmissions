@@ -1,1 +1,0 @@
-Change `terraform.workpsace` to `terraform.workspace` in the `filename` attribute.

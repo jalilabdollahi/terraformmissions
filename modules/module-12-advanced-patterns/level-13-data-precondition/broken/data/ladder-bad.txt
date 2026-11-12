@@ -1,0 +1,6 @@
+rank,player,rating
+1,Ingrid Halvorsen,2134
+2,Tomas Kerr,2051
+3,Pavel Novak,1987
+4,Amara Okafor,1940
+5,Linh Tran,1902

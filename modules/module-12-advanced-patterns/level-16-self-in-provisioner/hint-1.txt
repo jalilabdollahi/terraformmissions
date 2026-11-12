@@ -1,0 +1,1 @@
+Run `terraform validate`. The error points at the second `provisioner` block and lists what it is allowed to reference.

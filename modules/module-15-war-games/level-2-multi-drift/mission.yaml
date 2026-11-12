@@ -1,0 +1,22 @@
+name: Harrow Tempering Hall Drift
+description: >-
+  Harrow Chocolate Tempering Hall starts a new dark-chocolate campaign at dawn and the pre-run audit finds the
+  control files disagree with Terraform in five different ways. A tech mistyped kettle A's
+  chill time, kettle B's file vanished in a PLC swap, the foreman hot-fixed the temper recipe
+  with the quality lab's blessing (ticket INC-4471), mold C was scrapped and its file removed, and
+  somebody tainted the campaign cocoa lot although the wrappers have already shipped.
+objective: >-
+  Reconcile all five objects in the right direction. Kettle A gets the code's chill time back,
+  kettle B's file is restored, the approved 122 F melt temperature becomes the new value in
+  the code, mold C is retired from management for good, and the cocoa lot keeps its original ID.
+  End with a clean plan and no pending destroy.
+xp: 360
+difficulty: expert
+expected_time: 30m
+concepts:
+  - drift triage
+  - adopt versus revert
+  - terraform untaint
+  - retiring resources
+module: module-15-war-games
+level: level-2-multi-drift

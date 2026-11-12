@@ -1,0 +1,1 @@
+Run `terraform test -verbose` and compare the two failing runs: one reports the real precondition error as unexpected, the other says an expected failure never occurred.

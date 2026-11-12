@@ -1,0 +1,14 @@
+name: Reading In The Wrong Order
+description: >-
+  The Ashfall volcano monitoring post publishes a status line for the trailhead warning board from a tuple of station id, temperature and sensor state. Someone typed the default in the order they say it aloud.
+objective: >-
+  Make the configuration valid with the tuple type unchanged, so station_id is summit-vent, temp_c is the number 142.5 and online is the boolean true.
+xp: 150
+difficulty: beginner
+expected_time: 6m
+concepts:
+  - tuples
+  - positional-types
+  - conversion
+module: module-3-variables-outputs
+level: level-6-tuple-positions

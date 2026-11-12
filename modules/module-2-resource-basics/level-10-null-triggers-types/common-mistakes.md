@@ -1,0 +1,4 @@
+- Wrapping the list in `tostring()`. Terraform cannot convert a list to a string that way and errors again.
+- Deleting the cues trigger. The crew would no longer be told to re-read the sheet when the order changes.
+- Changing the local to a comma-separated string. The running order should stay a list because the cue file uses it as one.
+- Using `local.running_order[0]`. It compiles but ignores the other three cues.

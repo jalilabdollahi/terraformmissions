@@ -1,1 +1,0 @@
-Use `contains(["dev", "staging", "production"], var.env)` to accept all valid environments.

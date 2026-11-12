@@ -1,0 +1,1 @@
+`terraform init` has two ways to deal with a changed backend: `-reconfigure` (adopt the new backend and ignore old state) and `-migrate-state` (copy the existing state to the new backend). You want the object identities to survive.

@@ -1,0 +1,1 @@
+Change `scripts/` to `probes/` for `bore`. For `air`, run `chmod +x probes/air-quality.py` (or put `python3` in front of the path in `program`). For `damp`, use `bash` instead of `python3` as the interpreter.

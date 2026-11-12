@@ -1,0 +1,1 @@
+Passing `null` to a module variable does not trigger its default; it explicitly sets the variable to null, and the template then cannot interpolate it. The variable needs to say that null is not an acceptable value.

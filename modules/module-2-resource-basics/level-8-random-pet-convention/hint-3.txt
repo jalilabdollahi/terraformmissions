@@ -1,0 +1,1 @@
+The prefix is not counted in length. Use prefix = "donkey" (no space, no capitals), length = 2 and separator = "-".

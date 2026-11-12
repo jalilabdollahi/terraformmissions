@@ -1,0 +1,23 @@
+name: Pennywhistle Carousel Module Tree
+description: >-
+  INCIDENT 0420 - Pennywhistle Clockwork Carousel Works. The workshop control plane was a single flat file; PR #88
+  restructured it into movements, stables (with a nested stalls module), compliance and finishes
+  modules, retired null_resource in favour of terraform_data, renamed the "paint" module to "finishes"
+  and dropped the scratch prototype run. The pipeline plan now wants to destroy and rebuild everything,
+  including the ride licence, the stall load ratings on the brass plates and the oiling
+  record, in the middle of a production week.
+objective: >-
+  Make the refactored tree adopt the running works with zero destroys and zero re-issued values:
+  describe every address change (flat to module, nested module, count index to named key,
+  null_resource to terraform_data, renamed module and renamed resource inside it) with moved blocks,
+  forget the prototype run without destroying it using a removed block, and end with a clean plan.
+xp: 600
+difficulty: expert
+expected_time: 60m
+concepts:
+  - moved blocks across modules
+  - removed blocks
+  - null_resource to terraform_data
+  - zero-destroy refactor
+module: module-15-war-games
+level: level-20-zero-downtime-refactor

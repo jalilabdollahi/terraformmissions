@@ -1,33 +1,24 @@
-# Module Missing Workspace Key
+# Debrief: decide what an unknown workspace means
 
-## What Was Broken
-The `env_map` was missing the `"default"` key. When running in the default workspace,
-`local.env_map[terraform.workspace]` resolves to `local.env_map["default"]`, which
-does not exist.
+Anyone can run `terraform workspace new`, so the set of workspaces is open-ended, while a ternary chain or a
+settings map covers a closed list. Eventually somebody creates a workspace the code has never heard of, a
+pull request preview, a hotfix, a typo. Your configuration then needs a deliberate answer to "what
+happens here?" It has three reasonable ones:
 
-## The Fix
-```hcl
-locals {
-  env_map = {
-    default    = "development"
-    staging    = "staging"
-    production = "production"
-  }
-}
-```
+1. **Fail loudly.** A map index with no default: great for environments like prod where a typo must never
+   produce a weak copy.
+2. **Fall back to a safe minimum.** What this level asks for, one lane. It suits ephemeral workspaces.
+3. **Fail with a clear message.** A `precondition` that lists the allowed names.
 
-## Passing Workspace-Derived Values to Modules
-```hcl
-module "app" {
-  source = "./modules/app"
-  env    = local.env_map[terraform.workspace]
-}
-```
+The unnoticed part of this bug is where it surfaced. The module's input validation caught the bad value
+and named the variable, but the real fault was one module up, in the expression that computed it. When a
+module rejects an input, read it as a pointer to the *caller*. Weakening the module (allowing 0) would have
+turned an error into a silent empty alley.
 
-This is a clean pattern — the root module handles workspace-to-environment translation,
-and the child module only knows about `var.env`.
+`lookup(map, key, default)` replaces a nested ternary with data, which is easier to read and review, and a
+new environment becomes a one-line addition to the map.
 
-## Alternative with try()
-```hcl
-env = try(local.env_map[terraform.workspace], "development")
-```
+**When workspaces are the wrong tool:** preview environments per pull request are a fine use of
+workspaces, but long-lived environments that differ in size, features and ownership deserve their own
+variable files or root modules. A default value cannot save you from environments that are really
+different systems.

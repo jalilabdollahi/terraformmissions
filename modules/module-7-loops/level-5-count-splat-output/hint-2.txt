@@ -1,0 +1,1 @@
+The output points at one instance, `local_file.closure[0]`, so it can only ever say something about the first production. A counted resource is a *list* of instances.

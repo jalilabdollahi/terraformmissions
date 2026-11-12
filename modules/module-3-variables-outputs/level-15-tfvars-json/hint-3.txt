@@ -1,0 +1,1 @@
+Remove the comma after the `site` line, and make `site` a JSON object: `"site": { "lat": 36.2, "lon": -118.9 }`. Keys are the variable names; numbers are unquoted.

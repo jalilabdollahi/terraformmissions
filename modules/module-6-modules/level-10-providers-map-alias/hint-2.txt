@@ -1,0 +1,1 @@
+The module declares `configuration_aliases = [local.mirror]`: it needs a second provider configuration that only the caller can supply. Providers are never passed through variables; the module call takes a `providers` map from the module's names to the root's configurations.

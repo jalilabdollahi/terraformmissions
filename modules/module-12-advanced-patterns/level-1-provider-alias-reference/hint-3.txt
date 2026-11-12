@@ -1,0 +1,1 @@
+Write `provider = random.north_pit` and `provider = random.south_pit` with no quotes. The text after the dot must match the `alias` argument exactly.

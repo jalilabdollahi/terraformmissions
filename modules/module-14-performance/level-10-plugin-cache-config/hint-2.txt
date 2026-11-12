@@ -1,0 +1,1 @@
+Three things are wrong: `~` is not expanded in a CLI config file (`$HOME` is), the setup script creates a different directory than the config points to, and `disable_checkpoint` is still false. With a missing cache directory Terraform silently ignores the setting.

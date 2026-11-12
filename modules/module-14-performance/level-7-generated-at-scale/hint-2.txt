@@ -1,0 +1,1 @@
+Build a map in a `locals` block (setproduct of blocks, rows and seats works well) whose keys look like "a-1-01", then drive one `local_file` with for_each over it. The addresses change from `local_file.seat_a_1_01` to `local_file.seat["a-1-01"]`, so every existing object needs a `moved` block, or the plan destroys and re-creates all 300.

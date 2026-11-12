@@ -1,0 +1,1 @@
+Run `terraform validate` and read the first error. It concerns the keyword that opens the block of constants.

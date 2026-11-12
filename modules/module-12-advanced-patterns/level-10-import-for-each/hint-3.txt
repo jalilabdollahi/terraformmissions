@@ -1,0 +1,1 @@
+Replace the single import with `import { for_each = var.legacy_tickets  to = random_integer.ticket[each.key]  id = each.value }` (on separate lines).

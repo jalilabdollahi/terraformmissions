@@ -1,0 +1,1 @@
+newbits = var.subnet_prefix - the prefix length of base_cidr. Get that with tonumber(split("/", var.base_cidr)[1]); here 26 - 22 = 4 bits, which gives 16 subnets.

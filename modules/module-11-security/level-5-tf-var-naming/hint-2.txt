@@ -1,0 +1,1 @@
+Terraform looks for an environment variable called TF_VAR_ plus the variable name, character for character and case-sensitive. A hyphen cannot even be typed into most shells' export statements.

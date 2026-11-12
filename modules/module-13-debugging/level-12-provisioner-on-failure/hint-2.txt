@@ -1,0 +1,1 @@
+The provisioner's `on_failure = continue` turns the script's error into a warning. The script itself refuses the argument it is given: it wants a whole number, and the command passes it with an extra letter.

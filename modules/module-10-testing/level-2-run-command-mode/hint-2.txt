@@ -1,0 +1,1 @@
+Each `run` block has a `command` that decides how far Terraform goes. One of those modes never creates a resource, so nothing can be on disk when the assertion is evaluated.

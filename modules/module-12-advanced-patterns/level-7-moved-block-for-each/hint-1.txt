@@ -1,1 +1,0 @@
-Run `terraform validate`. The error points to the `moved` block's `to` line — look at `local_file.items[primary]`.

@@ -1,0 +1,1 @@
+Rename the argument `output = {...}` to `input = {...}`, and read `terraform_data.batch_record.output.batch` / `.boxes`.

@@ -1,0 +1,1 @@
+Run `terraform plan`. The error names a module call and an argument. Then open modules/lockgate/main.tf and list its `variable` blocks.

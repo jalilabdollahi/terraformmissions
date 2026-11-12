@@ -1,0 +1,14 @@
+name: "Wrong Name On The Armoury Door"
+description: >-
+  A fencing club's CI job exports TF_VAR_armoury_code, TF_VAR_club_region and TF_VAR_squad_roster before it runs Terraform, yet the keypad code and the region never arrive. The pipeline keeps stopping on missing values that the engineers swear they set.
+objective: >-
+  Make the variable names match what the CI job exports: armoury_code (sensitive) and club_region. The files armoury/keypad-code.txt and armoury/door-card.txt must be built from the environment values, with the keypad code file mode 0600.
+xp: 250
+difficulty: advanced
+expected_time: 10m
+concepts:
+  - TF_VAR_ environment variables
+  - variable naming
+  - case sensitivity
+module: module-11-security
+level: level-5-tf-var-naming

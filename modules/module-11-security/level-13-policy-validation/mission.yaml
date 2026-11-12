@@ -1,0 +1,14 @@
+name: "Saint Odran Gateway Policy"
+description: >-
+  The Saint Odran scriptorium's archive gateway is supposed to accept only internal networks and modern TLS. The variable validation that enforces this was written in a hurry, and a reviewer has found inputs that sail straight through it.
+objective: >-
+  Tighten the two validation rules so that allowed_cidrs must be non-empty, contain only valid networks, none shorter than a /8 (so never 0.0.0.0/0, ::/0 or 0.0.0.0/1), and min_tls_version is only 1.2 or 1.3. The default values and normal inputs such as IPv6 ULA ranges must keep working.
+xp: 300
+difficulty: advanced
+expected_time: 15m
+concepts:
+  - variable validation
+  - security policy
+  - cidr checks
+module: module-11-security
+level: level-13-policy-validation

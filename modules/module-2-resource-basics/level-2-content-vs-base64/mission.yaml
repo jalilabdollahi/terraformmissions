@@ -1,0 +1,17 @@
+name: Lift Closed Badge
+description: >-
+  Pinecrest Ridge's lift-status signage needs a real PNG file for its red CLOSED badge. The
+  config was written in a hurry, passing the picture to local_file twice, and Terraform
+  refuses to even plan it.
+objective: >-
+  Make signage/lift-closed.png a valid PNG image whose bytes are the base64-decoded badge from
+  the config. Keep both local_file resources and keep the picture in base64 form.
+xp: 115
+difficulty: beginner
+expected_time: 6m
+concepts:
+  - local_file
+  - content_base64
+  - binary files
+module: module-2-resource-basics
+level: level-2-content-vs-base64

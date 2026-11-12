@@ -1,1 +1,0 @@
-Run `terraform validate`. The error says `sensitive` must be a bool, not a string.

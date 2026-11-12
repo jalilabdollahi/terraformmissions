@@ -1,0 +1,21 @@
+name: Skerrow Roster Module v2
+description: >-
+  The station-roster module vendored at Skerrow Point Lifeboat Station was bumped to v2.0 and the
+  pipeline blocks the release. The v2 changelog lists renamed inputs and outputs, and quietly
+  renamed two resources as well; a first draft of the plan wants to replace ten objects, which
+  would repaint every helmet call-sign in the crew. A new default shift length of 8 hours is
+  also due to take effect only after the crew welfare policy is signed next month.
+objective: >-
+  Adopt v2 of the module in place: all five call-signs keep their values at the new v2 addresses,
+  the duty cards still say shift 12h, nothing is destroyed or replaced, and the final plan is clean.
+  The module's own renames should be handled so every consumer benefits.
+xp: 405
+difficulty: expert
+expected_time: 40m
+concepts:
+  - module upgrade
+  - moved blocks
+  - changed defaults
+  - interface renames
+module: module-15-war-games
+level: level-9-module-v2-upgrade

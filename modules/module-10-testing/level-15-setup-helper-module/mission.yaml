@@ -1,0 +1,18 @@
+name: Comedy Club Lineup Setup
+description: >-
+  A stand-up comedy club computes whether a show needs an intermission from an act lineup file. The tests use
+  a helper module to write that lineup before the real tests read it, but neither helper step does its
+  job.
+objective: >-
+  Make setup, short_show, setup_long and double_header pass: both helper runs must really apply
+  tests/setup and feed their lineup_path output to the run that follows. No lineup may be left behind
+  after terraform test.
+xp: 295
+difficulty: advanced
+expected_time: 15m
+concepts:
+  - setup module pattern
+  - run module block
+  - helper runs
+module: module-10-testing
+level: level-15-setup-helper-module

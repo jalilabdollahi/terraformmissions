@@ -1,30 +1,24 @@
-# Module Splitting with moved Blocks
+# Debrief — decompose behind a stable state
 
-## What Was Broken
-When resources are moved into a module without `moved` blocks, Terraform sees the old resource
-addresses as "to be deleted" and the new module addresses as "to be created". This results in
-a destroy + recreate cycle — potentially catastrophic for stateful resources in production.
+A module that does three jobs forces every consumer to take all three. Splitting it into small,
+composable modules gives callers choice: wholesale uses `pour` only, refills use `pour` and `label`.
+The price is that Terraform identifies objects by full address, so moving a resource into another
+module is, to Terraform, "delete this, create that" unless you tell it otherwise.
 
-## The Fix
-Add one `moved` block per relocated resource, mapping the old address to the new module address.
+`moved` blocks are that statement. They are code, so they are reviewed, and every environment that
+applies the config performs the same migration, including the ones you will never touch by hand.
+Keep them in the config at least until all environments have applied, then they can be removed (or
+kept as documentation).
 
-## moved Block Syntax
-```hcl
-moved {
-  from = random_string.token_a
-  to   = module.strings.random_string.token_a
-}
-```
+Good split boundaries:
 
-The `from` address is where the resource WAS. The `to` address is where it IS NOW.
+- Resources that change together stay together (the pour sheet and its batch ID).
+- Dependencies between the pieces become explicit module inputs and outputs. The label module takes
+  `batch_code` instead of reaching into `random_id.batch`, which also makes it testable on its own.
+- Do not let child modules call each other; composition happens in the root, so each piece stays
+  independent.
+- File paths that depend on `path.module` change when code moves; using `path.root` (or a variable)
+  keeps the real object stable.
 
-## When to Use moved Blocks
-- Moving resources into or out of modules
-- Renaming resources within a module
-- Changing `for_each` keys (causes address changes)
-- Splitting or merging config root modules (as an alternative to `terraform state mv`)
-
-## Key Takeaway
-`moved` blocks are the safe, declarative, reviewable way to refactor Terraform configs without
-destroying infrastructure. They are the preferred alternative to imperative `terraform state mv`.
-Once all team members have applied the change, you can remove them.
+Real-world takeaway: refactor modules in two steps, restructure + `moved`, check the plan shows
+moves and no deletes, then apply. A plan with "destroy" in a pure refactor is a stop sign.

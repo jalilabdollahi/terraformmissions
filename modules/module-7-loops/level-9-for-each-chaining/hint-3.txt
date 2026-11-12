@@ -1,0 +1,1 @@
+Chain the loops: give `local_file.wing_card` `for_each = random_pet.callsign`. Inside it `each.key` is the cadet's name and `each.value` is the whole random_pet instance, so `each.value.id` is that cadet's call sign.

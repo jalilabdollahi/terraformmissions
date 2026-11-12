@@ -1,0 +1,1 @@
+Rename them (for example `spool_colour`, `label_3d`, `spool_tag`) in the declaration AND in every reference: `var.spool_colour`, `local_file.label_3d`, `local_file.spool_tag`.

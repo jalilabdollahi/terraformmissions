@@ -1,0 +1,1 @@
+Run `terraform test`. One assert fails with a vague message and a diff of a whole object, so you cannot tell which fact is wrong.

@@ -1,1 +1,0 @@
-A `moved {}` block tells Terraform to rename a resource in state during the next apply, avoiding destroy+create.

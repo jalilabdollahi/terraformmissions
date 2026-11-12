@@ -1,0 +1,1 @@
+Add three `moved` blocks, one per pedalo, following the original list order: `from = random_pet.mascot[0]` `to = random_pet.mascot["odette"]`, `[1]` to `odile`, `[2]` to `benno`.

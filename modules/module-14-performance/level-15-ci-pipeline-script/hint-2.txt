@@ -1,0 +1,1 @@
+Five problems: `terraform fmt` rewrites files (needs `-check -recursive`), `init` and `plan` can prompt (need `-input=false`), `plan` saves nothing (`-out`), failures are ignored (needs `set -e` or explicit checks), and the script depends on the caller's directory.

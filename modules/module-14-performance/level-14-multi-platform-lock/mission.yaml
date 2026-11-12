@@ -1,0 +1,22 @@
+name: Pit Garage Lock File
+description: >-
+  The Karakul Solar Car Challenge Team's laptops are a mix: two Apple-silicon Macs, a Linux build box, and a
+  Windows field PC. Whoever generated .terraform.lock.hcl was on an Intel Mac, so it only records
+  that platform's checksum, and every other machine stops at "terraform init" with a checksum
+  mismatch error. The pit garage has no internet; the team vendors provider zips in vendor/provider-mirror
+  for all the platforms it uses.
+objective: >-
+  Make .terraform.lock.hcl cover linux_amd64, darwin_arm64 and windows_amd64 in addition to the
+  platform it already has, using terraform providers lock against the vendored mirror
+  (offline, no hand-edited hashes). The mirror files and the pinned null 3.3.2 must stay as they
+  are, and init must still work.
+xp: 392
+difficulty: expert
+expected_time: 15m
+concepts:
+  - terraform providers lock
+  - dependency lock file
+  - multi-platform teams
+  - offline mirror
+module: module-14-performance
+level: level-14-multi-platform-lock

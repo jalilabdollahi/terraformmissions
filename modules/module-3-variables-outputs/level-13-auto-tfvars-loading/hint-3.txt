@@ -1,0 +1,1 @@
+Rename `prod.tfvars` to `prod.auto.tfvars` (or `terraform.tfvars`). Leave the defaults in variables.tf alone.

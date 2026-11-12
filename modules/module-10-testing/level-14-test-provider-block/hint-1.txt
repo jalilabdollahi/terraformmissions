@@ -1,0 +1,1 @@
+Read the first error of `terraform test`: it names a provider definition, `local.<something>`, as missing. Then compare with `configuration_aliases` in terraform.tf.

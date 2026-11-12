@@ -1,0 +1,1 @@
+The shelf label is cosmetic: remove the lifecycle block with prevent_destroy from random_pet.shelf_label and apply. Leave the ledger's protection alone.

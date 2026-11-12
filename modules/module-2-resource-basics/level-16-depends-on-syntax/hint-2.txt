@@ -1,0 +1,1 @@
+depends_on wants a list of bare references to whole resources: no quotes, and no trailing attribute like .filename.

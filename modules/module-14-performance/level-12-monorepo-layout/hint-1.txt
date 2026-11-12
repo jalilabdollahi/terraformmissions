@@ -1,0 +1,1 @@
+Look at the directory layout you want: one folder per subsystem under components/, plus the library you already have under modules/. Each folder will be where you run terraform.

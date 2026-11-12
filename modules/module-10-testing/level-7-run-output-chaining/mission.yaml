@@ -1,0 +1,17 @@
+name: Sailmaker Cutting Order
+description: >-
+  A sail loft calculates the area of a mainsail, then orders cloth with a 10 percent waste allowance
+  based on that measured area. The test file chains the two steps with run outputs, but Terraform
+  reports a dependency cycle before a single run starts.
+objective: >-
+  Fix tests/sailloft.tftest.hcl so measure_main, order_cloth and spare_jib all pass, with order_cloth
+  consuming run.measure_main.sail_area and spare_jib comparing against run.order_cloth.
+xp: 255
+difficulty: advanced
+expected_time: 12m
+concepts:
+  - run output chaining
+  - run order
+  - run references
+module: module-10-testing
+level: level-7-run-output-chaining

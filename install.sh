@@ -127,15 +127,15 @@ check_cmd terraform
 check_cmd python3
 check_cmd jq
 
-# Terraform version check (need >= 1.5)
+# Terraform version check (need >= 1.10)
 TF_VERSION=$(terraform version -json 2>/dev/null | python3 -c "import sys,json; print(json.load(sys.stdin)['terraform_version'])" 2>/dev/null || terraform version | head -1 | grep -oE '[0-9]+\.[0-9]+\.[0-9]+' | head -1)
 TF_MAJOR=$(echo "$TF_VERSION" | cut -d. -f1)
 TF_MINOR=$(echo "$TF_VERSION" | cut -d. -f2)
-if [[ "$TF_MAJOR" -lt 1 ]] || { [[ "$TF_MAJOR" -eq 1 ]] && [[ "$TF_MINOR" -lt 5 ]]; }; then
-  echo "❌  Terraform >= 1.5 required. Found: $TF_VERSION"
+if [[ "$TF_MAJOR" -lt 1 ]] || { [[ "$TF_MAJOR" -eq 1 ]] && [[ "$TF_MINOR" -lt 10 ]]; }; then
+  echo "❌  Terraform >= 1.10 required. Found: $TF_VERSION"
   exit 1
 fi
-echo "✅  Terraform $TF_VERSION (>= 1.5 required)"
+echo "✅  Terraform $TF_VERSION (>= 1.10 required)"
 
 # ── Python venv ────────────────────────────────────────────────────────────────
 echo ""
@@ -162,6 +162,57 @@ source "$REPO_ROOT/venv/bin/activate"
 python3 -m pip install --quiet --upgrade pip
 python3 -m pip install --quiet -r "$REPO_ROOT/requirements.txt"
 echo "✅  Python venv ready"
+
+# ── Build the local provider mirror (missions start fast and work offline) ────
+echo ""
+echo "Downloading Terraform providers used by the missions (one time)..."
+MIRROR="$REPO_ROOT/.cache/provider-mirror"
+mkdir -p "$MIRROR"
+WARM_DIR="$(mktemp -d)"
+cat > "$WARM_DIR/main.tf" <<'TFEOF'
+terraform {
+  required_providers {
+    local    = { source = "hashicorp/local" }
+    null     = { source = "hashicorp/null" }
+    random   = { source = "hashicorp/random" }
+    tls      = { source = "hashicorp/tls" }
+    time     = { source = "hashicorp/time" }
+    archive  = { source = "hashicorp/archive" }
+    external = { source = "hashicorp/external" }
+    http     = { source = "hashicorp/http" }
+  }
+}
+TFEOF
+# Older versions used by the upgrade / lock-file missions.
+mkdir -p "$WARM_DIR/old" "$WARM_DIR/older"
+cat > "$WARM_DIR/old/main.tf" <<'TFEOF'
+terraform {
+  required_providers {
+    local  = { source = "hashicorp/local", version = "2.4.0" }
+    null   = { source = "hashicorp/null", version = "3.1.1" }
+    random = { source = "hashicorp/random", version = "3.5.1" }
+    tls    = { source = "hashicorp/tls", version = "3.4.0" }
+  }
+}
+TFEOF
+cat > "$WARM_DIR/older/main.tf" <<'TFEOF'
+terraform {
+  required_providers {
+    local  = { source = "hashicorp/local", version = "1.4.0" }
+    random = { source = "hashicorp/random", version = "2.3.1" }
+  }
+}
+TFEOF
+WARM_OK=1
+for d in "$WARM_DIR" "$WARM_DIR/old" "$WARM_DIR/older"; do
+  (cd "$d" && TF_CLI_CONFIG_FILE=/dev/null TF_PLUGIN_CACHE_DIR="$MIRROR" terraform init -input=false -no-color >/dev/null 2>&1) || WARM_OK=0
+done
+if [[ "$WARM_OK" == 1 ]]; then
+  echo "✅  Provider mirror ready"
+else
+  echo "⚠️  Could not download every provider (offline?). Missing ones are fetched on first use."
+fi
+rm -rf "$WARM_DIR"
 
 # ── Generate level registry ────────────────────────────────────────────────────
 if [[ ! -f "$REPO_ROOT/levels.json" ]]; then

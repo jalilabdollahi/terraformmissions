@@ -1,1 +1,0 @@
-After removing the corrupt state file, run `terraform init` then `terraform apply -auto-approve`. All resources will be created fresh. Use `terraform state list` to verify the state is healthy afterwards.

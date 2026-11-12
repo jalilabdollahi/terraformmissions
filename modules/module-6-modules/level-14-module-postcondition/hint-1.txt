@@ -1,1 +1,0 @@
-Run `terraform plan`. The postcondition fails because `"hello" == ""` is false.

@@ -1,0 +1,18 @@
+name: Garage Build Journal Guard
+description: >-
+  The mechanic at Crumbwell wants Terraform to create the build journal once and then leave it
+  alone, while the work schedule keeps following the config. The ignore_changes list names
+  attributes that local_file does not have, so Terraform refuses the config.
+objective: >-
+  Make Terraform ignore later changes to the build notes' content (the file must keep its
+  original first line) while journal/schedule.txt is updated to the new 12 hour schedule. Do
+  not use ignore_changes = all.
+xp: 150
+difficulty: beginner
+expected_time: 10m
+concepts:
+  - ignore_changes
+  - attribute names
+  - lifecycle
+module: module-2-resource-basics
+level: level-20-ignore-changes-names

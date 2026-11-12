@@ -1,0 +1,1 @@
+Read the locals block. A credential is spelled out in a string literal there.

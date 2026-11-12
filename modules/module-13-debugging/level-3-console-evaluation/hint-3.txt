@@ -1,0 +1,1 @@
+Pad the numbers so text order equals numeric order: `format("%05d|%s", tonumber(p.minutes), p.satellite)`, sort and reverse that, then `split("|", key)[1]`. For the grouping, add `...` after the value expression and convert the minutes with `tonumber()`.

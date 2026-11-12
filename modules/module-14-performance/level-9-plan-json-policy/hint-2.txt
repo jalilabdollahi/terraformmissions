@@ -1,0 +1,1 @@
+Four separate bugs: R1 compares actions to exactly ["delete"], so replacements slip by; R2 reads `.change.before`, which is null for new files, and the resulting jq error is swallowed; R3 is not implemented; and when jq fails (missing or garbage file) the script still exits 0.

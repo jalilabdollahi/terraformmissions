@@ -1,0 +1,1 @@
+random_string builds its alphabet from switches: lower, upper, numeric and special all default to true, and length defaults to nothing sensible for this rule.

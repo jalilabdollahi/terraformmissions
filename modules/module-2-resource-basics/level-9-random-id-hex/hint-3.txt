@@ -1,0 +1,1 @@
+Use random_id.batch.hex everywhere, and set byte_length = 6 so that 6 bytes give 12 hex characters.

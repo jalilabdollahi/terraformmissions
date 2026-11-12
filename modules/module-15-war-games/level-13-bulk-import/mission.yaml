@@ -1,0 +1,23 @@
+name: Alderwater Cabinet Census
+description: >-
+  INCIDENT 3342 - Alderwater defibrillator cabinet network. The city marathon is 36 hours away and the
+  volunteer coordinator wants every defibrillator cabinet under Terraform before inspection rotas are generated from it. The
+  cabinets already exist: their serial numbers are in the asset-database export
+  register/cabinets.json, along with two retired sites that must stay out. The first attempt
+  at adoption plans to mint 17 brand-new serials, which would invalidate every cabinet door label
+  in the street.
+objective: >-
+  Adopt the 15 active cabinets into random_id.cabinet[site] with import blocks driven by
+  for_each over the register, so each one keeps the serial printed on its door label. Retired
+  sites must not be managed, no serial may be typed into the code, the network key keeps
+  its ID, and the plan must end clean with out/cabinet-roster.txt listing every active cabinet.
+xp: 490
+difficulty: expert
+expected_time: 50m
+concepts:
+  - import blocks with for_each
+  - bulk adoption
+  - ForceNew arguments
+  - register-driven config
+module: module-15-war-games
+level: level-13-bulk-import

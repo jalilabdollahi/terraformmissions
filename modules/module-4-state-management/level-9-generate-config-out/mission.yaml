@@ -1,0 +1,19 @@
+name: Robot Controller Roster
+description: >-
+  The Ferrous Bay robot warehouse runs three controller credentials that were created by hand
+  and are now listed in import blocks (imports.tf). Nobody has written the matching resource
+  blocks, and the warehouse's lint rules are strict about how the final config must look.
+objective: >-
+  Let Terraform draft the resource blocks with plan -generate-config-out, then tidy them into
+  main.tf following the team rules in main.tf (all resources in main.tf only, no null-valued
+  attributes, no generator marker comments), and apply so the three objects are imported with
+  their original values. The final plan must be clean.
+xp: 230
+difficulty: intermediate
+expected_time: 15m
+concepts:
+  - generate-config-out
+  - import blocks
+  - cleaning generated config
+module: module-4-state-management
+level: level-9-generate-config-out

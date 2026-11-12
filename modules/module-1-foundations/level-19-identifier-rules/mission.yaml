@@ -1,0 +1,16 @@
+name: Brightwell Filament Shelf
+description: >-
+  The makerspace prints labels for its filament spools from Terraform. The names a volunteer chose for a
+  variable and two resources look natural to a human, but Terraform will not accept them as identifiers.
+objective: >-
+  Rename the offending identifiers consistently so the config applies. shelf/label.txt and shelf/tag.txt
+  must mention "signal orange", and the outputs label_path and tag_path must point at those files.
+xp: 145
+difficulty: beginner
+expected_time: 8m
+concepts:
+  - identifiers
+  - naming rules
+  - references
+module: module-1-foundations
+level: level-19-identifier-rules

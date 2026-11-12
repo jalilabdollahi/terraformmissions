@@ -1,0 +1,19 @@
+name: Signal Tower Backend
+description: >-
+  Every radio station of the Highland network shares one Terraform config; the state location
+  is supplied per station through a backend config file. The Signal Tower's file
+  config/backend-prod.hcl was written from memory and init rejects it, so the tower has been
+  running on a throwaway default state.
+objective: >-
+  Make the backend use state/signal-tower.tfstate by fixing config/backend-prod.hcl and
+  initialising with -backend-config. Keep the backend block in terraform.tf partial (no path in
+  the .tf files). Then apply so the state file at that path holds the tower's resources.
+xp: 210
+difficulty: intermediate
+expected_time: 12m
+concepts:
+  - partial backend configuration
+  - -backend-config
+  - terraform init
+module: module-4-state-management
+level: level-15-partial-backend-config

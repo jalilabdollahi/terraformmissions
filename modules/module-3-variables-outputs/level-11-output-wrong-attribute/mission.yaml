@@ -1,0 +1,14 @@
+name: Attributes That Don't Exist
+description: >-
+  The Lumen Stock Photo Agency tells its partner portal where the catalogue file lives and what its checksum is through two outputs. Terraform refuses to validate: both outputs reference attributes the file resource does not have.
+objective: >-
+  Fix both outputs so catalogue_path equals the resource's filename and catalogue_checksum equals the SHA-256 of archive/catalogue.csv, read from the resource's exported attributes.
+xp: 170
+difficulty: intermediate
+expected_time: 8m
+concepts:
+  - outputs
+  - resource-attributes
+  - provider-schema
+module: module-3-variables-outputs
+level: level-11-output-wrong-attribute

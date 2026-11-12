@@ -1,1 +1,0 @@
-Change `source = "../wrong/path"` to `source = "./modules/greeter"`.

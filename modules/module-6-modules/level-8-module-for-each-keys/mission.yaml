@@ -1,0 +1,18 @@
+name: Glassblowers' Kiln Board
+description: >-
+  Ember Row Glass anneals every piece in its own kiln module instance, one per kind of ware. The studio
+  manager's attempt to build the instances from a plain list is rejected, and the board that
+  should show the vase's annealing time looks the vase up under the wrong key.
+objective: >-
+  Create one module.piece instance per entry of the pieces list, addressed by name, and make
+  vase_hours the vase's annealing time. With the defaults kiln/schedule.txt must read
+  bowl:6h, ornament:4h, vase:10h (one per line, sorted by name) and vase_hours must be 10.
+xp: 225
+difficulty: intermediate
+expected_time: 12m
+concepts:
+  - for_each on modules
+  - toset
+  - instance keys
+module: module-6-modules
+level: level-8-module-for-each-keys

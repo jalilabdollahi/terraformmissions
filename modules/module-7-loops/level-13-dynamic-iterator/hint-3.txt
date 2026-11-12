@@ -1,0 +1,1 @@
+Inside `content`, use the iterator you declared: `class.value.file` and `class.value.text`. (`class.key` would be the list index.)

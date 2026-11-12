@@ -1,0 +1,1 @@
+Run `terraform state list`, then `terraform plan`. Compare the two lists with the resources in main.tf.

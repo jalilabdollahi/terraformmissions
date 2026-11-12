@@ -1,0 +1,1 @@
+The output differences come from the feed file (data source), which is real and should be recorded. The banner replacement comes from an unreviewed code edit and must not run. A regular apply does both at once, so you need an apply mode that only updates state.

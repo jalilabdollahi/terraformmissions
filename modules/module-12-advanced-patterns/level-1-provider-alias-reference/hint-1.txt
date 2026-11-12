@@ -1,0 +1,1 @@
+Run `terraform validate`. The error and the warning both point at a `provider = ...` line inside a resource block.

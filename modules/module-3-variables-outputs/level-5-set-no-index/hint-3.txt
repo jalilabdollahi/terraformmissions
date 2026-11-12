@@ -1,0 +1,1 @@
+Make the order explicit and deterministic: `sort(tolist(var.donated_genres))[0]` (sort() orders strings alphabetically). Keep the variable a set.

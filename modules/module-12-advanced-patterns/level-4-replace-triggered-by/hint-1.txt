@@ -1,1 +1,1 @@
-Run `terraform validate`. The error reports a reference to an undeclared resource.
+Read the plan: which resources change when the firmware goes from 3.1 to 3.2, and which one should have been rebuilt?

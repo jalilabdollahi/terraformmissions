@@ -1,0 +1,1 @@
+Compare three views: `terraform state list`, the files under tickets/ and ledger/, and `terraform plan`. The plan is the symptom list - for each line ask whether Terraform is correct that the object needs (re)creating, or merely uninformed.

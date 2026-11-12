@@ -1,0 +1,1 @@
+Delete the `content = ...` line and keep `content_base64 = local.closed_badge_png`. Plain `content` would write the base64 text itself, not the image.

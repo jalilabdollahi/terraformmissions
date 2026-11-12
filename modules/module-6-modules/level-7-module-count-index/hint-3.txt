@@ -1,0 +1,1 @@
+Use `count.index + 1` for the number, a splat (`module.post[*].label`) to collect every label, and index the last instance with `var.posts_total - 1`.

@@ -1,1 +1,0 @@
-`null_resource.triggers` is typed as `map(string)`. Every value in the map must be a string — even if it looks like a number.

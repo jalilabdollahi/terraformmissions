@@ -1,0 +1,19 @@
+name: Sugarhouse Season Label
+description: >-
+  Hollisford Sugarbush labels its syrup tins through two nested modules: the evaporator takes the sugarbush
+  and season from the root and hands them to the canner, which writes the label. Every label
+  comes out with the right sugarbush but "unknown" as the season.
+objective: >-
+  Thread the season variable all the way down: root, evaporator module, canner module. With the
+  default 2023 the file syrup/hollisford-2023.txt must read "Hollisford Sugarbush syrup, season 2023";
+  with -var season=2019 the label and the file name must follow, and the label output must stay
+  available at the root.
+xp: 235
+difficulty: intermediate
+expected_time: 12m
+concepts:
+  - nested modules
+  - passing variables
+  - module hierarchy
+module: module-6-modules
+level: level-16-nested-passthrough

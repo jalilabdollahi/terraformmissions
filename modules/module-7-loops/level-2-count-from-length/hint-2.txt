@@ -1,0 +1,1 @@
+`count = 3` is a constant. The roster has five names, so two entries of var.dogs are never visited by `count.index`. If the roster were shorter than 3, the same line would crash on a missing list index.

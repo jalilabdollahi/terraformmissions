@@ -1,0 +1,1 @@
+Compare terraform workspace list with where the post objects actually live: terraform workspace select each one and run terraform state list. Then read locals in main.tf and ask why a staging apply produced objects named for prod.

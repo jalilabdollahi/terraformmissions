@@ -1,0 +1,1 @@
+Run: terraform providers lock -fs-mirror=vendor/provider-mirror -platform=linux_amd64 -platform=darwin_arm64 -platform=windows_amd64 . Do not use -platform=darwin_amd64 (the mirror has no package for it, and the current lock already has it), and do not edit the file by hand.

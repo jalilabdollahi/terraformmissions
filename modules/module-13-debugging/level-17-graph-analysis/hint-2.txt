@@ -1,0 +1,1 @@
+`dispatch` only references `local_file.cap_order`, which is created early. Nothing makes it wait for `local_file.manifest`, but the script reads that file. For the questions: count arrows pointing *at* each resource (hub) and follow arrows from `dispatch` back to the root (chain).

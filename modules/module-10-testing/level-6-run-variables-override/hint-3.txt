@@ -1,0 +1,1 @@
+In crowded_coop use `coop_sqft = 40` (a bare number). In bantam_flock use a map: `stock = { bantam = 30 }`. Fix the first, re-run, and the skipped run will then execute and show the next error.

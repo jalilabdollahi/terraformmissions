@@ -1,0 +1,1 @@
+Make `batch_label` default to `null`, add `locals { batch_label = coalesce(var.batch_label, "${var.brewery}-batch") }`, and use `local.batch_label` in the file and the output.

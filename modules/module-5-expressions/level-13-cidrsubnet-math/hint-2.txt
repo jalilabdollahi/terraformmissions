@@ -1,0 +1,1 @@
+newbits is how many bits you add to the base prefix. A /22 plus 2 bits is a /24, and 2 bits give only 4 subnets, so zone number 4 (the fifth) does not exist. The size you want is 26, not 24.

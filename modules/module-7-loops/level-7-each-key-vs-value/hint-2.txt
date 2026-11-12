@@ -1,0 +1,1 @@
+For a map, `each.key` is the map key (the operator's name) and `each.value` is the value (the role). The filename and the Name line use the value, and the Role line uses the key - the other way round from what they should.

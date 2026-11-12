@@ -1,0 +1,1 @@
+The `required_version` inside the `terraform {}` block is a gate. Its upper bound `< 1.0` rules out every release since 2021, including the one installed here.

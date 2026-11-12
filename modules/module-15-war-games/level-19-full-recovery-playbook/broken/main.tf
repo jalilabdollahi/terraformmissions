@@ -1,26 +1,27 @@
-# ISSUE 1: There is a stale random_id.old_resource in state (needs state rm).
-# ISSUE 2: random_string.new_name was previously called random_string.old_name
-#          — needs a moved block.
-# ISSUE 3: random_string.config_error has length = 0 (invalid) — fix to length = 8.
+# Aurelia Midnight-Sun Film Shoot Base - power, radio and the nightly dailies-upload check.
 
-resource "random_string" "new_name" {
-  length  = 10
-  special = false
-  upper   = false
+module "power" {
+  source = "./modules/power"
 }
 
-resource "random_string" "config_error" {
-  length  = 0
-  special = false
-  upper   = false
+module "comms" {
+  source       = "./modules/comms"
+  generator_id = module.power.generator
 }
 
-resource "random_string" "healthy_resource" {
-  length  = 8
-  special = false
-  upper   = false
+resource "local_file" "base_manifest" {
+  filename = "${path.module}/out/base-manifest.txt"
+  content  = "power generator ${module.power.generator_id}\nfuel ${module.power.fuel}\nradio channel ${module.comms.channel_number}\n"
 }
 
-output "new_name_result"     { value = random_string.new_name.result }
-output "config_error_result" { value = random_string.config_error.result }
-output "healthy_result"      { value = random_string.healthy_resource.result }
+resource "terraform_data" "dailies" {
+  input = module.comms.channel
+
+  provisioner "local-exec" {
+    command = "mkdir -p ${path.module}/out && printf 'dailies OK for %s\\n' '${module.power.generator_id}' > ${path.module}/out/dailies.txt"
+  }
+}
+
+output "fuel_litres" {
+  value = module.power.fuel
+}

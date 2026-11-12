@@ -1,1 +1,1 @@
-Run `terraform validate` — `tolist()` cannot convert a map type.
+The plan error quotes the exact string tonumber() refused. There is more than one such string; look at every value in raw_times.

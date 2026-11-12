@@ -1,0 +1,1 @@
+A normal "quoted string" in HCL must open and close on the same line. One `content` line ends without its closing `"`, so the string runs into the next line.

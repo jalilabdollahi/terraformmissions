@@ -1,1 +1,1 @@
-The `env_map` local needs an entry for every workspace you plan to use, including `default`.
+The nested ternary only knows prod and staging. Everything else falls through to `0`, which the module rightly rejects. Any new workspace hits that last branch.

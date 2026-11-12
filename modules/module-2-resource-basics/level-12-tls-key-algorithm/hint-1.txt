@@ -1,0 +1,1 @@
+Run `terraform validate` or `plan` and read which attribute of which key resource is rejected, and which values it accepts.

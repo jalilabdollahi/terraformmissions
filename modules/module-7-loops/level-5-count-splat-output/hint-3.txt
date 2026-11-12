@@ -1,0 +1,1 @@
+Use a splat to read the attribute from every instance: `local_file.closure[*].filename`, or an equivalent `for` expression.

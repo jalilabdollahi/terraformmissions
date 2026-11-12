@@ -1,0 +1,1 @@
+Forget the extra address without touching the real object: `terraform state rm random_integer.service_dup`. Do not apply first - a plan that destroys a resource that was never meant to be removed is the warning, not the fix.

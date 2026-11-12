@@ -1,0 +1,1 @@
+Run `terraform init -migrate-state` and answer `yes` when asked whether to copy the state (or add `-force-copy` to skip the question). Then `terraform plan` should say no changes.

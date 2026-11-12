@@ -1,0 +1,1 @@
+Run `terraform apply` and open hoststand/slip.txt. Does it contain a generated name, or something else?

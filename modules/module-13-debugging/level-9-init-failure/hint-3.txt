@@ -1,1 +1,0 @@
-Replace the entire `required_providers` block with the correct `local` provider: `source = "hashicorp/local"` and `version = "~> 2.5"`.

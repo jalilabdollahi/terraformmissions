@@ -1,1 +1,0 @@
-`prevent_destroy` accepts a boolean expression, not just a literal. You can use `terraform.workspace` to conditionally enable it.

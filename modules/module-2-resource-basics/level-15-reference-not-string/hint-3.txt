@@ -1,0 +1,1 @@
+In the output blocks remove the quotes: value = random_pet.table.id. In the file content write ${random_pet.table.id} and ${random_integer.seat.result}.

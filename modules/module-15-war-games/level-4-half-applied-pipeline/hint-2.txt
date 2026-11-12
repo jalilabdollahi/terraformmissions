@@ -1,0 +1,1 @@
+Two different things look alike in the plan. One lot failed for a real reason in its config; read the handshake error in the script. The other lot has a replace marker only because of a taint, and its tag number is missing from state although the number is on record in the kiln controller's handshake ledger.

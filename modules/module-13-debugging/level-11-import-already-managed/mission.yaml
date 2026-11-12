@@ -1,0 +1,20 @@
+name: Telephone Box Service Duplicate
+description: >-
+  Rewind Telephone Box Restorations registers each telephone box's service code in Terraform. A technician
+  wanted to "re-adopt" the telephone box and imported its code under a second, temporary resource name,
+  then deleted the temporary block from the code. Now plan wants to destroy something that is not
+  in the configuration - and that something is the same telephone box the real resource manages.
+objective: >-
+  Find out which state entry duplicates random_integer.service_code and remove only the duplicate
+  from state, without destroying anything. The service code must stay unchanged, the code must keep
+  the single resource random_integer.service_code, and the plan must be clean.
+xp: 275
+difficulty: advanced
+expected_time: 12m
+concepts:
+- terraform state list
+- duplicate state entries
+- state rm
+- orphaned state
+module: module-13-debugging
+level: level-11-import-already-managed

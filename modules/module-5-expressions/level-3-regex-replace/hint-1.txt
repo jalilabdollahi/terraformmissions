@@ -1,0 +1,1 @@
+Run terraform apply and read tags/bench-tag.txt. All three lines look untouched, so the replace() calls are matching nothing. Check the Terraform docs for how replace() decides whether its second argument is a regex.

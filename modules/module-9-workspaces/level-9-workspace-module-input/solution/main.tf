@@ -1,17 +1,18 @@
+# Rolling Thunder bowling alley: lane sheets built by a module, lane count chosen per workspace.
+
 locals {
-  env_map = {
-    default    = "development"
-    staging    = "staging"
-    production = "production"
+  lanes = {
+    prod    = 4
+    staging = 2
   }
 }
 
-module "writer" {
-  source     = "./modules/writer"
-  env        = local.env_map[terraform.workspace]
-  output_dir = path.module
+module "alley" {
+  source     = "./modules/lanes"
+  site       = terraform.workspace
+  lane_count = lookup(local.lanes, terraform.workspace, 1)
 }
 
-output "path" {
-  value = module.writer.marker_path
+output "lane_files" {
+  value = module.alley.lane_files
 }

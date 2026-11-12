@@ -1,0 +1,17 @@
+name: Varnish Batch Guard
+description: >-
+  The Lindqvist violin workshop guards each varnish batch with two postconditions: no more than 5
+  litres, at least 5 days of cure. The rules mention the batch record by its own name, and Terraform
+  says a resource's configuration may not refer to itself.
+objective: >-
+  Keep both rules as postconditions on terraform_data.varnish_batch, rewrite them so they are legal,
+  and apply so labels/vx-2210.txt reads 'VX-2210: 4 L, cure 6 days'.
+xp: 250
+difficulty: advanced
+expected_time: 12m
+concepts:
+  - postconditions
+  - self
+  - custom conditions
+module: module-12-advanced-patterns
+level: level-12-postcondition-self

@@ -1,0 +1,1 @@
+Create a plan JSON yourself (`terraform plan -out=p.tfplan; terraform show -json p.tfplan > plan.json`) and hand-edit copies of it to try each rule from policy/RULES.txt against the script. Look at the three jq filters and the exit code handling.

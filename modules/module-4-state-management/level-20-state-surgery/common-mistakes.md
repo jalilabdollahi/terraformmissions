@@ -1,5 +1,7 @@
-# Common Mistakes
+# Common mistakes
 
-- **Fixing only the resource type but forgetting the output** — both must reference the correct type and name.
-- **Partial fixes** — always run `terraform validate` AND `terraform plan` before concluding the fix is complete.
-- **Assuming one error equals one fix** — a single wrong resource type can cause multiple downstream errors.
+- **Running `terraform apply` to see what happens.** It destroys the retired log's file, draws a new operator name and a new silo number.
+- **Importing the silo number with the wrong ID.** `random_integer` needs `value,min,max`; a wrong min or max imports an object that the plan wants to replace.
+- **Using `state rm` for the rename.** Forgetting `random_pet.harvester` makes Terraform create a brand-new operator; `state mv` keeps the name.
+- **Deleting the gauge log by hand "to make the plan clean".** The auditors need that file.
+- **Adding `moved`, `removed` or `import` blocks.** They solve the same problems declaratively, but this mission is about the state CLI, so the validator rejects them.

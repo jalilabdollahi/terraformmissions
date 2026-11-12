@@ -1,0 +1,1 @@
+A plain local_file with mode 0644 makes the private key world-readable and treats its content as ordinary data. The provider has a sibling resource meant for secrets, and it can also set the directory mode.

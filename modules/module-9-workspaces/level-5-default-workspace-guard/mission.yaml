@@ -1,0 +1,19 @@
+name: The Unwatched Fountain
+description: >-
+  Each fountain in the Marlow city fountains network has its own workspace. The spray schedule must
+  never be applied in the nameless default workspace, so someone added a guard. It prints a polite
+  warning in default and then carries on creating files.
+objective: >-
+  Applying in the default workspace must fail and write nothing, with an error rather than a
+  warning. In any named workspace, such as fountain-a or fountain-b, the apply must still succeed and
+  write out/<workspace>-sprays.txt.
+xp: 200
+difficulty: intermediate
+expected_time: 12m
+concepts:
+  - check block
+  - precondition
+  - terraform.workspace
+  - default workspace
+module: module-9-workspaces
+level: level-5-default-workspace-guard

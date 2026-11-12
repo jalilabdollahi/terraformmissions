@@ -1,0 +1,4 @@
+- Removing all four min_* arguments. The plan runs, but the password may lack a class and the guide app rejects it.
+- Raising the length to 16 to fit 14 minimums. The vendor policy says 12 characters.
+- Dropping only min_special to 0. The policy requires at least 2 special characters.
+- Using random_string instead. It has the same constraint and also is not sensitive.

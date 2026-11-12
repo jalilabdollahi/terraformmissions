@@ -1,1 +1,0 @@
-Swap the values: set `min = 10` and `max = 100`.

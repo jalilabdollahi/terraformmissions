@@ -1,0 +1,19 @@
+name: Formulator's Batch Sheet
+description: >-
+  A cosmetics lab generates a batch sheet with Terraform, then reads the sheet back with
+  a data source to work out how much fragrance oil goes in. On a fresh bench the plan
+  fails because the sheet is not there yet; on a bench that already has one, changing the
+  base weight still gives yesterday's fragrance dose.
+objective: >-
+  Make the data source wait for the batch sheet that this config creates, so a single apply
+  works from nothing and always reflects the current base_grams. With the default 240 g,
+  fragrance_g is 14.4; with base_grams=500 it is 30.
+xp: 200
+difficulty: intermediate
+expected_time: 12m
+concepts:
+  - data.local_file
+  - implicit dependency
+  - depends_on
+module: module-8-data-sources
+level: level-6-data-reads-created-file

@@ -1,0 +1,1 @@
+A variable without a `default` is mandatory: every caller must pass it. The lockgate module has three such variables, and the call in main.tf provides only two of them.

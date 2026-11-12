@@ -1,0 +1,1 @@
+`random_pet.callsign` uses `for_each`, so it is a map of instances. Referring to `random_pet.callsign.id` is missing the instance key. The wing card needs to exist once per instance.

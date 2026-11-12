@@ -1,0 +1,18 @@
+name: Two Attendants One Card
+description: >-
+  The Marlowe Pier amusement park writes a duty card for every operator from a map of name to role.
+  The cards folder has only three files, one of them called attendant.txt, and the supervisor's card
+  says her name is 'supervisor'.
+objective: >-
+  Write cards/<name>.txt for every operator in var.crew (four files) containing exactly 'Name:
+  <name>' and 'Role: <role>' on two lines. Instances must stay keyed by operator name.
+xp: 180
+difficulty: intermediate
+expected_time: 8m
+concepts:
+  - for_each
+  - each.key
+  - each.value
+  - maps
+module: module-7-loops
+level: level-7-each-key-vs-value

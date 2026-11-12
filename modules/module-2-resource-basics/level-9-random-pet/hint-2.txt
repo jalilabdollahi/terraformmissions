@@ -1,1 +1,0 @@
-The `separator` attribute expects a `string`. Numbers in HCL are written without quotes; strings require double quotes.

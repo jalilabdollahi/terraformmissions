@@ -1,0 +1,1 @@
+Run `terraform apply` and list `signs/`. Which file name is wrong, and which one does the last sign carry?

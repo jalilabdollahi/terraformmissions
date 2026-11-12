@@ -1,0 +1,1 @@
+Read the plan error: it says an object has no attribute you asked the splat for. Which of the three inputs is a map rather than a list?

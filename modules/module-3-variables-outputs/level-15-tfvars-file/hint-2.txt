@@ -1,1 +1,0 @@
-`.tfvars` files use simple `key = value` syntax. Unlike HCL resource blocks, there are no block types — just assignments.

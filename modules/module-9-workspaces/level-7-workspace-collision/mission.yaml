@@ -1,0 +1,18 @@
+name: Bunks Over Bunks
+description: >-
+  Pinewater youth summer camp runs an east and a west wing, one workspace each. Both wings write
+  their bunk roster and wake-up list to the same two files, so whichever wing applied last wins
+  and the other wing's plan shows endless drift.
+objective: >-
+  Give each workspace its own bunk roster and wake-up list: after applying in both east and west,
+  each wing's files must exist separately, mention only their own wing, and a plan in either wing
+  must be clean.
+xp: 205
+difficulty: intermediate
+expected_time: 12m
+concepts:
+  - workspace isolation
+  - terraform.workspace
+  - shared file paths
+module: module-9-workspaces
+level: level-7-workspace-collision

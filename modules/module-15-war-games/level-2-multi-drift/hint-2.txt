@@ -1,0 +1,1 @@
+Not every drift is a mistake. Compare each changed file with the code and read the comments in them: one edit is an approved decision that belongs in main.tf, one file is for hardware that no longer exists, and the tainted cocoa lot would be REPLACED by a blind apply, changing its ID.

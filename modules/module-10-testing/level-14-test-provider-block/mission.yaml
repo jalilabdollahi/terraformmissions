@@ -1,0 +1,18 @@
+name: Mint Press Room
+description: >-
+  A small coin mint's Terraform writes a strike sheet through a "press" provider alias and a read-only
+  die log through a "vault" alias. The test file configures providers of its own, and one alias
+  is not the one the code expects.
+objective: >-
+  Make sheet_goes_to_press, die_is_read_only and series_number_flows pass by giving the test file
+  provider blocks for exactly the aliases the configuration requires (press and vault), and map them
+  in the runs that pass providers explicitly.
+xp: 290
+difficulty: advanced
+expected_time: 12m
+concepts:
+  - provider block in tests
+  - provider aliases
+  - providers mapping
+module: module-10-testing
+level: level-14-test-provider-block

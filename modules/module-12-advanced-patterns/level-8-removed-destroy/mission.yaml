@@ -1,0 +1,18 @@
+name: Target Seven Stands Down
+description: >-
+  Fletcher's Meadow Archery Range is closing target 7 permanently. The block was replaced by a removed block that was
+  copied from last month's 'just stop managing it' migration, so the scorecard stays on disk and the
+  retirement receipt never gets written.
+objective: >-
+  Decommission target 7 properly: its scorecard targets/target-7.txt must be destroyed, the destroy-time
+  provisioner must leave receipts/target-7.txt, target 7 must be gone from state, and targets 5 and 6 must
+  keep their IDs.
+xp: 275
+difficulty: advanced
+expected_time: 15m
+concepts:
+  - removed blocks
+  - destroy = true
+  - destroy provisioners
+module: module-12-advanced-patterns
+level: level-8-removed-destroy

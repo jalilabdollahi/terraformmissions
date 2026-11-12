@@ -1,0 +1,1 @@
+Keep the keys static: `for_each = toset(var.samples)`. The run id is an ordinary attribute, so it can be used in `filename` and `content`, where unknown values are fine.

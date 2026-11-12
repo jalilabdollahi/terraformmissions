@@ -1,0 +1,1 @@
+Pushing the snapshot as-is fails twice (lineage, then serial), and forcing it would succeed in the worst way: it brings back the retired archive index and the stale c3 call-sign while changing the lineage. What you need is in the snapshot, but only two objects of it.

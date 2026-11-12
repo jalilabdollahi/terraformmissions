@@ -1,0 +1,1 @@
+With `backend = "local"`, `config.path` must be the exact path of the other configuration's state file. The depot team did not use the default `terraform.tfstate`; their `backend "local"` block names its own file.

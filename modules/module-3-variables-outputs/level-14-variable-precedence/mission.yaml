@@ -1,0 +1,14 @@
+name: Dry Run That Won't Leave
+description: >-
+  The Skyward Range prints its launch sequence sheet from the terraform.tfvars that range safety approved: a 45-minute countdown. The printed sheet says five minutes, and nobody can find where that number comes from.
+objective: >-
+  Make plain terraform apply produce a 45-minute countdown for Pad Delta with holds at T-20 and T-5, taking the values from terraform.tfvars. No other variable file may override them.
+xp: 185
+difficulty: intermediate
+expected_time: 9m
+concepts:
+  - variable-precedence
+  - auto.tfvars
+  - terraform.tfvars
+module: module-3-variables-outputs
+level: level-14-variable-precedence

@@ -1,0 +1,1 @@
+Nothing in `data "local_file" "batch_sheet"` refers to the resource that writes the file, so Terraform sees no dependency and reads the data source during plan, before the file exists or is updated.

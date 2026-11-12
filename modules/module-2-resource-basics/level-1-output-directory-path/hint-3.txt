@@ -1,0 +1,1 @@
+Change filename to "${path.module}/out/shift-board.txt". local_file creates the missing out/ directory by itself, and applying again deletes the old root file.

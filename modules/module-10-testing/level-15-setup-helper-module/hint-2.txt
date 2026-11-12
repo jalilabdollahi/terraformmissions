@@ -1,0 +1,1 @@
+A helper run only helps if it targets the helper module with a `module { source = ... }` block and really applies it. Once it points at the module, check the second helper: it must create the file, because the run after it reads that file from disk.

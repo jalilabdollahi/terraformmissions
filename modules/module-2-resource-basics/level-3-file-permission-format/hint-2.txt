@@ -1,0 +1,1 @@
+file_permission and directory_permission are strings holding a four-digit octal mode, the same digits chmod uses, with a leading zero.

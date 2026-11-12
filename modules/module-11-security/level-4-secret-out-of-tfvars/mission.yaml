@@ -1,0 +1,14 @@
+name: "Box Office Keys In Git"
+description: >-
+  The Harbourside Brass band sells tickets through a payment gateway whose API key was typed into terraform.tfvars next to the ticket price, and terraform.tfvars is committed to the shared repo. The treasurer has asked for the key to rotate and for it never to appear in the repository again.
+objective: >-
+  Remove the gateway key from every .tf and .tfvars file (keep band_name and ticket_price_pence in terraform.tfvars). The key must be supplied from outside the repo through the TF_VAR_gateway_api_key environment variable, still ending up mode 0600 in box-office/gateway.env.
+xp: 250
+difficulty: advanced
+expected_time: 10m
+concepts:
+  - tfvars
+  - TF_VAR environment variables
+  - secrets in git
+module: module-11-security
+level: level-4-secret-out-of-tfvars

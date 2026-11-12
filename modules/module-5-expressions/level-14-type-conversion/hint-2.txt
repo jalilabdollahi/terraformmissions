@@ -1,1 +1,1 @@
-`values(map)` returns a list of a map's values. `keys(map)` returns a list of its keys.
+tonumber() accepts only a clean decimal string: no comma, no spaces, no words. Fix the fixable ones (comma, spaces) before converting, and test the unfixable ones (DNF, DSQ) with can() so they are skipped instead of crashing.

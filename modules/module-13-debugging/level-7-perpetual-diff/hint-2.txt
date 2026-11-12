@@ -1,1 +1,1 @@
-`timestamp()` is evaluated on every plan/apply. Each evaluation returns a different RFC 3339 timestamp, so Terraform always sees the content as changed.
+Two inputs differ between plans: `timestamp()` is evaluated on every plan, and the cabinet script prints the card names in a different order on every run (it iterates over a Python set).

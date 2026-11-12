@@ -1,0 +1,1 @@
+In modules/issuer/main.tf add ephemeral = true to output "session_token". The root module can then pass it to the provisioner's environment, which is an ephemeral-safe place.

@@ -1,0 +1,1 @@
+You may not reveal the code, but you may reveal facts about it that are not secret, such as its length. Wrapping `length(...)` of the output in `nonsensitive()` in the *message* turns the hidden number into a visible one. Then compare it with the policy in the mission.

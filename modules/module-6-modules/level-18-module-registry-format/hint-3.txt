@@ -1,1 +1,0 @@
-The `local_file` resource argument for file contents is `content`, not `file_content`.

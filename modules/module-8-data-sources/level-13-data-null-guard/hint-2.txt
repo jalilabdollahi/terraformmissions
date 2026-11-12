@@ -1,0 +1,1 @@
+Reading an attribute that is absent from an object is an error, and passing `null` to `coalesce` as the only candidate is another. You need a guard that turns "absent" into a default before you use the value; `try()` catches the first problem and `coalesce()` handles `null`.

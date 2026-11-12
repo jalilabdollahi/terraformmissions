@@ -1,0 +1,21 @@
+name: Cedarbank Kiln Pipeline
+description: >-
+  The Cedarbank Sawmill's drying pipeline died halfway through tonight's run. The ash lot's
+  handshake with the kiln controller was rejected, the CI runner was killed before it wrote its
+  state, and on-call tainted one healthy run in the confusion. Pallet tags are already printed
+  and wrapped on the wood in the yard, and the yard office needs tickets for all three lots
+  before the 07:00 shift.
+objective: >-
+  Finish the pipeline for the oak, pine and ash lots. Every pallet tag keeps its printed number,
+  the oak and pine kiln runs keep their IDs, the ash run is redone successfully on the right
+  kiln, all three tickets are tracked in state, and the plan ends clean.
+xp: 375
+difficulty: expert
+expected_time: 35m
+concepts:
+  - partial apply recovery
+  - taint versus untaint
+  - import blocks
+  - failed provisioners
+module: module-15-war-games
+level: level-4-half-applied-pipeline

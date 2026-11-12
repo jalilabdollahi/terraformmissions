@@ -1,0 +1,1 @@
+State maps each address to a real object. The object is still stored under the old address `random_pet.keeper`. Check with `terraform state list`.

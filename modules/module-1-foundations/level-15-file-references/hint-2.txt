@@ -1,1 +1,0 @@
-Either create a `templates/` directory with the template file, or fix the path.

@@ -1,0 +1,1 @@
+Change `<<EOT` to `<<-EOT`. Terraform removes the smallest indentation shared by all lines, so the dishes stay two spaces in.

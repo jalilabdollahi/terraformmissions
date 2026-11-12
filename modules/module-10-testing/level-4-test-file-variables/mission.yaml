@@ -1,0 +1,17 @@
+name: Rook Club Pairings
+description: >-
+  The Rook and Pawn chess club generates tournament boards with a small module that has two required
+  inputs and no defaults. Its test file tries to supply them once at the top, but Terraform will not
+  even load the file.
+objective: >-
+  Fix tests/pairings.tftest.hcl so both runs pass, supplying club and players through a single
+  file-level variables block that the runs share, with the second run overriding only players.
+xp: 240
+difficulty: advanced
+expected_time: 8m
+concepts:
+  - test file variables
+  - variables block
+  - variable precedence
+module: module-10-testing
+level: level-4-test-file-variables

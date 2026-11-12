@@ -1,0 +1,17 @@
+name: Overstocked Henhouse
+description: >-
+  A poultry farm sizes its coops with a little Terraform module: square feet of floor per hen and
+  an overstocked flag. The crowded-coop scenarios in the test file never get a chance to run - Terraform
+  rejects the values they try to override.
+objective: >-
+  Correct the per-run variable overrides in tests/coop.tftest.hcl so that all three runs pass: the
+  type of each override must match the declared variable, and the assertions must stay unchanged.
+xp: 250
+difficulty: advanced
+expected_time: 10m
+concepts:
+  - run variables
+  - variable types
+  - skipped runs
+module: module-10-testing
+level: level-6-run-variables-override

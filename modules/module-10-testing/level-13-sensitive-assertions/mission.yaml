@@ -1,0 +1,18 @@
+name: Storage Unit Lock Codes
+description: >-
+  A self-storage company issues each unit a random numeric lock code and keeps it in a sensitive output.
+  The test for the code policy fails, but every failure message is just "(sensitive value)", so nobody can
+  tell what is actually wrong.
+objective: >-
+  Make code_policy and public_label pass without ever unmasking the lock code itself: the policy is an
+  8-digit numeric code, the unit label is "Unit A-14". The output must stay sensitive and the test must
+  not contain nonsensitive(output.lock_code).
+xp: 285
+difficulty: advanced
+expected_time: 12m
+concepts:
+  - sensitive outputs in tests
+  - nonsensitive on derived facts
+  - test diagnostics
+module: module-10-testing
+level: level-13-sensitive-assertions

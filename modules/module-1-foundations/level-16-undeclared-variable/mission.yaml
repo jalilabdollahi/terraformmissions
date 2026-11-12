@@ -1,0 +1,17 @@
+name: Ribeira River Run
+description: >-
+  A city marathon's paperwork is split across main.tf, bibs.tf and outputs.tf, and all three read
+  inputs through var.something. Terraform says those inputs were never declared.
+objective: >-
+  Declare the three missing input variables in a new variables.tf with these defaults: race_city = "Porto",
+  runner_count = 1200 and first_bib = 1001 (both numbers). The race sheet and bib range must then follow
+  those variables.
+xp: 135
+difficulty: beginner
+expected_time: 7m
+concepts:
+  - input variables
+  - multi-file configuration
+  - declarations
+module: module-1-foundations
+level: level-16-undeclared-variable

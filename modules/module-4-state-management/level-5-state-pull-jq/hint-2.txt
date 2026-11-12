@@ -1,0 +1,1 @@
+The serial and lineage are top-level fields of the JSON. The resource attributes live under `.resources[]`, then `.instances[0].attributes`. Use `jq -r` to get raw text without quotes.

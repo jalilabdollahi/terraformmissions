@@ -1,19 +1,11 @@
-# The env_map is missing the "default" workspace key.
-# Fix: add "default" = "development" to the env_map.
+# Rolling Thunder bowling alley: lane sheets built by a module, lane count chosen per workspace.
 
-locals {
-  env_map = {
-    staging    = "staging"
-    production = "production"
-  }
+module "alley" {
+  source     = "./modules/lanes"
+  site       = terraform.workspace
+  lane_count = terraform.workspace == "prod" ? 4 : terraform.workspace == "staging" ? 2 : 0
 }
 
-module "writer" {
-  source     = "./modules/writer"
-  env        = local.env_map[terraform.workspace]
-  output_dir = path.module
-}
-
-output "path" {
-  value = module.writer.marker_path
+output "lane_files" {
+  value = module.alley.lane_files
 }

@@ -1,0 +1,1 @@
+Every module contributes its own `required_providers`, and Terraform has to pick a single version of each provider for the whole configuration. The root asks for ~> 2.5, modules/kitchen/versions.tf asks for ~> 1.4: the two ranges do not overlap.

@@ -1,0 +1,1 @@
+Run `terraform validate`: the error names the argument that cannot take the ephemeral value and gives the reason in the last line.

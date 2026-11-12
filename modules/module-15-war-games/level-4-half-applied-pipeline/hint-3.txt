@@ -1,0 +1,1 @@
+Plan: fix the ash kiln name (K4 -> K-4 on the allow-list); adopt the pine tag with an import block (id format for random_integer is "result,min,max"; read the result from the pine line of ledger/handshakes.log); terraform untaint the pine kiln run; leave the failed ash run tainted so it is replaced; terraform apply and check that oak and pine run IDs did not change.

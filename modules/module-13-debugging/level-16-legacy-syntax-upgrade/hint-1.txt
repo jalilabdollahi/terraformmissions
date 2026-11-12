@@ -1,0 +1,1 @@
+Run `terraform validate` and read the *first* error group, then fix the errors by category rather than line by line. After errors are gone, read the warnings too: they are the second half of the job.

@@ -1,0 +1,1 @@
+Open tavern/menu.txt after an apply and compare it with what the heredoc looks like in main.tf. Where do the extra spaces come from?

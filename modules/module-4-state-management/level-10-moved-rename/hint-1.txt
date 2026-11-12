@@ -1,0 +1,1 @@
+Run `terraform plan` and notice that each renamed resource shows up twice: destroyed under its old name, created under its new one. Terraform needs to be told these pairs are the same objects.

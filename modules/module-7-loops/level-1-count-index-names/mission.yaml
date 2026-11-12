@@ -1,0 +1,18 @@
+name: Same Card Four Times
+description: >-
+  The Blackwood Manor murder mystery dinner prints one card per clue with a counted local_file. On dinner
+  night the cards folder holds a single card, and it always shows the last clue - four resources
+  keep overwriting one file.
+objective: >-
+  Give every counted card its own file, cards/clue-0.txt up to cards/clue-3.txt, by using
+  count.index in the filename. Keep the single counted resource and make sure a longer clue list
+  would produce clue-4.txt.
+xp: 150
+difficulty: intermediate
+expected_time: 6m
+concepts:
+  - count
+  - count.index
+  - unique names
+module: module-7-loops
+level: level-1-count-index-names

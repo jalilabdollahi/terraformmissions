@@ -1,0 +1,1 @@
+Indexing a map with square brackets fails when the key is absent. lookup() takes a third argument that is returned instead of an error.

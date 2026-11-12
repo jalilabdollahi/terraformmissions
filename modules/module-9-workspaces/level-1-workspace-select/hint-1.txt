@@ -1,0 +1,1 @@
+Terraform always works inside exactly one workspace. Run `terraform workspace list` and look at which line has the asterisk, then check where `terraform state list` finds the plan.

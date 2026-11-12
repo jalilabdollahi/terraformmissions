@@ -1,0 +1,1 @@
+On a fresh workspace, `terraform plan` fails while reading a file. Ask yourself which module is supposed to create that file, and whether Terraform knows the two modules are related.

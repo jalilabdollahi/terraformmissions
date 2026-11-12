@@ -1,0 +1,19 @@
+name: Geyser Feed Reconcile
+description: >-
+  Geyser 07 in the Whistling Basin Geyser Park reports into feeds/geyser-07.json, and the dashboard
+  reads the eruption height straight from Terraform's outputs. The feed has moved on since the last
+  apply, so the dashboard is stale. Meanwhile a colleague has left an unreviewed edit to the
+  park banner in variables.tf, which a normal apply would push live.
+objective: >-
+  Make Terraform's recorded output latest_height_m match the current feed, without applying
+  the banner edit: banner.txt must keep its old text, the variables.tf edit must stay in place,
+  and "terraform plan -refresh-only" must report nothing left to accept.
+xp: 321
+difficulty: expert
+expected_time: 12m
+concepts:
+  - apply -refresh-only
+  - drift acceptance
+  - state vs configuration
+module: module-14-performance
+level: level-4-refresh-only-apply

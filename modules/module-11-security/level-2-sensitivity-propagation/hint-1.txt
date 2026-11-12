@@ -1,0 +1,1 @@
+Run terraform validate. There are two different complaints: one about for_each and one about an output. Both are about values derived from a sensitive variable.

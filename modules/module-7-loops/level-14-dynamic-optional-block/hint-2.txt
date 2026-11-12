@@ -1,0 +1,1 @@
+The transcript `source` block is always generated, so when `var.transcript` is null its `content` is null - and archive_file requires content. The block itself must not exist when there is no transcript.

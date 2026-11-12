@@ -1,0 +1,1 @@
+Run `terraform plan` and read the first error about `module.classroom`. Note what type it says the value has.

@@ -1,0 +1,18 @@
+name: Lights On, Maybe
+description: >-
+  Eastbank skatepark prints a floodlight schedule only on nights when the lights are on. The
+  switch is a variable the caretaker sets to "on", and now the plan refuses to start with a
+  complaint about the condition of a count expression.
+objective: >-
+  Make the floodlights variable a real bool (type = bool) and set it to true in terraform.tfvars,
+  so that one schedule file is created when it is true and none when it is false. Do not compare
+  the variable with a string.
+xp: 170
+difficulty: intermediate
+expected_time: 8m
+concepts:
+  - count
+  - conditional
+  - bool
+module: module-7-loops
+level: level-4-count-conditional-bool

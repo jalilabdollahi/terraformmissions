@@ -1,0 +1,16 @@
+name: Buzzer Row Quiz Show
+description: >-
+  The Buzzer Row TV game show picks its first-round questions with Terraform. The plan stops with complaints
+  that a number is required, and the show host swears he typed the numbers in plain English.
+objective: >-
+  Make the config apply with 8 contestants (contestant_count output = 8) and exactly 3 distinct questions picked
+  in round one. Both values must be real numbers in the config.
+xp: 120
+difficulty: beginner
+expected_time: 6m
+concepts:
+  - number type
+  - type conversion
+  - variable defaults
+module: module-1-foundations
+level: level-10-number-type-mismatch

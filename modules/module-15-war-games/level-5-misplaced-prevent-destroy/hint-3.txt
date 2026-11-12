@@ -1,0 +1,1 @@
+Plan: move prevent_destroy from random_pet.berth_tag onto random_id.yard_charter; the plan then errors on the charter (its keepers include the annex flag) - make the keepers stop depending on annex_enabled without changing the stored value; fix the manifest that indexes module.annex[0]; apply and confirm the charter ID with `terraform output charter_serial`.

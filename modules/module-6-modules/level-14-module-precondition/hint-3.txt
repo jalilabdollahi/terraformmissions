@@ -1,0 +1,1 @@
+In `condition = var.flight_class == "sunrise" ? A : B`, A is the rule for sunrise flights (at most 8) and B for everything else (at most 12). Swap the two limits. Keep the error message.

@@ -1,0 +1,1 @@
+Removing the misplaced guard is only the first fix. Once the annex objects can be retired, plan again and read every line that touches the charter: something in the root module is about to make Terraform replace it, and another expression will fail as soon as the annex count is zero.

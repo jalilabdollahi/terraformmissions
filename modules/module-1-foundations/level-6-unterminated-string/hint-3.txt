@@ -1,0 +1,2 @@
+In the `gallery_four` resource, add a closing `"` after the final `
+` at the end of the content line.

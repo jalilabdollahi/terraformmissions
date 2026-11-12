@@ -1,0 +1,1 @@
+Use `target = random_integer.station_slot` for the root resource and `target = module.glitter.random_integer.dose` for the one inside the module. Keep `values` as they are.

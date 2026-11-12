@@ -1,0 +1,1 @@
+Terraform can convert the string "8" into the number 8, but it cannot convert English words. Find the two places where a number is written as a word.

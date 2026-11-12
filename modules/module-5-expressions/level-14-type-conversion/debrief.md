@@ -1,30 +1,27 @@
-# Type Conversion
+# Debrief — conversion is strict, and strictness is your friend
 
-## What Was Broken
-`tolist()` is used to convert tuples and sets to lists. It cannot convert maps because maps
-have key-value pairs, not ordered elements.
+Terraform converts between types automatically in many places (a number becomes a string inside a
+template), but the explicit conversion functions are strict about their input. `tonumber()` accepts
+only strings that are exactly a decimal number: no thousands separators, no decimal comma, no
+surrounding whitespace, no words. Anything else is an error that names the offending string.
 
-## The Fix
-```hcl
-locals {
-  as_list = values(var.my_map)
-  # → ["apple", "banana"] (order may vary)
-}
-```
+That strictness is useful, because data cleaning should be visible in the code. The mission has three
+kinds of dirty input and a different treatment for each:
 
-## Map-to-List Conversions
-```hcl
-keys(map)              # list of keys:   ["a", "b"]
-values(map)            # list of values: ["apple", "banana"]
-[for k, v in map : v]  # same as values, but with transformation
-```
+- **Fixable formatting** (`13,1`, ` 11.9`): normalise with `replace()` and `trimspace()`.
+- **Legitimately not a number** (`DNF`, `DSQ`): test with `can()` and set it aside.
+- **Everything else** you did not predict: let the plan fail rather than guess.
 
-## tolist() Valid Uses
-```hcl
-tolist(toset(["a","b","c"]))   # set → list
-tolist(["a","b","c"])          # tuple → list (explicit typing)
-```
+`can(expr)` returns true if the expression evaluates without error; `try(expr, fallback)` returns the
+fallback instead. Use them narrowly. Wrapping a large expression in `try()` can hide real mistakes such
+as a misspelled attribute.
 
-## Why It Matters
-Terraform's type system distinguishes lists, sets, tuples, and maps. Using the wrong conversion
-function is a type error caught at validate time.
+The same family of functions includes `tostring()`, `tobool()`, `tolist()`, `toset()` and `tomap()`.
+They fail when a value cannot be converted, for example a list of objects to a map of strings, and a
+`toset()` quietly removes duplicates and ordering.
+
+## Real-world takeaway
+
+Anything that originates from humans or CSV exports needs a clean-up step before conversion.
+Put it in one local, keep rejects visible (here, `no_time`), and test with a second dataset that
+contains a case you did not think of.

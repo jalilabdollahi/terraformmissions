@@ -1,0 +1,18 @@
+name: Offshore Wind Sensor CSR
+description: >-
+  Saltmarsh Offshore Wind generates a key and a signing request for each turbine sensor, and
+  the CA team signs the request. The CSR resource refuses to build, and the error complains
+  about the PEM it was given.
+objective: >-
+  Build pki/turbine-07.csr as a valid certificate request signed by the sensor's own key, so
+  that the public key inside the CSR is the public half of tls_private_key.sensor. Keep the
+  private key file too.
+xp: 140
+difficulty: beginner
+expected_time: 8m
+concepts:
+  - tls_cert_request
+  - private_key_pem
+  - attribute references
+module: module-2-resource-basics
+level: level-14-cert-request-key-ref

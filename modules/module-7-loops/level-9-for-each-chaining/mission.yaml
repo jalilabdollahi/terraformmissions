@@ -1,0 +1,18 @@
+name: Call Sign Chain
+description: >-
+  The Skyward Air Cadets give each cadet a random radio call sign and print it on a wing card.
+  Terraform stops before it plans anything: the wing card refers to 'the' call sign, but there is
+  one call sign per cadet.
+objective: >-
+  Create one local_file.wing_card per cadet, keyed by cadet name, driven by the
+  random_pet.callsign instances themselves (for_each over the resource). Each card must contain
+  its own cadet's call sign and nothing may be regenerated when a cadet joins or leaves.
+xp: 210
+difficulty: intermediate
+expected_time: 12m
+concepts:
+  - for_each
+  - chaining resources
+  - each.value
+module: module-7-loops
+level: level-9-for-each-chaining

@@ -1,0 +1,20 @@
+{
+  "exported_at": "rotation RT-2291, security team",
+  "services": {
+    "quota-registry": {
+      "owner": "fisheries-platform",
+      "scope_note": "production registry",
+      "token": "qr1.prod.20991231.8a5c454206"
+    },
+    "quota-registry-sandbox": {
+      "owner": "fisheries-platform",
+      "scope_note": "sandbox registry for demos",
+      "token": "qr1.sandbox.20991231.80fd7914ab"
+    },
+    "vessel-ais": {
+      "owner": "harbour-ops",
+      "scope_note": "AIS feed, unrelated",
+      "token": "ais1.7f3a9c21d0b4"
+    }
+  }
+}

@@ -1,0 +1,1 @@
+Run `terraform plan` and read what for_each says about the type of `local.room_days`.

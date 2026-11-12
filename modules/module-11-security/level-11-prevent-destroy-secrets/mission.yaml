@@ -1,0 +1,14 @@
+name: "Ashgrove Deed Box"
+description: >-
+  A notary's digital deed register is sealed with a generated master passphrase, which Terraform also writes to a key file. Last week an intern ran terraform destroy in the wrong terminal and the team had to restore the passphrase from a printed backup.
+objective: >-
+  Make Terraform refuse to destroy the master passphrase (random_password.box_master) and the key file (local_sensitive_file.deed_register): terraform plan -destroy must fail for both, normal plans must stay clean, and the existing passphrase must not change.
+xp: 275
+difficulty: advanced
+expected_time: 10m
+concepts:
+  - prevent_destroy
+  - lifecycle
+  - protecting secrets
+module: module-11-security
+level: level-11-prevent-destroy-secrets

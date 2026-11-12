@@ -1,0 +1,1 @@
+A `moved` block can name a whole module call as well as one resource. One block moves everything inside that module instance, including nested modules.

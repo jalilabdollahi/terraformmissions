@@ -1,0 +1,3 @@
+Handover notes (Sunrise Tuk-Tuk Tours)
+- Production state was never moved to the new layout.
+- Old state files live in the states/ folder. Do not delete or edit them.

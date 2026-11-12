@@ -1,0 +1,1 @@
+In an `object({...})` type every attribute is mandatory unless you wrap its type in `optional(...)`. The callers deliberately leave out `bitrate_kbps` and `jingle`, so the module's type has to say these are optional and what they default to.

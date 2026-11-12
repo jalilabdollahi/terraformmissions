@@ -1,1 +1,1 @@
-There are two things to fix: the resource type declaration AND the output reference. Search for all occurrences of `local_files` in `main.tf`.
+Three problems, three state commands: a renamed address needs `terraform state mv`, an object missing from state needs `terraform import` (the nameplate file has the value; random_integer IDs look like `value,min,max`), and an object that must survive without being managed needs `terraform state rm`. Do them one at a time and re-run `plan`.

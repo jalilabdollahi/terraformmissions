@@ -1,0 +1,18 @@
+name: Five Dogs Three Charts
+description: >-
+  The Northgate sled-dog kennel keeps its roster in a variable, but feeding charts are generated
+  by a counted resource whose count someone typed in by hand. Two dogs on the roster have no
+  chart, and the vet is not amused.
+objective: >-
+  Every dog on var.dogs must get a chart (five today, charts/tundra.txt through charts/nome.txt).
+  The chart count must follow the roster - adding or removing a name from var.dogs must add or
+  remove exactly the matching chart.
+xp: 155
+difficulty: intermediate
+expected_time: 6m
+concepts:
+  - count
+  - length()
+  - lists
+module: module-7-loops
+level: level-2-count-from-length

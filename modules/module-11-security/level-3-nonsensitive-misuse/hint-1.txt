@@ -1,0 +1,1 @@
+Look at locals. One expression is responsible for turning a protected variable into a plain string. Follow where that local is used.

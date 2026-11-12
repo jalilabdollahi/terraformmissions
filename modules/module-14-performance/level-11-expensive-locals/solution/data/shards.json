@@ -1,0 +1,293 @@
+{
+ "cut_style": "classic",
+ "shards": [
+  {
+   "id": "s015",
+   "quadrant": "south",
+   "complexity": 1,
+   "bytes": 912384
+  },
+  {
+   "id": "e034",
+   "quadrant": "east",
+   "complexity": 1,
+   "bytes": 460800
+  },
+  {
+   "id": "n003",
+   "quadrant": "north",
+   "complexity": 5,
+   "bytes": 656384
+  },
+  {
+   "id": "s017",
+   "quadrant": "south",
+   "complexity": 1,
+   "bytes": 77824
+  },
+  {
+   "id": "n011",
+   "quadrant": "north",
+   "complexity": 1,
+   "bytes": 664576
+  },
+  {
+   "id": "w043",
+   "quadrant": "west",
+   "complexity": 2,
+   "bytes": 857088
+  },
+  {
+   "id": "w041",
+   "quadrant": "west",
+   "complexity": 4,
+   "bytes": 480256
+  },
+  {
+   "id": "s022",
+   "quadrant": "south",
+   "complexity": 2,
+   "bytes": 584704
+  },
+  {
+   "id": "s020",
+   "quadrant": "south",
+   "complexity": 4,
+   "bytes": 382976
+  },
+  {
+   "id": "s021",
+   "quadrant": "south",
+   "complexity": 4,
+   "bytes": 660480
+  },
+  {
+   "id": "s024",
+   "quadrant": "south",
+   "complexity": 3,
+   "bytes": 564224
+  },
+  {
+   "id": "s023",
+   "quadrant": "south",
+   "complexity": 2,
+   "bytes": 711680
+  },
+  {
+   "id": "w048",
+   "quadrant": "west",
+   "complexity": 1,
+   "bytes": 181248
+  },
+  {
+   "id": "w042",
+   "quadrant": "west",
+   "complexity": 1,
+   "bytes": 633856
+  },
+  {
+   "id": "s018",
+   "quadrant": "south",
+   "complexity": 2,
+   "bytes": 293888
+  },
+  {
+   "id": "n005",
+   "quadrant": "north",
+   "complexity": 5,
+   "bytes": 539648
+  },
+  {
+   "id": "n002",
+   "quadrant": "north",
+   "complexity": 4,
+   "bytes": 514048
+  },
+  {
+   "id": "w044",
+   "quadrant": "west",
+   "complexity": 3,
+   "bytes": 393216
+  },
+  {
+   "id": "w037",
+   "quadrant": "west",
+   "complexity": 1,
+   "bytes": 758784
+  },
+  {
+   "id": "e031",
+   "quadrant": "east",
+   "complexity": 2,
+   "bytes": 578560
+  },
+  {
+   "id": "n006",
+   "quadrant": "north",
+   "complexity": 5,
+   "bytes": 872448
+  },
+  {
+   "id": "w038",
+   "quadrant": "west",
+   "complexity": 1,
+   "bytes": 264192
+  },
+  {
+   "id": "e028",
+   "quadrant": "east",
+   "complexity": 5,
+   "bytes": 921600
+  },
+  {
+   "id": "n010",
+   "quadrant": "north",
+   "complexity": 5,
+   "bytes": 889856
+  },
+  {
+   "id": "s019",
+   "quadrant": "south",
+   "complexity": 5,
+   "bytes": 71680
+  },
+  {
+   "id": "e026",
+   "quadrant": "east",
+   "complexity": 1,
+   "bytes": 520192
+  },
+  {
+   "id": "e035",
+   "quadrant": "east",
+   "complexity": 1,
+   "bytes": 345088
+  },
+  {
+   "id": "w045",
+   "quadrant": "west",
+   "complexity": 1,
+   "bytes": 366592
+  },
+  {
+   "id": "w047",
+   "quadrant": "west",
+   "complexity": 4,
+   "bytes": 835584
+  },
+  {
+   "id": "s014",
+   "quadrant": "south",
+   "complexity": 2,
+   "bytes": 694272
+  },
+  {
+   "id": "w040",
+   "quadrant": "west",
+   "complexity": 4,
+   "bytes": 434176
+  },
+  {
+   "id": "n008",
+   "quadrant": "north",
+   "complexity": 4,
+   "bytes": 358400
+  },
+  {
+   "id": "e025",
+   "quadrant": "east",
+   "complexity": 1,
+   "bytes": 735232
+  },
+  {
+   "id": "e027",
+   "quadrant": "east",
+   "complexity": 3,
+   "bytes": 466944
+  },
+  {
+   "id": "n009",
+   "quadrant": "north",
+   "complexity": 2,
+   "bytes": 135168
+  },
+  {
+   "id": "w039",
+   "quadrant": "west",
+   "complexity": 2,
+   "bytes": 95232
+  },
+  {
+   "id": "e033",
+   "quadrant": "east",
+   "complexity": 1,
+   "bytes": 630784
+  },
+  {
+   "id": "e029",
+   "quadrant": "east",
+   "complexity": 1,
+   "bytes": 782336
+  },
+  {
+   "id": "s013",
+   "quadrant": "south",
+   "complexity": 5,
+   "bytes": 721920
+  },
+  {
+   "id": "e036",
+   "quadrant": "east",
+   "complexity": 4,
+   "bytes": 110592
+  },
+  {
+   "id": "n012",
+   "quadrant": "north",
+   "complexity": 4,
+   "bytes": 515072
+  },
+  {
+   "id": "e032",
+   "quadrant": "east",
+   "complexity": 3,
+   "bytes": 71680
+  },
+  {
+   "id": "e030",
+   "quadrant": "east",
+   "complexity": 3,
+   "bytes": 370688
+  },
+  {
+   "id": "n004",
+   "quadrant": "north",
+   "complexity": 2,
+   "bytes": 234496
+  },
+  {
+   "id": "n001",
+   "quadrant": "north",
+   "complexity": 4,
+   "bytes": 627712
+  },
+  {
+   "id": "n007",
+   "quadrant": "north",
+   "complexity": 2,
+   "bytes": 139264
+  },
+  {
+   "id": "w046",
+   "quadrant": "west",
+   "complexity": 3,
+   "bytes": 56320
+  },
+  {
+   "id": "s016",
+   "quadrant": "south",
+   "complexity": 5,
+   "bytes": 106496
+  }
+ ]
+}

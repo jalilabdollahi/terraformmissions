@@ -1,0 +1,1 @@
+One tool per group: `moved` blocks (six of them, one per instance of each resource, old `[0]` to new `["freestyle"]`), a `removed` block with `lifecycle { destroy = false }` for `random_pet.mascot`, and an `import` block with ID `7421,1000,9999` for the high score.

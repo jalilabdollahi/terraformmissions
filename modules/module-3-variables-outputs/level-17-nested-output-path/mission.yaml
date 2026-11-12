@@ -1,0 +1,14 @@
+name: Lost In The Enclosure
+description: >-
+  Willowmere Zoo's visitor app reads three outputs out of a nested habitat structure. The data is fine, but each output walks the wrong path through it, and Terraform refuses to validate.
+objective: >-
+  Fix the three outputs so savanna_capacity is 12, aviary_lead_keeper is Mei and reptile_head_keeper is Omar, derived from var.habitats (the check also feeds a different roster).
+xp: 200
+difficulty: intermediate
+expected_time: 10m
+concepts:
+  - nested-objects
+  - output-expressions
+  - attribute-paths
+module: module-3-variables-outputs
+level: level-17-nested-output-path

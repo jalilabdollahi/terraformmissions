@@ -1,1 +1,0 @@
-The import command uses the resource address and the resource's unique ID. For `local_file`, the ID is the file path.

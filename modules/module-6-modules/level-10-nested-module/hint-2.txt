@@ -1,1 +1,0 @@
-`path.module` evaluates to the directory containing the *current* module's config files. In a child module, this is the child's directory, not the root's.

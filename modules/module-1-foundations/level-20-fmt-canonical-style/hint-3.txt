@@ -1,0 +1,1 @@
+Run `terraform fmt -recursive` (without -check) in the project root, then confirm with `terraform fmt -check -recursive`.

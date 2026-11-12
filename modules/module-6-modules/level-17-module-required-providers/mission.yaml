@@ -1,0 +1,18 @@
+name: Sauna Supper Menu
+description: >-
+  The Nordlys Lakeside Sauna Retreat prints its evening menu with a module that the kitchen team wrote years ago.
+  The retreat's root configuration uses a current local provider, and terraform init now says that no
+  provider version can satisfy everybody.
+objective: >-
+  Make terraform init succeed with the root's provider requirement (hashicorp/local ~> 2.5) left
+  as it is, by repairing the conflicting requirement declared inside the module. The module must
+  keep declaring the provider it uses. The menu file menu/supper.txt must list the dishes, numbered.
+xp: 250
+difficulty: intermediate
+expected_time: 12m
+concepts:
+  - required_providers
+  - provider version constraints
+  - module requirements
+module: module-6-modules
+level: level-17-module-required-providers

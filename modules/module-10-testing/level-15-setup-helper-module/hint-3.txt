@@ -1,0 +1,1 @@
+Add `module { source = "./tests/setup" }` to the `setup` run. In `setup_long` change `command = plan` to `command = apply` (or remove the line), then run `terraform init` and `terraform test` again.

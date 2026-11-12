@@ -1,0 +1,1 @@
+Start with the plan error: it is about the arguments to a function that merges. Are the allergens maps or lists? Then compare the order of the two maps in the label merge.

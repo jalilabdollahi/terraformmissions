@@ -1,0 +1,20 @@
+name: Dive Log Signer
+description: >-
+  Blue Reef Dive School already runs a boat logbook from Terraform. This morning a colleague pulled
+  a branch that starts signing the logs with a TLS key, and now every Terraform command refuses to
+  work in the existing checkout.
+objective: >-
+  Read the error to find out which provider is missing, record its full source address in answers/missing.txt
+  as the single line missing_provider=<source address>, then bring the working directory up to date
+  from the command line and apply, so the signing key and divelog/signature.txt exist while the existing
+  boat name stays unchanged.
+xp: 250
+difficulty: advanced
+expected_time: 10m
+concepts:
+- terraform init
+- provider installation
+- dependency lock file
+- error reading
+module: module-13-debugging
+level: level-8-provider-not-installed

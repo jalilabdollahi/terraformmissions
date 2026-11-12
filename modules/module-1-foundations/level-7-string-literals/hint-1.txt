@@ -1,1 +1,0 @@
-Run `terraform validate`. The error mentions an 'Invalid string literal' or 'unterminated string'.

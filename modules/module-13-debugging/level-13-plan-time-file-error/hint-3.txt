@@ -1,0 +1,1 @@
+Replace `file("${path.module}/studio/notes.txt")` with `local_file.session_notes.content`. The reference also makes Terraform create the notes first.

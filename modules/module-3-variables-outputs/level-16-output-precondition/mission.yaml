@@ -1,0 +1,14 @@
+name: Young Barrel Goes Live
+description: >-
+  Acetaia Bruna's online shop sells whatever the shop_label output says. Last month a 28-day barrel was published as mature because nothing checked the number. The rule exists only as a comment in main.tf.
+objective: >-
+  Add a precondition to the shop_label output so that a plan fails when ageing_days is below min_ageing_days (the default 75 days still publishes, exactly 60 is allowed, and raising the minimum variable raises the bar).
+xp: 195
+difficulty: intermediate
+expected_time: 9m
+concepts:
+  - output-precondition
+  - custom-conditions
+  - guard-rails
+module: module-3-variables-outputs
+level: level-16-output-precondition

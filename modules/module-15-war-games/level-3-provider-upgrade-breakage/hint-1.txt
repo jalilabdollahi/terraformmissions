@@ -1,0 +1,1 @@
+Start with `terraform init` and read the first error: it is about the lock file, not about your code. Only after the provider installs will `terraform validate` show the next layer of the incident.

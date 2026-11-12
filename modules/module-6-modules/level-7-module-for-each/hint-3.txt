@@ -1,1 +1,0 @@
-Change `module.mods.file_path` to `module.mods["a"].file_path`.

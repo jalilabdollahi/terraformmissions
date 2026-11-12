@@ -1,0 +1,1 @@
+In imports.tf use `to = random_integer.room_number` and `id = "<room from the sheet>,100,999"`. Run `terraform plan` (it should say 1 to import) and then `terraform apply` to perform the import.

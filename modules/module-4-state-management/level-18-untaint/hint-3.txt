@@ -1,0 +1,1 @@
+Run `terraform untaint tls_private_key.firmware_signer`, then `terraform plan`: it must say "No changes". Do not run `apply` before untainting.

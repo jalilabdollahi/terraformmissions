@@ -1,0 +1,1 @@
+The root passes `season` to `module.evaporator`, and the evaporator declares the variable, but its `module "canner"` block only passes `sugarbush`. The canner falls back to its default, "unknown". A variable declared in a module is not visible to the module it calls.

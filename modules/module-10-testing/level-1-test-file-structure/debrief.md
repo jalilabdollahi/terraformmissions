@@ -1,27 +1,18 @@
-# Wrong Block in the Test File
+# Debrief - the shape of a test file
 
-## What Was Broken
-The test file used `tests {}` as the top-level block type. In `.tftest.hcl` files, the correct block
-type to declare a test scenario is `run {}`.
+A Terraform test file is HCL, but only a small vocabulary is legal at the top level: `run`, `variables`,
+`provider`, `mock_provider`, `test` (settings only) and a few others. Everything that describes one
+scenario lives in a `run "<name>"` block, and the name is what you see in the output and what you pass
+to `terraform test -filter`.
 
-## Valid Top-Level Blocks in .tftest.hcl
-| Block       | Purpose |
-|-------------|---------|
-| `run`       | Declare a test scenario (apply or plan + assert) |
-| `variables` | Set variable values for all runs in the file |
-| `provider`  | Override provider configuration for tests |
+The mistake here is a classic from people arriving from other ecosystems: `test "name" { ... }` looks
+natural, and Terraform answers with "Extraneous label for test". The error is structural, so none of
+your assertions were evaluated - a suite that cannot parse tells you nothing about the code.
 
-## The Fix
-```hcl
-run "verify_greeting" {
-  assert {
-    condition     = output.greeting == "hello"
-    error_message = "Greeting output should be 'hello'."
-  }
-}
-```
+Notice also what the exit code means. A test file that fails to parse makes `terraform test` exit
+non-zero, but an *empty* tests directory exits 0 with "0 passed, 0 failed". Never treat "no failures"
+as "tested": in CI, assert that the pass count is what you expect, or that named runs are reported.
 
-## Why It Matters
-The `.tftest.hcl` file format has a strict schema. Using an unknown block type causes an immediate
-parse error. Knowing the three valid top-level blocks (`run`, `variables`, `provider`) is the
-foundation of Terraform native testing.
+Real-world takeaway: keep test files small and named after behaviour (`single_print`, `discount_half`),
+run `terraform test -verbose` while authoring, and make CI fail on a zero-test result so a typo in a
+directory name or block type cannot silently turn your safety net off.

@@ -1,1 +1,0 @@
-Change `prevent_destroy = true` to `prevent_destroy = terraform.workspace == "production"`.

@@ -1,0 +1,18 @@
+name: The Silent Pager
+description: >-
+  The Saltmarsh fish hatchery pages a human on call only in production, with 90-day tank logs and
+  a pager roster. Since the last deploy prod behaves like a dev sandbox: logs are kept for a week
+  and nobody gets paged, although the prod workspace is selected.
+objective: >-
+  In the workspace named prod the output retention_days must be 90, pager_enabled must be true and
+  out/pager-roster.txt must exist. Every other workspace (dev, staging ...) keeps retention 7 with
+  no pager.
+xp: 185
+difficulty: intermediate
+expected_time: 10m
+concepts:
+  - terraform.workspace
+  - conditional expressions
+  - count
+module: module-9-workspaces
+level: level-3-workspace-condition-typo

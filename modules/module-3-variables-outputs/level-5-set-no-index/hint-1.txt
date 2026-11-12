@@ -1,0 +1,1 @@
+Run `terraform plan` and read the "Invalid index" error for `var.donated_genres[0]`: what does it say about the value's type?

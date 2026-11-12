@@ -1,0 +1,1 @@
+Run `terraform apply` and then `ls cards/`. How many files are there, and how many resources does `terraform state list` show?

@@ -1,0 +1,18 @@
+name: The Misfiled Bauble State
+description: >-
+  Tinsel Lane Christmas decorations factory keeps one workspace per season and uses the local backend. During a laptop
+  migration somebody dragged the winter workspace's state file out of its folder. Terraform now
+  thinks winter is empty and wants to rebuild the whole bauble log.
+objective: >-
+  Make the winter workspace (selected) own its original state again, in the exact location the
+  local backend reads, and leave the summer workspace alone. No stray state files may remain in
+  terraform.tfstate.d/ and the plan must be clean.
+xp: 200
+difficulty: intermediate
+expected_time: 12m
+concepts:
+  - terraform.tfstate.d
+  - local backend
+  - workspace state files
+module: module-9-workspaces
+level: level-6-workspace-dir-layout

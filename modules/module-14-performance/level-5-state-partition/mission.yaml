@@ -1,16 +1,21 @@
-concepts:
-- state partitioning
-- terraform_remote_state
-- cross-config outputs
-description: 'A large config has been split into two: config-a (infrastructure) and
-  config-b (application). Config-b reads config-a''s state via terraform_remote_state,
-  but references the wrong output key. Fix the output key reference so config-b can
-  correctly consume config-a''s outputs.'
+name: Scrapyard Identity Split
+description: >-
+  The Rustfield scrapyard has one Terraform state for everything: the yard identity
+  (a random name and the gate count, both painted on trucks and printed on waste-licence forms) and the
+  crane roster that the shift planners change daily. Every roster tweak makes the platform team wait
+  on a plan that also refreshes the yard identity. Time to partition: the identity moves to its own
+  configuration under core/, and the roster configuration reads it from there.
+objective: >-
+  Create core/ as its own root module that owns random_pet.yard_name and random_integer.gate_count
+  (with outputs yard_name and gate_count), move those two objects into core/terraform.tfstate without
+  changing their values, and make the root configuration read them through a terraform_remote_state
+  data source. Both root and core must plan clean.
+xp: 328
 difficulty: expert
-expected_time: 28m
-level: level-5-state-partition
+expected_time: 25m
+concepts:
+  - state partitioning
+  - terraform_remote_state
+  - state mv -state-out
 module: module-14-performance
-name: State Partitioning
-objective: Fix the wrong output key in config-b's remote_state reference so both configs
-  can be applied.
-xp: 350
+level: level-5-state-partition

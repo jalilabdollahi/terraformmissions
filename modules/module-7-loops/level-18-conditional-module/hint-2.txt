@@ -1,0 +1,1 @@
+With `count`, `module.snack_bar` is a list of module instances: one element when open, none when closed. `module.snack_bar.menu_path` asks a list for an attribute. `module.snack_bar[0]` would crash when the list is empty.

@@ -1,0 +1,21 @@
+name: Lost Property Tags
+description: >-
+  Central Station's lost property office prints a tag for every item in the cage from a map of objects.
+  Some items have been claimed and carry a holder and an optional phone number; others have no claim
+  at all. Plan dies with "Attempt to get attribute from null value" as soon as an unclaimed item is
+  in the list.
+objective: >-
+  Make the tags work for claimed and unclaimed items alike, computed from the data. cage/tags.txt
+  must have one line per item in the form name: description | holder=HOLDER | phone=PHONE, with the
+  holder upper-cased, "UNCLAIMED" when nobody has claimed it and "n/a" when there is no phone number.
+  The validator also plans with other items, so do not hard-code the defaults.
+xp: 275
+difficulty: advanced
+expected_time: 15m
+concepts:
+- null values
+- try()
+- optional attributes
+- coalesce
+module: module-13-debugging
+level: level-14-null-attribute-access

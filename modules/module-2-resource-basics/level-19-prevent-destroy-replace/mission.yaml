@@ -1,0 +1,18 @@
+name: Hardware Shop Shelf Rename
+description: >-
+  The Thornfield hardware shop renamed its shelf prefix from yard to depot. The shelf label
+  should follow, but its random_pet is force-new on prefix changes and carries
+  prevent_destroy, so every plan now fails. The shop ledger id next to it must never be
+  replaced.
+objective: >-
+  Get the shelf label replaced with the new depot- prefix and keep the shop ledger UUID
+  exactly as it was, still protected by prevent_destroy. Finish with a clean plan.
+xp: 150
+difficulty: beginner
+expected_time: 10m
+concepts:
+  - prevent_destroy
+  - forced replacement
+  - lifecycle
+module: module-2-resource-basics
+level: level-19-prevent-destroy-replace

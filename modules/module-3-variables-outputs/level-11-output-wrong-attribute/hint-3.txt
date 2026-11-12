@@ -1,0 +1,1 @@
+The attributes are `filename` for the path and `content_sha256` for the SHA-256 of the content. Update both outputs.

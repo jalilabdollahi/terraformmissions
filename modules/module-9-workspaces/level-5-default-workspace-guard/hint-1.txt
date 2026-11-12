@@ -1,0 +1,1 @@
+Run `terraform plan` while in the default workspace and read the end of the output. What colour is the message, and does the command still succeed?

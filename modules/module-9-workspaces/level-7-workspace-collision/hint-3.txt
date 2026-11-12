@@ -1,0 +1,1 @@
+Put `terraform.workspace` into both file paths, for example `out/${terraform.workspace}-bunks.txt` and `out/${terraform.workspace}-wake-calls.txt`.

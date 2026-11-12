@@ -1,0 +1,1 @@
+Terraform cannot parse terraform.tfstate, so every command that touches state fails. Before changing anything, copy the broken file aside, then look at what terraform.tfstate.backup contains with `terraform show terraform.tfstate.backup` or jq. Ask: which apply does this backup predate?

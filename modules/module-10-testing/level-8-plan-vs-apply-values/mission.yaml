@@ -1,0 +1,17 @@
+name: Unmixed Paint Batch
+description: >-
+  A paint shop stamps every tin with a random batch code and a random tint shade. The tests that
+  check the stamps fail with "Unknown condition value" even though nothing is wrong with the codes
+  themselves.
+objective: >-
+  Make ratio_label, batch_code_shape and tint_in_range pass. Keep ratio_label as a plan-only run, and
+  keep the regex and range assertions; the runs that read random values must be able to see them.
+xp: 260
+difficulty: advanced
+expected_time: 10m
+concepts:
+  - unknown values
+  - plan vs apply
+  - random provider in tests
+module: module-10-testing
+level: level-8-plan-vs-apply-values

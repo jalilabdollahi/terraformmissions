@@ -1,0 +1,1 @@
+Plan: cp terraform.tfstate terraform.tfstate.corrupt; cp terraform.tfstate.backup terraform.tfstate; read the TG- serial (without the TG- prefix) from calibration/station-west.cfg; run `terraform import 'random_id.trigger["west"]' <serial>` (mind the quotes around the for_each key); then plan to confirm only in-place file updates remain and apply.

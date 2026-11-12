@@ -1,0 +1,1 @@
+Look inside `terraform.tfstate.d/` with `ls -R`. Compare how the summer workspace is laid out with winter.

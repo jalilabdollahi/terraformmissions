@@ -1,0 +1,1 @@
+Read ci/terraform.rc and ci/agent-setup.sh side by side. Compare the two directory names, then look at how `~` is written. The Terraform docs for `plugin_cache_dir` mention which variables are expanded.

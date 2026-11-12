@@ -1,0 +1,1 @@
+Look at the two blocks that mention `bench/batch-sheet.txt`. One creates the file, one reads it. Ask yourself in which order Terraform will run them.

@@ -1,0 +1,1 @@
+Run `terraform validate` and note the name of the variable Terraform says does not exist. Look at the line above the `content` block.

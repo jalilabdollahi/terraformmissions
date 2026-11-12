@@ -1,1 +1,1 @@
-The resource sets `file_permission = "0600"` but the postcondition checks for `"0644"`. These values don't match.
+The postcondition passes whenever the file exists, so a world-readable key counts as compliant. The audit data source already reports the real mode as a string. Also, the variable default is a loose mode.

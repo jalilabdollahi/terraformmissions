@@ -1,0 +1,6 @@
+[
+  {"name": "Ottoline Brace", "table": 3, "diet": "vegan"},
+  {"name": "Cedric Hale", "table": 3},
+  {"name": "Prudence Voss", "table": 5, "diet": null},
+  {"name": "Ambrose Tull", "diet": "nut allergy"}
+]

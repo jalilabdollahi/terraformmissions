@@ -1,0 +1,4 @@
+- Using `ignore_changes = all`. It silences the notes but also hides every other kind of drift on that resource, which the mission rules out.
+- Adding ignore_changes to the schedule resource as well. The schedule must follow the config.
+- Removing the lifecycle block and re-creating the notes file by hand. Terraform then overwrites the mechanic's entries on the next apply.
+- Guessing at names such as `content_base64`. They are real attributes but not the one that changes here.

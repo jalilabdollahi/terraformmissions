@@ -1,0 +1,1 @@
+Change `alias = "archive"` in the test file's second provider block to `alias = "vault"`. The `providers = { ... }` mapping in `die_is_read_only` already refers to `local.vault`.

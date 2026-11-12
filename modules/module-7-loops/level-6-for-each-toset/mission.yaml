@@ -1,0 +1,18 @@
+name: Briggs Twice
+description: >-
+  The Lacegate antiques centre prints a price tag per stall, and the stalls are listed in a
+  variable as plain strings. After a refactor from count to for_each, Terraform complains that it
+  cannot iterate over a list of strings - and one dealer appears twice in the list.
+objective: >-
+  Make for_each work on var.dealers so there is exactly one tag per distinct dealer, addressed as
+  local_file.stall_tag["briggs"] and so on (four tags from the default list). Keep var.dealers a
+  list(string).
+xp: 175
+difficulty: intermediate
+expected_time: 7m
+concepts:
+  - for_each
+  - toset()
+  - sets vs lists
+module: module-7-loops
+level: level-6-for-each-toset

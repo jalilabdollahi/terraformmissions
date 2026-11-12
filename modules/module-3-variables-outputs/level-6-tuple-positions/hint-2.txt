@@ -1,0 +1,1 @@
+A tuple type fixes the type of each position. The default is `[142.5, "summit-vent", true]`, so position 0 should be a string but holds a number, and position 1 should be a number but holds a name.

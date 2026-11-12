@@ -1,0 +1,1 @@
+Loop over the resource: `{ for event, t in local_file.ticket : event => t.filename }` gives the event-to-path map.

@@ -1,0 +1,19 @@
+name: Squash Ladder Guards
+description: >-
+  The Baseline Squash Club reads its monthly court ladder from a CSV export. The guard that should stop a bad
+  export was written as a single precondition that reads the data source's own content, and Terraform
+  refuses to load the configuration.
+objective: >-
+  Guard data.local_file.ladder properly: a precondition that rejects a missing file or a name that
+  does not end in .csv before the read, and a postcondition that rejects content whose header is not
+  rank,player,rating. The default ladder must still plan and apply and the champion output must be
+  'Ingrid Halvorsen'.
+xp: 275
+difficulty: advanced
+expected_time: 16m
+concepts:
+  - preconditions on data sources
+  - postconditions on data sources
+  - self
+module: module-12-advanced-patterns
+level: level-13-data-precondition

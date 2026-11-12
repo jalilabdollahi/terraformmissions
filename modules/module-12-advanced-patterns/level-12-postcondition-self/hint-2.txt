@@ -1,0 +1,1 @@
+Inside a `precondition` or `postcondition` on a resource, you cannot write the resource's own address (that would be a dependency on itself). There is a special reference for 'this object, as it is after apply'.

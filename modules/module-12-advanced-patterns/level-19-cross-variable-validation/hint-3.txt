@@ -1,0 +1,1 @@
+Add `validation { condition = var.students <= var.benches * var.stools_per_bench ... }` inside `variable "students"` and `validation { condition = var.end_hour > var.start_hour ... }` inside `variable "end_hour"`. Remove the precondition from the resource.

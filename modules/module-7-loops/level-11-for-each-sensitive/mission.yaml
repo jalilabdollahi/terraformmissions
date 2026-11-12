@@ -1,0 +1,18 @@
+name: Secret Keys
+description: >-
+  Kingsgate's tower-crane operators each get a cab PIN slip, driven by a sensitive map of name to PIN.
+  Terraform refuses to loop over the map: it would have to use secret values as instance keys.
+objective: >-
+  Keep var.pins sensitive and create one local_sensitive_file.pin_slip per operator, keyed by the
+  operator's name (vesna, hamid, lotte), with the file containing exactly that operator's PIN. Do
+  not make the PIN map itself non-sensitive.
+xp: 230
+difficulty: intermediate
+expected_time: 12m
+concepts:
+  - for_each
+  - sensitive values
+  - nonsensitive()
+  - keys()
+module: module-7-loops
+level: level-11-for-each-sensitive

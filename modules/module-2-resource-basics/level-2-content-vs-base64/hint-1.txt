@@ -1,0 +1,1 @@
+Run `terraform validate` and read which arguments of local_file.closed_badge the error names.

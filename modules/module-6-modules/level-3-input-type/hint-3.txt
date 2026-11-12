@@ -1,0 +1,1 @@
+Turn the string into a list at the call site with `split(",", ...)`. The elements come out as strings; the module's `list(number)` type converts them to numbers automatically.

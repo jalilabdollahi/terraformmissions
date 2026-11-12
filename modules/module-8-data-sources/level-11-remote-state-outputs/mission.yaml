@@ -1,0 +1,17 @@
+name: Ballroom Season Programme
+description: >-
+  The ballroom dance hall's front desk prints its season programme from outputs that the floor-staff
+  team publishes in their own Terraform state. The plan fails because the front desk
+  asks for outputs that are not there, and then treats one of them as the wrong kind of value.
+objective: >-
+  Read the floor staff's real outputs correctly. total_couples must be 160 and head_caller
+  "Wilhelmina Pike", both derived from the remote state, and the programme must list both floors.
+xp: 200
+difficulty: intermediate
+expected_time: 12m
+concepts:
+  - terraform_remote_state
+  - outputs attribute
+  - output types
+module: module-8-data-sources
+level: level-11-remote-state-outputs
