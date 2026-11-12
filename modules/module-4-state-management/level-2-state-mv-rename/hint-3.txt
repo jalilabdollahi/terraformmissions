@@ -1,0 +1,1 @@
+Move the state entry to the new address: `terraform state mv <old address> <new address>`, then run `terraform plan` again.

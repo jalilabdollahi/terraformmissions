@@ -1,0 +1,1 @@
+Deleting the permit_book block and applying would destroy the file. Terraform has a block type that says "this address is gone from the code, do not touch the real object": search the docs for `removed`.

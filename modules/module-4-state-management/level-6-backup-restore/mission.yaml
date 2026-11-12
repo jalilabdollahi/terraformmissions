@@ -1,0 +1,19 @@
+name: Lost Card Catalog
+description: >-
+  A tired intern at the Alder Street Library applied a half-edited branch that had three of the
+  catalog resources deleted. Terraform dutifully dropped them from the state, the intern has
+  since restored the code, and the plan now wants to create new librarian names, shelf codes and
+  card numbers, which would invalidate every printed card.
+objective: >-
+  Bring back the lost state entries so that random_pet.head_librarian,
+  random_string.shelf_code and random_integer.card_number are tracked again with their
+  ORIGINAL values, and the plan is clean. Do not run terraform apply to "fix" it.
+xp: 210
+difficulty: intermediate
+expected_time: 12m
+concepts:
+  - terraform.tfstate.backup
+  - state recovery
+  - state push
+module: module-4-state-management
+level: level-6-backup-restore

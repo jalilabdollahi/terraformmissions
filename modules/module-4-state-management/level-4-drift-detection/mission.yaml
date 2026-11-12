@@ -1,16 +1,18 @@
-concepts:
-- drift
-- terraform plan
-- -detailed-exitcode
-description: A `local_file` resource uses `var.file_contents` (with a trailing 's')
-  but the variable is declared as `var.file_content`. Fix the reference so apply works,
-  then the validator will simulate drift and verify it is detected.
+name: Midnight Kiln Tweak
+description: >-
+  The night technician at a pottery studio hand-edited kiln/firing-schedule.txt on the
+  controller to save a batch of glazes. Terraform did not make that change, and the plan now
+  wants to "create" the schedule file again, which would overwrite the technician's values.
+objective: >-
+  Find out what the technician changed, update the configuration so the schedule describes
+  the values currently on the kiln controller, and end with a clean plan. The file must keep
+  the technician's values; do not revert them.
+xp: 200
 difficulty: intermediate
-expected_time: 15m
-level: level-4-drift-detection
+expected_time: 12m
+concepts:
+  - configuration drift
+  - plan -refresh-only
+  - reconciling code with reality
 module: module-4-state-management
-name: Drift Detector
-objective: Fix the variable reference from `var.file_contents` to `var.file_content`.
-  After apply, the validator modifies the file externally and checks that `terraform
-  plan -detailed-exitcode` returns exit code 2 (drift detected).
-xp: 225
+level: level-4-drift-detection

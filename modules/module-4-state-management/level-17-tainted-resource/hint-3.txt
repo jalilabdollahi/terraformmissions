@@ -1,1 +1,0 @@
-Rename `resource "null_resource" "job"` to `resource "null_resource" "task"`.

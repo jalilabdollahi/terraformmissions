@@ -1,1 +1,1 @@
-Run `terraform validate` — it reports `local_files` as an invalid resource type. The correct type is `local_file`.
+Run `terraform plan` and sort the lines into three groups: a destroy/create pair for the same kind of object, something to create that already exists in the real world, and something to destroy that you want to keep.

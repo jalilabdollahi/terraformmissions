@@ -1,0 +1,1 @@
+Look at the files next to main.tf with `ls -la`. Terraform keeps a safety copy of the state whenever `apply` writes it (local backend).

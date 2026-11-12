@@ -1,0 +1,1 @@
+`-target=<address>` limits the operation to that resource plus everything it depends on. Choose the resource you actually want published, and let Terraform pull in the rest. Do not target the whole list by hand.

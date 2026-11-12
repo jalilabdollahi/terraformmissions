@@ -1,0 +1,1 @@
+`terraform state show <address>` prints every attribute of one object. The vaults use for_each, so the address has a key in brackets, and your shell will eat the quotes unless you wrap the whole address in single quotes.

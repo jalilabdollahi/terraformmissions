@@ -1,0 +1,1 @@
+Run `terraform plan -generate-config-out=generated.tf` (the file must not exist yet). The result is a draft: move the blocks into main.tf, delete the draft file, and clean it according to the rules at the top of main.tf (null attributes, marker comments).

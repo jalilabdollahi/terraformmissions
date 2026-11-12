@@ -1,0 +1,19 @@
+name: Ghost Ferry State
+description: >-
+  After a repository reshuffle the Tidewater ferry timetable config points its local backend at
+  a state file that does not exist, so Terraform believes nothing has ever been built. The real
+  production state is sitting in the states/ folder, and a plan now wants to create a second
+  ferry with a different name.
+objective: >-
+  Point backend "local" at the existing production state file under states/ (the one that holds
+  the ferry), re-initialise the backend without creating a new state, and end with a clean plan
+  that keeps the original ferry name and departure minute.
+xp: 215
+difficulty: intermediate
+expected_time: 12m
+concepts:
+  - backend "local"
+  - state file path
+  - terraform init -reconfigure
+module: module-4-state-management
+level: level-13-local-backend-path

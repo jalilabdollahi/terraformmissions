@@ -1,0 +1,18 @@
+name: Stage Door Codes
+description: >-
+  The Orpheum Theatre generates door codes with Terraform, one per entrance. A stagehand
+  texted the lighting-booth code to a friend, so that single code must be regenerated tonight,
+  while the stage door, orchestra pit and box office codes stay valid on the printed crew cards.
+objective: >-
+  Regenerate only random_integer.door_code["booth"] using a Terraform CLI option, so its value
+  changes while the other three codes stay exactly as they were. Do not change the code, and
+  finish with a clean plan.
+xp: 215
+difficulty: intermediate
+expected_time: 10m
+concepts:
+  - apply -replace
+  - for_each addresses
+  - forced replacement
+module: module-4-state-management
+level: level-17-replace-flag

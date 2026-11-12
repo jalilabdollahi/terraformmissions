@@ -1,1 +1,0 @@
-Backend blocks are evaluated before variables are resolved. They can only contain literal values.

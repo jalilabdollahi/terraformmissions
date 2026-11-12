@@ -1,0 +1,1 @@
+Open inventory/asset-sticker.txt and run `terraform plan`. The plan says the tag will be created: Terraform has no record of it. You need a command that adds an existing object to the state.

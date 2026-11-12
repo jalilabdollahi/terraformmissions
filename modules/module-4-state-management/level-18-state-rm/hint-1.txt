@@ -1,1 +1,0 @@
-Run `terraform validate` — it reports that `local_files` is not a valid resource type.

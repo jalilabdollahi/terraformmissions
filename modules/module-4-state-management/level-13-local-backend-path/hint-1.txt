@@ -1,0 +1,1 @@
+Run `terraform plan` and `ls states/`. The plan wants to create everything because the backend looks for state somewhere else. Compare the `path` in terraform.tf with the files that really exist.

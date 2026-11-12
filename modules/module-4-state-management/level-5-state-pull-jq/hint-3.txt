@@ -1,0 +1,1 @@
+`terraform state pull | jq -r .serial > answers/serial.txt` and `... | jq -r .lineage > answers/lineage.txt`. For the seal: `jq -r '.resources[] | select(.name == "container_seal") | .instances[0].attributes.hex'`. Create the answers/ folder first if needed.

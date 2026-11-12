@@ -1,0 +1,19 @@
+name: The Lighthouse Rename
+description: >-
+  The lighthouse roster names tonight's keeper with a random codename that is already
+  printed on badges. A teammate renamed the resource from random_pet.keeper to
+  random_pet.night_keeper, and now terraform plan wants to destroy the codename and
+  generate a new one.
+objective: >-
+  Keep the new name random_pet.night_keeper in the code, keep the existing codename
+  (same ID), and finish with a clean plan. Fix it with a state command — don't add
+  a moved block.
+xp: 200
+difficulty: intermediate
+expected_time: 12m
+concepts:
+  - terraform state mv
+  - resource addresses
+  - state vs configuration
+module: module-4-state-management
+level: level-2-state-mv-rename

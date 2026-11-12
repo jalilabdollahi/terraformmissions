@@ -1,0 +1,1 @@
+`backend "local"` has one important argument, `path`. It must name the file that holds the production state. After you change it, Terraform refuses to continue until the backend is initialised again, and you should not carry the empty state over.

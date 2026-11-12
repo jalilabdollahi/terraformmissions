@@ -1,30 +1,17 @@
 #!/usr/bin/env bash
-set -euo pipefail
+source "$TM_LIB"
 
-if ! terraform apply -auto-approve -no-color -input=false > /tmp/tf_out.txt 2>&1; then
-    cat /tmp/tf_out.txt
-    echo "❌ FAIL: terraform apply failed"
-    exit 1
-fi
+tm_assert_config_has 'resource "local_file" "firing_schedule"' "the firing_schedule resource must stay in the configuration"
+tm_assert_config_has '1320' "the configuration does not mention the technician's peak temperature"
+tm_assert_config_has '\b40\b' "the configuration does not mention the technician's hold time"
 
-# Simulate external drift by modifying the file directly
-TF_FILE=$(find . -maxdepth 2 -name "tracked.txt" 2>/dev/null | head -1 || true)
-if [[ -n "$TF_FILE" ]] && [[ -f "$TF_FILE" ]]; then
-    echo "drifted content modified outside terraform" > "$TF_FILE"
-fi
+# The technician's edit is the truth: the file on disk must still carry it.
+tm_assert_file_equals kiln/firing-schedule.txt $'kiln: K2\npeak_temp_c: 1320\nhold_minutes: 40\n' \
+  "kiln/firing-schedule.txt no longer holds the technician's values (1320 °C, 40 minutes)"
 
-# plan with detailed exitcode — exit 2 means changes detected (drift)
-terraform plan -detailed-exitcode -no-color -input=false > /tmp/plan_out.txt 2>&1
-PLAN_EXIT=$?
+tm_assert_in_state local_file.firing_schedule "the schedule is not tracked in state — apply the reconciled configuration"
+tm_assert_in_state local_file.glaze_notes "glaze notes disappeared from state"
+[[ "$(tm_state_attr local_file.glaze_notes id)" == "$(tm_recall glaze_id)" ]] || tm_fail "the glaze notes were recreated"
 
-if [[ $PLAN_EXIT -eq 2 ]]; then
-    echo "✅ PASS: drift detected (plan exit code 2)"
-    exit 0
-elif [[ $PLAN_EXIT -eq 0 ]]; then
-    echo "❌ FAIL: no drift detected (exit 0)"
-    exit 1
-else
-    cat /tmp/plan_out.txt
-    echo "❌ FAIL: terraform plan failed with error (exit $PLAN_EXIT)"
-    exit 1
-fi
+tm_assert_no_changes
+tm_pass "code, state and the kiln controller agree on 1320 °C for 40 minutes"

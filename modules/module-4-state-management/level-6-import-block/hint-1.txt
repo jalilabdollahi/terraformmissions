@@ -1,1 +1,0 @@
-The `import {}` block requires `to` (the resource address) and `id` (the resource's real-world identifier).

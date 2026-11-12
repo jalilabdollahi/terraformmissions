@@ -1,0 +1,1 @@
+`terraform.tfstate.backup` holds the state as it was just before the intern's bad apply. Running `terraform apply` now would not restore it. It would generate brand-new random values.

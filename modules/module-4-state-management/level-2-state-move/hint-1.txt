@@ -1,1 +1,0 @@
-Run `terraform validate` — it will report that `filename` is a required argument for `local_file`.

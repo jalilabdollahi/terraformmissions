@@ -1,0 +1,1 @@
+After generating, copy the three `resource` blocks into main.tf, delete every line ending in `= null` and every `# __generated__ ...` comment, remove generated.tf, then `terraform plan` (3 to import) and `terraform apply`. A final plan must be clean.

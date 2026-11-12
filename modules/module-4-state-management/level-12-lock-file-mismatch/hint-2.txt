@@ -1,0 +1,1 @@
+The lock file pins 3.5.1, which does not satisfy `~> 3.6`. A plain `init` never moves a locked provider. The error message itself names the flag that allows it to choose a newer version.

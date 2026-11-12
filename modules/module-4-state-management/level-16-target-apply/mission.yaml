@@ -1,0 +1,18 @@
+name: Pilot Chart First
+description: >-
+  Port Meridian's dispatch config has three parts. Tonight the harbour master only needs the
+  route chart published. The cargo manifest is blocked until customs delivers a stamp file, and
+  a full apply fails on that. A plain terraform apply is useless right now.
+objective: >-
+  Apply only the route chart with -target, so that local_file.route_chart and the route code it
+  depends on exist, while random_pet.pilot, local_file.cargo_manifest and out/cargo-manifest.txt
+  do not. Leave the configuration (including the customs precondition) untouched.
+xp: 220
+difficulty: intermediate
+expected_time: 10m
+concepts:
+  - terraform apply -target
+  - resource dependencies
+  - partial apply
+module: module-4-state-management
+level: level-16-target-apply

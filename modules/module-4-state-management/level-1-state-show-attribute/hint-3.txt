@@ -1,0 +1,1 @@
+Run `terraform state show 'random_integer.serial["annex"]'` and copy the number after `result`. Do the same for `random_pet.night_guard` and its `id`. Then `mkdir answers` and write each value into its file, for example with `echo 123456 > answers/vault-serial.txt`.

@@ -1,0 +1,1 @@
+If you only delete the resource block, the next apply destroys the object (and the file with it). The state entry has to be dropped first, without touching the real file.

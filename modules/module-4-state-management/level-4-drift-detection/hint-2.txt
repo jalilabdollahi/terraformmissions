@@ -1,1 +1,1 @@
-The variable is declared as `file_content` (no trailing 's'). Fix the reference in the resource block.
+The file on disk no longer matches the content Terraform renders from `locals`, so Terraform considers the object gone and wants to write it back. The technician's numbers are the truth now, so the code must change, not the file.

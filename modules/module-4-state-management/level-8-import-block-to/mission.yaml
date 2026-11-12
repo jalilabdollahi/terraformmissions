@@ -1,0 +1,18 @@
+name: Berth Sheet Import
+description: >-
+  Dockmaster Ilse wrote an import block to adopt berth number the harbour already assigned to
+  the cargo vessel, but terraform plan rejects it. Once the address is sorted out, the plan
+  still wants to throw the number away and draw a fresh one.
+objective: >-
+  Fix imports.tf so the import block adopts the real berth number into
+  random_integer.berth_number (the number and range are on harbour/berth-sheet.txt), then run
+  apply so it is imported. The state must hold the original number and the plan must be clean.
+xp: 210
+difficulty: intermediate
+expected_time: 12m
+concepts:
+  - import block
+  - to address and id
+  - composite import IDs
+module: module-4-state-management
+level: level-8-import-block-to

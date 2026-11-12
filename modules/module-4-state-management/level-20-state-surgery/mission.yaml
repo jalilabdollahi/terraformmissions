@@ -1,16 +1,20 @@
-concepts:
-- state recovery
-- resource types
-- state list
-- output expressions
-description: Three resources are declared, but `config_b` uses the invalid type `local_files`.
-  Fix both the resource type and the output reference so all three resources apply
-  and appear in state.
-difficulty: advanced
-expected_time: 25m
-level: level-20-state-surgery
-module: module-4-state-management
-name: State Surgery
-objective: Change `resource "local_files" "config_b"` to `resource "local_file" "config_b"`
-  and fix the output. `terraform apply` must succeed with all 3 resources in state.
+name: Grain Co-op Triage
+description: >-
+  The Three Rivers grain co-op's Terraform state is a mess after a hectic harvest. One resource
+  was renamed in code, another was dropped from the state by accident, and a third was deleted
+  from the code but its log file must be kept for the auditors. The plan wants to destroy and
+  re-draw things that are in daily use.
+objective: >-
+  Reconcile state and code with the state CLI only: keep the renamed random_pet.combine_operator
+  (same name as before), re-adopt random_integer.silo_number with its original value from
+  plates/silo-plate.txt, and forget the retired gauge log without deleting
+  gauges/retired-gauge-log.txt. The final plan must be clean. No moved, import or removed blocks.
 xp: 300
+difficulty: intermediate
+expected_time: 20m
+concepts:
+  - terraform state mv
+  - terraform import
+  - terraform state rm
+module: module-4-state-management
+level: level-20-state-surgery

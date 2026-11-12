@@ -1,1 +1,0 @@
-The correct resource type for creating a local file is `local_file` (singular, no trailing 's').

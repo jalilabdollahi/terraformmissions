@@ -1,1 +1,1 @@
-Run `terraform validate` — it reports that `var.file_contents` is not declared. Check the variable name.
+Run `terraform plan -refresh-only`. It compares the state with the real world and lists what changed outside Terraform. Then read kiln/firing-schedule.txt and compare it with main.tf.

@@ -1,0 +1,19 @@
+name: Vault Serial Audit
+description: >-
+  Riverside Savings & Trust is being audited. The auditor needs the serial number of the
+  "annex" safe-deposit vault and the codename of the night guard, but nobody wrote them down
+  and the registry file deliberately hides them. They only exist in Terraform's state.
+objective: >-
+  Create the folder answers/ and write two files into it: answers/vault-serial.txt containing
+  the generated serial (the result attribute) of random_integer.serial["annex"], and
+  answers/night-guard.txt containing the id of random_pet.night_guard. Do not change the
+  infrastructure — the plan must stay clean.
+xp: 175
+difficulty: intermediate
+expected_time: 8m
+concepts:
+  - terraform state list
+  - terraform state show
+  - for_each addresses
+module: module-4-state-management
+level: level-1-state-show-attribute

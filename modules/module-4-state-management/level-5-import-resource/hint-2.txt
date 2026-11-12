@@ -1,1 +1,0 @@
-The `filename` in your config must match the path you pass to `terraform import`. Check both carefully.

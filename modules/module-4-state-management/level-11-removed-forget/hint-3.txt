@@ -1,0 +1,1 @@
+Replace the permit_book resource block with: `removed { from = local_file.permit_book  lifecycle { destroy = false } }` (on separate lines). Run `terraform plan` (it should say the resource will no longer be managed), then `terraform apply`.

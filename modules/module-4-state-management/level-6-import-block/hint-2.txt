@@ -1,1 +1,0 @@
-For `local_file`, the resource ID is the file path. It must match the `filename` attribute exactly.

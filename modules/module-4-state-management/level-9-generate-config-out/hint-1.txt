@@ -1,0 +1,1 @@
+imports.tf only says what to adopt. Terraform can write the missing resource blocks for you: look at `terraform plan -help` for the option that generates configuration.

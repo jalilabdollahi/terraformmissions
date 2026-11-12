@@ -1,0 +1,19 @@
+name: Orphaned Freezer Tag
+description: >-
+  The Coldharbor vaccine freezer has an asset tag that Terraform generated years ago, but the
+  state that tracked it was lost in a laptop swap. The tag is printed on a sticker, the resource
+  block is still in the code, and the plan wants to generate a different tag and re-label the
+  freezer.
+objective: >-
+  Import the existing tag into random_id.freezer_tag using the terraform import command, with
+  the tag value from inventory/asset-sticker.txt. Afterwards the plan must be clean and the
+  state must hold the original tag. Do not use an import block.
+xp: 210
+difficulty: intermediate
+expected_time: 12m
+concepts:
+  - terraform import
+  - import ID format
+  - adopting existing objects
+module: module-4-state-management
+level: level-7-import-cli

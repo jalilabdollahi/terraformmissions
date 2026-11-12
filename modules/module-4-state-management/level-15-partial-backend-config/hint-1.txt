@@ -1,0 +1,1 @@
+terraform.tf declares `backend "local" {}` with no arguments on purpose. Run `terraform init -backend-config=config/backend-prod.hcl` and read the error.

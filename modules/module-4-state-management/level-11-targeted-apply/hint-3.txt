@@ -1,1 +1,0 @@
-Change `local_file.resource_b.content_md5` to `local_file.resource_b.filename` in resource_c's content.

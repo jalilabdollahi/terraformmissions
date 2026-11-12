@@ -1,0 +1,18 @@
+name: Stale Seed Lock
+description: >-
+  The Svalbard seed catalog module was bumped to require the random provider ~> 3.6 for a new
+  feature, but the committed .terraform.lock.hcl still pins version 3.5.1 from last year.
+  terraform init refuses to continue, and the catalog cannot be generated.
+objective: >-
+  Make terraform init succeed with the constraint ~> 3.6 left in terraform.tf, so that the lock
+  file records a 3.6+ version of hashicorp/random, and apply the configuration so the output
+  catalog_ref exists.
+xp: 200
+difficulty: intermediate
+expected_time: 8m
+concepts:
+  - .terraform.lock.hcl
+  - terraform init -upgrade
+  - provider version constraints
+module: module-4-state-management
+level: level-12-lock-file-mismatch

@@ -1,0 +1,1 @@
+After fixing `to`, the plan wants to replace the integer. For random_integer the import ID is `result,min,max`, and min/max must equal the values in the resource block, otherwise a changed bound forces a new number. Check harbour/berth-sheet.txt for the pool.

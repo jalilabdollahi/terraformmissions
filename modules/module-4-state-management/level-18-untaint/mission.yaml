@@ -1,0 +1,17 @@
+name: Tainted Signing Key
+description: >-
+  A release engineer at Brightwave Firmware tainted the signing key during a scare, then
+  discovered the alarm was false. The key has already been baked into the device bootloaders,
+  yet the plan now wants to destroy it and generate a new one that no device would trust.
+objective: >-
+  Clear the taint on tls_private_key.firmware_signer so Terraform keeps the existing key
+  (same fingerprint) and the plan is clean. Nothing may be replaced.
+xp: 200
+difficulty: intermediate
+expected_time: 8m
+concepts:
+  - terraform untaint
+  - tainted resources
+  - replacement vs in-place
+module: module-4-state-management
+level: level-18-untaint

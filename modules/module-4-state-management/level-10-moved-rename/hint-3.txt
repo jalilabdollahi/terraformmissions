@@ -1,0 +1,1 @@
+Add `moved { from = random_id.lift_pass  to = random_id.day_pass }` and the same for `local_file.gate_sign` to `local_file.turnstile_sign`. Run `terraform plan` (it should list the two moves), then `terraform apply`.

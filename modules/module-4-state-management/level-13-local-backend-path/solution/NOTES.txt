@@ -1,0 +1,3 @@
+Handover notes (Tidewater Ferries)
+- Production state was never moved to the new layout.
+- Old state files live in the states/ folder. Do not delete or edit them.

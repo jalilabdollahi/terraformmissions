@@ -1,0 +1,19 @@
+name: Hive Handover
+description: >-
+  Meadowbrook Apiary's queen registry is moving to the regional breeders' association, who will
+  maintain records/queen-registry.txt themselves from now on. Our Terraform config still
+  manages that file, so the next cleanup would delete the association's only copy.
+objective: >-
+  Stop managing local_file.queen_registry without deleting the file: remove it from the state
+  and from the configuration, keep records/queen-registry.txt on disk untouched, keep
+  local_file.inspection_log managed, and finish with a clean plan. Use the state CLI, not a
+  removed block.
+xp: 190
+difficulty: intermediate
+expected_time: 10m
+concepts:
+  - terraform state rm
+  - forgetting vs destroying
+  - orphaned resources
+module: module-4-state-management
+level: level-3-state-rm-forget

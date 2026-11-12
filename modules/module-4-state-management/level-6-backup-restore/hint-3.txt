@@ -1,0 +1,1 @@
+Put the backup back: `cp terraform.tfstate.backup terraform.tfstate` (or `terraform state push -force terraform.tfstate.backup`, because a plain push refuses an older serial). Then `terraform plan` must say "No changes".

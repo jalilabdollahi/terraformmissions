@@ -1,1 +1,1 @@
-Change `resource "local_files" "config_b"` to `resource "local_file" "config_b"` and update the output to use `local_file.config_b.filename`.
+`terraform state mv random_pet.harvester random_pet.combine_operator`; `terraform import random_integer.silo_number "<number from plates/silo-plate.txt>,100,999"`; `terraform state rm local_file.retired_gauge_log`. Finish with `terraform plan`: no changes.
