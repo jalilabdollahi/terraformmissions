@@ -1,12 +1,12 @@
-# Post-mortem — Halden Hall B Teardown
+# Post-mortem — Halden Field B Teardown
 
-**Timeline.** 23:38 the Sunday teardown started; s1 was returned at 23:40. 23:41 the runner was killed during s2, leaving
-`crates/manifest.lock`. 23:50 someone used `state rm` on stand s3 "to unblock", leaving its signage file orphaned.
-06:00 on-call found a floor plan that would not render, a destroy that could not run, and a half-empty hall.
+**Timeline.** 23:38 the Sunday teardown started; m1 was returned at 23:40. 23:41 the runner was killed during m2, leaving
+`crates/manifest.lock`. 23:50 someone used `state rm` on marquee m3 "to unblock", leaving its tags file orphaned.
+06:00 on-call found a site plan that would not render, a destroy that could not run, and a half-empty field.
 
 **Root causes.**
 1. A lock protocol with no staleness handling: killed processes leave locks forever.
-2. A root output referencing `module.hall_b[0]` made the whole configuration unplannable the moment the hall was
+2. A root output referencing `module.field_b[0]` made the whole configuration unplannable the moment the field was
    switched off, so the teardown itself was impossible.
 3. `terraform state rm` removes tracking, not the object. Terraform can no longer delete what it no longer knows.
 4. Destroy-time provisioners run only while their resource is still in configuration. Deleting the module call

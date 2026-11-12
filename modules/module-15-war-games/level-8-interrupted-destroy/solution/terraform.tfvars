@@ -1,2 +1,2 @@
-# Fair closed on Sunday. Hall B is handed back to the venue: tear it down.
-hall_b_enabled = false
+# Festival closed on Sunday. Field B is handed back to the landowner: tear it down.
+field_b_enabled = false

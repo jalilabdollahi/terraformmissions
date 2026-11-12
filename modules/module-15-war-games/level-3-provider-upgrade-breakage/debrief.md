@@ -1,4 +1,4 @@
-# Post-mortem — Indigo Row Provider Bump
+# Post-mortem — Indigo Row Sorter Bump
 
 **Timeline.** Tuesday 16:00 the platform team raised the tls constraint to `~> 4.0` in `terraform.tf`. 16:05 CI
 failed in `init`; a quick local hack made `validate` appear to pass on another branch while the plan still
@@ -13,7 +13,7 @@ arguments, and reviewed the replacement list before applying.
 
 **What matters during an upgrade incident.** Not every replacement is equal. Certificates and signing requests
 are derived data: reissue them and nothing outside the system notices. Private keys are identity: the
-scanners pin them, so a plan that touches `tls_private_key` is a stop sign. Reading the replace list resource
+sorters pin them, so a plan that touches `tls_private_key` is a stop sign. Reading the replace list resource
 by resource is the whole skill.
 
 **Prevention.**

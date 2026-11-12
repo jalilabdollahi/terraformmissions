@@ -1,9 +1,9 @@
-variable "loaders" {
+variable "carts" {
   type    = list(string)
-  default = ["LD-1", "LD-2", "LD-3", "LD-4", "LD-5", "LD-6"]
+  default = ["CT-1", "CT-2", "CT-3", "CT-4", "CT-5", "CT-6"]
 }
 
-variable "stands" {
+variable "lots" {
   type    = list(string)
   default = ["C3", "A1", "B2", "G7", "D4", "F6", "E5"]
 }

@@ -1,4 +1,4 @@
-# Runbook — Indigo Row Provider Bump
+# Runbook — Indigo Row Sorter Bump
 
 ## 1. Triage
 ```bash
@@ -28,13 +28,13 @@ terraform plan
 ```
 Three certificate-type resources are replaced because new arguments with defaults
 (`set_subject_key_id`, `set_authority_key_id`, `is_ca_certificate`) appear as "forces replacement" against
-the state written by 3.x. Check the list: `tls_private_key.ca` and `tls_private_key.scanner` are NOT in it.
-Reissuing certificates over the same keys is safe because the scanners pin keys, not certificates.
+the state written by 3.x. Check the list: `tls_private_key.ca` and `tls_private_key.sorter` are NOT in it.
+Reissuing certificates over the same keys is safe because the sorters pin keys, not certificates.
 If a private key were in the replace list you would stop here.
 
 ## 5. Apply and verify
 ```bash
 terraform apply
 terraform plan                                         # No changes
-openssl verify -CAfile pki/ca.pem pki/scanner.pem      # pki/scanner.pem: OK
+openssl verify -CAfile pki/ca.pem pki/sorter.pem      # pki/sorter.pem: OK
 ```

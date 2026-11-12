@@ -11,10 +11,10 @@ is held; the refactor is finished with explicit moves.
 
 **How Terraform behaves.** State is a map from address to real object. `moved` blocks rewrite that map during plan, including
 moves into and between modules, `count` index to `for_each` key, and a supported type change such as `null_resource` to
-`terraform_data`, which keeps the ID. Moves chain, so `module.rennet` can become `module.cultures` while a resource inside it is also
+`terraform_data`, which keeps the ID. Moves chain, so `module.paint` can become `module.finishes` while a resource inside it is also
 renamed. A `removed` block with `destroy = false` is the declarative way to stop managing something while leaving it alone;
 without that setting Terraform destroys it. None of these validate what you map: random values are interchangeable to Terraform,
-so only the evidence (a rendered sheet) shows that index 0 was `r2`.
+so only the evidence (a rendered sheet) shows that index 0 was `h2`.
 
 **Prevention.**
 - Make "no destroy for refactor PRs" a pipeline gate and show the plan summary in the review.

@@ -1,11 +1,11 @@
 resource "random_uuid" "licence" {}
 
-resource "time_static" "first_churn" {}
+resource "time_static" "first_spin" {}
 
 output "licence" {
   value = random_uuid.licence.result
 }
 
-output "first_churn" {
-  value = time_static.first_churn.rfc3339
+output "first_spin" {
+  value = time_static.first_spin.rfc3339
 }

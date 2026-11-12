@@ -1,12 +1,12 @@
-# Post-mortem - the gauge census
+# Post-mortem - the cabinet census
 
-**Timeline.** T-36h a storm warning triggers a push to generate duty rotas from Terraform. The first draft, which
+**Timeline.** T-36h the marathon deadline triggers a push to generate duty rotas from Terraform. The first draft, which
 declared a resource per register row, plans 17 new objects. The pipeline is stopped at review.
 
 **Root causes.**
 1. Configuration was written as if the infrastructure did not exist. A resource block describes what Terraform will
    create unless state already knows it, so adopting existing assets is two steps: describe, then import.
-2. The register mixes active and retired stations, and the first config treated them alike.
+2. The register mixes active and retired sites, and the first config treated them alike.
 3. `random_id.byte_length` forces replacement. Importing a value does not reconcile that argument; the config must match
    what the imported id decodes to, or the plan shows a replacement right after the import.
 

@@ -1,1 +1,1 @@
-Plan first. The error you see is not the one that stopped the teardown last night: that one is still waiting behind it. Look at which Hall B objects are still in `terraform state list`, and compare with what is on disk.
+Plan first. The error you see is not the one that stopped the teardown last night: that one is still waiting behind it. Look at which Field B objects are still in `terraform state list`, and compare with what is on disk.

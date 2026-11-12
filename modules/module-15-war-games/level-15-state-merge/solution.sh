@@ -8,9 +8,9 @@ move() { # <source state file> <team>
     terraform state mv -state="$1" -state-out="$DEST" "$r" "module.$2.$r" || exit 1
   done
 }
-move "$WORKSPACE/stacks/orchard/terraform.tfstate" orchard
-move "$WORKSPACE/stacks/press/terraform.tfstate" press
-move "$WORKSPACE/stacks/cellar/terraform.tfstate.d/autumn/terraform.tfstate" cellar
+move "$WORKSPACE/stacks/fields/terraform.tfstate" fields
+move "$WORKSPACE/stacks/drying/terraform.tfstate" drying
+move "$WORKSPACE/stacks/packing/terraform.tfstate.d/autumn/terraform.tfstate" packing
 cd "$WORKSPACE/stacks/all-in-one" || exit 1
 terraform plan
 terraform apply -auto-approve

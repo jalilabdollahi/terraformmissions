@@ -1,4 +1,4 @@
-# Aurelia Ice Camp - power, radio and the nightly beacon check.
+# Aurelia Midnight-Sun Film Shoot Base - power, radio and the nightly dailies-upload check.
 
 module "power" {
   source = "./modules/power"
@@ -9,16 +9,16 @@ module "comms" {
   generator_id = module.power.generator_id
 }
 
-resource "local_file" "camp_manifest" {
-  filename = "${path.module}/out/camp-manifest.txt"
+resource "local_file" "base_manifest" {
+  filename = "${path.module}/out/base-manifest.txt"
   content  = "power generator ${module.power.generator_id}\nfuel ${module.power.fuel}\nradio channel ${module.comms.channel}\n"
 }
 
-resource "terraform_data" "beacon" {
+resource "terraform_data" "dailies" {
   input = module.comms.channel
 
   provisioner "local-exec" {
-    command = "mkdir -p ${path.module}/out && printf 'beacon OK for %s\\n' '${module.power.generator_id}' > ${path.module}/out/beacon.txt"
+    command = "mkdir -p ${path.module}/out && printf 'dailies OK for %s\\n' '${module.power.generator_id}' > ${path.module}/out/dailies.txt"
   }
 }
 

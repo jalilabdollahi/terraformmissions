@@ -1,15 +1,15 @@
-name: Aurelia Ice Camp Reset
+name: Aurelia Film Base Reset
 description: >-
-  INCIDENT 9001 - Aurelia Ice Camp, polar night. The camp laptop's disk filled during an apply and
+  INCIDENT 9001 - Aurelia Midnight-Sun Film Shoot Base. The base laptop's disk filled during an apply and
   terraform.tfstate is cut off mid-file. The previous state backup is one apply old and misses the
-  fuel tank registered last night. Meanwhile a colleague tainted the radio key and the beacon "to be
+  fuel tank registered last night. Meanwhile a colleague tainted the radio key and the dailies "to be
   safe", someone hand-edited the radio sheet, and a module refactor merged earlier left the
   configuration unable to plan at all. The generator serial, fuel figure and radio key are stamped
   on equipment.
 objective: >-
-  Bring the camp back: restore a readable state of the same lineage, repair the configuration
+  Bring the base back: restore a readable state of the same lineage, repair the configuration
   errors that stop planning, re-adopt the fuel tank with its recorded litres, keep the radio key
-  and every other ID, redo only the beacon that really failed, undo the manual drift and finish with
+  and every other ID, redo only the dailies that really failed, undo the manual drift and finish with
   a clean plan and no tainted objects.
 xp: 580
 difficulty: expert

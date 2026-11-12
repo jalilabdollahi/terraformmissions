@@ -9,7 +9,7 @@ rm -f .terraform.lock.hcl
 terraform init -input=false -no-color >/dev/null 2>&1 || exit 1
 tm_apply
 tm_record ca_key_id "$(tm_state_attr tls_private_key.ca id)"
-tm_record scanner_key_id "$(tm_state_attr tls_private_key.scanner id)"
+tm_record sorter_key_id "$(tm_state_attr tls_private_key.sorter id)"
 tm_record ca_pub "$(tm_state_attr tls_private_key.ca public_key_fingerprint_sha256)"
 # ...then the constraint bump and a refactor landed on main: the lock file is the old one.
 cp "$TM_TMP/main.tf.new" main.tf

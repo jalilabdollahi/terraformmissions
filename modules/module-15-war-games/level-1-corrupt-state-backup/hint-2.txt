@@ -1,1 +1,1 @@
-Restoring the backup is only half of the recovery. The backup knows nothing about the dish added after it was taken, so a plain apply would generate a brand-new receiver serial for the west dish. The real serial is still on disk, in the calibration file the last apply wrote.
+Restoring the backup is only half of the recovery. The backup knows nothing about the station added after it was taken, so a plain apply would generate a brand-new trigger serial for the west station. The real serial is still on disk, in the calibration file the last apply wrote.

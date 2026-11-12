@@ -1,13 +1,13 @@
-name: Nordhavn Reindex
+name: Nordhavn Orchid Reindex
 description: >-
-  INCIDENT 0617 - Nordhavn air cargo hub. A Friday refactor swapped every count-indexed
+  INCIDENT 0617 - Nordhavn Cold-Chain Orchid Auction House. A Friday refactor swapped every count-indexed
   resource for for_each and renamed two singletons, and Monday's pipeline plan wants to destroy
-  and recreate 20 objects: six loader serials, seven stand-block numbers, five dock doors, the
-  hub licence and the opening timestamp. The stand slot numbers are printed on the ground-handling
-  tablets and the licence is registered with the civil aviation authority.
+  and recreate 20 objects: six cart serials, seven lot-block numbers, five dock doors, the
+  house licence and the opening timestamp. The lot slot numbers are printed on the auctioneer
+  tablets and the licence is registered with the plant-health inspectorate.
 objective: >-
-  Keep the refactored code (for_each, names random_id.loader, random_integer.stand,
-  terraform_data.dock, random_uuid.hub_licence, time_static.opening) and describe all 20
+  Keep the refactored code (for_each, names random_id.cart, random_integer.lot,
+  terraform_data.dock, random_uuid.house_licence, time_static.opening) and describe all 20
   address changes with moved blocks, mapping each old index to the right new key. Every object
   must keep its original value, nothing may be destroyed and the plan must end clean.
 xp: 450

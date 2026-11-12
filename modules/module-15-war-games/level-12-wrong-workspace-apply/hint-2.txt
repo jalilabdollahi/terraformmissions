@@ -1,1 +1,1 @@
-There are two failures. The state is in the wrong workspace, and the hotfix hard-coded the environment, so even after the state is right the config would keep building prod relays in whichever workspace is selected. Fix both or the plans stay dirty.
+There are two failures. The state is in the wrong workspace, and the hotfix hard-coded the environment, so even after the state is right the config would keep building prod posts in whichever workspace is selected. Fix both or the plans stay dirty.

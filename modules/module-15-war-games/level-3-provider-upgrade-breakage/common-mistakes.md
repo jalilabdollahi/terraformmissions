@@ -5,7 +5,7 @@
 - **Deleting `.terraform.lock.hcl` and re-initialising.** It installs 4.x but throws away the checksums the team
   agreed on, and hides the fact that the state still has a 3.x schema.
 - **Applying right after init without reading the plan.** If a key had been in the replace list, both pinned
-  keys would be gone and every scanner would reject the floor.
+  keys would be gone and every sorter would reject the line.
 - **Blanket `lifecycle { ignore_changes = all }` to silence "forces replacement".** The certificates stay stale and
   the removed arguments still fail validation.
 - **Hand-editing the state to add the new attributes.** The provider upgrades its own schema; a hand edit just

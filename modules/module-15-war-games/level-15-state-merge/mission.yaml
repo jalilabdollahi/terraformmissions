@@ -1,14 +1,14 @@
-name: Hollowbrook Consolidation
+name: Hollowbrook Saffron Consolidation
 description: >-
-  INCIDENT 5017 - Hollowbrook cider co-op. The orchard, press and cellar teams each run a private
+  INCIDENT 5017 - Hollowbrook Saffron Growers' Co-op. The fields, drying and packing teams each run a private
   stack, and all three call their resources random_id.batch, random_integer.quota and
-  local_file.ledger. The pressing deadline needs the harvest-to-bottle chain in a single plan, so
+  local_file.ledger. The harvest deadline needs the field-to-jar chain in a single plan, so
   someone wrote a merged stack with one module per team. It has never been planned against real
-  state, the cellar team keeps its state in a workspace nobody remembers, and each team's quota
+  state, the packing team keeps its state in a workspace nobody remembers, and each team's quota
   and batch numbers are already on paperwork.
 objective: >-
-  Merge the three team states into stacks/all-in-one so that module.orchard, module.press and
-  module.cellar each own their batch id, quota and ledger with the original values. The old team
+  Merge the three team states into stacks/all-in-one so that module.fields, module.drying and
+  module.packing each own their batch id, quota and ledger with the original values. The old team
   states must end up empty and their resource code retired. The merged stack must plan clean
   without destroying or replacing anything.
 xp: 520

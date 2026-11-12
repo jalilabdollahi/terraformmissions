@@ -1,8 +1,8 @@
 {
-  "relays": {
-    "north-head": "ch-12",
-    "south-pier": "ch-14",
-    "harbour-mouth": "ch-16",
-    "lighthouse": "ch-18"
+  "posts": {
+    "forest-hairpin": "ch-12",
+    "quarry-jump": "ch-14",
+    "river-ford": "ch-16",
+    "summit-finish": "ch-18"
   }
 }

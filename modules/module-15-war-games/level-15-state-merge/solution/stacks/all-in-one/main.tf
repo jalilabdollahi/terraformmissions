@@ -1,25 +1,25 @@
-# Hollowbrook cider co-op - the merged stack. One state, one module per team.
+# Hollowbrook Saffron Growers' Co-op - the merged stack. One state, one module per team.
 # Written by hand from the three team configs; it has never been planned against real state.
 
-module "orchard" {
+module "fields" {
   source    = "../../modules/team"
-  team      = "orchard"
+  team      = "fields"
   quota_min = 200
   quota_max = 400
 }
 
-module "press" {
+module "drying" {
   source    = "../../modules/team"
-  team      = "press"
+  team      = "drying"
   quota_min = 50
   quota_max = 120
-  upstream  = module.orchard.batch
+  upstream  = module.fields.batch
 }
 
-module "cellar" {
+module "packing" {
   source    = "../../modules/team"
-  team      = "cellar"
+  team      = "packing"
   quota_min = 40
   quota_max = 90
-  upstream  = module.press.batch
+  upstream  = module.drying.batch
 }

@@ -1,12 +1,12 @@
-# Post-mortem - breaking up the opera house state
+# Post-mortem - breaking up the float warehouse state
 
-**Timeline.** Week 1: deploy locks block streaming twice. Week 2: CAB approves the split. Week 3: the three stacks are
+**Timeline.** Week 1: deploy locks block lighting twice. Week 2: CAB approves the split. Week 3: the three stacks are
 scaffolded. Cut-over: state is moved object by object, outputs are published in dependency order, the monolith is retired.
 
 **Root causes.**
 1. One state meant one lock and one blast radius for unrelated teams.
 2. Scaffolding new configs does not move anything: Terraform identifies an object by address inside a particular state, so
-   an empty new stack would happily create a second opera house.
+   an empty new stack would happily create a second float warehouse.
 3. The cross-stack coupling existed only inside the monolith (direct references). Splitting turned each reference into an
    interface that must be exported and published.
 

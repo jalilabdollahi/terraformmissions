@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-# Hands a stand's rigging bay back to the venue desk. Usage: unrig.sh <stand>
+# Hands a marquee's rig back to the site desk. Usage: unrig.sh <marquee>
 # Only one unrig at a time may touch the crate manifest, so it takes a lock.
-stand="$1"
+marquee="$1"
 mkdir -p crates
 lock="crates/manifest.lock"
 waited=0
@@ -12,6 +12,6 @@ while [ -e "$lock" ]; do
   fi
   sleep 1; waited=$((waited + 1))
 done
-echo "pid=$$ stand=$stand since=$(date +%H:%M:%S)" > "$lock"
-echo "$(date +%Y-%m-%dT%H:%M:%S) bay returned stand=$stand" >> crates/unrig.log
+echo "pid=$$ marquee=$marquee since=$(date +%H:%M:%S)" > "$lock"
+echo "$(date +%Y-%m-%dT%H:%M:%S) rig returned marquee=$marquee" >> crates/unrig.log
 rm -f "$lock"

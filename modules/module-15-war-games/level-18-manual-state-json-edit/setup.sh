@@ -2,11 +2,11 @@
 source "$TM_LIB"
 # The healthy line first.
 TM_MSG="initial apply failed" tm_apply
-for k in alpine birch cedar dale; do
-  tm_record "tag_$k" "$(tm_state_attr "random_id.cabin_tag[\"$k\"]" hex)"
+for k in bruno fig luna pippa; do
+  tm_record "tag_$k" "$(tm_state_attr "random_id.hound_tag[\"$k\"]" hex)"
 done
-for k in base top; do
-  tm_record "limit_$k" "$(tm_state_attr "module.station.random_integer.load_limit[\"$k\"]" result)"
+for k in oak hazel; do
+  tm_record "quota_$k" "$(tm_state_attr "module.grove.random_integer.harvest_quota[\"$k\"]" result)"
 done
 tm_record log_id "$(tm_state_attr local_file.inspection_log id)"
 tm_record lineage "$(jq -r .lineage terraform.tfstate)"

@@ -1,14 +1,14 @@
-name: Indigo Row Provider Bump
+name: Indigo Row Sorter Bump
 description: >-
-  Indigo Row Dye Works authenticates its vat-floor colour scanners with a private CA that Terraform
+  Indigo Row Recycling Plant authenticates its sorting-line optical sorters with a private CA that Terraform
   manages. Someone raised the tls provider constraint to ~> 4.0 and merged; now the pipeline is red
   on init, and an earlier attempt to "just make it validate" left the next plan threatening to
-  replace key material. The scanners pin both the CA key and the scanner key; the dye run starts
+  replace key material. The sorters pin both the CA key and the sorter key; the first sort shift starts
   in the morning.
 objective: >-
   Upgrade the working directory to the 4.x tls provider (lock file included), repair the
   configuration for the arguments that no longer exist, and apply. Both private keys must keep
-  their original IDs, the plan must end clean, and pki/scanner.pem must verify against pki/ca.pem.
+  their original IDs, the plan must end clean, and pki/sorter.pem must verify against pki/ca.pem.
 xp: 370
 difficulty: expert
 expected_time: 35m

@@ -1,40 +1,40 @@
-# Meridian Radio Observatory — receiver chain for the four-dish array.
-# Each dish gets a receiver serial that is burned into its front-end firmware.
-# The serial is generated ONCE; if it changes, the dish drops off the
-# correlator and the next observing block is lost.
+# Meridian Particle Collider — trigger-board chain for the four-station detector ring.
+# Each station gets a trigger serial that is burned into its trigger-board firmware.
+# The serial is generated ONCE; if it changes, the station drops off the
+# trigger system and the next beam fill is lost.
 
 locals {
-  dishes = {
-    north = { band_mhz = 1420.4, azimuth = 0 }
-    south = { band_mhz = 1420.4, azimuth = 180 }
-    east  = { band_mhz = 1665.0, azimuth = 90 }
-    west  = { band_mhz = 1665.0, azimuth = 270 }
+  stations = {
+    north = { clock_khz = 1420.4, ring_angle = 0 }
+    south = { clock_khz = 1420.4, ring_angle = 180 }
+    east  = { clock_khz = 1665.0, ring_angle = 90 }
+    west  = { clock_khz = 1665.0, ring_angle = 270 }
   }
 }
 
-resource "random_id" "receiver" {
-  for_each    = local.dishes
+resource "random_id" "trigger" {
+  for_each    = local.stations
   byte_length = 6
 }
 
 resource "local_file" "calibration" {
-  for_each = local.dishes
-  filename = "${path.module}/calibration/dish-${each.key}.cfg"
+  for_each = local.stations
+  filename = "${path.module}/calibration/station-${each.key}.cfg"
   content  = <<-EOT
-    dish             = ${each.key}
-    receiver_serial  = RX-${random_id.receiver[each.key].b64_url}
-    band_mhz         = ${each.value.band_mhz}
-    azimuth_deg      = ${each.value.azimuth}
+    station             = ${each.key}
+    trigger_serial  = TG-${random_id.trigger[each.key].b64_url}
+    clock_khz         = ${each.value.clock_khz}
+    ring_angle_deg      = ${each.value.ring_angle}
   EOT
 }
 
-resource "local_file" "array_roster" {
-  filename = "${path.module}/calibration/array-roster.txt"
+resource "local_file" "ring_roster" {
+  filename = "${path.module}/calibration/ring-roster.txt"
   content = join("\n", [
-    for k in sort(keys(local.dishes)) : "${k}: RX-${random_id.receiver[k].b64_url}"
+    for k in sort(keys(local.stations)) : "${k}: TG-${random_id.trigger[k].b64_url}"
   ])
 }
 
-output "array_serials" {
-  value = { for k, r in random_id.receiver : k => r.b64_url }
+output "ring_serials" {
+  value = { for k, r in random_id.trigger : k => r.b64_url }
 }

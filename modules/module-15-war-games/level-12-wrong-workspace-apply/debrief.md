@@ -1,7 +1,7 @@
-# Post-mortem - relays built in the wrong workspace
+# Post-mortem - posts built in the wrong workspace
 
-**Timeline.** 01:40 an engineer debugging a prod-only pager issue pins `env = "prod"` in the config and applies it with
-`staging` selected. 02:05 the radio room sees duplicate relay cards. 02:20 the state mismatch is identified.
+**Timeline.** 01:40 an engineer debugging a prod-only radio issue pins `env = "prod"` in the config and applies it with
+`staging` selected. 02:05 race control sees duplicate post cards. 02:20 the state mismatch is identified.
 
 **Root causes.**
 1. A literal in `locals` replaced the workspace-derived environment. The same config therefore produced prod resources

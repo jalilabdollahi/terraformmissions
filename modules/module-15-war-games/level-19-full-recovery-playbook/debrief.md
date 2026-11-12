@@ -1,7 +1,7 @@
-# Post-mortem - polar-night recovery
+# Post-mortem - midnight-sun recovery
 
 **Timeline.** 18:30 the fuel tank is registered and applied. 18:31 the laptop disk fills during the state write; the file is
-truncated. 19:10 a colleague taints the radio key and the beacon and hand-edits the radio sheet. 19:30 the pipeline is blocked
+truncated. 19:10 a colleague taints the radio key and the dailies and hand-edits the radio sheet. 19:30 the pipeline is blocked
 by a refactor that renamed a module output.
 
 **Root causes.**

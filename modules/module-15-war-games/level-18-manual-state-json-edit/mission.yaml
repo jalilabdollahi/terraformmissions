@@ -1,13 +1,13 @@
-name: Kestrel Valley Hand Edit
+name: Kestrel Valley Truffle Hand Edit
 description: >-
-  INCIDENT 8802 - Kestrel Valley gondola line. A teammate's migration script, run with a
+  INCIDENT 8802 - Kestrel Valley Truffle-Hunting Estate. A teammate's migration script, run with a
   pre-release random provider build, rewrote terraform.tfstate before the build was withdrawn.
-  Every Terraform command now refuses to read the state at all. The four cabin tags and two
-  station load limits are the ones certified by the safety inspector and stamped on the cabins;
-  re-rolling them means a new inspection before tomorrow's first departure.
+  Every Terraform command now refuses to read the state at all. The four hound tags and two
+  grove harvest quotas are the ones certified by the truffle-licence inspector and stamped on the collars;
+  re-rolling them means a new inspection before tomorrow's first dawn hunt.
 objective: >-
   Repair terraform.tfstate by hand, carefully: make Terraform able to read it again, put every
-  cabin tag and station load limit back under its name with its certified value (out/inspection-log.txt
+  hound tag and grove harvest quota back under its name with its certified value (out/inspection-log.txt
   is the evidence), keep the lineage and increase the serial. No destroy, no configuration change
   and a clean plan at the end.
 xp: 565

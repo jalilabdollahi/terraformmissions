@@ -1,23 +1,23 @@
-# Milkhouse refactor: every changed address, plus the retired trial batch.
+# Movements refactor: every changed address, plus the retired prototype run.
 
 moved {
-  from = random_id.vat_serial
-  to   = module.milkhouse.random_id.vat_serial
+  from = random_id.spring_serial
+  to   = module.movements.random_id.spring_serial
 }
 
 moved {
-  from = random_integer.room_shelves[0]
-  to   = module.caves.module.rooms.random_integer.shelves["r2"]
+  from = random_integer.stall_loads[0]
+  to   = module.stables.module.stalls.random_integer.loads["h2"]
 }
 
 moved {
-  from = random_integer.room_shelves[1]
-  to   = module.caves.module.rooms.random_integer.shelves["r1"]
+  from = random_integer.stall_loads[1]
+  to   = module.stables.module.stalls.random_integer.loads["h1"]
 }
 
 moved {
-  from = random_integer.room_shelves[2]
-  to   = module.caves.module.rooms.random_integer.shelves["r3"]
+  from = random_integer.stall_loads[2]
+  to   = module.stables.module.stalls.random_integer.loads["h3"]
 }
 
 moved {
@@ -26,27 +26,27 @@ moved {
 }
 
 moved {
-  from = time_static.first_churn
-  to   = module.compliance.time_static.first_churn
+  from = time_static.first_spin
+  to   = module.compliance.time_static.first_spin
 }
 
 moved {
-  from = null_resource.cip_cycle
-  to   = module.caves.terraform_data.cip_cycle
+  from = null_resource.oil_cycle
+  to   = module.stables.terraform_data.oil_cycle
 }
 
 moved {
-  from = module.rennet
-  to   = module.cultures
+  from = module.paint
+  to   = module.finishes
 }
 
 moved {
-  from = module.cultures.random_integer.strain
-  to   = module.cultures.random_integer.strain_grams
+  from = module.finishes.random_integer.coat
+  to   = module.finishes.random_integer.coat_grams
 }
 
 removed {
-  from = random_integer.trial_batch
+  from = random_integer.prototype_run
 
   lifecycle {
     destroy = false

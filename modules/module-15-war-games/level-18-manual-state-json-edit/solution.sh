@@ -5,8 +5,8 @@ cp terraform.tfstate terraform.tfstate.pre-edit
 python3 - <<'PY'
 import json
 log = [l.split() for l in open("out/inspection-log.txt") if l.strip()]
-tags = {hexv: name for kind, name, hexv in log if kind == "cabin"}
-limits = {val: name for kind, name, val in log if kind == "limit"}
+tags = {hexv: name for kind, name, hexv in log if kind == "hound"}
+quotas = {val: name for kind, name, val in log if kind == "quota"}
 p = "terraform.tfstate"
 s = json.load(open(p))
 for r in s["resources"]:
@@ -16,7 +16,7 @@ for r in s["resources"]:
             inst["schema_version"] = 0
     elif r["type"] == "random_integer":
         for inst in r["instances"]:
-            inst["index_key"] = limits[str(inst["attributes"]["result"])]
+            inst["index_key"] = quotas[str(inst["attributes"]["result"])]
             inst["schema_version"] = 0
 s["serial"] += 1
 json.dump(s, open(p, "w"), indent=2)

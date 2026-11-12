@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 source "$TM_LIB"
 
-[[ -n "$(tm_recall batch_orchard)" && -n "$(tm_recall ledger_cellar)" ]] || tm_fail "mission state is missing - run 'reset' to restore the level"
+[[ -n "$(tm_recall batch_fields)" && -n "$(tm_recall ledger_packing)" ]] || tm_fail "mission state is missing - run 'reset' to restore the level"
 
-tm_assert_config_has 'module[[:space:]]+"orchard"' "the merged stack must keep one module call per team"
-tm_assert_config_has 'module[[:space:]]+"press"' "the merged stack must keep one module call per team"
-tm_assert_config_has 'module[[:space:]]+"cellar"' "the merged stack must keep one module call per team"
-for t in orchard press cellar; do
+tm_assert_config_has 'module[[:space:]]+"fields"' "the merged stack must keep one module call per team"
+tm_assert_config_has 'module[[:space:]]+"drying"' "the merged stack must keep one module call per team"
+tm_assert_config_has 'module[[:space:]]+"packing"' "the merged stack must keep one module call per team"
+for t in fields drying packing; do
   tm_assert_config_lacks "$(tm_recall "batch_$t")" "a batch id is typed into the configuration"
   if ls stacks/$t/*.tf >/dev/null 2>&1 && grep -qE '^[[:space:]]*resource[[:space:]]' stacks/$t/*.tf; then
     tm_fail "stacks/$t still has resource code - retire the old team stacks once their objects are merged"
@@ -14,7 +14,7 @@ for t in orchard press cellar; do
 done
 
 # Every old state file (including workspaces) must be empty: one owner per object.
-for f in stacks/orchard stacks/press stacks/cellar; do
+for f in stacks/fields stacks/drying stacks/packing; do
   while IFS= read -r sf; do
     [[ -z "$sf" ]] && continue
     [[ "$(jq '[.resources[] | select(.mode == "managed")] | length' "$sf")" == "0" ]] || tm_fail "$sf still tracks objects - they belong in stacks/all-in-one now"
@@ -23,7 +23,7 @@ done
 
 cd "$WORKSPACE/stacks/all-in-one" || tm_fail "stacks/all-in-one is missing"
 tm_init "init failed in stacks/all-in-one"
-for t in orchard press cellar; do
+for t in fields drying packing; do
   for r in random_id.batch random_integer.quota local_file.ledger; do
     tm_assert_in_state "module.$t.$r" "module.$t.$r is not in the merged state"
   done
@@ -36,6 +36,6 @@ STATE=$(tm_state_list)
 TM_MSG="the merged plan would replace objects - the merged config does not describe them as they exist" tm_assert_no_destroy
 tm_assert_no_changes
 cd "$WORKSPACE" || exit 1
-tm_assert_file_contains out/press-ledger.txt "upstream $(tm_recall batch_orchard)" "the press ledger lost its link to the orchard batch"
-tm_assert_file_contains out/cellar-ledger.txt "upstream $(tm_recall batch_press)" "the cellar ledger lost its link to the press batch"
+tm_assert_file_contains out/drying-ledger.txt "upstream $(tm_recall batch_fields)" "the drying ledger lost its link to the fields batch"
+tm_assert_file_contains out/packing-ledger.txt "upstream $(tm_recall batch_drying)" "the packing ledger lost its link to the drying batch"
 tm_pass "three team states merged into one with every batch, quota and ledger intact"

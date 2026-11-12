@@ -1,13 +1,13 @@
 # Post-mortem - the overwritten rota state
 
-**Timeline.** Wednesday 14:02 CI run 217 creates a quarantine bay for the heron; the state upload times out. Thursday
+**Timeline.** Wednesday 14:02 CI run 217 creates a repair rack for the heron; the state upload times out. Thursday
 09:15 another team restores an old state file onto the shared VM. Thursday 09:40 the rota plan wants to create three
 objects that already exist.
 
 **Root causes.**
 1. State lived as a plain file on a shared machine; anyone with shell access could replace it, and nothing locked or
    versioned it.
-2. The CI pipeline treated the state upload as a separate step. When it failed, the only record of the new bay was a log.
+2. The CI pipeline treated the state upload as a separate step. When it failed, the only record of the new rack was a log.
 3. Copies of state circulated with names that mentioned a time, not a lineage or serial.
 
 **How Terraform behaves.** Every state carries a `lineage` (identity of the state history) and a `serial` (revision).

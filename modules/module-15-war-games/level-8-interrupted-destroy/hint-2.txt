@@ -1,1 +1,1 @@
-Three separate things block completion: a reference that cannot exist while the hall is switched off, a lock file left by a process that is no longer running (verify that before touching it), and files that Terraform lost track of and therefore will never delete.
+Three separate things block completion: a reference that cannot exist while the field is switched off, a lock file left by a process that is no longer running (verify that before touching it), and files that Terraform lost track of and therefore will never delete.

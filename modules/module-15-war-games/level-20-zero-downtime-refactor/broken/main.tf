@@ -1,43 +1,43 @@
-# Pennywhistle Dairy - milkhouse control plane, after the "module tree" refactor (PR #88).
+# Pennywhistle Clockwork Carousel Works - workshop control plane, after the "module tree" refactor (PR #88).
 #
-# The refactor split the old flat root into modules/. The running dairy was built by the old
-# flat code: vat serials, room capacities, the dairy licence, the first-churn
-# timestamp, the CIP cleaning cycle, a scratch "trial batch" and a rennet module called "rennet".
+# The refactor split the old flat root into modules/. The running works was built by the old
+# flat code: spring serials, stall load ratings, the ride licence, the first-spin
+# timestamp, the oiling cycle, a scratch "prototype run" and a paint module called "paint".
 # This is the new code only; nobody has described the moves yet.
 
-module "milkhouse" {
-  source  = "./modules/milkhouse"
-  vats = ["curd", "whey", "cold1", "cold2"]
+module "movements" {
+  source  = "./modules/movements"
+  springs = ["brass", "steel", "coil1", "coil2"]
 }
 
-module "caves" {
-  source     = "./modules/caves"
-  rooms = ["r1", "r2", "r3"]
+module "stables" {
+  source     = "./modules/stables"
+  stalls = ["h1", "h2", "h3"]
 }
 
 module "compliance" {
   source = "./modules/compliance"
 }
 
-module "cultures" {
-  source = "./modules/cultures"
+module "finishes" {
+  source = "./modules/finishes"
 }
 
-resource "local_file" "dairy_sheet" {
-  filename = "${path.module}/out/dairy-sheet.txt"
+resource "local_file" "works_sheet" {
+  filename = "${path.module}/out/works-sheet.txt"
   content = join("\n", concat(
-    [for k in sort(keys(module.milkhouse.serials)) : "vat ${k} ${module.milkhouse.serials[k]}"],
-    sort([for k, v in module.caves.shelves : "room ${k} ${v}"]),
+    [for k in sort(keys(module.movements.serials)) : "spring ${k} ${module.movements.serials[k]}"],
+    sort([for k, v in module.stables.loads : "stall ${k} ${v}"]),
     [
       "licence ${module.compliance.licence}",
-      "first churn ${module.compliance.first_churn}",
-      "cip ${module.caves.cip_id}",
+      "first spin ${module.compliance.first_spin}",
+      "oil ${module.stables.oil_id}",
     ],
-    [for k in sort(keys(module.cultures.strains)) : "rennet ${k} ${module.cultures.strains[k]}"],
+    [for k in sort(keys(module.finishes.coats)) : "paint ${k} ${module.finishes.coats[k]}"],
     [""],
   ))
 }
 
-output "dairy_sheet_path" {
-  value = local_file.dairy_sheet.filename
+output "works_sheet_path" {
+  value = local_file.works_sheet.filename
 }

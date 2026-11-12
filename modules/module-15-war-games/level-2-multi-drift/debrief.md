@@ -1,12 +1,12 @@
-# Post-mortem — Harrow Ironworks Drift
+# Post-mortem — Harrow Tempering Hall Drift
 
-**Timeline.** Over the weekend the pour floor accumulated five unrecorded changes. Monday 05:30 the pre-pour
+**Timeline.** Over the weekend the tempering hall accumulated five unrecorded changes. Monday 05:30 the pre-melt
 audit ran `terraform plan` and found one tainted resource plus four file differences. 06:10 on-call sorted
 them; 06:40 untaint, code edits and apply; 06:55 clean plan, campaign started on time.
 
 **Root causes.**
 1. Humans edited live control files instead of the code, one of them legitimately (an approved temperature),
-   but nobody updated Terraform, so a routine apply would have silently reverted a metallurgy decision.
+   but nobody updated Terraform, so a routine apply would have silently reverted a quality-lab decision.
 2. `terraform taint` was used as a reflex. A tainted resource is replaced on the next apply, and for a
    generated identifier replacement means a different value.
 3. A decommissioned mold stayed in the code, so it kept showing up as "to create".

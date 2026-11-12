@@ -1,14 +1,14 @@
-name: Harwick Pager Mixup
+name: Harwick Stage Post Mixup
 description: >-
-  INCIDENT 2209 - Harwick Coastguard. During a night debugging session an engineer left the
-  "staging" workspace selected and applied the hotfix branch. Four production lifeboat pager
-  relays (north-head, south-pier, harbour-mouth, lighthouse) now exist in the staging state,
-  the prod workspace has never heard of them, and the radio room is loading relay cards whose
+  INCIDENT 2209 - Harwick Rally Stage Marshals. During a night debugging session an engineer left the
+  "staging" workspace selected and applied the hotfix branch. Four production stage marshal
+  posts (forest-hairpin, quarry-jump, river-ford, summit-finish) now exist in the staging state,
+  the prod workspace has never heard of them, and race control is loading post cards whose
   keys must not change.
 objective: >-
-  Make the prod workspace the owner of the four relay keys and cards with their original IDs,
+  Make the prod workspace the owner of the four post keys and cards with their original IDs,
   leave staging holding only its own region seed, and stop the config from pinning the
-  environment so both workspaces plan cleanly with no destroys. Do not recreate any relay key.
+  environment so both workspaces plan cleanly with no destroys. Do not recreate any post key.
 xp: 470
 difficulty: expert
 expected_time: 45m

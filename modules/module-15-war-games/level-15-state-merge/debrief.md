@@ -1,6 +1,6 @@
 # Post-mortem - merging three states
 
-**Timeline.** Tuesday: the press team cannot plan because it depends on orchard outputs that orchard has not published.
+**Timeline.** Tuesday: the drying team cannot plan because it depends on fields outputs that fields has not published.
 Wednesday: leadership asks for a single plan across the chain. Thursday: a merged stack is written and moved against.
 
 **Root causes.**

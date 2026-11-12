@@ -1,11 +1,11 @@
-variable "loaders" {
-  description = "Cargo loaders at Nordhavn"
+variable "carts" {
+  description = "Cold-room carts at Nordhavn"
   type        = list(string)
-  default     = ["LD-1", "LD-2", "LD-3", "LD-4", "LD-5", "LD-6"]
+  default     = ["CT-1", "CT-2", "CT-3", "CT-4", "CT-5", "CT-6"]
 }
 
-variable "stands" {
-  description = "Aircraft stands on the apron"
+variable "lots" {
+  description = "Auction lot positions on the clock-hall floor"
   type        = list(string)
   default     = ["A1", "B2", "C3", "D4", "E5", "F6", "G7"]
 }
