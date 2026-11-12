@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 source "$TM_LIB"
 
-for scenario in single_zone three_zones child_half; do
+for scenario in single_axle three_axles discount_half; do
   tm_assert_config_has "^[[:space:]]*run[[:space:]]+\"$scenario\"" \
     "scenario run \"$scenario\" is missing from tests/fares.tftest.hcl"
 done
@@ -25,13 +25,13 @@ python3 - "$MUT/fares.tf" <<'PY'
 import sys
 p = sys.argv[1]
 s = open(p).read()
-t = s.replace("(var.zones - 1) * local.per_zone_cents", "var.zones * local.per_zone_cents")
+t = s.replace("(var.axles - 1) * local.per_axle_cents", "var.axles * local.per_axle_cents")
 open(p, "w").write(t)
 sys.exit(0 if t != s else 3)
 PY
 if [[ $? -eq 0 ]]; then
   if (cd "$MUT" && terraform test -no-color) >"$TM_TMP/mutant.out" 2>&1; then
-    tm_fail "the tests still pass when the zone arithmetic is wrong - they are not really checking the fare"
+    tm_fail "the tests still pass when the axle arithmetic is wrong - they are not really checking the fare"
   fi
 fi
 tm_pass "3 scenarios run, and the suite catches a broken fare formula"

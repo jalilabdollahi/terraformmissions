@@ -1,11 +1,11 @@
-name: Puppet Theatre Season Bill
+name: Ballroom Season Programme
 description: >-
-  The puppet theatre's box office prints its season bill from outputs that the stage-crew
-  team publishes in their own Terraform state. The plan fails because the box office
+  The ballroom dance hall's front desk prints its season programme from outputs that the floor-staff
+  team publishes in their own Terraform state. The plan fails because the front desk
   asks for outputs that are not there, and then treats one of them as the wrong kind of value.
 objective: >-
-  Read the stage crew's real outputs correctly. total_seats must be 160 and head_rigger
-  "Wilhelmina Pike", both derived from the remote state, and the bill must list both stages.
+  Read the floor staff's real outputs correctly. total_couples must be 160 and head_caller
+  "Wilhelmina Pike", both derived from the remote state, and the programme must list both floors.
 xp: 200
 difficulty: intermediate
 expected_time: 12m

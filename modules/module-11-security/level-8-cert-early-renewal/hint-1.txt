@@ -1,1 +1,1 @@
-Open main.tf and read the two numeric arguments on tls_self_signed_cert.pump. They decide how long the cert lives and when Terraform replaces it.
+Open main.tf and read the two numeric arguments on tls_self_signed_cert.charger. They decide how long the cert lives and when Terraform replaces it.

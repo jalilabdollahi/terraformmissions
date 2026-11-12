@@ -1,9 +1,9 @@
-# Walkthrough — Balloon Basket Manifest
+# Walkthrough — Bungee Weigh-In Card
 
 1. **Diagnose.** `terraform plan` fails in `data.external.load` with a message like
    `command "python3" produced invalid JSON ... cannot unmarshal number into Go value of type string`
-   (or `object` / `array`). Running `python3 bin/manifest.py` shows the offending output:
-   `"pax": 4`, `"names": [...]`, `"limits": {...}`.
+   (or `object` / `array`). Running `python3 bin/weigh_in.py` shows the offending output:
+   `"jumpers": 4`, `"names": [...]`, `"limits": {...}`.
 2. **Understand the contract.** The `external` data source parses the program's stdout as one flat
    JSON object, string keys to string values. Numbers, lists, booleans and nested objects are all
    rejected.
@@ -11,8 +11,8 @@
    flatten the nested limit. `main.tf` expects `names` split on `|` and a top-level `max_kg`.
    ```python
    result = {
-       "pilot": "Hester Marl",
-       "pax": str(len(rows)),
+       "master": "Hester Marl",
+       "jumpers": str(len(rows)),
        "total_kg": str(sum(int(r["weight_kg"]) for r in rows)),
        "names": "|".join(r["name"] for r in rows),
        "max_kg": "360",

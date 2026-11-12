@@ -1,11 +1,11 @@
-name: Projection Booth Setup
+name: Comedy Club Lineup Setup
 description: >-
-  A cinema computes whether a programme needs an intermission from a reel manifest file. The tests use
-  a helper module to write that manifest before the real tests read it, but neither helper step does its
+  A stand-up comedy club computes whether a show needs an intermission from an act lineup file. The tests use
+  a helper module to write that lineup before the real tests read it, but neither helper step does its
   job.
 objective: >-
-  Make setup, short_programme, setup_long and double_bill pass: both helper runs must really apply
-  tests/setup and feed their manifest_path output to the run that follows. No manifest may be left behind
+  Make setup, short_show, setup_long and double_header pass: both helper runs must really apply
+  tests/setup and feed their lineup_path output to the run that follows. No lineup may be left behind
   after terraform test.
 xp: 295
 difficulty: advanced

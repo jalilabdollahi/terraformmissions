@@ -1,9 +1,9 @@
-# Hollis Orchard crate manifest.
+# Brackenfield Lavender Farm crate manifest.
 # One workspace per harvest.
 
 locals {
   harvest = "terraform.workspace"
-  crates  = ["apples", "pears", "quince"]
+  crates  = ["stems", "buds", "sachets"]
 }
 
 resource "local_file" "manifest" {

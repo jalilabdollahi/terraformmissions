@@ -1,1 +1,1 @@
-Use `local_file.board_card["tacotl"]` and `local_file.board_card["pierogi"]`. Not `[0]`, and keys are case-sensitive: `Pierogi` is not `pierogi`.
+Use `local_file.pitch_card["nomad"]` and `local_file.pitch_card["voyager"]`. Not `[0]`, and keys are case-sensitive: `Voyager` is not `voyager`.

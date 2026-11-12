@@ -1,13 +1,13 @@
-name: Strongroom Combination
+name: Count Room Combination
 description: >-
-  The strongroom's safe combination lives in a file on the vault laptop, and Terraform
-  prints the night manager's door card from it. Reviewers noticed the combination shows
+  The casino count room's drop-safe combination lives in a file on the cage laptop, and Terraform
+  prints the pit boss's door card from it. Reviewers noticed the combination shows
   up in plain text in the apply log, in the outputs, and in a card anybody on the machine
   can read.
 objective: >-
   Read the combination with the data source made for secrets, keep it out of plan, apply and
   output display (the combination output must be marked sensitive and still return
-  the real value on request), and make vault/door-card.txt readable by its owner only (0600).
+  the real value on request), and make countroom/door-card.txt readable by its owner only (0600).
 xp: 225
 difficulty: intermediate
 expected_time: 12m

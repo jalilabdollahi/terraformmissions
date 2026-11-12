@@ -1,1 +1,1 @@
-A module exposes only its declared `output` blocks. This one has a single output called `reading`, which is an object. The root config invents `level_cm`, `water_level` and `keeper` as if they were outputs of the module.
+A module exposes only its declared `output` blocks. This one has a single output called `reading`, which is an object. The root config invents `snow_cm`, `snow_depth` and `ranger` as if they were outputs of the module.

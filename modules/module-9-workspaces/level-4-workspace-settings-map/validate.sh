@@ -22,13 +22,13 @@ probe_apply() {
 
 tm_assert_config_has 'local\.layouts\[terraform\.workspace\]|lookup\(local\.layouts' "the layout must still be looked up with terraform.workspace"
 
-check_ws() {  # workspace stalls hours music
+check_ws() {  # workspace huts hours towels
   probe_apply "$1"
   local s h m
-  s=$(pt output -raw stalls 2>/dev/null); h=$(pt output -raw hours 2>/dev/null)
-  [[ "$s" == "$2" ]] || tm_fail "in workspace '$1' stalls is '$s', expected $2"
+  s=$(pt output -raw huts 2>/dev/null); h=$(pt output -raw hours 2>/dev/null)
+  [[ "$s" == "$2" ]] || tm_fail "in workspace '$1' huts is '$s', expected $2"
   [[ "$h" == "$3" ]] || tm_fail "in workspace '$1' hours is '$h', expected $3"
-  grep -qx "music=$4" "$PROBE/out/$1-board.txt" || tm_fail "out/$1-board.txt should contain music=$4"
+  grep -qx "towels=$4" "$PROBE/out/$1-board.txt" || tm_fail "out/$1-board.txt should contain towels=$4"
 }
 
 probe_init
@@ -38,4 +38,4 @@ check_ws prod 24 08-18 true
 
 # The player's own selected workspace (qa after setup) must also plan cleanly.
 tm_plan_ok
-tm_pass "qa, dev and prod each get their own stall layout"
+tm_pass "qa, dev and prod each get their own hut layout"

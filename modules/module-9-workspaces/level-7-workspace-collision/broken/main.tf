@@ -1,4 +1,4 @@
-# Cairn Ridge lodge: bunk roster and wake-up calls. One workspace per wing (east, west).
+# Pinewater youth camp: bunk roster and wake-up calls. One workspace per wing (east, west).
 
 locals {
   wing_bunks = {
@@ -15,5 +15,5 @@ resource "local_file" "bunk_roster" {
 
 resource "local_file" "wake_calls" {
   filename = "${path.module}/out/wake-calls.txt"
-  content  = "Wing ${terraform.workspace}: wake-up at 04:30 for aurora viewing\n"
+  content  = "Wing ${terraform.workspace}: wake-up at 06:30 for the lake swim\n"
 }

@@ -1,12 +1,12 @@
-name: Transmitter Profiles
+name: Mast Profiles
 description: >-
-  Radio Pinewood keeps one YAML settings file per environment in env/, chosen by workspace name.
+  Pinewood Mobile, a mobile phone mast operator, keeps one YAML settings file per environment in env/, chosen by workspace name.
   In the dev workspace the build dies complaining about an attribute on a string, and in prod
   there is no settings file for the workspace at all.
 objective: >-
   In workspaces dev, staging and prod the config must load env/<workspace>.yaml and write
-  out/<workspace>-transmitter.conf. The outputs frequency and power_watts must be 88.1/50 for dev,
-  91.5/200 for staging and 98.7/1000 for prod.
+  out/<workspace>-mast.conf. The outputs carrier and power_watts must be 796.5/50 for dev,
+  1842.5/200 for staging and 2652.5/1000 for prod.
 xp: 195
 difficulty: intermediate
 expected_time: 12m

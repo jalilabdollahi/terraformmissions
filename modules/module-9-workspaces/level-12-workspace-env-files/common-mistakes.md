@@ -4,7 +4,7 @@
   and other tooling depends on them. Rename the file.
 - **Pasting the values into `locals`.** Works for one environment, but the settings files are the point
   and the validator rejects copied values.
-- **Using `jsondecode`.** The files are YAML. `jsondecode` fails on `frequency_mhz: 88.1`.
+- **Using `jsondecode`.** The files are YAML. `jsondecode` fails on `carrier_mhz: 796.5`.
 - **Fixing the path but not the decode.** The file loads, then every attribute access fails because the
   value is still a string.
 - **Duplicating `production.yaml` as `prod.yaml`.** It works, but the old file is now dead weight and will

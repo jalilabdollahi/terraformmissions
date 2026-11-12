@@ -5,7 +5,7 @@ tm_validate "the configuration does not validate"
 tm_apply
 if grep -q 'PRIVATE KEY' "$TM_LAST_OUT"; then tm_fail "private key material was printed during apply"; fi
 
-K=keys/bookmobile_ed25519
+K=keys/milkround_ed25519
 tm_assert_file "$K" "the private key file $K does not exist"
 tm_assert_file_contains "$K" "BEGIN OPENSSH PRIVATE KEY" "$K does not hold the OpenSSH private key"
 [[ "$(tm_file_mode "$K")" == "600" ]] || tm_fail "$K has mode $(tm_file_mode "$K"); a private key must be 0600"
@@ -13,8 +13,8 @@ tm_assert_file_contains "$K" "BEGIN OPENSSH PRIVATE KEY" "$K does not hold the O
 
 PUB=$(tm_output_raw public_key)
 [[ "$PUB" == ssh-ed25519* ]] || tm_fail "output public_key must still return the ED25519 public key"
-tm_assert_file keys/bookmobile_ed25519.pub "the public key file is gone"
-tm_assert_file_contains keys/bookmobile_ed25519.pub "$PUB"
+tm_assert_file keys/milkround_ed25519.pub "the public key file is gone"
+tm_assert_file_contains keys/milkround_ed25519.pub "$PUB"
 
 # ssh-keygen refuses a private key that others can read, so this proves the mode in practice
 if command -v ssh-keygen >/dev/null 2>&1; then

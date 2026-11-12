@@ -1,6 +1,6 @@
-variable "loft_name" {
+variable "track_name" {
   type    = string
-  default = "Fairwind Sail Loft"
+  default = "Redline Kart Track"
 }
 
 variable "gateway_token" {
@@ -8,10 +8,10 @@ variable "gateway_token" {
   sensitive = true
 }
 
-# Publishes the loft's booking calendar to the gateway whenever the loft name changes.
+# Publishes the track's booking calendar to the gateway whenever the track name changes.
 resource "terraform_data" "publish_calendar" {
   input = {
-    loft  = var.loft_name
+    track  = var.track_name
     token = var.gateway_token
   }
 
@@ -19,12 +19,12 @@ resource "terraform_data" "publish_calendar" {
     command = "bash ${path.module}/bin/publish.sh"
 
     environment = {
-      LOFT_NAME     = self.input.loft
+      TRACK_NAME     = self.input.track
       GATEWAY_TOKEN = self.input.token
     }
   }
 }
 
-output "published_loft" {
-  value = terraform_data.publish_calendar.input.loft
+output "published_track" {
+  value = terraform_data.publish_calendar.input.track
 }

@@ -1,6 +1,6 @@
-# Walkthrough — Pine Ridge Passphrase
+# Walkthrough — Acacia Ridge Passphrase
 
-1. `grep -n passphrase main.tf` shows `radio_admin_password = "demo-not-a-real-secret-lookout-1"` in `locals`.
+1. `grep -n passphrase main.tf` shows `radio_admin_password = "demo-not-a-real-secret-safari-1"` in `locals`.
    Anyone with repository access has the radio's admin passphrase.
 2. Replace it with a generated value:
    ```hcl

@@ -1,1 +1,1 @@
-Add a `lifecycle { precondition { condition = terraform.workspace != "default" ... } }` block to `local_file.chimes`, with the same error message. The check block can go.
+Add a `lifecycle { precondition { condition = terraform.workspace != "default" ... } }` block to `local_file.sprays`, with the same error message. The check block can go.

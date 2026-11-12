@@ -1,11 +1,11 @@
-name: Stall Count Missing
+name: Hut Count Missing
 description: >-
-  The Riverbank farmers' market lays out its stalls from a settings map keyed by workspace. Dev
-  and prod have entries, but the new qa workspace, created for the volunteer dry run, stops every
+  The seafront beach hut rental lays out its huts from a settings map keyed by workspace. Dev
+  and prod have entries, but the new qa workspace, created for the staff dry run, stops every
   plan with an indexing error.
 objective: >-
-  Make the config work in the qa workspace with 12 stalls, hours 09-16 and no music, while dev (4
-  stalls, 10-14, no music) and prod (24 stalls, 08-18, music) keep their values. The settings must
+  Make the config work in the qa workspace with 12 huts, hours 09-16 and no towels, while dev (4
+  huts, 10-14, no towels) and prod (24 huts, 08-18, towels) keep their values. The settings must
   still be looked up by terraform.workspace.
 xp: 190
 difficulty: intermediate

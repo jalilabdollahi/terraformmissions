@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 source "$TM_LIB"
 
-T=tests/glaze.tftest.hcl
-tm_assert_file "$T" "tests/glaze.tftest.hcl is missing"
+T=tests/colour.tftest.hcl
+tm_assert_file "$T" "tests/colour.tftest.hcl is missing"
 runs=$(grep -cE '^[[:space:]]*run[[:space:]]+"' "$T")
 [[ "$runs" -eq 3 ]] || tm_fail "the suite should keep its three runs, found $runs"
 tm_assert_config_has 'fileexists\(' "the on-disk check (fileexists) has been removed"
-tm_assert_config_has 'silica: 800 g' "the check that the card lists silica at 800 g has been removed"
+tm_assert_config_has 'pigment: 800 g' "the check that the card lists pigment at 800 g has been removed"
 
 terraform test -no-color >"$TM_LAST_OUT" 2>&1
 code=$?
@@ -15,13 +15,13 @@ if [[ $code -ne 0 ]]; then
   tm_fail "terraform test is failing"
 fi
 grep -q '^Success! 3 passed, 0 failed' "$TM_LAST_OUT" || tm_fail "expected 3 passed runs"
-[[ ! -e kiln/recipe.txt ]] || tm_fail "kiln/recipe.txt was left behind - teardown did not remove it"
+[[ ! -e salon/formula.txt ]] || tm_fail "salon/formula.txt was left behind - teardown did not remove it"
 
 # Mutants: the suite must notice a wrong card and a card with the wrong layout
 mutate() {
   local name="$1" old="$2" new="$3" dir="$TM_TMP/mutant-$1"
   rm -rf "$dir"; mkdir -p "$dir"; cp -R ./. "$dir"/
-  python3 - "$dir/glaze.tf" "$old" "$new" <<'PY'
+  python3 - "$dir/colour.tf" "$old" "$new" <<'PY'
 import sys
 p, old, new = sys.argv[1:4]
 s = open(p).read()

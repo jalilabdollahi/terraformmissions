@@ -1,33 +1,33 @@
-# Puppet theatre: the box office reads the stage-crew team's published outputs to print the season bill.
+# Ballroom dance hall: the front desk reads the floor-staff team's published outputs to print the season programme.
 
-data "terraform_remote_state" "crew" {
+data "terraform_remote_state" "staff" {
   backend = "local"
 
   config = {
-    path = "${path.module}/stage-crew/terraform.tfstate"
+    path = "${path.module}/floor-staff/terraform.tfstate"
   }
 }
 
 locals {
-  plan   = data.terraform_remote_state.crew.outputs
-  stages = local.plan.stages
-  seats  = sum([for s in local.stages : s.seats])
-  rigger = local.plan.crew_leads[0]
+  plan   = data.terraform_remote_state.staff.outputs
+  floors = local.plan.floors
+  couples  = sum([for s in local.floors : s.couples])
+  caller = local.plan.staff_leads[0]
 }
 
-resource "local_file" "season_bill" {
-  filename = "${path.module}/box-office/season-bill.txt"
+resource "local_file" "season_programme" {
+  filename = "${path.module}/front-desk/season-programme.txt"
   content = join("\n", concat(
-    ["${title(local.plan.season)} season", "Head rigger: ${local.rigger}"],
-    [for name, s in local.stages : "${name}: ${s.seats} seats, ${s.fly_bars} fly bars"],
+    ["${title(local.plan.season)} season", "Head caller: ${local.caller}"],
+    [for name, s in local.floors : "${name}: ${s.couples} couples, ${s.mirrors} mirrors"],
     [""]
   ))
 }
 
-output "total_seats" {
-  value = local.seats
+output "total_couples" {
+  value = local.couples
 }
 
-output "head_rigger" {
-  value = local.rigger
+output "head_caller" {
+  value = local.caller
 }

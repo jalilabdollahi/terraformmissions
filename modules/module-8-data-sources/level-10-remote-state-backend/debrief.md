@@ -18,7 +18,7 @@ A few consequences worth knowing:
 - The consumer needs read access to the whole state file, which may contain secrets. Many teams
   prefer purpose-built sharing (a parameter store, a published JSON document) for that reason.
 - The coupling is real: if the producer changes the backend location, every consumer breaks until
-  updated. The validator exercised the live link by changing the producer's `track_count` and
+  updated. The validator exercised the live link by changing the producer's `bay_count` and
   re-applying; the timetable header followed.
 
 Think of remote state as an interface contract between teams: stable file location, stable output

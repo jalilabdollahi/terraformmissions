@@ -1,6 +1,6 @@
 name: "Frost Alarm Sunshine"
 description: >-
-  A vineyard arms its frost alarm with a code that Terraform writes onto a panel file the whole night crew can read. Someone wanted the crew to see the code loaded, wrapped it in nonsensitive(), and the code now prints in every plan.
+  A cranberry bog arms its frost alarm with a code that Terraform writes onto a panel file the whole harvest crew can read. Someone wanted the crew to see the code loaded, wrapped it in nonsensitive(), and the code now prints in every plan.
 objective: >-
   Stop revealing alarm_code: the panel file and every plan or apply must not contain it, output alarm_code must be sensitive but still carry the real value, and output code_length must stay a plain, non-sensitive number equal to the code's length (shown on the panel as 'Code length: N characters').
 xp: 250

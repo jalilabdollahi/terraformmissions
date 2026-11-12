@@ -4,7 +4,7 @@
   a precondition or a validation can fail the run.
 - **Guarding only the output.** An output precondition fails after the resources were already created in
   `terraform apply`. Put it on the resource.
-- **Comparing against the tower names.** `terraform.workspace == "tower-a"` blocks `tower-b`. The rule is
+- **Comparing against the fountain names.** `terraform.workspace == "fountain-a"` blocks `fountain-b`. The rule is
   "anything but default".
 - **Deleting the guard and relying on discipline.** The validator tries the default workspace and expects
   a refusal.

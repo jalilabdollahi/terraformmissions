@@ -1,4 +1,4 @@
-# Walkthrough — Depot Feed Handshake
+# Walkthrough — Bus Depot Handshake
 
 1. **Diagnose.** `terraform plan` fails with `Unable to find remote state ... No stored state was
    found for the given workspace in the given backend.` The data source looked at
@@ -12,4 +12,4 @@
      path = "${path.module}/depot-team/state/depot.tfstate"
    }
    ```
-4. `terraform apply`; the header reads `Depot NRT-04: 6 tracks, first tram 05:12`. Type `check`.
+4. `terraform apply`; the header reads `Depot NBD-04: 6 bays, first bus 05:12`. Type `check`.

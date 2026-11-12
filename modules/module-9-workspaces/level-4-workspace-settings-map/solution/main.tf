@@ -1,21 +1,21 @@
-# Riverbank farmers' market stall board, driven by one settings map keyed by workspace.
+# Seafront beach hut rental board, driven by one settings map keyed by workspace.
 
 locals {
   layouts = {
     dev = {
-      stalls = 4
+      huts = 4
       hours  = "10-14"
-      music  = false
+      towels  = false
     }
     qa = {
-      stalls = 12
+      huts = 12
       hours  = "09-16"
-      music  = false
+      towels  = false
     }
     prod = {
-      stalls = 24
+      huts = 24
       hours  = "08-18"
-      music  = true
+      towels  = true
     }
   }
 
@@ -24,11 +24,11 @@ locals {
 
 resource "local_file" "board" {
   filename = "${path.module}/out/${terraform.workspace}-board.txt"
-  content  = "stalls=${local.layout.stalls}\nhours=${local.layout.hours}\nmusic=${local.layout.music}\n"
+  content  = "huts=${local.layout.huts}\nhours=${local.layout.hours}\ntowels=${local.layout.towels}\n"
 }
 
-output "stalls" {
-  value = local.layout.stalls
+output "huts" {
+  value = local.layout.huts
 }
 
 output "hours" {

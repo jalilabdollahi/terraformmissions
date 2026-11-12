@@ -13,6 +13,6 @@ Notice also what the exit code means. A test file that fails to parse makes `ter
 non-zero, but an *empty* tests directory exits 0 with "0 passed, 0 failed". Never treat "no failures"
 as "tested": in CI, assert that the pass count is what you expect, or that named runs are reported.
 
-Real-world takeaway: keep test files small and named after behaviour (`single_zone`, `child_half`),
+Real-world takeaway: keep test files small and named after behaviour (`single_axle`, `discount_half`),
 run `terraform test -verbose` while authoring, and make CI fail on a zero-test result so a typo in a
 directory name or block type cannot silently turn your safety net off.

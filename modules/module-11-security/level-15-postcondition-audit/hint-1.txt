@@ -1,1 +1,1 @@
-Run terraform apply and then ls -l tower/. Compare the real mode with the audited_mode output and with the condition inside the postcondition block.
+Run terraform apply and then ls -l clubhouse/. Compare the real mode with the audited_mode output and with the condition inside the postcondition block.

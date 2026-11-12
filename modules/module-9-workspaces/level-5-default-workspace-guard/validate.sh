@@ -37,8 +37,8 @@ pt apply -auto-approve -input=false -no-color >"$TM_LAST_OUT" 2>&1
 [[ ! -e "$PROBE/out" ]] || [[ -z "$(find "$PROBE/out" -type f 2>/dev/null)" ]] \
   || tm_fail "files were written while applying in the default workspace"
 
-for T in tower-a tower-b; do
+for T in fountain-a fountain-b; do
   probe_apply "$T"
-  tm_assert_file_contains "$PROBE/out/$T-chimes.txt" "Tower $T" "out/$T-chimes.txt is missing or wrong"
+  tm_assert_file_contains "$PROBE/out/$T-sprays.txt" "Fountain $T" "out/$T-sprays.txt is missing or wrong"
 done
-tm_pass "default is refused with an error; named tower workspaces still apply"
+tm_pass "default is refused with an error; named fountain workspaces still apply"

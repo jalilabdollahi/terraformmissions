@@ -1,9 +1,9 @@
-# Herbarium: pressed-plant label sheets are zipped into one bundle for the county museum.
+# Perfumery: bottle label sheets are zipped into one bundle for the distributor.
 
 data "archive_file" "bundle" {
   type        = "zip"
-  source_dir  = "${path.module}/specimens"
-  output_path = "${path.module}/dist/herbarium.zip"
+  source_dir  = "${path.module}/labels"
+  output_path = "${path.module}/dist/atelier.zip"
   excludes    = ["label-draft.tmp"]
 }
 

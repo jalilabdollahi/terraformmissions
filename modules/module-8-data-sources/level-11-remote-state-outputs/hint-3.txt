@@ -1,1 +1,1 @@
-Use `local.plan.stages` and take the head rigger with `local.plan.crew_leads[0]`.
+Use `local.plan.floors` and take the head caller with `local.plan.staff_leads[0]`.

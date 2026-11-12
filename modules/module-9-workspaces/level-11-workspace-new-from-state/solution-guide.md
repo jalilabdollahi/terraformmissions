@@ -1,12 +1,12 @@
 # Solution guide
 
-**Diagnose.** `terraform workspace list` shows only `default`, whose state is empty. `snapshots/tea-ledger.tfstate`
-holds the real codename (open it, or `jq .outputs snapshots/tea-ledger.tfstate`).
+**Diagnose.** `terraform workspace list` shows only `default`, whose state is empty. `snapshots/jam-ledger.tfstate`
+holds the real codename (open it, or `jq .outputs snapshots/jam-ledger.tfstate`).
 
 **Fix.**
 
 ```
-terraform workspace new -state=snapshots/tea-ledger.tfstate rehearsal
+terraform workspace new -state=snapshots/jam-ledger.tfstate rehearsal
 terraform plan
 ```
 

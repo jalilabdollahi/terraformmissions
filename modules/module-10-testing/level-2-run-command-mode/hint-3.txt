@@ -1,1 +1,1 @@
-The `recipe_file_written` run says `command = plan`. A file only exists after an apply, so change that single run to `command = apply` (leave the other runs alone - they only look at outputs).
+The `formula_file_written` run says `command = plan`. A file only exists after an apply, so change that single run to `command = apply` (leave the other runs alone - they only look at outputs).

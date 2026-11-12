@@ -37,5 +37,5 @@ PY
 }
 check_mutant cutoff_inverted '/ 60) < var.cutoff_minutes' '/ 60) >= var.cutoff_minutes'
 check_mutant checkpoints_reversed 'value = [for km in local.checkpoints_km : floor(km * var.pace_sec_per_km / 60)]' 'value = reverse([for km in local.checkpoints_km : floor(km * var.pace_sec_per_km / 60)])'
-check_mutant distance_rounded '42.195' '42'
+check_mutant distance_rounded '12.4' '12'
 tm_pass "all conditions state their intent and three injected bugs are caught"

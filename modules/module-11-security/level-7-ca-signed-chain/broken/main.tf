@@ -1,5 +1,5 @@
-# Private CA for the Cinder Loop monorail depot: the signal controller must present a
-# certificate that chains up to the depot's own root.
+# Private CA for the Orbital Spur hyperloop test track: the signal controller must present a
+# certificate that chains up to the test track's own root.
 resource "tls_private_key" "root" {
   algorithm   = "ECDSA"
   ecdsa_curve = "P256"
@@ -9,8 +9,8 @@ resource "tls_self_signed_cert" "root" {
   private_key_pem = tls_private_key.root.private_key_pem
 
   subject {
-    common_name  = "Cinder Loop Depot Root CA"
-    organization = "Cinder Loop Monorail"
+    common_name  = "Orbital Spur Track Root CA"
+    organization = "Orbital Spur Hyperloop"
   }
 
   validity_period_hours = 8760
@@ -25,11 +25,11 @@ resource "tls_private_key" "signals" {
 
 resource "tls_cert_request" "signals" {
   private_key_pem = tls_private_key.signals.private_key_pem
-  dns_names       = ["signals.cinderloop.test"]
+  dns_names       = ["signals.orbitalspur.test"]
 
   subject {
-    common_name  = "signals.cinderloop.test"
-    organization = "Cinder Loop Monorail"
+    common_name  = "signals.orbitalspur.test"
+    organization = "Orbital Spur Hyperloop"
   }
 }
 

@@ -13,7 +13,7 @@ parsing function like `tonumber`, `jsondecode`, or `regex`, far from the cause.
 
 Because override blocks may be placed in a run, each scenario can declare its own reading: calm, gale and
 the exact boundary value. Boundary scenarios are especially valuable. The `gusty_edge` run sets exactly 18
-knots to prove the rule is strictly less-than, which a single "typical" reading never would.
+kph to prove the rule is strictly less-than, which a single "typical" reading never would.
 
 Real-world takeaway: when logic depends on outside data, test the logic with overridden data and the
 data source configuration separately. Check attribute names in the provider docs, and write at least one

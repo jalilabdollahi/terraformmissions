@@ -22,18 +22,18 @@ probe_apply() {
 
 tm_assert_config_has 'terraform\.workspace' "the settings file must be chosen with terraform.workspace"
 tm_assert_config_has 'yamldecode' "the YAML file must be decoded"
-tm_assert_config_lacks '98\.7|91\.5|88\.1' "do not copy the settings values into the configuration"
+tm_assert_config_lacks '2652\.5|1842\.5|796\.5' "do not copy the settings values into the configuration"
 
 probe_init
-check_env() {  # workspace frequency power
+check_env() {  # workspace carrier power
   probe_apply "$1"
   local f p
-  f=$(pt output -raw frequency 2>/dev/null); p=$(pt output -raw power_watts 2>/dev/null)
-  [[ "$f" == "$2" ]] || tm_fail "workspace '$1': frequency is '$f', expected $2"
+  f=$(pt output -raw carrier 2>/dev/null); p=$(pt output -raw power_watts 2>/dev/null)
+  [[ "$f" == "$2" ]] || tm_fail "workspace '$1': carrier is '$f', expected $2"
   [[ "$p" == "$3" ]] || tm_fail "workspace '$1': power_watts is '$p', expected $3"
-  grep -qx "frequency_mhz=$2" "$PROBE/out/$1-transmitter.conf" || tm_fail "out/$1-transmitter.conf does not contain frequency_mhz=$2"
+  grep -qx "carrier_mhz=$2" "$PROBE/out/$1-mast.conf" || tm_fail "out/$1-mast.conf does not contain carrier_mhz=$2"
 }
-check_env dev 88.1 50
-check_env staging 91.5 200
-check_env prod 98.7 1000
+check_env dev 796.5 50
+check_env staging 1842.5 200
+check_env prod 2652.5 1000
 tm_pass "dev, staging and prod each load their own settings file"

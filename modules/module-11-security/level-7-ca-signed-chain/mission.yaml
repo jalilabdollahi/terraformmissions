@@ -1,8 +1,8 @@
-name: "Cinder Loop Depot Root"
+name: "Orbital Spur Track Root"
 description: >-
-  The Cinder Loop monorail depot runs its own private certificate authority so the signal controller can prove who it is. The controller's certificate is generated, but the line operator's openssl check says it does not chain to the depot root.
+  The Orbital Spur hyperloop test track runs its own private certificate authority so the signal controller can prove who it is. The controller's certificate is generated, but the line operator's openssl check says it does not chain to the track root.
 objective: >-
-  Make the controller certificate (pki/signals.pem, CN signals.cinderloop.test) verify against the depot root (pki/root-ca.pem) with openssl verify. The root must be a real CA that can sign certificates, and the controller certificate must stay an ordinary end-entity (not CA) certificate.
+  Make the controller certificate (pki/signals.pem, CN signals.orbitalspur.test) verify against the track root (pki/root-ca.pem) with openssl verify. The root must be a real CA that can sign certificates, and the controller certificate must stay an ordinary end-entity (not CA) certificate.
 xp: 300
 difficulty: advanced
 expected_time: 15m

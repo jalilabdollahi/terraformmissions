@@ -3,8 +3,8 @@ source "$TM_LIB"
 tm_assert_config_has 'postcondition[[:space:]]*\{' "enforce the policy with a postcondition"
 tm_validate "the configuration does not validate"
 tm_apply
-tm_assert_file tower/logbook-signing.key "the signing key file was not created"
-[[ "$(tm_file_mode tower/logbook-signing.key)" == "600" ]] || tm_fail "tower/logbook-signing.key has mode $(tm_file_mode tower/logbook-signing.key) by default; it must be 0600"
+tm_assert_file clubhouse/logbook-signing.key "the signing key file was not created"
+[[ "$(tm_file_mode clubhouse/logbook-signing.key)" == "600" ]] || tm_fail "clubhouse/logbook-signing.key has mode $(tm_file_mode clubhouse/logbook-signing.key) by default; it must be 0600"
 tm_assert_output audited_mode 600
 tm_assert_no_changes
 

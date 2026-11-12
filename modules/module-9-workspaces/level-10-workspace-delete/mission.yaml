@@ -1,7 +1,7 @@
 name: Retiring The Trial Batch
 description: >-
-  Willow Bend bonsai nursery spun up a workspace called trial for an experimental soil mix, and it
-  is now retired. A volunteer's attempt to delete the workspace was refused, and the nursery does
+  Willow Bend soap-making workshop spun up a workspace called trial for an experimental soap recipe, and it
+  is now retired. A volunteer's attempt to delete the workspace was refused, and the workshop does
   not want orphaned files left in out/.
 objective: >-
   Remove the trial workspace entirely, with its resources destroyed first so that out/trial-

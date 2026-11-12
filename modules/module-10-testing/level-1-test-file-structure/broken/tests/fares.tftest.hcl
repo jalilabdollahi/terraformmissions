@@ -1,35 +1,35 @@
-test "single_zone" {
+test "single_axle" {
   command = plan
 
   assert {
     condition     = output.fare_cents == 140
-    error_message = "one zone should cost the base fare of 140 cents"
+    error_message = "one axle should cost the base fare of 140 cents"
   }
 }
 
-test "three_zones" {
+test "three_axles" {
   command = plan
 
   variables {
-    zones = 3
+    axles = 3
   }
 
   assert {
     condition     = output.fare_cents == 250
-    error_message = "three zones should cost 140 + 2 * 55 = 250 cents"
+    error_message = "three axles should cost 140 + 2 * 55 = 250 cents"
   }
 }
 
-test "child_half" {
+test "discount_half" {
   command = plan
 
   variables {
-    zones = 3
-    child = true
+    axles = 3
+    discount = true
   }
 
   assert {
     condition     = output.fare_cents == 125
-    error_message = "a child on three zones pays half of 250 = 125 cents"
+    error_message = "a discount pass on three axles pays half of 250 = 125 cents"
   }
 }

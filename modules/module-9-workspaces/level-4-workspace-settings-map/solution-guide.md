@@ -8,9 +8,9 @@ key is `"qa"` and the map holds only `dev` and `prod`.
 
 ```hcl
 qa = {
-  stalls = 12
+  huts = 12
   hours  = "09-16"
-  music  = false
+  towels  = false
 }
 ```
 

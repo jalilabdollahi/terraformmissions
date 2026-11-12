@@ -10,8 +10,8 @@ because later runs may rely on the state or outputs of earlier ones. A summary l
 1 skipped` therefore means "fix the failure first, then look again". A skipped run is not green.
 
 Type conversion is forgiving in some directions (`"40"` becomes the number 40, `"true"` becomes a bool) and
-strict in others (`"40 litres"`, a list given to a map). Do not write units into values; put them in the
-variable name (`tank_liters`) or its description, and keep the value pure.
+strict in others (`"40 sqft"`, a list given to a map). Do not write units into values; put them in the
+variable name (`coop_sqft`) or its description, and keep the value pure.
 
 Notice too that test overrides must follow the same shape as real callers' inputs. If your test needs a
 value the type forbids, the type is probably too tight for production as well.

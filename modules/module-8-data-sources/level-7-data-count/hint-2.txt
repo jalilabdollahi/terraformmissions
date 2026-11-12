@@ -1,1 +1,1 @@
-(1) `count.index` starts at 0, but the filename expression looks one element ahead, so the last instance indexes past the end of the list. (2) With `count`, `data.local_file.galley` is a list of instances, so you cannot read `.content` from it directly.
+(1) `count.index` starts at 0, but the filename expression looks one element ahead, so the last instance indexes past the end of the list. (2) With `count`, `data.local_file.score` is a list of instances, so you cannot read `.content` from it directly.

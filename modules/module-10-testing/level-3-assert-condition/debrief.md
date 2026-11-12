@@ -6,7 +6,7 @@ condition. Negations and inverted comparisons are easy to write and
 easy to read past, because the message you read says the right thing.
 
 When a test fails, first decide who is wrong: the code or the test. Here the pacing sheet is correct (a
-5:30/km runner does finish in 232 minutes), so the fix belongs in the test. Terraform helps by printing
+5:30/km runner does finish in 68 minutes), so the fix belongs in the test. Terraform helps by printing
 the values it compared. In 1.17 you get an `LHS`/`RHS` or `Diff` section under the condition with the
 actual numbers; read them before editing anything.
 

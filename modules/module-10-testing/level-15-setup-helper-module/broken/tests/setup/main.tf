@@ -1,20 +1,20 @@
-variable "reels" {
+variable "acts" {
   type = list(object({
     title   = string
     minutes = number
   }))
   default = [
-    { title = "Newsreel", minutes = 10 },
-    { title = "Cartoon", minutes = 8 },
-    { title = "Feature", minutes = 87 },
+    { title = "Newsact", minutes = 10 },
+    { title = "Warm-up", minutes = 8 },
+    { title = "Headliner", minutes = 87 },
   ]
 }
 
-resource "local_file" "manifest" {
-  filename = "${path.module}/manifest.json"
-  content  = jsonencode({ reels = var.reels })
+resource "local_file" "lineup" {
+  filename = "${path.module}/lineup.json"
+  content  = jsonencode({ acts = var.acts })
 }
 
-output "manifest_path" {
-  value = local_file.manifest.filename
+output "lineup_path" {
+  value = local_file.lineup.filename
 }

@@ -9,4 +9,4 @@ Three spots:
 2. `"Harvest: {terraform.workspace}"` lacks the `$`. Write `"Harvest: ${terraform.workspace}"`.
 3. `format("%s-%d", "terraform.workspace", ...)` passes a string. Pass `terraform.workspace` unquoted.
 
-After the fix, a workspace called `autumn` yields `out/autumn-crates.txt` and the label `autumn-3`.
+After the fix, a workspace called `midsummer` yields `out/midsummer-crates.txt` and the label `midsummer-3`.

@@ -1,8 +1,8 @@
-# Strongroom: the safe's combination is kept in a file on the vault laptop. The door card for the
-# night manager is generated from it.
+# Casino count room: the drop safe's combination is kept in a file on the cage laptop. The door card for the
+# pit boss is generated from it.
 
 data "local_file" "combination" {
-  filename = "${path.module}/vault/combination.txt"
+  filename = "${path.module}/countroom/combination.txt"
 }
 
 locals {
@@ -10,9 +10,9 @@ locals {
 }
 
 resource "local_file" "door_card" {
-  filename        = "${path.module}/vault/door-card.txt"
+  filename        = "${path.module}/countroom/door-card.txt"
   file_permission = "0644"
-  content         = "Night manager - safe combination: ${local.dial_code}\n"
+  content         = "Pit boss - safe combination: ${local.dial_code}\n"
 }
 
 output "combination" {

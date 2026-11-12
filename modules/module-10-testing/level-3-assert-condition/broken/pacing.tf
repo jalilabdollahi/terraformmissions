@@ -7,12 +7,12 @@ variable "pace_sec_per_km" {
 variable "cutoff_minutes" {
   description = "Course closes after this many minutes."
   type        = number
-  default     = 360
+  default     = 90
 }
 
 locals {
-  distance_km    = 42.195
-  checkpoints_km = [10, 20, 30, 40]
+  distance_km    = 12.4
+  checkpoints_km = [3, 6, 9, 11]
 }
 
 output "finish_minutes" {

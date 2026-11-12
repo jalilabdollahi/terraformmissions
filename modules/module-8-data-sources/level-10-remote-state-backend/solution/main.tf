@@ -14,7 +14,7 @@ locals {
 
 resource "local_file" "timetable_header" {
   filename = "${path.module}/timetable/header.txt"
-  content  = "Depot ${local.depot.depot_code}: ${local.depot.track_count} tracks, first tram ${local.depot.first_departure}\n"
+  content  = "Depot ${local.depot.depot_code}: ${local.depot.bay_count} bays, first bus ${local.depot.first_departure}\n"
 }
 
 output "header" {

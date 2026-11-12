@@ -1,12 +1,12 @@
-name: Depot Feed Handshake
+name: Bus Depot Handshake
 description: >-
-  The tram depot team publishes the depot code, track count and first departure as
+  The bus depot team publishes the depot code, bay count and first departure as
   outputs of their own Terraform configuration, applied in the depot-team folder. The
   timetable team's data source is supposed to read those facts, but the plan reports that
   it cannot find any remote state.
 objective: >-
   Make terraform_remote_state read the depot team's real state so that the timetable
-  header says "Depot NRT-04: 6 tracks, first tram 05:12". The values must come from the
+  header says "Depot NBD-04: 6 bays, first bus 05:12". The values must come from the
   remote state, not from the config.
 xp: 200
 difficulty: intermediate

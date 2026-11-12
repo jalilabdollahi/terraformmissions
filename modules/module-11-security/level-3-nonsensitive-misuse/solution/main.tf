@@ -3,9 +3,9 @@ variable "alarm_code" {
   sensitive = true
 }
 
-variable "vineyard" {
+variable "bog" {
   type    = string
-  default = "Sunnyslope Terraces"
+  default = "Cranberry Flats"
 }
 
 locals {
@@ -16,7 +16,7 @@ locals {
 resource "local_file" "frost_panel" {
   filename = "${path.module}/panel/frost-alarm.txt"
   content  = <<-EOT
-    Vineyard: ${var.vineyard}
+    Bog: ${var.bog}
     Frost alarm armed: yes
     Code length: ${local.alarm_code_length} characters
   EOT

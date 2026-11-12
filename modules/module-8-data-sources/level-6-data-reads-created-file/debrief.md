@@ -11,7 +11,7 @@ source's inputs are known and nothing it depends on has pending changes, Terrafo
 exist yet (a hard error), or, when an old copy existed, reading yesterday's content and planning
 with a stale dose. The second symptom is the more dangerous one because nothing fails.
 
-Referencing an attribute of the resource (`local_file.pour_sheet.filename`) is the preferred fix:
+Referencing an attribute of the resource (`local_file.batch_sheet.filename`) is the preferred fix:
 it states *why* the dependency exists. An explicit `depends_on` is the fallback when no attribute is
 naturally involved, for example when something outside Terraform produces the data. Either way,
 Terraform defers the read until apply, the same apply that writes the new sheet.

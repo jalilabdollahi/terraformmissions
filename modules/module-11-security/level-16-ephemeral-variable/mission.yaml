@@ -1,8 +1,8 @@
-name: "Fairwind Sail Loft Token"
+name: "Redline Kart Track Token"
 description: >-
-  A sail loft publishes its booking calendar through a gateway with a local-exec provisioner. The gateway token is a sensitive variable, but an auditor opened terraform.tfstate and found the token sitting in it in plain text.
+  A go-kart track publishes its booking calendar through a gateway with a local-exec provisioner. The gateway token is a sensitive variable, but an auditor opened terraform.tfstate and found the token sitting in it in plain text.
 objective: >-
-  Keep calling bin/publish.sh with GATEWAY_TOKEN in its environment, but make sure the token never ends up in the state file: declare it as an ephemeral variable and stop storing it in the resource's input. The published_loft output must keep working.
+  Keep calling bin/publish.sh with GATEWAY_TOKEN in its environment, but make sure the token never ends up in the state file: declare it as an ephemeral variable and stop storing it in the resource's input. The published_track output must keep working.
 xp: 325
 difficulty: advanced
 expected_time: 15m

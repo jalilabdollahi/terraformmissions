@@ -1,8 +1,8 @@
-name: The Misfiled Kiln State
+name: The Misfiled Bauble State
 description: >-
-  Ember Row glassworks keeps one workspace per season and uses the local backend. During a laptop
+  Tinsel Lane Christmas decorations factory keeps one workspace per season and uses the local backend. During a laptop
   migration somebody dragged the winter workspace's state file out of its folder. Terraform now
-  thinks winter is empty and wants to rebuild the whole kiln log.
+  thinks winter is empty and wants to rebuild the whole bauble log.
 objective: >-
   Make the winter workspace (selected) own its original state again, in the exact location the
   local backend reads, and leave the summer workspace alone. No stray state files may remain in

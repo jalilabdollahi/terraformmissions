@@ -1,1 +1,1 @@
-Look at which resource type writes the private key and what mode it asks for. Try ssh-keygen -y -f keys/bookmobile_ed25519 after an apply.
+Look at which resource type writes the private key and what mode it asks for. Try ssh-keygen -y -f keys/milkround_ed25519 after an apply.

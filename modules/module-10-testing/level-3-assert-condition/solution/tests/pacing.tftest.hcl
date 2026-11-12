@@ -2,8 +2,8 @@ run "default_runner" {
   command = plan
 
   assert {
-    condition     = output.finish_minutes < 360
-    error_message = "a 5:30/km runner must finish inside the 6 h cutoff"
+    condition     = output.finish_minutes < 90
+    error_message = "a 5:30/km runner must finish inside the 90-minute cutoff"
   }
 
   assert {
@@ -12,8 +12,8 @@ run "default_runner" {
   }
 
   assert {
-    condition     = output.finish_minutes == 232
-    error_message = "42.195 km at 330 s/km is 232 whole minutes"
+    condition     = output.finish_minutes == 68
+    error_message = "12.4 km at 330 s/km is 68 whole minutes"
   }
 }
 
@@ -26,6 +26,6 @@ run "slow_runner" {
 
   assert {
     condition     = !output.within_cutoff
-    error_message = "a 9:00/km runner finishes after 379 minutes and must be flagged as missing the cutoff"
+    error_message = "a 9:00/km runner finishes after 111 minutes and must be flagged as missing the cutoff"
   }
 }

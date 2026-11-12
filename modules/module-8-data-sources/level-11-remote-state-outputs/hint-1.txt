@@ -1,1 +1,1 @@
-The data source itself works; the errors come from `local.plan`. Read each error's attribute or key name, then look at the `output` blocks in `stage-crew/main.tf` (or run `terraform -chdir=stage-crew output`).
+The data source itself works; the errors come from `local.plan`. Read each error's attribute or key name, then look at the `output` blocks in `floor-staff/main.tf` (or run `terraform -chdir=floor-staff output`).

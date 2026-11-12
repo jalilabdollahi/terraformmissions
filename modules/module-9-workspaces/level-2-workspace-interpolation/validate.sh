@@ -21,10 +21,10 @@ probe_apply() {
 }
 
 tm_assert_config_lacks '"terraform\.workspace"' "a quoted \"terraform.workspace\" is just text — it is not the workspace name"
-tm_assert_config_lacks 'autumn|spring' "do not hard-code a harvest name"
+tm_assert_config_lacks 'midsummer|late-bloom' "do not hard-code a harvest name"
 
 probe_init
-for WS in autumn spring-late; do
+for WS in midsummer late-bloom; do
   probe_apply "$WS"
   [[ -f "$PROBE/out/$WS-crates.txt" ]] || tm_fail "workspace '$WS' did not produce out/$WS-crates.txt (found: $(ls "$PROBE/out" 2>/dev/null | tr '\n' ' '))"
   FIRST=$(head -n 1 "$PROBE/out/$WS-crates.txt")

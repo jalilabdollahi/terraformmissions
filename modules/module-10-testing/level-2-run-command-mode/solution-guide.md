@@ -1,13 +1,13 @@
-# Walkthrough - Glaze Recipe On Disk
+# Walkthrough - Colour Formula On Disk
 
-1. `terraform test -verbose` shows `run "recipe_file_written"... fail` and the assertion
-   `fileexists(local_file.recipe.filename)` reporting the file is missing, while the other two runs pass.
+1. `terraform test -verbose` shows `run "formula_file_written"... fail` and the assertion
+   `fileexists(local_file.formula.filename)` reporting the file is missing, while the other two runs pass.
 2. The cause is the `command` on that run. `command = plan` evaluates the configuration and builds a plan
-   but creates nothing, so `kiln/recipe.txt` cannot exist. `command = apply` (the default when the line is
+   but creates nothing, so `salon/formula.txt` cannot exist. `command = apply` (the default when the line is
    omitted) really creates the file, runs the assertions, and the teardown at the end of the file destroys it.
 3. Edit only that run:
    ```hcl
-   run "recipe_file_written" {
+   run "formula_file_written" {
      command = apply
      ...
    ```

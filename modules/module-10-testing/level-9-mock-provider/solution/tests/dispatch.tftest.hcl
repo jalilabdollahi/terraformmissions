@@ -14,8 +14,8 @@ mock_provider "random" {
 
 run "ticket_format" {
   assert {
-    condition     = output.ticket == "BK-AB12CD34"
-    error_message = "tickets are BK- plus the upper-cased mocked hex id"
+    condition     = output.ticket == "DW-AB12CD34"
+    error_message = "tickets are DW- plus the upper-cased mocked hex id"
   }
 }
 
@@ -28,7 +28,7 @@ run "zone_label" {
 
 run "both_stamped" {
   assert {
-    condition     = startswith(output.ticket, "BK-") && endswith(output.dispatch_zone, "-4")
+    condition     = startswith(output.ticket, "DW-") && endswith(output.dispatch_zone, "-4")
     error_message = "a job carries both stamps"
   }
 }

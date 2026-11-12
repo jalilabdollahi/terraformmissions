@@ -1,16 +1,16 @@
-# Radio Pinewood transmitter settings, loaded from env/<workspace>.yaml.
+# Pinewood Mobile mast settings, loaded from env/<workspace>.yaml.
 
 locals {
   settings = yamldecode(file("${path.module}/env/${terraform.workspace}.yaml"))
 }
 
-resource "local_file" "transmitter" {
-  filename = "${path.module}/out/${terraform.workspace}-transmitter.conf"
-  content  = "frequency_mhz=${local.settings.frequency_mhz}\npower_watts=${local.settings.power_watts}\n"
+resource "local_file" "mast" {
+  filename = "${path.module}/out/${terraform.workspace}-mast.conf"
+  content  = "carrier_mhz=${local.settings.carrier_mhz}\npower_watts=${local.settings.power_watts}\n"
 }
 
-output "frequency" {
-  value = local.settings.frequency_mhz
+output "carrier" {
+  value = local.settings.carrier_mhz
 }
 
 output "power_watts" {

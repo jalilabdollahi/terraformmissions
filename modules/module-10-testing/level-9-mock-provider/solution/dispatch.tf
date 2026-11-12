@@ -8,7 +8,7 @@ resource "random_integer" "zone" {
 }
 
 output "ticket" {
-  value = "BK-${upper(random_id.ticket.hex)}"
+  value = "DW-${upper(random_id.ticket.hex)}"
 }
 
 output "dispatch_zone" {

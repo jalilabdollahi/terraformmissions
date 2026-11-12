@@ -11,7 +11,7 @@ and strict:
 Rich data therefore has to be encoded. Numbers become strings and are turned back with `tonumber()`
 on the Terraform side; lists become delimited strings that `split()` reconstructs (pick a separator
 that cannot appear in the values) or a JSON string you decode with `jsondecode()`. In this mission the
-script was "improved" with a pilot, a nested limit and a list, which is natural for a script author
+script was "improved" with a jump master, a nested limit and a list, which is natural for a script author
 and exactly what the provider rejects.
 
 Two practical notes. First, the program runs on every plan and refresh, so it must be quick and

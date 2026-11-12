@@ -1,4 +1,4 @@
-# Walkthrough — Cinder Loop Depot Root
+# Walkthrough — Orbital Spur Track Root
 
 1. Apply, then `openssl verify -CAfile pki/root-ca.pem pki/signals.pem`. You get an error such as
    *unable to get local issuer certificate* or *invalid CA certificate*.

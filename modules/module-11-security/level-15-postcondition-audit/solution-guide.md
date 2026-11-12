@@ -1,6 +1,6 @@
-# Walkthrough — Dunlin Field Key Audit
+# Walkthrough — Ridgeway Gliding Key Audit
 
-1. After `terraform apply`, `ls -l tower/logbook-signing.key` shows `-rw-r--r--`, and `terraform output audited_mode` prints `644`. The audit saw it, and approved.
+1. After `terraform apply`, `ls -l clubhouse/logbook-signing.key` shows `-rw-r--r--`, and `terraform output audited_mode` prints `644`. The audit saw it, and approved.
 2. The postcondition inside `data "external" "key_audit"` is `self.result.exists == "true"`. A postcondition runs *after* the object is read or created, and can inspect
    `self`: here the audit result produced by the script.
 3. Tighten it to describe the policy: `self.result.exists == "true" && self.result.mode == "600"`. The `mode` value is a string of octal digits.

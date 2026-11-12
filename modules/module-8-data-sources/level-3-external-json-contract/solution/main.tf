@@ -1,7 +1,7 @@
-# Dawn flight of the "Lark" hot-air balloon: a helper script totals the basket load.
+# Gorge bungee jump: a helper script totals the jumpers' weights for the jump card.
 
 data "external" "load" {
-  program = ["python3", "${path.module}/bin/manifest.py"]
+  program = ["python3", "${path.module}/bin/weigh_in.py"]
 }
 
 locals {
@@ -12,12 +12,12 @@ locals {
   headroom  = local.max_kg - local.total_kg
 }
 
-resource "local_file" "flight_card" {
-  filename = "${path.module}/out/flight-card.txt"
+resource "local_file" "jump_card" {
+  filename = "${path.module}/out/jump-card.txt"
   content = join("\n", concat(
-    ["Pilot: ${local.load.pilot}", "Passengers (${local.load.pax}):"],
+    ["Jump master: ${local.load.master}", "Jumpers (${local.load.jumpers}):"],
     [for n in local.names : "  - ${n}"],
-    ["Load: ${local.total_kg} kg of ${local.max_kg} kg (headroom ${local.headroom} kg)", ""]
+    ["Weight: ${local.total_kg} kg of ${local.max_kg} kg (headroom ${local.headroom} kg)", ""]
   ))
 }
 
@@ -29,6 +29,6 @@ output "headroom_kg" {
   value = local.headroom
 }
 
-output "passenger_names" {
+output "jumper_names" {
   value = local.names
 }

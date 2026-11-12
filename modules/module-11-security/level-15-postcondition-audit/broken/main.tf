@@ -1,4 +1,4 @@
-# Dunlin Field tower logbook: entries are signed with a secret kept in a key file.
+# Ridgeway gliding club logbook: entries are signed with a secret kept in a key file.
 # The file mode is set by var.key_mode, and an audit step reads the REAL mode from disk
 # after the file exists (the audit script reports it as octal digits, e.g. "644").
 variable "key_mode" {
@@ -12,7 +12,7 @@ resource "random_password" "logbook_signing" {
 }
 
 resource "local_sensitive_file" "logbook_key" {
-  filename        = "${path.module}/tower/logbook-signing.key"
+  filename        = "${path.module}/clubhouse/logbook-signing.key"
   content         = "${random_password.logbook_signing.result}\n"
   file_permission = var.key_mode
 }

@@ -1,14 +1,14 @@
-# Walkthrough — Marrowby Bookmobile Key
+# Walkthrough — Marrowby Milk Round Key
 
-1. Apply, then `ls -l keys/` and `ssh-keygen -y -f keys/bookmobile_ed25519`. The mode is `-rw-r--r--` and OpenSSH
+1. Apply, then `ls -l keys/` and `ssh-keygen -y -f keys/milkround_ed25519`. The mode is `-rw-r--r--` and OpenSSH
    answers *WARNING: UNPROTECTED PRIVATE KEY FILE! Permissions 0644 ... are too open*.
 2. The private key is created by `local_file.private_key` with `file_permission = "0644"`. Two problems: the mode, and the choice of resource.
    `local_sensitive_file` has the same arguments, but treats `content` as a secret so it is not shown in plans.
 3. Replace it:
    ```hcl
    resource "local_sensitive_file" "private_key" {
-     filename             = "${path.module}/keys/bookmobile_ed25519"
-     content              = tls_private_key.bookmobile.private_key_openssh
+     filename             = "${path.module}/keys/milkround_ed25519"
+     content              = tls_private_key.milkround.private_key_openssh
      file_permission      = "0600"
      directory_permission = "0700"
    }

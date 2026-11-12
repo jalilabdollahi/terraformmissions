@@ -1,6 +1,6 @@
-name: "Dunlin Field Key Audit"
+name: "Ridgeway Gliding Key Audit"
 description: >-
-  The Dunlin Field control tower signs its logbook entries with a secret kept in a key file, and an audit step reads the file's real mode after Terraform has created it. The audit only checks that the file exists, and the key is currently created readable by everyone on the tower server.
+  The Ridgeway gliding club signs its flight logbook entries with a secret kept in a key file, and an audit step reads the file's real mode after Terraform has created it. The audit only checks that the file exists, and the key is currently created readable by everyone on the clubhouse server.
 objective: >-
   Make the postcondition on data.external.key_audit fail whenever the key file is not mode 600, and make the default key_mode produce a compliant 0600 file. An apply with a looser key_mode (0644, 0640, 0660) must fail with a postcondition error.
 xp: 300

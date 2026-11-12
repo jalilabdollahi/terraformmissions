@@ -1,1 +1,1 @@
-In `bin/manifest.py`: wrap `pax` and `total_kg` in `str(...)`, join the names into one string (for example with `"|".join(...)`, which main.tf already splits on `|`), and move `max_kg` to the top level as the string `"360"`.
+In `bin/weigh_in.py`: wrap `jumpers` and `total_kg` in `str(...)`, join the names into one string (for example with `"|".join(...)`, which main.tf already splits on `|`), and move `max_kg` to the top level as the string `"360"`.

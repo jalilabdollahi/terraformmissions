@@ -11,7 +11,7 @@ fi
 
 tm_assert_file panel/frost-alarm.txt "the frost panel file was not written"
 if grep -qF -- "$SECRET" panel/frost-alarm.txt; then
-  tm_fail "panel/frost-alarm.txt (visible to the whole night crew) contains the alarm code"
+  tm_fail "panel/frost-alarm.txt (visible to the whole harvest crew) contains the alarm code"
 fi
 tm_assert_file_contains panel/frost-alarm.txt "Frost alarm armed: yes"
 

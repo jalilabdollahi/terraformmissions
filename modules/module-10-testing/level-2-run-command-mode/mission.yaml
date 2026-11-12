@@ -1,10 +1,10 @@
-name: Glaze Recipe On Disk
+name: Colour Formula On Disk
 description: >-
-  A pottery studio generates its glaze recipe card with Terraform. The test that proves the card
+  A hair salon generates its colour formula card with Terraform. The test that proves the card
   really lands on disk fails every time, even though terraform apply writes the file just fine.
 objective: >-
-  Make all three runs in tests/glaze.tftest.hcl pass (recipe_file_written, total_for_default_batch,
-  bigger_batch) while still checking that kiln/recipe.txt exists and lists silica at 800 g.
+  Make all three runs in tests/colour.tftest.hcl pass (formula_file_written, total_for_default_batch,
+  bigger_batch) while still checking that salon/formula.txt exists and lists pigment at 800 g.
 xp: 230
 difficulty: advanced
 expected_time: 10m

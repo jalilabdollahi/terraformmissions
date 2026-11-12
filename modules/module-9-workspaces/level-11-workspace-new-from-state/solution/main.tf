@@ -1,16 +1,16 @@
-# Foxglove tea room: seasonal blend codename and its shelf card.
+# Bramble Lane jam kitchen: seasonal batch codename and its jar label card.
 
-resource "random_pet" "blend" {
+resource "random_pet" "batch" {
   length    = 2
-  prefix    = "chai"
+  prefix    = "plum"
   separator = "-"
 }
 
-resource "local_file" "blend_card" {
-  filename = "${path.module}/out/blend-card.txt"
-  content  = "Seasonal blend: ${random_pet.blend.id}\n"
+resource "local_file" "batch_card" {
+  filename = "${path.module}/out/batch-card.txt"
+  content  = "Seasonal batch: ${random_pet.batch.id}\n"
 }
 
-output "blend_name" {
-  value = random_pet.blend.id
+output "batch_name" {
+  value = random_pet.batch.id
 }

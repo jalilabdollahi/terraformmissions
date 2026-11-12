@@ -13,7 +13,7 @@ CUR=$(terraform workspace show 2>/dev/null)
 
 KEEP=terraform.tfstate.d/keep/terraform.tfstate
 [[ "$(jq '[.resources[]?] | length' "$KEEP" 2>/dev/null)" == "1" ]] || tm_fail "the keep workspace lost its resource"
-tm_assert_file_contains out/keep-batch.txt "akadama 60" "out/keep-batch.txt was changed or removed"
+tm_assert_file_contains out/keep-batch.txt "olive oil 60" "out/keep-batch.txt was changed or removed"
 terraform workspace select keep >/dev/null 2>&1 || tm_fail "could not inspect keep"
 CODE=$(tm_plan_code)
 terraform workspace select "$CUR" >/dev/null 2>&1

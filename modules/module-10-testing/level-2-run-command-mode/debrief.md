@@ -6,7 +6,7 @@ the right tool for questions like "what does this output evaluate to?" or "does 
 input?". An `apply` run is needed when the claim is about the world after creation: a file on disk, a value
 the provider only computes at apply time, or the behaviour of a second run that builds on the first.
 
-The failing run in this level made an after-apply claim (the recipe file exists) with a plan-only command.
+The failing run in this level made an after-apply claim (the formula file exists) with a plan-only command.
 Terraform did exactly what it was told: it planned, found nothing on disk, and the assertion failed. The
 test was not flaky and the code was not wrong; the test described a different experiment from the one it
 ran.

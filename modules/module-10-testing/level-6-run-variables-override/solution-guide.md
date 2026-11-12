@@ -1,15 +1,15 @@
-# Walkthrough - Overstocked Aquarium
+# Walkthrough - Overstocked Henhouse
 
-1. `terraform test` ends with `Failure! 1 passed, 1 failed, 1 skipped.` The failing run is `crowded_tank`:
+1. `terraform test` ends with `Failure! 1 passed, 1 failed, 1 skipped.` The failing run is `crowded_coop`:
    ```
    Error: Invalid value for input variable
-     on tests/tank.tftest.hcl line 20, in run "crowded_tank":
-   The given value is not suitable for var.tank_liters ...: a number is required.
+     on tests/coop.tftest.hcl line 20, in run "crowded_coop":
+   The given value is not suitable for var.coop_sqft ...: a number is required.
    ```
-   `"40 litres"` is not convertible to a number. Use `tank_liters = 40`.
+   `"40 sqft"` is not convertible to a number. Use `coop_sqft = 40`.
 2. The skipped run is not broken *yet*: after a run fails, Terraform skips the remaining runs of that file
-   because they may depend on its state. Re-run and `guppy_swarm` now fails:
-   `var.stock ... map of number required`. The override is `["guppy", "guppy"]`; the declaration is
-   `map(number)`, so write `stock = { guppy = 30 }`.
+   because they may depend on its state. Re-run and `bantam_flock` now fails:
+   `var.stock ... map of number required`. The override is `["bantam", "bantam"]`; the declaration is
+   `map(number)`, so write `stock = { bantam = 30 }`.
 3. Final run: `Success! 3 passed, 0 failed.`
-4. Check the declarations in `tank.tf` whenever an override is rejected - the variable type is the contract.
+4. Check the declarations in `coop.tf` whenever an override is rejected - the variable type is the contract.

@@ -1,7 +1,7 @@
-# Walkthrough — Gullcove Pump Certificate
+# Walkthrough — Kestrel Junction Charger Certificate
 
-1. `openssl x509 -in pki/pump.pem -noout -dates` shows a certificate that is only 6 hours long.
-2. In `tls_self_signed_cert.pump`, `validity_period_hours = 6` and `early_renewal_hours = 0`. Two arguments control rotation:
+1. `openssl x509 -in pki/charger.pem -noout -dates` shows a certificate that is only 6 hours long.
+2. In `tls_self_signed_cert.charger`, `validity_period_hours = 6` and `early_renewal_hours = 0`. Two arguments control rotation:
    - `validity_period_hours` is the lifetime of the next certificate. Changing it forces a replacement, i.e. immediate rotation.
    - `early_renewal_hours` makes the resource report *ready for renewal* during the last N hours of validity, so the next plan replaces it.
 3. Set for example:

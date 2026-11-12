@@ -1,10 +1,10 @@
-name: Tram Depot Fare Table
+name: Toll Plaza Fare Table
 description: >-
-  The Eastgate tram depot keeps its fare formula in Terraform and a colleague who normally writes
+  The Eastgate toll plaza keeps its fare formula in Terraform and a colleague who normally writes
   pytest added a test file for it. Running terraform test refuses to even start, complaining
   about the blocks in tests/fares.tftest.hcl.
 objective: >-
-  Make terraform test run and pass all three scenarios (single_zone, three_zones, child_half) in
+  Make terraform test run and pass all three scenarios (single_axle, three_axles, discount_half) in
   tests/fares.tftest.hcl without removing any of them or weakening what they assert.
 xp: 225
 difficulty: advanced

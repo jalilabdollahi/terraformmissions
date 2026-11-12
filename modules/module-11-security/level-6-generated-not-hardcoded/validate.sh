@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 source "$TM_LIB"
-tm_assert_config_lacks 'demo-not-a-real-secret-lookout' "the old passphrase is still written in the configuration"
+tm_assert_config_lacks 'demo-not-a-real-secret-safari' "the old passphrase is still written in the configuration"
 tm_assert_config_has 'resource[[:space:]]+"random_password"[[:space:]]+"radio_admin"' "generate the passphrase with random_password.radio_admin"
 
 tm_validate "the configuration does not validate"
@@ -14,11 +14,11 @@ PW=$(tm_state_attr random_password.radio_admin result)
 
 tm_assert_file radio/admin.conf "radio/admin.conf was not written"
 tm_assert_file_contains radio/admin.conf "admin_passphrase=$PW" "radio/admin.conf must carry the generated passphrase from state"
-tm_assert_file_contains radio/admin.conf "tower=Pine Ridge Lookout"
+tm_assert_file_contains radio/admin.conf "lodge=Acacia Ridge Lodge"
 [[ "$(tm_file_mode radio/admin.conf)" == "600" ]] || tm_fail "radio/admin.conf must be mode 0600"
 if grep -qF -- "$PW" "$TM_LAST_OUT"; then tm_fail "the generated passphrase appeared in apply output"; fi
 
 # stable: a second plan must not rotate the passphrase
 tm_assert_no_changes
 [[ "$(tm_state_attr random_password.radio_admin result)" == "$PW" ]] || tm_fail "the passphrase changed between runs"
-tm_pass "the lookout passphrase is generated, 24+ characters, and kept out of the source"
+tm_pass "the lodge passphrase is generated, 24+ characters, and kept out of the source"

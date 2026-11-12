@@ -1,11 +1,11 @@
-name: Harvest Crate Labels
+name: Lavender Crate Labels
 description: >-
-  Hollis Orchard keeps one workspace per harvest, such as autumn or spring-late. The crate
+  Brackenfield Lavender Farm keeps one workspace per harvest, such as midsummer or late-bloom. The crate
   manifest is meant to be named after the harvest, but the files and labels come out stamped with
   the literal text of the expression instead of the workspace name.
 objective: >-
-  In a workspace named autumn, Terraform must write out/autumn-crates.txt whose first line is
-  'Harvest: autumn', and the output crate_label must be 'autumn-3'. The same config must work for
+  In a workspace named midsummer, Terraform must write out/midsummer-crates.txt whose first line is
+  'Harvest: midsummer', and the output crate_label must be 'midsummer-3'. The same config must work for
   any workspace name.
 xp: 180
 difficulty: intermediate

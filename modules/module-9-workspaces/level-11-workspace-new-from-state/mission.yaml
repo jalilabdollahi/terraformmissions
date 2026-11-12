@@ -1,11 +1,11 @@
-name: Rehearsal Tea Room
+name: Rehearsal Jam Kitchen
 description: >-
-  The Foxglove tea room named its seasonal blend with a random codename and stored a snapshot of
-  that state in snapshots/tea-ledger.tfstate. The staff want a workspace called rehearsal that
-  begins with that same blend, not a brand new codename.
+  The Bramble Lane jam kitchen named its seasonal batch with a random codename and stored a snapshot of
+  that state in snapshots/jam-ledger.tfstate. The staff want a workspace called rehearsal that
+  begins with that same batch, not a brand new codename.
 objective: >-
-  Create the workspace rehearsal seeded from snapshots/tea-ledger.tfstate: it must be selected,
-  hold the original blend codename from the snapshot, and show a clean plan. Do not change the
+  Create the workspace rehearsal seeded from snapshots/jam-ledger.tfstate: it must be selected,
+  hold the original batch codename from the snapshot, and show a clean plan. Do not change the
   configuration.
 xp: 230
 difficulty: intermediate

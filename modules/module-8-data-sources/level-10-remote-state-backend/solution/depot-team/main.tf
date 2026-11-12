@@ -1,16 +1,16 @@
-# The tram depot team's configuration. Their published facts are the outputs below.
+# The bus depot team's configuration. Their published facts are the outputs below.
 
-variable "track_count" {
+variable "bay_count" {
   type    = number
   default = 6
 }
 
 output "depot_code" {
-  value = "NRT-04"
+  value = "NBD-04"
 }
 
-output "track_count" {
-  value = var.track_count
+output "bay_count" {
+  value = var.bay_count
 }
 
 output "first_departure" {

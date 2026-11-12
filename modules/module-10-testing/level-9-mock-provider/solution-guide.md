@@ -1,4 +1,4 @@
-# Walkthrough - Bike Courier Dispatch Mock
+# Walkthrough - Dog Walk Dispatch Mock
 
 1. `terraform test`:
    ```

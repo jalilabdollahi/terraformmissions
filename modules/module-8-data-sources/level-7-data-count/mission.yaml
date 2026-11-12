@@ -1,11 +1,11 @@
-name: Galley Proof Contents
+name: Score Folio Contents
 description: >-
-  A print shop builds the contents page of a novel from one galley file per chapter. The
-  galley data source uses count, one instance per chapter, but the config does not handle
+  A sheet music publisher builds the contents page of a songbook from one score file per piece. The
+  score data source uses count, one instance per piece, but the config does not handle
   its instances correctly and the plan refuses to run.
 objective: >-
-  Make the contents page list every chapter in order. With the default list, total_words is
-  3580 and chapter_titles has three titles; with galleys=["ch04","ch02"] the outputs must
+  Make the contents page list every piece in order. With the default list, total_notes is
+  3580 and piece_titles has three titles; with scores=["p04","p02"] the outputs must
   follow the new list.
 xp: 175
 difficulty: intermediate

@@ -1,31 +1,31 @@
-# Canal authority: each lock keeper leaves a JSON note; a small module reads one note.
+# Park service: each ranger leaves a JSON note; a small module reads one note.
 
-module "north_lock" {
-  source     = "./modules/lock-notes"
-  notes_file = "${path.module}/notes/north-lock.json"
+module "north_trail" {
+  source     = "./modules/ranger-notes"
+  notes_file = "${path.module}/notes/north-trail.json"
 }
 
-module "south_lock" {
-  source     = "./modules/lock-notes"
-  notes_file = "${path.module}/notes/south-lock.json"
+module "south_trail" {
+  source     = "./modules/ranger-notes"
+  notes_file = "${path.module}/notes/south-trail.json"
 }
 
 locals {
-  levels = [module.north_lock.reading.level_cm, module.south_lock.reading.level_cm]
+  depths = [module.north_trail.reading.snow_cm, module.south_trail.reading.snow_cm]
 }
 
-resource "local_file" "watch_log" {
-  filename = "${path.module}/log/watch.txt"
+resource "local_file" "patrol_log" {
+  filename = "${path.module}/log/patrol.txt"
   content  = <<-EOT
-    North lock (${module.north_lock.reading.keeper}): ${module.north_lock.reading.level_cm} cm
-    South lock (${module.south_lock.reading.keeper}): ${module.south_lock.reading.level_cm} cm
+    North trail (${module.north_trail.reading.ranger}): ${module.north_trail.reading.snow_cm} cm
+    South trail (${module.south_trail.reading.ranger}): ${module.south_trail.reading.snow_cm} cm
   EOT
 }
 
-output "lowest_level_cm" {
-  value = min(local.levels...)
+output "lowest_snow_cm" {
+  value = min(local.depths...)
 }
 
-output "open_gates" {
-  value = [for name, r in { north = module.north_lock.reading, south = module.south_lock.reading } : name if r.gates_open]
+output "open_trails" {
+  value = [for name, r in { north = module.north_trail.reading, south = module.south_trail.reading } : name if r.trail_open]
 }
