@@ -176,7 +176,8 @@ tm_assert_not_in_state() { tm_state_has "$1" && tm_fail "${2:-'$1' should not be
 tm_state_attr() {
   terraform show -json 2>/dev/null | jq -r --arg a "$1" --arg k "$2" '
     [.values.root_module | .. | objects | select(has("resources")) | .resources[]]
-    | map(select(.address == $a)) | .[0].values[$k] // empty'
+    | map(select(.address == $a)) | .[0].values[$k]
+    | if . == null then empty elif type == "object" or type == "array" then tojson else . end'
 }
 
 # ── Files & config ────────────────────────────────────────────────────────────
