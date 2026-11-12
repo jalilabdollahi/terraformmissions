@@ -1,7 +1,7 @@
 name: Same Card Four Times
 description: >-
-  The Clockmaker's Cellar escape room prints one card per clue with a counted local_file. On game
-  day the cards folder holds a single card, and it always shows the last clue - four resources
+  The Blackwood Manor murder mystery dinner prints one card per clue with a counted local_file. On dinner
+  night the cards folder holds a single card, and it always shows the last clue - four resources
   keep overwriting one file.
 objective: >-
   Give every counted card its own file, cards/clue-0.txt up to cards/clue-3.txt, by using

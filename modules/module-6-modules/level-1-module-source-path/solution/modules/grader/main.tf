@@ -1,22 +1,22 @@
-variable "estate" {
+variable "farm" {
   type = string
 }
 
-variable "flush" {
+variable "clip" {
   type = string
 }
 
 locals {
   grades = {
-    first  = "FTGFOP1"
-    second = "SFTGFOP"
-    autumn = "TGFOP"
+    spring = "SUPER70"
+    summer = "FINE64"
+    autumn = "MEDIUM58"
   }
 }
 
 resource "local_file" "label" {
-  filename = "${path.root}/labels/${lower(var.estate)}-${var.flush}.txt"
-  content  = "ESTATE ${upper(var.estate)}\nFLUSH ${var.flush}\nGRADE ${local.grades[var.flush]}\n"
+  filename = "${path.root}/labels/${lower(var.farm)}-${var.clip}.txt"
+  content  = "FARM ${upper(var.farm)}\nCLIP ${var.clip}\nGRADE ${local.grades[var.clip]}\n"
 }
 
 output "label_path" {

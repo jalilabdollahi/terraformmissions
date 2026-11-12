@@ -9,16 +9,16 @@ tm_init
 TM_MSG="terraform apply failed — which of the two paths points to the wrong directory?" tm_apply
 
 tm_assert_in_state module.guide.local_file.script
-tm_assert_output audio_file "./audio/steam-loco.txt"
-tm_assert_no_file modules/guide/audio/steam-loco.txt "the script was written inside modules/guide instead of the workspace audio/ folder"
-tm_assert_file_contains audio/steam-loco.txt "to the steam loco gallery" "the script does not greet the exhibit"
-tm_assert_file_contains audio/steam-loco.txt "This is Edith speaking" "the narrator is missing from the script"
+tm_assert_output audio_file "./audio/haunted-cellar.txt"
+tm_assert_no_file modules/guide/audio/haunted-cellar.txt "the script was written inside modules/guide instead of the workspace audio/ folder"
+tm_assert_file_contains audio/haunted-cellar.txt "to the haunted cellar stop" "the script does not greet the stop"
+tm_assert_file_contains audio/haunted-cellar.txt "This is Edith speaking" "the narrator is missing from the script"
 
-tm_apply -var exhibit=dining-car -var narrator=Rosalind
-tm_assert_output audio_file "./audio/dining-car.txt"
-tm_assert_file_contains audio/dining-car.txt "to the dining car gallery"
-tm_assert_file_contains audio/dining-car.txt "This is Rosalind speaking"
-tm_assert_no_file modules/guide/audio/dining-car.txt "the script was written inside modules/guide"
+tm_apply -var stop=plague-pit -var narrator=Rosalind
+tm_assert_output audio_file "./audio/plague-pit.txt"
+tm_assert_file_contains audio/plague-pit.txt "to the plague pit stop"
+tm_assert_file_contains audio/plague-pit.txt "This is Rosalind speaking"
+tm_assert_no_file modules/guide/audio/plague-pit.txt "the script was written inside modules/guide"
 
 tm_apply
 tm_assert_no_changes

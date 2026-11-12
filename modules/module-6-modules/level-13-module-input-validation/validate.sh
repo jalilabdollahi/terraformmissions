@@ -7,12 +7,12 @@ tm_assert_config_has 'regex\("\^\[A-Z\]\{3\}-\[0-9\]\{2\}\$"' "the show_code che
 
 tm_init
 TM_MSG="terraform apply failed — the module's validation messages say what it expects from the caller" tm_apply
-tm_assert_output programme "MAR-07 | doors 60 min before curtain"
+tm_assert_output programme "SOR-07 | doors 60 min before curtain"
 
 tm_apply -var run_no=12
-tm_assert_output programme "MAR-12 | doors 60 min before curtain"
-tm_apply -var troupe=glove -var doors_open_hours=0.5
-tm_assert_output programme "GLO-07 | doors 30 min before curtain"
+tm_assert_output programme "SOR-12 | doors 60 min before curtain"
+tm_apply -var act=dove -var doors_open_hours=0.5
+tm_assert_output programme "DOV-07 | doors 30 min before curtain"
 
 # Out-of-range input must still be refused by the module itself
 code=$(tm_plan_code -var doors_open_hours=2)

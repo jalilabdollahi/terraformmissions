@@ -1,1 +1,1 @@
-Inside `content`, use the iterator you declared: `lesson.value.file` and `lesson.value.text`. (`lesson.key` would be the list index.)
+Inside `content`, use the iterator you declared: `class.value.file` and `class.value.text`. (`class.key` would be the list index.)

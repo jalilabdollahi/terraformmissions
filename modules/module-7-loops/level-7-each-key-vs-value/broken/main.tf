@@ -1,5 +1,5 @@
-# Duty cards for the Saltmarsh tugboat crews.
-# crew maps each sailor's name to the role they hold this season.
+# Duty cards for the Marlowe Pier ride crews.
+# crew maps each operator's name to the role they hold this season.
 
 resource "local_file" "duty_card" {
   for_each = var.crew

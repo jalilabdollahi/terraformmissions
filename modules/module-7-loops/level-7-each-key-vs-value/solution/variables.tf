@@ -1,10 +1,10 @@
 variable "crew" {
-  description = "Sailor name => role."
+  description = "Operator name => role."
   type        = map(string)
   default = {
-    mara  = "captain"
-    joss  = "deckhand"
-    pim   = "deckhand"
-    odile = "engineer"
+    mara  = "supervisor"
+    joss  = "attendant"
+    pim   = "attendant"
+    odile = "mechanic"
   }
 }

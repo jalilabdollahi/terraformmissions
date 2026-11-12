@@ -1,1 +1,1 @@
-Use %05d for the bib, %05.1f for the distance and %q for the name. A zero after the percent sign means pad with zeros; the number before the dot is the total width.
+Use %05d for the tag, %05.1f for the distance and %q for the name. A zero after the percent sign means pad with zeros; the number before the dot is the total width.

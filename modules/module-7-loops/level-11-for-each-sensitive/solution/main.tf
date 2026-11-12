@@ -1,4 +1,4 @@
-# Gate PIN slips for the Dockside container-crane operators.
+# Cab PIN slips for the Kingsgate building-site tower-crane operators.
 # The PINs are secrets; the operators' names are not.
 
 resource "local_sensitive_file" "pin_slip" {

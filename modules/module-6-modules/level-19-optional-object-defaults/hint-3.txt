@@ -1,1 +1,1 @@
-Write `bitrate_kbps = optional(number, 128)` and `jingle = optional(bool, true)` in the module's type. The second argument is the default. Leave `genre = string` alone.
+Write `bitrate_kbps = optional(number, 128)` and `jingle = optional(bool, true)` in the module's type. The second argument is the default. Leave `skill = string` alone.

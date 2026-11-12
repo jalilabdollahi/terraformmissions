@@ -4,17 +4,17 @@ variable "hour" {
   default     = 14
 }
 
-module "tower" {
-  source = "./modules/tower"
+module "crier" {
+  source = "./modules/crier"
 
-  name = "Saint Aldric"
+  name = "Master Aldous"
   hour = var.hour
 }
 
-output "next_chime" {
-  value = module.tower.next_chime
+output "next_call" {
+  value = module.crier.next_call
 }
 
 output "roster_file" {
-  value = module.tower.roster_file
+  value = module.crier.roster_file
 }

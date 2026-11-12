@@ -2,7 +2,7 @@
 
 A resource's identity in state is its full address, including the module path. When you extract resources into a
 module, nothing about the real objects changes, but every address does: `random_id.ticket` becomes
-`module.hangar.random_id.ticket`. Without help, Terraform plans to destroy the old addresses and create the new ones.
+`module.shed.random_id.ticket`. Without help, Terraform plans to destroy the old addresses and create the new ones.
 For a random ID that means a new value; for a database, data loss.
 
 A `moved` block tells Terraform that the object at `from` is now at `to`, and the next plan or apply updates state

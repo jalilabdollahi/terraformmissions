@@ -1,8 +1,8 @@
-name: Lantern Lake Results Board
+name: Brightside Cubing Results
 description: >-
-  Marshals at the Lantern Lake Regatta type finish times by hand: some use a decimal comma, some leave a space in front, and retired boats write DNF or DSQ. The results script converts every entry with tonumber() and plan dies on the first one it cannot read.
+  Judges at the Brightside Speedcubing Open type solve times by hand: some use a decimal comma, some leave a space in front, and cubers who did not finish write DNF or DSQ. The results script converts every entry with tonumber() and plan dies on the first one it cannot read.
 objective: >-
-  Convert the times to numbers (13,1 means 13.1, a leading space is ignored), keep only boats with a numeric time in finishers, list the rest in no_time, and report the winner (Tern, 11.9 min). It must work for other raw_times maps.
+  Convert the times to numbers (13,1 means 13.1, a leading space is ignored), keep only cubers with a numeric time in finishers, list the rest in no_time, and report the winner (Noor, 11.9 s). It must work for other raw_times maps.
 xp: 220
 difficulty: intermediate
 expected_time: 12m

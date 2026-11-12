@@ -1,8 +1,8 @@
-name: Tessera Address Plan
+name: Corvane Estate Address Plan
 description: >-
-  The Tessera Research Station carves its 10.77.0.0/22 range into one equally-sized block per zone with cidrsubnet(). With six zones, plan fails part way through the list claiming the subnet number does not fit.
+  The Corvane Business Park carves its 10.77.0.0/22 range into one equally-sized block per zone with cidrsubnet(). With six zones, plan fails part way through the list claiming the subnet number does not fit.
 objective: >-
-  Give every zone a /26 block taken in order from the base range (airlock 10.77.0.0/26, lab 10.77.0.64/26, ...), but derive the newbits from var.subnet_prefix and var.base_cidr so other ranges, prefixes and zone counts work too.
+  Give every zone a /26 block taken in order from the base range (gatehouse 10.77.0.0/26, offices 10.77.0.64/26, ...), but derive the newbits from var.subnet_prefix and var.base_cidr so other ranges, prefixes and zone counts work too.
 xp: 225
 difficulty: intermediate
 expected_time: 12m

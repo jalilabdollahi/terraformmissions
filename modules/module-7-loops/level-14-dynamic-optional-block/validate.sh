@@ -7,11 +7,11 @@ tm_apply
 [[ "$(zipnames packs/audio-guide.zip)" == "guide-script.txt,stops.txt" ]] \
   || tm_fail "with no transcript the zip should hold guide-script.txt and stops.txt, found: $(zipnames packs/audio-guide.zip)"
 # 2. a transcript: a third entry with that text appears
-tm_apply -var 'transcript=BIG TEXT for the harbour tour'
+tm_apply -var 'transcript=BIG TEXT for the park tour'
 [[ "$(zipnames packs/audio-guide.zip)" == "guide-script.txt,stops.txt,transcript-large-print.txt" ]] \
   || tm_fail "with a transcript the zip should also hold transcript-large-print.txt, found: $(zipnames packs/audio-guide.zip)"
 t=$(python3 -c 'import zipfile; print(zipfile.ZipFile("packs/audio-guide.zip").read("transcript-large-print.txt").decode())')
-[[ "$t" == "BIG TEXT for the harbour tour" ]] || tm_fail "transcript entry has the wrong text: $t"
+[[ "$t" == "BIG TEXT for the park tour" ]] || tm_fail "transcript entry has the wrong text: $t"
 # 3. back to null: the entry goes away again
 tm_apply
 [[ "$(zipnames packs/audio-guide.zip)" == "guide-script.txt,stops.txt" ]] || tm_fail "after unsetting the transcript the entry should disappear again"

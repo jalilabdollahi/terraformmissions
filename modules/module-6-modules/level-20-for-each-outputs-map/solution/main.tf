@@ -1,25 +1,25 @@
-variable "sections" {
+variable "classes" {
   type = map(number)
   default = {
-    soprano = 12
-    alto    = 9
-    tenor   = 6
-    bass    = 7
+    vinyasa  = 12
+    hatha    = 9
+    yin      = 6
+    ashtanga = 7
   }
 }
 
-module "section" {
-  source   = "./modules/section"
-  for_each = var.sections
+module "classroom" {
+  source   = "./modules/classroom"
+  for_each = var.classes
 
-  voice   = each.key
-  singers = each.value
+  style    = each.key
+  students = each.value
 }
 
-output "rehearsal_minutes" {
-  value = { for voice, m in module.section : voice => m.minutes }
+output "prep_minutes" {
+  value = { for style, m in module.classroom : style => m.minutes }
 }
 
 output "total_minutes" {
-  value = sum([for m in module.section : m.minutes])
+  value = sum([for m in module.classroom : m.minutes])
 }

@@ -1,12 +1,12 @@
-name: Choir Rehearsal Slots
+name: Yoga Room Prep Times
 description: >-
-  The Fairbank choir books a rehearsal room per voice section with one module instance each. The
-  coordinator's summary outputs are meant to map each section to its minutes and to total them, but
+  The Lotus Lane yoga studio books a room per class style with one module instance each. The
+  coordinator's summary outputs are meant to map each class style to its minutes and to total them, but
   the splat expressions she used choke on the module instances.
 objective: >-
-  Make rehearsal_minutes a map from section name to rehearsal minutes (5 per singer) and
-  total_minutes their sum. With the defaults (soprano 12, alto 9, tenor 6, bass 7 singers) the map is
-  soprano 60, alto 45, tenor 30, bass 35 and the total 170; with -var 'sections={bass=3,alto=4}' the
+  Make prep_minutes a map from class style to prep minutes (5 per student) and
+  total_minutes their sum. With the defaults (vinyasa 12, hatha 9, yin 6, ashtanga 7 students) the map is
+  vinyasa 60, hatha 45, yin 30, ashtanga 35 and the total 170; with -var 'classes={ashtanga=3,hatha=4}' the
   total must be 35.
 xp: 255
 difficulty: intermediate

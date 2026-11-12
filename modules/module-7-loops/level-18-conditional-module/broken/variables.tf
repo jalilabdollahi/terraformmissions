@@ -7,5 +7,5 @@ variable "snack_bar_open" {
 variable "snack_items" {
   description = "What the snack bar sells."
   type        = list(string)
-  default     = ["popcorn", "nachos"]
+  default     = ["slushies", "pretzels"]
 }

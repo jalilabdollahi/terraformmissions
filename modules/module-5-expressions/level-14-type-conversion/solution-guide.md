@@ -1,4 +1,4 @@
-# Walkthrough — Lantern Lake Results Board
+# Walkthrough — Brightside Cubing Results
 
 1. `terraform plan`: `cannot convert "13,1" to number; given string must be a decimal representation
    of a number.` (After fixing that one, the next ones are `" 11.9"` and `"DNF"`.)

@@ -1,1 +1,1 @@
-Plan tells you which attribute does not exist on the decoded object. Look at the indentation in config.yaml: where does the instruments list actually sit?
+Plan tells you which attribute does not exist on the decoded object. Look at the indentation in config.yaml: where does the crew list actually sit?

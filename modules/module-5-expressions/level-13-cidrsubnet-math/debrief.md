@@ -6,7 +6,7 @@ you want, counted from zero. The two are linked by a hard limit: `netnum` must b
 `2^newbits`.
 
 The failing config used 2 new bits. That offers four blocks, `/24` each, and asks for the fifth.
-Even if a fifth block had been available the size would be wrong: the station wanted /26 blocks
+Even if a fifth block had been available the size would be wrong: the estate wanted /26 blocks
 with 62 usable hosts, and a /24 has 254. Two different mistakes, one number.
 
 The robust way to think about it is to decide the **target prefix** first and calculate newbits from

@@ -1,8 +1,8 @@
-name: Pinewood Bib Cards
+name: Ridgeway Vet Cards
 description: >-
-  The Pinewood Trail Marathon prints one line per runner from a single format() call. The cards for the 21.1 km runner will not even render, and a recent edit left the bib number padded with spaces instead of zeros.
+  The Ridgeway Endurance Ride prints one line per rider from a single format() call. The cards for the 21.1 km rider will not even render, and a recent edit left the tag number padded with spaces instead of zeros.
 objective: >-
-  Make the card for Ines read: BIB-00007 | "Ines \"Flash\" Okafor" | 021.1 km | pace 4:51 min/km (name quoted and escaped, distance zero-padded to width 5 with one decimal). It must still work for any runner object.
+  Make the card for Ines read: TAG-00007 | "Ines \"Flash\" Okafor" | 021.1 km | pace 4:51 min/km (name quoted and escaped, distance zero-padded to width 5 with one decimal). It must still work for any rider object.
 xp: 160
 difficulty: intermediate
 expected_time: 8m

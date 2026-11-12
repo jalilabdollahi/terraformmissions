@@ -1,12 +1,12 @@
-name: Rolling Stock Audio Guide
+name: Hollow Lane Audio Guide
 description: >-
-  The Ironbridge railway museum generates audio-guide scripts from a template that ships inside the guide
+  The Hollow Lane ghost walk company generates audio-guide scripts from a template that ships inside the guide
   module. Since the module was extracted, the scripts land in the wrong folder, and the template cannot
   be found at all.
 objective: >-
   Make module.guide read its template from its own directory and write the finished script into the root
-  workspace: audio/steam-loco.txt (not inside modules/guide). The audio_file output must be
-  ./audio/steam-loco.txt and the script must greet visitors of the exhibit named in the variable.
+  workspace: audio/haunted-cellar.txt (not inside modules/guide). The audio_file output must be
+  ./audio/haunted-cellar.txt and the script must greet walkers of the stop named in the variable.
 xp: 200
 difficulty: intermediate
 expected_time: 10m

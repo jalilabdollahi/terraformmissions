@@ -4,10 +4,10 @@ source "$TM_LIB"
 tm_assert_config_has 'cidrsubnet[[:space:]]*\(' "zone blocks must be carved with cidrsubnet()"
 
 tm_apply
-tm_assert_output_jq zone_cidrs '. == {"airlock":"10.77.0.0/26","lab":"10.77.0.64/26","galley":"10.77.0.128/26","hab-a":"10.77.0.192/26","hab-b":"10.77.1.0/26","hydroponics":"10.77.1.64/26"}' \
+tm_assert_output_jq zone_cidrs '. == {"gatehouse":"10.77.0.0/26","offices":"10.77.0.64/26","canteen":"10.77.0.128/26","unit-a":"10.77.0.192/26","unit-b":"10.77.1.0/26","depot":"10.77.1.64/26"}' \
   "with base 10.77.0.0/22 and prefix 26 the six zones should be consecutive /26 blocks starting at 10.77.0.0/26"
 tm_assert_output hosts_per_zone 62
-tm_assert_file_contains plan/addresses.txt "hydroponics 10.77.1.64/26"
+tm_assert_file_contains plan/addresses.txt "depot 10.77.1.64/26"
 
 # The size comes from var.subnet_prefix and the range from var.base_cidr, for any number of zones.
 tm_plan_json -var base_cidr=192.168.8.0/21 -var subnet_prefix=24 \

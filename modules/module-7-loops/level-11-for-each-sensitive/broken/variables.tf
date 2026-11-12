@@ -1,5 +1,5 @@
 variable "pins" {
-  description = "Operator name => gate PIN."
+  description = "Operator name => cab PIN."
   type        = map(string)
   sensitive   = true
 }

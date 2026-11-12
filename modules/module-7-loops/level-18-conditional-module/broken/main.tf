@@ -1,4 +1,4 @@
-# Rooftop Cinema: the snack bar is only staffed on screening nights.
+# Starlight Roller Disco: the snack bar is only staffed on session nights.
 # Its menu lives in a small local module that is switched on with count.
 
 module "snack_bar" {

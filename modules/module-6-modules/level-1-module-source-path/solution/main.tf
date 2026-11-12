@@ -1,18 +1,18 @@
-variable "estate" {
+variable "farm" {
   type    = string
-  default = "Glenburn"
+  default = "Tarndale"
 }
 
-variable "flush" {
+variable "clip" {
   type    = string
-  default = "second"
+  default = "summer"
 }
 
 module "grading" {
   source = "./modules/grader"
 
-  estate = var.estate
-  flush  = var.flush
+  farm = var.farm
+  clip = var.clip
 }
 
 output "label_file" {

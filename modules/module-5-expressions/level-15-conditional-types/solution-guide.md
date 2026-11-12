@@ -1,8 +1,8 @@
-# Walkthrough — Stubai Ridge Day Pass
+# Walkthrough — Tarn Hollow Ride Pass
 
 1. `terraform plan`: `Inconsistent conditional result types ... The 'true' value is tuple, but the
-   'false' value is string.` That is `local.lifts`.
-2. Fix it with a list on both sides: `["north"]`. Run plan again; now `terraform plan -var junior=false`
+   'false' value is string.` That is `local.zips`.
+2. Fix it with a list on both sides: `["canopy"]`. Run plan again; now `terraform plan -var junior=false`
    fails with an invalid operand on the price multiplication (`"full"` is not a number).
 3. Experiment:
    ```

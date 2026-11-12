@@ -1,8 +1,8 @@
-name: Cobbold Feed Whiteboard
+name: Hollin Feed Whiteboard
 description: >-
-  The keepers' feed whiteboard at Cobbold Wildlife Park is generated from a ration table. When the manager added an okapi and a capybara to the animal list, plan started failing because they have no tailored ration.
+  The grooms' feed whiteboard at Hollin Farm Riding Stables is generated from a ration table. When the manager added a fjord and a haflinger to the horse list, plan started failing because they have no tailored ration.
 objective: >-
-  Give listed species their own ration and every other animal the standard ration from var.standard_ration_kg (okapi 3 kg and capybara 3 kg by default), with no hard-coded number.
+  Give listed breeds their own ration and every other horse the standard ration from var.standard_ration_kg (fjord 3 kg and haflinger 3 kg by default), with no hard-coded number.
 xp: 165
 difficulty: intermediate
 expected_time: 7m

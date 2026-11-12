@@ -1,5 +1,5 @@
-# Tessera Research Station — address plan for the internal network.
-# Each zone gets its own block of the station's range, all the same size.
+# Corvane Business Park — address plan for the internal network.
+# Each zone gets its own block of the estate's range, all the same size.
 
 variable "base_cidr" {
   type    = string
@@ -14,7 +14,7 @@ variable "subnet_prefix" {
 
 variable "zones" {
   type    = list(string)
-  default = ["airlock", "lab", "galley", "hab-a", "hab-b", "hydroponics"]
+  default = ["gatehouse", "offices", "canteen", "unit-a", "unit-b", "depot"]
 }
 
 locals {

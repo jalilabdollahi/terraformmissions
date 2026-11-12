@@ -1,4 +1,4 @@
-# Audio-guide pack for the Tidewater Maritime Museum.
+# Audio-guide pack for the Oakridge Sculpture Park.
 # Every pack has the stop list and the guide script. A large-print transcript
 # is included only when the curator wrote one.
 
@@ -8,12 +8,12 @@ resource "archive_file" "audio_pack" {
 
   source {
     filename = "stops.txt"
-    content  = "1 Figurehead hall\n2 Lamp room\n3 Anchor yard\n"
+    content  = "1 Bronze meadow\n2 Stone terrace\n3 Willow arch\n"
   }
 
   source {
     filename = "guide-script.txt"
-    content  = "Welcome aboard. Follow the blue line.\n"
+    content  = "Welcome to the park. Follow the gravel path.\n"
   }
 
   dynamic "source" {

@@ -1,10 +1,10 @@
-# Mascot names for the Coastwatch lifeboat stations.
-# The code was just migrated from `count` to `for_each`, so that stations are
+# Mascot names for the Lakeview swan pedalos.
+# The code was just migrated from `count` to `for_each`, so that pedalos are
 # identified by name instead of by their position in the list.
-# The mascots are already painted on the boats: they must not change.
+# The mascots are already painted on the hulls: they must not change.
 
 resource "random_pet" "mascot" {
-  for_each  = toset(var.stations)
+  for_each  = toset(var.pedalos)
   length    = 2
   separator = "-"
 }
@@ -12,6 +12,6 @@ resource "random_pet" "mascot" {
 resource "local_file" "roster" {
   filename = "${path.module}/roster.txt"
   content = join("\n", [
-    for s in var.stations : "${s}: ${random_pet.mascot[s].id}"
+    for s in var.pedalos : "${s}: ${random_pet.mascot[s].id}"
   ])
 }

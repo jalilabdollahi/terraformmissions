@@ -1,4 +1,4 @@
-# Walkthrough — Marlow Hall Price Board
+# Walkthrough — Ashdown Admission Board
 
 1. `terraform plan` stops with: `argument 2 has length 2, which is inconsistent with argument 1 of
    length 3`. Argument 1 is `var.tiers`; argument 2 is the hand-typed currency list.

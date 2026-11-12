@@ -1,1 +1,1 @@
-Build the code with `format("%s-%02d", upper(substr(var.troupe, 0, 3)), var.run_no)` and convert hours to minutes by multiplying by 60. Leave modules/billing alone.
+Build the code with `format("%s-%02d", upper(substr(var.act, 0, 3)), var.run_no)` and convert hours to minutes by multiplying by 60. Leave modules/billing alone.

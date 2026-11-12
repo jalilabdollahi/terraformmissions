@@ -1,4 +1,4 @@
-# Walkthrough — Tessera Address Plan
+# Walkthrough — Corvane Estate Address Plan
 
 1. `terraform plan` reports: `prefix extension of 2 does not accommodate a subnet numbered 4`.
    It occurs on the fifth zone (index 4).

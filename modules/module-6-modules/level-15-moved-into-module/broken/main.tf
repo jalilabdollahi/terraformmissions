@@ -1,7 +1,7 @@
-module "hangar" {
-  source = "./modules/hangar"
+module "shed" {
+  source = "./modules/shed"
 }
 
 output "ticket" {
-  value = module.hangar.ticket
+  value = module.shed.ticket
 }

@@ -1,21 +1,21 @@
-# Lantern Lake Regatta — results board.
-# Finish times (minutes) are typed in by marshals on the water, so they arrive as messy text.
+# Brightside Speedcubing Open — results board.
+# Solve times (seconds) are typed in by judges at the tables, so they arrive as messy text.
 
 variable "raw_times" {
   type = map(string)
   default = {
-    Osprey  = "12.5"
-    Kestrel = "13,1"
-    Gull    = "DNF"
-    Tern    = " 11.9"
-    Heron   = "DSQ"
+    Mika = "12.5"
+    Dara = "13,1"
+    Luka = "DNF"
+    Noor = " 11.9"
+    Arlo = "DSQ"
   }
 }
 
 locals {
-  cleaned = { for boat, t in var.raw_times : boat => replace(trimspace(t), ",", ".") }
+  cleaned = { for cuber, t in var.raw_times : cuber => replace(trimspace(t), ",", ".") }
   finishers = {
-    for boat, t in local.cleaned : boat => tonumber(t) if can(tonumber(t))
+    for cuber, t in local.cleaned : cuber => tonumber(t) if can(tonumber(t))
   }
   fastest = min(values(local.finishers)...)
 }
@@ -23,8 +23,8 @@ locals {
 resource "local_file" "results" {
   filename = "${path.module}/board/results.txt"
   content = "${join("\n", concat(
-    [for boat, minutes in local.finishers : "${boat}: ${minutes} min"],
-    [for boat in sort(keys(var.raw_times)) : "${boat}: no time" if !contains(keys(local.finishers), boat)],
+    [for cuber, seconds in local.finishers : "${cuber}: ${seconds} sec"],
+    [for cuber in sort(keys(var.raw_times)) : "${cuber}: no time" if !contains(keys(local.finishers), cuber)],
   ))}\n"
 }
 
@@ -33,13 +33,13 @@ output "finishers" {
 }
 
 output "no_time" {
-  value = sort([for boat in keys(var.raw_times) : boat if !contains(keys(local.finishers), boat)])
+  value = sort([for cuber in keys(var.raw_times) : cuber if !contains(keys(local.finishers), cuber)])
 }
 
 output "winner" {
-  value = one([for boat, minutes in local.finishers : boat if minutes == local.fastest])
+  value = one([for cuber, seconds in local.finishers : cuber if seconds == local.fastest])
 }
 
-output "fastest_minutes" {
+output "fastest_seconds" {
   value = local.fastest
 }

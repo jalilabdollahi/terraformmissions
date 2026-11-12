@@ -1,9 +1,9 @@
-# Marlow Hall box office — one printed price line per seating tier.
+# Ashdown Racecourse gate office — one printed price line per enclosure tier.
 # Every line carries the same currency code, which comes from a single variable.
 
 variable "tiers" {
   type    = list(string)
-  default = ["Stalls", "Circle", "Gallery"]
+  default = ["Members", "Grandstand", "Silver Ring"]
 }
 
 variable "prices" {

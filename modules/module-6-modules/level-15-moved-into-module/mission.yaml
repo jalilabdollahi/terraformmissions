@@ -1,11 +1,11 @@
-name: Zeppelin Hangar Extraction
+name: Boiler Shed Extraction
 description: >-
-  The Aeroklub hangar has been issuing its mooring ticket and hangar manifest from the root configuration
-  for months. A refactor moved both resources into a module called hangar, and plan now wants to
-  destroy the live ticket (printed on the airship's paperwork) and create a new one.
+  The Whistling Pennant traction engine club has been issuing its boiler ticket and shed manifest from the root configuration
+  for months. A refactor moved both resources into a module called shed, and plan now wants to
+  destroy the live ticket (printed on the engine's paperwork) and create a new one.
 objective: >-
   Keep the module and keep the existing ticket: the random_id and the manifest file must end up at
-  module.hangar.random_id.ticket and module.hangar.local_file.manifest with the same IDs as
+  module.shed.random_id.ticket and module.shed.local_file.manifest with the same IDs as
   before, and the plan must be clean. Record the move in the code with moved blocks.
 xp: 275
 difficulty: intermediate

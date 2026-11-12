@@ -1,6 +1,6 @@
 # Debrief — square brackets demand, lookup() offers
 
-A map index like `var.rations_kg[animal]` is a demand: the key must exist or Terraform stops. That is
+A map index like `var.rations_kg[horse]` is a demand: the key must exist or Terraform stops. That is
 correct when a missing key means the data is wrong, and wrong when a missing key simply means "use
 the usual value".
 

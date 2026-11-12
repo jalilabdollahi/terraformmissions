@@ -1,34 +1,34 @@
-# Port Selby Airport — which flights are announced on which baggage carousel.
+# Kaiten Corner sushi bar — which plates are announced on which conveyor belt.
 
-variable "arrivals" {
+variable "plates" {
   type = list(object({
-    flight   = string
-    carousel = string
+    plate = string
+    belt  = string
   }))
   default = [
-    { flight = "SB204", carousel = "C1" },
-    { flight = "KL881", carousel = "C2" },
-    { flight = "SB311", carousel = "C1" },
-    { flight = "AE090", carousel = "C3" },
-    { flight = "KL112", carousel = "C2" },
-    { flight = "SB520", carousel = "C1" },
+    { plate = "TUNA-1", belt = "B1" },
+    { plate = "EEL-1", belt = "B2" },
+    { plate = "TUNA-2", belt = "B1" },
+    { plate = "ROE-1", belt = "B3" },
+    { plate = "EEL-2", belt = "B2" },
+    { plate = "TUNA-3", belt = "B1" },
   ]
 }
 
 locals {
-  by_carousel = { for a in var.arrivals : a.carousel => a.flight... }
+  by_belt = { for a in var.plates : a.belt => a.plate... }
 }
 
-resource "local_file" "announcement" {
-  for_each = local.by_carousel
+resource "local_file" "belt_board" {
+  for_each = local.by_belt
   filename = "${path.module}/boards/${lower(each.key)}.txt"
-  content  = "Carousel ${each.key}: ${join(", ", each.value)}\n"
+  content  = "Belt ${each.key}: ${join(", ", each.value)}\n"
 }
 
-output "by_carousel" {
-  value = local.by_carousel
+output "by_belt" {
+  value = local.by_belt
 }
 
 output "load" {
-  value = { for carousel, flights in local.by_carousel : carousel => length(flights) }
+  value = { for belt, plates in local.by_belt : belt => length(plates) }
 }

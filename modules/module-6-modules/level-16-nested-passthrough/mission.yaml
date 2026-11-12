@@ -1,12 +1,12 @@
-name: Cider Press Vintage
+name: Sugarhouse Season Label
 description: >-
-  Applewick Orchard labels its cider bottles through two nested modules: the press takes the orchard
-  and vintage from the root and hands them to the bottler, which writes the label. Every label
-  comes out with the right orchard but "unknown" as the vintage.
+  Hollisford Sugarbush labels its syrup tins through two nested modules: the evaporator takes the sugarbush
+  and season from the root and hands them to the canner, which writes the label. Every label
+  comes out with the right sugarbush but "unknown" as the season.
 objective: >-
-  Thread the vintage variable all the way down: root, press module, bottler module. With the
-  default 2023 the file cider/applewick-2023.txt must read "Applewick Orchard cider, vintage 2023";
-  with -var vintage=2019 the label and the file name must follow, and the label output must stay
+  Thread the season variable all the way down: root, evaporator module, canner module. With the
+  default 2023 the file syrup/hollisford-2023.txt must read "Hollisford Sugarbush syrup, season 2023";
+  with -var season=2019 the label and the file name must follow, and the label output must stay
   available at the root.
 xp: 235
 difficulty: intermediate

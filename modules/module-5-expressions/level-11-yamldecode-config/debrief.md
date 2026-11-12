@@ -13,7 +13,7 @@ Once the parser has converted the value, the original text is gone. You cannot f
 `"no"` in HCL, so the repair belongs in the YAML: quote any value that must be text.
 
 The other half of the mission was structural. `yamldecode()` returns nested objects, so the path
-mirrors the indentation: `local.cfg.observatory.instruments`. When you are unsure, assign the decoded
+mirrors the indentation: `local.cfg.submarine.crew`. When you are unsure, assign the decoded
 value to a local and inspect it in `terraform console`, or output it temporarily.
 
 ## Real-world takeaway

@@ -1,11 +1,11 @@
 name: Tickets Without Keys
 description: >-
-  The Harbour Film Festival writes a ticket stub per screening with for_each. The box-office app
-  wants an output that maps each film to its ticket file, but the output block errors as soon as
+  The Marrow Lane Literary Festival writes a ticket stub per session with for_each. The box-office app
+  wants an output that maps each event to its ticket file, but the output block errors as soon as
   Terraform reads it.
 objective: >-
-  Make the ticket_files output a map from film slug to ticket path (three entries today), built
-  from the for_each resource. It must follow whatever screenings the variable holds.
+  Make the ticket_files output a map from event slug to ticket path (three entries today), built
+  from the for_each resource. It must follow whatever sessions the variable holds.
 xp: 190
 difficulty: intermediate
 expected_time: 9m

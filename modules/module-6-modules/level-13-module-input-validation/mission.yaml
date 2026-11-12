@@ -1,12 +1,12 @@
-name: Marionette Programme Codes
+name: Gilded Cuff Programme Codes
 description: >-
-  The Little Lantern puppet theatre prints a programme line for each production through a module with
-  strict input checks: show codes must look like MAR-07 and doors must open between 15 and 90 minutes
+  The Gilded Cuff magic show prints a programme line for each production through a module with
+  strict input checks: show codes must look like SOR-07 and doors must open between 15 and 90 minutes
   before curtain. The caller feeds it raw values and the module's own validation rejects them.
 objective: >-
-  Fix the caller, not the checks. With the defaults (troupe "marionette", run number 7, doors 1 hour
-  early) the programme output must be "MAR-07 | doors 60 min before curtain". Run number 12 must give
-  MAR-12, and a 2-hour doors_open_hours must still be rejected by the module's validation.
+  Fix the caller, not the checks. With the defaults (act "sorcerer", run number 7, doors 1 hour
+  early) the programme output must be "SOR-07 | doors 60 min before curtain". Run number 12 must give
+  SOR-12, and a 2-hour doors_open_hours must still be rejected by the module's validation.
 xp: 225
 difficulty: intermediate
 expected_time: 12m

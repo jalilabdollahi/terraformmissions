@@ -1,4 +1,4 @@
-# Walkthrough - Saffron Twice
+# Walkthrough - Briggs Twice
 
 1. `terraform plan` fails with *Invalid for_each argument ... must be a map, or set of strings, and you
    have provided a value of type list of string*.
@@ -6,8 +6,8 @@
    Terraform refuses to guess which element becomes the key.
 3. Convert the list to a set:
    ```hcl
-   for_each = toset(var.spices)
+   for_each = toset(var.dealers)
    ```
-4. Apply. `terraform state list` shows `local_file.stall_tag["cardamom"]`, `["saffron"]`, `["sumac"]`
-   and `["za-atar"]` - four tags, because the duplicated saffron collapses. Keep `var.spices` as a list;
+4. Apply. `terraform state list` shows `local_file.stall_tag["ashby"]`, `["briggs"]`, `["calloway"]`
+   and `["dunmore"]` - four tags, because the duplicated briggs collapses. Keep `var.dealers` as a list;
    only the `for_each` expression changes.

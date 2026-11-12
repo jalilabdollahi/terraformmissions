@@ -1,6 +1,6 @@
-variable "troupe" {
+variable "act" {
   type    = string
-  default = "marionette"
+  default = "sorcerer"
 }
 
 variable "run_no" {
@@ -16,7 +16,7 @@ variable "doors_open_hours" {
 module "billing" {
   source = "./modules/billing"
 
-  show_code      = "${var.troupe}-${var.run_no}"
+  show_code      = "${var.act}-${var.run_no}"
   doors_open_min = var.doors_open_hours
 }
 

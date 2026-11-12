@@ -1,1 +1,1 @@
-Swap them: filename and `Name:` use `each.key`; `Role:` uses `each.value`. Two sailors share the role deckhand, which is why using a role in the filename collides.
+Swap them: filename and `Name:` use `each.key`; `Role:` uses `each.value`. Two operators share the role attendant, which is why using a role in the filename collides.

@@ -1,12 +1,12 @@
-name: Fish Market Stall Board
+name: Busker Pitch Board
 description: >-
-  The Quayside fish market posts a board for every stall: a JSON record and a list of its fields. The
-  stall module already publishes owner, pitch and catch as outputs. The root configuration tries to
+  The Cobbleway buskers' circuit posts a board for every busker: a JSON record and a list of its fields. The
+  busker module already publishes performer, slot and setlist as outputs. The root configuration tries to
   use the whole module object as a single value and Terraform rejects both attempts.
 objective: >-
-  Use the entire module.stall object as the value: the board file board/stall.json must contain it
+  Use the entire module.busker object as the value: the board file board/busker.json must contain it
   as JSON, and the fields output must list the module's output names alphabetically
-  (catch, owner, pitch). Don't type the field names or values out by hand: they must follow the module.
+  (performer, setlist, slot). Don't type the field names or values out by hand: they must follow the module.
 xp: 250
 difficulty: intermediate
 expected_time: 12m

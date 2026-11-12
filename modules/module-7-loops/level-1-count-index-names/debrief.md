@@ -4,7 +4,7 @@
 If an argument is a plain string, all four instances get exactly the same value. For most cloud
 resources that is loud: the second create fails with "already exists". For `local_file` it is silent,
 because writing a file twice is perfectly legal. Four resources, one file, and the only symptom is a
-missing card on game day.
+missing card on dinner night.
 
 `count.index` is the thing that makes copies different. It is the zero-based position of the instance
 and is only available inside a resource, data, module or similar block that sets `count`. You will use

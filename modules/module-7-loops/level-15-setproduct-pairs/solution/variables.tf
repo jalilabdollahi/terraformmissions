@@ -1,11 +1,11 @@
 variable "rooms" {
-  description = "Rehearsal rooms."
+  description = "Hackathon rooms."
   type        = list(string)
-  default     = ["aria", "cantata", "motet"]
+  default     = ["atrium", "garage", "loft"]
 }
 
 variable "days" {
-  description = "Rehearsal days."
+  description = "Hackathon days."
   type        = list(string)
   default     = ["fri", "sat"]
 }

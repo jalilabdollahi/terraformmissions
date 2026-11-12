@@ -1,6 +1,6 @@
 name: Secret Keys
 description: >-
-  Dockside's crane operators each get a gate PIN slip, driven by a sensitive map of name to PIN.
+  Kingsgate's tower-crane operators each get a cab PIN slip, driven by a sensitive map of name to PIN.
   Terraform refuses to loop over the map: it would have to use secret values as instance keys.
 objective: >-
   Keep var.pins sensitive and create one local_sensitive_file.pin_slip per operator, keyed by the

@@ -1,12 +1,12 @@
-# Cobbold Wildlife Park — daily feed order for the keepers' whiteboard.
-# Species with a tailored ration are listed; anything else gets the standard ration.
+# Hollin Farm Riding Stables — daily feed order for the grooms' whiteboard.
+# Breeds with a tailored ration are listed; anything else gets the standard ration.
 
 variable "rations_kg" {
   type = map(number)
   default = {
-    giraffe = 28
-    tapir   = 9.5
-    lemur   = 1.2
+    shire     = 28
+    welsh_cob = 9.5
+    shetland  = 1.2
   }
 }
 
@@ -15,21 +15,21 @@ variable "standard_ration_kg" {
   default = 3
 }
 
-variable "animals" {
+variable "horses" {
   type    = list(string)
-  default = ["giraffe", "okapi", "lemur", "capybara"]
+  default = ["shire", "fjord", "shetland", "haflinger"]
 }
 
 locals {
   feed_order = {
-    for animal in var.animals :
-    animal => var.rations_kg[animal]
+    for horse in var.horses :
+    horse => var.rations_kg[horse]
   }
 }
 
 resource "local_file" "whiteboard" {
   filename = "${path.module}/board/feed.txt"
-  content = "${join("\n", [for animal, kg in local.feed_order : "${animal}: ${kg} kg"])}\n"
+  content  = "${join("\n", [for horse, kg in local.feed_order : "${horse}: ${kg} kg"])}\n"
 }
 
 output "feed_order" {

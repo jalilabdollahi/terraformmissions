@@ -1,8 +1,8 @@
-name: Port Selby Carousels
+name: Kaiten Corner Belts
 description: >-
-  Port Selby Airport groups its arriving flights by baggage carousel to print one announcement board per carousel. Plan fails with a duplicate key as soon as two flights share a carousel.
+  Kaiten Corner sushi bar groups its plates by conveyor belt to print one belt board per belt. Plan fails with a duplicate key as soon as two plates share a belt.
 objective: >-
-  Build by_carousel so each carousel maps to the list of its flights in arrival order (C1: SB204, SB311, SB520; C2: KL881, KL112; C3: AE090) and create exactly one board file per carousel.
+  Build by_belt so each belt maps to the list of its plates in serving order (B1: TUNA-1, TUNA-2, TUNA-3; B2: EEL-1, EEL-2; B3: ROE-1) and create exactly one board file per belt.
 xp: 205
 difficulty: intermediate
 expected_time: 9m

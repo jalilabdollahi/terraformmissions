@@ -1,23 +1,23 @@
-variable "streams" {
-  description = "Streams to broadcast; only genre is required"
+variable "queues" {
+  description = "Queues to staff; only skill is required"
   default = {
-    late_show = { genre = "jazz" }
-    morning   = { genre = "talk", bitrate_kbps = 64 }
-    kids      = { genre = "stories", jingle = false }
+    night_desk = { skill = "triage" }
+    sales_line = { skill = "upgrades", bitrate_kbps = 64 }
+    billing    = { skill = "refunds", jingle = false }
   }
 }
 
-module "schedule" {
-  source = "./modules/schedule"
+module "routing" {
+  source = "./modules/routing"
 
-  streams = var.streams
+  queues = var.queues
 }
 
-resource "local_file" "lineup" {
-  filename = "${path.module}/radio/lineup.txt"
-  content  = "${join("\n", module.schedule.lineup)}\n"
+resource "local_file" "rota" {
+  filename = "${path.module}/queues/rota.txt"
+  content  = "${join("\n", module.routing.rota)}\n"
 }
 
-output "lineup" {
-  value = module.schedule.lineup
+output "rota" {
+  value = module.routing.rota
 }

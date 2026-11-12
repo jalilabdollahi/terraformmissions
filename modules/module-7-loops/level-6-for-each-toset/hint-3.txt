@@ -1,1 +1,1 @@
-Convert at the point of use: `for_each = toset(var.spices)`. Duplicates collapse, and each remaining string becomes both `each.key` and `each.value`.
+Convert at the point of use: `for_each = toset(var.dealers)`. Duplicates collapse, and each remaining string becomes both `each.key` and `each.value`.

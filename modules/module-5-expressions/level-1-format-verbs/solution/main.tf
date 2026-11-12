@@ -1,40 +1,40 @@
-# Pinewood Trail Marathon — race-day bib cards.
-# Each runner's card is one printed line: bib, quoted name, distance, pace.
+# Ridgeway Endurance Ride — ride-day vet cards.
+# Each rider's card is one printed line: tag, quoted name, distance, pace.
 
-variable "runner" {
+variable "rider" {
   type = object({
     name         = string
-    bib          = number
+    tag          = number
     distance_km  = number
     pace_seconds = number
   })
   default = {
     name         = "Ines \"Flash\" Okafor"
-    bib          = 7
+    tag          = 7
     distance_km  = 21.1
     pace_seconds = 291
   }
 }
 
 locals {
-  bib_label = format("BIB-%05d", var.runner.bib)
-  pace      = format("%d:%02d", floor(var.runner.pace_seconds / 60), var.runner.pace_seconds % 60)
+  tag_label = format("TAG-%05d", var.rider.tag)
+  pace      = format("%d:%02d", floor(var.rider.pace_seconds / 60), var.rider.pace_seconds % 60)
   card = format(
     "%s | %q | %05.1f km | pace %s min/km",
-    local.bib_label,
-    var.runner.name,
-    var.runner.distance_km,
+    local.tag_label,
+    var.rider.name,
+    var.rider.distance_km,
     local.pace,
   )
 }
 
-resource "local_file" "bib_card" {
-  filename = "${path.module}/cards/bib-card.txt"
+resource "local_file" "vet_card" {
+  filename = "${path.module}/cards/vet-card.txt"
   content  = "${local.card}\n"
 }
 
-output "bib_label" {
-  value = local.bib_label
+output "tag_label" {
+  value = local.tag_label
 }
 
 output "card" {

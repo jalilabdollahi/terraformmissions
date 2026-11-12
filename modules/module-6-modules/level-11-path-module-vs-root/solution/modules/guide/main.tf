@@ -1,4 +1,4 @@
-variable "exhibit" {
+variable "stop" {
   type = string
 }
 
@@ -8,13 +8,13 @@ variable "narrator" {
 
 locals {
   script = templatefile("${path.module}/templates/narration.tpl", {
-    exhibit  = replace(var.exhibit, "-", " ")
+    stop     = replace(var.stop, "-", " ")
     narrator = var.narrator
   })
 }
 
 resource "local_file" "script" {
-  filename = "${path.root}/audio/${var.exhibit}.txt"
+  filename = "${path.root}/audio/${var.stop}.txt"
   content  = local.script
 }
 

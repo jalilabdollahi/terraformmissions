@@ -1,25 +1,25 @@
-variable "owner" {
+variable "performer" {
   type    = string
-  default = "Brita Hallgren"
+  default = "Marta Vik"
 }
 
-variable "catch" {
+variable "setlist" {
   type    = list(string)
-  default = ["herring", "mackerel", "pike-perch"]
+  default = ["ballad", "jig", "waltz"]
 }
 
-module "stall" {
-  source = "./modules/stall"
+module "busker" {
+  source = "./modules/busker"
 
-  owner = var.owner
-  catch = var.catch
+  performer = var.performer
+  setlist   = var.setlist
 }
 
 resource "local_file" "board" {
-  filename = "${path.module}/board/stall.json"
-  content  = jsonencode(module.stall)
+  filename = "${path.module}/board/busker.json"
+  content  = jsonencode(module.busker)
 }
 
 output "fields" {
-  value = sort(keys(module.stall))
+  value = sort(keys(module.busker))
 }

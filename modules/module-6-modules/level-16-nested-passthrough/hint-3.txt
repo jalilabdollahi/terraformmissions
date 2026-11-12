@@ -1,1 +1,1 @@
-Add `vintage = var.vintage` to the `module "bottler"` block in modules/press/main.tf.
+Add `season = var.season` to the `module "canner"` block in modules/evaporator/main.tf.

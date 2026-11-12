@@ -4,7 +4,7 @@ A resource can only loop over one collection, so "every A with every B" has to b
 what `setproduct()` does: it returns all combinations as a list of tuples. A `for_each` cannot use that
 list directly (no keys, tuple elements), so you reshape it with a `for` expression into a map of objects
 with stable string keys. Now each combination is an instance with its own address,
-`local_file.booking["aria/fri"]`.
+`local_file.booking["atrium/fri"]`.
 
 The key matters more than it looks. Because it is built from the *data* (room and day), adding a Sunday
 creates three new instances and leaves the six existing ones alone. Had you used the list position as the

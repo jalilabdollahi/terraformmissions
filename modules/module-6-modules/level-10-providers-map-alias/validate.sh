@@ -6,8 +6,8 @@ TM_MSG="terraform apply failed — which provider configuration is the ledger mo
 
 tm_assert_in_state module.ledger.local_file.primary
 tm_assert_in_state module.ledger.local_file.mirror
-tm_assert_file_equals ledger/primary.txt $'Varnish removal, oil portrait 1887\n'
-tm_assert_file_equals ledger/mirror.txt $'Varnish removal, oil portrait 1887\n'
+tm_assert_file_equals ledger/primary.txt $'Weft re-weaving, Flemish hunt tapestry 1594\n'
+tm_assert_file_equals ledger/mirror.txt $'Weft re-weaving, Flemish hunt tapestry 1594\n'
 
 # The alias is visible in state: each resource records which provider configuration manages it
 providers_of() {

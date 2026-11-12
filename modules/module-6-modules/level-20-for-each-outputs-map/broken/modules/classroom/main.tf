@@ -1,15 +1,15 @@
-variable "voice" {
+variable "style" {
   type = string
 }
 
-variable "singers" {
+variable "students" {
   type = number
 }
 
 resource "terraform_data" "slot" {
   input = {
-    room    = "${var.voice}-room"
-    minutes = var.singers * 5
+    room    = "${var.style}-room"
+    minutes = var.students * 5
   }
 }
 

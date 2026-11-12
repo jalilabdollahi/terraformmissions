@@ -18,15 +18,15 @@ Grouping mode is the Terraform way to say "group by", the same idea as SQL's `GR
 
 Alternatives and when they fit:
 
-- **Unique composite key**, e.g. `"${a.carousel}/${a.flight}"`, when you want one resource per item
+- **Unique composite key**, e.g. `"${a.belt}/${a.plate}"`, when you want one resource per item
   rather than per group.
 - **`distinct()` or `toset()`** when you only need the unique keys, not their values.
 
-Because the output is built from the input list in order, the lists keep arrival order, which the
-announcement boards rely on.
+Because the output is built from the input list in order, the lists keep serving order, which the
+belt boards rely on.
 
 ## Real-world takeaway
 
 Whenever you build a map from a list of records, ask "can two records share this key?" If yes, use
 grouping or a composite key on purpose. A duplicate key error at plan time is the benign outcome;
-silently overwriting entries, as some languages do, would drop flights from a board.
+silently overwriting entries, as some languages do, would drop plates from a board.

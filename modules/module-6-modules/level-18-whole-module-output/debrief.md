@@ -1,6 +1,6 @@
 # Debrief — a module is an object you can pass around
 
-Referring to `module.stall` without an attribute gives you the *whole* object: one attribute for every output the module
+Referring to `module.busker` without an attribute gives you the *whole* object: one attribute for every output the module
 declares. That makes it an ordinary Terraform value with an object type, so everything that works on objects works on it:
 `keys()` lists the output names, `values()` the values, `jsonencode()` serialises it, `merge()` combines two modules'
 outputs, `for` expressions iterate over it, and you can pass it as an input to another module whose variable is typed

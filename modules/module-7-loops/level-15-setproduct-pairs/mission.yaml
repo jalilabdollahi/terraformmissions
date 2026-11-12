@@ -1,10 +1,10 @@
 name: Every Room Every Day
 description: >-
-  The Larkspur Choir Festival books each rehearsal room for each rehearsal day, using setproduct
+  The Nightowl Hackathon books each room for each day, using setproduct
   to get all the pairs. Terraform rejects the result as a for_each argument.
 objective: >-
   Create one booking per room and day, addressed local_file.booking["<room>/<day>"] (six today:
-  aria, cantata, motet by fri, sat), with the file bookings/<room>-<day>.txt. Adding a day or room
+  atrium, garage, loft by fri, sat), with the file bookings/<room>-<day>.txt. Adding a day or room
   later must only add new bookings.
 xp: 235
 difficulty: intermediate

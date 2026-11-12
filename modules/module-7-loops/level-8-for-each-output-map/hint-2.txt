@@ -1,1 +1,1 @@
-`local_file.ticket` with for_each is a map of instances - an object with one entry per film - so `.filename` does not exist on it. You have to look at each instance.
+`local_file.ticket` with for_each is a map of instances - an object with one entry per event - so `.filename` does not exist on it. You have to look at each instance.

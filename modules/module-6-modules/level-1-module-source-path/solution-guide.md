@@ -1,4 +1,4 @@
-# Walkthrough — Nilgiri Flush Labels
+# Walkthrough — Tarndale Clip Labels
 
 1. **Read the init error.**
    ```bash

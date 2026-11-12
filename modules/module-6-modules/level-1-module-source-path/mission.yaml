@@ -1,11 +1,11 @@
-name: Nilgiri Flush Labels
+name: Tarndale Clip Labels
 description: >-
-  The Glenburn tea estate stamps a grade label on every harvest through a small module kept
+  The Tarndale wool shearing shed stamps a grade label on every clip through a small module kept
   in modules/grader. A tidy-up commit moved the module call into the root configuration, and
   now terraform init refuses to even start.
 objective: >-
   Make the module call named "grading" find the module that lives in modules/grader, so that
-  terraform apply writes labels/glenburn-second.txt and the label_file output points at it.
+  terraform apply writes labels/tarndale-summer.txt and the label_file output points at it.
   The module must stay a separate module (keep module.grading).
 xp: 175
 difficulty: intermediate

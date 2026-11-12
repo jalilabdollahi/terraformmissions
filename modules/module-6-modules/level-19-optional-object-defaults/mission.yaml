@@ -1,12 +1,12 @@
-name: Radio Lineup Defaults
+name: Helpline Queue Defaults
 description: >-
-  The Hollow Hill community radio station declares its streams in a map and lets a module fill the gaps:
-  128 kbps and a station jingle unless the stream says otherwise. The module's type demands every field,
-  so any stream that omits one is rejected.
+  The Brightwater call centre declares its queues in a map and lets a module fill the gaps:
+  128 kbps and a hold jingle unless the queue says otherwise. The module's type demands every field,
+  so any queue that omits one is rejected.
 objective: >-
-  Let the module accept streams that omit bitrate_kbps and jingle, defaulting them to 128 and true
-  respectively, while genre stays mandatory. radio/lineup.txt must read "kids stories@128k",
-  "late_show jazz@128k +jingle" and "morning talk@64k +jingle", one per line.
+  Let the module accept queues that omit bitrate_kbps and jingle, defaulting them to 128 and true
+  respectively, while skill stays mandatory. queues/rota.txt must read "billing refunds@128k",
+  "night_desk triage@128k +jingle" and "sales_line upgrades@64k +jingle", one per line.
 xp: 265
 difficulty: intermediate
 expected_time: 15m

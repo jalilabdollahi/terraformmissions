@@ -1,5 +1,5 @@
-# Stubai Ridge ski resort — day-pass desk.
-# Peak season opens more lifts; juniors pay half price.
+# Tarn Hollow zip-line park — ride-pass desk.
+# Peak season opens more zip lines; juniors pay half price.
 
 variable "peak_season" {
   type    = bool
@@ -17,18 +17,18 @@ variable "base_price_eur" {
 }
 
 locals {
-  lifts           = var.peak_season ? ["north", "summit", "glacier"] : ["north"]
+  zips            = var.peak_season ? ["canopy", "gorge", "valley"] : ["canopy"]
   discount_factor = var.junior ? 0.5 : 1
   price_eur       = var.base_price_eur * local.discount_factor
 }
 
 resource "local_file" "pass_slip" {
   filename = "${path.module}/desk/pass.txt"
-  content  = "Lifts: ${join(", ", local.lifts)}\nPrice: ${local.price_eur} EUR\n"
+  content  = "Zips: ${join(", ", local.zips)}\nPrice: ${local.price_eur} EUR\n"
 }
 
-output "lifts" {
-  value = local.lifts
+output "zips" {
+  value = local.zips
 }
 
 output "discount_factor" {

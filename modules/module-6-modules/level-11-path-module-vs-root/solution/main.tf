@@ -1,6 +1,6 @@
-variable "exhibit" {
+variable "stop" {
   type    = string
-  default = "steam-loco"
+  default = "haunted-cellar"
 }
 
 variable "narrator" {
@@ -11,7 +11,7 @@ variable "narrator" {
 module "guide" {
   source = "./modules/guide"
 
-  exhibit  = var.exhibit
+  stop     = var.stop
   narrator = var.narrator
 }
 

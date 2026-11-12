@@ -1,1 +1,1 @@
-Add two `output` blocks to modules/tower/main.tf named exactly like the attributes the root uses: `next_chime` (the computed local) and `roster_file` (the written file's path, from the resource attribute).
+Add two `output` blocks to modules/crier/main.tf named exactly like the attributes the root uses: `next_call` (the computed local) and `roster_file` (the written file's path, from the resource attribute).

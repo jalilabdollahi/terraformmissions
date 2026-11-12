@@ -1,4 +1,4 @@
-# Walkthrough — Fenner Street Radio Tags
+# Walkthrough — Cinder Lane Serial Tags
 
 1. `terraform apply` works, which is the trap. Open `tags/bench-tag.txt`: nothing was cleaned.
 2. Try the calls in `terraform console`:

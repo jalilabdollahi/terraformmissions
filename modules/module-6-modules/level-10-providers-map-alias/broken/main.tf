@@ -7,7 +7,7 @@ provider "local" {
 module "ledger" {
   source = "./modules/ledger"
 
-  treatment = "Varnish removal, oil portrait 1887"
+  treatment = "Weft re-weaving, Flemish hunt tapestry 1594"
 }
 
 output "ledger_files" {

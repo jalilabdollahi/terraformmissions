@@ -1,1 +1,1 @@
-Use lookup(var.rations_kg, animal, var.standard_ration_kg) so the fallback still comes from the variable.
+Use lookup(var.rations_kg, horse, var.standard_ration_kg) so the fallback still comes from the variable.

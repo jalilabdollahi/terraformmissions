@@ -1,14 +1,14 @@
-# Fenner Street Radio Repair — intake tags for the workbench.
+# Cinder Lane Computer Repair — intake tags for the workbench.
 # Tags must show a clean serial key, a one-line fault note and a day-first date.
 
 variable "serial_raw" {
   type    = string
-  default = "  rx-4411/b.09 "
+  default = "  zx-4411/b.09 "
 }
 
 variable "fault_note_raw" {
   type    = string
-  default = "Dial   cord snapped,\t crackle on  long wave"
+  default = "Tape   loader failing,\t border flickers on  boot"
 }
 
 variable "intake_date" {

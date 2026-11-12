@@ -1,6 +1,6 @@
-name: Hartwell Offsite Ledger
+name: Wexcombe Offsite Ledger
 description: >-
-  The Hartwell museum records every conservation treatment twice: once with its primary provider and once
+  The Wexcombe tapestry atelier records every restoration treatment twice: once with its primary provider and once
   with the aliased "offsite" provider. The ledger module was written to expect a second provider
   configuration, and the root configuration never hands one over.
 objective: >-

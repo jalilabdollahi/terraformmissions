@@ -1,8 +1,8 @@
 # Common mistakes
 
-- **Applying right away.** Terraform destroys three mascots and invents three new ones: the boats'
+- **Applying right away.** Terraform destroys three mascots and invents three new ones: the hulls'
   paint is wrong. Always read the plan first.
-- **Mapping in the wrong order.** `[0]` to `"penlee"` plans cleanly but swaps the mascots between stations.
+- **Mapping in the wrong order.** `[0]` to `"benno"` plans cleanly but swaps the mascots between pedalos.
   Follow the original list order.
 - **Running `terraform state mv` instead.** The state is fixed locally, but the mission asks for `moved`
   blocks, which travel with the code and the validator looks for them.

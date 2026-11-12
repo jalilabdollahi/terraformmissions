@@ -1,11 +1,11 @@
 resource "random_id" "ticket" {
   byte_length = 4
-  prefix      = "ZEP-"
+  prefix      = "BLR-"
 }
 
 resource "local_file" "manifest" {
-  filename = "${path.root}/hangar/manifest.txt"
-  content  = "mooring ticket ${random_id.ticket.hex}\n"
+  filename = "${path.root}/shed/manifest.txt"
+  content  = "boiler ticket ${random_id.ticket.hex}\n"
 }
 
 output "ticket" {

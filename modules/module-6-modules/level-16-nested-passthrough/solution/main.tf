@@ -1,15 +1,15 @@
-variable "vintage" {
+variable "season" {
   type    = string
   default = "2023"
 }
 
-module "press" {
-  source = "./modules/press"
+module "evaporator" {
+  source = "./modules/evaporator"
 
-  orchard = "Applewick Orchard"
-  vintage = var.vintage
+  sugarbush = "Hollisford Sugarbush"
+  season    = var.season
 }
 
 output "label" {
-  value = module.press.label
+  value = module.evaporator.label
 }

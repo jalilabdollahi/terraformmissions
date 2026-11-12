@@ -1,6 +1,6 @@
 name: Transcript Optional
 description: >-
-  The Tidewater Maritime Museum ships an audio-guide zip. A large-print transcript is added only
+  The Oakridge Sculpture Park ships an audio-guide zip. A large-print transcript is added only
   when the curator has written one, but the pack builder insists on the transcript entry and fails
   whenever the variable is left empty.
 objective: >-

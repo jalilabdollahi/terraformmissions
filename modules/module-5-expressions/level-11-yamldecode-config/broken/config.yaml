@@ -1,17 +1,17 @@
-# Instrument roster for the Skerry Head observatory (maintained by the night crew).
-observatory:
-  name: Skerry Head
-  dome_count: 2
-  instruments:
-    - name: Hartmann
-      firmware: 2.10
+# Crew roster for the submarine Kittiwake (maintained by the first officer).
+submarine:
+  name: Kittiwake
+  hatch_count: 2
+  crew:
+    - name: Okonkwo
+      manual: 2.10
       language: no
-      enabled: true
-    - name: Corvus
-      firmware: "1.8"
+      on_watch: true
+    - name: Reyes
+      manual: "1.8"
       language: en
-      enabled: true
-    - name: Pegasus
-      firmware: "3.0"
+      on_watch: true
+    - name: Lindqvist
+      manual: "3.0"
       language: off
-      enabled: false
+      on_watch: false

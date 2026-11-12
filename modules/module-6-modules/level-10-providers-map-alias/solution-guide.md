@@ -1,4 +1,4 @@
-# Walkthrough — Hartwell Offsite Ledger
+# Walkthrough — Wexcombe Offsite Ledger
 
 1. **Read the error.** `terraform init` / `plan` reports that module.ledger requires the provider configuration
    `local.mirror` and that it was not passed. The module's header shows why:

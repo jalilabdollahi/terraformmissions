@@ -1,10 +1,10 @@
 variable "show_code" {
   type        = string
-  description = "Production code such as MAR-07: three capital letters, a dash, two digits"
+  description = "Production code such as SOR-07: three capital letters, a dash, two digits"
 
   validation {
     condition     = can(regex("^[A-Z]{3}-[0-9]{2}$", var.show_code))
-    error_message = "show_code must be three capital letters, a dash and two digits, e.g. MAR-07."
+    error_message = "show_code must be three capital letters, a dash and two digits, e.g. SOR-07."
   }
 }
 

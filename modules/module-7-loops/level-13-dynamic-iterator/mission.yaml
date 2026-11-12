@@ -1,12 +1,12 @@
-name: Lesson Iterator
+name: Class Iterator
 description: >-
-  Elm Street Language School builds a weekly lesson zip with a dynamic block. A colleague gave the
-  loop a friendlier iterator name, lesson, but half the references still use the old one, and
+  Iron Crane Dojo builds a weekly class zip with a dynamic block. A colleague gave the
+  loop a friendlier iterator name, class, but half the references still use the old one, and
   Terraform cannot find the variable.
 objective: >-
-  Keep the custom iterator (iterator = lesson) and make the block read each lesson's file and text
-  through it, so bundles/week.zip holds the three lesson files with the right text and follows
-  var.lessons.
+  Keep the custom iterator (iterator = class) and make the block read each class's file and text
+  through it, so bundles/week.zip holds the three class files with the right text and follows
+  var.classes.
 xp: 220
 difficulty: intermediate
 expected_time: 10m

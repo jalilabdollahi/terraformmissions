@@ -1,1 +1,1 @@
-`for_each` accepts a map or a *set* of strings, never a list. `var.spices` is a `list(string)`, and it even contains saffron twice, which a set cannot hold.
+`for_each` accepts a map or a *set* of strings, never a list. `var.dealers` is a `list(string)`, and it even contains briggs twice, which a set cannot hold.

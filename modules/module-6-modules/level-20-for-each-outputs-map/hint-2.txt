@@ -1,1 +1,1 @@
-With `for_each`, `module.section` is a *map* of module instances keyed by voice, not a list. The splat `[*]` is meant for lists and does not iterate over a map's values.
+With `for_each`, `module.classroom` is a *map* of module instances keyed by style, not a list. The splat `[*]` is meant for lists and does not iterate over a map's values.
