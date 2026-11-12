@@ -127,15 +127,15 @@ check_cmd terraform
 check_cmd python3
 check_cmd jq
 
-# Terraform version check (need >= 1.5)
+# Terraform version check (need >= 1.10)
 TF_VERSION=$(terraform version -json 2>/dev/null | python3 -c "import sys,json; print(json.load(sys.stdin)['terraform_version'])" 2>/dev/null || terraform version | head -1 | grep -oE '[0-9]+\.[0-9]+\.[0-9]+' | head -1)
 TF_MAJOR=$(echo "$TF_VERSION" | cut -d. -f1)
 TF_MINOR=$(echo "$TF_VERSION" | cut -d. -f2)
-if [[ "$TF_MAJOR" -lt 1 ]] || { [[ "$TF_MAJOR" -eq 1 ]] && [[ "$TF_MINOR" -lt 5 ]]; }; then
-  echo "❌  Terraform >= 1.5 required. Found: $TF_VERSION"
+if [[ "$TF_MAJOR" -lt 1 ]] || { [[ "$TF_MAJOR" -eq 1 ]] && [[ "$TF_MINOR" -lt 10 ]]; }; then
+  echo "❌  Terraform >= 1.10 required. Found: $TF_VERSION"
   exit 1
 fi
-echo "✅  Terraform $TF_VERSION (>= 1.5 required)"
+echo "✅  Terraform $TF_VERSION (>= 1.10 required)"
 
 # ── Python venv ────────────────────────────────────────────────────────────────
 echo ""
@@ -162,6 +162,32 @@ source "$REPO_ROOT/venv/bin/activate"
 python3 -m pip install --quiet --upgrade pip
 python3 -m pip install --quiet -r "$REPO_ROOT/requirements.txt"
 echo "✅  Python venv ready"
+
+# ── Warm the provider cache (missions start fast and work offline later) ──────
+echo ""
+echo "Downloading Terraform providers used by the missions (one time)..."
+mkdir -p "$REPO_ROOT/.cache/terraform-plugins"
+WARM_DIR="$(mktemp -d)"
+cat > "$WARM_DIR/main.tf" <<'TFEOF'
+terraform {
+  required_providers {
+    local    = { source = "hashicorp/local" }
+    null     = { source = "hashicorp/null" }
+    random   = { source = "hashicorp/random" }
+    tls      = { source = "hashicorp/tls" }
+    time     = { source = "hashicorp/time" }
+    archive  = { source = "hashicorp/archive" }
+    external = { source = "hashicorp/external" }
+    http     = { source = "hashicorp/http" }
+  }
+}
+TFEOF
+if (cd "$WARM_DIR" && TF_PLUGIN_CACHE_DIR="$REPO_ROOT/.cache/terraform-plugins" terraform init -input=false -no-color >/dev/null 2>&1); then
+  echo "✅  Provider cache ready"
+else
+  echo "⚠️  Could not pre-download providers (offline?). They will be downloaded on first use."
+fi
+rm -rf "$WARM_DIR"
 
 # ── Generate level registry ────────────────────────────────────────────────────
 if [[ ! -f "$REPO_ROOT/levels.json" ]]; then

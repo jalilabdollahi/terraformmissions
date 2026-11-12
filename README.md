@@ -39,7 +39,7 @@ cd terraformmissions
 ./play.sh
 ```
 
-If `levels.json` is missing or you regenerate modules:
+If `levels.json` is missing or you edited a level's `mission.yaml`:
 
 ```bash
 python3 scripts/generate_registry.py
@@ -51,10 +51,9 @@ python3 scripts/generate_registry.py
 
 | Tool | Required | Notes |
 |------|----------|-------|
-| Terraform `1.5+` | Yes | Main CLI used in every mission |
+| Terraform `1.10+` | Yes | Main CLI used in every mission |
 | Python `3.9+` | Yes | Used for the game engine and setup |
 | `jq` | Yes | Used by validators and helper scripts |
-| Docker | Optional | Only needed for some advanced Docker-based scenarios |
 
 ### Ubuntu / Debian
 
@@ -167,12 +166,16 @@ terraformmissions/
 │   ├── ui.py
 │   ├── player.py
 │   ├── reset.py
+│   ├── runtime.py          ← workspace prep + validator runner (shared with tests)
+│   ├── validate_lib.sh     ← helper library sourced by every validate.sh
 │   └── certificate.py
+├── docs/
+│   ├── LEVEL_SPEC.md       ← how a level is built
+│   └── LEVEL_CATALOG.md    ← the lesson of every level
 ├── scripts/
-│   ├── build_levels.py
-│   ├── build_module_01.py
-│   ├── ...
-│   └── generate_registry.py
+│   ├── generate_registry.py
+│   ├── test_levels.py      ← proves every level: broken fails, solution passes
+│   └── check_uniqueness.py ← flags levels that resemble each other
 ├── completion/
 │   ├── _terraformissions
 │   └── terraformissions.bash
@@ -182,15 +185,15 @@ terraformmissions/
     ├── module-1-foundations/
     ├── module-2-resource-basics/
     ├── ...
-    └── module-15-production-war-games/
+    └── module-15-war-games/
 ```
 
 Important directories:
 
-- `modules/` contains the source-of-truth mission content
+- `modules/` contains the source-of-truth mission content (edit level files directly)
 - `workspace/current/` is the active level workspace you edit while playing
 - `engine/` contains the terminal UI, progression logic, and reset flow
-- `scripts/` contains level builders and registry generators
+- `scripts/` contains the registry generator and the level test tools
 
 ---
 
@@ -215,6 +218,7 @@ source completion/terraformissions.bash
 - Progress is stored locally in `progress.json`
 - The active editable mission files live in `workspace/current/`
 - `reset` restores the current level to its original broken state
+- Quitting and relaunching resumes your workspace as you left it
 - `./play.sh --reset` clears saved progress
 
 These local files are ignored by Git in this repo so your personal progress does not need to be committed.
@@ -231,7 +235,12 @@ Contributions are welcome, especially in these areas:
 - UI and usability improvements
 - Cross-platform setup polish
 
-If you want to expand the curriculum or improve the engine, open an issue or a pull request.
+Before opening a pull request for a level, read [docs/LEVEL_SPEC.md](docs/LEVEL_SPEC.md) and run:
+
+```bash
+venv/bin/python3 scripts/test_levels.py <module>/<level>
+venv/bin/python3 scripts/check_uniqueness.py --focus <module>
+```
 
 ---
 
